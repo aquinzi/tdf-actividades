@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
    "nombre": "voley", 
    "nombre_alt": "volley/volleyball/voleibol", 
+=======
+{
+   "nombre": "voley", 
+   "nombre_alt": "volley/volleyball/voleybol", 
+>>>>>>> 77d5d5b... update jsons to new structure
    "tipo": "deporte", 
    "lugares": [
       {
@@ -15,6 +21,7 @@
          "precio": "gratis", 
          "last-update": "2015-07-23"
       }
+<<<<<<< HEAD
       , {
          "nombre": "Federación Fueguina de Voley", 
          "last-update": "2015-07-26"
@@ -35,3 +42,7 @@
 ]
 
 >>>>>>> 0f2d113... add more sports
+=======
+   ]
+}
+>>>>>>> 77d5d5b... update jsons to new structure

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 77d5d5b... update jsons to new structure
 {
    "nombre": "rugby", 
    "nombre_alt": "", 
@@ -8,12 +11,18 @@
          "nombre": "Municipio", 
          "precio": "gratis", 
          "last-update": "2015-07-23"
+<<<<<<< HEAD
       }
       , {
+=======
+      }, 
+      {
+>>>>>>> 77d5d5b... update jsons to new structure
          "nombre": "Rugby 7 (seven)", 
          "precio": "gratis", 
          "last-update": "2015-07-23"
       }
+<<<<<<< HEAD
       , {
          "nombre": "Club Universitario de Rugby", 
          "last-update": "2015-07-26"
@@ -36,3 +45,7 @@
    }
 ]
 >>>>>>> 0f2d113... add more sports
+=======
+   ]
+}
+>>>>>>> 77d5d5b... update jsons to new structure

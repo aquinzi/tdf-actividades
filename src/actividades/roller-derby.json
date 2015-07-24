@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 77d5d5b... update jsons to new structure
 {
    "nombre": "roller derby", 
    "nombre_alt": "", 
    "tipo": "deporte", 
    "lugares": [
       {
+<<<<<<< HEAD
          "nombre": "ThunderGirls Roller Derby RG"
          ,"direccion": "segundotiempo",
          "url": ["http://www.facebook.com/ThunderGirlsRD"],
@@ -29,3 +33,14 @@
 
 
 >>>>>>> 0f2d113... add more sports
+=======
+         "url": [
+            "http://www.facebook.com/ThunderGirlsRD"
+         ], 
+         "nombre": "ThunderGirls Roller Derby RG", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}
+>>>>>>> 77d5d5b... update jsons to new structure

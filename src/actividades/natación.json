@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
    "nombre": "natación", 
    "tipo": "deporte", 
@@ -6,11 +7,21 @@
       {
          "nombre": "Escuela de Natación", 
          "nota": "Municipio", 
+=======
+{
+   "nombre": "natación", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "Municipio", 
+>>>>>>> 77d5d5b... update jsons to new structure
          "precio": "gratis", 
          "last-update": "2015-07-23", 
          "direccion": "natatoriomunicipal"
       }
    ]
+<<<<<<< HEAD
 }
 =======
 [
@@ -20,3 +31,6 @@
    }
 ]
 >>>>>>> 0f2d113... add more sports
+=======
+}
+>>>>>>> 77d5d5b... update jsons to new structure

@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 77d5d5b... update jsons to new structure
 {
    "nombre": "automovilismo", 
    "nombre_alt": "", 
    "tipo": "deporte", 
    "lugares": [
       {
+<<<<<<< HEAD
          "nombre": "Turismo Carretera (ACTCF).", 
          "last-update": "2015-07-26"
       }, 
@@ -35,3 +39,18 @@
    }
 ]
 >>>>>>> 0f2d113... add more sports
+=======
+         "nombre": "Auto A.C.T.C.F.", 
+         "last-update": "2015-07-23"
+      }, 
+      {
+         "nombre": "Auto A.P.A.P.", 
+         "last-update": "2015-07-23"
+      }, 
+      {
+         "nombre": "Auto A.PI.TU.R.", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}
+>>>>>>> 77d5d5b... update jsons to new structure

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
    "nombre": "motociclismo", 
    "tipo": "deporte", 
@@ -16,3 +17,16 @@
    }
 ]
 >>>>>>> 0f2d113... add more sports
+=======
+{
+   "nombre": "motociclismo", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}
+>>>>>>> 77d5d5b... update jsons to new structure

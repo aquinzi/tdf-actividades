@@ -1,15 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 77d5d5b... update jsons to new structure
 {
    "nombre": "sapo", 
    "nombre_alt": "", 
    "tipo": "deporte", 
    "lugares": [
       {
+<<<<<<< HEAD
          "nombre": "Sapo Adultos Mayores (mas de 60 Años)", 
+=======
+         "nombre": "Adultos Mayores (> 60 años)", 
+>>>>>>> 77d5d5b... update jsons to new structure
          "nota": "Iniciación deportiva", 
          "precio": "gratis", 
          "last-update": "2015-07-23"
       }
+<<<<<<< HEAD
       , {
          "nombre": "Sapo para adultos mayores (mas de 60 Años)", 
          "direccion": "hogardedialazosamor", 
@@ -27,3 +35,7 @@
    }
 ]
 >>>>>>> 0f2d113... add more sports
+=======
+   ]
+}
+>>>>>>> 77d5d5b... update jsons to new structure

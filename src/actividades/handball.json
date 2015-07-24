@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 77d5d5b... update jsons to new structure
 {
    "nombre": "handball", 
    "nombre_alt": "balonmano", 
@@ -15,6 +18,7 @@
          "precio": "gratis", 
          "last-update": "2015-07-23"
       }
+<<<<<<< HEAD
       , {
          "nombre": "Club Universitario", 
          "last-update": "2015-07-26"
@@ -34,3 +38,7 @@
    }
 ]
 >>>>>>> 0f2d113... add more sports
+=======
+   ]
+}
+>>>>>>> 77d5d5b... update jsons to new structure

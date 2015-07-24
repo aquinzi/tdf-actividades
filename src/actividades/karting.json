@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 77d5d5b... update jsons to new structure
 {
    "nombre": "karting", 
    "nombre_alt": "", 
    "tipo": "deporte", 
    "lugares": [
       {
+<<<<<<< HEAD
          "nombre": "Asociación Riograndense de Karting (ARK)", 
          "last-update": "2015-07-26"
       }
@@ -21,3 +25,10 @@
    }
 ]
 >>>>>>> 0f2d113... add more sports
+=======
+         "nombre": "", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}
+>>>>>>> 77d5d5b... update jsons to new structure

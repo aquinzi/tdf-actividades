@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 77d5d5b... update jsons to new structure
 {
    "nombre": "atletismo", 
    "nombre_alt": "", 
@@ -9,6 +12,7 @@
          "precio": "gratis", 
          "last-update": "2015-07-23"
       }
+<<<<<<< HEAD
       , {
          "nombre": "Agrupación Atlética \"Fin del Mundo\" (AAFM)", 
          "nota": "Ushuaia y Río Grande", 
@@ -28,3 +32,7 @@
    }
 ]
 >>>>>>> 0f2d113... add more sports
+=======
+   ]
+}
+>>>>>>> 77d5d5b... update jsons to new structure

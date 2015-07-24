@@ -1,14 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 77d5d5b... update jsons to new structure
 {
    "nombre": "badminton", 
    "nombre_alt": "", 
    "tipo": "deporte", 
+<<<<<<< HEAD
+=======
+   "lugares": {
+      "nombre": "badminton", 
+>>>>>>> 77d5d5b... update jsons to new structure
       "lugares": [
          {
             "nombre": "", 
             "nota": "por ahora solo talleres, próximo a ser una escuela de iniciación", 
             "last-update": "2015-07-23"
          }
+<<<<<<< HEAD
       ] 
       
 
@@ -24,3 +33,10 @@
 
 
 >>>>>>> 0f2d113... add more sports
+=======
+      ], 
+      "nombre_alt": "", 
+      "tipo": "deporte"
+   }
+}
+>>>>>>> 77d5d5b... update jsons to new structure

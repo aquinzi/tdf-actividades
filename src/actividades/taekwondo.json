@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 77d5d5b... update jsons to new structure
 {
    "nombre": "taekwondo", 
    "nombre_alt": "", 
@@ -16,6 +19,7 @@
          "last-update": "2015-07-23"
       }, 
       {
+<<<<<<< HEAD
          "nombre": "Asociación de Taekwondo (WTF)", 
          "last-update": "2015-07-23"
       }, 
@@ -47,3 +51,14 @@
 
 
 >>>>>>> 0f2d113... add more sports
+=======
+         "nombre": "Taekwondo (WTF)", 
+         "last-update": "2015-07-23"
+      }, 
+      {
+         "nombre": "Taekwondo (ITF)", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}
+>>>>>>> 77d5d5b... update jsons to new structure
