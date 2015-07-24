@@ -1,33 +1,33 @@
 #! python3
 # -*- coding: utf-8 -*-
 
-'''
-Parse activities and places JSON/GeoJSON to HTML. Also main pages
+'''Parse the JSONs files from the "rg-actividades" to HTML. Activities AND places.
+Outputs in current folder
 '''
 
 # TODO: activities: add keys not in properties list
 # TODO: activities: add key overwritting
-# TODO: simplify code so it's not that redundant and duplicated (lazyness & quickness won)
+# TODO: add quick templating system for all pages
+# TODO: simplify code so it's not that redundant and duplicated
 # TODO: place: can have also opening-times
+ 
 
 
 import json
 import os
 import sys
-import re
+
 
 # =======================
 # ==== configuration ====
 
 SRC_FOLDER = "src" #where json and geojson live togheter
-OUTPUT_FOLDER = "output" # can have the final html inside a git folder, switch branches and copy them
 
-# under SRC_FOLDER we have:
-ACTIVITY_FOLDER = "actividades" #activity's home
-HTML_FOLDER = "html" 
 PLACES_FILE = "lugares.geojson"
 ACTIVITY_DUMMY_FILE = "actividad-tpl.json"
 PAGE_TEMPLATE_FILE = "page_tpl.html"
+
+ACTIVITY_FOLDER = "actividades" #activity's home
 
 PLACES_OUTPUT_FILE = "rg-lugares.html"
 ACTIVITIES_OUTPUT_FILE = "rg-actividades.html"
@@ -36,25 +36,39 @@ MAP_URL = "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=17/{lat}/{lon
 #MAP_URL = "http://www.openlinkmap.org/?lat={lat}&lon={lon}&zoom=17&id=1709214056&type=node&lang=en"
 
 # pages that website holds besides activities & places. Hardcoded.
-HTML_PAGES_KEYWORDS = ('index', 'colaboracion', 'preguntas-frecuentes')
+HTML_PAGES_KEYWORDS = ('index', 'contribucion', 'preguntas-frequentes')
 
-# Let's put in use the poor japanese I know, part 2
+#Synonyms for sports. Key = name (not filename!)
+SYNONYMS = {
+	'paddle': ("padle", "padel")
+	, 'futbol': ("football", ) #and fútbol
+	, 'basket': ("básquetbol", "basquet", "basketball")
+	, 'handball': ("balonmano",)
+	, 'pool': ("billar",)
+	, 'hockey roller': ("hockey sobre patines",) # "roller hockey"
+	, 'hockey pista': ("field-hockey", "hockey sobre césped")
+	, 'jiu-jitsu': ("jiu-jitsu brasileño", "BJJ") #Not the same, but for now I don't care
+	, 'judo': ("yudo",)
+}
+
+#some words can have "officialy" dashes
+WORDS_WITH_DASH = ('jiu-jitsu','hip-hop')
+
+# Let's use the poor japanese I have
+WORDS_PROPER_NAME = {
+	'judo':'jûdô' #じゅうどう
+	, 'jiu-jitsu':'jûjutsu' #じゅうじゅつ
+}
+
+# Let's use the poor japanese I have, part 2
 # people don't use Hepburn romanization (w/circumflex) in some words. Go with the flow.
 REMOVE_CIRCUMFLEX = ( 
-	('shôtôkan', 'shotokan') 
+	('Shôtôkan', 'Shotokan') 
 	, ('gôjû-ryû', 'goju-ryu') 
 	, ('dôjô', 'dojo') 
 	)
 
-# ---------------
-# HTML templates
-
-
-TPL_INDEX_LATESTCHANGES = '''<li><time datetime="{date_iso}">{date_human}</time> {change}</li>'''
-
-
-
-
+#HTML templates
 TPL_ITEM = '''
 	<dl{dlatrr}>
 		{defs}
@@ -95,9 +109,7 @@ TPL_PLACES_PAGE = '''
 HTML_PAGE_TEMPLATE = ""
 
 # make it less anoying to call it
-SRC_FOLDER    = os.path.join(os.getcwd(), SRC_FOLDER)
-OUTPUT_FOLDER = os.path.join(os.getcwd(), OUTPUT_FOLDER)
-HTML_FOLDER   = os.path.join(SRC_FOLDER, HTML_FOLDER)
+SRC_FOLDER = os.path.join(os.getcwd(), SRC_FOLDER)
 
 DO_PLACES     = True
 DO_ACTIVITIES = True
@@ -121,6 +133,7 @@ def files_get(path):
 				theFiles.append(filePath)
 
 	return theFiles
+
 
 def open_file(path):
 	''' Opens file and returns text
@@ -226,9 +239,11 @@ def process_places(places):
 	final_places_page = TPL_PLACES_PAGE.format(sections=final_places_page)
 
 	# add missing html (headers, div, etc)
+	#final_places_page = HTML_PAGE_TEMPLATE.format(body=final_places_page)
+	# above doesnt work with the js, use this for now
 	final_places_page = HTML_PAGE_TEMPLATE.replace("{body}", final_places_page)
 
-	save_file(os.path.join(OUTPUT_FOLDER, PLACES_OUTPUT_FILE), final_places_page)
+	save_file(os.path.join(os.getcwd(),PLACES_OUTPUT_FILE), final_places_page)
 
 def process_activities(file_list, places):
 	'''Process activities
@@ -274,21 +289,22 @@ def process_activities(file_list, places):
 	tmp_item = ""
 	final_text = ""
 
-	activities_all = dict()
+	activities_all = list()
 
 	for f in file_list:
 		activity = json.loads(open_file(f))
 		activity_name = os.path.basename(f) #get filename
 		print(" Processing: " + activity_name)
-	
-		activity_name = activity['nombre'].title()
+		activity_name, _ = os.path.splitext(activity_name) #delete extension
 
-		if not activity['tipo'] in activities_all:
-			activities_all[activity['tipo']] = list()
+		if not activity_name in WORDS_WITH_DASH:
+			activity_name = activity_name.replace("-", " ")
+		
+		activity_name = activity_name.title()
 
 		tmp_final_activities = ""
 
-		for item in activity['lugares']:
+		for item in activity:
 			tmp_item = ""
 			final_item = ""
 
@@ -302,7 +318,7 @@ def process_activities(file_list, places):
 
 					if propkey == "nombre":
 						if item[propkey]:
-							tmp_property = TPL_ITEM_DATA.format(dt="Nombre",ddattr='',dd=item[propkey].title())
+							tmp_property = TPL_ITEM_DATA.format(dt="Nombre",ddattr='',dd=item[propkey])
 
 					elif propkey == "url":
 						if propkey in item:
@@ -339,7 +355,7 @@ def process_activities(file_list, places):
 								if 'nota' in hora:
 									horario_nota = hora['nota']
 
-								tmp_property += "<li><time>{}. {}</time>. <i>{}</i></li>".format(horario_dia, 
+								tmp_property += "<li>{}. {}. <i>{}</i></li>".format(horario_dia, 
 									horario_hora, horario_nota)
 							tmp_property = '<ul>' + tmp_property + '</ul>'
 							tmp_property = TPL_ITEM_DATA.format(dt="Horarios",ddattr='', dd=tmp_property)
@@ -372,10 +388,8 @@ def process_activities(file_list, places):
 					tmp_property = TPL_ITEM_DATA.format(dt="Dirección", ddattr='', dd=tmp_property)				
 
 				for circumflex in REMOVE_CIRCUMFLEX:
-					tmp_property = re.sub(circumflex[0], circumflex[0] + " (" + circumflex[1] + ") ", tmp_property, flags=re.IGNORECASE)
-					
-				if propkey == "nombre":
-					tmp_property = tmp_property.title() #gets overwritten from above
+					tmp_property = tmp_property.replace(circumflex[0], 
+						circumflex[0] + " (" + circumflex[1] + ")")
 
 				tmp_item += tmp_property
 
@@ -387,107 +401,31 @@ def process_activities(file_list, places):
 			tmp_final_activities += TPL_ITEM.format(dlatrr=' class="h-card"',defs=final_item)
 
 		activity_name_heading = activity_name
-		if 'nombre_alt' in activity and activity['nombre_alt']:
-			activity_name_heading += "/" + activity['nombre_alt']
+		if activity_name.lower() in SYNONYMS:
+			activity_name_heading += "/" + "/".join(SYNONYMS[activity_name.lower()])
+
+		if activity_name.lower() in WORDS_PROPER_NAME:
+			activity_name_heading = WORDS_PROPER_NAME[activity_name.lower()] + "/" + activity_name_heading
 
 		tmp_final_section = TPL_SECTION_ACTIVITY.format(sectionattr="",
 			hatrrb=' id="' + activity_name.lower() + '"',actividad=activity_name_heading
 			,lista=tmp_final_activities)
 
-		activities_all[activity['tipo']].append('<a href="#' + activity_name.lower() + '">' + activity_name + '</a>')
+		activities_all.append('<a href="#' + activity_name.lower() + '">' + activity_name + '</a>')
 
 
 		final_text += tmp_final_section
 
-	#proper index
-	tmp = "<ul>"
-	for key in activities_all:
-		tmp += "<li>" + key + ": " + ", ".join(activities_all[key]) + "</li>"
-	tmp += "</ul>"
-
 	# add missing html (headers, div, etc)
-	final_text = HTML_PAGE_TEMPLATE.replace("{body}", tmp + final_text)
+	final_text = HTML_PAGE_TEMPLATE.replace("{body}", ", ".join(activities_all) + final_text)
 
-	save_file(os.path.join(OUTPUT_FOLDER, ACTIVITIES_OUTPUT_FILE), final_text)
+	save_file(os.path.join(os.getcwd(), ACTIVITIES_OUTPUT_FILE),final_text)
 
-def update_json(what="activities"):
-	'''Regenerate json files to new structure
-
-	:param:what   type of files to change. For now only activities 
-	'''
-
-	return
-
-	if not what == "activities":
-		print(" What are you trying to do?")
-		exit()
-	print(" Updating files to new structure")
-	
-	file_list = list()
-	file_list = files_get(os.path.join(SRC_FOLDER, ACTIVITY_FOLDER))
-	
-	from collections import OrderedDict #order it as here
-	new_json = OrderedDict()
-
-	#now it's up to you!
-	return
-
-	new_json['nombre'] = ""
-	new_json['nombre_alt'] = ""
-	new_json['tipo'] = ""
-	new_json['lugares'] = []
-
-	for index, ffile in enumerate(file_list[11:]):
-		print ("\n Reading: " + os.path.basename(ffile) + "  index: " + str(index + 11))
-
-		tmp_name,_ = os.path.splitext(os.path.basename(ffile))
-			
-		answer = ""
-
-		answer = input(" Name (heading, empty for '"+tmp_name+"'): ")
-		if not answer:
-			new_json['nombre'] = tmp_name
-		else:
-			new_json['nombre'] = answer
-		
-		answer = ""
-		answer = input(" Name Alt: ")
-		new_json['nombre_alt'] = answer
-
-		answer = ""
-		while (not answer): answer = input(" Tipo (ej. deporte): ")
-		new_json['tipo'] = answer
-
-		tmp_file = json.loads(open_file(ffile))
-		new_json['lugares'] = tmp_file
-		print (" Saving it! ")
-		with open(ffile, 'w') as json_final:
-			json.dump(new_json, json_final, ensure_ascii=False, indent=3)
-
-def isoDateToHuman(date):
-	'''Converts an ISO date (YYYY-MM-DD) to human (spanish).
-	(simple way, without setting locale and calling datetime. 
-		For now we don't need that)
-
-	:param:date str the date 
-	:return: str 
-	'''
-
-	year, month, day = date.split("-")
-
-	month_list = ("desconocido", "enero", "febrero", "marzo", "abril", "mayo"
-		, "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre")
-
-	month = int(month) #also removes leading 0
-	
-	#ex: julio 27, 2015
-	return "{} {}, {}".format(month_list[month], day, year)
 
 # =======================
 # ==== Program start ====
 # =======================
 
-#future TODO: probably better to have a list 
 if not os.path.exists(os.path.join(SRC_FOLDER, PLACES_FILE)):
 	print("places file doesn't exist. Exiting")
 	exit()
@@ -496,12 +434,6 @@ if not os.path.exists(os.path.join(SRC_FOLDER, PAGE_TEMPLATE_FILE)):
 	print("template file doesn't exist. Exiting")
 	exit()
 
-if not os.path.exists(OUTPUT_FOLDER):
-	try:
-		os.makedirs(OUTPUT_FOLDER)
-	except OSError:
-		print("output folder doesn't exist and can't be created. Exiting")
-		exit()
 
 # 'Cause I'm cool I'm going to use the old sys.argv
 args = sys.argv[1:]
@@ -513,38 +445,24 @@ if "-h" in args or "--help" in args:
 	print(" [script] -a    Regenera actividades")
 	print(" [script] -l    Regenera lugares")
 	print(" [script] -p    Regenera todas las páginas HTML")
-	print(" [script] -p [keyword]   Regenera la página [keyword]. Opciones: " + str(HTML_PAGES_KEYWORDS))
-	print(" [script] --update    Regenera todos los .JSON con la nueva estructura (desde codigo)")
-	print("")
-	print(" Las únicas opciones que se pueden poner juntas son -a y -l que se las une como -al o -la ")
+	print(" [script] -p [keyword]   Regenera la página [keyword]")
 
 	exit()
 
-if "--update" in args and args[0] == "--update":
-	update_json()
-	exit()
-
-
-if str(args).count("-") > 1:
+if args.count("-") > 1:
 	print(" I'm not ready for that many flags. Exiting")
 	exit()
 
-if str(args).count("-") == 1:
+if args.count("-") == 1:
 	if not "-l" in args: DO_PLACES = False 
 	if not "-a" in args: DO_ACTIVITIES = False 
 	if not "-p" in args: DO_PAGES = False 
 
-	if "-al" in args or "-la" in args: 
-		DO_PLACES     = True 
-		DO_ACTIVITIES = True 
-
-
-if "-p" in args and len(args) > 1: 
+if "-p" in args: 
 	# "proper" way
 	# DO_PAGE = args[args.index("-p") + 1]
 	# But for quick & easyness let's hardcode it
 	DO_PAGE = args[1]
-
 
 if DO_ACTIVITIES:
 	if not os.path.exists(os.path.join(SRC_FOLDER, ACTIVITY_FOLDER)):
@@ -553,38 +471,16 @@ if DO_ACTIVITIES:
 
 HTML_PAGE_TEMPLATE = open_file(os.path.join(SRC_FOLDER, PAGE_TEMPLATE_FILE))
 
-
+'''
 if DO_PAGES:
 	if not DO_PAGE:
 		#get keys & cycle through them
-		for page in HTML_PAGES_KEYWORDS:
-			tmp_page = open_file(os.path.join(HTML_FOLDER, page + ".html"))
-
-			if page == "index":
-				today_date    = ""
-				today_changes = ""
-				final_str     = ""
-
-				today_date = input(" Today date (ISO, leave blank for not including update): ")
-				if today_date:
-					while (not today_changes):
-						today_changes = input(" Today changes: ")
-
-					final_str = TPL_INDEX_LATESTCHANGES.format(date_iso=today_date, 
-						date_human=isoDateToHuman(today_date), change=today_changes)
-
-				tmp_page = tmp_page.replace("{latest-changes}", final_str)
-			
-			tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
-			save_file(os.path.join(OUTPUT_FOLDER, page + ".html"), tmp_page)
+		exit()
 	else:
-		if not DO_PAGE in HTML_PAGES_KEYWORDS:
-			print(" Wrong page key. ")
-			exit()
-		
-		tmp_page = open_file(os.path.join(HTML_FOLDER, DO_PAGE + ".html"))
-		tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
-		save_file(os.path.join(OUTPUT_FOLDER, DO_PAGE + ".html"), tmp_page)
+		#convert it
+		exit()
+	exit()
+'''
 	
 places = json.loads(open_file(os.path.join(SRC_FOLDER, PLACES_FILE)))
 
