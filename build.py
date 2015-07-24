@@ -39,28 +39,6 @@ MAP_URL = "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=17/{lat}/{lon
 # pages that website holds besides activities & places. Hardcoded.
 HTML_PAGES_KEYWORDS = ('index', 'contribucion', 'preguntas-frequentes')
 
-#Synonyms for sports. Key = name (not filename!)
-SYNONYMS = {
-	'paddle': ("padle", "padel")
-	, 'futbol': ("football", ) #and fútbol
-	, 'basket': ("básquetbol", "basquet", "basketball")
-	, 'handball': ("balonmano",)
-	, 'pool': ("billar",)
-	, 'hockey roller': ("hockey sobre patines",) # "roller hockey"
-	, 'hockey pista': ("field-hockey", "hockey sobre césped")
-	, 'jiu-jitsu': ("jiu-jitsu brasileño", "BJJ") #Not the same, but for now I don't care
-	, 'judo': ("yudo",)
-}
-
-#some words can have "officialy" dashes
-WORDS_WITH_DASH = ('jiu-jitsu','hip-hop')
-
-# Let's put in use the poor japanese I know
-WORDS_PROPER_NAME = {
-	'judo':'jûdô' #じゅうどう
-	, 'jiu-jitsu':'jûjutsu' #じゅうじゅつ
-}
-
 # Let's put in use the poor japanese I know, part 2
 # people don't use Hepburn romanization (w/circumflex) in some words. Go with the flow.
 REMOVE_CIRCUMFLEX = ( 
