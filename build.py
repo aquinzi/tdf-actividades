@@ -290,22 +290,21 @@ def process_activities(file_list, places):
 	tmp_item = ""
 	final_text = ""
 
-	activities_all = list()
+	activities_all = dict()
 
 	for f in file_list:
 		activity = json.loads(open_file(f))
 		activity_name = os.path.basename(f) #get filename
 		print(" Processing: " + activity_name)
-		activity_name, _ = os.path.splitext(activity_name) #delete extension
+	
+		activity_name = activity['nombre'].title()
 
-		if not activity_name in WORDS_WITH_DASH:
-			activity_name = activity_name.replace("-", " ")
-		
-		activity_name = activity_name.title()
+		if not activity['tipo'] in activities_all:
+			activities_all[activity['tipo']] = list()
 
 		tmp_final_activities = ""
 
-		for item in activity:
+		for item in activity['lugares']:
 			tmp_item = ""
 			final_item = ""
 
@@ -319,7 +318,7 @@ def process_activities(file_list, places):
 
 					if propkey == "nombre":
 						if item[propkey]:
-							tmp_property = TPL_ITEM_DATA.format(dt="Nombre",ddattr='',dd=item[propkey])
+							tmp_property = TPL_ITEM_DATA.format(dt="Nombre",ddattr='',dd=item[propkey].title())
 
 					elif propkey == "url":
 						if propkey in item:
@@ -401,23 +400,26 @@ def process_activities(file_list, places):
 			tmp_final_activities += TPL_ITEM.format(dlatrr=' class="h-card"',defs=final_item)
 
 		activity_name_heading = activity_name
-		if activity_name.lower() in SYNONYMS:
-			activity_name_heading += "/" + "/".join(SYNONYMS[activity_name.lower()])
-
-		if activity_name.lower() in WORDS_PROPER_NAME:
-			activity_name_heading = WORDS_PROPER_NAME[activity_name.lower()] + "/" + activity_name_heading
+		if activity['nombre_alt']:
+			activity_name_heading += "/" + activity['nombre_alt']
 
 		tmp_final_section = TPL_SECTION_ACTIVITY.format(sectionattr="",
 			hatrrb=' id="' + activity_name.lower() + '"',actividad=activity_name_heading
 			,lista=tmp_final_activities)
 
-		activities_all.append('<a href="#' + activity_name.lower() + '">' + activity_name + '</a>')
+		activities_all[activity['tipo']].append('<a href="#' + activity_name.lower() + '">' + activity_name + '</a>')
 
 
 		final_text += tmp_final_section
 
+	#proper index
+	tmp = "<ul>"
+	for key in activities_all:
+		tmp += "<li>" + key + ": " + ", ".join(activities_all[key]) + "</li>"
+	tmp += "</ul>"
+
 	# add missing html (headers, div, etc)
-	final_text = HTML_PAGE_TEMPLATE.replace("{body}", ", ".join(activities_all) + final_text)
+	final_text = HTML_PAGE_TEMPLATE.replace("{body}", tmp + final_text)
 
 	save_file(os.path.join(OUTPUT_FOLDER, ACTIVITIES_OUTPUT_FILE), final_text)
 
