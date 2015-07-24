@@ -1,0 +1,12 @@
+[
+   {  "nombre": ""
+   	,"direccion": ""
+   	,"horario" : [{"dia":"", "hora":"", "nota":""} ]
+   	, "geo": {"lat":, "lon": }
+   	, "telefono":[""]
+      ,"url": [""]
+      ,"email":""
+   	, "last-update": "2015-07-16"
+   }
+]
+
