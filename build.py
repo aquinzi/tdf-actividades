@@ -60,6 +60,14 @@ WORDS_PROPER_NAME = {
 	, 'jiu-jitsu':'jûjutsu' #じゅうじゅつ
 }
 
+# Let's use the poor japanese I have, part 2
+# people don't use Hepburn romanization (w/circumflex) in some words. Go with the flow.
+REMOVE_CIRCUMFLEX = ( 
+	('Shôtôkan', 'Shotokan') 
+	, ('gôjû-ryû', 'goju-ryu') 
+	, ('dôjô', 'dojo') 
+	)
+
 #HTML templates
 TPL_ITEM = '''
 	<dl{dlatrr}>
@@ -375,10 +383,13 @@ def process_activities(file_list, places):
 								tmp_property = address
 
 							tmp_property = TPL_ITEM_DATA.format(dt="Dirección", ddattr=' class="p-street-address"', dd=tmp_property)
-						else:
-							tmp_property = '¡¿Donde se da!?'
-							tmp_property = TPL_ITEM_DATA.format(dt="Dirección", ddattr='', dd=tmp_property)
+				elif propkey == "direccion":
+					tmp_property = '¡¿Donde se da!?'
+					tmp_property = TPL_ITEM_DATA.format(dt="Dirección", ddattr='', dd=tmp_property)				
 
+				for circumflex in REMOVE_CIRCUMFLEX:
+					tmp_property = tmp_property.replace(circumflex[0], 
+						circumflex[0] + " (" + circumflex[1] + ")")
 
 				tmp_item += tmp_property
 
