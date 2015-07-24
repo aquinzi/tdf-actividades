@@ -1,9 +1,12 @@
-[
-   {  "nombre": ""
-      , "nota":"por ahora solo talleres, próximo a ser una escuela de iniciación"
-   	, "last-update": "2015-07-23"
-   }
-   
-]
-
-
+{
+   "nombre": "canotaje", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "", 
+         "nota": "por ahora solo talleres, próximo a ser una escuela de iniciación", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}

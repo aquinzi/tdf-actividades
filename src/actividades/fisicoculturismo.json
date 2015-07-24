@@ -1,5 +1,11 @@
-[
-   {  "nombre": ""
-   	, "last-update": "2015-07-23"
-   }
-]
+{
+   "nombre": "fisicoculturismo", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}

@@ -1,7 +1,12 @@
-[
-   {  "nombre": "2do Set", "direccion":"segundoset"
-   	,"last-update": "2015-07-16"
-   }
-]
-
-
+{
+   "nombre": "paddle", 
+   "nombre_alt": "padle/padel", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "2do Set", 
+         "last-update": "2015-07-16", 
+         "direccion": "segundoset"
+      }
+   ]
+}

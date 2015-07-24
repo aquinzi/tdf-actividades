@@ -1,10 +1,15 @@
-[
-   {  "nombre": "ThunderGirls Roller Derby RG"
-      , "url":["http://www.facebook.com/ThunderGirlsRD"]
-      , "precio":"gratis"
-   	, "last-update": "2015-07-23"
-   }
-   
-]
-
-
+{
+   "nombre": "roller derby", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "url": [
+            "http://www.facebook.com/ThunderGirlsRD"
+         ], 
+         "nombre": "ThunderGirls Roller Derby RG", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}

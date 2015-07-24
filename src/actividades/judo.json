@@ -1,12 +1,19 @@
-[
-   {  "nombre": "Municipio"
-   	, "direccion":"centrodeportivo"
-      ,"precio":"gratis"
-   	, "last-update": "2015-07-23"
-   },
-   {  "nombre": "Municipio"
-      ,"precio":"gratis"
-      , "nota": "Iniciación deportiva"
-   	, "last-update": "2015-07-23"
-   }
-]
+{
+   "nombre": "jûdô", 
+   "nombre_alt": "judo/yudo", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "Municipio", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23", 
+         "direccion": "centrodeportivo"
+      }, 
+      {
+         "nombre": "Municipio", 
+         "nota": "Iniciación deportiva", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}

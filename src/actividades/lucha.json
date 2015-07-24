@@ -1,7 +1,13 @@
-[
-   {  "nombre": ""
-      ,"precio":"gratis"
-      ,"nota": "Iniciación deportiva"
-   	, "last-update": "2015-07-23"
-   }
-]
+{
+   "nombre": "lucha", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "", 
+         "nota": "Iniciación deportiva", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}

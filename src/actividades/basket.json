@@ -1,14 +1,23 @@
-[
-    {"nombre": "Municipio"
-    ,"precio":"gratis"
-     ,"last-update": "2015-07-23"
-    },
-    {"nombre": "", "direccion": "cantera",
-     "last-update": "2015-07-16"
-    },
-    {"nombre": "Mini Basket"
-    ,"precio":"gratis"
-    ,"nota":"Iniciación deportiva"
-     ,"last-update": "2015-07-23"
-    }
-]
+{
+   "nombre": "basket", 
+   "nombre_alt": "básquetbol/basquet/basketball", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "Municipio", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }, 
+      {
+         "nombre": "", 
+         "last-update": "2015-07-16", 
+         "direccion": "cantera"
+      }, 
+      {
+         "nombre": "Mini Basket", 
+         "nota": "Iniciación deportiva", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}

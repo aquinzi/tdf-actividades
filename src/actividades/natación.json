@@ -1,6 +1,13 @@
-[
-   {  "nombre": "Municipio", "direccion":"natatoriomunicipal"
-      ,"precio":"gratis"
-   	, "last-update": "2015-07-23"
-   }
-]
+{
+   "nombre": "natación", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "Municipio", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23", 
+         "direccion": "natatoriomunicipal"
+      }
+   ]
+}

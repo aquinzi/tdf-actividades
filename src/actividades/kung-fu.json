@@ -1,8 +1,13 @@
-[
-   {  "nombre": "Wu Tang", "direccion":"centrowutang"
-   	, "precio":"pago"
-   	,"last-update": "2015-07-16"
-   }
-]
-
-
+{
+   "nombre": "kung fu", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "Wu Tang", 
+         "precio": "pago", 
+         "last-update": "2015-07-16", 
+         "direccion": "centrowutang"
+      }
+   ]
+}

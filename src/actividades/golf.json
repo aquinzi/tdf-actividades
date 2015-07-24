@@ -1,12 +1,24 @@
-[
-   {  "nombre": "Golf Club Río Grande"
-   	,"direccion": "Ruta \"C\" Kilómetro 17 Estancia Maria Behety"
-   	, "geo": {"lat":-53.7868904, "lon":-67.9346891 }
-   	, "telefono":["15523039"]
-      ,"url": ["http://golfclubrg.com"]
-      ,"email":"gcrg@golfclubrg.com"
-      , "precio":"pago"
-   	, "last-update": "2015-07-16"
-   }
-]
-
+{
+   "nombre": "golf", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "url": [
+            "http://golfclubrg.com"
+         ], 
+         "geo": {
+            "lat": -53.7868904, 
+            "lon": -67.9346891
+         }, 
+         "precio": "pago", 
+         "direccion": "Ruta \"C\" Kilómetro 17 Estancia Maria Behety", 
+         "last-update": "2015-07-16", 
+         "nombre": "Golf Club Río Grande", 
+         "telefono": [
+            "15523039"
+         ], 
+         "email": "gcrg@golfclubrg.com"
+      }
+   ]
+}

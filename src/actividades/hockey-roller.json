@@ -1,8 +1,11 @@
-[
-   {  "nombre": ""
-   	, "last-update": "2015-07-23"
-   }
-   
-]
-
-
+{
+   "nombre": "hockey roller", 
+   "nombre_alt": "hockey sobre patines", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}

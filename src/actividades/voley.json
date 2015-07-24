@@ -1,12 +1,18 @@
-[
-   {  "nombre": "Municipio"
-      ,"precio":"gratis"
-   	, "last-update": "2015-07-23"
-   },
-   {  "nombre": "Mini voley"
-      ,"precio":"gratis"
-      , "nota":"Iniciación deportiva"
-      , "last-update": "2015-07-23"
-   }
-]
-
+{
+   "nombre": "voley", 
+   "nombre_alt": "volley/volleyball/voleybol", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "Municipio", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }, 
+      {
+         "nombre": "Mini voley", 
+         "nota": "Iniciación deportiva", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}

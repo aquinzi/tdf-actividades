@@ -1,14 +1,23 @@
-[
-   {  "nombre": "Municipio"
-      ,"precio":"gratis"
-   	, "last-update": "2015-07-23"
-   }
-   ,{  "nombre": "Club Los Ñires", "direccion":"losñires"
-      ,"precio":"gratis"
-   	, "last-update": "2015-07-23"
-   }
-   ,{  "nombre": "Adultos Mayores (> 60 años)"
-      ,"precio":"gratis"
-   	, "last-update": "2015-07-23"
-   }
-]
+{
+   "nombre": "tenis de mesa", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "Municipio", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }, 
+      {
+         "nombre": "Club Los Ñires", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23", 
+         "direccion": "losñires"
+      }, 
+      {
+         "nombre": "Adultos Mayores (> 60 años)", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}

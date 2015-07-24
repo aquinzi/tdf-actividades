@@ -1,10 +1,17 @@
-[
-   {  "nombre": "Escuela de Tiro"
-      ,"precio":"gratis"
-      ,"nota": "Iniciación deportiva"
-   	, "last-update": "2015-07-23"
-   }
-   ,{  "nombre": "Tiro deportivo, Tiro olímpico"
-   	, "last-update": "2015-07-23"
-   }
-]
+{
+   "nombre": "tiro", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "Escuela de Tiro", 
+         "nota": "Iniciación deportiva", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }, 
+      {
+         "nombre": "Tiro deportivo, Tiro olímpico", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}

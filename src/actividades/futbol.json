@@ -1,11 +1,17 @@
-[
-   {  "nombre": "Municipio"
-   	,"precio":"gratis"
-   	,"last-update": "2015-07-23"
-   },
-      {  "nombre": "", "direccion":"cantera"
-   	,"last-update": "2015-07-16"
-   }
-]
-
-
+{
+   "nombre": "futbol", 
+   "nombre_alt": "football", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "Municipio", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23"
+      }, 
+      {
+         "nombre": "", 
+         "last-update": "2015-07-16", 
+         "direccion": "cantera"
+      }
+   ]
+}

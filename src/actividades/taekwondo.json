@@ -1,20 +1,26 @@
-[
-   {  "nombre": "Municipio"
-      , "direccion":"centrodeportivo"
-      , "precio":"gratis"
-   	, "last-update": "2015-07-23"
-   }
-   , {  "nombre": "Municipio"
-      , "nota":"Iniciación deportiva"
-      , "last-update": "2015-07-23"
-   }
-   , {  "nombre": "Taekwondo (WTF)"
-      , "last-update": "2015-07-23"
-   }
-    , {  "nombre": "Taekwondo (ITF)"
-      , "last-update": "2015-07-23"
-   }  
-   
-]
-
-
+{
+   "nombre": "taekwondo", 
+   "nombre_alt": "", 
+   "tipo": "deporte", 
+   "lugares": [
+      {
+         "nombre": "Municipio", 
+         "precio": "gratis", 
+         "last-update": "2015-07-23", 
+         "direccion": "centrodeportivo"
+      }, 
+      {
+         "nombre": "Municipio", 
+         "nota": "Iniciación deportiva", 
+         "last-update": "2015-07-23"
+      }, 
+      {
+         "nombre": "Taekwondo (WTF)", 
+         "last-update": "2015-07-23"
+      }, 
+      {
+         "nombre": "Taekwondo (ITF)", 
+         "last-update": "2015-07-23"
+      }
+   ]
+}
