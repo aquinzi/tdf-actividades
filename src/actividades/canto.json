@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
    "nombre": "canto/coro", 
+=======
+   "nombre": "canto", 
+>>>>>>> 2c6b990... add new activities
    "nombre_alt": "", 
    "tipo": "arte", 
    "lugares": [
@@ -7,11 +11,14 @@
          "nombre": "", 
          "last-update": "2015-07-23"
       }
+<<<<<<< HEAD
       , {
          "nombre": "Coro para adultos mayores (mas de 60 Años)", 
          "direccion": "hogardedialazosamor", 
          "precio": "gratis", 
          "last-update": "2015-07-25"
       } 
+=======
+>>>>>>> 2c6b990... add new activities
    ]
 }

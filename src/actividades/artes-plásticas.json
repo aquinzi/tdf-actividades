@@ -6,6 +6,7 @@
    "lugares": [
 	   {  "nombre": "Dibujo", "last-update": "2015-07-23"}
 	   , {  "nombre": "Pintura", "last-update": "2015-07-23"}
+<<<<<<< HEAD
 	   , {  
 	   	"nombre": "Pintura para adultos mayores (mas de 60 Años)"
 	   	, "direccion": "hogardedialazosamor"
@@ -24,6 +25,8 @@
 	   	, "precio": "gratis"
 	   	, "last-update": "2015-07-25"
 		}
+=======
+>>>>>>> 2c6b990... add new activities
 	   , {  "nombre": "Cerámica", "last-update": "2015-07-23"}
    ]
 }
