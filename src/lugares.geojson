@@ -15,6 +15,11 @@
 , {"type": "Feature", "properties": {"id":"centrowutang", "nombre": "Centro de Cultura Oriental Wu Tang", "direccion": "Avenida San Martín 123", "telefono": ["420316"], "last-update": "2015-07-21"}, "geometry": {"type": "Point", "coordinates": [-67.695087, -53.789367] }}
 , {"type": "Feature", "properties": {"id":"cantera", "nombre": "Polideportivo Cantera", "direccion": "F. Echelaine 893", "url": ["http://www.facebook.com/PolideportivoCantera/"], "telefono": ["422539"], "last-update": "2015-07-21"}, "geometry": {"type": "Point", "coordinates": [-67.7470427, -53.787384] }}
 , {"type": "Feature", "properties": {"id":"segundoset", "nombre": "2do Set", "direccion": "Amadeo Sabatini 57", "url": ["http://www.facebook.com/pages/2do-Set/"], "telefono": ["424290"], "last-update": "2015-07-21","marker-symbol": "tennis"}, "geometry": {"type": "Point", "coordinates": [-67.726979, -53.785282] }}
+<<<<<<< HEAD
 , {"type": "Feature", "properties": {"id":"segundotiempo", "nombre": "2do Tiempo", "direccion": "Luis Piedrabuena 1171", "telefono": ["15522282"], "last-update": "2015-07-24"}, "geometry": {"type": "Point", "coordinates": [-67.709177, -53.789031] }}
 , {"type": "Feature", "properties": {"id":"hogardedialazosamor", "nombre": "Hogar de Día \"Lazos de Amor\" ", "direccion": "Muñoz 927", "last-update": "2015-07-25", "gstreetmap":"https://www.google.com.ar/maps/@-53.798193,-67.685576,3a,75y,131.38h,71.45t/data=!3m6!1e1!3m4!1sUO6G1dquqwJounmHGXhU9Q!2e0!7i13312!8i6656", "horario" : [{"dia":"lunes-viernes", "hora":"09:00-16:00", "nota":"Se puede asistir media jornada o jornada completa.\\nSe sirve desayuno, almuerzo y merienda."}]}, "geometry": {"type": "Point", "coordinates": [-67.685576, -53.798193] }}
 ]}
+=======
+, {"type": "Feature", "properties": {"id":"segundotiempo", "nombre": "2do Tiempo", "direccion": "Luis Piedrabuena 1171", "url": [""], "telefono": ["15522282"], "last-update": "2015-07-24"}, "geometry": {"type": "Point", "coordinates": [-67.709177, -53.789031] }}
+]}
+>>>>>>> 83e6db8... update roller-derby.json; add place in lugares.geojson; update actividad-tpl.json
