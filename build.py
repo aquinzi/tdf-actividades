@@ -7,9 +7,10 @@ Outputs in current folder
 
 # TODO: activities: add keys not in properties list
 # TODO: activities: add key overwritting
-# TODO: add quick templating system for all pages
-# TODO: simplify code so it's not that redundant and duplicated
+# TODO: simplify code so it's not that redundant and duplicated (lazyness & quickness won)
 # TODO: place: can have also opening-times
+# TODO: option to rebuild jsons through script
+# TODO: use regex for circum-replacements
  
 
 
@@ -23,11 +24,12 @@ import sys
 
 SRC_FOLDER = "src" #where json and geojson live togheter
 
+# under SRC_FOLDER we have:
+ACTIVITY_FOLDER = "actividades" #activity's home
+HTML_FOLDER = "html" 
 PLACES_FILE = "lugares.geojson"
 ACTIVITY_DUMMY_FILE = "actividad-tpl.json"
 PAGE_TEMPLATE_FILE = "page_tpl.html"
-
-ACTIVITY_FOLDER = "actividades" #activity's home
 
 PLACES_OUTPUT_FILE = "rg-lugares.html"
 ACTIVITIES_OUTPUT_FILE = "rg-actividades.html"
@@ -109,7 +111,8 @@ TPL_PLACES_PAGE = '''
 HTML_PAGE_TEMPLATE = ""
 
 # make it less anoying to call it
-SRC_FOLDER = os.path.join(os.getcwd(), SRC_FOLDER)
+SRC_FOLDER  = os.path.join(os.getcwd(), SRC_FOLDER)
+HTML_FOLDER = os.path.join(SRC_FOLDER, HTML_FOLDER)
 
 DO_PLACES     = True
 DO_ACTIVITIES = True
@@ -445,7 +448,9 @@ if "-h" in args or "--help" in args:
 	print(" [script] -a    Regenera actividades")
 	print(" [script] -l    Regenera lugares")
 	print(" [script] -p    Regenera todas las páginas HTML")
-	print(" [script] -p [keyword]   Regenera la página [keyword]")
+	print(" [script] -p [keyword]   Regenera la página [keyword]. Opciones: " + str(HTML_PAGES_KEYWORDS))
+	print("")
+	print(" Las únicas opciones que se pueden poner juntas son -a y -l que se las une como -al o -la ")
 
 	exit()
 
@@ -457,6 +462,11 @@ if args.count("-") == 1:
 	if not "-l" in args: DO_PLACES = False 
 	if not "-a" in args: DO_ACTIVITIES = False 
 	if not "-p" in args: DO_PAGES = False 
+
+	if "-al" in args or "-la" in args: 
+		DO_PLACES     = True 
+		DO_ACTIVITIES = True 
+
 
 if "-p" in args: 
 	# "proper" way
@@ -471,16 +481,22 @@ if DO_ACTIVITIES:
 
 HTML_PAGE_TEMPLATE = open_file(os.path.join(SRC_FOLDER, PAGE_TEMPLATE_FILE))
 
-'''
+
 if DO_PAGES:
 	if not DO_PAGE:
 		#get keys & cycle through them
-		exit()
+		for page in HTML_PAGES_KEYWORDS:
+			tmp_page = open_file(os.path.join(HTML_FOLDER, page + "_tpl.html"))
+			tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
+			save_file(os.path.join(os.getcwd(), page + ".html"))
 	else:
-		#convert it
-		exit()
-	exit()
-'''
+		if not DO_PAGE in HTML_PAGES_KEYWORDS:
+			print(" Wrong page key. ")
+			exit()
+		
+		tmp_page = open_file(os.path.join(HTML_FOLDER, DO_PAGE + "_tpl.html"))
+		tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
+		save_file(os.path.join(os.getcwd(), DO_PAGE + ".html"))
 	
 places = json.loads(open_file(os.path.join(SRC_FOLDER, PLACES_FILE)))
 
