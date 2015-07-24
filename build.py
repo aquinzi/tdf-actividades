@@ -10,14 +10,13 @@ Outputs in current folder
 # TODO: simplify code so it's not that redundant and duplicated (lazyness & quickness won)
 # TODO: place: can have also opening-times
 # TODO: option to rebuild jsons through script
-# TODO: use regex for circum-replacements
  
 
 
 import json
 import os
 import sys
-
+import re
 
 # =======================
 # ==== configuration ====
@@ -391,8 +390,7 @@ def process_activities(file_list, places):
 					tmp_property = TPL_ITEM_DATA.format(dt="Dirección", ddattr='', dd=tmp_property)				
 
 				for circumflex in REMOVE_CIRCUMFLEX:
-					tmp_property = tmp_property.replace(circumflex[0], 
-						circumflex[0] + " (" + circumflex[1] + ")")
+					tmp_property = re.sub(circumflex[0], circumflex[0] + " (" + circumflex[1] + ") ", tmp_property, flags=re.IGNORECASE)
 
 				tmp_item += tmp_property
 
