@@ -1,0 +1,34 @@
+[
+   {  "nombre": "Municipio", "direccion":"centrodeportivo"
+   	,"horario" : [
+         {"dia":"lunes, miercoles, viernes", "hora":"18:30-19:30", "nota":"menores"}
+         ,{"dia":"lunes, miercoles, viernes", "hora":"19:30-20:30", "nota":"menores"}
+         ,{"dia":"lunes, miercoles, viernes", "hora":"20:30-21:30", "nota":"mayores"}
+   	]
+      ,"precio":"gratis"
+      , "nota":"Estilo Shôtôkan"
+      ,"last-update": "2015-07-23"
+   },
+   {  "nombre": "Municipio", "direccion":"margalot"
+      ,"horario" : [
+         {"dia":"martes, jueves", "hora":"18:30-19:30", "nota":"menores"}
+         ,{"dia":"martes, jueves", "hora":"19:30-20:30", "nota":"menores"}
+         ,{"dia":"martes, jueves", "hora":"20:30-21:30", "nota":"mayores"}
+      ]
+      ,"precio":"gratis"
+      , "nota":"Estilo Shôtôkan"
+      ,"last-update": "2015-07-23"
+   },
+   {  "nombre": "Dôjô Cantera", "direccion":"cantera"
+      ,"horario" : [
+         {"dia":"martes, jueves", "hora":"17:00-19:00", "nota":"mayores"}
+         ,{"dia":"sábado", "hora":"16:30-19:30", "nota":"Clase general"}
+      ]   
+      ,"url": ["https://www.facebook.com/pages/Karate-Polideportivo-Cantera/"]
+      ,"nota":"Estilo: gôjû-ryû shobukan (okiwanense/tradicional). \\nInscripciones: en dôjô o llamando al 15479229"
+      ,"last-update": "2015-07-16"
+   }
+
+]
+
+

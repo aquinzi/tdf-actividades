@@ -1,0 +1,12 @@
+[
+   {  "nombre": "Municipio"
+   	, "direccion":"centrodeportivo"
+      ,"precio":"gratis"
+   	, "last-update": "2015-07-23"
+   },
+   {  "nombre": "Municipio"
+      ,"precio":"gratis"
+      , "nota": "Iniciación deportiva"
+   	, "last-update": "2015-07-23"
+   }
+]

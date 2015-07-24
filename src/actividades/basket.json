@@ -1,0 +1,14 @@
+[
+    {"nombre": "Municipio"
+    ,"precio":"gratis"
+     ,"last-update": "2015-07-23"
+    },
+    {"nombre": "", "direccion": "cantera",
+     "last-update": "2015-07-16"
+    },
+    {"nombre": "Mini Basket"
+    ,"precio":"gratis"
+    ,"nota":"Iniciación deportiva"
+     ,"last-update": "2015-07-23"
+    }
+]
