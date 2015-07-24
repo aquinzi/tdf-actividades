@@ -333,7 +333,7 @@ def process_activities(file_list, places):
 								if 'nota' in hora:
 									horario_nota = hora['nota']
 
-								tmp_property += "<li>{}. {}. <i>{}</i></li>".format(horario_dia, 
+								tmp_property += "<li><time>{}. {}</time>. <i>{}</i></li>".format(horario_dia, 
 									horario_hora, horario_nota)
 							tmp_property = '<ul>' + tmp_property + '</ul>'
 							tmp_property = TPL_ITEM_DATA.format(dt="Horarios",ddattr='', dd=tmp_property)
