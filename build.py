@@ -454,11 +454,11 @@ if "-h" in args or "--help" in args:
 
 	exit()
 
-if args.count("-") > 1:
+if str(args).count("-") > 1:
 	print(" I'm not ready for that many flags. Exiting")
 	exit()
 
-if args.count("-") == 1:
+if str(args).count("-") == 1:
 	if not "-l" in args: DO_PLACES = False 
 	if not "-a" in args: DO_ACTIVITIES = False 
 	if not "-p" in args: DO_PAGES = False 
@@ -473,6 +473,7 @@ if "-p" in args:
 	# DO_PAGE = args[args.index("-p") + 1]
 	# But for quick & easyness let's hardcode it
 	DO_PAGE = args[1]
+
 
 if DO_ACTIVITIES:
 	if not os.path.exists(os.path.join(SRC_FOLDER, ACTIVITY_FOLDER)):
