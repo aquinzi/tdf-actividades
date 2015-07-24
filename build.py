@@ -23,6 +23,7 @@ import sys
 # ==== configuration ====
 
 SRC_FOLDER = "src" #where json and geojson live togheter
+OUTPUT_FOLDER = "output" # can have the final html inside a git folder, switch branches and copy them
 
 # under SRC_FOLDER we have:
 ACTIVITY_FOLDER = "actividades" #activity's home
@@ -111,8 +112,9 @@ TPL_PLACES_PAGE = '''
 HTML_PAGE_TEMPLATE = ""
 
 # make it less anoying to call it
-SRC_FOLDER  = os.path.join(os.getcwd(), SRC_FOLDER)
-HTML_FOLDER = os.path.join(SRC_FOLDER, HTML_FOLDER)
+SRC_FOLDER    = os.path.join(os.getcwd(), SRC_FOLDER)
+OUTPUT_FOLDER = os.path.join(os.getcwd(), OUTPUT_FOLDER)
+HTML_FOLDER   = os.path.join(SRC_FOLDER, HTML_FOLDER)
 
 DO_PLACES     = True
 DO_ACTIVITIES = True
@@ -242,11 +244,9 @@ def process_places(places):
 	final_places_page = TPL_PLACES_PAGE.format(sections=final_places_page)
 
 	# add missing html (headers, div, etc)
-	#final_places_page = HTML_PAGE_TEMPLATE.format(body=final_places_page)
-	# above doesnt work with the js, use this for now
 	final_places_page = HTML_PAGE_TEMPLATE.replace("{body}", final_places_page)
 
-	save_file(os.path.join(os.getcwd(),PLACES_OUTPUT_FILE), final_places_page)
+	save_file(os.path.join(OUTPUT_FOLDER, PLACES_OUTPUT_FILE), final_places_page)
 
 def process_activities(file_list, places):
 	'''Process activities
@@ -422,13 +422,14 @@ def process_activities(file_list, places):
 	# add missing html (headers, div, etc)
 	final_text = HTML_PAGE_TEMPLATE.replace("{body}", ", ".join(activities_all) + final_text)
 
-	save_file(os.path.join(os.getcwd(), ACTIVITIES_OUTPUT_FILE),final_text)
+	save_file(os.path.join(OUTPUT_FOLDER, ACTIVITIES_OUTPUT_FILE), final_text)
 
 
 # =======================
 # ==== Program start ====
 # =======================
 
+#future TODO: probably better to have a list 
 if not os.path.exists(os.path.join(SRC_FOLDER, PLACES_FILE)):
 	print("places file doesn't exist. Exiting")
 	exit()
@@ -437,6 +438,9 @@ if not os.path.exists(os.path.join(SRC_FOLDER, PAGE_TEMPLATE_FILE)):
 	print("template file doesn't exist. Exiting")
 	exit()
 
+if not os.path.exists(OUTPUT_FOLDER):
+	print("output folder doesn't exist. Exiting")
+	exit()
 
 # 'Cause I'm cool I'm going to use the old sys.argv
 args = sys.argv[1:]
@@ -489,7 +493,7 @@ if DO_PAGES:
 		for page in HTML_PAGES_KEYWORDS:
 			tmp_page = open_file(os.path.join(HTML_FOLDER, page + ".html"))
 			tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
-			save_file(os.path.join(os.getcwd(), page + ".html"), tmp_page)
+			save_file(os.path.join(OUTPUT_FOLDER, page + ".html"), tmp_page)
 	else:
 		if not DO_PAGE in HTML_PAGES_KEYWORDS:
 			print(" Wrong page key. ")
@@ -497,7 +501,7 @@ if DO_PAGES:
 		
 		tmp_page = open_file(os.path.join(HTML_FOLDER, DO_PAGE + ".html"))
 		tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
-		save_file(os.path.join(os.getcwd(), DO_PAGE + ".html"), tmp_page)
+		save_file(os.path.join(OUTPUT_FOLDER, DO_PAGE + ".html"), tmp_page)
 	
 places = json.loads(open_file(os.path.join(SRC_FOLDER, PLACES_FILE)))
 
