@@ -1,0 +1,54 @@
+			<h2>Preguntas frecuentes</h2>
+
+			<dl>
+				<dt>¿Por qué?</dt>
+				<dd>Me decidí a hacer este proyecto de "directorio" por la falta de algún sitio web que lo haga, asi como también el déficit de personas que hagan un perfil en una red social (u algún otro sitio gratuito) para promover lo que hacen (vamos, ¡estamos en 2015!).</dd>
+
+				<dt>¿Vas a expandir esto al resto de la provincia?</dt>
+				<dd>Si me ayudas con tu <a href="colaboracion.html">colaboración</a>, si. Esa es la idea.</dd>
+		
+				<dt>¿Qué tipo de actividades se pueden incluir?</dt>
+				<dd>Cualquier actividad (artística, deportiva, turistica), pago o gratuita, que cumpla con los siguientes "requisitos":
+				<ol>
+					<li>Que se realicen todos los años (nada de "clínicas"/"talleres" de un día para el otro)</li>
+					<li>Que se realicen por lo menos 6 meses (por poner un número) de los 12 meses del año, con la excepción de las actividades invernales.</li>
+					<li>Abierto a quién quiera. Nada de "tenés que hablar con el rey de turno para que te haga una evaluación y, en base a eso, ver si podes entrar o no" (exagerado el ejemplo, pero se entiende la idea)</li>
+				</ol>
+				</dd>
+
+				<dt>¿Qué es eso de "última actualización"?</dt>
+				<dd>Eso. La última vez que cambié datos (importantes) en el item/actividad/lugar.</dd>
+				<dd>Es para tener una referencia sobre los datos y que, si "es muy viejo", que los uses bajo tu "propio riesgo". Esto es mas que nada para los datos de email (que pueden llegar a rebotar por caída de dominio o cierre de cuenta; o a no ser leídos), teléfonos (especialmente celulares) y sitios web (caída de dominio, falta de actualización, etc); y, en menor medida, horarios y dirección/lugar donde se realiza.</dd>
+				
+				<dt>Ingresé y/o edité datos de actividades pero no se actualizaron. ¿Cuándo se van a ver en el sitio?</dt>
+				<dd>En cuanto pueda. Básicamete el traspaso de datos es manual. El orden de más laborioso a menos es el siguiente:
+					<ol>
+						<li>Issue en GitHub</li>
+						<li>Mediante el formulario</li>
+						<li>Fork y pull request del repositorio</li>
+					</ol>
+				</dd>
+
+				<dt>Quiero darte ideas o tengo mas dudas, ¿dónde puedo contactarte?</dt>
+				<dd>Abrí un <a href="https://github.com/eikiu/rg-actividades/issues">issue</a>.</dd>
+				<dd>Si no tenes cuenta en GitHub podes buscarle la vuelta al <a href="https://docs.google.com/forms/d/1OQ8bvzPfGqR5Q6dpBTUGd1y-7FIXtd9Op5eOm2o-TYk/viewform">formulario de entrada de actividades</a></dd>
+
+				<dt>¿Por qué le pones un ^ (acento circunflejo) a ciertas letras?</dt>
+				<dd>Para marcar las vocales largas en las palabras en japonés</dd>
+				<dd>No le puedo poner macrón (rayita sobre caracter), y lo aceptable sería poner el acento circunflejo (según <a href="http://wikipedia.org/">"La Gran Fuente de Información"</a>)</dd>
+
+				<dt>El diseño está feo.</dt>
+				<dd>Las versiones alpha siempre son feas y lo importante es que funcione. Esto lo hace. Busqué el diseño mas simple pero que no se vea del <time datetime="2005">'05</time>.</dd>
+				<dd>Si querés diseñar algo, sos libre de hacerlo y pasarmelo.</dd>
+
+				<dt>¿Por qué el abuso a los <code>dl</code>?</dt>
+				<dd>Para aumentar el ranking de uso de los pobres, además de que se me hacía el tag mas "semántico" para lo que quería hacer.</dd>
+
+				<dt>No entiendo los <code>json</code></dt>
+				<dd>No es para que lo entiendas. Los <code>json</code> son para ser leídos por la computadora, aunque se puede simplificar para que sea leigible para un humano.</dd>
+				<dd>Desafortunadamente es la forma que elegí para guardar los datos. Hay visores online que te dan una especie de <abbr title="Graphic User Interface">GUI</abbr> (Interfaz de usuario).</dd>
+
+				<dt>Entonces, ¿Por qué <code>json</code>?</dt>
+				<dd>No quería tomarme el tiempo de usar una base de datos, diseñarla, escribir los update, edit, add, etc. Sería lo mas apropiado para este caso, pero quería algo rápido y elegí texto plano. <code>CSV</code> lo dejé porque no sabía que sintaxis usar para listados, además de que es ilegible en un editor de texto plano.</dd>
+				<dd>Quería que el <code>script</code> sea lo más portable posible; sin andar instalando librerías para hacer cosas básicas. Por esta razón, desistí usar <code>YAML</code> a favor de <code>json</code> (incluído en python)</dd>
+
