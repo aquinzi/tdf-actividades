@@ -486,17 +486,17 @@ if DO_PAGES:
 	if not DO_PAGE:
 		#get keys & cycle through them
 		for page in HTML_PAGES_KEYWORDS:
-			tmp_page = open_file(os.path.join(HTML_FOLDER, page + "_tpl.html"))
+			tmp_page = open_file(os.path.join(HTML_FOLDER, page + ".html"))
 			tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
-			save_file(os.path.join(os.getcwd(), page + ".html"))
+			save_file(os.path.join(os.getcwd(), page + ".html"), tmp_page)
 	else:
 		if not DO_PAGE in HTML_PAGES_KEYWORDS:
 			print(" Wrong page key. ")
 			exit()
 		
-		tmp_page = open_file(os.path.join(HTML_FOLDER, DO_PAGE + "_tpl.html"))
+		tmp_page = open_file(os.path.join(HTML_FOLDER, DO_PAGE + ".html"))
 		tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
-		save_file(os.path.join(os.getcwd(), DO_PAGE + ".html"))
+		save_file(os.path.join(os.getcwd(), DO_PAGE + ".html"), tmp_page)
 	
 places = json.loads(open_file(os.path.join(SRC_FOLDER, PLACES_FILE)))
 
