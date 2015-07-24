@@ -37,7 +37,7 @@ MAP_URL = "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=17/{lat}/{lon
 #MAP_URL = "http://www.openlinkmap.org/?lat={lat}&lon={lon}&zoom=17&id=1709214056&type=node&lang=en"
 
 # pages that website holds besides activities & places. Hardcoded.
-HTML_PAGES_KEYWORDS = ('index', 'contribucion', 'preguntas-frecuentes')
+HTML_PAGES_KEYWORDS = ('index', 'colaboracion', 'preguntas-frecuentes')
 
 # Let's put in use the poor japanese I know, part 2
 # people don't use Hepburn romanization (w/circumflex) in some words. Go with the flow.
@@ -512,7 +512,7 @@ if str(args).count("-") == 1:
 		DO_ACTIVITIES = True 
 
 
-if "-p" in args: 
+if "-p" in args and len(args) > 1: 
 	# "proper" way
 	# DO_PAGE = args[args.index("-p") + 1]
 	# But for quick & easyness let's hardcode it
