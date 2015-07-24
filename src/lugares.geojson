@@ -15,4 +15,5 @@
 , {"type": "Feature", "properties": {"id":"centrowutang", "nombre": "Centro de Cultura Oriental Wu Tang", "direccion": "Avenida San Martín 123", "telefono": ["420316"], "last-update": "2015-07-21"}, "geometry": {"type": "Point", "coordinates": [-67.695087, -53.789367] }}
 , {"type": "Feature", "properties": {"id":"cantera", "nombre": "Polideportivo Cantera", "direccion": "F. Echelaine 893", "url": ["http://www.facebook.com/PolideportivoCantera/"], "telefono": ["422539"], "last-update": "2015-07-21"}, "geometry": {"type": "Point", "coordinates": [-67.7470427, -53.787384] }}
 , {"type": "Feature", "properties": {"id":"segundoset", "nombre": "2do Set", "direccion": "Amadeo Sabatini 57", "url": ["http://www.facebook.com/pages/2do-Set/"], "telefono": ["424290"], "last-update": "2015-07-21","marker-symbol": "tennis"}, "geometry": {"type": "Point", "coordinates": [-67.726979, -53.785282] }}
+, {"type": "Feature", "properties": {"id":"segundotiempo", "nombre": "2do Tiempo", "direccion": "Luis Piedrabuena 1171", "url": [""], "telefono": ["15522282"], "last-update": "2015-07-24"}, "geometry": {"type": "Point", "coordinates": [-67.709177, -53.789031] }}
 ]}

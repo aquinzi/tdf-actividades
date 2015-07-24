@@ -1,12 +1,16 @@
-[
-   {  "nombre": ""
-   	,"direccion": ""
-   	,"horario" : [{"dia":"", "hora":"", "nota":""} ]
-   	, "geo": {"lat":, "lon": }
-   	, "telefono":[""]
-      ,"url": [""]
-      ,"email":""
-   	, "last-update": "2015-07-16"
-   }
-]
-
+{
+   "nombre": "nombreactiv", 
+   "nombre_alt": "", 
+   "tipo": "deporte/arte", 
+   "lugares": [
+		{  "nombre": ""
+	   	,"direccion": ""
+	   	,"horario" : [{"dia":"", "hora":"", "nota":""} ]
+	   	, "geo": {"lat":, "lon": }
+	   	, "telefono":[""]
+	      ,"url": [""]
+	      ,"email":""
+	   	, "last-update": "2015-07-16"
+   	}
+   ]
+}
