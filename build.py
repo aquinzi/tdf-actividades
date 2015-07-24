@@ -9,7 +9,6 @@ Outputs in current folder
 # TODO: activities: add key overwritting
 # TODO: simplify code so it's not that redundant and duplicated (lazyness & quickness won)
 # TODO: place: can have also opening-times
-# TODO: option to rebuild jsons through script
  
 
 
@@ -56,16 +55,16 @@ SYNONYMS = {
 #some words can have "officialy" dashes
 WORDS_WITH_DASH = ('jiu-jitsu','hip-hop')
 
-# Let's use the poor japanese I have
+# Let's put in use the poor japanese I know
 WORDS_PROPER_NAME = {
 	'judo':'jûdô' #じゅうどう
 	, 'jiu-jitsu':'jûjutsu' #じゅうじゅつ
 }
 
-# Let's use the poor japanese I have, part 2
+# Let's put in use the poor japanese I know, part 2
 # people don't use Hepburn romanization (w/circumflex) in some words. Go with the flow.
 REMOVE_CIRCUMFLEX = ( 
-	('Shôtôkan', 'Shotokan') 
+	('shôtôkan', 'shotokan') 
 	, ('gôjû-ryû', 'goju-ryu') 
 	, ('dôjô', 'dojo') 
 	)
@@ -422,6 +421,60 @@ def process_activities(file_list, places):
 
 	save_file(os.path.join(OUTPUT_FOLDER, ACTIVITIES_OUTPUT_FILE), final_text)
 
+def update_json(what="activities"):
+	'''Regenerate json files to new structure
+
+	:param:what   type of files to change. For now only activities 
+	'''
+
+	return
+
+	if not what == "activities":
+		print(" What are you trying to do?")
+		exit()
+	print(" Updating files to new structure")
+	
+	file_list = list()
+	file_list = files_get(os.path.join(SRC_FOLDER, ACTIVITY_FOLDER))
+	
+	from collections import OrderedDict #order it as here
+	new_json = OrderedDict()
+
+	#now it's up to you!
+	return
+
+	new_json['nombre'] = ""
+	new_json['nombre_alt'] = ""
+	new_json['tipo'] = ""
+	new_json['lugares'] = []
+
+	for index, ffile in enumerate(file_list[11:]):
+		print ("\n Reading: " + os.path.basename(ffile) + "  index: " + str(index + 11))
+
+		tmp_name,_ = os.path.splitext(os.path.basename(ffile))
+			
+		answer = ""
+
+		answer = input(" Name (heading, empty for '"+tmp_name+"'): ")
+		if not answer:
+			new_json['nombre'] = tmp_name
+		else:
+			new_json['nombre'] = answer
+		
+		answer = ""
+		answer = input(" Name Alt: ")
+		new_json['nombre_alt'] = answer
+
+		answer = ""
+		while (not answer): answer = input(" Tipo (ej. deporte): ")
+		new_json['tipo'] = answer
+
+		tmp_file = json.loads(open_file(ffile))
+		new_json['lugares'] = tmp_file
+		print (" Saving it! ")
+		with open(ffile, 'w') as json_final:
+			json.dump(new_json, json_final, ensure_ascii=False, indent=3)
+
 
 # =======================
 # ==== Program start ====
@@ -451,10 +504,16 @@ if "-h" in args or "--help" in args:
 	print(" [script] -l    Regenera lugares")
 	print(" [script] -p    Regenera todas las páginas HTML")
 	print(" [script] -p [keyword]   Regenera la página [keyword]. Opciones: " + str(HTML_PAGES_KEYWORDS))
+	print(" [script] --update    Regenera todos los .JSON con la nueva estructura (desde codigo)")
 	print("")
 	print(" Las únicas opciones que se pueden poner juntas son -a y -l que se las une como -al o -la ")
 
 	exit()
+
+if args[0] == "--update":
+	update_json()
+	exit()
+
 
 if str(args).count("-") > 1:
 	print(" I'm not ready for that many flags. Exiting")
