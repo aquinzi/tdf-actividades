@@ -389,6 +389,9 @@ def process_activities(file_list, places):
 
 				for circumflex in REMOVE_CIRCUMFLEX:
 					tmp_property = re.sub(circumflex[0], circumflex[0] + " (" + circumflex[1] + ") ", tmp_property, flags=re.IGNORECASE)
+					
+				if propkey == "nombre":
+					tmp_property = tmp_property.title() #gets overwritten from above
 
 				tmp_item += tmp_property
 
