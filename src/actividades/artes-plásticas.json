@@ -7,19 +7,19 @@
 	   {  "nombre": "Dibujo", "last-update": "2015-07-23"}
 	   , {  "nombre": "Pintura", "last-update": "2015-07-23"}
 	   , {  
-	   	"nombre": "Pintura para adultos mayores (>60 años)"
+	   	"nombre": "Pintura para adultos mayores (mas de 60 Años)"
 	   	, "direccion": "hogardedialazosamor"
 	   	, "precio": "gratis"
 	   	, "last-update": "2015-07-25"
 		}
 		, {  
-	   	"nombre": "Manualidades para adultos mayores (>60 años)"
+	   	"nombre": "Manualidades para adultos mayores (mas de 60 Años)"
 	   	, "direccion": "hogardedialazosamor"
 	   	, "precio": "gratis"
 	   	, "last-update": "2015-07-25"
 		}
 		, {  
-	   	"nombre": "Patchwork para adultos mayores (>60 años)"
+	   	"nombre": "Patchwork para adultos mayores (mas de 60 Años)"
 	   	, "direccion": "hogardedialazosamor"
 	   	, "precio": "gratis"
 	   	, "last-update": "2015-07-25"
