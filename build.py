@@ -1,16 +1,15 @@
 #! python3
 # -*- coding: utf-8 -*-
 
-'''Parse the JSONs files from the "rg-actividades" to HTML. Activities AND places.
-Outputs in current folder
+'''
+Parse activities and places JSON/GeoJSON to HTML. Also main pages
 '''
 
 # TODO: activities: add keys not in properties list
 # TODO: activities: add key overwritting
 # TODO: simplify code so it's not that redundant and duplicated (lazyness & quickness won)
 # TODO: place: can have also opening-times
- 
-
+# TODO: Option to update index file to include latest changes
 
 import json
 import os
@@ -114,7 +113,6 @@ def files_get(path):
 				theFiles.append(filePath)
 
 	return theFiles
-
 
 def open_file(path):
 	''' Opens file and returns text
@@ -473,8 +471,11 @@ if not os.path.exists(os.path.join(SRC_FOLDER, PAGE_TEMPLATE_FILE)):
 	exit()
 
 if not os.path.exists(OUTPUT_FOLDER):
-	print("output folder doesn't exist. Exiting")
-	exit()
+	try:
+		os.makedirs(OUTPUT_FOLDER)
+	except OSError:
+		print("output folder doesn't exist and can't be created. Exiting")
+		exit()
 
 # 'Cause I'm cool I'm going to use the old sys.argv
 args = sys.argv[1:]
