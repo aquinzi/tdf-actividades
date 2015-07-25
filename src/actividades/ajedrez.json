@@ -4,12 +4,19 @@
    "tipo": "deporte", 
    "lugares": [
       {
-         "nombre": "Club de Ajedrez de Río Grande", 
-         "last-update": "2015-07-23"
+         "nombre": "Club de Ajedrez de Río Grande",
+         "horario" : [{"dia":"martes y jueves", "hora":"19:00-20:00", "nota":""} ]
+         , "direccion": "Maria Auxiliadora 661, Patio Interno"
+         , "url":["http://clubdeajedrezderiogrande.blogspot.com.ar/", "https://www.facebook.com/pages/CLUB-DE-AJEDREZ-DE-RIO-GRANDE/203932726310191"]
+         , "email": "ajedrezrg@hotmail.com"
+         , "telefono": ["15495460", "15529761"]
+         , "last-update": "2015-07-25"
       }, 
       {
-         "nombre": "Adultos Mayores (> 60 años)", 
-         "last-update": "2015-07-23"
+         "nombre": "Taller de Ajedrez para adultos mayores (>60 años)", 
+         "precio": "gratis", 
+         "direccion": "hogardedialazosamor", 
+         "last-update": "2015-07-25"
       }
    ]
 }

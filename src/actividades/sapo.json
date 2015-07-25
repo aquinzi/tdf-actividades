@@ -4,10 +4,16 @@
    "tipo": "deporte", 
    "lugares": [
       {
-         "nombre": "Adultos Mayores (> 60 años)", 
+         "nombre": "Sapo Adultos Mayores (>60 años)", 
          "nota": "Iniciación deportiva", 
          "precio": "gratis", 
          "last-update": "2015-07-23"
       }
+      , {
+         "nombre": "Sapo para adultos mayores (>60 años)", 
+         "direccion": "hogardedialazosamor", 
+         "precio": "gratis", 
+         "last-update": "2015-07-25"
+      } 
    ]
 }

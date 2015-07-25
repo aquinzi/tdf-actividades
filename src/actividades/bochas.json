@@ -9,5 +9,11 @@
          "last-update": "2015-07-23", 
          "direccion": "losñires"
       }
+      , {
+         "nombre": "Bochas para adultos mayores (>60 años)", 
+         "direccion": "hogardedialazosamor", 
+         "precio": "gratis", 
+         "last-update": "2015-07-25"
+      } 
    ]
 }
