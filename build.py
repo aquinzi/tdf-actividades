@@ -533,6 +533,11 @@ if DO_PAGES:
 		#get keys & cycle through them
 		for page in HTML_PAGES_KEYWORDS:
 			tmp_page = open_file(os.path.join(HTML_FOLDER, page + ".html"))
+
+			if page == "index":
+				#for now just remove placeholder
+				tmp_page = tmp_page.replace("{latest-changes}", "")
+			
 			tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
 			save_file(os.path.join(OUTPUT_FOLDER, page + ".html"), tmp_page)
 	else:
