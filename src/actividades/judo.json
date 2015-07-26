@@ -8,12 +8,16 @@
          "precio": "gratis", 
          "last-update": "2015-07-23", 
          "direccion": "centrodeportivo"
-      }, 
-      {
+      }
+      , {
          "nombre": "Municipio", 
          "nota": "Iniciación deportiva", 
          "precio": "gratis", 
          "last-update": "2015-07-23"
+      }
+      , {
+         "nombre": "Federación Provincial de Judo de Tierra del Fuego", 
+         "last-update": "2015-07-26"
       }
    ]
 }

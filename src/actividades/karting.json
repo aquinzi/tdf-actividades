@@ -4,8 +4,12 @@
    "tipo": "deporte", 
    "lugares": [
       {
-         "nombre": "", 
-         "last-update": "2015-07-23"
+         "nombre": "Asociación Riograndense de Karting (ARK)", 
+         "last-update": "2015-07-26"
+      }
+      , {
+         "nombre": "Asociación Fueguina de Karting (AFK)", 
+         "last-update": "2015-07-26"
       }
    ]
 }

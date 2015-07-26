@@ -4,21 +4,14 @@
    "tipo": "deporte", 
    "lugares": [
       {
-         "url": [
-            "https://sites.google.com/site/elmurorgd/"
-         ], 
-         "geo": {
-            "lat": -53.7884285, 
-            "lon": -67.726493
-         }, 
+         "nombre": "El Muro RGD", 
+         "url": ["https://sites.google.com/site/elmurorgd/"],
+         "geo": {"lat": -53.7884285, "lon": -67.726493 },
          "direccion": "Islas Malvinas 1921", 
          "nota": "Escuela de escalada", 
-         "last-update": "2015-07-16", 
-         "nombre": "El Muro RGD", 
-         "telefono": [
-            "15452968"
-         ], 
-         "email": "elmurorgd@gmail.com"
+         "telefono": ["15452968"],
+          "email": "elmurorgd@gmail.com"
+         , "last-update": "2015-07-16"
       }
    ]
 }

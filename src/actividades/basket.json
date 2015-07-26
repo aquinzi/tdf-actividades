@@ -18,6 +18,10 @@
          "nota": "Iniciación deportiva", 
          "precio": "gratis", 
          "last-update": "2015-07-23"
+      } 
+      , {
+         "nombre": "Federación de Básquet de Tierra del Fuego", 
+         "last-update": "2015-07-26"
       }
    ]
 }

@@ -8,5 +8,14 @@
          "precio": "gratis", 
          "last-update": "2015-07-23"
       }
+      , {
+         "nombre": "Agrupación Atlética \"Fin del Mundo\" (AAFM)", 
+         "nota": "Ushuaia y Río Grande", 
+         "last-update": "2015-07-26"
+      }
+      , {
+         "nombre": "AAsociación Riograndense Atlética y Deportiva Amigos Veteranos (ARADAV)", 
+         "last-update": "2015-07-26"
+      }
    ]
 }

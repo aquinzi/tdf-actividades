@@ -4,9 +4,20 @@
    "tipo": "deporte", 
    "lugares": [
       {
+         "nombre": "Club Náutico \"Ioshlelk Oten\"", 
+         "direccion": "Dr. Manuel Montilla 1047", 
+         "geo":{"lat":-53.7986717, "lon":-67.6817017}
+         , "telefono": ["420536"], 
+         "url": ["https://www.facebook.com/club.nautico.ioshlelk.oten/", "http://nautico-rg.blogspot.com.ar/"], 
+         "horario": [{"dia":"miercoles", "hora":"20:00-21:45"} ],
+         "email":"nauticorg@yahoo.com.ar/nauticorg@speedy.com.ar"
+         ,"last-update": "2015-07-26"
+      }
+      , {
          "nombre": "", 
          "nota": "por ahora solo talleres, próximo a ser una escuela de iniciación", 
          "last-update": "2015-07-23"
       }
+
    ]
 }

@@ -4,16 +4,20 @@
    "tipo": "deporte", 
    "lugares": [
       {
-         "nombre": "Auto A.C.T.C.F.", 
+         "nombre": "Turismo Carretera (ACTCF).", 
+         "last-update": "2015-07-26"
+      }, 
+      {
+         "nombre": "Asociación de Pilotos de Automovilismo en Pista (APAP)", 
+         "last-update": "2015-07-26"
+      }, 
+      {
+         "nombre": "Rally A.PI.TU.R.", 
          "last-update": "2015-07-23"
       }, 
       {
-         "nombre": "Auto A.P.A.P.", 
-         "last-update": "2015-07-23"
-      }, 
-      {
-         "nombre": "Auto A.PI.TU.R.", 
-         "last-update": "2015-07-23"
+         "nombre": "Automóbil Club Río Grande (ACRG)", 
+         "last-update": "2015-07-26"
       }
    ]
 }

@@ -4,9 +4,10 @@
    "tipo": "deporte", 
    "lugares": [
       {
-         "nombre": "Municipio", 
+         "nombre": "Escuela de Boxeo", 
+         "nota": "Municipio", 
          "precio": "gratis", 
-         "last-update": "2015-07-23"
+         "last-update": "2015-07-26"
       }
    ]
 }

@@ -4,9 +4,9 @@
    "tipo": "deporte", 
    "lugares": [
       {
-         "nombre": "", 
+         "nombre": "Bochas \"Club Los Ñires\"", 
          "precio": "gratis", 
-         "last-update": "2015-07-23", 
+         "last-update": "2015-07-26", 
          "direccion": "losñires"
       }
       , {

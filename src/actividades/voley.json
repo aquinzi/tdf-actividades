@@ -1,6 +1,6 @@
 {
    "nombre": "voley", 
-   "nombre_alt": "volley/volleyball/voleybol", 
+   "nombre_alt": "volley/volleyball/voleibol", 
    "tipo": "deporte", 
    "lugares": [
       {
@@ -13,6 +13,10 @@
          "nota": "Iniciación deportiva", 
          "precio": "gratis", 
          "last-update": "2015-07-23"
+      }
+      , {
+         "nombre": "Federación Fueguina de Voley", 
+         "last-update": "2015-07-26"
       }
    ]
 }

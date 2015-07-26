@@ -7,11 +7,19 @@
          "nombre": "Municipio", 
          "precio": "gratis", 
          "last-update": "2015-07-23"
-      }, 
-      {
+      }
+      , {
          "nombre": "Rugby 7 (seven)", 
          "precio": "gratis", 
          "last-update": "2015-07-23"
+      }
+      , {
+         "nombre": "Club Universitario de Rugby", 
+         "last-update": "2015-07-26"
+      }
+      , {
+         "nombre": "Río Grande Rugby y Jockey Club", 
+         "last-update": "2015-07-26"
       }
    ]
 }
