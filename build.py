@@ -379,7 +379,7 @@ def process_activities(file_list, places):
 			tmp_final_activities += TPL_ITEM.format(dlatrr=' class="h-card"',defs=final_item)
 
 		activity_name_heading = activity_name
-		if activity['nombre_alt']:
+		if 'nombre_alt' in activity and activity['nombre_alt']:
 			activity_name_heading += "/" + activity['nombre_alt']
 
 		tmp_final_section = TPL_SECTION_ACTIVITY.format(sectionattr="",
@@ -494,7 +494,7 @@ if "-h" in args or "--help" in args:
 
 	exit()
 
-if args[0] == "--update":
+if "--update" in args and args[0] == "--update":
 	update_json()
 	exit()
 
