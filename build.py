@@ -9,7 +9,7 @@ Parse activities and places JSON/GeoJSON to HTML. Also main pages
 # TODO: activities: add key overwritting
 # TODO: simplify code so it's not that redundant and duplicated (lazyness & quickness won)
 # TODO: place: can have also opening-times
-# TODO: Option to update index file to include latest changes
+
 
 import json
 import os
@@ -46,7 +46,15 @@ REMOVE_CIRCUMFLEX = (
 	, ('dôjô', 'dojo') 
 	)
 
-#HTML templates
+# ---------------
+# HTML templates
+
+
+TPL_INDEX_LATESTCHANGES = '''<li><time datetime="{date_iso}">{date_human}</time> {change}</li>'''
+
+
+
+
 TPL_ITEM = '''
 	<dl{dlatrr}>
 		{defs}
@@ -456,6 +464,24 @@ def update_json(what="activities"):
 		with open(ffile, 'w') as json_final:
 			json.dump(new_json, json_final, ensure_ascii=False, indent=3)
 
+def isoDateToHuman(date):
+	'''Converts an ISO date (YYYY-MM-DD) to human (spanish).
+	(simple way, without setting locale and calling datetime. 
+		For now we don't need that)
+
+	:param:date str the date 
+	:return: str 
+	'''
+
+	year, month, day = date.split("-")
+
+	month_list = ("desconocido", "enero", "febrero", "marzo", "abril", "mayo"
+		, "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre")
+
+	month = int(month) #also removes leading 0
+	
+	#ex: julio 27, 2015
+	return "{} {}, {}".format(month_list[month], day, year)
 
 # =======================
 # ==== Program start ====
@@ -535,8 +561,19 @@ if DO_PAGES:
 			tmp_page = open_file(os.path.join(HTML_FOLDER, page + ".html"))
 
 			if page == "index":
-				#for now just remove placeholder
-				tmp_page = tmp_page.replace("{latest-changes}", "")
+				today_date    = ""
+				today_changes = ""
+				final_str     = ""
+
+				today_date = input(" Today date (ISO, leave blank for not including update): ")
+				if today_date:
+					while (not today_changes):
+						today_changes = input(" Today changes: ")
+
+					final_str = TPL_INDEX_LATESTCHANGES.format(date_iso=today_date, 
+						date_human=isoDateToHuman(today_date), change=today_changes)
+
+				tmp_page = tmp_page.replace("{latest-changes}", final_str)
 			
 			tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
 			save_file(os.path.join(OUTPUT_FOLDER, page + ".html"), tmp_page)
