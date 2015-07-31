@@ -21,8 +21,6 @@ Outputs in current folder
 # TPL replacements:
 # 		main tpl: 
 # 			{body}
-# 			{date-iso}  -> last updated
-# 			{date-human}  -> last updated
 # 			{header-secondheading}  -> <div class="my-content-sub-heading"> <h2>Actividades</h2> </div>
 # 		TPL_ACTIVITIES_PAGE
 # 			{toc_items}
@@ -78,6 +76,9 @@ import json
 import os
 import sys
 import re
+import datetime #to get today's date for footer("last built")
+
+
 
 # =======================
 # ==== configuration ====
@@ -341,6 +342,7 @@ TPL_PLACES_PAGE = '''
 # ==== global vars ====
 
 HTML_PAGE_TEMPLATE = ""
+TODAY = datetime.datetime.now().strftime("%Y-%m-%d")
 
 # make it less anoying to call it
 SRC_FOLDER    = os.path.join(os.getcwd(), SRC_FOLDER)
@@ -787,6 +789,7 @@ if DO_ACTIVITIES:
 
 
 HTML_PAGE_TEMPLATE = open_file(os.path.join(SRC_FOLDER, PAGE_TEMPLATE_FILE))
+HTML_PAGE_TEMPLATE = HTML_PAGE_TEMPLATE.replace("{date-iso}", TODAY).replace("{date-human}", isoDateToHuman(TODAY))
 
 
 if DO_PAGES:
@@ -817,12 +820,12 @@ if DO_PAGES:
 			continue
 
 		if page == "index":
-			today_date    = ""
+			today_date    = TODAY
 			today_changes = ""
 			final_str     = ""
 
-			today_date = input(" Today date (ISO, leave blank for not including update): ")
-			if today_date:
+			today_date = input(" Today is " + today_date + ". (Change it (ISO) or type x for not including update): ")
+			if today_date.lower() not x:
 				while (not today_changes):
 					today_changes = input(" Today changes: ")
 
@@ -838,6 +841,9 @@ if DO_PAGES:
 
 if not DO_ACTIVITIES and not DO_PLACES:
 	exit()
+
+
+
 
 
 places = json.loads(open_file(os.path.join(SRC_FOLDER, PLACES_FILE)))
