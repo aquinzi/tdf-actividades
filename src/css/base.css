@@ -839,8 +839,8 @@ background-color: #ff5722;
 /* material design light */
 
 /*a,a:visited{text-decoration:underline}*/
-/*a[href]:after{content:" (" attr(href)")"}*/
-abbr[title]:after{content:" (" attr(title)")"}
+/*a[href]:after{content:" (" attr(href)")"}
+abbr[title]:after{content:" (" attr(title)")"}*/
 a[href^="#"]:after,a[href^="javascript:"]:after{content:""}
 *[hidden]{display:none!important}
 
