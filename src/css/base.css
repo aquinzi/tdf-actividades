@@ -1104,20 +1104,6 @@ right: 0;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*.card-img:first-child */
 .my-card-img:first-child{border-radius: 2px 2px 0 0; }
 
@@ -1126,7 +1112,7 @@ right: 0;
 .my-card-img:last-child {border-radius: 0 0 2px 2px; }
 
 
-.my-card-img h2 {
+.my-card-img h3 {
   background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9));
   background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9));
   color: #ffffff;
