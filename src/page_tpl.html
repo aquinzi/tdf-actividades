@@ -153,6 +153,15 @@
   ga('send', 'pageview');
 
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+     $("h3").each(function() {
+        $(this).append(' <a href="#'+this.id+'" title="Link permanente a '+this.text+'">Compartir</a> ')        
+    });           
+});
+</script>
 
 </body>
 </html>
