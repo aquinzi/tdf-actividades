@@ -26,6 +26,11 @@
          "nombre": "Federación Fueguina de Voley", 
          "last-update": "2015-07-26"
       }
+      , {
+         "nombre": "Beach voley"
+         , "nota": "Adaptado al clima de la isla.", 
+         "last-update": "2015-08-05"
+      }
    ]
 }
 =======
