@@ -732,7 +732,7 @@ def create_property(key, properties_dict, isfrom):
 		tmp_format_dict['dt_attr'] = 'class="nota"'
 		tmp_format_dict['dt_text'] = "Nota"
 		tmp_format_dict['dd_attr'] = 'class="p-note"'
-		tmp_format_dict['dd_text'] = properties_dict[key].replace("\\n","<br>")
+		tmp_format_dict['dd_text'] = "<p>"+properties_dict[key]+"</p>"
 
 
 	if key == "direccion":
@@ -829,9 +829,10 @@ def create_property(key, properties_dict, isfrom):
 		tmp_format_dict['dt_attr'] = 'class="horarios"'
 		tmp_format_dict['dt_text'] = "Horarios"
 		tmp_format_dict['dd_attr'] = ''
-		tmp_format_dict['dd_text'] = tmp_property
+		tmp_format_dict['dd_text'] = tmp_property.replace("\\n","<br>")
 
 
+	tmp_format_dict['dd_text'].replace("\\n","<br>")
 
 	return TPL_CARD_DT.format(**tmp_format_dict)
 
