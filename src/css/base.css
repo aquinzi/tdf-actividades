@@ -103,7 +103,8 @@ blockquote, q {
   padding-left: 32px;
   position: relative;
 }
-blockquote:before, q:before {
+q{padding:0;}
+blockquote:before {
   border-right: 1px solid #E49A53;
   content: "";
   display: block;
