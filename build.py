@@ -237,7 +237,7 @@ TPL_ACTIVITIES_PAGE_JAVASCRIPT='''
 <script>
 	$(document).ready(function(){
 		$("h3").each(function() {
-     		var popup = '<div class="share-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+     		var popup = '<div class="headerlink-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
 
         $(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
         $(this).after(popup);
@@ -245,7 +245,7 @@ TPL_ACTIVITIES_PAGE_JAVASCRIPT='''
     	});  
    	
    	$("h4").each(function() {
-     		var popup = '<div class="share-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+     		var popup = '<div class="headerlink-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
 
         $(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
 
@@ -309,7 +309,7 @@ TPL_PAGE_PLACES_JAVASCRIPT='''
 	$(document).ready(function(){
 
      $("h3").each(function() {
-     		var popup = '<div class="share-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+     		var popup = '<div class="headerlink-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
 
         $(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
 
@@ -324,7 +324,7 @@ PAGE_FAQ_JAVASCRIPT='''
 <script>
 $(document).ready(function(){
 	$("dt").each(function() {
-		var popup = '<div class="share-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+		var popup = '<div class="headerlink-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
 
 		$(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
 		$(this).next().append(popup);
@@ -336,7 +336,7 @@ PAGE_COLABORACION_JAVASCRIPT='''
 <script>
 $(document).ready(function(){
 	$("dt").each(function() {
-		var popup = '<div class="share-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+		var popup = '<div class="headerlink-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
 
 	  $(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
 	  $(this).next().append(popup);

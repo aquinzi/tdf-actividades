@@ -1569,7 +1569,7 @@ a[rel^="external"]:after{
 
 /*    the popup */
 
-.share-popup{
+.headerlink-popup{
 	position: absolute;
 	top:   10.9em;
 	right: -1em;
@@ -1588,7 +1588,7 @@ a[rel^="external"]:after{
 	box-shadow: 0 0 10px #222;
 }
 
-dl .share-popup, h3 + .share-popup{
+dl .headerlink-popup, h3 + .headerlink-popup{
 	position: absolute;
 	/*visibility: hidden;*/
 	top: 0;
@@ -1604,18 +1604,18 @@ dl .share-popup, h3 + .share-popup{
 	border: 1px solid #BDBCBC;
 	box-shadow: 0 0 10px #222;
 }
-h3 + .share-popup{
+h3 + .headerlink-popup{
 	top: inherit;
 	left: 6em;
 }
 
-.my-card dl + .share-popup{
+.my-card dl + .headerlink-popup{
 	top: 4em;
 	right: -1em;
 }
 
 
-.share-popup input{
+.headerlink-popup input{
 	display: block;
 	width: 100%;
 	margin-bottom: 2em;
@@ -1623,7 +1623,7 @@ h3 + .share-popup{
         box-sizing: border-box;
 }
 
-.share-popup button {
+.headerlink-popup button {
 	font-weight: normal;
 	font-size: 1em;
 	line-height: 1em;
@@ -1662,7 +1662,7 @@ h3 + .share-popup{
     left: 0
 }
 
-.share-popup.visible, .share-popup.transitioning {
+.headerlink-popup.visible, .headerlink-popup.transitioning {
     z-index: 9999;
     /*visibility: visible;*/
     display: initial;
