@@ -175,7 +175,7 @@ for root, subFolders, files in os.walk(INPUT_FOLDER):
 			if "url" in entity:
 				new_entity['urls'] = ",".join(entity['url'])			
 			
-			if "telefono" in entities:
+			if "telefono" in entity:
 				new_entity['telefonos'] = ",".join(entity['telefono'])			
 			
 			if "email" in entity:
