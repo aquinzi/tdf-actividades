@@ -172,7 +172,7 @@ for root, subFolders, files in os.walk(INPUT_FOLDER):
 			if "nota" in entity:
 				new_entity['nota'] = entity["nota"].replace("\\n","\n  ")
 			
-			if "url" in entities:
+			if "url" in entity:
 				new_entity['urls'] = ",".join(entity['url'])			
 			
 			if "telefono" in entities:
