@@ -55,7 +55,7 @@ ENTITY_TEMPLATE_OPTIONAL_GEOKEYS = '''
   - geo: {lat: [lat], lon: [lon]}'''
 
 ENTITY_TEMPLATE_OPTIONAL_HORARIOS = '''
-  - {dia:[dia], hora:[hora], nota:[nota] }'''
+  - {dia:"[dia]", hora:"[hora]", nota:"[nota]" }'''
 
 
 def clean_filename(s):
