@@ -198,7 +198,7 @@ for root, subFolders, files in os.walk(INPUT_FOLDER):
 					print("can't create the following folder path. " + final_path_folder)
 					exit()
 				
-				with open(final_path, 'w', encoding='utf-8-sig') as saveme:
+				with open(final_path, 'w', encoding='utf-8') as saveme:
 					saveme.writelines(final_file)
 				
 print (" -------------------------- ")
