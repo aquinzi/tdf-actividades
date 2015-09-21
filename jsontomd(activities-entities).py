@@ -173,6 +173,9 @@ for root, subFolders, files in os.walk(INPUT_FOLDER):
 				new_entity['nota'] = entity["nota"].replace("\\n","\n  ")
 			
 			if "url" in entity:
+				for i,_ in enumerate(entity['url']):
+					entity['url'][i] = '"' + entity['url'][i] + '"'
+					
 				new_entity['urls'] = ",".join(entity['url'])			
 			
 			if "telefono" in entity:
