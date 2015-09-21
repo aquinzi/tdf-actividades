@@ -1,5 +1,6 @@
 '''
-converts geojson to yaml (dirty way)
+converts geojson to yaml (dirty way). 
+Params: <input> <ouput> <optional:--as-list>
 '''
 
 import json
@@ -7,10 +8,27 @@ import os,sys
 
 INPUT_FILE = ""
 OUTPUT_FILE  = ""
+YAML_USE_LIST = False
 
-
-
+# instead of list, as we are using ids, make a hash/dictionary
 YAML_BLOCK = '''
+{id}:
+  nombre: '{nombre}'
+  direccion: {direccion}
+  {geo}
+  gstreetview: "{gstreetview}"
+  imagen: "{imagen}"
+  ultima-actualizacion: {last-update}
+  horario: {horario}
+  email: {email}
+  url: [{url}]
+  telefono: [{telefono}]
+  nota: |
+    {nota}
+  marker-symbol: {marker-symbol}
+'''
+
+YAML_BLOCK_AS_LIST = '''
 - id: {id}
   nombre: '{nombre}'
   direccion: {direccion}
@@ -43,6 +61,10 @@ if not os.path.exists(args[0]):
 if not os.path.exists(args[1]):
 	print (" output folder doesn't exist. We only create the file, not the folders")
 	exit()
+
+if "--as-list" in args:
+	YAML_USE_LIST = True
+
 
 INPUT_FILE = args[0]
 OUTPUT_FILE = args[1]
@@ -137,8 +159,10 @@ for feature in geojson:
 		place_yaml['horario'] = YAML_BLOCK_HORARIOS.replace(
 			"[dia]","").replace("[hora]","").replace("[nota]","")
 
-
-	final_yaml += YAML_BLOCK.format(**place_yaml)
+	if not YAML_USE_LIST:
+		final_yaml += YAML_BLOCK.format(**place_yaml)
+	else:
+		final_yaml += YAML_BLOCK_AS_LIST.format(**place_yaml)
 
 
 with open(OUTPUT_FILE,'w',encoding="utf-8") as tmp:
