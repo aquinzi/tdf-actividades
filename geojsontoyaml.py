@@ -28,7 +28,7 @@ YAML_BLOCK = '''
 '''
 
 # for below, normal search & replace 
-YAML_BLOCK_GEOKEYS = '''  geo: {lat: [lat], lon: [lon]}'''
+YAML_BLOCK_GEOKEYS = '''geo: {lat: [lat], lon: [lon]}'''
 
 YAML_BLOCK_HORARIOS = '''
   - {dia: "[dia]", hora: "[hora]", nota: "[nota]" }'''
