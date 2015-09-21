@@ -69,7 +69,7 @@ def clean_filename(s):
 	     ).replace("(","").replace(")","")
 	
 	tmp = tmp.replace("á","a").replace("é","e").replace(
-	    "í","i").replace("ó","o").replace("ú","u")
+	    "í","i").replace("ó","o").replace("ú","u").replace("ñ","n")
 	
 	#tmp = tmp.replace("ô","o").replace("û","u")
 
