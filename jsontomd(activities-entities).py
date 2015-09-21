@@ -90,7 +90,7 @@ for root, subFolders, files in os.walk(INPUT_FOLDER):
 		print ("\n\n processing: " + filePath)
 		
 		current_text = ""
-		with open(filePath, 'r', encoding='utf-8-sig') as readme:
+		with open(filePath, 'r', encoding='utf-8') as readme:
 			current_text = readme.read()
 		
 		tmp_file = json.loads(current_text)
