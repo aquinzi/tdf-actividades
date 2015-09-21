@@ -80,6 +80,9 @@ for feature in geojson:
 		"horario": "",
 		"geo": "", "marker-symbol":""
 	}
+	
+	if not place['nombre']:
+		continue
 
 	print (" processing place: " + place['nombre'])
 
@@ -87,6 +90,8 @@ for feature in geojson:
 
 		if not key in place and not key == "geometry":
 			continue
+
+
 
 		if not key in keys_specific_processing:
 			place_yaml[key] = place[key]
