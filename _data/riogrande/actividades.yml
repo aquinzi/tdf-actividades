@@ -1,0 +1,89 @@
+# Please keep this list alphabetized and categorized. 
+
+aficion:
+  - nombre: avistamiento de aves
+    alternativo: [observación de aves,birding,birdwatching]
+
+arte:
+  - nombre: canto,coro
+  - nombre: cerámica
+  - nombre: dibujo
+  - nombre: fotografía
+  - nombre: música
+  - nombre: pintura
+  - nombre: teatro
+
+deporte:
+  - nombre: adultos mayores
+  - nombre: aikido
+  - nombre: ajedrez
+  - nombre: atletismo
+  - nombre: automovilismo
+  - nombre: badminton
+  - nombre: basket
+    alternativo: [básquetbol,basquet,basketball]
+  - nombre: bochas
+  - nombre: boxeo
+  - nombre: canotaje
+  - nombre: ciclismo
+  - nombre: cuatriciclo
+  - nombre: danza clásica
+  - nombre: danzas árabes
+  - nombre: escalada deportiva
+  - nombre: fisicoculturismo
+  - nombre: folklore
+  - nombre: futsal
+  - nombre: fútbol
+    alternativo: football
+  - nombre: gimnasia adultos
+  - nombre: gimnasia artística
+  - nombre: gimnasia deportiva
+  - nombre: gimnasia rítmica
+  - nombre: golf
+  - nombre: handball
+    alternativo: balonmano
+  - nombre: hip-hop
+  - nombre: hockey pista
+    alternativo: [field hockey,hockey sobre césped]
+  - nombre: hockey roller
+    alternativo: [hockey sobre patines,roller hockey]
+  - nombre: hockey sobre hielo
+    alternativo: [ice hockey]
+  - nombre: iaidô
+    alternativo: [iaido]
+  - nombre: jûdô
+    alternativo: [judo,yudo]
+  - nombre: jûjutsu
+    alternativo: [jiu-jitsu,jiu-jitsu brasileño,bjj]
+  - nombre: karate
+  - nombre: karting
+  - nombre: kendô
+    alternativo: [kendo]
+  - nombre: kung fu
+  - nombre: levantamiento olímpico
+  - nombre: lucha
+  - nombre: motociclismo
+  - nombre: natación
+  - nombre: paddle
+    alternativo: [padle,padel]
+  - nombre: paintball
+  - nombre: patín artístico
+  - nombre: pesca deportiva
+  - nombre: polo
+  - nombre: pool
+    alternativo: billar
+  - nombre: powerlifting
+  - nombre: roller derby
+  - nombre: rugby
+  - nombre: salto hípico
+  - nombre: sanshou
+    alternativo: [sanda,boxeo chino]
+  - nombre: taekwondo
+  - nombre: tai chi chuan
+  - nombre: tango
+  - nombre: tenis de mesa
+  - nombre: tenis
+  - nombre: tiro
+  - nombre: voley
+    alternativo: [volley,volleyball,voleibol]
+  - nombre: yoga

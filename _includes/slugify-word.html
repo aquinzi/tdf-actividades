@@ -1,0 +1,1 @@
+{% comment %} slugify: 'raw' doesnt work in gh-pages. Custom method to easy "urlifying" in spanish {% endcomment %}{% if include.word %}{{ include.word | downcase |replace: ' ','-' | replace: 'á','a' | replace: 'í','i' | replace: 'ó','o' | replace: 'é','e' | replace: 'ú','u' }}{% endif %}

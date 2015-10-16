@@ -1,0 +1,119 @@
+{% comment %} days in epoch {%endcomment%}
+{% assign site_built           = site.time | date:"%s" | plus: 0 %}
+{% assign site_built_sevendays = site.time | date:"%s" | plus: 604800  %}
+{% assign site_built_tendays   = site.time | date:"%s" | plus: 864000  %}
+
+{% assign post_list = include.posts %}
+{% assign mode      = include.mode %}
+{% comment %} 
+	modes: 
+		index (site index and city index)
+		upcoming (for upcoming events in event's details)
+{%endcomment%}
+
+
+{% if post_list and mode %}
+
+	{% assign there_are_events = false %}
+	{% assign processed_items  = 0 %}
+	{% assign cant_max_items   = false %}
+	{% if include.max_items %}{% assign cant_max_items = include.max_items %}{% endif %}
+
+	{% for post in post_list  %}
+
+		{% if cant_max_items and processed_items > cant_max_items %}{% break %}
+		{%endif%}
+
+		{% assign current_date_epoch = post.date | date:"%s" | plus: 0 %}
+
+		{% if (current_date_epoch < site_built) or (current_date_epoch > site_built_tendays) %}
+			{% comment %} 
+				close here, as we opened it inside the loop
+			{%endcomment%}
+			{% unless forloop.first %}</ul>{%endunless%}
+			{% break %}
+		{% endif %}
+
+		{% comment %} 
+			open list here, so if there's nothing found we can print OUTSIDE the list, 
+			in a normal block tag
+		{%endcomment%}
+		{% if forloop.first %}
+			<ul{% if mode == "index" %} class="day-events"{%endif%}>
+		{%endif%}
+
+		{% assign there_are_events = true %}
+
+		{% if cant_max_items  %}
+			{% assign processed_items = processed_items | plus: 1 %}
+		{%endif%}
+
+		{% assign this_city = post.category %}
+		{% assign this_city_slug = this_city | replace:'-','' %}
+
+		{% assign start_date_iso = post.date | date: "%F" %} 
+		{% assign start_time     = post.date | date: "%R" %} 
+		{% if start_time != "00:00" %}
+			{% assign start_date_iso = post.date | date_to_xmlschema %}
+		{% endif %}
+			
+		{% if mode == "index" %} 
+			{% capture human_date %}{% include human-date.html hide_year=true hide_de=true%}{%endcapture%}
+		{% endif %}
+		{% if mode == "upcoming" %} 
+			{% capture human_date %}{% include human-date.html date=post.date hide_de=true hide_year=true hide_weekday=true %}{%endcapture%}
+		{% endif %}
+		{% capture location %}{% include get-place.html place=post.location city=this_city %}{%endcapture%}
+		{% capture post_url %}{{ post.url | prepend: site.baseurl }}{%endcapture%}
+
+		<li{% if mode == "index" %} class="event" data-ciudad="{{ this_city_slug }}"{%endif%}>
+			{% if mode == "upcoming" %}
+				<span class="event"><a href="{{ post_url }}">{{post.title}}</a></span>
+
+				<time datetime='{{start_date_iso}}' class="date">{{human_date}} </time>
+				{% if start_time != "00:00" and post.no-time-start == false %}
+				<span class="visuallyhidden">a las </span>
+				<span class="time">{{start_time}} hs.</span>, 
+				{% endif %}<span class="location">{{location}}</span>
+			{% endif %}
+			{% if mode == "index" %}
+				<time class="datetime" datetime="{{ start_date_iso }}">
+					<span class="fecha">{{human_date}}</span>
+					{% unless post.no-time-start and start_time == "00:00" %}
+					<span class="visuallyhidden">, de</span> <span class="time">{{ post.date | date:"%R" }}
+						{% unless post.no-time-end %} a {{ post.date-end | date:"%R" }} {% endunless %}
+					 hs</span>
+					{% endunless %}
+				</time>
+
+				<div class="event-info">
+					<p class="title"> <a href="{{ post_url }}" class="name">{{ post.title }}</a> </p>
+					<p class="place"> <span class="visuallyhidden">, en </span>
+						<span class="location">{{location | truncatewords: 8}}</span> - <span class="city"> 
+							<a href="{{ site.data.wiki.[this_city_slug] }}">{{ site.data.prettify.[this_city] }}</a> 
+						</span>
+					</p>
+				</div>
+
+				{% if post.tags.size > 1 %}
+					<p class="tags"><span class="visuallyhidden">etiquetas: </span>
+					{% comment %} just because we want pretty tags, otherwise: post.tags | join:"," {% endcomment %}
+					{% for tag in post.tags %}
+						{% include print-tag.html tag=tag%}{%unless forloop.last%},{%endunless%}
+					{% endfor %}
+					</p>
+				{% endif %}
+			{% endif %}
+
+		</li>
+
+		{% comment %} 
+			close here, as we opened it inside the loop
+		{%endcomment%}
+		{% if forloop.last %}</ul>{%endif%}
+
+	{% endfor %}
+
+	{% unless there_are_events %} No hay nada agendado para estos 10 días. {% endunless %}
+
+{% endif %} {% comment %} end empty check {%endcomment%}

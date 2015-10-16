@@ -1,0 +1,19 @@
+{% comment %} Check existance in filesystem (for indexes) {% endcomment %}
+{% assign tag = include.tag %}
+{% assign link = false %}
+{% if include.link %}{% assign link = include.link %}{% endif %}
+
+{% if tag != "" %}
+	{% capture tag_slugged %}{% include slugify-word.html word=tag%}{%endcapture%}
+	{% capture tag_url %}tags/{{tag_slugged}}/index.html{%endcapture%}
+	{% assign results = site.html_pages | where: 'path', tag_url  %}
+
+	{% assign tag_pretty = tag | replace:"-", " " %}
+
+	{% unless link %}{{ tag_pretty }}
+	{% else %}
+		{% if results.size == 1 %}<a href="{{ site.baseurl }}/tags/{{tag_slugged}}/" class="p-category"> {{ tag_pretty}} </a>
+		{% else %}{{ tag_pretty }}
+		{% endif %}
+	{% endunless %}
+{% endif %}

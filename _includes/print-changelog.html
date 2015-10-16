@@ -1,0 +1,101 @@
+{%comment%}
+	modes:
+		index: changelog in index. only a few inline 
+		full: complete changelog with date-headings
+{%endcomment%}
+{% if include.mode %} {% assign mode = include.mode %}
+{%else%} {% assign mode = false %}
+{% endif %}
+
+{%comment%} For index we count items {%endcomment%}
+{% assign ctr = 0 %}
+
+{% if mode %}
+
+	{% if mode == "index" %}
+		<ul class="changelog latest">
+	{% endif %}
+	{% if mode == "full" %}
+		<dl class="changelog"> 
+	{% endif %}
+
+	{% for date in site.data.changelog %}
+		{% assign current_date = date[0] %}
+		{% capture current_date_human  %}{% include human-date.html date=current_date hide_weekday=true %}{% endcapture %}
+		{% capture current_date_human  %}{{current_date_human | strip_newlines}}{% endcapture %}
+
+		{% if mode == "full" %}
+			<dt>{{current_date_human}}</dt>
+			<dd><ul>
+		{% endif %}
+
+		{% for changes in date[1] %}
+			{% if mode == "index" %}
+				{% assign ctr = ctr | plus: 1 %}
+			{% endif %}
+
+			<li>
+				{% assign log_title = "" %}
+				{% assign log_abbr  = "" %}
+				{% assign log_class = "" %}
+				{% assign the_change = "" %}
+
+				{% if changes contains ":" %}
+					{% assign change_pieces = changes |split:":" %}
+
+					{%comment%} "translate" to proper classes{%endcomment%}
+					{% assign log_class = change_pieces[0] %}
+					{% if log_class == "edit" %}{% assign log_class = "fix" %}{%endif%}
+					{% if log_class == "del" %}{% assign log_class = "delete" %}{%endif%}
+
+					{% assign the_change = change_pieces[1] %}
+
+				{%else%}
+					{%comment%} just normal info {%endcomment%}
+					{% assign log_class = "update" %}
+					{% assign the_change = changes %}
+				{%endif%}
+
+				{%comment%} "translate" to proper titles and abbrs{%endcomment%}
+
+				{% case log_class %}
+					{% when "add" %}
+						{% assign log_title = "agregado" %}
+						{% assign log_abbr = "agr" %}
+					{% when "update" %}
+						{% assign log_title = "modificado" %}
+						{% assign log_abbr = "mod" %}
+					{% when "fix" %}
+						{% assign log_title = "arreglado" %}
+						{% assign log_abbr = "arr" %}
+					{% when "delete" %}
+						{% assign log_title = "eliminado" %}
+						{% assign log_abbr = "elm" %}
+				{% endcase %}
+
+				<abbr class="log-{{log_class}}" title="{{log_title}}">{{log_abbr}}</abbr> {{the_change }}
+
+				{% if mode == "index" %}
+					<time datetime="{{current_date}}">({{current_date_human}})</time>
+				{% endif %}
+
+			</li>
+		{% endfor %}
+
+		{% if mode == "full" %}
+			</ul></dd>
+		{% endif %}
+
+		{% if mode == "index" and ctr > 5 %}{% break %}{% endif %}
+	
+	{% endfor %}
+
+	{% if mode == "index" %}
+		</ul>
+	{% endif %}
+	{% if mode == "full" %}
+		</dl>
+	{% endif %}
+
+
+{% endif %} {%comment%} end empty check{%endcomment%}

@@ -1,0 +1,33 @@
+#!/bin/sh
+# Contents of .git/hooks/pre-commit
+
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+	against=HEAD
+else
+	# Initial commit: diff against an empty tree object
+	against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+fi
+
+#set -e # Exit with status 1 if any command below fails
+#set -x
+
+#sed -i "s/^última modificación:.*$/última modificación: $(TZ=UTC+3 date "+%Y-%m-%d %H:%M")/" index.html
+#git add index.html
+
+
+# Find all changed files
+files=`git diff-index --cached  $against -- | uniq`
+#should have --check
+
+# Find files with trailing whitespace
+for FILE in $files ; do
+	#we check so it doesnt spit out not found files under windows
+	if [ -e $FILE ]; then
+	   echo "Adding last-modified date to $FILE">&2
+	    
+	   sed -i "s/^última modificación:.*$/última modificación: $(TZ=UTC+3 date "+%Y-%m-%d %H:%M")/" "$FILE"
+	   git add "$FILE"
+	fi
+done
+

@@ -1,0 +1,14 @@
+{% comment %}
+	for some kind of reason we must first replace the slashes with 
+	something else before we can split it. 
+{% endcomment %}
+
+{% assign url    = include.url %}
+{% assign no_dot = include.no_dot %}
+
+{% if url != "" %}
+{% assign url = url | remove_first: "www." | replace:'/','=' | split:"==" | last | split: "=" | first %}
+	{% unless no_dot %} {{ url }}
+	{% else %} {{ url | split:'.com' | first }}
+	{% endunless %}
+{% endif %}

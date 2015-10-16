@@ -1,0 +1,2 @@
+{% assign email = include.email %}
+{% if email %}{{ email | replace:"@","(arroba)" | replace:".","(punto)" }}{% endif %}

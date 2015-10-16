@@ -1,0 +1,16 @@
+{% if page.show_source or page.show_history %}
+	<div class="source-links">
+
+	{% if page.show_source %}
+	<a href="{{ site.github.repository_url }}/blob/{{ site.github.branch }}/{{ page.path }}">fuente</a>
+	{% endif %}
+	{% if page.show_source and page.show_history %} - {% endif %}
+	{% if page.show_history %}
+	<a href="{{ site.github.repository_url }}/commits/{{ site.github.branch }}/{{ page.path }}">historial</a>
+	{% endif %}
+	</div>
+{% endif %}
+
+{% comment %}
+site.github.repository_url = https://github.com/{{ site.github.owner_name }}/{{ site.github.repository_name }}
+{% endcomment %}

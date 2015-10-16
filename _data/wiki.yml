@@ -1,0 +1,26 @@
+# paginas principales ("propiamente wiki")
+colaboracion: /colaboracion/
+faq: /preguntas-frecuentes/
+changelog: /historial-cambios/
+rg-index: &idrg /rio-grande/
+riogrande: *idrg #probando los repeated nodes
+rio-grande: *idrg #probando los repeated nodes
+rg-lugares: /rio-grande/lugares/
+rg-actividades: /rio-grande/actividades/
+ush-index: &idush /ushuaia/
+ushuaia: *idush
+#ush-lugares: /ushuaia/lugares/
+ush-actividades: /ushuaia/actividades/
+tol-index: &idtol /tolhuin/
+tolhuin: *idtol
+#tol-lugares: /tolhuin/lugares/
+tol-actividades: /tolhuin/actividades/
+
+# acceso rapido a entidades
+rg-clubajedrez: /rio-grande/entidades/club-ajedrez-rio-grande/
+#o hacer tipo:
+#rg:
+#  clubajedrez: /rio-grande/entidades/club-ajedrez-rio-grande/
+#
+#
+#

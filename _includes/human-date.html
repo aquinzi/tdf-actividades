@@ -1,0 +1,27 @@
+{% comment %} Translate date to spanish. Base code from https://www.sylvaindurand.org/making-jekyll-multilingual/ {% endcomment %}
+{% if page.date %}{% assign page_date = page.date %}{% endif %}
+{% if post.date %}{% assign page_date = post.date %}{% endif %}
+{% if include.date %}{% assign page_date = include.date %}{% endif %}
+
+{% assign hide_weekday = false %}
+{% if include.hide_weekday %}{% assign hide_weekday = include.hide_weekday %}{% endif %}
+
+{% assign hide_year = false %}
+{% if include.hide_year %}{% assign hide_year = include.hide_year %}{% endif %}
+
+{% assign hide_de = false %}
+{% if include.hide_de %}{% assign hide_de = include.hide_de %}{% endif %}
+
+{% assign weekday = page_date | date: "%A" %}
+{% assign day     = page_date | date: "%d" %}
+{% assign month   = page_date | date: "%-m" %}
+{% assign year    = page_date | date: "%Y" %}
+
+{% assign print_de = "de" %}
+{% if hide_de %}
+	{% capture print_de %}<span class="visuallyhidden">de</span>{% endcapture %}
+{% endif %}
+
+{% unless hide_weekday %}<span class="date-weekday">{{ site.data.dias.[weekday].nombre }}</span> {% endunless %}
+<span class="date-day">{{ day }}</span> {{ print_de }} <span class="date-month">{{ site.data.meses.[month].nombre }}</span>
+{% unless hide_year %} <span class="date-year">{{ print_de }} {{ year }}</span>{% endunless %}

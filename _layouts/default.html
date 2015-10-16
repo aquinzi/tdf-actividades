@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es-419">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	{% assign page_title = page.title %}
+	{% if page.nombre %} {% assign page_title = page.nombre %} {% endif %}
+	{% if page_title == "Inicio" %} {% assign page_title = site.name %}
+	{% else %} {% capture page_title %}{{ page_title }} - {{ site.name }}{% endcapture %}
+	{% endif %}
+	<title>{{ page_title }}</title>
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- other favicons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
+	<!-- first- and second-generation iPad: -->
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
+	<!-- iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
+	 <!-- third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png">
+
+	<link rel="icon" type="image/png" sizes="16x16"   href="/assets/favicon/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32"   href="/assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96"   href="/assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+	
+	<link rel="manifest" href="/assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/assets/favicon/mstile-144x144.png">
+	<meta name="msapplication-config"    content="/assets/favicon/browserconfig.xml">
+	<meta name="apple-mobile-web-app-title" content="{{ site.name }}">
+	<meta name="application-name" content="{{ site.name }}">
+	<meta name="theme-color" content="#fd9730">
+	<!-- end favicons big mess. Wow, it used to be only one before; remember that?-->
+
+	<meta name="author" content="{{ site.name }}" />
+	{% if page.excerpt %} {% assign page_description = page.excerpt | strip_html %}
+	{% else %} {% assign page_description = site.description | strip_html | strip_newlines %}
+	{% endif %}
+	<meta name="description" content="{{ page_description }}" />
+
+	<!-- social stuff -->
+	<meta property="og:title" content="{{ page_title }}" />
+	<meta property="twitter:title" content="{{ page_title }}" />
+
+	<meta property="og:locale" content="es_AR" />
+	<meta property="og:url" content="{{ page.url }}"/>
+	<meta property="og:site_name" content="{{ site.name }}"/>	
+		{% comment %}
+		If you have a fan page on Facebook and you want to get more data in Facebook Insights, then you have to use this tag. It tells Facebook you are the site owner, and it connects your Facebook fan page to your website.-->
+		<meta property="fb:admins" content="{{id}}"/>	
+
+		<meta property="twitter:account_id" content="{{id}}" />
+		<meta property="fb:page_id" content="{{id}}" />
+		{% endcomment %}
+	{% comment %}summary = small thumbnail. to use a big one: summary_large_image{% endcomment %}
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="{{ page.url }}">
+	
+	<meta property="og:description" content="{{ page_description }}" />
+	<meta name="twitter:description" content="{{ page_description }}">
+	{% if site.social.twitter.handle %}
+	<meta name="twitter:site" content="{{ site.social.twitter.handle }}">
+	<meta name="twitter:creator" content="{{ site.social.twitter.handle }}">
+	{% endif %}
+	{% if page.img %}
+		{% comment %}
+	    Twitter thumbnail: 120x120px
+	    Twitter large image: 280x150px
+	    Facebook: Standards vary, but an image at least 200x200px works best. Facebook recommends large images up to 1200x630px wide.
+	    {% endcomment %}
+	<meta property="og:image" content="{{ page.img }}"/>
+	<meta name="twitter:image" content="{{ page.img }}">
+		{% comment %} will render with rich metadata such as the title, description, author, site name, and preview image. {% endcomment %}
+	<meta property="og:rich_attachment" content="true"> 
+	{% endif %}
+
+	{% comment %} 
+	article = This object represents an article on a website. It is the preferred type for blog posts and news stories.
+	website = Website and Blog in facebook would represent the root domain or subdomain (http://stackoverflow.com/questions/14408436/ogtype-article-vs-website-for-individual-web-pages-that-are-not-articles)
+	{% endcomment %} 
+	{% if page_title == site.name %}
+	<meta property="og:type" content="website"/>
+		{% else %}
+	<meta property="og:type" content="article"/>
+			{% if page.modified %}
+	<meta property="og:updated_time" content="{{ page.modified }}"/>
+			{% endif %}
+	{% endif %}
+	<!-- end social stuff -->
+
+	<link rel="stylesheet" href="/assets/main.css" type="text/css" media="screen">
+
+	<link rel="alternate" type="application/rss+xml" title="Feed para {{ site.name }}-Río Grande" href="{{ site.feed.riogrande }}">
+	<link rel="alternate" type="application/rss+xml" title="Feed para {{ site.name }}-Ushuaia" href="{{ site.feed.ushuaia }}">
+	<link rel="alternate" type="application/rss+xml" title="Feed para {{ site.name }}-Tolhuin" href="{{ site.feed.tolhuin }}">
+
+	<meta name="google-site-verification" content="OVqA7Ots5rjomNNEbJ_aUoamxDzgySu6ryZ9UfaUuuE" />
+	<link rel="canonical" href="{{ page.url | prepend:site.url}}" />
+</head>
+
+<body>
+
+<header id="site-header">
+	<h1>
+		<a href="/">
+			<span class="signo">¿</span>Qué hacer <span class="conector">en</span> 
+			<span class="provincia">Tierra del Fuego</span><span class="signo">?</span>
+		</a>
+	</h1>
+
+	<ul class="tabrow"> <!--or nav -->
+		<!--<li class="selected"><a href="?p">Inicio</a></li>-->
+		<li><a href="/rio-grande/">Río Grande</a></li>
+		<li><a href="/ushuaia/">Ushuaia</a></li>
+		<li><a href="/tolhuin/">Tolhuin</a></li>
+	</ul>
+</header>
+
+<div id="content">
+{% comment %} 
+	breadcrumbs ideas from http://stackoverflow.com/questions/9612235/what-are-some-good-ways-to-implement-breadcrumbs-on-a-jekyll-site
+{% endcomment %}
+
+{% comment %} "Hack" to remove last slash in URL {% endcomment %}
+{% capture previous %}{{site.url}}/#{% endcapture %}
+{% assign previous = previous | remove: '/#' %} 
+
+{% assign url_parts = page.url | remove: "/index.html" | remove: site.url | split:"/"  %}
+
+{% if page.breadcrumb_limit %} {% assign num_parts = page.breadcrumb_limit %}
+{% else %} {% assign num_parts = url_parts | size %}
+{% endif %}
+
+<ol class="breadcrumbs">
+	<li class="visuallyhidden">
+		<a href="/">{{ site.name }}</a>
+	</li>
+	{% for crumb in url_parts limit:num_parts %}
+		{% if crumb == "" %}{% continue %}{% endif %}
+
+		{% assign pretty_crumb = (crumb | replace:'-',' ') %}
+		{% if site.data.prettify[crumb] %}
+			{% assign pretty_crumb = site.data.prettify[crumb]  %}
+		{% endif %}
+	
+		{% capture previous %}{{ previous }}/{{ crumb }}{% endcapture %}
+
+		{% comment %} add final slash to last item {% endcomment %}
+		{% if forloop.last %}  
+			{% capture previous %}{{ previous }}/{% endcapture %}
+		{% endif %}
+
+		<li{% if forloop.last %} class="current"{%endif%}>
+			<a href="{{previous}}">{{ pretty_crumb }}</a>
+		</li>
+	{% endfor %}
+</ol>
+
+{{ content }}
+
+</div><!--content-->
+
+
+
+<footer id="site-footer" >
+	<a class="btn-backtotop" href="#"><span>volver arriba</span></a>
+
+	<h2 class="visuallyhidden">Navegación del pié de página</h2>
+
+	<div class="top-section">
+		<div>
+			<h3>Sitio</h3>
+			<ul>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="{{ site.data.wiki.colaboracion }}">Colaboración/Contacto</a></li>
+				<li><a href="{{ site.data.wiki.faq }}">Preguntas frecuentes</a></li>
+				<li><a href="{{ site.data.wiki.changelog }}">Historial de cambios</a></li>
+			</ul>
+		</div>
+	
+		<div>
+			<h3>Río Grande</h3>
+			<ul>
+				<li><a href="{{ site.data.wiki.rg-index }}">Agenda</a> (<a href="{{ site.feed.riogrande }}" class="feed">feed</a>)</li>
+				<li><a href="{{ site.data.wiki.rg-actividades }}">Actividades</a></li>
+				<li><a href="{{ site.data.wiki.rg-lugares }}">Lugares</a></li>
+			</ul>
+		</div>
+		<div>
+			<h3>Ushuaia</h3>
+			<ul>
+				<li><a href="{{ site.data.wiki.ush-index }}">Agenda</a> (<a href="{{ site.feed.ushuaia }}" class="feed">feed</a>)</li>
+				<li><a href="{{ site.data.wiki.ush-actividades }}">Actividades</a></li>
+			</ul>
+
+			<h3>Tolhuin</h3>
+			<ul>
+				<li><a href="{{ site.data.wiki.tol-index }}">Agenda</a> (<a href="{{ site.feed.tolhuin }}" class="feed">feed</a>)</li>
+				<li><a href="{{ site.data.wiki.tol-actividades }}">Actividades</a></li>
+			</ul>
+		</div>
+
+		<div class="social">
+			<h3>Sociales</h3>
+			<ul>
+				<li><a href="http://twitter.com/tdf">Twitter</a></li> 
+				<li><a href="http://facebook.com/tdf">Facebook</a></li>
+			</ul>
+		</div> 
+
+	</div> <!--top-section-->
+
+	<div class="bottom-section">
+		<p class="logo"> Sitio hecho con amor, desde Río Grande, Tierra del Fuego. </p>
+		{%comment%}<p><strong>Última actualización</strong>: <time datetime="2015-07-27">Julio 27, 2015</time></p>{%endcomment%}
+	</div> <!--bottom-section-->
+
+ </footer>
+
+</body>
+
+{% include analytics.html %}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+// add permalink link 
+$(document).ready(function(){
+	$("#content h2").each(function() {
+		var popup = '<div class="headerlink-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+
+		$(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
+		$(this).append(popup);
+	});   
+	$("#content h3").each(function() {
+		var popup = '<div class="headerlink-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+
+		$(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
+		$(this).append(popup);
+	}); 
+});
+</script>
+
+
+
+
+<!-- sharing permalink popup -->
+<script>
+$(document).ready(function(){
+	/*select text field in one click */
+	$(function () {
+		var focusedElement;
+		$(document).on('focus', 'input', function () {
+			if (focusedElement == $(this)) return; //already focused, return so user can place cursor at specific point in input.
+			focusedElement = $(this);
+			setTimeout(function () { focusedElement.select(); }, 50); //select all text in any field on focus for easy re-entry. Delay sightly to allow focus to "stick" before selecting.
+      });
+   });
+}); //end document.ready
+</script>
+
+<script type='text/javascript'>
+
+//Light Weight Popup Modal Box (http://designhuntr.com/create-simple-lightweight-jquery-modal-popup/)
+jQuery(document).ready(function ($) {
+   $('[data-popup-target]').click(function () {
+       $('html').addClass('overlay');
+       var activePopup = $(this).attr('data-popup-target');
+       $(activePopup).addClass('visible');
+   });
+
+   $(document).keyup(function (e) {
+   	//can exit with esc
+       if (e.keyCode == 27 && $('html').hasClass('overlay')) clearPopup();
+   });
+
+   $('.share-popup button').click(function () {clearPopup(); });
+
+   $('.popup-overlay').click(function () {clearPopup(); });
+
+   function clearPopup() {
+       $('.share-popup.visible').addClass('transitioning').removeClass('visible');
+       $('html').removeClass('overlay');
+
+       setTimeout(function () {
+           $('.share-popup').removeClass('transitioning');
+       }, 200);
+   }
+
+}); //end document.ready
+
+$('body').append('<div class="popup-overlay"></div>');
+</script>
+
+</html>

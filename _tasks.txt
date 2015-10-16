@@ -1,0 +1,9 @@
+pasar a jekyll theme
+-------------------------
+
+arreglar jekyll:
+- translate? opening hours meta to english, and using only two letters (or we can effit)
+
+- better way to link to categories activities in entities?
+- put wiki links in config? or try to assign site.data.wiki to site.wiki; or better way to handle stuff. like: site.wiki.riogrande/rg.somenicestuffhere/feed/entity.name/actividades/lugares/.....
+

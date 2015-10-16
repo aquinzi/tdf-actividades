@@ -1,0 +1,141 @@
+---
+layout: default
+---
+
+{% comment %}should be http://schema.org/Organization (organization such as a school, NGO, corporation, club, etc.) but we need the "opening hours"{%endcomment%}
+
+<article class="card-entidad h-card" itemscope itemtype="http://schema.org/LocalBusiness">
+	<header>
+		<div class="logo">
+			{% if page.img %} <img src="{{ page.img }}" alt="logo" class="u-logo" width="125" height="125" itemprop="image"> {% endif %}
+		</div>
+		<div>
+			<h1 class="p-name" itemprop="name">{{ page.nombre }}</h1>
+			{% assign category_link = "" %}
+			{% if page.city == "rio-grande" %}
+				{% capture category_link %} {{site.data.wiki.rg-actividades}}#{{page.categoria}}{% endcapture %}
+			{% endif %}
+			{% if page.city == "ushuaia" %}{% endif %}
+			{% if page.city == "tolhuin" %}{% endif %}
+
+			<p class="categoria">Categoría: <a href="{{category_link}}" class="p-category">{{page.categoria | replace:"-", " "}}</a></p>
+		</div>
+	</header>
+
+	<div class="actividad-content">
+
+	<dl class="informacion">
+		
+		<dt class="direccion">Direccion</dt>
+		{% unless page.direccion.lugar %}
+		<dd class="p-street-address">sin datos</dd>
+		{% else %}
+			<dd class="p-street-address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<span itemprop="streetAddress">
+				{% for location in page.direccion.lugar %}
+					{% include get-place.html place=location city=page.city link=true%}
+
+				</span>
+			<p style="display:none"><span class="p-locality">{{site.data.prettify.[page.city]}}</span>, <span class="p-region">Tierra del Fuego</span>, <span class="p-country-name">Argentina</span></p> 
+				{% unless forloop.last %},{%endunless%}
+				{%endfor%}
+		</dd>
+		{% endunless %}
+	
+		<dt class="precio">Precio</dt>
+			{% unless page.precio %}
+			<dd class="costo">sin datos</dd>
+			{% else %}
+			<dd class="costo">{{ page.precio }}</dd>
+			{% endunless %}
+
+		{% if page.horario[0].dia != ""%}
+		<dt class="horarios">Horarios</dt>
+			<dd><ul>
+			{% for horario in page.horario %}
+				<li> 
+					<span itemprop="openingHours" content="{{horario.dia}} {{horario.hora}}">{{horario.dia}}. {{horario.hora}}. </span> 
+					{% if horario.nota != "" %}. <strong>Nota:</strong> {{ horario.nota }} {% endif %}
+				</li>
+			{% endfor %}
+			</ul></dd>
+		{% endif %}
+
+		{% if page.nota != ""%}
+		<dt class="nota p-note">Nota</dt>
+			<dd>{{page.nota | newline_to_br }}</dd>	
+		{% endif %}
+	</dl>
+
+	{% if  (page.url[0]| strip ) != "" or (page.email| strip ) != "" or  (page.telefono[0] | replace:" ","" | strip ) != "" %}
+	<dl class="contacto">
+		{% if (page.url[0]| strip ) != "" %}
+		<dt class="web">Sitios</dt>
+			<dd ><ul>
+				{% for web in lugar.url %}
+					{% capture domain %}{% include get-domain.html url=web no_dot=true%}{% endcapture %}
+					{% capture handle %}{% include get-social-handle.html url=web %}{% endcapture %}
+				<li>
+					<a href="{{ web }}" class="u-url" 
+					{% if handle != "" %}data-social-handle="{{handle}}" {%endif%}
+					itemprop="url">{{ domain }}
+					</a>
+				</li>
+				{% endfor %}
+			</ul></dd>
+		{% endif %}
+
+		{% if (page.email| strip ) != "" %}
+		<dt class="email">email</dt>
+			<dd><span itemprop="email">{% include print-email.html email=page.email %}</span></dd>
+		{% endif %}
+
+		{% if (page.telefono[0] | replace:" ","" | strip ) != "" %}
+		<dt class="telefono">Teléfono</dt>
+			<dd>
+				{% for telefono in page.telefono %}
+				<a class="p-tel" itemprop="telephone" href="tel:+54-9-02964-{{ telefono }}">{{ telefono }}</a>{% unless forloop.last %},{% endunless %}
+				{% endfor %}
+			</dd>
+		{% endif %}
+			
+	</dl>
+	{% endif %}
+
+	</div>
+
+	<footer>
+		<p>
+			<span class="ultima-actualizacion p-note">Última actualización: <time datetime="{{ page.ultima-actualizacion }}">{% include human-date.html hide_weekday=false date=page.ultima-actualizacion%}	</time></span>
+		¿Información errónea? ayuda <a href="{{ site.github.repository_url }}/blob/{{ site.github.branch }}/{{ page.path }}">corregiendo la información</a>
+		</p>
+		<p> {% include links-source-history.html %} </p>
+	</footer>
+</article>
+
+{% comment %}
+page.path: /repo/_entidades-riogrande/futsal-afa.md 
+page.url:  /rio-grande/entidades/futsal-afa/ 
+{% endcomment %}
+
+{% assign page_filename = page.path | split:"/" | last | split: "." | first %}
+
+<h3>Eventos en los que aparece</h3>
+
+<!-- we cant filter with "where" because we can have many "people" (like tags) -->
+<ul class="entidad-eventos-aparece">
+{% assign found = false %}
+{% for post in site.posts %}
+	{% if post.people and post.people contains page_filename %}
+		{% assign found = true %}
+		{% assign this_city = post.categories[0] %}
+		
+	<li>
+		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <span class="post-details">(<a href="{{site.data.wiki.[this_city|replace:"-",""]}}">{{ site.data.prettify.[this_city] }}</a>, {% include human-date.html hide_weekday=true %})</li></span>
+	</li>
+	{% endif %}
+{% endfor %}
+{% unless found %}<li> No se encuentra en ningún evento (o no se asignó correctamente) </li>{% endunless %}
+</ul>
+
+

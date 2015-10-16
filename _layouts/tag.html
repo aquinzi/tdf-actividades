@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<h1>Etiqueta: {{ page.title }}</h1>
+
+{% capture slug %}{% include slugify-word.html word=page.title %}{% endcapture %}
+
+{% assign tmp = site.tags[slug] %}
+{% include list-events-index.html posts=tmp %}

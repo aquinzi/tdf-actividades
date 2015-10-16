@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{% assign post_list = site.categories.rio-grande %}{% include feed.html %}

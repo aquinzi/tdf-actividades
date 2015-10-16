@@ -1,0 +1,15 @@
+{% assign max_items = 5 %}
+
+{% assign cities_posts = site.posts | sort:'date' | group_by: "category" | sort: "name" %}
+
+<aside class="upcomming-events">
+	<h4>Próximamente</h4>
+
+	{% for city in cities_posts %}
+		<div class="city"> 
+			<h5><a href="{{site.data.wiki.[city.name]}}"> {{ site.data.prettify[city.name] }}</a></h5>
+
+			{% include print-upcoming-events.html mode="upcoming" posts=city.items max_items=max_items %}
+		</div> 
+	{% endfor %}
+</aside>

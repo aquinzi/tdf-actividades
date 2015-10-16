@@ -1,0 +1,26 @@
+{% comment %} Print place, optionally link to it. {% endcomment %}
+
+{% assign place = include.place %}
+
+{% assign link = false %}
+{% if include.link %}{% assign link = include.link %}{% endif %}
+{% assign city = include.city %}
+
+{% if place != "" %}
+	{% assign place_id = place %}
+
+	{% if city == "rio-grande" %}
+		{% if site.data.riogrande.lugares[place_id] %}
+			{% assign place_info = site.data.riogrande.lugares[place_id] %}
+			{% if link %}
+				<a href="{{site.data.wiki.rg-lugares}}#{{place_id}}" class="p-location h-card">{{place_info.nombre}}</a>
+			{% else %}
+				<span class="p-location">{{ place_info.nombre }}</span>
+			{% endif %}
+		{% else %}
+			<span class="p-location">{{ place }}</span>
+		{% endif %}
+	{% else %}
+		<span class="p-location">{{ place }}</span>
+	{% endif %}
+{% endif %}

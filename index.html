@@ -1,0 +1,75 @@
+---
+layout: default
+title: Inicio
+---
+
+<div class="index-info-que-es">
+	<p>¿Sos de hacerte la pregunta <q>¿Qué hacer en: Río Grande, Ushuaia o Tolhuin?</q>?, ¿de lamentarte porque te enteraste tarde de una actividad que querías hacer?. Estás de suerte.</p>
+
+	<p>Hicimos el trabajo por vos: recolectamos la información y la pusimos todo en una linda lista, para que puedas informarte de las actividades que estan esperando tu asistencia.</p>
+</div>
+
+
+<div class="index-info-fresco">
+	<p>Información con onda, clara y concisa (corta). Para todos los que no quieren leer todo el blabla y solo desean los datos importantes.</p>
+</div>
+
+<div class="index-info-social">
+	<p>Si sos de usar redes sociales, también estamos ahi! Seguinos en <a href="{{ site.social.twitter.url }}">Twitter</a> y no te olvides de darnos <i lang="en">like</i> en <a href="{{ site.social.facebook.url }}">Facebook</a>. </p>
+</div>
+
+<div class="index-info-fast">
+	<p>Priorizamos la rapidez de carga, esto hace que sea una buena experiencia en celulares asi como también para las conexiones lentas (casi dial-up digamos).</p>
+</div>
+
+<p>Los usuarios avanzados tienen regalitos extra:</p>
+
+<div class="index-info-feeds">
+	<p>Si no te gusta el diseño del sitio, te parece que carga muy lento (¡vamos, es 99% estático!), simplemente te parece más cómodo o queres hacer "cosas raras" (guiño, guiño), hay en existencia feeds por ciudad (<a href="{{ site.feed.riogrande }}">Río Grande</a>, <a href="{{ site.feed.ushuaia }}">Ushuaia</a> y <a href="{{ site.feed.tolhuin }}">Tolhuin</a>) para que se te sea más fácil ver las actualizaciones.</p>
+</div>
+
+<div class="index-info-colaboracion">
+	<p>Si sos nuevo en internet, tenes que saber que: <var>internet</var>=<var>colaboración</var>. Por ende necesitamos <strong>tu</strong> colaboración para algunas secciones. Hay <a href="{{ site.data.wiki.colaboracion }}">diferentes formas de colaborar</a> por si querés hacer un bien a la comunidad fueguina. Tampoco te olvides de leer el listado de <a href="{{ site.data.wiki.faq }}">preguntas frecuentes</a> para aclarar algunas dudas.</p>
+</div>
+
+
+<h2>Agenda para estos días </h2>
+
+{% include list-events-index.html %}
+
+
+<h2>Cambios recientes</h2>
+
+{% include print-changelog.html mode="index" %}
+
+<p>Tambien hay un <a href="{{ site.data.wiki.changelog }}">listado completo</a> de los cambios realizados en el sitio.</p>
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+	var now = new Date(); //UTC
+	var today_ISO = now.toISOString().split('T')[0];
+
+	now.setDate(now.getDate() + 1);
+	var tomorrow_ISO = now.toISOString().split('T')[0];
+
+	var events = $('.h-events-index ul li time');
+	var event; 
+	events.each(function(idx, li) {
+	   event = $(li);
+	   var this_date = $(event).attr("datetime").split('T')[0];
+
+		if (this_date == today_ISO){		
+			$(event).find("span.date-day").text("hoy");
+			$(event).find("span.date-weekday").hide();
+			$(event).find("span.date-month").hide();
+		}
+		if (this_date == tomorrow_ISO){		
+			$(event).find("span.date-day").text("mañana");
+			$(event).find("span.date-weekday").hide();
+			$(event).find("span.date-month").hide();
+		}
+	});
+
+</script>

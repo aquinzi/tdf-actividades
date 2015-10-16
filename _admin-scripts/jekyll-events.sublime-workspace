@@ -1,0 +1,1469 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"log",
+				"log_class"
+			],
+			[
+				"en",
+				"endunless"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"com",
+				"comment"
+			],
+			[
+				"place",
+				"place_name"
+			],
+			[
+				"place_",
+				"place_url"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"bord",
+				"border"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"enco",
+				"encoding=\"utf-8"
+			],
+			[
+				"clea",
+				"cleaned_posts"
+			],
+			[
+				"plac",
+				"place_id〔variable〕"
+			],
+			[
+				"find",
+				"find_place_id〔function〕"
+			],
+			[
+				"exi",
+				"exit"
+			],
+			[
+				"proce",
+				"processed_posts〔variable〕"
+			],
+			[
+				"03",
+				"03:00"
+			],
+			[
+				"tmp",
+				"tmp_recurrence〔variable〕"
+			],
+			[
+				"pos",
+				"post_schedule〔variable〕"
+			],
+			[
+				"tr",
+				"try	Try/Except"
+			],
+			[
+				"date",
+				"date_time〔variable〕"
+			],
+			[
+				"sch",
+				"scheduleEvent〔function〕"
+			],
+			[
+				"tm",
+				"tmp〔variable〕"
+			],
+			[
+				"even",
+				"event_month"
+			],
+			[
+				"date_",
+				"date_time"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"hum",
+				"human_datetime_tpl"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"event",
+				"event_data"
+			],
+			[
+				"upda",
+				"update_processed_file"
+			],
+			[
+				"proces",
+				"process_post〔function〕"
+			],
+			[
+				"post",
+				"post_metadata"
+			],
+			[
+				"crea",
+				"create_post_schedule〔function〕"
+			],
+			[
+				"days",
+				"days_between"
+			],
+			[
+				"post_",
+				"post_schedule〔variable〕"
+			],
+			[
+				"get",
+				"get_post_metadata〔function〕"
+			],
+			[
+				"me",
+				"metadata"
+			],
+			[
+				"rand",
+				"radom_minute〔variable〕"
+			],
+			[
+				"ya",
+				"yaml_doc"
+			],
+			[
+				"ke",
+				"keys"
+			],
+			[
+				"start",
+				"startswith"
+			],
+			[
+				"yaml",
+				"yaml_doc"
+			],
+			[
+				"short",
+				"shortURL"
+			],
+			[
+				"the",
+				"the_post"
+			],
+			[
+				"ar",
+				"archivo〔variable〕"
+			],
+			[
+				"proc",
+				"processed_posts〔variable〕"
+			],
+			[
+				"pa",
+				"path〔module〕"
+			],
+			[
+				"PRO",
+				"PROCESSED_POSTS_FILE〔variable〕"
+			],
+			[
+				"file",
+				"file_path〔variable〕"
+			],
+			[
+				"con",
+				"continue〔keyword〕"
+			],
+			[
+				"toda",
+				"today_date"
+			],
+			[
+				"try",
+				"try	Try/Except"
+			],
+			[
+				"cal",
+				"cal_service〔variable〕"
+			],
+			[
+				"lis",
+				"list_schedule"
+			],
+			[
+				"lo",
+				"longUrl"
+			],
+			[
+				"AP",
+				"API_CLIENT_SECRET"
+			],
+			[
+				"req",
+				"requests"
+			],
+			[
+				"cre",
+				"credentials〔variable〕"
+			],
+			[
+				"reque",
+				"requests〔module〕"
+			],
+			[
+				"servi",
+				"service_type〔argument〕"
+			],
+			[
+				"htt",
+				"http〔variable〕"
+			],
+			[
+				"ser",
+				"service〔variable〕"
+			],
+			[
+				"aut",
+				"auth_uri〔variable〕"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"te",
+				"test-jekyll"
+			],
+			[
+				"background-",
+				"background-color: 〔property〕"
+			],
+			[
+				"get_",
+				"get_password〔function〕"
+			],
+			[
+				"rea",
+				"read_ini〔function〕"
+			],
+			[
+				"day",
+				"day_diff〔variable〕"
+			],
+			[
+				"time",
+				"timedelta"
+			],
+			[
+				"ex",
+				"exit"
+			],
+			[
+				"pass",
+				"password〔variable〕"
+			],
+			[
+				"uni",
+				"unidad"
+			],
+			[
+				"stat",
+				"status"
+			],
+			[
+				"issu",
+				"issue_id"
+			],
+			[
+				"edi",
+				"edit_issue〔function〕"
+			],
+			[
+				"isuu",
+				"issue_id〔argument〕"
+			],
+			[
+				"C",
+				"COMMANDS_ACCEPTED"
+			],
+			[
+				"repo",
+				"repoItem"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"PERM",
+				"PERMALINK_BASE"
+			],
+			[
+				"lin",
+				"line_stop〔variable〕"
+			],
+			[
+				"has",
+				"has_permalink〔variable〕"
+			],
+			[
+				"yam",
+				"yaml_block〔variable〕"
+			],
+			[
+				"YAML_BLOCK_",
+				"YAML_BLOCK_AS_LIST"
+			],
+			[
+				"OUT",
+				"OUTPUT_FILE〔variable〕"
+			],
+			[
+				"key",
+				"keys_specific_processing"
+			],
+			[
+				"ge",
+				"geojson"
+			],
+			[
+				"geo",
+				"geojson_keys"
+			],
+			[
+				"feat",
+				"feature〔variable〕"
+			],
+			[
+				"FFF",
+				"FFFFFF"
+			],
+			[
+				"FF",
+				"FFFFFF"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"inli",
+				"inline"
+			],
+			[
+				"py",
+				"pywin32"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"lits",
+				"list-style-type"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"fon",
+				"FontAwesome"
+			],
+			[
+				"margn",
+				"margin-top"
+			],
+			[
+				"F",
+				"FontAwesome"
+			],
+			[
+				"fafafa",
+				"FAFAFA"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"cid",
+				"ciudades"
+			],
+			[
+				"fafa",
+				"FAFAFA"
+			],
+			[
+				"il",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"lsit",
+				"list-style-type"
+			],
+			[
+				"fff",
+				"ffffff"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"trans",
+				"transparent"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"l",
+				"li	Tag"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"improt",
+				"important"
+			],
+			[
+				"wiki",
+				"wikipedia"
+			],
+			[
+				"new",
+				"new_name〔variable〕"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "avistamiento de aves:\n  tipo: afición\n  alternativo: balabl\ncanto:\n  tipo: arte\njudo:\n  tipo: deporte\n  alternativo: juudoo\npintura:\n  tipo: arte\n\n\n\n\nfor actividad in site.data.rg.actividades\n	{{ actividad[0] }}/{{ actividad[1].alternativo }}\n\n\nassign grupos = site.data.rg.actividades | group_by: \"tipo\"",
+			"settings":
+			{
+				"buffer_size": 304,
+				"line_ending": "Windows",
+				"name": "avistamiento de aves:"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Bookmarks: Toggle"
+			],
+			[
+				"book",
+				"Bookmarks: Toggle"
+			],
+			[
+				"doc",
+				"AutoDocstring: Current"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"cop",
+				"File: Copy Name"
+			],
+			[
+				"copy",
+				"File: Copy Name"
+			],
+			[
+				"format",
+				"Format: Javascript"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"javas",
+				"Format: Javascript"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"control",
+				"Package Control: Remove Package"
+			],
+			[
+				"packe",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"copyn",
+				"File: Copy Name"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"table",
+				"Table Editor: Set table syntax 'Simple' for current view"
+			],
+			[
+				"find",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"path",
+				"File: Copy Path"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 522.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"print(\"\\n\".join([view.file_name() for view in sublime.active_window().views() if view and view.file_name()]));",
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/tdf",
+		"/C/xampp/htdocs/tdf/_entidades-riogrande",
+		"/C/xampp/htdocs/tdf/assets",
+		"/C/xampp/htdocs/tdf/rio-grande",
+		"/C/xampp/htdocs/tdf/rio-grande/actividades",
+		"/C/xampp/htdocs/tdf/rio-grande/lugares"
+	],
+	"file_history":
+	[
+		"/C/Users/Ariela/Documents/My Dropbox/to wiki/convertir-repo-SVN-a-Git.md",
+		"/C/Users/Ariela/Desktop/app_reuniones/cpanel/login.php",
+		"/C/Users/Ariela/Desktop/app_reuniones/cpanel/entrar.php",
+		"/C/Users/Ariela/Desktop/app_reuniones/00_base/db72372_gcba_2015-10-13.sql",
+		"/C/Users/Ariela/Desktop/app_reuniones/index.php",
+		"/C/Users/Ariela/Desktop/app_reuniones/cpanel/includes/conexion.php",
+		"/C/Users/Ariela/Desktop/app_reuniones/cpanel/includes/conexion_cliente.php",
+		"/C/Users/Ariela/Desktop/app_reuniones/cpanel/includes/conexion_rev.php",
+		"/C/Users/Ariela/Desktop/conexion.php",
+		"/C/Users/Ariela/Desktop/trabajos/hrl/other files/servidores.txt",
+		"/C/Users/Ariela/Desktop/users.txt",
+		"/C/xampp/htdocs/tdf/tasks.txt",
+		"/C/xampp/htdocs/tdf/_config.yml",
+		"/C/xampp/htdocs/tdf/documentacion.md",
+		"/C/xampp/htdocs/tdf/rio-grande/actividades/index.html",
+		"/C/xampp/htdocs/tdf/_entidades-riogrande/adultos-mayores/bochas.md",
+		"/C/xampp/htdocs/tdf/_entidades-riogrande/aikido/sakanashi-dojo.md",
+		"/C/xampp/htdocs/tdf/_layouts/default.html",
+		"/C/xampp/htdocs/tdf/_pages/preguntas-frecuentes.md",
+		"/C/xampp/htdocs/tdf/assets/main.css",
+		"/C/Users/Ariela/Desktop/rg-actividades/src/css/base.css",
+		"/C/Users/Ariela/Desktop/rg-actividades/build.py",
+		"/C/Users/Ariela/Desktop/rg-actividades/src/page_tpl.html",
+		"/C/xampp/htdocs/tdf/_includes/print-upcoming-events.html",
+		"/C/xampp/htdocs/tdf/_includes/get-place.html",
+		"/C/xampp/htdocs/tdf/_layouts/event.html",
+		"/C/xampp/htdocs/tdf/_layouts/archive.html",
+		"/C/xampp/htdocs/tdf/_layouts/entity.html",
+		"/C/Users/Ariela/Desktop/app_reuniones/cpanel/includes/config.php",
+		"/C/Users/Ariela/Desktop/app_reuniones/cpanel/includes/config_cliente.php",
+		"/C/Users/Ariela/Desktop/app_reuniones/cpanel/includes/config_rev.php",
+		"/C/Program Files (x86)/Zim Desktop Wiki/data/manual/notebook.zim",
+		"/C/Users/Ariela/Desktop/git.bat",
+		"/C/Program Files (x86)/Zim Desktop Wiki/data/templates/wiki/Default.txt",
+		"/C/Program Files (x86)/Zim Desktop Wiki/data/templates/wiki/Journal.txt",
+		"/C/Ruby/bin/jekyll.bat",
+		"/C/Ruby/bin/gem",
+		"/C/Ruby/bin/gem.bat",
+		"/C/Users/Ariela/Desktop/app_reuniones/metatags.php",
+		"/C/Users/Ariela/Desktop/app_reuniones/participar.php",
+		"/C/xampp/htdocs/tdf/_includes/links-source-history.html",
+		"/C/xampp/htdocs/tdf/_pages/changelog.html",
+		"/C/xampp/htdocs/tdf/_layouts/page.html",
+		"/C/xampp/htdocs/tdf/_includes/print-changelog.html",
+		"/C/xampp/htdocs/tdf/_data/changelog.yml",
+		"/C/xampp/htdocs/tdf/changelog.php",
+		"/C/xampp/htdocs/tdf/_includes/human-date.html",
+		"/C/xampp/htdocs/tdf/index.html",
+		"/C/xampp/htdocs/tdf/_pages/changelog.md",
+		"/C/xampp/htdocs/tdf/_data/wiki.yml",
+		"/C/xampp/htdocs/tdf/_includes/upcoming-events.html",
+		"/C/xampp/htdocs/tdf/_includes/list-events-index.html",
+		"/C/xampp/htdocs/tdf/_includes/upcomming-events.html",
+		"/C/xampp/htdocs/tdf/_layouts/city.html",
+		"/C/xampp/htdocs/tdf/rio-grande/_posts/2015-11-01-yo-corro-por-malvinas.md",
+		"/C/xampp/htdocs/tdf/ushuaia/_posts/2015-08-31-tecnotour.md",
+		"/C/Users/Ariela/Documents/My Dropbox/jekyll github.txt",
+		"/C/Users/Ariela/Documents/My Dropbox/blogs static/blog_quinzi/source/themes/simple-jinja/assets/css/theme.css",
+		"/C/Users/Ariela/Desktop/test-jekyll/index.html",
+		"/C/xampp/htdocs/tdf/_includes/gcal-url.html",
+		"/C/xampp/htdocs/tdf/_includes/print-tag.html",
+		"/C/xampp/htdocs/tdf/rio-grande/_posts/2015-08-16-expo-niño.md",
+		"/C/Users/Ariela/Desktop/test-jekyll/tag/esqui-de-fondo/index.html",
+		"/C/Users/Ariela/Desktop/test-jekyll/_includes/print-tags.html",
+		"/C/Users/Ariela/Desktop/test-jekyll/_includes/print-categories.html",
+		"/C/xampp/htdocs/tdf/tag.php",
+		"/C/xampp/htdocs/tdf/ciudad-agenda-lista.php",
+		"/C/xampp/htdocs/tdf/tags/index.html",
+		"/C/xampp/htdocs/tdf/_layouts/tag.html",
+		"/C/Users/Ariela/Desktop/test-jekyll/_layouts/tag.html",
+		"/C/Users/Ariela/Desktop/test-jekyll/tags.html",
+		"/C/xampp/htdocs/tdf/tags/esqui-de-fondo/index.html",
+		"/C/xampp/htdocs/tdf/tag/atletismo/index.html",
+		"/C/xampp/htdocs/tdf/archivo-agenda-lista.php",
+		"/C/xampp/htdocs/tdf/agenda-archivo-ciudad.php",
+		"/C/xampp/htdocs/tdf/rio-grande/agenda/index.html",
+		"/C/xampp/htdocs/tdf/ushuaia/agenda/index.html",
+		"/C/xampp/htdocs/tdf/tolhuin/agenda/index.html",
+		"/C/Users/Ariela/Desktop/test-jekyll/_layouts/category.html",
+		"/C/Users/Ariela/Desktop/test-jekyll/_includes/archive-listing.html",
+		"/C/xampp/htdocs/tdf/_data/dias.yml",
+		"/C/xampp/htdocs/tdf/evento.php",
+		"/I/Musica/Raddock/info.txt",
+		"/I/Musica/CELL/info.txt",
+		"/C/xampp/htdocs/tdf/entidad.php",
+		"/C/xampp/htdocs/tdf/_entidades-riogrande/ajedrez/club-ajedrez-rg.md",
+		"/C/xampp/htdocs/tdf/rio-grande/lugares/index.html",
+		"/C/xampp/htdocs/tdf/rio-grande/index.md",
+		"/C/Users/Ariela/Desktop/test-jekyll/documentacion.md",
+		"/C/xampp/htdocs/tdf/_includes/slugify-word.html",
+		"/I/Musica/陰陽座/!lyrics/ひょうすべ.txt",
+		"/C/Users/Ariela/Documents/My Dropbox/moodo_maindoc-20151009.txt",
+		"/C/xampp/htdocs/tdf/home.php",
+		"/C/xampp/htdocs/tdf/base_option_mat.css",
+		"/C/Users/Ariela/Desktop/Outline1.txt",
+		"/C/xampp/htdocs/tdf/404.php",
+		"/C/xampp/htdocs/tdf/index.php",
+		"/C/xampp/htdocs/tdf/actividades.php",
+		"/C/xampp/htdocs/tdf/lugares.php",
+		"/I/Musica/SAVAGE/info.txt",
+		"/I/Musica/llll-Ligro-/info.txt",
+		"/I/Musica/DISGUST/info.txt",
+		"/I/Musica/Crazy★shampoo/info.txt",
+		"/I/Musica/Serj Tankian/info.txt",
+		"/C/Users/Ariela/Desktop/process-music/SERART/SERART/LEER!! SERART.txt",
+		"/I/Musica/ロクダマカルタ/info.txt",
+		"/C/Users/Ariela/Desktop/process-music/RoqudamaCarta/RoqudamaCarta - Kokutou no Souji , - Mother Goose Late Show (12.12.2014).html",
+		"/I/Musica/SHEDIA/info.txt",
+		"/C/Users/Ariela/Desktop/process-music/SHEDIA - Unsinkable Black Sun/SHEDIA - Unsinkable Black Sun (27.08.2015).html",
+		"/C/Users/Ariela/Desktop/process-music/SHEDIA - The Obstructive Moon/SHEDIA - The Obstructive Moon (27.08.2014).html",
+		"/C/Users/Ariela/Desktop/process-music/SHEDIA’s Double Release.txt",
+		"/I/Musica/! sueltos/SHEDIA.txt",
+		"/I/Musica/MiD DERACINE/info.txt",
+		"/I/Musica/the GazettE/info.txt",
+		"/C/Users/Ariela/Desktop/process-music/the GazettE - DOGMA/the GazettE - DOGMA.html",
+		"/I/Musica/MiD DERACINE - WORLD'S END BENEVOLENCE/info.txt",
+		"/I/Musica/Jupiter/info.txt",
+		"/C/Users/Ariela/Desktop/process-music/Jupiter - THE HISTORY OF GENESIS/۞Visual★Scandal☆3۞  [Album] Jupiter - THE HISTORY OF GENESIS (07.01.2015).html",
+		"/I/Musica/DEZERT/info.txt",
+		"/C/Users/Ariela/Desktop/process-music/DEZERT/DEZERT - zanteiteki occult shuukanshi, vol 1/DEZERT - zanteiteki occult shuukanshi ① (25.04.2015).html",
+		"/I/Musica/DEZERT/!lyrics/「変」.txt",
+		"/C/Users/Ariela/Desktop/process-music/DEZERT/DEZERT - Hen (10.01.2015).html",
+		"/I/Musica/グリーヴァ/info.txt",
+		"/C/Users/Ariela/Desktop/process-music/Grieva - Ayatsuri ningen _ Fake _ Zetsubou no asa (29.04.2015).html",
+		"/I/Musica/えんそく/info.txt",
+		"/C/Users/Ariela/Desktop/process-music/Ensoku - Ensoku no daiyogen.html",
+		"/I/Musica/VANIRU/info.txt",
+		"/I/Musica/VANIRU/!lyrics/High FANTASY.txt"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"$imagen_fondo",
+			"group[0]",
+			"(page.title | lower)",
+			"{extra-javascript}",
+			"PAGE_FAQ_JAVASCRIPT",
+			"{extra-javascript}",
+			"TPL_PAGE_PLACES_JAVASCRIPT",
+			"{extra-javascript}",
+			"EOF",
+			"==changelog",
+			"upcomming-events",
+			"post.",
+			"page.",
+			"mod_date",
+			"costo",
+			"row",
+			"==latestchanges",
+			"silueta-guanaco.png",
+			"h-card",
+			"\"",
+			"誤解",
+			"包丁の正しい使い方",
+			"Sister",
+			"秘密",
+			"&#12539;",
+			"<br />",
+			"&#9829;",
+			"&#8229;&#8229;",
+			"&#65381;",
+			"&#8230;",
+			"&#65281;",
+			"&#9633;",
+			"&#65311;",
+			"&#12301;",
+			"&#12300;",
+			"&#8217;",
+			"&#65381;",
+			"&#12539;",
+			"<div class=\"clear\"></div>",
+			"<div class=\"sp-wrap\">",
+			"<div class=\"sp-head folded clickable\">",
+			"<div class=\"sp-head-wrap\">",
+			"<div class=\"sp-content\">",
+			"<div class=\"sp-body\">",
+			"<span style=\"color: #999999;\">",
+			"&nbsp;",
+			"&nbsp; ",
+			"</b></span></div>",
+			"<span style='color: red;'>",
+			"<b>",
+			"</div></div>",
+			"<div class='sp-content'>",
+			"<div class='sp-body'>",
+			"<div class='sp-wrap'>",
+			"<div class='sp-head-wrap'>",
+			"<div class='sp-head folded clickable'>",
+			"<br />",
+			"<span style='color: #999999;'>",
+			"</span></i>",
+			"<i><span style='color: #cccccc;'>",
+			"<div class='clear'></div>",
+			"GUILTY",
+			"transition: ",
+			"transition: all ",
+			"transition: all 0.3s ease-out",
+			".h-events-index  .location:before",
+			", .h-card .ultima-actualizacion:before",
+			".listado-entidades li.entidad dd.costo:after",
+			".listado-entidades li.entidad .p-street-address:before",
+			"a[rel^=\"external\"]:after",
+			"icons (global)",
+			"font-family: \"FontAwesome\";",
+			"content:",
+			"==lugares",
+			"==entidad",
+			"==entidad (details)",
+			"==entidades",
+			"==entidades (det",
+			"==change",
+			"h-card",
+			".index-event2",
+			".upcomming-events .ciudad",
+			"<div class=\"ciudad\">",
+			"<div class=\"agenda-ciudad\">",
+			".toc2-columns-dl",
+			".toc-columns",
+			"toc-columns-dl",
+			"</a> , <a",
+			" class=\"letter\"",
+			"liclass",
+			"</li>",
+			"#tabla-contenido",
+			"3>",
+			"radom_minute",
+			"CIUDADES",
+			"CURRENT_DIR",
+			"current_dir",
+			"_SearchForCalEvents",
+			"def ",
+			"useService('url').url().insert(body={'longUrl': url}))",
+			"_RetryWithBackoff",
+			"__API_CLIENT_SECRET__",
+			"__API_CLIENT_ID__",
+			"client",
+			"DateTimeParser",
+			"dateParser",
+			"eStart",
+			"AddEvent",
+			"AccessTokenRefreshError",
+			"_CalService",
+			"build('calendar'",
+			"flow",
+			"authHttp",
+			"def _RetryWithBackoff",
+			"_RetryWithBackoff",
+			"Storage",
+			"run",
+			"_GoogleAuth",
+			"__API_CLIENT_ID__",
+			"”",
+			"future",
+			"limit_posts",
+			"(según su autor)",
+			"Compatibilidad con WordPress ",
+			"Ver los detalles de la versión .",
+			"login()",
+			"HOURS_TIMEZONE",
+			"COMMANDS_ACCEPTED"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"group_name",
+			"page.title | lower",
+			"page.",
+			"post.",
+			"date_modified",
+			"actividad",
+			"silueta-guanaco.gif",
+			"",
+			"・",
+			"",
+			"♥",
+			"...",
+			"･",
+			"...",
+			"！",
+			"ό",
+			"？",
+			"」",
+			"「",
+			"’",
+			"・",
+			"",
+			"\\n=======",
+			"",
+			".h-events-index",
+			".upcomming-events .city",
+			"<div class=\"city\">",
+			"<div class=\"ciudad\">",
+			".toc-columns-dl",
+			"toc2-columns-dl",
+			"</a>, <a",
+			"",
+			"li class",
+			"</li>\\n",
+			"\\n</li>",
+			"#tabla-contenido.inline",
+			"2>",
+			"random_minute",
+			"CITIES",
+			"ROOT_DIR",
+			"CURRENT_DIR",
+			"API_CLIENT_SECRET",
+			"API_CLIENT_ID",
+			"\"",
+			"(según autor)",
+			"Comp. WP ",
+			"",
+			"\\n",
+			" ",
+			"",
+			"date-year visuallyhidden",
+			"visuallyhidden",
+			"class=\"date-month visuallyhidden",
+			"class=\"date-month visuallyhidden\"",
+			"<span class=\"visuallyhidden\">",
+			"index-info-fast",
+			"visuallyhidden",
+			".upcomming-city",
+			".upcomming-events",
+			"print_event2",
+			"{content:\"\\f0e0\"; } /* envelope, f1fa = arroba*/",
+			"new-card-lugar black\">",
+			"",
+			"class=\"u-url\" rel=\"external\"",
+			"",
+			" height=\"440\" width=\"440\"",
+			"?size=640x640",
+			"<div class=\"my-card-img\"><img $1> </div>",
+			"width=\"440\"",
+			"width=\"450\"",
+			" height=\"250\" width=\"490\"",
+			"streetview?size=640x400",
+			"height=\"300\" width=\"450\"",
+			"<dt class=\"telefono escondido\">",
+			"<dt class=\"direccion escondido\">",
+			"<img $1 height=\"300\" width=\"400\">",
+			"new-card-lugar",
+			"card-lugar",
+			".card-lugar",
+			"",
+			".agenda-card",
+			"",
+			"<a href=\"?p=evento\">",
+			"ol>",
+			"latest-changes",
+			"title_sizer",
+			"main_sizer",
+			"bSizer_buttons",
+			"headerlink-popup",
+			"share-popup",
+			"\"gstreetview\"",
+			" ",
+			"",
+			",",
+			"",
+			"</ol>",
+			"<ol>",
+			"-",
+			"_attr",
+			"ol>",
+			"",
+			"/*border-left-color: #f44336;*/ border-left-color: #ff5722;",
+			"/*border-top-color: #f44336;*/ border-top-color: #ff5722;",
+			"/*border-color: #f44336;*/ border-color: #ff5722;",
+			"/*color: #f44336;*/ color: #ff5722;",
+			"/*color: #f44336;*/\\ncolor: #ff5722;",
+			"/*background-color: #f44336;*/\\nbackground-color: #ff5722;",
+			"font-weight: normal; /*400*/",
+			"",
+			"footer.footer ul",
+			"",
+			"footer.footer",
+			"}\\n",
+			"\\n}",
+			"col-lg-4 col-md-6 col-sm-6",
+			"\\n@",
+			"",
+			"$1",
+			"",
+			"$1",
+			"",
+			"\\n",
+			"SRC_FOLDER",
+			"\\n",
+			"",
+			"$1\\n",
+			"http",
+			"\\\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								304,
+								304
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_name": "avistamiento de aves:",
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.928238659997,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "jekyll-events.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"frut",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_Panqueques-integrales-con-frutas-de-estación-y-risotto-de-quinoa.txt"
+			],
+			[
+				"desa",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_-Un-desayuno-ideal.txt"
+			],
+			[
+				"",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_-Una-pascua-diferente.txt"
+			],
+			[
+				"re",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Risotto-de-quínoa.txt"
+			],
+			[
+				"ven",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_-Ventajas-de-la-proteína-vegetal.txt"
+			],
+			[
+				"pascua",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_-Una-pascua-diferente.txt"
+			],
+			[
+				"forma",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_Una-forma-inteligente-de-comer-alimentos-crudos-sin-darte-cuenta.txt"
+			],
+			[
+				"unde",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_-Un-desayuno-ideal.txt"
+			],
+			[
+				"seis",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_-Seis-opciones-para-desintoxicar-el-organismo-y-no-morir-en-el-intento.txt"
+			],
+			[
+				"riso",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_-Risotto-milanés.txt"
+			],
+			[
+				"naran",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_Recetas-económicas-de-la-semana-Hoy-con-naranjas.txt"
+			],
+			[
+				"rece",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_Recetas-económicas-de-la-semana-Hoy-con-acelga.txt"
+			],
+			[
+				"licuad",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Licuado-de-mango.txt"
+			],
+			[
+				"crum",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Crumble-de-brócoli-y-coliflor.txt"
+			],
+			[
+				"brotes",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Brotes-de-quínoa-o-amaranto.txt"
+			],
+			[
+				"lech",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Leche-de-quínoa.txt"
+			],
+			[
+				"panin",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Pan-integral.txt"
+			],
+			[
+				"beren",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Berenjenas-rellenas.txt"
+			],
+			[
+				"las",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_Las-berenjenas-sus-beneficios-y-algunas-recetas.txt"
+			],
+			[
+				"ensa",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Ensalada-tibia.txt"
+			],
+			[
+				"lic",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Licuado-de-mango.txt"
+			],
+			[
+				"lavita",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_-La-vitamina-del-corazón.txt"
+			],
+			[
+				"fru",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Frutas-glaseadas.txt"
+			],
+			[
+				"ma",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Magdalenas-de-naranja.txt"
+			],
+			[
+				"apple",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Apple-Pie-sano.txt"
+			],
+			[
+				"crema",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Crema-de-berenjena.txt"
+			],
+			[
+				"paste",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Pastel-de-carne-vegetal.txt"
+			],
+			[
+				"sopa",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Sopa-crema-de-acelga-y-miso.txt"
+			],
+			[
+				"pan",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Pan-o-budín-de-bananas-100%-integral.txt"
+			],
+			[
+				"li",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Licuado-frutal.txt"
+			],
+			[
+				"lec",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Leche-de-sandia.txt"
+			],
+			[
+				"masa",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Masa-integral-para-empanadas-o-tarta.txt"
+			],
+			[
+				"jug",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Jugo-de-ananá.txt"
+			],
+			[
+				"ensalada",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Ensalada-tibia-de-zapallitos.txt"
+			],
+			[
+				"leche",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Leche-de-amaranto.txt"
+			],
+			[
+				"merme",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Mermelada-de-tomate.txt"
+			],
+			[
+				"fan",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Flan-clásico.txt"
+			],
+			[
+				"tarta",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Tarta-de-zapallitos-y-cebollas.txt"
+			],
+			[
+				"pan100",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Pan-100%-integral.txt"
+			],
+			[
+				"panintegral",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_¿Por-qué-deberíamos-consumir-por-ejemplo-pan-integral-y-no-tanto-pan-blanco.txt"
+			],
+			[
+				"carne",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_¿La-carne-es-tan-buena-como-dicen-varios-especialistas.txt"
+			],
+			[
+				"ensala",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_Ensalada-de-espárragos.txt"
+			],
+			[
+				"papas",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_PAPAS-AL-CURRY-SOBRE-NIDO-DE-ESPINACA.txt"
+			],
+			[
+				"seit",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\Recetas\\pablitom_SEITÁN-A-LA-VINAGRETA.txt"
+			],
+			[
+				"mesacon",
+				"C:\\Users\\Ariela\\Documents\\My Dropbox\\ppi\\Comida\\pablitom_¿Cómo-preparar-una-mesa-consciente-para-estas-fiestas.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 50.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

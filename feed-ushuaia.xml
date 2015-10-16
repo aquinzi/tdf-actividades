@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{% assign post_list = site.categories.ushuaia %}{% include feed.html %}

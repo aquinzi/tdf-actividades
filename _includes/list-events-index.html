@@ -1,0 +1,15 @@
+{% if include.posts %}{% assign post_list = include.posts | sort:'date' %}
+{% else %}{% assign post_list = site.posts %}
+{% endif %}
+
+{% if include.city %}
+{% assign post_list = post_list | where:"categories",include.city | sort:'date' %}
+{% endif %}
+
+
+<div class="h-events-index">
+
+{% include print-upcoming-events.html mode="index" posts=post_list %}
+
+</div>
+

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article class="page">
+	<h1>{{ page.title }}</h1>
+
+    {{ content }}
+  
+    <footer id="page-info">
+        {% assign last_modified = false %}
+
+
+        {% if page.date %}
+            {% assign last_modified = page.date %}
+            {% if page.modified %} {% assign last_modified = page.modified %} {% endif %}
+        {% else %}
+            {% if (page.title | lower) contains "historial de cambios" %}
+                {%comment%}get the latest date from the changelog list {%endcomment%}
+                {% assign last_modified = site.data.changelog | first | first %}
+            {% endif %}
+        {% endif %}
+
+        {% if last_modified %}
+            <p class="last-mod">
+                Última actualización: el <time datetime="{{ last_modified | date:'%Y-%m-%d'}}"> {% include human-date.html hide_weekday=true date=last_modified%} </time>
+            </p>
+        {% endif %}
+    	
+    	{% include links-source-history.html %}
+    </footer>
+</article>

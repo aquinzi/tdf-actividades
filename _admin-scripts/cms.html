@@ -1,0 +1,303 @@
+---
+---
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
+	<title>Jekyll+GitHub API+JS=Dynamic CMS :-)</title>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div class="container" id="container1" >
+	<h2>Create new post at {{ site.name }}</h2>
+	{% if site.github.repository_nwo == none %}
+		<div class="alert alert-danger" role="alert"><code>github.repo</code> is not set. Check <a href="https://github.com/vrypan/jekyll-post-via-web"
+		>github.com/vrypan/jekyll-post-via-web</a> for instructions.</div>
+	{% endif %}
+	{% if site.github.branch == none %}
+		<div class="alert alert-danger" role="alert"><code>github.branch</code> is not set. Check <a href="https://github.com/vrypan/jekyll-post-via-web"
+		>github.com/vrypan/jekyll-post-via-web</a> for instructions.</div>
+	{% endif %}
+	<div id="messages"></div>
+
+	<form id="theform" method="get">
+		<div class="form-group">
+			<label for="p_title">Title</label>
+			<input type="text" class="form-control" placeholder="Event title" id="p_title" name="title">
+		</div>
+
+		<div class="form-inline">
+			<div class="form-group">
+				<label for="p_date">Date (start)</label>
+				<input type="text" class="form-control" placeholder="Event start. YYYY-MM-DD HH:SS" id="p_date" name="date">
+			</div>
+
+			<div class="form-group">
+				<label for="p_date_end">Date (end)</label>
+				<input type="text" class="form-control" placeholder="Event end. YYYY-MM-DD HH:SS" id="p_date_end" name="date_end">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="p_location">Location</label>
+			<input type="text" class="form-control" placeholder="Event Location" id="p_location" name="location">
+		</div>
+
+		<div class="form-group">
+			<p><b>Categories/Places</b></p>
+
+			{% for category in site.categories %}
+			<label class="checkbox-inline">
+			  <input type="checkbox" id="catCheck_{{category[0]}}" value="{{category[0]}}" name="category_group[]"> {{category[0]}}
+			</label>
+			{% endfor %}
+
+		</div>
+
+		<div class="form-group">
+			<label for="p_body">Content</label>
+			<textarea class="form-control" rows="5" id="p_body" placeholder="Event description" name="body"></textarea>
+		</div>
+
+		<div class="form-group">
+			<p><b>Tags</b></p>
+			
+			{% for tag in site.tags %}
+			<label class="checkbox-inline">
+			  <input type="checkbox" id="tagCheck_{{tag[0]}}" value="{{tag[0]}}" name="tag_group[]"> {{tag[0]}}
+			</label>
+			{% endfor %}
+			<br>
+			<label for="p_tag_other">Other tag</label> Comma separated, must include files manually. 
+			<input type="text" class="form-control" placeholder="Other tags" id="p_tag_other" name="tag_other">
+		</div>
+
+		<div class="form-group">
+			<label for="p_source">Source</label>
+			<input type="text" class="form-control" placeholder="Event source" id="p_source" name="source">
+		</div>
+
+		<hr>
+		<div class="form-inline">
+			<p>GitHub Login</p>
+
+			<div class="form-group">
+				<label for="username" class="sr-only">Username</label>
+				<input type="text" class="form-control" id="username" placeholder="GitHub username">
+			</div>
+			<div class="form-group">
+				<label for="password" class="sr-only">password</label>
+				<input type="password" class="form-control" id="password" placeholder="GitHub password">
+			</div>
+			<input type="button" class="btn btn-default" id="go" value="Post" /> 
+			<a class="btn btn-link" data-toggle="collapse" href="#submitform" aria-expanded="false" aria-controls="submitform">Remember username/password</a>
+		</div>
+		<div class="collapse" id="submitform">
+		<br>
+	  	<div class="well">
+	    	<p>Because of the way this form works (the form data is not sumbitted, as forms usually do), your browser may not ask you to remember the username/password. 
+	    	<br>If you'd like to save them to your password manager, fill them in and click this button.
+	    	<br>This will not create a new post!</p>
+	    	<input type="submit" class="btn btn-default" value="Trick browser to save username/password">
+	  	</div>
+		</div>
+	</form>
+	<!--
+	<p>Drag this link to your bookmarks, to post from any webpage: <a href="javascript:(function(){
+	var title = document.getElementsByTagName('title')[0].innerHTML;
+	title = encodeURIComponent(title) ;
+	var selection = '';
+	if (window.getSelection) {
+	    selection = window.getSelection().toString();
+	} else if (document.selection &amp;&amp; document.selection.type != 'Control') {
+	    selection = document.selection.createRange().text;
+	}
+	selection = encodeURIComponent(selection);
+	new_window=window.open('{{ "/cms.html" | prepend: site.baseurl | prepend: site.url }}?title='+title+'&amp;selection='+selection+'&amp;url='+encodeURIComponent(document.location.href),'JekyllPopup','resizable,scrollbars,status=0,toolbar=0,menubar=0,titlebar=0,width=640,height=600,location=0');
+	})();"
+	>post to GitHub</a></p>
+	-->
+	</div>
+
+	<script>
+	function get_query(){
+		// Source: http://fellowtuts.com/jquery/getting-query-string-values-in-javascript/
+	    var url = document.location.href;
+	    if (url.indexOf('?') == -1) return false ;
+	    var qs = url.substring(url.indexOf('?') + 1).split('&');
+	    for(var i = 0, result = {}; i < qs.length; i++){
+	        qs[i] = qs[i].split('=');
+	        result[qs[i][0]] = decodeURIComponent(qs[i][1].replace(/\+/g, '%20'));
+	    }
+	    return result;
+	}
+	
+	function getSelectionText() {return text; }
+
+	function post_file(title, date_start) {
+		/*
+		var d = new Date()
+		var dd = d.getDate()
+		if ( dd < 10 ) dd = '0' + dd ;
+		var mm = d.getMonth()+1 ;
+		if ( mm < 10 ) mm = '0' + mm ;
+		var yyyy = d.getFullYear() ;
+		filename = yyyy+'-'+mm+'-'+dd ;
+		if (!title) {
+			filename = filename + '-' + +d.getTime() ;
+		} else {
+			var slugified = title.toLowerCase().replace(/\W+/g, '-') ;
+			if (slugified!='-') {
+				filename = filename + '-' + slugified ;
+			} else {
+				filename = filename + '-' + d.getTime();
+			}
+		}
+		*/
+		var filename = date_start.split(" ")[0]; //get only date part
+		if (!title) {
+			filename = filename + '-notitle-'+ d.getTime();
+		} else {
+			var slugified = title.toLowerCase().replace(/\W+/g, '-') ;
+			if (slugified!='-') {
+				filename = filename + '-' + slugified ;
+			} else {
+				filename = filename + '-notitle-'+d.getTime();
+			}
+		}		
+		return filename
+	}
+	/*
+	function post_date() {
+		var d = new Date()
+		return d.toISOString()
+	}
+	*/
+	var API_NEW_POST = 'https://api.github.com/repos/{{ site.github.repository_nwo }}/contents/_posts/' ;
+	$("#go").click(function() {
+		var user = $('#username').val() ;
+		var password = $('#password').val() ;
+
+		// form events data
+		var title = $('#p_title').val() ;
+		var location = $('#p_location').val() ;
+		var date_start = $('#p_date').val() ;
+		var date_end = $('#p_end').val() ;
+		var source = $('#p_source').val() ;
+
+
+		var categories = "" ;
+		//var values = new Array();
+		$.each($("input[name='category_group[]']:checked"), function() {
+		  //values.push($(this).val());
+		  // or you can do something to the actual checked checkboxes by working directly with  'this'
+		  // something like $(this).hide() (only something useful, probably) :P
+		  categories = categories + "," + $(this).val();
+		});
+
+
+		if (categories == ""){
+			alert("must include place/category. Including 'no-place' ");
+			categories = "no-place";
+		}
+
+		var tags = "" ;
+		$.each($("input[name='tag_group[]']:checked"), function() {
+		  tags = tags + "," + $(this).val();
+		});
+
+		if ($('#p_tag_other').val() != ""){
+		  tags = tags + "," + $('#p_tag_other').val();
+		}
+
+		//     create body
+		var p_body = '---\n' ;
+		p_body = p_body + 'layout: event \n' ;
+		p_body = p_body + 'title:  "' + title +'" \n';
+		p_body = p_body + 'date:   '+ date_start +' \n' ;
+		p_body = p_body + 'date-end:   '+ date_end +' \n' ;
+		p_body = p_body + 'categories: [' + categories + ']\n'; 
+		p_body = p_body + 'location:   '+ location +' \n' ;
+		p_body = p_body + 'tags: [' + tags + ']\n'; 
+		p_body = p_body + 'source:   '+ source +' \n' ;
+		p_body = p_body + '---\n';
+		p_body = p_body + '\n' + $('#p_body').val();
+
+		var posted_ok = false ;
+		var filename = post_file(title,date_start)+'.md';
+	    $.ajax({
+	        dataType: "json",
+	        contentType: 'application/json; charset=UTF-8',
+	        url: API_NEW_POST+filename,
+	        type: "PUT",
+	        data: JSON.stringify({
+	        	content: btoa(unescape(encodeURIComponent(p_body))),
+	        	message: 'posted via web: ' + filename,
+	        	branch: '{{ site.github.branch }}'
+	        }),
+	        beforeSend: function(xhr) { 
+	        	xhr.setRequestHeader("Authorization", "Basic " + btoa(user+":"+password)); 
+	    	},
+	        success: function(data) {
+	        	posted_ok = true ;
+	        	$('#container1').html('<h2>Successfully posted to {{ site.name }}</h2>') ;
+	        },
+	        error: function(request, status, error) {
+	        	responseText = jQuery.parseJSON( request.responseText );
+        		$('#messages').append($('<div class="alert alert-danger alert-dismissible" role="alert">')
+        		.append('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>')
+        		.append('<strong>' + request.status + '</strong>: ' + responseText.message )
+        		.append('<br>If you are using two-factor-auth, you will ahve to create ')
+        		.append('<a href="https://github.com/settings/tokens">a personal access token</a> with "repo" permissions and use this instead of your password.')
+        		.append('</div>'));
+	        	
+	        },
+	      })
+	       ;
+	});
+	query_params = get_query();
+	if (query_params) {
+		src_body = '';
+		if (query_params['title']) {
+			src_title = query_params['title'] ;
+			$('#p_title').val(src_title) ;
+		}
+
+		if (query_params['date']) {
+			src_date = query_params['date'] ;
+			$('#p_date').val(src_date) ;
+		}
+
+		if (query_params['date_end']) {
+			src_date_end = query_params['date_end'] ;
+			$('#p_date_end').val(src_date_end) ;
+		}
+
+		if (query_params['location']) {
+			src_location = query_params['location'] ;
+			$('#p_location').val(src_location) ;
+		}
+
+		if (query_params['source']) {
+			src_source = query_params['source'] ;
+			$('#p_source').val(src_source) ;
+		}
+
+		if (query_params['selection']) {
+			src_body = '> ' + query_params['selection'] ;
+		}
+		if (query_params['body']) {
+			src_body = query_params['body'] ;
+		}
+		if (query_params['url']) {
+			src_body = src_body + ' &mdash;['+src_title+'](' + query_params['url'] + ')\n' ;
+		}
+		$('#p_body').val(src_body) ;
+	}
+	</script>
+</body>

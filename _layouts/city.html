@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }} </h1>
+
+{% if page.has_activities or page.has_places  %}
+	{% assign url_activities  = "" %}
+	{% assign text_activities = "" %}
+	{% assign url_places      = "" %}
+	{% assign text_places     = "" %}
+
+	{% if page.has_activities %}
+		{% if page.category == "rio-grande" %} {% assign url_activities = site.data.wiki.rg-actividades %} {% endif %}
+		{% if page.category == "ushuaia" %} {% assign url_activities = site.data.wiki.ush-actividades %} {% endif %}
+		{% if page.category == "tolhuin" %} {% assign url_activities = site.data.wiki.tol-actividades %} {% endif %}
+
+		{% capture text_activities %}un listado de <a href="{{ url_activities }}">actividades</a> que se pueden realizar{% endcapture %}
+	{% endif %}
+	
+	{% if page.has_places %}
+		{% if page.category == "rio-grande" %} {% assign url_places = site.data.wiki.rg-lugares %} {% endif %}
+		{% if page.category == "ushuaia" %} {% assign url_places = site.data.wiki.ush-lugares %} {% endif %}
+		{% if page.category == "tolhuin" %} {% assign url_places = site.data.wiki.tol-lugares %} {% endif %}
+
+		{% capture text_places %}un directorio de los <a href="{{ url_places }}">lugares</a> donde se realizan{% endcapture %}
+	{% endif %}
+
+	<p class="mensaje-aviso"> 
+		La ciudad de {{ page.title }} cuenta con {% if text_activities != "" %}{{ text_activities }}{% endif %}{% if page.has_activities and page.has_places  %} y {% endif %}{% if text_places != "" %}{{ text_places }}{% endif %}.
+	</p>
+
+{% endif %}
+
+<h2>Agenda para estos días</h2>
+{% assign post_list = site.categories[page.category] %}
+{% include list-events-index.html posts=post_list%}
+
+<p>Se pueden ver mas en el <a href="{{site.data.wiki.[page.category]}}agenda/">archivo</a></p>

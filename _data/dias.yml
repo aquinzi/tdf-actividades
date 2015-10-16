@@ -1,0 +1,28 @@
+"Monday":
+    nombre: lunes
+"Mon":
+    nombre: lun
+"Tuesday":
+    nombre: martes
+"Tue":
+    nombre: mar
+"Wednesday":
+    nombre: miércoles
+"Wed":
+    nombre: mié
+"Thursday":
+    nombre: jueves
+"Thu":
+    nombre: jue
+"Friday":
+    nombre: viernes
+"Fri":
+    nombre: vie
+"Saturday":
+    nombre: sábado
+"Sat":
+    nombre: sáb
+"Sunday":
+    nombre: domingo
+"Sun":
+    nombre: dom
