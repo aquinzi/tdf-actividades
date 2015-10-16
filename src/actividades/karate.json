@@ -4,7 +4,6 @@
 >>>>>>> 77d5d5b... update jsons to new structure
 {
    "nombre": "Karate", 
-   "nombre_alt": "", 
    "tipo": "deporte", 
    "lugares": [
       {
@@ -18,8 +17,8 @@
             {"dia": "lunes, miercoles, viernes","hora": "19:30-20:30", "nota": "menores" },
             {"dia": "lunes, miercoles, viernes","hora": "20:30-21:30", "nota": "mayores" }
          ], 
-         "nota": "Municipio",
          "url":["http://www.facebook.com/pages/Karate-Do-Shotokan-RG"],
+<<<<<<< HEAD
 <<<<<<< HEAD
          "nota": "Municipio"
 =======
@@ -56,6 +55,9 @@
 >>>>>>> fdc995f... update info
 =======
          "nota": "Estilo Shôtôkan", 
+=======
+         "nota": "Estilo shôtôkan. Municipio", 
+>>>>>>> a2ed584... fix typos
          "last-update": "2015-07-23"
 >>>>>>> 2e3cc6b... fix typos
       }, 
@@ -92,7 +94,7 @@
             {"dia": "lunes, miercoles, viernes","hora": "20:30-21:30", "nota": "mayores" }
 >>>>>>> fdc995f... update info
          ], 
-         "nota": "Estilo Shôtôkan", 
+         "nota": "Estilo shôtôkan", 
          "last-update": "2015-07-23"
       }, 
       {
@@ -133,8 +135,8 @@
 >>>>>>> fdc995f... update info
          ], 
          "url": ["https://www.facebook.com/pages/Karate-Polideportivo-Cantera/"],
-         "nota": "Estilo: gôjû-ryû shobukan (okiwanense/tradicional). \\nInscripciones: en dôjô o llamando al 15479229", 
-         "last-update": "2015-07-16",
+         "nota": "Estilo gôjû-ryû shobukan (okiwanense/tradicional). \\nInscripciones: en dôjô o llamando al 15479229", 
+         "last-update": "2015-07-16"
       }
    ]
 <<<<<<< HEAD

@@ -3,16 +3,21 @@
 =======
 >>>>>>> 77d5d5b... update jsons to new structure
 {
-   "nombre": "jûdô", 
+   "nombre": "Jûdô", 
    "nombre_alt": "judo/yudo", 
    "tipo": "deporte", 
    "lugares": [
       {
          "nombre": "Municipio", 
          "precio": "gratis", 
+<<<<<<< HEAD
          "last-update": "2015-07-23", 
          "direccion": "centrodeportivo"
 <<<<<<< HEAD
+=======
+         "direccion": "centrodeportivo",
+         "last-update": "2015-07-23"
+>>>>>>> a2ed584... fix typos
       }
       , {
 =======
