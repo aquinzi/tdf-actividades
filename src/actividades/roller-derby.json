@@ -18,6 +18,7 @@
          "precio": "gratis"
          , "horario":[
 <<<<<<< HEAD
+<<<<<<< HEAD
             {"dia": "lunes y jueves", "hora":"21:00"}
          ]
          , "last-update": "2015-07-23"
@@ -50,6 +51,9 @@
 >>>>>>> 77d5d5b... update jsons to new structure
 =======
             {"dias": "lunes y jueves", "hora":"21:00"}
+=======
+            {"dia": "lunes y jueves", "hora":"21:00"}
+>>>>>>> a71e91c... fix typo in roller-derby.json
          ]
          , "last-update": "2015-07-23"
       }
