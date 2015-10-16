@@ -249,33 +249,6 @@ TPL_PAGE_ACTIVITIES_CARD = '''
 				</div>
 '''
 
-
-# DTs example. Activity
-# <dt class="direccion">Dirección</dt><dd class="p-street-address h-card"><a href="rg-lugares.html#centrodeportivo">Centro Deportivo Municipal "Reverendo Padre José Forgacs"</a></dd>
-# <dt class="precio">Precio</dt><dd>gratis</dd>
-# <dt class="horarios">Horarios</dt><dd><ul><li><time>lunes, miercoles, viernes. 18:30-19:30</time>. <i>menores</i></li><li><time>lunes, miercoles, viernes. 19:30-20:30</time>. <i>menores</i></li><li><time>lunes, miercoles, viernes. 20:30-21:30</time>. <i>mayores</i></li></ul></dd>
-# <dt class="web">Sitios</dt><dd><ul><li><a href="http://www.facebook.com/pages/Karate-Do-Shotokan-RG" class="u-url">http://www.facebook.com/pages/Karate-Do-Shotokan-RG</a></li></ul></dd>
-# <dt class="email">email</dt><dd class="u-email"><a href="mailto:#">lalala@lalala.com</a></dd>
-# <dt class="nota">Nota</dt><dd class="p-note">Municipio</dd>
-# <dt class="ultima-actualizacion">Última actualización</dt><dd><time>2015-07-23</time></dd>
-
-# DTs example. Place
-# <dt class="direccion">Dirección</dt>
-# <dd><span class="p-street-address">Avenida Belgrano 1130</span>
-#	 <ul class="ver-mapa"  aria-label="Ver en mapa">
-#	 <li><a href="http://www.openstreetmap.org/?mlat=-53.7895781&mlon=-67.7070647#map=17/-53.7895781/-67.7070647" rel="external">Mapa</a>
-#	 <li><a href="#" rel="external">Google Street View</a>
-#	 <li><a href="geo:-53.7895781,-67.7070647;u=35" rel="external">Programa asociado</a>
-#	 <data class="p-latitude" value="-53.7895781"><data class="p-longitude" value="-67.7070647">
-#	</ul>
-# </dd>
-# <dt class="horarios">Horarios</dt><dd><ul><li><time>lunes, miercoles, viernes. 18:30-19:30</time>. <i>menores</i></li><li><time>lunes, miercoles, viernes. 19:30-20:30</time>. <i>menores</i></li><li><time>lunes, miercoles, viernes. 20:30-21:30</time>. <i>mayores</i></li></ul></dd>
-# <dt class="web">Sitios</dt><dd><ul><li><a href="http://www.facebook.com/sportivo.rg" class="u-url">http://www.facebook.com/sportivo.rg</a></li><li><a href="http://twitter.com/CLUBSPORTIVORG" class="u-url">http://twitter.com/CLUBSPORTIVORG</a></li></ul></dd>
-# <dt class="email">email</dt><dd class="u-email"><a href="mailto:#">lalala@lalala.com</a></dd>
-# <dt class="telefono">Telefono</dt><dd><span class="p-tel">421398</span></dd>
-# <dt class="ultima-actualizacion">Última actualización</dt><dd><time>2015-07-23</time></dd>
-
-
 TPL_CARD_DT = '''<dt {dt_attr}>{dt_text}</dt><dd {dd_attr}>{dd_text}</dd>'''
 
 
@@ -613,7 +586,7 @@ def process_activities(file_list, places):
 	for key in activities_all:
 		tmp_toc += "<li>" + key + "<ol>"
 
-		for activity in activities_all[key]:
+		for activity in sorted(activities_all[key]):
 			tmp_toc += "<li>" + activity + "</li>"
 
 		tmp_toc += "</ol></li>"
@@ -751,6 +724,7 @@ def create_property(key, properties_dict, isfrom):
 			horario_dia  = ""
 			horario_hora = ""
 			horario_nota = ""
+			horario_tmp = ""
 
 			if 'nota' in hora and hora['nota']:
 				horario_nota = "<i>(" + hora['nota'] + ")</i>."
@@ -770,10 +744,14 @@ def create_property(key, properties_dict, isfrom):
 				horario_hora = hora['hora'] + ". "
 
 			if horario_dia or horario_hora:
-				tmp_property = '<span class="openinghours">{} {}</span>'.format(horario_dia, horario_hora)
+				horario_tmp = '<span class="openinghours">{} {}</span>'.format(horario_dia, horario_hora)
 
+<<<<<<< HEAD
 			tmp_property += '<li>{} {}</li>'.format(tmp_property, horario_nota)
 >>>>>>> 8d7b3b7... fixed some html; fixed some wrong json keys
+=======
+			tmp_property += '<li>{} {}</li>'.format(horario_tmp, horario_nota)
+>>>>>>> cc91709... fix horarios list; fix toc (now the activities are sorted)
 
 		tmp_property = '<ul>' + tmp_property + '</ul>'
 
