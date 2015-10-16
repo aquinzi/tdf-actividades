@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "pool", 
    "nombre_alt": "billar", 
@@ -14,3 +15,10 @@
       , {"nombre": "Queen", "last-update": "2015-07-26"}
    ]
 }
+=======
+[
+   {  "nombre": ""
+   	, "last-update": "2015-07-23"
+   }
+]
+>>>>>>> 0f2d113... add more sports

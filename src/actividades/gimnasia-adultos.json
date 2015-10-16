@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "gimnasia adultos", 
    "nombre_alt": "", 
@@ -11,3 +12,12 @@
       }
    ]
 }
+=======
+[
+   {  "nombre": ""
+      ,"precio":"gratis"
+      ,"nota": "Iniciación deportiva"
+   	, "last-update": "2015-07-23"
+   }
+]
+>>>>>>> 0f2d113... add more sports

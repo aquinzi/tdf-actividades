@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "tejo", 
    "nombre_alt": "", 
@@ -17,3 +18,12 @@
       } 
    ]
 }
+=======
+[
+   {  "nombre": "Adultos Mayores (> 60 años)"
+      ,"precio":"gratis"
+      ,"nota": "Iniciación deportiva"
+   	, "last-update": "2015-07-23"
+   }
+]
+>>>>>>> 0f2d113... add more sports

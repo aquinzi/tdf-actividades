@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "polo", 
    "tipo": "deporte", 
@@ -9,3 +10,13 @@
       }
    ]
 }
+=======
+[
+   {  "nombre": "", "direccion":"Club de Campo \"La Cimarrona\""
+   	, "last-update": "2015-07-23"
+   }
+   
+]
+
+
+>>>>>>> 0f2d113... add more sports

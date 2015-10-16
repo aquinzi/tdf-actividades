@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "tenis de mesa", 
    "nombre_alt": "", 
@@ -21,3 +22,19 @@
       }
    ]
 }
+=======
+[
+   {  "nombre": "Municipio"
+      ,"precio":"gratis"
+   	, "last-update": "2015-07-23"
+   }
+   ,{  "nombre": "Club Los Ñires", "direccion":"losñires"
+      ,"precio":"gratis"
+   	, "last-update": "2015-07-23"
+   }
+   ,{  "nombre": "Adultos Mayores (> 60 años)"
+      ,"precio":"gratis"
+   	, "last-update": "2015-07-23"
+   }
+]
+>>>>>>> 0f2d113... add more sports

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "futbol", 
    "nombre_alt": "football", 
@@ -15,3 +16,16 @@
       }
    ]
 }
+=======
+[
+   {  "nombre": "Municipio"
+   	,"precio":"gratis"
+   	,"last-update": "2015-07-23"
+   },
+      {  "nombre": "", "direccion":"cantera"
+   	,"last-update": "2015-07-16"
+   }
+]
+
+
+>>>>>>> 0f2d113... add more sports

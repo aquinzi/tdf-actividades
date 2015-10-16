@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "yoga", 
    "nombre_alt": "", 
@@ -15,3 +16,10 @@
       } 
    ]
 }
+=======
+[
+   {  "nombre": ""
+   	, "last-update": "2015-07-23"
+   }
+]
+>>>>>>> 0f2d113... add more sports

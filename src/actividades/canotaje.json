@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "canotaje", 
    "nombre_alt": "", 
@@ -21,3 +22,14 @@
 
    ]
 }
+=======
+[
+   {  "nombre": ""
+      , "nota":"por ahora solo talleres, próximo a ser una escuela de iniciación"
+   	, "last-update": "2015-07-23"
+   }
+   
+]
+
+
+>>>>>>> 0f2d113... add more sports

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "natación", 
    "tipo": "deporte", 
@@ -11,3 +12,11 @@
       }
    ]
 }
+=======
+[
+   {  "nombre": "Municipio", "direccion":"natatoriomunicipal"
+      ,"precio":"gratis"
+   	, "last-update": "2015-07-23"
+   }
+]
+>>>>>>> 0f2d113... add more sports

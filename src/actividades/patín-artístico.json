@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "patín artístico", 
    "nombre_alt": "", 
@@ -16,3 +17,16 @@
       }
    ]
 }
+=======
+[
+   {  "nombre": "Municipio"
+      ,"precio":"gratis"
+   	, "last-update": "2015-07-23"
+   },
+   {  "nombre": "Patín"
+      ,"precio":"gratis"
+      ,"nota": "Iniciación deportiva"
+   	, "last-update": "2015-07-23"
+   }
+]
+>>>>>>> 0f2d113... add more sports

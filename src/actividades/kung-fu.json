@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "kung fu", 
    "nombre_alt": "", 
@@ -11,3 +12,13 @@
       }
    ]
 }
+=======
+[
+   {  "nombre": "Wu Tang", "direccion":"centrowutang"
+   	, "precio":"pago"
+   	,"last-update": "2015-07-16"
+   }
+]
+
+
+>>>>>>> 0f2d113... add more sports

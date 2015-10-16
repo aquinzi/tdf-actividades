@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "futsal", 
    "nombre_alt": "", 
@@ -17,3 +18,19 @@
       }
    ]
 }
+=======
+[
+   {  "nombre": "Futsal A.F.A."
+   	, "last-update": "2015-07-23"
+   }
+   , {  "nombre": "Futsal C.A.F.S."
+      , "last-update": "2015-07-23"
+   }
+   , {  "nombre": "Futsal femenino"
+      , "last-update": "2015-07-23"
+   }
+   
+]
+
+
+>>>>>>> 0f2d113... add more sports

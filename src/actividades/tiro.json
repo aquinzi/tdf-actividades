@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "tiro", 
    "nombre_alt": "", 
@@ -15,3 +16,15 @@
       }
    ]
 }
+=======
+[
+   {  "nombre": "Escuela de Tiro"
+      ,"precio":"gratis"
+      ,"nota": "Iniciación deportiva"
+   	, "last-update": "2015-07-23"
+   }
+   ,{  "nombre": "Tiro deportivo, Tiro olímpico"
+   	, "last-update": "2015-07-23"
+   }
+]
+>>>>>>> 0f2d113... add more sports

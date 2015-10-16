@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "automovilismo", 
    "nombre_alt": "", 
@@ -21,3 +22,16 @@
       }
    ]
 }
+=======
+[
+   {  "nombre": "auto A.C.T.C.F."
+   	, "last-update": "2015-07-23"
+   }
+   , {  "nombre": "auto A.P.A.P."
+   	, "last-update": "2015-07-23"
+   }
+   , {  "nombre": "auto A.PI.TU.R."
+   	, "last-update": "2015-07-23"
+   }
+]
+>>>>>>> 0f2d113... add more sports

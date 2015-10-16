@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
    "nombre": "aikido", 
    "nombre_alt": "", 
@@ -10,3 +11,11 @@
       }
    ]
 }
+=======
+[
+   {  "nombre": ""
+      , "precio":"pago"
+   	, "last-update": "2015-07-23"
+   }
+]
+>>>>>>> 0f2d113... add more sports
