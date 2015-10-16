@@ -9,9 +9,64 @@ Outputs in current folder
 # TODO: activities: add key overwritting
 # TODO: simplify code so it's not that redundant and duplicated (lazyness & quickness won)
 # TODO: place: can have also opening-times
+<<<<<<< HEAD
  
 
+=======
+# TODO: Option to update index file to include latest changes
+# TPL replacements:
+# 		main tpl: 
+# 			{body}
+# 			{date-iso}  -> last updated
+# 			{date-human}  -> last updated
+# 			{header-secondheading}  -> <div class="my-content-sub-heading"> <h2>Actividades</h2> </div>
+# 		TPL_ACTIVITIES_PAGE
+# 			{toc_items}
+# 			{sections} -> rest of the page
+# 		TPL_PAGE_ACTIVITIES_SECTION
+# 			{activity_name_id}
+# 			{activity_name}
+# 			{cards}
+# 		TPL_PAGE_ACTIVITIES_CARD
+# 			{price_bg}  --> my-card-green-bg (paid?), my-card-blue-bg (free?), empty (no price info)
+# 			{name}
+# 			{info}  --> the dts
+# 		TPL_PAGE_ACTIVITIES_CARD_DT
+# 			{dt_class}	
+# 			{dt_text}
+# 			{dd_class}
+# 			{dd_text}
+# 		TPL_PAGE_PLACES
+# 			{cards}
+# 		TPL_PAGE_PLACES
+# 			{cards}
+# 		TPL_PAGE_PLACES_CARD 
+# 			{name}
+# 			{img_front}  --> usually google street view image
+#			{info}  --> the dts
+#		TPL_PAGE_PLACES_IMG_STREET_VIEW
+#			{lat}
+#			{lon}
+#			{angle}  -->  &heading
+#			{zoom} --> fov
+#		TPL_PAGE_PLACES_MAP_LIST
+#			{map_link}  --> openstreetmaps or openlinkmaps
+#			{map_streetview} --> Google Street View
+#			{lat} --> geo:(Programa asociado) and data tags
+#			{lon}  --> geo:(Programa asociado) and data tags
+>>>>>>> 9adb490... sketch new template
 
+
+
+	
+
+
+
+
+
+
+ 			
+ 			
 import json
 import os
 import sys
@@ -33,21 +88,115 @@ PAGE_TEMPLATE_FILE = "page_tpl.html"
 PLACES_OUTPUT_FILE = "rg-lugares.html"
 ACTIVITIES_OUTPUT_FILE = "rg-actividades.html"
 
-MAP_URL = "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=17/{lat}/{lon}"
-#MAP_URL = "http://www.openlinkmap.org/?lat={lat}&lon={lon}&zoom=17&id=1709214056&type=node&lang=en"
+#MAP_URL = "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=17/{lat}/{lon}"
+MAP_URL = "http://www.openlinkmap.org/?lat={lat}&lon={lon}&zoom=17&id=1709214056&type=node&lang=es"
 
 # pages that website holds besides activities & places. Hardcoded.
 HTML_PAGES_KEYWORDS = ('index', 'colaboracion', 'preguntas-frecuentes')
 
-# Let's put in use the poor japanese I know, part 2
-# people don't use Hepburn romanization (w/circumflex) in some words. Go with the flow.
+# Let's put the poor japanese I know in use.
+# people don't use Hepburn romanization (w/circumflex). Go with the flow.
 REMOVE_CIRCUMFLEX = ( 
 	('shôtôkan', 'shotokan') 
 	, ('gôjû-ryû', 'goju-ryu') 
 	, ('dôjô', 'dojo') 
 	)
 
-#HTML templates
+# ---------------
+# HTML templates
+
+TPL_ACTIVITIES_PAGE = '''
+<p>Actividades encontradas en esta página, separada por categorías y por orden alfabético.</p>
+
+<ol class="toc-columns">
+{toc_items}
+</ol>
+
+{sections}
+'''
+
+TPL_PAGE_ACTIVITIES_SECTION = '''
+	<section aria-labelledby="{activity_name_id}">
+		<h3 id="{activity_name_id}">{activity_name}</h3>
+
+		{cards}
+	</section>
+'''
+
+TPL_PAGE_ACTIVITIES_CARD = '''
+				<div class="my-card h-card {price_bg}">
+					<h4 class="p-name">{name}</h4>
+					<dl>
+						{info}
+					</dl>
+				</div>
+'''
+
+
+# DTs example. Activity
+# <dt class="direccion">Dirección</dt><dd class="p-street-address h-card"><a href="rg-lugares.html#centrodeportivo">Centro Deportivo Municipal "Reverendo Padre José Forgacs"</a></dd>
+# <dt class="precio">Precio</dt><dd>gratis</dd>
+# <dt class="horarios">Horarios</dt><dd><ul><li><time>lunes, miercoles, viernes. 18:30-19:30</time>. <i>menores</i></li><li><time>lunes, miercoles, viernes. 19:30-20:30</time>. <i>menores</i></li><li><time>lunes, miercoles, viernes. 20:30-21:30</time>. <i>mayores</i></li></ul></dd>
+# <dt class="web">Sitios</dt><dd><ul><li><a href="http://www.facebook.com/pages/Karate-Do-Shotokan-RG" class="u-url">http://www.facebook.com/pages/Karate-Do-Shotokan-RG</a></li></ul></dd>
+# <dt class="email">email</dt><dd class="u-email"><a href="mailto:#">lalala@lalala.com</a></dd>
+# <dt class="nota">Nota</dt><dd class="p-note">Municipio</dd>
+# <dt class="ultima-actualizacion">Última actualización</dt><dd><time>2015-07-23</time></dd>
+
+# DTs example. Place
+# <dt class="direccion">Dirección</dt>
+# <dd><span class="p-street-address">Avenida Belgrano 1130</span>
+#	 <ul class="ver-mapa"  aria-label="Ver en mapa">
+#	 <li><a href="http://www.openstreetmap.org/?mlat=-53.7895781&mlon=-67.7070647#map=17/-53.7895781/-67.7070647" rel="external">Mapa</a>
+#	 <li><a href="#" rel="external">Google Street View</a>
+#	 <li><a href="geo:-53.7895781,-67.7070647;u=35" rel="external">Programa asociado</a>
+#	 <data class="p-latitude" value="-53.7895781"><data class="p-longitude" value="-67.7070647">
+#	</ul>
+# </dd>
+# <dt class="horarios">Horarios</dt><dd><ul><li><time>lunes, miercoles, viernes. 18:30-19:30</time>. <i>menores</i></li><li><time>lunes, miercoles, viernes. 19:30-20:30</time>. <i>menores</i></li><li><time>lunes, miercoles, viernes. 20:30-21:30</time>. <i>mayores</i></li></ul></dd>
+# <dt class="web">Sitios</dt><dd><ul><li><a href="http://www.facebook.com/sportivo.rg" class="u-url">http://www.facebook.com/sportivo.rg</a></li><li><a href="http://twitter.com/CLUBSPORTIVORG" class="u-url">http://twitter.com/CLUBSPORTIVORG</a></li></ul></dd>
+# <dt class="email">email</dt><dd class="u-email"><a href="mailto:#">lalala@lalala.com</a></dd>
+# <dt class="telefono">Telefono</dt><dd><span class="p-tel">421398</span></dd>
+# <dt class="ultima-actualizacion">Última actualización</dt><dd><time>2015-07-23</time></dd>
+
+
+
+
+TPL_PAGE_ACTIVITIES_CARD_DT = '''<dt{dt_class}>{dt_text}</dt><dd{dd_class}>{dd_text}</dd>'''
+
+
+TPL_PAGE_PLACES = '''
+{cards}
+'''
+
+TPL_PAGE_PLACES_CARD = '''
+	<div class="my-card h-card">
+		<div class="my-card-img">
+			<h3 class="p-name">{name}</h3>
+			<img alt="Frente de {name}" src="{img_front}">
+		</div>
+
+		<dl>
+			{info}
+		</dl>
+'''
+
+TPL_PAGE_PLACES_IMG_STREET_VIEW = '''http://maps.googleapis.com/maps/api/streetview?size=800x400&location={lat},{lon}&heading={angle}&fov={zoom}'''
+
+TPL_PAGE_PLACES_MAP_LIST = '''
+		<ul class="ver-mapa" aria-label="Ver en mapa">
+			<li><a href="{map_link}" rel="external">Mapa</a>
+			<li><a href="{map_streetview}" rel="external">Google Street View</a>
+			<li><a href="geo:{lat},{lon};u=35" rel="external">Programa asociado</a>
+			<data class="p-latitude" value="{lat}"><data class="p-longitude" value="{lon}">
+		</ul>
+'''
+
+
+
+
+
+
+
 TPL_ITEM = '''
 	<dl{dlatrr}>
 		{defs}
