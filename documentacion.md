@@ -9,6 +9,18 @@ Documentación
  - Código del sitemap de: [davidensinger](http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/)
 
 
+Notas miscelaneas
+-----------------
+
+ - dotfiles are excluded by default
+ - excluir carpetas con guion bajo. Ej. _esconder-carpeta
+ - ``JEKYLL_ENV=production`` para ponerlos en los templates si se necesita cambiar el enviroment.
+ - para el "edit on github":
+     - Páginas: ``{{site.github.repository_url}}/blob/gh-pages/{{page.path}}``
+     - collections/posts: ``{{ site.github.repository_url }}/tree/{{site.github.branch}}/{{ service.relative_path }}``
+
+
+
 Traducción de Jekyll
 ------------------------
 
