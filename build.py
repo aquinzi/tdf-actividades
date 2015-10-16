@@ -82,7 +82,7 @@ import os
 import sys
 import re
 import datetime #to get today's date for footer("last built")
-
+from collections import OrderedDict
 
 
 # =======================
@@ -372,7 +372,7 @@ def update_json(what="activities"):
 	file_list = list()
 	file_list = files_get(os.path.join(SRC_FOLDER, ACTIVITY_FOLDER))
 	
-	from collections import OrderedDict #order it as here
+	
 	new_json = OrderedDict()
 
 	#now it's up to you!
@@ -418,8 +418,10 @@ def isoDateToHuman(date):
 	:param:date str the date 
 	:return: str 
 	'''
-
+	
 	year, month, day = date.split("-")
+
+	
 
 	month_list = ("desconocido", "enero", "febrero", "marzo", "abril", "mayo"
 		, "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre")
@@ -463,13 +465,13 @@ def process_places(places):
 		final_item = ""
 
 		for propkey in main_properties:
-			tmp_item += create_property(propkey, properties)
+			tmp_item += create_property(propkey, properties, "places")
 
 		final_item = tmp_item
 
 		if 'last-update' in properties and properties['last-update']:
-			final_item += TPL_CARD_DT.format(dt="Última actualización", dt_attr='', 
-				dd_attr='', dd='<time datetime="'+properties['last-update']+'">' + isoDateToHuman(properties['last-update']) + "</time>")
+			final_item += TPL_CARD_DT.format(dt_text="Última actualización", dt_attr='', 
+				dd_attr='', dd_text='<time datetime="'+properties['last-update']+'">' + isoDateToHuman(properties['last-update']) + "</time>")
 
 		tmp = TPL_PAGE_PLACES_CARD.format(name=properties['nombre'], img_front='', info=final_item)
 
@@ -478,7 +480,7 @@ def process_places(places):
 	final_places_page = TPL_PAGE_PLACES.format(cards=final_places_page)
 
 	# add missing html (headers, div, etc)
-	final_places_page = HTML_PAGE_TEMPLATE.replace("{body}", final_places_page)
+	final_places_page = HTML_PAGE_TEMPLATE.replace("{body}", final_places_page).replace("{header-secondheading}", "Lugares")
 
 	save_file(os.path.join(OUTPUT_FOLDER, PLACES_OUTPUT_FILE), final_places_page)
 
@@ -526,9 +528,9 @@ def process_activities(file_list, places):
 			final_item = ""
 
 			for propkey in main_properties:
-				tmp_property = create_property(propkey, item)
+				tmp_property = create_property(propkey, item, "activities")
 
-		 		for circumflex in REMOVE_CIRCUMFLEX:
+				for circumflex in REMOVE_CIRCUMFLEX:
 					tmp_property = re.sub(circumflex[0], circumflex[0] + " (" + circumflex[1] + ")", tmp_property, flags=re.IGNORECASE)
 
 				tmp_item += tmp_property
@@ -536,10 +538,17 @@ def process_activities(file_list, places):
 			final_item = tmp_item
 
 			if 'last-update' in item and item['last-update']:
-				final_item += TPL_CARD_DT.format(dt="Última actualización", dt_attr='', 
-				dd_attr='', dd='<time datetime="'+item['last-update']+'">' + isoDateToHuman(item['last-update']) + "</time>")
-		 
-			tmp_final_activities += TPL_PAGE_ACTIVITIES_CARD.format(price_bg=''
+				final_item += TPL_CARD_DT.format(dt_text="Última actualización", dt_attr='', 
+				dd_attr='', dd_text='<time datetime="'+item['last-update']+'">' + isoDateToHuman(item['last-update']) + "</time>")
+		 	
+			back_color = ""
+			if 'price' in item:
+				if item['price'].lower() == "gratis":
+					back_color = "my-card-blue-bg"
+				elif item['price'].lower() == "pago":
+					back_color = "my-card-green-bg"
+
+			tmp_final_activities += TPL_PAGE_ACTIVITIES_CARD.format(price_bg=back_color
 				, name=item['nombre'], info=final_item)
 
 
@@ -577,7 +586,7 @@ def process_activities(file_list, places):
 	final_text = TPL_ACTIVITIES_PAGE.format(toc_items=tmp_toc, sections=final_text)
 
 	# add missing html (headers, div, etc)
-	final_text = HTML_PAGE_TEMPLATE.replace("{body}", final_text)
+	final_text = HTML_PAGE_TEMPLATE.replace("{body}", final_text).replace("{header-secondheading}", "Actividades")
 
 	save_file(os.path.join(OUTPUT_FOLDER, ACTIVITIES_OUTPUT_FILE), final_text)
 
@@ -671,7 +680,8 @@ def create_property(key, properties_dict, isfrom):
 		if isfrom == "places":
 			tmp = TPL_PAGE_PLACES_MAP_LIST.format(
 				map_link=MAP_URL.format(lat=geo_lat, lon=geo_lon), 
-				map_streetview=properties_dict['googlestreetview'],
+				#map_streetview=properties_dict['googlestreetview'],
+				map_streetview='',
 				lat=geo_lat, lon=geo_lon
 				)
 			
@@ -800,6 +810,7 @@ if DO_PAGES:
 
 	for page in HTML_PAGES_KEYWORDS:
 		tmp_page = ""
+		tmp_subheading = ""
 
 		if not must_do_page or must_do_page == page:
 			tmp_page = open_file(os.path.join(HTML_FOLDER, page + ".html"))
@@ -814,24 +825,44 @@ if DO_PAGES:
 		else:
 			continue
 
+		if page == "colaboracion": tmp_subheading = "Colaboración"
+		if page == "preguntas-frecuentes": tmp_subheading = "Preguntas frecuentes"
+
 		if page == "index":
 			today_date    = TODAY
 			today_changes = ""
 			final_str     = ""
 
 			today_date = input(" Today is " + today_date + ". (Change it (ISO) or type x for not including update): ")
-			if today_date.lower() not x:
+			
+			if not today_date: today_date = TODAY 
+			
+			if not today_date.lower() == "x":
 				while (not today_changes):
 					today_changes = input(" Today changes: ")
 
 				final_str = TPL_INDEX_LATESTCHANGES.format(date_iso=today_date, 
 					date_human=isoDateToHuman(today_date), change=today_changes)
+				
 
+<<<<<<< HEAD
 			tmp_page = tmp_page.replace("{latest-changes}", final_str)
 >>>>>>> 2633dcc... add new template; clean main pages creation process
 		
 		tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
+=======
+			tmp_page = tmp_page.replace("{latest-changes}", "{latest-changes}\n" + final_str)
+
+			#save latest changes to main index
+			if not today_date.lower() == "x":
+				save_file(os.path.join(HTML_FOLDER, page + ".html"), tmp_page)
+			
+			tmp_page = tmp_page.replace("{latest-changes}", "")
+			
+		tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page).replace("{header-secondheading}", tmp_subheading)
+>>>>>>> a5dafb2... fixed stupid bugs
 		save_file(os.path.join(OUTPUT_FOLDER, page + ".html"), tmp_page)
+
 
 
 if not DO_ACTIVITIES and not DO_PLACES:
