@@ -103,12 +103,17 @@ ACTIVITIES_OUTPUT_FILE = "rg-actividades.html"
 
 PLACES_IMAGE_PLACEHOLDER = "images/lugar-marcador-posicion.jpg"
 
+<<<<<<< HEAD
 #MAP_URL = "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=17/{lat}/{lon}"
 <<<<<<< HEAD
 MAP_URL = "http://www.openlinkmap.org/?lat={lat}&lon={lon}&zoom=17&id=1709214056&type=node&lang=es"
 =======
 MAP_URL = "http://www.openlinkmap.org/?lat={lat}&lon={lon}&zoom=17&id=1709214056&type=node&lang=en"
 >>>>>>> 2633dcc... add new template; clean main pages creation process
+=======
+MAP_URL = "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=17/{lat}/{lon}"
+#MAP_URL = "http://www.openlinkmap.org/?lat={lat}&lon={lon}&zoom=17&type=node&lang=en"
+>>>>>>> 9158c76... misc fixes
 
 # pages that website holds besides activities & places. Hardcoded.
 HTML_PAGES_KEYWORDS = ('index', 'colaboracion', 'preguntas-frecuentes')
@@ -282,7 +287,7 @@ TPL_PAGE_PLACES_CARD = '''
 	<div class="my-card h-card">
 		<div class="my-card-img">
 			<h3 class="p-name">{name}</h3>
-			<img alt="Frente de {name}" src="{img_front}">
+			<img alt='Frente de {name}' src="{img_front}">
 		</div>
 
 		<dl>
@@ -297,7 +302,7 @@ TPL_PAGE_PLACES_MAP_LIST = '''
 		<ul class="ver-mapa" aria-label="Ver en mapa">
 			<li><a href="{map_link}" rel="external">Mapa</a>
 			<li><a href="{map_streetview}" rel="external">Google Street View</a>
-			<!--<li><a href="geo:{lat},{lon};u=35" rel="external">Programa asociado</a>-->
+			<li><a href="geo:{lat},{lon};u=35" rel="external">Programa asociado</a>
 			<data class="p-latitude" value="{lat}"><data class="p-longitude" value="{lon}">
 		</ul>
 '''
@@ -478,19 +483,17 @@ def process_places(places):
 				dd_attr='', 
 				dd_text='<time datetime="'+properties['last-update']+'">' + isoDateToHuman(properties['last-update']) + "</time>")
 
-		
-		tmp_name = properties['nombre'].replace('"', "'")
 
 		tmp_img = ""
-		if "imagen" in properties and properties['last-imagen']:
-			tmp_img = properties['last-imagen']
+		if "imagen" in properties and properties['imagen']:
+			tmp_img = properties['imagen']
 		else:
 			tmp_img = PLACES_IMAGE_PLACEHOLDER
 
-		tmp = TPL_PAGE_PLACES_CARD.format(name=tmp_name, img_front=tmp_img, info=final_item)
+		tmp = TPL_PAGE_PLACES_CARD.format(name=properties['nombre'], img_front=tmp_img, info=final_item)
 
 		if tmp_img == PLACES_IMAGE_PLACEHOLDER:
-			tmp = tmp.replace('<img alt="Frente de '+tmp_name+'"', '<img alt="Marcador de posición de imagen"')
+			tmp = tmp.replace("<img alt='Frente de "+properties['nombre']+"'", '<img alt="Marcador de posición de imagen"')
 
 		final_places_page += tmp
 
@@ -645,11 +648,11 @@ def create_property(key, properties_dict, isfrom):
 	if not key in properties_dict:
 		return ""
 
-	if key in ("nombre", "gstreetmap", "geo"):
+	if key in ("nombre", "gstreetview", "geo", "imagen"):
 		return ""
 
 	tmp_property = ""
-	tmp_format_dict = {'dt_attr': '', 'dt_text' : ''
+	tmp_format_dict = {'dt_attr': '', 'dt_text' : 'key: ' + key
 		, 'dd_attr' : '', 'dd_text' : ''}
 
 
@@ -717,10 +720,12 @@ def create_property(key, properties_dict, isfrom):
 		
 
 		if isfrom == "places":
+			tmp_gstreet = ""
+			if 'gstreetview' in properties_dict and properties_dict['gstreetview']:
+				tmp_gstreet = properties_dict['gstreetview']
 			tmp = TPL_PAGE_PLACES_MAP_LIST.format(
 				map_link=MAP_URL.format(lat=geo_lat, lon=geo_lon), 
-				#map_streetview=properties_dict['googlestreetview'],
-				map_streetview='',
+				map_streetview=tmp_gstreet,
 				lat=geo_lat, lon=geo_lon
 				)
 			
