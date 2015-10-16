@@ -101,6 +101,8 @@ PAGE_TEMPLATE_FILE = "page_tpl.html"
 PLACES_OUTPUT_FILE = "rg-lugares.html"
 ACTIVITIES_OUTPUT_FILE = "rg-actividades.html"
 
+PLACES_IMAGE_PLACEHOLDER = "images/lugar-marcador-posicion.jpg"
+
 #MAP_URL = "http://www.openstreetmap.org/?mlat={lat}&mlon={lon}#map=17/{lat}/{lon}"
 <<<<<<< HEAD
 MAP_URL = "http://www.openlinkmap.org/?lat={lat}&lon={lon}&zoom=17&id=1709214056&type=node&lang=es"
@@ -476,7 +478,19 @@ def process_places(places):
 				dd_attr='', 
 				dd_text='<time datetime="'+properties['last-update']+'">' + isoDateToHuman(properties['last-update']) + "</time>")
 
-		tmp = TPL_PAGE_PLACES_CARD.format(name=properties['nombre'], img_front='', info=final_item)
+		
+		tmp_name = properties['nombre'].replace('"', "'")
+
+		tmp_img = ""
+		if "imagen" in properties and properties['last-imagen']:
+			tmp_img = properties['last-imagen']
+		else:
+			tmp_img = PLACES_IMAGE_PLACEHOLDER
+
+		tmp = TPL_PAGE_PLACES_CARD.format(name=tmp_name, img_front=tmp_img, info=final_item)
+
+		if tmp_img == PLACES_IMAGE_PLACEHOLDER:
+			tmp = tmp.replace('<img alt="Frente de '+tmp_name+'"', '<img alt="Marcador de posición de imagen"')
 
 		final_places_page += tmp
 
@@ -505,7 +519,7 @@ def process_activities(file_list, places):
 
 	#tmp = json.loads(open_file(os.path.join(SRC_FOLDER, ACTIVITY_DUMMY_FILE)))
 	
-	main_properties = ('nombre', 'direccion', 'precio', 'horario', 'url', 'email', 'telefono', 'geo', 'nota', 'last-update')
+	main_properties = ('nombre', 'direccion', 'precio', 'horario', 'url', 'email', 'telefono', 'geo', 'nota')
 	
 	properties_with_list = ('telefono', 'url', 'geo')
 
@@ -557,8 +571,19 @@ def process_activities(file_list, places):
 				elif item['precio'].lower() == "pago":
 					back_color = "my-card-green-bg"
 
+			tmp_name = ""
+			if 'nombre' in item and  item['nombre']:
+				tmp_name = item['nombre']
+			else:
+				tmp_name = activity_name
+
+			for circumflex in REMOVE_CIRCUMFLEX:
+				tmp_name = re.sub(circumflex[0], circumflex[0] + " (" + circumflex[1] + ")", tmp_name, flags=re.IGNORECASE)
+				tmp_name = uppercase_first_letter(tmp_name)
+
+
 			tmp_final_activities += TPL_PAGE_ACTIVITIES_CARD.format(price_bg=back_color
-				, name=item['nombre'], info=final_item)
+				, name=tmp_name, info=final_item)
 
 
 		activity_name_heading = activity_name
@@ -583,12 +608,12 @@ def process_activities(file_list, places):
 	#proper index
 	tmp_toc = ""
 	for key in activities_all:
-		tmp_toc += "<li>" + key + "<ul>"
+		tmp_toc += "<li>" + key + "<ol>"
 
 		for activity in activities_all[key]:
 			tmp_toc += "<li>" + activity + "</li>"
 
-		tmp_toc += "</ul></li>"
+		tmp_toc += "</ol></li>"
 
 
 	#activity page
@@ -618,6 +643,9 @@ def create_property(key, properties_dict, isfrom):
 	'''
 
 	if not key in properties_dict:
+		return ""
+
+	if key in ("nombre", "gstreetmap", "geo"):
 		return ""
 
 	tmp_property = ""
@@ -719,21 +747,25 @@ def create_property(key, properties_dict, isfrom):
 			horario_hora = ""
 			horario_nota = ""
 
-			if 'nota' in hora:
-				horario_nota = "<i>(" + hora['nota'] + ")</i>"
+			if 'nota' in hora and hora['nota']:
+				horario_nota = "<i>(" + hora['nota'] + ")</i>."
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 			tmp_property += '<li><span  class="openinghours"{}. {}.</span> {}</li>'.format(horario_dia, horario_hora, horario_nota)
 >>>>>>> 4c9bca0... finished updating to new layout
 =======
 			if 'dia' in hora:
+=======
+			if 'dia' in hora and hora['dia']:
+>>>>>>> 2a9378f... bug fixes; add placeholder image; fix css
 				horario_dia = hora['dia'] + ". "
 
-			if 'hora' in hora:
+			if 'hora' in hora and hora['hora']:
 				horario_hora = hora['hora'] + ". "
 
 			if horario_dia or horario_hora:
-				tmp_property = '<span class="openinghours">{}. {}.</span>'.format(horario_dia, horario_hora)
+				tmp_property = '<span class="openinghours">{} {}</span>'.format(horario_dia, horario_hora)
 
 			tmp_property += '<li>{} {}</li>'.format(tmp_property, horario_nota)
 >>>>>>> 8d7b3b7... fixed some html; fixed some wrong json keys

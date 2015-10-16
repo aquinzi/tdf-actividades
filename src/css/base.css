@@ -903,8 +903,7 @@ footer.footer h1
   /*col-lg-4, col-md-6, col-sm-6*/
   min-height: 1px;
   position: relative;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0 16px 16px;
 
   /*.card {
  background-color: #ffffff;*/
@@ -931,7 +930,7 @@ footer.footer h1
 
 .my-card[class*="-bg"] {color: #ffffff; }
 
-.my-card h2{
+.my-card h4{
   font-size: 25px;
   color: #000;
   margin: 20px 0;
@@ -939,7 +938,7 @@ footer.footer h1
   padding-bottom: 5px;
 }
 
-.my-card[class*="-bg"] h2{
+.my-card[class*="-bg"] h4{
   color: #ffffff; 
 
 }
