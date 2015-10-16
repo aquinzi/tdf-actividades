@@ -106,7 +106,7 @@
 
 	<div class="container">
 
-			{body}
+{body}
 
 	</div> <!-- container -->
 
@@ -157,11 +157,55 @@
 
 <script>
 $(document).ready(function(){
-     $("h3").each(function() {
-        $(this).append(' <a href="#'+this.id+'" title="Link permanente a '+this.text+'">Compartir</a> ')        
-    });           
-});
+	/*select text field in one click */
+	$(function () {
+		var focusedElement;
+		$(document).on('focus', 'input', function () {
+			if (focusedElement == $(this)) return; //already focused, return so user can place cursor at specific point in input.
+			focusedElement = $(this);
+			setTimeout(function () { focusedElement.select(); }, 50); //select all text in any field on focus for easy re-entry. Delay sightly to allow focus to "stick" before selecting.
+      });
+   });
+}); //end document.ready
 </script>
+
+{extra-javascript}
+
+
+
+<script type='text/javascript'>
+
+//Light Weight Popup Modal Box (http://designhuntr.com/create-simple-lightweight-jquery-modal-popup/)
+jQuery(document).ready(function ($) {
+   $('[data-popup-target]').click(function () {
+       $('html').addClass('overlay');
+       var activePopup = $(this).attr('data-popup-target');
+       $(activePopup).addClass('visible');
+   });
+
+   $(document).keyup(function (e) {
+   	//can exit with esc
+       if (e.keyCode == 27 && $('html').hasClass('overlay')) clearPopup();
+   });
+
+   $('.share-popup button').click(function () {clearPopup(); });
+
+   $('.popup-overlay').click(function () {clearPopup(); });
+
+   function clearPopup() {
+       $('.share-popup.visible').addClass('transitioning').removeClass('visible');
+       $('html').removeClass('overlay');
+
+       setTimeout(function () {
+           $('.share-popup').removeClass('transitioning');
+       }, 200);
+   }
+
+}); //end document.ready
+
+$('body').append('<div class="popup-overlay"></div>');
+</script>
+
 
 </body>
 </html>

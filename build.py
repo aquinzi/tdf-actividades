@@ -26,6 +26,7 @@ Outputs in current folder
 # 		main tpl: 
 # 			{body}
 # 			{header-secondheading}  -> <div class="my-content-sub-heading"> <h2>Actividades</h2> </div>
+# 			{extra-javascript} -> for now just for headings
 # 		TPL_ACTIVITIES_PAGE
 # 			{toc_items}
 # 			{sections} -> rest of the page
@@ -36,6 +37,7 @@ Outputs in current folder
 # 		TPL_PAGE_ACTIVITIES_CARD
 # 			{price_bg}  --> my-card-green-bg (paid?), my-card-blue-bg (free?), empty (no price info)
 # 			{name}
+# 			{name_id}  -> to link heading
 # 			{info}  --> the dts
 # 		TPL_PAGE_ACTIVITIES_CARD_DT
 # 			{dt_class}	
@@ -45,9 +47,8 @@ Outputs in current folder
 # 			
 # 		TPL_PAGE_PLACES
 # 			{cards}
-# 		TPL_PAGE_PLACES
-# 			{cards}
 # 		TPL_PAGE_PLACES_CARD 
+# 			{name_id} -> to link heading
 # 			{name}
 # 			{img_front}  --> usually google street view image
 #			{info}  --> the dts
@@ -232,6 +233,29 @@ TPL_ACTIVITIES_PAGE = '''
 {sections}
 '''
 
+TPL_ACTIVITIES_PAGE_JAVASCRIPT='''
+<script>
+	$(document).ready(function(){
+		$("h3").each(function() {
+     		var popup = '<div class="share-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+
+        $(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
+        $(this).after(popup);
+         
+    	});  
+   	
+   	$("h4").each(function() {
+     		var popup = '<div class="share-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+
+        $(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
+
+        $(this).parent().append(popup);
+    });   
+});
+</script>
+'''
+
+
 TPL_PAGE_ACTIVITIES_SECTION = '''
 	<section aria-labelledby="{activity_name_id}">
 		<h3 id="{activity_name_id}">{activity_name}</h3>
@@ -242,7 +266,7 @@ TPL_PAGE_ACTIVITIES_SECTION = '''
 
 TPL_PAGE_ACTIVITIES_CARD = '''
 				<div class="my-card h-card {price_bg}">
-					<h4 class="p-name">{name}</h4>
+					<h4 class="p-name" id="{name_id}">{name}</h4>
 					<dl>
 						{info}
 					</dl>
@@ -259,7 +283,7 @@ TPL_PAGE_PLACES = '''
 TPL_PAGE_PLACES_CARD = '''
 	<div class="my-card h-card">
 		<div class="my-card-img">
-			<h3 class="p-name">{name}</h3>
+			<h3 class="p-name" id="{name_id}">{name}</h3>
 			<img alt='Frente de {name}' src="{img_front}">
 		</div>
 
@@ -278,6 +302,47 @@ TPL_PAGE_PLACES_MAP_LIST = '''
 			<li><a href="geo:{lat},{lon};u=35" rel="external">Programa asociado</a>
 			<data class="p-latitude" value="{lat}"><data class="p-longitude" value="{lon}">
 		</ul>
+'''
+
+TPL_PAGE_PLACES_JAVASCRIPT='''
+<script>
+	$(document).ready(function(){
+
+     $("h3").each(function() {
+     		var popup = '<div class="share-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+
+        $(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
+
+        $(this).closest('div.my-card').append(popup);
+         
+    });   
+	});
+</script>
+'''
+
+PAGE_FAQ_JAVASCRIPT='''
+<script>
+$(document).ready(function(){
+	$("dt").each(function() {
+		var popup = '<div class="share-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+
+		$(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
+		$(this).next().append(popup);
+	});   
+});
+</script>
+'''
+PAGE_COLABORACION_JAVASCRIPT='''
+<script>
+$(document).ready(function(){
+	$("dt").each(function() {
+		var popup = '<div class="share-popup" id="popup-'+this.id+'"><p>Link a esta sección:<input value="'+window.location.href+"#"+this.id+'" readonly="" type="url"></p><p><button>cerrar</button></p></div>';
+
+	  $(this).append(' <a title="Link permanente a este título" class="headerlink" data-popup-target="#popup-'+this.id+'"></a>');
+	  $(this).next().append(popup);
+	});   
+});
+</script>
 '''
 
 
@@ -463,7 +528,9 @@ def process_places(places):
 		else:
 			tmp_img = PLACES_IMAGE_PLACEHOLDER
 
-		tmp = TPL_PAGE_PLACES_CARD.format(name=properties['nombre'], img_front=tmp_img, info=final_item)
+		tmp = TPL_PAGE_PLACES_CARD.format(
+			name=properties['nombre'], name_id=properties['id']
+			, img_front=tmp_img, info=final_item)
 
 		if tmp_img == PLACES_IMAGE_PLACEHOLDER:
 			tmp = tmp.replace("<img alt='Frente de "+properties['nombre']+"'", '<img alt="Marcador de posición de imagen"')
@@ -475,6 +542,7 @@ def process_places(places):
 	# add missing html (headers, div, etc)
 	final_places_page = HTML_PAGE_TEMPLATE.replace("{body}", final_places_page)
 	final_places_page = final_places_page.replace("{header-secondheading}", '<div class="my-content-sub-heading"><h2>Lugares</h2></div>')
+	final_places_page = final_places_page.replace("{extra-javascript}", TPL_PAGE_PLACES_JAVASCRIPT)
 
 
 
@@ -559,7 +627,8 @@ def process_activities(file_list, places):
 
 
 			tmp_final_activities += TPL_PAGE_ACTIVITIES_CARD.format(price_bg=back_color
-				, name=tmp_name, info=final_item)
+				, name=tmp_name, name_id=create_html_id(tmp_name)
+				, info=final_item)
 
 
 		activity_name_heading = activity_name
@@ -573,7 +642,7 @@ def process_activities(file_list, places):
 
 
 		tmp_final_section = TPL_PAGE_ACTIVITIES_SECTION.format(
-			activity_name_id=activity_name.lower()
+			activity_name_id=create_html_id(activity_name)
 			, activity_name=activity_name_heading, cards=tmp_final_activities
 			)
 
@@ -596,7 +665,9 @@ def process_activities(file_list, places):
 	final_text = TPL_ACTIVITIES_PAGE.format(toc_items=tmp_toc, sections=final_text)
 
 	# add missing html (headers, div, etc)
-	final_text = HTML_PAGE_TEMPLATE.replace("{body}", final_text).replace("{header-secondheading}", '<div class="my-content-sub-heading"><h2>Actividades</h2></div>')
+	final_text = HTML_PAGE_TEMPLATE.replace("{body}", final_text)
+	final_text = final_text.replace("{header-secondheading}",'<div class="my-content-sub-heading"><h2>Actividades</h2></div>')
+	final_text = final_text.replace("{extra-javascript}", TPL_ACTIVITIES_PAGE_JAVASCRIPT)
 
 
 	save_file(os.path.join(OUTPUT_FOLDER, ACTIVITIES_OUTPUT_FILE), final_text)
@@ -764,6 +835,11 @@ def create_property(key, properties_dict, isfrom):
 
 	return TPL_CARD_DT.format(**tmp_format_dict)
 
+def create_html_id(s):
+	'''Create an html id. Lowecase and replacing spaces with dashes '''
+
+	return s.lower().replace(" ","-").replace("(","").replace(")","")
+
 # =======================
 # ==== Program start ====
 # =======================
@@ -852,6 +928,7 @@ if DO_PAGES:
 	for page in HTML_PAGES_KEYWORDS:
 		tmp_page = ""
 		tmp_subheading = ""
+		tmp_javascript = ""
 
 		if not must_do_page or must_do_page == page:
 			tmp_page = open_file(os.path.join(HTML_FOLDER, page + ".html"))
@@ -866,8 +943,12 @@ if DO_PAGES:
 		else:
 			continue
 
-		if page == "colaboracion": tmp_subheading = "Colaboración"
-		if page == "preguntas-frecuentes": tmp_subheading = "Preguntas frecuentes"
+		if page == "colaboracion": 
+			tmp_subheading = "Colaboración"
+			tmp_javascript = PAGE_COLABORACION_JAVASCRIPT
+		if page == "preguntas-frecuentes": 
+			tmp_subheading = "Preguntas frecuentes"
+			tmp_javascript = PAGE_FAQ_JAVASCRIPT
 
 		if page == "index":
 			today_date    = TODAY
@@ -899,6 +980,7 @@ if DO_PAGES:
 				save_file(os.path.join(HTML_FOLDER, page + ".html"), tmp_page)
 			
 			tmp_page = tmp_page.replace("{latest-changes}", "")
+<<<<<<< HEAD
 			
 <<<<<<< HEAD
 		tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page).replace("{header-secondheading}", tmp_subheading)
@@ -907,6 +989,15 @@ if DO_PAGES:
 		tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page).replace("{header-secondheading}", '<div class="my-content-sub-heading"><h2>'+tmp_subheading+'</h2></div>')
 
 
+=======
+		
+		if tmp_subheading:
+			tmp_subheading = '<div class="my-content-sub-heading"><h2>' + tmp_subheading + '</h2></div>'
+		
+		tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page)
+		tmp_page = tmp_page.replace("{header-secondheading}", tmp_subheading)
+		tmp_page = tmp_page.replace("{extra-javascript}", tmp_javascript)
+>>>>>>> 4df9a2a... add permalinks to headers
 
 >>>>>>> 8d7b3b7... fixed some html; fixed some wrong json keys
 		save_file(os.path.join(OUTPUT_FOLDER, page + ".html"), tmp_page)
