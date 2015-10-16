@@ -3,12 +3,12 @@
 =======
 >>>>>>> 77d5d5b... update jsons to new structure
 {
-   "nombre": "newcom", 
+   "nombre": "Newcom", 
    "nombre_alt": "", 
    "tipo": "deporte", 
    "lugares": [
       {
-         "nombre": "Adultos Mayores (> 60 años)", 
+         "nombre": "Adultos Mayores (mas de 60 años)", 
          "nota": "Iniciación deportiva\\n Voley modificado o adaptado", 
          "precio": "gratis", 
          "last-update": "2015-07-23"

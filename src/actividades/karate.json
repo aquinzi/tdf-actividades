@@ -3,61 +3,66 @@
 =======
 >>>>>>> 77d5d5b... update jsons to new structure
 {
-   "nombre": "karate", 
+   "nombre": "Karate", 
    "nombre_alt": "", 
    "tipo": "deporte", 
    "lugares": [
       {
-         "precio": "gratis", 
+         "nombre": "Dôjô Gichin Funakoshi",
          "direccion": "centrodeportivo", 
-         "horario": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {"dia": "lunes, miercoles, viernes","hora": "18:30-19:30", "nota": "menores" },
-            {"dia": "lunes, miercoles, viernes","hora": "19:30-20:30", "nota": "menores" },
-            {"dia": "lunes, miercoles, viernes","hora": "20:30-21:30", "nota": "mayores" }
-         ], 
-         "nota": "Estilo Shôtôkan", 
-         "last-update": "2015-07-23", 
-         "nombre": "Dôjô Gichin Funakoshi",
-         "url":["http://www.facebook.com/pages/Karate-Do-Shotokan-RG"],
-         "nota": "Municipio"
-=======
-            {
-               "hora": "18:30-19:30", 
-               "nota": "menores", 
-               "dia": "lunes, miercoles, viernes"
-            }, 
-            {
-               "hora": "19:30-20:30", 
-               "nota": "menores", 
-               "dia": "lunes, miercoles, viernes"
-            }, 
-            {
-               "hora": "20:30-21:30", 
-               "nota": "mayores", 
-               "dia": "lunes, miercoles, viernes"
-            }
-         ], 
-         "nota": "Estilo Shôtôkan", 
-         "last-update": "2015-07-23", 
-         "nombre": "Municipio"
->>>>>>> 77d5d5b... update jsons to new structure
-=======
-            {"dia": "lunes, miercoles, viernes","hora": "18:30-19:30", "nota": "menores" },
-            {"dia": "lunes, miercoles, viernes","hora": "19:30-20:30", "nota": "menores" },
-            {"dia": "lunes, miercoles, viernes","hora": "20:30-21:30", "nota": "mayores" }
-         ], 
-         "nota": "Estilo Shôtôkan", 
-         "last-update": "2015-07-23", 
-         "nombre": "Dôjô Gichin Funakoshi",
-         "url":["http://www.facebook.com/pages/Karate-Do-Shotokan-RG"],
-         "nota": "Municipio"
->>>>>>> fdc995f... update info
-      }, 
-      {
          "precio": "gratis", 
+         "horario": [
+<<<<<<< HEAD
+<<<<<<< HEAD
+            {"dia": "lunes, miercoles, viernes","hora": "18:30-19:30", "nota": "menores" },
+            {"dia": "lunes, miercoles, viernes","hora": "19:30-20:30", "nota": "menores" },
+            {"dia": "lunes, miercoles, viernes","hora": "20:30-21:30", "nota": "mayores" }
+         ], 
+         "nota": "Municipio",
+         "url":["http://www.facebook.com/pages/Karate-Do-Shotokan-RG"],
+<<<<<<< HEAD
+         "nota": "Municipio"
+=======
+            {
+               "hora": "18:30-19:30", 
+               "nota": "menores", 
+               "dia": "lunes, miercoles, viernes"
+            }, 
+            {
+               "hora": "19:30-20:30", 
+               "nota": "menores", 
+               "dia": "lunes, miercoles, viernes"
+            }, 
+            {
+               "hora": "20:30-21:30", 
+               "nota": "mayores", 
+               "dia": "lunes, miercoles, viernes"
+            }
+         ], 
+         "nota": "Estilo Shôtôkan", 
+         "last-update": "2015-07-23", 
+         "nombre": "Municipio"
+>>>>>>> 77d5d5b... update jsons to new structure
+=======
+            {"dia": "lunes, miercoles, viernes","hora": "18:30-19:30", "nota": "menores" },
+            {"dia": "lunes, miercoles, viernes","hora": "19:30-20:30", "nota": "menores" },
+            {"dia": "lunes, miercoles, viernes","hora": "20:30-21:30", "nota": "mayores" }
+         ], 
+         "nota": "Estilo Shôtôkan", 
+         "last-update": "2015-07-23", 
+         "nombre": "Dôjô Gichin Funakoshi",
+         "url":["http://www.facebook.com/pages/Karate-Do-Shotokan-RG"],
+         "nota": "Municipio"
+>>>>>>> fdc995f... update info
+=======
+         "nota": "Estilo Shôtôkan", 
+         "last-update": "2015-07-23"
+>>>>>>> 2e3cc6b... fix typos
+      }, 
+      {
+         "nombre": "Municipio",
          "direccion": "margalot", 
+         "precio": "gratis", 
          "horario": [
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -88,10 +93,10 @@
 >>>>>>> fdc995f... update info
          ], 
          "nota": "Estilo Shôtôkan", 
-         "last-update": "2015-07-23", 
-         "nombre": "Municipio"
+         "last-update": "2015-07-23"
       }, 
       {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
          "url": ["https://www.facebook.com/pages/Karate-Polideportivo-Cantera/"],
@@ -118,15 +123,18 @@
 >>>>>>> 77d5d5b... update jsons to new structure
 =======
          "url": ["https://www.facebook.com/pages/Karate-Polideportivo-Cantera/"],
+=======
+         "nombre": "Dôjô Cantera",
+>>>>>>> 2e3cc6b... fix typos
          "direccion": "cantera", 
          "horario": [
             {"hora": "17:00-19:00", "nota": "mayores", "dia": "martes, jueves"},
             {"hora": "16:30-19:30", "nota": "Clase general", "dia": "sábado"}
 >>>>>>> fdc995f... update info
          ], 
+         "url": ["https://www.facebook.com/pages/Karate-Polideportivo-Cantera/"],
          "nota": "Estilo: gôjû-ryû shobukan (okiwanense/tradicional). \\nInscripciones: en dôjô o llamando al 15479229", 
-         "last-update": "2015-07-16", 
-         "nombre": "Dôjô Cantera"
+         "last-update": "2015-07-16",
       }
    ]
 <<<<<<< HEAD

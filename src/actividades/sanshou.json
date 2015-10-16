@@ -5,7 +5,7 @@
    "lugares": [
       {
          "nombre": "Escuela deportiva de SAN SHOU Rio Grande", 
-         "direccion": "Gimnasio del Jardin N1 (Calecita Encantada). San Martín y Don Bosco."
+         "direccion": "Gimnasio del Jardin N1 (Calesita Encantada). San Martín y Don Bosco."
          ,"geo":{"lat":-53.782271, "lon":-67.708932}
          , "streetmap":"https://www.google.com/maps/@-53.782271,-67.708932,3a,75y,11.61h,84.18t/data=!3m7!1e1!3m5!1sksEIyglOCGspIb2IXwt7rg!2e0!6s%2F%2Fgeo1.ggpht.com%2Fcbk%3Fpanoid%3DksEIyglOCGspIb2IXwt7rg%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D100%26h%3D80%26yaw%3D235.0121%26pitch%3D0!7i13312!8i6656"
          ,"horario":[{"dia":"martes y jueves", "hora":"20:00-21:30"}]
