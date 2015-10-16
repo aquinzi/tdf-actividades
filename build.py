@@ -286,6 +286,7 @@ TPL_PAGE_PLACES_CARD = '''
 		<dl>
 			{info}
 		</dl>
+	</div>
 '''
 
 TPL_PAGE_PLACES_IMG_STREET_VIEW = '''http://maps.googleapis.com/maps/api/streetview?size=800x400&location={lat},{lon}&heading={angle}&fov={zoom}'''
@@ -470,8 +471,10 @@ def process_places(places):
 		final_item = tmp_item
 
 		if 'last-update' in properties and properties['last-update']:
-			final_item += TPL_CARD_DT.format(dt_text="Última actualización", dt_attr='', 
-				dd_attr='', dd_text='<time datetime="'+properties['last-update']+'">' + isoDateToHuman(properties['last-update']) + "</time>")
+			final_item += TPL_CARD_DT.format(dt_text="Última actualización", 
+				dt_attr=' class="ultima-actualizacion"', 
+				dd_attr='', 
+				dd_text='<time datetime="'+properties['last-update']+'">' + isoDateToHuman(properties['last-update']) + "</time>")
 
 		tmp = TPL_PAGE_PLACES_CARD.format(name=properties['nombre'], img_front='', info=final_item)
 
@@ -480,7 +483,11 @@ def process_places(places):
 	final_places_page = TPL_PAGE_PLACES.format(cards=final_places_page)
 
 	# add missing html (headers, div, etc)
-	final_places_page = HTML_PAGE_TEMPLATE.replace("{body}", final_places_page).replace("{header-secondheading}", "Lugares")
+	final_places_page = HTML_PAGE_TEMPLATE.replace("{body}", final_places_page)
+	final_places_page = final_places_page.replace("{header-secondheading}", '<div class="my-content-sub-heading"><h2>Lugares</h2></div>')
+
+
+
 
 	save_file(os.path.join(OUTPUT_FOLDER, PLACES_OUTPUT_FILE), final_places_page)
 
@@ -538,14 +545,16 @@ def process_activities(file_list, places):
 			final_item = tmp_item
 
 			if 'last-update' in item and item['last-update']:
-				final_item += TPL_CARD_DT.format(dt_text="Última actualización", dt_attr='', 
-				dd_attr='', dd_text='<time datetime="'+item['last-update']+'">' + isoDateToHuman(item['last-update']) + "</time>")
+				final_item += TPL_CARD_DT.format(dt_text="Última actualización", 
+					dt_attr='class="ultima-actualizacion"',
+					dd_attr='', 
+					dd_text='<time datetime="'+item['last-update']+'">' + isoDateToHuman(item['last-update']) + "</time>")
 		 	
 			back_color = ""
-			if 'price' in item:
-				if item['price'].lower() == "gratis":
+			if 'precio' in item:
+				if item['precio'].lower() == "gratis":
 					back_color = "my-card-blue-bg"
-				elif item['price'].lower() == "pago":
+				elif item['precio'].lower() == "pago":
 					back_color = "my-card-green-bg"
 
 			tmp_final_activities += TPL_PAGE_ACTIVITIES_CARD.format(price_bg=back_color
@@ -586,7 +595,8 @@ def process_activities(file_list, places):
 	final_text = TPL_ACTIVITIES_PAGE.format(toc_items=tmp_toc, sections=final_text)
 
 	# add missing html (headers, div, etc)
-	final_text = HTML_PAGE_TEMPLATE.replace("{body}", final_text).replace("{header-secondheading}", "Actividades")
+	final_text = HTML_PAGE_TEMPLATE.replace("{body}", final_text).replace("{header-secondheading}", '<div class="my-content-sub-heading"><h2>Actividades</h2></div>')
+
 
 	save_file(os.path.join(OUTPUT_FOLDER, ACTIVITIES_OUTPUT_FILE), final_text)
 
@@ -621,7 +631,7 @@ def create_property(key, properties_dict, isfrom):
 
 		tmp_property = tmp_property[:len(tmp_property)-2] #remove last ", "
 
-		tmp_format_dict['dt_attr'] = ' class="telefono"'
+		tmp_format_dict['dt_attr'] = 'class="telefono"'
 		tmp_format_dict['dt_text'] = "Teléfono"
 		tmp_format_dict['dd_text'] = tmp_property
 
@@ -631,21 +641,22 @@ def create_property(key, properties_dict, isfrom):
 
 		tmp_property = "<ul>" + tmp_property + "</ul>"
 
-		tmp_format_dict['dt_attr'] = ' class="web"'
+		tmp_format_dict['dt_attr'] = 'class="web"'
 		tmp_format_dict['dt_text'] = "Sitios"
 		tmp_format_dict['dd_text'] = tmp_property
 		
 	if key == "email":
 		tmp_property = '<a class="u-email" href="mailto:' + properties_dict[key] + '">' + properties_dict[key] + '</a>'
 
-		tmp_format_dict['dt_attr'] = ' class="email"'
+		tmp_format_dict['dt_attr'] = 'class="email"'
 		tmp_format_dict['dt_text'] = "email"
+		tmp_format_dict['attr']    = 'class="u-email"'
 		tmp_format_dict['dd_text'] = tmp_property	
 
 	if key == "nota":
-		tmp_format_dict['dt_attr'] = ' class="nota"'
+		tmp_format_dict['dt_attr'] = 'class="nota"'
 		tmp_format_dict['dt_text'] = "Nota"
-		tmp_format_dict['dd_attr'] = ' class="p-note"'
+		tmp_format_dict['dd_attr'] = 'class="p-note"'
 		tmp_format_dict['dd_text'] = properties_dict[key].replace("\\n","<br>")
 
 
@@ -701,16 +712,31 @@ def create_property(key, properties_dict, isfrom):
 		tmp_format_dict['dd_text'] = properties_dict[key]	
 
 	if key == "horario":
+		tmp_property = ""
+
 		for hora in properties_dict[key]:
-			horario_dia = hora['dia']
-			horario_hora = hora['hora']
+			horario_dia  = ""
+			horario_hora = ""
 			horario_nota = ""
 
 			if 'nota' in hora:
 				horario_nota = "<i>(" + hora['nota'] + ")</i>"
 
+<<<<<<< HEAD
 			tmp_property += '<li><span  class="openinghours"{}. {}.</span> {}</li>'.format(horario_dia, horario_hora, horario_nota)
 >>>>>>> 4c9bca0... finished updating to new layout
+=======
+			if 'dia' in hora:
+				horario_dia = hora['dia'] + ". "
+
+			if 'hora' in hora:
+				horario_hora = hora['hora'] + ". "
+
+			if horario_dia or horario_hora:
+				tmp_property = '<span class="openinghours">{}. {}.</span>'.format(horario_dia, horario_hora)
+
+			tmp_property += '<li>{} {}</li>'.format(tmp_property, horario_nota)
+>>>>>>> 8d7b3b7... fixed some html; fixed some wrong json keys
 
 		tmp_property = '<ul>' + tmp_property + '</ul>'
 
@@ -859,8 +885,15 @@ if DO_PAGES:
 			
 			tmp_page = tmp_page.replace("{latest-changes}", "")
 			
+<<<<<<< HEAD
 		tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page).replace("{header-secondheading}", tmp_subheading)
 >>>>>>> a5dafb2... fixed stupid bugs
+=======
+		tmp_page = HTML_PAGE_TEMPLATE.replace("{body}", tmp_page).replace("{header-secondheading}", '<div class="my-content-sub-heading"><h2>'+tmp_subheading+'</h2></div>')
+
+
+
+>>>>>>> 8d7b3b7... fixed some html; fixed some wrong json keys
 		save_file(os.path.join(OUTPUT_FOLDER, page + ".html"), tmp_page)
 
 
