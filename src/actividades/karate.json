@@ -20,6 +20,7 @@
          "url":["http://www.facebook.com/pages/Karate-Do-Shotokan-RG"],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
          "nota": "Municipio"
 =======
             {
@@ -58,6 +59,9 @@
 =======
          "nota": "Estilo shôtôkan. Municipio", 
 >>>>>>> a2ed584... fix typos
+=======
+         "nota": "Estilo shôtôkan. \\nMunicipio", 
+>>>>>>> 7013e1a... add some notes to activities
          "last-update": "2015-07-23"
 >>>>>>> 2e3cc6b... fix typos
       }, 
