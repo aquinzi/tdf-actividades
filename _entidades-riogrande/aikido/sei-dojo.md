@@ -1,4 +1,4 @@
-﻿---
+---
 nombre: Sei Dôjô
 categoria: aikido
 ultima-actualizacion: 2015-09-25
