@@ -7,6 +7,7 @@ Outputs in current folder
 
 # TODO: activities: add keys not in properties list
 # TODO: activities: add key overwritting
+<<<<<<< HEAD
 # TODO: simplify code so it's not that redundant and duplicated (lazyness & quickness won)
 # TODO: place: can have also opening-times
 <<<<<<< HEAD
@@ -16,6 +17,9 @@ Outputs in current folder
 =======
 # TODO: Option to update index file to include latest changes
 =======
+=======
+# TODO: activity can have it's own place
+>>>>>>> 4c9bca0... finished updating to new layout
 # 
 >>>>>>> 2633dcc... add new template; clean main pages creation process
 # TPL replacements:
@@ -38,6 +42,7 @@ Outputs in current folder
 # 			{dt_text}
 # 			{dd_class}
 # 			{dd_text}
+# 			
 # 		TPL_PAGE_PLACES
 # 			{cards}
 # 		TPL_PAGE_PLACES
@@ -117,6 +122,7 @@ REMOVE_CIRCUMFLEX = (
 # ---------------
 # HTML templates
 
+<<<<<<< HEAD
 TPL_ACTIVITIES_PAGE = '''
 <p>Actividades encontradas en esta página, separada por categorías y por orden alfabético.</p>
 
@@ -205,7 +211,9 @@ TPL_PAGE_PLACES_MAP_LIST = '''
 
 
 
-
+=======
+TPL_INDEX_LATESTCHANGES = '''<li><time datetime="{date_iso}">{date_human}</time> {change}</li>'''
+>>>>>>> 4c9bca0... finished updating to new layout
 
 TPL_ACTIVITIES_PAGE = '''
 <p>Actividades encontradas en esta página, separada por categorías y por orden alfabético.</p>
@@ -261,9 +269,7 @@ TPL_PAGE_ACTIVITIES_CARD = '''
 # <dt class="ultima-actualizacion">Última actualización</dt><dd><time>2015-07-23</time></dd>
 
 
-
-
-TPL_PAGE_ACTIVITIES_CARD_DT = '''<dt{dt_class}>{dt_text}</dt><dd{dd_class}>{dd_text}</dd>'''
+TPL_CARD_DT = '''<dt {dt_attr}>{dt_text}</dt><dd {dd_attr}>{dd_text}</dd>'''
 
 
 TPL_PAGE_PLACES = '''
@@ -288,49 +294,12 @@ TPL_PAGE_PLACES_MAP_LIST = '''
 		<ul class="ver-mapa" aria-label="Ver en mapa">
 			<li><a href="{map_link}" rel="external">Mapa</a>
 			<li><a href="{map_streetview}" rel="external">Google Street View</a>
-			<li><a href="geo:{lat},{lon};u=35" rel="external">Programa asociado</a>
+			<!--<li><a href="geo:{lat},{lon};u=35" rel="external">Programa asociado</a>-->
 			<data class="p-latitude" value="{lat}"><data class="p-longitude" value="{lon}">
 		</ul>
 '''
 
 
-
-
-
-
-
-
-
-
-TPL_ITEM = '''
-	<dl{dlatrr}>
-		{defs}
-	</dl>
-'''
-
-TPL_ITEM_DATA = '''<dt>{dt}</dt><dd{ddattr}>{dd}</dd>
-'''
-TPL_SECTION_ACTIVITY = '''
-<section{sectionattr}>
-	<h3{hatrrb}>{actividad}</h3>
-	{lista}
-</section>
-'''
-
-TPL_ACTIVITY_PAGE = '''
-<h2>Actividades en Río Grande</h2>
-{sections}
-'''
-TPL_PLACES_PAGE = '''
-<h2>Lugares en Río Grande</h2>
-{sections}
-'''
-
-'''
-
-  <dt>horarios</dt><dd><span class="openinghours">martes, jueves 17:00-19:00</span> comment":"mayores"; <span class="operating-hours">sábado 16:30-19:30</span>"comment":"Clase general"
-
-'''
 
 # end HTML templates
 # --------------------
@@ -387,280 +356,6 @@ def save_file(path, text):
 	with open(path, 'w', encoding='utf-8-sig') as saveme:
 		saveme.writelines(text)
 
-def process_places(places):
-	'''Process the places file. 
-
-	:param:places Must be a "json object" (already read and converted)
-	'''
-
-	#get keys/properties from dummy item in the begining of the file
-	properties = list()
-	properties_with_list = ('telefono', 'url')
-
-	for key,v in places['features'][0]['properties'].items():
-		properties.append(key)
-
-	properties.remove("marker-symbol") # only for display in geojson, we don't need it in html
-	properties.remove("id")
-
-	#have some ordering
-	a, b = properties.index('nombre'), 0
-	properties[b], properties[a] = properties[a], properties[b]
-	a, b = properties.index('direccion'), 1
-	properties[b], properties[a] = properties[a], properties[b]
-	a, b = properties.index('last-update'), len(properties) -1
-	properties[b], properties[a] = properties[a], properties[b]
-	a, b = properties.index('nota'), len(properties) -2
-	properties[b], properties[a] = properties[a], properties[b]
-
-	properties = tuple(properties)
-
-	final_item = ""
-	final_places_page = ""
-	tmp_item = ""
-	tmp_property = ""
-
-	for place in places['features'][1:]:
-		prop = place['properties']
-		geo = place['geometry']['coordinates'] #lon, lat
-		tmp_item = ""
-		final_item = ""
-
-		for propkey in properties:
-			tmp_property = ""
-			if propkey in prop:
-				if propkey == "url":
-					for url in prop[propkey]:
-						tmp_property += '<li><a href="' + url + '" class="u-url">' + url + '</a></li>'
-
-					tmp_property = "<ul>" + tmp_property + "</ul>"
-					tmp_property = TPL_ITEM_DATA.format(dt="Sitios",ddattr='', dd=tmp_property)
-
-				elif propkey == "telefono":
-					for phone in prop[propkey]:
-						tmp_property += '<span class="p-tel">' + phone + '</span>, '
-
-					tmp_property = tmp_property[:len(tmp_property)-2] #remove last ", "
-					tmp_property = TPL_ITEM_DATA.format(dt="Telefono",ddattr='', dd=tmp_property)
-
-				elif propkey == "email":
-					tmp_property = '<a class="u-email" href="mailto:' + prop[propkey] + '">' + prop[propkey] + '</a>'
-					tmp_property = TPL_ITEM_DATA.format(dt="email",ddattr='',dd=tmp_property)
-
-				elif propkey == "nota":
-					tmp_property = TPL_ITEM_DATA.format(dt="Nota",ddattr=' class="p-note"', dd=prop[propkey])
-
-				elif propkey == "direccion":
-					geo[1] = str(geo[1])
-					geo[0] = str(geo[0])
-
-					tmp_property = '<span class="p-street-address">' + prop[propkey] + '</span>'
-					tmp_property += '<a href="' + MAP_URL.format(lat=geo[1], lon=geo[0]) + '">Ver en mapa</a>'
-					tmp_property += '<a href="geo:' + geo[1] + ',' + geo[0] + ';u=35">Ver en programa asociado</a>'
-					tmp_property += '<data class="p-latitude" value="' + geo[1] + '">'
-					tmp_property += '<data class="p-longitude" value="' + geo[0] + '">'
-
-					tmp_property = TPL_ITEM_DATA.format(dt="Dirección", ddattr='', dd=tmp_property)
-
-			tmp_item += tmp_property
-
-		final_item = tmp_item
-
-		if 'last-update' in prop and prop['last-update']:
-			final_item += TPL_ITEM_DATA.format(dt="Última actualización", ddattr='', dd="<time>" + prop['last-update'] + "</time>")
-
-		tmp = TPL_ITEM.format(dlatrr='', defs=final_item)
-		tmp = TPL_SECTION_ACTIVITY.format(sectionattr=' class="h-card"'
-			,hatrrb=' id="' + prop['id'] + '" class="p-name"',actividad=prop['nombre'],lista=tmp)
-		final_places_page += tmp
-
-	final_places_page = TPL_PLACES_PAGE.format(sections=final_places_page)
-
-	# add missing html (headers, div, etc)
-	final_places_page = HTML_PAGE_TEMPLATE.replace("{body}", final_places_page)
-
-	save_file(os.path.join(OUTPUT_FOLDER, PLACES_OUTPUT_FILE), final_places_page)
-
-def process_activities(file_list, places):
-	'''Process activities
-	
-	:param:file_list a list with paths to files
-	:param:places Must be a "json object" (already read and converted)
-	'''
-
-	# get basic keys to use
-	#get keys/properties from dummy file (must open)
-	#if not os.path.exists(os.path.join(SRC_FOLDER, ACTIVITY_DUMMY_FILE)):
-	#	print("Need dummy file. Exiting")
-	#	exit()
-
-	#tmp = json.loads(open_file(os.path.join(SRC_FOLDER, ACTIVITY_DUMMY_FILE)))
-
-	properties = ('nombre','direccion', 'precio', 'horario', 'url', 'nota', 'last-update')
-	# other keys that are also in .geojson: telefono, geo, email
-
-	properties_with_list = ('telefono', 'url', 'geo')
-
-	#for key,v in tmp[0].items():
-	#	properties.append(key)
-
-	#have some ordering
-	#a, b = properties.index('nombre'), 0
-	#properties[b], properties[a] = properties[a], properties[b]
-	#a, b = properties.index('direccion'), 1
-	#properties[b], properties[a] = properties[a], properties[b]
-	#a, b = properties.index('horario'), 2
-	#properties[b], properties[a] = properties[a], properties[b]
-	#a, b = properties.index('last-update'), len(properties) -1
-	#properties[b], properties[a] = properties[a], properties[b]
-	#a, b = properties.index('nota'), len(properties) -2
-	#properties[b], properties[a] = properties[a], properties[b]
-
-	#properties = tuple(properties)
-
-	# go trough list of files, open them, create json, convert, add to final_doc
-	final_item = ""
-	tmp_final_activities = ""
-	tmp_final_section = ""
-	tmp_item = ""
-	final_text = ""
-
-	activities_all = dict()
-
-	for f in file_list:
-		activity = json.loads(open_file(f))
-		activity_name = os.path.basename(f) #get filename
-		print(" Processing: " + activity_name)
-	
-		activity_name = activity['nombre'].title()
-
-		if not activity['tipo'] in activities_all:
-			activities_all[activity['tipo']] = list()
-
-		tmp_final_activities = ""
-
-		for item in activity['lugares']:
-			tmp_item = ""
-			final_item = ""
-
-			for propkey in properties:
-				tmp_property = ""
-
-				if propkey in item:
-
-					if propkey == "precio":
-						tmp_property = TPL_ITEM_DATA.format(dt="Precio",ddattr='',dd=item[propkey])
-
-					if propkey == "nombre":
-						if item[propkey]:
-							tmp_property = TPL_ITEM_DATA.format(dt="Nombre",ddattr='',dd=item[propkey].title())
-
-					elif propkey == "url":
-						if propkey in item:
-							for url in item[propkey]:
-								tmp_property += '<li><a href="' + url + '" class="u-url">' + url + '</a></li>'
-
-							tmp_property = "<ul>" + tmp_property + "</ul>"
-							tmp_property = TPL_ITEM_DATA.format(dt="Sitios",ddattr='', dd=tmp_property)
-
-					elif propkey == "telefono":
-						if propkey in item:
-							for phone in item[propkey]:
-								tmp_property += '<span class="p-tel">' + phone + '</span>, '
-
-							tmp_property = tmp_property[:len(tmp_property)-2] #remove last ", "
-							tmp_property = TPL_ITEM_DATA.format(dt="Telefono",ddattr='', dd=tmp_property)
-
-					elif propkey == "email":
-						if propkey in item:
-							tmp_property = '<a class="u-email" href="' + item[propkey] + '">' + item[propkey] + '</a>'
-							tmp_property = TPL_ITEM_DATA.format(dt="email",ddattr='',dd=tmp_property)
-
-					elif propkey == "nota":
-						if propkey in item:
-							tmp_property = TPL_ITEM_DATA.format(dt="Nota",ddattr=' class="p-note"', dd=item[propkey])
-							tmp_property = tmp_property.replace("\\n","<br>")
-					
-					elif propkey == "horario":
-						if propkey in item:
-							for hora in item[propkey]:
-								horario_dia = hora['dia']
-								horario_hora = hora['hora']
-								horario_nota = ""
-								if 'nota' in hora:
-									horario_nota = hora['nota']
-
-								tmp_property += "<li><time>{}. {}</time>. <i>{}</i></li>".format(horario_dia, 
-									horario_hora, horario_nota)
-							tmp_property = '<ul>' + tmp_property + '</ul>'
-							tmp_property = TPL_ITEM_DATA.format(dt="Horarios",ddattr='', dd=tmp_property)
-
-
-					elif propkey == "direccion":
-						address = ""
-						address_href = "" #link or not to lugares.html
-
-						#search in places file for key
-						if propkey in item:
-							for p in places['features'][1:]:
-								if p['properties']["id"] == item[propkey]:
-									address = p['properties']["nombre"]
-									address_href = "rg-lugares.html#" + p['properties']["id"]
-									break
-
-							if not address:
-								address = item[propkey]
-
-						if address:
-							if address_href:
-								tmp_property = '<a href="' + address_href + '">' + address + '</a>'
-							else:
-								tmp_property = address
-
-							tmp_property = TPL_ITEM_DATA.format(dt="Dirección", ddattr=' class="p-street-address"', dd=tmp_property)
-				elif propkey == "direccion":
-					tmp_property = '¡¿Donde se da!?'
-					tmp_property = TPL_ITEM_DATA.format(dt="Dirección", ddattr='', dd=tmp_property)				
-
-				for circumflex in REMOVE_CIRCUMFLEX:
-					tmp_property = re.sub(circumflex[0], circumflex[0] + " (" + circumflex[1] + ") ", tmp_property, flags=re.IGNORECASE)
-					
-				if propkey == "nombre":
-					tmp_property = tmp_property.title() #gets overwritten from above
-
-				tmp_item += tmp_property
-
-			final_item = tmp_item
-
-			if 'last-update' in item and item['last-update']:
-				final_item += TPL_ITEM_DATA.format(dt="Última actualización", ddattr='', dd="<time>" + item['last-update'] + "</time>")
-
-			tmp_final_activities += TPL_ITEM.format(dlatrr=' class="h-card"',defs=final_item)
-
-		activity_name_heading = activity_name
-		if activity['nombre_alt']:
-			activity_name_heading += "/" + activity['nombre_alt']
-
-		tmp_final_section = TPL_SECTION_ACTIVITY.format(sectionattr="",
-			hatrrb=' id="' + activity_name.lower() + '"',actividad=activity_name_heading
-			,lista=tmp_final_activities)
-
-		activities_all[activity['tipo']].append('<a href="#' + activity_name.lower() + '">' + activity_name + '</a>')
-
-
-		final_text += tmp_final_section
-
-	#proper index
-	tmp = "<ul>"
-	for key in activities_all:
-		tmp += "<li>" + key + ": " + ", ".join(activities_all[key]) + "</li>"
-	tmp += "</ul>"
-
-	# add missing html (headers, div, etc)
-	final_text = HTML_PAGE_TEMPLATE.replace("{body}", tmp + final_text)
-
-	save_file(os.path.join(OUTPUT_FOLDER, ACTIVITIES_OUTPUT_FILE), final_text)
-
 def update_json(what="activities"):
 	'''Regenerate json files to new structure
 
@@ -715,8 +410,308 @@ def update_json(what="activities"):
 		with open(ffile, 'w') as json_final:
 			json.dump(new_json, json_final, ensure_ascii=False, indent=3)
 
+def isoDateToHuman(date):
+	'''Converts an ISO date (YYYY-MM-DD) to human (spanish).
+	(simple way, without setting locale and calling datetime. 
+		For now we don't need that)
+
+	:param:date str the date 
+	:return: str 
+	'''
+
+	year, month, day = date.split("-")
+
+	month_list = ("desconocido", "enero", "febrero", "marzo", "abril", "mayo"
+		, "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre")
+
+	month = int(month) #also removes leading 0
+	
+	#ex: julio 27, 2015
+	return "{} {}, {}".format(month_list[month], day, year)
 
 
+def process_places(places):
+	'''Process the places file. 
+
+	:param:places Must be a "json object" (already read and converted)
+	'''
+
+	#get keys/properties from dummy item in the begining of the file
+	main_properties = list()
+	properties_with_list = ('telefono', 'url')
+
+	for key,v in places['features'][0]['properties'].items():
+		main_properties.append(key)
+
+	main_properties.remove("marker-symbol") # only to display in geojson, not needed in html
+	main_properties.remove("id")
+	main_properties.remove("last-update") #always goes last
+	
+	main_properties = tuple(main_properties)
+
+	final_item = ""
+	final_places_page = ""
+	tmp_item = ""
+	tmp_property = ""
+
+	for place in places['features'][1:]:
+		properties = place['properties']
+		geo  = place['geometry']['coordinates'] #lon, lat
+		properties['geo'] = (str(geo[1]), str(geo[0]))
+
+		tmp_item = ""
+		final_item = ""
+
+		for propkey in main_properties:
+			tmp_item += create_property(propkey, properties)
+
+		final_item = tmp_item
+
+		if 'last-update' in properties and properties['last-update']:
+			final_item += TPL_CARD_DT.format(dt="Última actualización", dt_attr='', 
+				dd_attr='', dd='<time datetime="'+properties['last-update']+'">' + isoDateToHuman(properties['last-update']) + "</time>")
+
+		tmp = TPL_PAGE_PLACES_CARD.format(name=properties['nombre'], img_front='', info=final_item)
+
+		final_places_page += tmp
+
+	final_places_page = TPL_PAGE_PLACES.format(cards=final_places_page)
+
+	# add missing html (headers, div, etc)
+	final_places_page = HTML_PAGE_TEMPLATE.replace("{body}", final_places_page)
+
+	save_file(os.path.join(OUTPUT_FOLDER, PLACES_OUTPUT_FILE), final_places_page)
+
+def process_activities(file_list, places):
+	'''Process activities
+	
+	:param:file_list a list with paths to files
+	:param:places Must be a "json object" (already read and converted)
+	'''
+
+	# get basic keys from template?
+	#if not os.path.exists(os.path.join(SRC_FOLDER, ACTIVITY_DUMMY_FILE)):
+	#	print("Need dummy file. Exiting")
+	#	exit()
+
+	#tmp = json.loads(open_file(os.path.join(SRC_FOLDER, ACTIVITY_DUMMY_FILE)))
+	
+	main_properties = ('nombre', 'direccion', 'precio', 'horario', 'url', 'email', 'telefono', 'geo', 'nota', 'last-update')
+	
+	properties_with_list = ('telefono', 'url', 'geo')
+
+	# go trough files, open them, create json, convert, add to final_doc
+	final_item = ""
+	tmp_final_activities = ""
+	tmp_final_section = ""
+	tmp_item = ""
+	final_text = ""
+
+	activities_all = dict()
+
+	for f in file_list:
+		activity = json.loads(open_file(f), object_pairs_hook=OrderedDict)
+		activity_name = os.path.basename(f) #get filename
+		print(" Processing: " + activity_name)	
+
+		activity_name = uppercase_first_letter(activity['nombre'])
+
+		if not activity['tipo'] in activities_all:
+			activities_all[activity['tipo']] = list()
+
+		tmp_final_activities = ""
+
+		for item in activity['lugares']:
+			tmp_item = ""
+			final_item = ""
+
+			for propkey in main_properties:
+				tmp_property = create_property(propkey, item)
+
+		 		for circumflex in REMOVE_CIRCUMFLEX:
+					tmp_property = re.sub(circumflex[0], circumflex[0] + " (" + circumflex[1] + ")", tmp_property, flags=re.IGNORECASE)
+
+				tmp_item += tmp_property
+
+			final_item = tmp_item
+
+			if 'last-update' in item and item['last-update']:
+				final_item += TPL_CARD_DT.format(dt="Última actualización", dt_attr='', 
+				dd_attr='', dd='<time datetime="'+item['last-update']+'">' + isoDateToHuman(item['last-update']) + "</time>")
+		 
+			tmp_final_activities += TPL_PAGE_ACTIVITIES_CARD.format(price_bg=''
+				, name=item['nombre'], info=final_item)
+
+
+		activity_name_heading = activity_name
+<<<<<<< HEAD
+		if activity['nombre_alt']:
+=======
+
+		if 'nombre_alt' in activity and activity['nombre_alt']:
+>>>>>>> 4c9bca0... finished updating to new layout
+			activity_name_heading += "/" + activity['nombre_alt']
+
+
+		tmp_final_section = TPL_PAGE_ACTIVITIES_SECTION.format(
+			activity_name_id=activity_name.lower()
+			, activity_name=activity_name_heading, cards=tmp_final_activities
+			)
+
+		final_text += tmp_final_section
+
+		activities_all[activity['tipo']].append('<a href="#' + activity_name.lower() + '">' + activity_name + '</a>')
+
+	#proper index
+	tmp_toc = ""
+	for key in activities_all:
+		tmp_toc += "<li>" + key + "<ul>"
+
+		for activity in activities_all[key]:
+			tmp_toc += "<li>" + activity + "</li>"
+
+		tmp_toc += "</ul></li>"
+
+
+	#activity page
+	final_text = TPL_ACTIVITIES_PAGE.format(toc_items=tmp_toc, sections=final_text)
+
+	# add missing html (headers, div, etc)
+	final_text = HTML_PAGE_TEMPLATE.replace("{body}", final_text)
+
+	save_file(os.path.join(OUTPUT_FOLDER, ACTIVITIES_OUTPUT_FILE), final_text)
+
+def uppercase_first_letter(s):
+	'''Converts the first letter of the string to upper case, keeping the rest as is.
+	:return: str 
+	'''
+
+	# if we wanted to capitalize the first and the rest in lower case: capitalize()
+	return s[0].upper() + s[1:]
+
+
+def create_property(key, properties_dict, isfrom):
+	'''Creates the dt-dd pair from the key. 
+	:param:key  the key (ex.: url, nombre, direccion)
+	:param:properties_dict the dict with the data/properties 
+	:param:isfrom str from where it's called: places or activities (for address)
+	:return: str 
+	'''
+
+	if not key in properties_dict:
+		return ""
+
+	tmp_property = ""
+	tmp_format_dict = {'dt_attr': '', 'dt_text' : ''
+		, 'dd_attr' : '', 'dd_text' : ''}
+
+
+	if key == "telefono":
+		for phone in properties_dict[key]:
+			tmp_property += '<span class="p-tel">' + phone + '</span>, '
+
+		tmp_property = tmp_property[:len(tmp_property)-2] #remove last ", "
+
+		tmp_format_dict['dt_attr'] = ' class="telefono"'
+		tmp_format_dict['dt_text'] = "Teléfono"
+		tmp_format_dict['dd_text'] = tmp_property
+
+	if key == "url":
+		for url in properties_dict[key]:
+			tmp_property += '<li><a href="' + url + '" class="u-url">' + url + '</a></li>'
+
+		tmp_property = "<ul>" + tmp_property + "</ul>"
+
+		tmp_format_dict['dt_attr'] = ' class="web"'
+		tmp_format_dict['dt_text'] = "Sitios"
+		tmp_format_dict['dd_text'] = tmp_property
+		
+	if key == "email":
+		tmp_property = '<a class="u-email" href="mailto:' + properties_dict[key] + '">' + properties_dict[key] + '</a>'
+
+		tmp_format_dict['dt_attr'] = ' class="email"'
+		tmp_format_dict['dt_text'] = "email"
+		tmp_format_dict['dd_text'] = tmp_property	
+
+	if key == "nota":
+		tmp_format_dict['dt_attr'] = ' class="nota"'
+		tmp_format_dict['dt_text'] = "Nota"
+		tmp_format_dict['dd_attr'] = ' class="p-note"'
+		tmp_format_dict['dd_text'] = properties_dict[key].replace("\\n","<br>")
+
+
+	if key == "direccion":
+		if isfrom == "places":
+			geo_lat = properties_dict['geo'][0]
+			geo_lon = properties_dict['geo'][1]
+
+			tmp_property = '<span class="p-street-address">' + properties_dict[key] + '</span>'
+
+		address = ""
+		address_href = "" #link or not to lugares.html
+
+		if isfrom == "activities":
+			for p in places['features'][1:]:
+				if p['properties']["id"] == properties_dict[key]:
+					address = p['properties']["nombre"]
+					address_href = "rg-lugares.html#" + p['properties']["id"]
+					break
+			if not address:
+				address = properties_dict[key]
+		
+			if address:
+				if address_href:
+					tmp_property = '<a href="' + address_href + '" class="h-card">' + address + '</a>'
+				else:
+					tmp_property = address
+
+			tmp_property = '<span class="p-street-address">' + tmp_property + '</span>'
+		
+
+		if isfrom == "places":
+			tmp = TPL_PAGE_PLACES_MAP_LIST.format(
+				map_link=MAP_URL.format(lat=geo_lat, lon=geo_lon), 
+				map_streetview=properties_dict['googlestreetview'],
+				lat=geo_lat, lon=geo_lon
+				)
+			
+			tmp_property = tmp_property + tmp 
+
+<<<<<<< HEAD
+=======
+		tmp_format_dict['dt_attr'] = 'class="direccion"'
+		tmp_format_dict['dt_text'] = "Dirección"
+		tmp_format_dict['dd_attr'] = ''
+		tmp_format_dict['dd_text'] = tmp_property	
+
+	if key == "precio":
+		tmp_format_dict['dt_attr'] = 'class="precio"'
+		tmp_format_dict['dt_text'] = "Precio"
+		tmp_format_dict['dd_attr'] = ''
+		tmp_format_dict['dd_text'] = properties_dict[key]	
+
+	if key == "horario":
+		for hora in properties_dict[key]:
+			horario_dia = hora['dia']
+			horario_hora = hora['hora']
+			horario_nota = ""
+
+			if 'nota' in hora:
+				horario_nota = "<i>(" + hora['nota'] + ")</i>"
+
+			tmp_property += '<li><span  class="openinghours"{}. {}.</span> {}</li>'.format(horario_dia, horario_hora, horario_nota)
+>>>>>>> 4c9bca0... finished updating to new layout
+
+		tmp_property = '<ul>' + tmp_property + '</ul>'
+
+		tmp_format_dict['dt_attr'] = 'class="horarios"'
+		tmp_format_dict['dt_text'] = "Horarios"
+		tmp_format_dict['dd_attr'] = ''
+		tmp_format_dict['dd_text'] = tmp_property
+
+
+
+	return TPL_CARD_DT.format(**tmp_format_dict)
 
 # =======================
 # ==== Program start ====
@@ -843,10 +838,8 @@ if not DO_ACTIVITIES and not DO_PLACES:
 	exit()
 
 
-
-
-
-places = json.loads(open_file(os.path.join(SRC_FOLDER, PLACES_FILE)))
+# load keys in order, as in the file
+places = json.loads(open_file(os.path.join(SRC_FOLDER, PLACES_FILE)), object_pairs_hook=OrderedDict)
 
 file_list = list()
 if DO_ACTIVITIES:
