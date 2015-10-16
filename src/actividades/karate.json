@@ -68,6 +68,7 @@
          "horario": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             {"dia": "lunes, miercoles, viernes","hora": "18:30-19:30", "nota": "menores" },
             {"dia": "lunes, miercoles, viernes","hora": "19:30-20:30", "nota": "menores" },
             {"dia": "lunes, miercoles, viernes","hora": "20:30-21:30", "nota": "mayores" }
@@ -93,9 +94,14 @@
             {"dia": "lunes, miercoles, viernes","hora": "19:30-20:30", "nota": "menores" },
             {"dia": "lunes, miercoles, viernes","hora": "20:30-21:30", "nota": "mayores" }
 >>>>>>> fdc995f... update info
+=======
+            {"dia": "martes y jueves","hora": "18:30-19:30", "nota": "menores" },
+            {"dia": "martes y jueves","hora": "19:30-20:30", "nota": "menores" },
+            {"dia": "martes y jueves","hora": "20:30-21:30", "nota": "mayores" }
+>>>>>>> e5ad133... fix karate hours
          ], 
          "nota": "Estilo shôtôkan", 
-         "last-update": "2015-07-23"
+         "last-update": "2015-08-05"
       }, 
       {
 <<<<<<< HEAD
