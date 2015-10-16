@@ -1,21 +1,23 @@
-# test-jekyll
+¿Qué hacer en Tierra del Fuego?
+================================
 
-Repositorio para probar jekyll y la creación del theme correspondiente, para no instalar :gem: ruby :grin:
+Listado y agenda de actividades que se puede hacer en la provincia.
 
-Sitio de prueba: http://eikiu.github.io/test-jekyll/
-
-
-Porque siempre me olvido, links al liquid syntax:
-
-- [a github/oficial](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)
-- [de shopify](https://docs.shopify.com/themes/liquid-documentation/)
+El sitio se puede ver en [tdf.aquinzi.com](http://tdf.aquinzi.com/).
 
 
-Notas miscelaneas:
 
- - dotfiles are excluded by default
- - excluir carpetas con guion bajo. Ej. _esconder-carpeta
- - ``JEKYLL_ENV=production`` para ponerlos en los templates si se necesita cambiar el enviroment.
- - para el "edit on github":
-     - Páginas: ``{{site.github.repository_url}}/blob/gh-pages/{{page.path}}``
-     - collections/posts: ``{{ site.github.repository_url }}/tree/{{site.github.branch}}/{{ service.relative_path }}``
+Versiones
+----------
+
+
+# 1.0 "karyen" (2015-10-16)
+
+Reescritura del sitio total! incluye Río Grande, Tolhuin y Ushuaia; está mucho mas lindo, más información y sección de agenda.
+
+*karyen* es una palabra selk'nam (ona) que significa "nacer, crecer".
+
+
+# 0.5 (2015-07-22)
+
+Primera versión. Solo actividades y lugares de Río Grande.
