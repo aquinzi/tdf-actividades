@@ -12,6 +12,7 @@ arte:
   - nombre: música
   - nombre: pintura
   - nombre: teatro
+    alternativo: [actuación]
 
 deporte:
   - nombre: adultos mayores
@@ -67,6 +68,8 @@ deporte:
   - nombre: paddle
     alternativo: [padle,padel]
   - nombre: paintball
+  - nombre: pa kua
+    alternativo: [pakua,Pa Kua Chang,baguazhang,Bāguàzhǎng,Bāguà,bagua]
   - nombre: patín artístico
   - nombre: pesca deportiva
   - nombre: polo
