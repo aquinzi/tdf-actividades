@@ -15,6 +15,6 @@ nota: |
 url: ["https://www.facebook.com/pages/Karate-Polideportivo-Cantera/"]
 telefono: [15479229]
 email: 
-permalink: /rio-grande/entidades/karate-cantera/
+permalink: /rio-grande/entidades/dojo-cantera/
 ---
 

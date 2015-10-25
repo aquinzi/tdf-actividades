@@ -19,6 +19,6 @@ nota: |
 url: ["http://www.facebook.com/pages/Karate-Do-Shotokan-RG"]
 telefono: []
 email: 
-permalink: /rio-grande/entidades/gichin-funakoshi/
+permalink: /rio-grande/entidades/dojo-gichin-funakoshi/
 ---
 
