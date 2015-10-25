@@ -8,12 +8,12 @@ no-time-end: true
 category: ushuaia
 location: Salón de Convenciones del Shopping Lapataia
 tags: [concurso, tecnologia, ciencia]
-source: www.surenio.com.ar/regresa-a-ushuaia-una-nueva-edicion-del-concurso-de-desarrollo-tecnologico-mas-grande-del-pais/
+source: http://www.surenio.com.ar/regresa-a-ushuaia-una-nueva-edicion-del-concurso-de-desarrollo-tecnologico-mas-grande-del-pais/
 ---
 
 La segunda edición del Tecnotour, el concurso de desarrollo tecnológico más grande del país, dirigido a emprendedores en tecnología. Organizado por la Fundación DAR (coordinada por José “Pepe” Scioli), junto con quince empresas tecnológicas, como Microsoft, Telefónica, Red Hat, Wayra, Aktio, Deloitte, Intel, y Safran Morpho, entre otras, 32 universidades nacionales, el Ministerio de Ciencia y Tecnología de la Nación, el CONICET y CAME. 
 
-Inscripciones en el [sitio de Tecnotour](www.tecnotour-AR.com).
+Inscripciones en el [sitio de Tecnotour](http://www.tecnotour-AR.com).
 
 En la previa del evento se llevará a cabo una jornada de País Ciencia, la plataforma de comunicación y socialización de la ciencia del CONICET. 
 

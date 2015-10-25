@@ -14,4 +14,4 @@ source:
  
 Fátima Flórez presenta el espectáculo "Fátima para Todos", un show humorístico musical (ideado, creado y dirigido por Norberto Marcos).
 
-Las entradas se consiguen en Infierno Grande (Rosales 458) o por [autoentrada](www.autoentrada.com).
+Las entradas se consiguen en Infierno Grande (Rosales 458) o por [autoentrada](http://www.autoentrada.com).
