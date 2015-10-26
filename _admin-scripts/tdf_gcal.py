@@ -201,12 +201,12 @@ POST_FOLDER = '_posts'
 
 # where the posts reside
 CITIES = ('rio-grande','ushuaia','tolhuin')
-#TODO: This is not OK, Ideally script uses path from where it runs
-ROOT_DIR = os.path.join(os.getcwd(),'test-jekyll') #to get the posts. 
 
-PROCESSED_POSTS_FILE = "processed-posts.csv" #date,city,filename
-#PROCESSED_POSTS_FILE_LINE = "{ciudad}@{filename}"
-PROCESSED_POSTS_FILE_LINE = "{date};{ciudad};{filename}"
+# we are in a subfolder now, must get the parent folder
+ROOT_DIR = os.path.dirname(os.getcwd()) 
+
+PROCESSED_POSTS_FILE = "processed-posts.txt" #date,city,filename
+PROCESSED_POSTS_FILE_LINE = "{ciudad}@{filename}"
 
 # how the places file is called. We assume is in _data/[city]/
 PLACES_FILE = "lugares.yml"
@@ -222,9 +222,11 @@ USER_CREDENTIALS = 'gcal-tdf-credentials.json'
 # end configuration
 # -------------------
 
+
+
 FILES_FOR_PROCESSED_LIST = list() #so we write everything once
 
-PROCESSED_POSTS_FILE = os.path.join(ROOT_DIR,PROCESSED_POSTS_FILE)
+PROCESSED_POSTS_FILE = os.path.join(os.getcwd(),PROCESSED_POSTS_FILE)
 GOOGLE_AUTH      = os.path.join(os.getcwd(), GOOGLE_AUTH)
 USER_CREDENTIALS = os.path.join(os.getcwd(), USER_CREDENTIALS)
 
@@ -471,7 +473,7 @@ def scheduleEvent(list_schedule, event_data):
 		event['start'] = {'dateTime': date_time[0], 'timeZone': timezone}
 		human_datetime_start = _fecha_humana(tmp)
 
-		event['end'] = {'dateTime': event_data[1], 'timeZone': timezone}
+		event['end'] = {'dateTime': date_time[1], 'timeZone': timezone}
 		#if all day: {'date': eEnd}
 		
 		print ("        schedule from {} to daily-until {} ".format(
@@ -553,20 +555,39 @@ def process_post(path, city):
 	print(" done.")
 
 	#normalize dates. Use YYYY-MM-DDTHH:MM:SS
-	post_metadata['date'] = post_metadata['date'].replace(" ", "T")
-	if ":" in post_metadata['date']:
+	try:
+		post_metadata['date'] = post_metadata['date'].replace(" ", "T")
+	except TypeError:
+		pass
+	else:
+		post_metadata['date'] = post_metadata['date'].replace(" ", "T")
+
+	try:
+		if ":" in post_metadata['date']:
+			pass
+	except TypeError:
+		pass
+	else:
 		post_metadata['date'] += ":00"
 
+
 	if post_metadata['date-end']:
-		if ":" in post_metadata['date-end']:
+		try:
+			if ":" in post_metadata['date-end']:
+				pass
+		except TypeError:
+			pass
+		else:
 			post_metadata['date-end'] = post_metadata['date-end'].replace(" ", "T") + ":00"
+
 	else:
 		tmp = datetime.datetime.strptime(post_metadata['date'], '%Y-%m-%dT%H:%M:00')
 		post_metadata['date-end'] = (tmp + datetime.timedelta(hours=1)).strftime('%Y-%m-%dT%H:%M:00')
 
 
+
 	print("    Creating post schedule... ", end="")
-	post_schedule = create_post_schedule(post_metadata['date'], post_metadata['date-end'])
+	post_schedule = create_post_schedule(str(post_metadata['date']), str(post_metadata['date-end']))
 	print(" done.")
 
 	# create google calendar event
@@ -899,13 +920,21 @@ processed_posts = list()
 # start
 if __name__ == '__main__':
 
+	print (" initiating ... " + PROCESSED_POSTS_FILE)
+
+
 	tmp = get_processed_file()
 	if tmp:
 		processed_posts = get_processed_file()
 		tmp = ""
 
+	# ge today's date (only)
+	#today_date = datetime.date.today() 
+	today_date = datetime.datetime.today()
+		# I don't know what i'm doing but it works
+	today_date = today_date.isoformat(sep=' ').split()[0]
+	today_date = datetime.datetime.strptime(today_date, '%Y-%m-%d')
 
-	today_date = datetime.date.today() #only date
 
 	for ciudad in CITIES:
 		print (" \n scanning: " + ciudad)
@@ -926,7 +955,7 @@ if __name__ == '__main__':
 				file_path = os.path.join(root,archivo)
 				#filename is YYYY-MM-DD-slug.md
 				file_date = "-".join(archivo.split("-")[0:3])
-				file_line_processed = PROCESSED_POSTS_FILE_LINE.format(date=file_date,ciudad=ciudad,filename=archivo)
+				file_line_processed = PROCESSED_POSTS_FILE_LINE.format(ciudad=ciudad,filename=archivo)
 
 				file_date = datetime.datetime.strptime(file_date, '%Y-%m-%d')
 
