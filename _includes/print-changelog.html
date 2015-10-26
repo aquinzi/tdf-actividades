@@ -41,14 +41,16 @@
 				{% assign the_change = "" %}
 
 				{% if changes contains ":" %}
-					{% assign change_pieces = changes |split:":" %}
+					{% assign change_pieces = changes | split:":" | first %}
 
 					{%comment%} "translate" to proper classes{%endcomment%}
-					{% assign log_class = change_pieces[0] %}
+					{% assign log_class = change_pieces %}
+					{% capture tmp %}{{log_class}}:{% endcapture %}
+
 					{% if log_class == "edit" %}{% assign log_class = "fix" %}{%endif%}
 					{% if log_class == "del" %}{% assign log_class = "delete" %}{%endif%}
 
-					{% assign the_change = change_pieces[1] %}
+					{% assign the_change = changes | replace: tmp,"" %}
 
 				{%else%}
 					{%comment%} just normal info {%endcomment%}
