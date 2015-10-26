@@ -5,7 +5,7 @@ date: 2015-11-03 19:00
 no-time-start: 
 date-end: 2015-11-21 12:00
 no-time-end: 
-location: frrg
+location: utnrg
 tags: [cursos]
 source: http://www.airelibre.com.ar/2015/10/23/facultad-regional-rio-grande-capacitacion-en-metodo-5-s-en-la-utn/
 people: []
