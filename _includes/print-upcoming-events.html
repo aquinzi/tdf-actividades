@@ -11,42 +11,33 @@
 		upcoming (for upcoming events in event's details)
 {%endcomment%}
 
+{% unless post_list %}
+	{% assign post_list = site.posts | sort:"date" %}
+{% endunless %}
+{% unless mode %}
+	{% assign mode = "index" %}
+{% endunless %}
 
 {% if post_list and mode %}
-
 	{% assign there_are_events = false %}
 	{% assign processed_items  = 0 %}
-	{% assign cant_max_items   = false %}
+	{% assign cant_max_items   = 10 %}
 	{% if include.max_items %}{% assign cant_max_items = include.max_items %}{% endif %}
 
+	<ul{% if mode == "index" %} class="day-events"{%endif%}>	
 	{% for post in post_list  %}
-
-		{% if cant_max_items and processed_items > cant_max_items %}{% break %}
+		{% if processed_items > cant_max_items %}{% break %}
 		{%endif%}
 
 		{% assign current_date_epoch = post.date | date:"%s" | plus: 0 %}
 
-		{% if (current_date_epoch < site_built) or (current_date_epoch > site_built_tendays) %}
-			{% comment %} 
-				close here, as we opened it inside the loop
-			{%endcomment%}
-			{% unless forloop.first %}</ul>{%endunless%}
-			{% break %}
+		{% if current_date_epoch < site_built or current_date_epoch > site_built_tendays %}
+			{% continue %}
 		{% endif %}
-
-		{% comment %} 
-			open list here, so if there's nothing found we can print OUTSIDE the list, 
-			in a normal block tag
-		{%endcomment%}
-		{% if forloop.first %}
-			<ul{% if mode == "index" %} class="day-events"{%endif%}>
-		{%endif%}
 
 		{% assign there_are_events = true %}
 
-		{% if cant_max_items  %}
-			{% assign processed_items = processed_items | plus: 1 %}
-		{%endif%}
+		{% assign processed_items = processed_items | plus: 1 %}
 
 		{% assign this_city = post.category %}
 		{% assign this_city_slug = this_city | replace:'-','' %}
@@ -95,7 +86,7 @@
 					</p>
 				</div>
 
-				{% if post.tags.size > 1 %}
+				{% if post.tags.size > 0 %}
 					<p class="tags"><span class="visuallyhidden">etiquetas: </span>
 					{% comment %} just because we want pretty tags, otherwise: post.tags | join:"," {% endcomment %}
 					{% for tag in post.tags %}
@@ -107,13 +98,13 @@
 
 		</li>
 
-		{% comment %} 
-			close here, as we opened it inside the loop
-		{%endcomment%}
-		{% if forloop.last %}</ul>{%endif%}
-
 	{% endfor %}
 
-	{% unless there_are_events %} No hay nada agendado para estos 10 días. {% endunless %}
+	{% unless there_are_events %} <li>No hay nada agendado para estos 10 días.</li> {% endunless %}
+
+	</ul>
+		
+	
+
 
 {% endif %} {% comment %} end empty check {%endcomment%}
