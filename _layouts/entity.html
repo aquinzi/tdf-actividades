@@ -18,7 +18,25 @@ layout: default
 			{% if page.city == "ushuaia" %}{% endif %}
 			{% if page.city == "tolhuin" %}{% endif %}
 
-			<p class="categoria">Categoría: <a href="{{category_link}}" class="p-category">{{page.categoria | replace:"-", " "}}</a></p>
+			{% assign cat_alternativo = "" %}
+			{% assign tmp = page.city | replace: "-",""%}
+
+			{% for type in site.data.[tmp].actividades %}
+				{% for item in type[1] %}
+					{%if item.nombre == page.categoria %}
+						{% if item.alternativo and item.alternativo.size > 0 %}
+							{% assign cat_alternativo = item.alternativo %}
+						{%endif%}
+						{% break %}
+					{%endif%}
+
+				{% endfor%}
+				{%if cat_alternativo != "" %}{% break %}{%endif%}
+			{% endfor%}
+
+			<p class="categoria">Categoría: <a href="{{category_link}}" class="p-category">{{page.categoria | replace:"-", " "}}</a> 
+			{% if cat_alternativo %} (también {{cat_alternativo | join: ', '}}) {% endif %}
+			</p>
 		</div>
 	</header>
 
