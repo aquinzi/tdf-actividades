@@ -417,39 +417,6 @@ def scheduleEvent(list_schedule, event_data):
 
 		return tmp
 
-		'''
-		event_month = date_time.month
-
-		if event_month == 1:
-			month = "en." if abbr else "enero"
-		if event_month == 2:
-			month = "febr." if abbr else "febrero"
-		if event_month == 3:
-			month = "mzo." if abbr else "marzo"
-		if event_month == 4:
-			month = "abr." if abbr else "abril"
-		if event_month == 5:
-			month = "my." if abbr else "mayo"
-		if event_month == 6:
-			month = "jun." if abbr else "junio"
-		if event_month == 7:
-			month = "jul." if abbr else "julio"
-		if event_month == 8:
-			month = "agt." if abbr else "agosto"
-		if event_month == 9:
-			month = "sept." if abbr else "septiembre"
-		if event_month == 10:
-			month = "oct." if abbr else "octubre"
-		if event_month == 11:
-			month = "nov." if abbr else "noviembre"
-		if event_month == 12:
-			month = "dic." if abbr else "diciembre"
-		if event_month < 10:
-			tmp = tmp.replace("//0" + str(event_month) + "//", month)
-		else:
-			tmp = tmp.replace("//" + str(event_month) + "//", month)
-		'''
-
 	
 	#cycle list
 	for date_time in list_schedule:
@@ -469,11 +436,11 @@ def scheduleEvent(list_schedule, event_data):
 		#event['reminders']['useDefault'] = False #remove reminder, this is for myself
 		event['summary'] = event_data['title']
 
-		tmp = datetime.datetime.strptime(date_time[0], '%Y-%m-%dT%H:%M:00')
 		event['start'] = {'dateTime': date_time[0], 'timeZone': timezone}
-		human_datetime_start = _fecha_humana(tmp)
 
+		tmp = datetime.datetime.strptime(date_time[1], '%Y-%m-%dT%H:%M:00')
 		event['end'] = {'dateTime': date_time[1], 'timeZone': timezone}
+		human_datetime_end = _fecha_humana(tmp) #the real date
 		#if all day: {'date': eEnd}
 		
 		print ("        schedule from {} to daily-until {} ".format(
@@ -491,7 +458,7 @@ def scheduleEvent(list_schedule, event_data):
 
 		event['description'] = gcal_description.format(
 			city=city, tags=tags, title=event['summary']
-			, human_date=human_datetime_start, place=place
+			, human_date=human_datetime_end, place=place
 			)
 		
 		#use recurrence so we dont have to create daily events within same time
