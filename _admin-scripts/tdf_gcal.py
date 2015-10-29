@@ -438,7 +438,7 @@ def scheduleEvent(list_schedule, event_data):
 
 		event['start'] = {'dateTime': date_time[0], 'timeZone': timezone}
 
-		tmp = datetime.datetime.strptime(date_time[1], '%Y-%m-%dT%H:%M:00')
+		tmp = datetime.datetime.strptime(date_time[1], '%Y-%m-%dT%H:%M:00-0300')
 		event['end'] = {'dateTime': date_time[1], 'timeZone': timezone}
 		human_datetime_end = _fecha_humana(tmp) #the real date
 		#if all day: {'date': eEnd}
