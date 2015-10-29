@@ -1,6 +1,7 @@
 rio-grande@2015-10-03-curso-modelado-diseño-3d.md
 rio-grande@2015-11-01-yo-corro-por-malvinas.md
-rio-grande@2015-10-31-pre-cosquin-2016.mdrio-grande@2015-10-31-torneo-mayor-ajedrez-semifinales.md
+rio-grande@2015-10-31-pre-cosquin-2016.md
+rio-grande@2015-10-31-torneo-mayor-ajedrez-semifinales.md
 rio-grande@2015-11-01-tercera-maraton-malvinas.md
 rio-grande@2015-11-03-capacitacion-metodo-5s.md
 rio-grande@2015-11-06-curso-neumatica-inicial.md
@@ -12,4 +13,4 @@ ushuaia@2015-10-29-curso-calidad-mediciones-laboratorio.md
 ushuaia@2015-10-30-curso-calidad-mediciones-laboratorio.md
 ushuaia@2015-11-01-muestra-fotografica-espiritu-hombres-tdf.md
 tolhuin@2015-11-08-torneo-relampago-voley.md
-tolhuin@2015-12-13-fiesta-provincial-lenga.md
+tolhuin@2015-12-13-fiesta-provincial-lenga.mdushuaia@2015-11-14-pablito-martin.md
