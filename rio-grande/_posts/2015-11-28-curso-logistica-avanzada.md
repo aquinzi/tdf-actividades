@@ -1,10 +1,10 @@
 ---
 layout: event 
 title: Curso de Logística avanzada
-date: 2015-11-28
-no-time-start: 09:00
-date-end: 2015-11-28
-no-time-end: 12:00
+date: 2015-11-28 09:00
+no-time-start:
+date-end: 2015-11-28 12:00
+no-time-end:
 location: utnrg
 category: rio-grande
 tags: [cursos]

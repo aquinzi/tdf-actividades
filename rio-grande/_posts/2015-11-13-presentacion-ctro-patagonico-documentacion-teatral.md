@@ -1,6 +1,6 @@
 ---
 layout: event 
-title: Presentación Ctro. Patagónico de Documentación Teatral.
+title: Presentación Ctro. Patagónico de Documentación Teatral
 date: 2015-11-13 10:00
 no-time-start: 
 date-end: 2015-11-13 11:50

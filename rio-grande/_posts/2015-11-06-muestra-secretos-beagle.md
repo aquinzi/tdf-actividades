@@ -1,10 +1,10 @@
 ---
 layout: event 
 title: 'Muestra: "Los secretos del Beagle"'
-date: 2015-11-06
-no-time-start: 10:00
-date-end: 2015-11-27
-no-time-end: 22:00
+date: 2015-11-06 10:00
+no-time-start:
+date-end: 2015-11-27 22:00
+no-time-end:
 location: untdf
 category: rio-grande
 tags: [muestra]
