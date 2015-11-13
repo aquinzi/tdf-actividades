@@ -19,6 +19,7 @@ so they can be posted using IFTTT (so dirty!)
 #GCAL:
 #   probably we could need it. event['id'] (same as event['iCalUID'], this has @google.com)
 
+# TODO: use the metadata in file to check if it's old or not. Reason: events that span multiple days (expositions) and were added later.
 # TODO: support to create shorturls
 # PRobably we should read config file so we dont hardcode stuff
 # TODO: find a way to fix updated events. 
@@ -96,7 +97,6 @@ DAYS_BEFORE = 3 #How many days before do we start posting the event?
 
 GOOGLE_AUTH = "client_secrets.json"
 USER_CREDENTIALS = 'gcal-tdf-credentials.json'
-
 
 # -------------------
 # end configuration
@@ -318,7 +318,15 @@ def scheduleEvent(list_schedule, event_data):
 
 		event['start'] = {'dateTime': date_time[0], 'timeZone': timezone}
 
-		tmp = datetime.datetime.strptime(event_data['date'], '%Y-%m-%dT%H:%M:00')
+		try:
+			tmp = datetime.datetime.strptime(event_data['date'], '%Y-%m-%dT%H:%M:00')
+		except TypeError:
+			tmp = event_data['date']
+		else:
+			tmp = datetime.datetime.strptime(event_data['date'], '%Y-%m-%dT%H:%M:00')
+
+
+		
 		event['end'] = {'dateTime': date_time[1], 'timeZone': timezone}
 		human_datetime_end = _fecha_humana(tmp) #the real date
 		#if all day: {'date': eEnd}
@@ -389,57 +397,27 @@ def executeCall(method):
 	return None
 
 
-def process_post(path, city):
+def process_post(path, city, meta=False):
 	"""Process the post
 	
 	Args:
 	    path (str)
 	    city (str)
+	    meta (dict) if we got the metadata before 
 	"""
 
 	print("    Getting metadata... ", end="")
-	post_metadata = get_post_metadata(path, city)
+	if not meta:
+		meta = get_post_metadata(path, city)
 	print(" done.")
 
-	#normalize dates. Use YYYY-MM-DDTHH:MM:SS
-	try:
-		post_metadata['date'] = post_metadata['date'].replace(" ", "T")
-	except TypeError:
-		pass
-	else:
-		post_metadata['date'] = post_metadata['date'].replace(" ", "T")
-
-	try:
-		if ":" in post_metadata['date']:
-			pass
-	except TypeError:
-		pass
-	else:
-		post_metadata['date'] += ":00"
-
-
-	if post_metadata['date-end']:
-		try:
-			if ":" in post_metadata['date-end']:
-				pass
-		except TypeError:
-			pass
-		else:
-			post_metadata['date-end'] = post_metadata['date-end'].replace(" ", "T") + ":00"
-
-	else:
-		tmp = datetime.datetime.strptime(post_metadata['date'], '%Y-%m-%dT%H:%M:00')
-		post_metadata['date-end'] = (tmp + datetime.timedelta(hours=1)).strftime('%Y-%m-%dT%H:%M:00')
-
-
-
 	print("    Creating post schedule... ", end="")
-	post_schedule = create_post_schedule(str(post_metadata['date']), str(post_metadata['date-end']))
+	post_schedule = create_post_schedule(str(meta['date']), str(meta['date-end']))
 	print(" done.")
 
 	# create google calendar event
 	print("    Inserting post's schedule in Google Calendar... ")
-	scheduleEvent(post_schedule, post_metadata)
+	scheduleEvent(post_schedule, meta)
 	
 	return True # future proof: if we have an error in some kind
 
@@ -491,8 +469,6 @@ def get_post_metadata(path, city):
 				if key == "tags":
 					metadata[key] = ",".join(metadata[key])
 
-
-
 	else:
 		yaml_block = 0 
 
@@ -515,6 +491,39 @@ def get_post_metadata(path, city):
 
 	#check if location has ID, and if it does, find the proper name
 	metadata['location'] = find_place_id(city, metadata['location'])
+
+	#normalize dates. Use YYYY-MM-DDTHH:MM:SS
+	
+	try:
+		metadata['date'] = metadata['date'].replace(" ", "T")
+	except TypeError:
+		pass
+	else:
+		metadata['date'] = metadata['date'].replace(" ", "T")
+
+	try:
+		if ":" in metadata['date']:
+			pass
+	except TypeError:
+		pass
+	else:
+		metadata['date'] += ":00"
+
+
+	if metadata['date-end']:
+		try:
+			if ":" in metadata['date-end']:
+				pass
+		except TypeError:
+			pass
+		else:
+			metadata['date-end'] = metadata['date-end'].replace(" ", "T") + ":00"
+
+	else:
+		tmp = datetime.datetime.strptime(metadata['date'], '%Y-%m-%dT%H:%M:00')
+		metadata['date-end'] = (tmp + datetime.timedelta(hours=1)).strftime('%Y-%m-%dT%H:%M:00')
+		metadata['date-end'] = metadata['date-end'].isoformat()
+
 
 	return metadata
 
@@ -628,7 +637,7 @@ def update_processed_file(list_files):
 
 	#just dirtify it
     with open(PROCESSED_POSTS_FILE,'a',encoding="utf-8") as tmp:
-    	tmp.write("\n".join(list_files))
+    	tmp.write("\n" + "\n".join(list_files))
 
 
 def clean_processed_file():
@@ -806,6 +815,7 @@ if __name__ == '__main__':
 
 				file_date = datetime.datetime.strptime(file_date, '%Y-%m-%d')
 
+
 				if file_date < today_date:
 					print (" ... old. skip", end="")
 					continue
@@ -816,7 +826,9 @@ if __name__ == '__main__':
 
 				print() #print so we can use newlines for next messages
 
-				result = process_post(file_path,ciudad)
+				print ("    building: " + file_line_processed)
+
+				result = process_post(file_path, ciudad)
 
 				# add file to processed file-list
 				FILES_FOR_PROCESSED_LIST.append(file_line_processed)
