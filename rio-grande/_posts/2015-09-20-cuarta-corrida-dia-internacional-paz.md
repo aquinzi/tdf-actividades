@@ -7,7 +7,7 @@ date-end: 2015-09-20
 no-time-end: true
 category: rio-grande
 location: El Poste de la Paz (San Martín al 400)
-tags: [atletismo]
+tags: [deportes, atletismo]
 source: http://www.surenio.com.ar/los-5-kilometros-desde-el-poste-de-la-paz/
 people: [aafm,rotaryclub]
 ---

@@ -7,7 +7,7 @@ date-end: 2015-11-14 14:00
 no-time-end: 
 location: Comedor del BIM N°5
 category: rio-grande
-tags: [deporte, ajedrez]
+tags: [deportes, ajedrez]
 source: http://www.surenio.com.ar/continua-el-interbarrial/
 people: []
 ---

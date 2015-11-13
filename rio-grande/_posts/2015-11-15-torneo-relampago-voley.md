@@ -6,7 +6,7 @@ no-time-start: true
 date-end: 2015-11-15
 no-time-end: true
 location: gimnasio de la UOM (barrio Mutual)
-tags: [voley]
+tags: [deportes, voley]
 source: http://www.surenio.com.ar/dos-torneos-relampago-en-tolhuin-y-la-uom/
 people: [clubtalleres]
 category: rio-grande

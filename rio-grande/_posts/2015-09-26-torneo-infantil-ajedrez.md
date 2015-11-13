@@ -7,7 +7,7 @@ date-end: 2015-09-26
 no-time-end: true
 category: rio-grande
 location: Escuela N2
-tags: [ajedrez]
+tags: [deportes, ajedrez]
 source:
 people: [club-ajedrez-rg]
 ---

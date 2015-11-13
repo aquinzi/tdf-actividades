@@ -5,7 +5,7 @@ date: 2015-08-15 10:00
 date-end: 2015-08-15 23:30
 category: rio-grande
 location: muriel
-tags: [futsal]
+tags: [deportes, futsal]
 source: http://www.surenio.com.ar/el-sabado-juegan-las-selecciones-de-rio-grande-y-ushuaia/
 people: [futsal-afa]
 ---

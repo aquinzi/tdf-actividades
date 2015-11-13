@@ -5,7 +5,7 @@ category: rio-grande
 location: Río Grande, Porvenir
 date: 2015-08-15 09:00
 date-end: 2015-08-16 17:00
-tags: [automovilismo]
+tags: [deportes, automovilismo]
 ---
 
 Edición número 42.

@@ -7,7 +7,7 @@ date-end: 2015-11-29
 no-time-end: true
 location: El Mirador
 category: rio-grande
-tags: [atletismo]
+tags: [deportes, atletismo]
 source: http://www.surenio.com.ar/anotan-para-el-domingo/
 people: [aafm]
 ---

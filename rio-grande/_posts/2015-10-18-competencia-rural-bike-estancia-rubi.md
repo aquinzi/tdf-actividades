@@ -6,7 +6,7 @@ no-time-start:
 date-end: 2015-10-18
 no-time-end: true
 location: estancia Rubi
-tags: [ciclismo]
+tags: [deportes, ciclismo]
 source: http://www.surenio.com.ar/confirmada-la-estancia-rubi/
 people: [teamloslentos]
 category: rio-grande

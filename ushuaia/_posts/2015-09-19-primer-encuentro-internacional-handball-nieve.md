@@ -7,7 +7,7 @@ date-end: 2015-09-19
 no-time-end: true
 category: ushuaia
 location: Complejo Invernal Haruwen
-tags: [handball]
+tags: [deportes,handball]
 source: http://www.surenio.com.ar/encuentro-en-la-nieve-de-haruwen/
 people: [fbtdf]
 ---

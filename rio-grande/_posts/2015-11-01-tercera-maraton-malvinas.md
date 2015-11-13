@@ -7,7 +7,7 @@ date-end: 2015-11-01
 no-time-end: true
 category: rio-grande
 location: calle "El Cano", en la zona de los monumentos a los caídos.
-tags: [atletismo]
+tags: [deportes, atletismo]
 source:
 ---
 

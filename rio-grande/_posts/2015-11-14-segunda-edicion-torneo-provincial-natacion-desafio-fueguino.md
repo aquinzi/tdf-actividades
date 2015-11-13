@@ -7,7 +7,7 @@ date-end: 2015-11-14 18:00
 no-time-end: 
 location: natatoriomunicipal
 category: rio-grande
-tags: [deporte, natacion]
+tags: [deportes, natacion]
 source: http://www.riogrande.gob.ar/se-realiza-la-segunda-edicion-del-torneo-provincial-de-natacion-desafio-fueguino/
 people: []
 ---

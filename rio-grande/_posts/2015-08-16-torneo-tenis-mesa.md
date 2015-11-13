@@ -6,7 +6,7 @@ no-time-start:
 date-end: 2015-08-16
 no-time-end: true
 location: cdm
-tags: [tenis-de-mesa]
+tags: [deportes, tenis-de-mesa]
 source: http://www.surenio.com.ar/desde-las-1900-en-el-cdm/
 people: [atemefu]
 category: rio-grande

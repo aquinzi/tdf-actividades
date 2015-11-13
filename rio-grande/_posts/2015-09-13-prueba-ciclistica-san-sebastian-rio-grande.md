@@ -5,7 +5,7 @@ date: 2015-09-13 11:30
 date-end: 2015-09-13 15:00
 category: rio-grande
 location:
-tags: [ciclismo]
+tags: [deportes, ciclismo]
 source: http://www.riogrande.gob.ar/el-proximo-domingo-se-larga-la-prueba-ciclistica-san-sebastian-rio-grande/
 ---
 

@@ -7,7 +7,7 @@ date-end: 2015-11-08
 no-time-end: true
 location: predio del Tren del Fin del Mundo
 category: ushuaia
-tags: [deporte, tiro]
+tags: [deportes, tiro]
 source: http://www.surenio.com.ar/el-2-de-abril-organizo-un-torneo-social-en-la-capital/
 people: [tf2au]
 ---

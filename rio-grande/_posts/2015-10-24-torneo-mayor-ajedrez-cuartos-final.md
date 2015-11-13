@@ -6,7 +6,7 @@ no-time-start:
 date-end: 2015-10-25
 no-time-end: true
 location: Club Ajedrez Río Grande
-tags: [ajedrez]
+tags: [deportes, ajedrez]
 source: http://www.airelibre.com.ar/2015/10/24/ajedrez-comenzo-el-torneo-mayor-de-rio-grande-con-17-jugadores-y-un-sistema-distinto-comenzo-el-torneo-mas-importante-del-ano-a-nivel-local/
 people: [CARG,FeFuA]
 category: rio-grande

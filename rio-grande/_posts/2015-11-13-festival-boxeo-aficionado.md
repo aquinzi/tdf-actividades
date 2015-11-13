@@ -7,7 +7,7 @@ date-end: 2015-11-13 23:59
 no-time-end:
 location: centrodeportivo
 category: rio-grande
-tags: [deporte, boxeo]
+tags: [deportes, boxeo]
 source: http://www.surenio.com.ar/festival-aficionado-con-siete-combates/
 people: []
 ---

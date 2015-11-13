@@ -6,7 +6,7 @@ no-time-start:
 date-end: 2015-10-18
 no-time-end: true
 location: Cabo Domingo
-tags: [atletismo]
+tags: [deportes, atletismo]
 source: http://www.surenio.com.ar/el-cabo-domingo-los-espera-con-un-cross/
 people: [aafm]
 category: rio-grande

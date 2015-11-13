@@ -5,7 +5,7 @@ date: 2015-09-05 14:00
 date-end: 2015-09-05 17:00
 category: rio-grande
 location: margalot
-tags: [karate]
+tags: [deportes, karate]
 source: 
 ---
 

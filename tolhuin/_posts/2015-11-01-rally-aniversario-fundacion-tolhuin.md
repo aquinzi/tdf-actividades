@@ -6,7 +6,7 @@ no-time-start: 09:00
 date-end: 2015-11-01
 no-time-end: 17:00
 location: Tolhuin
-tags: [ciclismo]
+tags: [deportes,ciclismo]
 source: http://www.surenio.com.ar/el-rally-de-tolhuin-cumple-este-domingo-su-decima-edicion/
 people: [acmot]
 category: tolhuin

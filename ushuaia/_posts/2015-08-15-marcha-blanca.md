@@ -5,7 +5,7 @@ date:   2015-08-15 11:15
 date-end:   2015-08-15 14:00
 category: ushuaia
 location:   Centro Invernal Tierra Mayor 
-tags: [esqui-de-fondo]
+tags: [deportes,esqui-de-fondo]
 source:   http://www.surenio.com.ar/marcha-blanca-justyna-kowalczyk-y-carlos-lannes-fueron-los-ganadores-de-la-carrera-de-los-21-kilometros/ 
 ---
 

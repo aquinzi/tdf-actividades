@@ -7,7 +7,7 @@ date-end: 2015-11-15
 no-time-end: true
 location: BIM N°5
 category: rio-grande
-tags: [atletismo]
+tags: [deportes, atletismo]
 source: http://www.surenio.com.ar/anotan-para-el-domingo/
 people: [aradav]
 ---

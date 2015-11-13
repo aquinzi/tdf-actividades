@@ -7,7 +7,7 @@ date-end: 2015-11-01
 no-time-end: true
 location: Club Mercantil
 category: ushuaia
-tags: [aikido]
+tags: [deportes,aikido]
 source: http://www.surenio.com.ar/la-aikikai-ushuaia-dojo-realizo-un-seminario-en-la-capital-provincial/
 people: [aaud]
 ---

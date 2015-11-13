@@ -6,7 +6,7 @@ no-time-start:
 date-end: 2015-11-08
 no-time-end: true
 location: Polideportivo Ezequiel Rivero
-tags: [deporte,voley]
+tags: [deportes,voley]
 source: http://www.surenio.com.ar/dos-torneos-relampago-en-tolhuin-y-la-uom/
 people: []
 category: tolhuin

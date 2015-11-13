@@ -6,7 +6,7 @@ no-time-start:
 date-end: 2015-10-04
 no-time-end: true
 location: "O'Higgins casi Antártida Argentina"
-tags: [atletismo]
+tags: [deportes, atletismo]
 source: http://www.surenio.com.ar/cierran-las-inscripciones-para-la-prueba-mas-emblematica/
 people: [aradav]
 category: rio-grande
