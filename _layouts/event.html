@@ -21,6 +21,7 @@ date: %R = 24-hour time HH:MM
 
 {% assign this_city = page.categories | first %}
 
+
 <article class="h-event">
 
 <header> 
@@ -52,7 +53,9 @@ date: %R = 24-hour time HH:MM
 	      {% endif %}     
 	    </time>
 
-	    {% include get-place.html place=page.location city=this_city link=true %}
+	    {% capture place_name %}{% include get-place.html place=page.location city=this_city link=true %}{% endcapture %}
+
+	    {{place_name}}
 	    
 	    <a class="city" href="{{site.data.wiki.[this_city]}}">{{ site.data.prettify.[this_city] }}</a>
 
@@ -63,10 +66,10 @@ date: %R = 24-hour time HH:MM
 <ul class="event-subscribe">
 	{% if page.date >= site.time %}
 	{% capture tmp %}{{page.location}}, {{ site.data.prettify.[this_city] }}{% endcapture %}
-	<li><a href="{% include gcal-url.html subject=page.title date_start=page.date date_end=page.date-end location=tmp %}
-	" title="Añadir a gcal">Google Calendar</a></li>
-	{%comment%}<li><a href="<?php echo ical_link();?>" title="Suscribirse por ical">iCal</a></li>{%endcomment%}
+	{% capture gcal_link %}{% include gcal-url.html subject=page.title date_start=page.date date_end=page.date-end location=tmp %}{% endcapture %}
+	<li><a href="{{ gcal_link | strip_newlines }}" title="Añadir a gcal">Google Calendar</a></li>
 	{%endif%}
+	<li><a href='whatsapp://send?text={{ page.title }}. Info: {{ page.url | prepend: site.baseurl }}' class="u-url">Enviar por Whatsapp</a></li>
 	<li><a href="{{ page.url | prepend: site.baseurl }}" class="u-url">Link del evento</a></li>
 </ul>
 
@@ -116,27 +119,20 @@ date: %R = 24-hour time HH:MM
  {
    "@context": "http://schema.org",
    "@type": "Event",
-   "name": "{{ page.title }}",
+   "name": '{{ page.title }}',
    "startDate": "{{start_date_iso}}",
    "endDate": "{{end_date_iso}}", //optional
    "location": {
      "@type": "Place",
-     "name" : "{{place_name}}",
-     //"address" : "Direccon linda, Río Grande",
+     "name" : "{{place_name | strip_html | strip_newlines | replace:"	",""}}",
      "address": {
        "@type": "PostalAddress",
-       //"streetAddress": "Direccion linda"
+       "streetAddress": ""
        "postalCode": "9420",
-       "addressLocality": "{{ page.categories[0] }}"
+       "addressLocality": "{{ site.data.prettify.[this_city] }}"
      }
    },
-   "description": "{{ content | truncate: 30}}",
-   /* for now exclude price or keep it as free */
-   "offers": {
-     "@type": "Offer",
-     "priceCurrency": "ARS", //ISO_4217
-     "price": "0"
-   }
+   "description": "{{ content | strip_html | truncate: 100}}",
  }
  </script>
 

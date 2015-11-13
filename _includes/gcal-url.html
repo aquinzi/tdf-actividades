@@ -1,17 +1,13 @@
 {% comment %}easily print google calendar url to subscribe {%endcomment%}
-
 {% assign subject = include.subject %}
 {% assign date_start = include.date_start %}
 {% assign date_end = include.date_end %}
 {% assign location = include.location %}
 {% assign details = "" %}
 {% if include.details %}{% assign details = include.details %}{%endif%}
-
 {% if subject != "" and date_start != "" %}
-	{% assign subject = subject | replace:" ", "+" | replace:",", "%2C" %}
-	{% assign details = details | replace:" ", "+" | replace:",", "%2C" %}
-	{% assign location = location | replace:" ", "+" | replace:",", "%2C" %}
-
-	{% assign date_start = date_start | date:"%Y%m%dT%H%M00" %}
-	{% assign date_end = date_end | date:"%Y%m%dT%H%M00" %}
+{% assign subject = subject | replace:" ", "+" | replace:",", "%2C"%}
+{% assign details = details | replace:" ", "+" | replace:",", "%2C"%}
+{% assign location = location | replace:" ", "+" | replace:",", "%2C"%}
+{% assign date_start = date_start | date:"%Y%m%dT%H%M00"%}{% assign date_end = date_end | date:"%Y%m%dT%H%M00" %}
 http://www.google.com/calendar/event?action=TEMPLATE&#038;text={{subject}}&#038;dates={{date_start}}/{{date_end}}&#038;details={{details}}&#038;location={{location}}&#038;trp=false{%endif%}
