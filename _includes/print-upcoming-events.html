@@ -2,6 +2,7 @@
 {% assign site_built           = site.time | date:"%s" | plus: 0 %}
 {% assign site_built_sevendays = site.time | date:"%s" | plus: 604800  %}
 {% assign site_built_tendays   = site.time | date:"%s" | plus: 864000  %}
+{% assign site_built_twoweeks  = site.time | date:"%s" | plus: 1209600  %}
 
 {% assign post_list = include.posts %}
 {% assign mode      = include.mode %}
@@ -31,7 +32,7 @@
 
 		{% assign current_date_epoch = post.date | date:"%s" | plus: 0 %}
 
-		{% if current_date_epoch < site_built or current_date_epoch > site_built_tendays %}
+		{% if current_date_epoch < site_built or current_date_epoch > site_built_twoweeks %}
 			{% continue %}
 		{% endif %}
 
