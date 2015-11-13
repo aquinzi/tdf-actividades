@@ -137,3 +137,128 @@ Imágenes de cover para redes sociales
 - tdf satelital: (2001) [NASA](http://visibleearth.nasa.gov/view.php?id=56170) popular porque esta en [wikimedia](https://commons.wikimedia.org/wiki/File:TierraDelFuego_Satellite1.jpg)
 - tdf satelital (todo el cono sur de arg-chile) (2003) [NASA][http://visibleearth.nasa.gov/view.php?id=65873]
 - tdf satelital (sin muchas nubes y poca nieve) (2006) [spacearchive](http://www.spacearchive.info/2006-11-22-tierra-del-fuego-large.jpg)
+
+
+Para conectarse a gCal sin API
+---------------------------------
+
+if we dont feel like using google API libs.: 
+
+	#code from https://gist.github.com/ymotongpoo/1907281 (and some transltions in: https://gist.github.com/joemontibello/1a17e3d27955897d53b2
+	  )
+	import requests, json, webbrowser
+	import urllib.parse #in python2: from urllib import urlencode
+
+	#set variables needed for API access:
+	client_id = "CLIENT_ID"
+	client_secret = "CLIENT_SECRET"
+	redirect_uri = "urn:ietf:wg:oauth:2.0:oob" #https%3A%2F%2Foauth2-login-demo.appspot.com%2Fcode&
+	#redirect_uri = "http://localhost/" # redirects to http://localhost/?code=4/E6MdDZWeEFcCubmzI63ip5d_iX8XUzmaBopDcs18Pko#
+	base_url = "https://accounts.google.com/o/oauth2/" 
+	authorization_code = ""
+	access_token = ""
+
+	google_auth_url = "https://accounts.google.com/o/oauth2/auth"
+
+	authorization_code_req = {
+	  "response_type": "code",
+	  "client_id": client_id,
+	  "redirect_uri": redirect_uri,
+	  "scope": "https://www.googleapis.com/auth/calendar"
+	}
+
+	r = requests.get(google_auth_url, params=authorization_code_req, allow_redirects=False)
+
+	url = r.url #user must enter this url to accept auth
+
+	print ("Opening the following URL in default browser. Copy the auth code. " + url)
+
+	# Open URL in a new tab, if a browser window is already open.
+	webbrowser.open_new_tab(url)
+
+	authorization_code = input("\nAuthorization Code >>> ")
+
+
+	# Retrieving authorization_code from authorization API.
+
+	def retrieve_authorization_code():
+	  authorization_code_req = {
+	    "response_type": "code",
+	    "client_id": client_id,
+	    "redirect_uri": redirect_uri,
+	    "scope": ("https://www.googleapis.com/auth/calendar")
+	  }
+	  data = urllib.parse.urlencode(authorization_code_req)
+	  #data = data.encode('utf-8') # data should be bytes
+
+	  r = requests.get(base_url + "auth?" + data, allow_redirects=False)
+
+	  print ("Open the following URL, please enter the string that is displayed in the access after approval.")
+	  url = r.headers.get('location')
+	  Popen(["open", url])
+
+	  authorization_code = input("\nAuthorization Code >>> ")
+	  return authorization_code
+
+
+	#Retrieving access_token and refresh_token from Token API.
+
+	def retrieve_tokens(authorization_code):
+	  access_token_req = {
+	    "code" : authorization_code,
+	    "client_id" : client_id,
+	    "client_secret" : client_secret,
+	    "redirect_uri" : redirect_uri,
+	    "grant_type": "authorization_code",
+	  }
+	  data = urllib.parse.urlencode(access_token_req)
+	  #data = data.encode('utf-8') # data should be bytes
+	  content_length=len(data)
+	  access_token_req['content-length'] = str(content_length)
+
+	  r = requests.post(base_url + "token", data=access_token_req)
+	  data = json.loads(r.text)
+	  return data
+
+
+	def get_calendar_list():
+	  global authorization_code
+	  global access_token
+
+	  authorization_code = retrieve_authorization_code()
+	  tokens = retrieve_tokens(authorization_code)
+	  access_token = tokens['access_token']
+	  authorization_header = {"Authorization": "OAuth " + access_token}
+
+	  r = requests.get("https://www.googleapis.com/calendar/v3/users/me/calendarList",
+	                 headers=authorization_header)
+	  return r.text
+
+
+	def get_events_list():
+	  global authorization_code
+	  global access_token
+
+	  data = json.loads(get_calendar_list())
+
+	  for calendar in data['items']:
+	    calendar_id = calendar['id']
+	    print (calendar['summary'])
+
+	    if authorization_code == "" or access_token == "":
+	      authorization_code = retrieve_authorization_code()
+	      tokens = retrieve_tokens(authorization_code)
+	      access_token = tokens['access_token']
+
+	    authorization_header = {"Authorization": "OAuth " + access_token}
+	    tmp1 = urllib.parse.quote_plus(calendar_id)
+	    tmp2 = urllib.parse.quote_plus(api_key)
+
+	    url = "https://www.googleapis.com/calendar/v3/calendars/" + tmp1 + "/events?key=" + tmp2
+	    r = requests.get(url, headers=authorization_header)
+
+	    events = json.loads(r.text)
+	    for event in events['items']:
+	      print (event.get('summary', '(Event title not set)'))
+
+
