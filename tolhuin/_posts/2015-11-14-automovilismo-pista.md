@@ -6,7 +6,7 @@ no-time-start: true
 date-end: 2015-11-15
 no-time-end: true
 location: autódromo "Carlos Romero"
-categoria: tolhuin
+category: tolhuin
 tags: [automovilismo]
 source: 
 people: [apap, actcf]

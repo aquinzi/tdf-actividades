@@ -6,7 +6,7 @@ no-time-start: true
 date-end: 2015-11-15
 no-time-end: true
 location: Polideportivo "Ezequiel Rivero"
-categoria: tolhuin
+category: tolhuin
 tags: [feria]
 source: http://www.surenio.com.ar/el-14-y-15-habra-una-gran-feria-social/
 people: []

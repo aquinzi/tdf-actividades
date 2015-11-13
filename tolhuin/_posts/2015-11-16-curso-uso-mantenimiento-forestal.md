@@ -6,7 +6,7 @@ no-time-start: 09:00
 date-end: 2015-11-20
 no-time-end: true
 location: instalaciones anexas al Polideportivo "Ezequiel Rivero"
-categoria: tolhuin
+category: tolhuin
 tags: [cursos]
 source: http://www.surenio.com.ar/se-realizara-el-curso-uso-y-mantenimiento-forestal/
 people: []
