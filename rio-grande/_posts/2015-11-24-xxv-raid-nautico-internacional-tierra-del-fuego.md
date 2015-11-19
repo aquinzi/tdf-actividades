@@ -1,8 +1,8 @@
 ---
 layout: event 
 title: XXV Raid Náutico Internacional de Tierra del Fuego
-date: 2015-11-24
-no-time-start: true
+date: 2015-11-24 20:00
+no-time-start: 
 date-end: 2015-11-24
 no-time-end: true
 location: 

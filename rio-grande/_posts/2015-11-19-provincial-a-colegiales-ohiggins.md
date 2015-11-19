@@ -1,6 +1,6 @@
 ---
 layout: event 
-title: 'Provincial A: Colegiales vs. O'Higgins'
+title: "Provincial A: Colegiales vs. O'Higgins"
 date: 2015-11-19 21:00
 no-time-start: 
 date-end: 2015-11-19 22:30
