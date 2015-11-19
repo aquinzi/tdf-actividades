@@ -33,7 +33,18 @@ so they can be posted using IFTTT (so dirty!)
 #                asks what to update (start, end, title, location) add more
 #                creates new title/summary and description
 #                updates event
-
+# use named tuples
+'''>>> from collections import namedtuple
+>>>
+>>>
+>>> Point = namedtuple('Point', ['x','y'])
+>>> p = Point(x=11,y=22)
+>>> p
+Point(x=11, y=22)
+>>> p = p._replace(x=80)
+>>> p
+Point(x=80, y=22)
+'''
 
 
 
@@ -73,8 +84,6 @@ else:
 # --------------
 # configuration
 # --------------
-
-
 
 CALENDAR_ID = "primary" #IFTTT uses the primary calendar
 
@@ -301,10 +310,10 @@ def scheduleEvent(list_schedule, event_data):
 	#cycle list
 	for date_time in list_schedule:
 
-		event = {}
 		human_datetime_start = ""
-		tags = ""
-		city = ""
+		event = {}
+		tags  = ""
+		city  = ""
 		place = ""
 
 		if event_data['city'] == "rio-grande":
@@ -317,18 +326,9 @@ def scheduleEvent(list_schedule, event_data):
 		event['summary'] = event_data['title']
 
 		event['start'] = {'dateTime': date_time[0], 'timeZone': timezone}
-
-		try:
-			tmp = datetime.datetime.strptime(event_data['date'], '%Y-%m-%dT%H:%M:00')
-		except TypeError:
-			tmp = event_data['date']
-		else:
-			tmp = datetime.datetime.strptime(event_data['date'], '%Y-%m-%dT%H:%M:00')
-
-
-		
+	
 		event['end'] = {'dateTime': date_time[1], 'timeZone': timezone}
-		human_datetime_end = _fecha_humana(tmp) #the real date
+		human_datetime_end = _fecha_humana(event_data['start']['timestamp']) #the real date
 		#if all day: {'date': eEnd}
 		
 		print ("        schedule from {} to daily-until {} ".format(
@@ -412,7 +412,7 @@ def process_post(path, city, meta=False):
 	print(" done.")
 
 	print("    Creating post schedule... ", end="")
-	post_schedule = create_post_schedule(str(meta['date']), str(meta['date-end']))
+	post_schedule = create_post_schedule(meta['start']['timestamp'], meta['end']['timestamp'])
 	print(" done.")
 
 	# create google calendar event
@@ -437,7 +437,15 @@ def get_post_metadata(path, city):
 	# date is date-start, but keep it like this (less coding conditionals)
 	metadata = {
 		'title':'', 'date':'','date-end':'','city': city
-		,'tags':'','shortURL':'', 'location':''
+		,'tags':'','shortURL':'', 'location':'',
+
+
+		'start' : {'date': '', 'time':'', 'timestamp':''},
+		'end' : {'date': '', 'time':'', 'timestamp':''}
+		#date = only date, in str: yyyy-mm-dd 
+		#time = only time, in str: hh:mm
+		#timestamp = datetime, the object
+
 	}
 
 	keys = list(metadata.keys()) #so we can remove stuff, like city key
@@ -464,7 +472,12 @@ def get_post_metadata(path, city):
 
 		for key in keys:
 			if key in yaml_doc:
-				metadata[key] = yaml_doc[key]
+				if key == "date":
+					metadata["start"]['date'] = yaml_doc[key]
+				elif key == "date-end":
+					metadata["end"]['date'] = yaml_doc[key]
+				else:
+					metadata[key] = yaml_doc[key]
 
 				if key == "tags":
 					metadata[key] = ",".join(metadata[key])
@@ -485,6 +498,12 @@ def get_post_metadata(path, city):
 				if line.startswith(key + ":"):
 					if not key == "tags":
 						metadata[key] = tmp_line[1]	
+						if key == "date":
+							metadata["start"]['date'] = tmp_line[1]	
+						elif key == "date-end":
+							metadata["end"]['date'] = tmp_line[1]	
+						else:
+							metadata[key] = tmp_line[1]	
 					else:
 						if tmp_line[1] != "[]":
 							metadata['tags'] = tmp_line[1].replace("[", "").replace("]","")
@@ -493,42 +512,46 @@ def get_post_metadata(path, city):
 	metadata['location'] = find_place_id(city, metadata['location'])
 
 	#normalize dates. Use YYYY-MM-DDTHH:MM:SS
-	
-	try:
-		metadata['date'] = metadata['date'].replace(" ", "T")
-	except TypeError:
-		pass
+	if metadata['start'] and " " in str(metadata['start']['date']):
+		datetime_pieces = metadata['start']['date'].split(" ")
+		metadata['start']['date'] = datetime_pieces[0]
+		if datetime_pieces[1] and ":" in datetime_pieces[1]:
+			metadata['start']['time'] = datetime_pieces[1] + ":00"
+			datetime_pieces[1] += ":00"
+
+		metadata['start']['timestamp'] = "T".join(datetime_pieces)
+		metadata['start']['timestamp'] = datetime.datetime.strptime(metadata['start']['timestamp'], '%Y-%m-%dT%H:%M:00')
 	else:
-		metadata['date'] = metadata['date'].replace(" ", "T")
+		metadata['start']['timestamp'] = metadata['start']['date']
 
-	try:
-		if ":" in metadata['date']:
-			pass
-	except TypeError:
-		pass
-	else:
-		metadata['date'] += ":00"
+	if metadata['end'] and " " in str(metadata['end']['date']): 
+		datetime_pieces = metadata['end']['date'].split(" ")
+		metadata['end']['date'] = datetime_pieces[0]
+		if datetime_pieces[1] and ":" in datetime_pieces[1]:
+			metadata['end']['time'] = datetime_pieces[1] + ":00"
+			datetime_pieces[1] += ":00"
 
-
-	if metadata['date-end']:
-		try:
-			if ":" in metadata['date-end']:
-				pass
-		except TypeError:
-			pass
-		else:
-			metadata['date-end'] = metadata['date-end'].replace(" ", "T") + ":00"
+		metadata['end']['timestamp'] = "T".join(datetime_pieces)
+		metadata['end']['timestamp'] = datetime.datetime.strptime(metadata['end']['timestamp'], '%Y-%m-%dT%H:%M:00')
 
 	else:
-		tmp = datetime.datetime.strptime(metadata['date'], '%Y-%m-%dT%H:%M:00')
-		metadata['date-end'] = (tmp + datetime.timedelta(hours=1)).strftime('%Y-%m-%dT%H:%M:00')
-		metadata['date-end'] = metadata['date-end'].isoformat()
 
+		metadata['end']['timestamp'] = metadata['start']['timestamp'] + datetime.timedelta(hours=1)
+
+		metadata['end']['date'] = metadata['end']['timestamp'].strftime('%Y-%m-%d')
+		metadata['end']['time'] = metadata['end']['timestamp'].strftime('%H:%M:00')
+
+
+	#remove temporaly keys 
+	del metadata['date']
+	del metadata['date-end']
 
 	return metadata
 
 
 def find_place_id(city,place):
+
+	city = city.replace("-", "")
 
 	path = os.path.join(ROOT_DIR,"_data",city,PLACES_FILE)
 
@@ -570,43 +593,32 @@ def create_post_schedule(start_date, end_date):
 	"""Finds the schedule for posting the event
 	
 	Args:
-	    start_date (str): when the event starts
-	    end_date (str): when the event ends
+	    start_date (datetime): when the event starts
+	    end_date (datetime): when the event ends
 	
 	Returns:
 	    LIST: list of dates - times
 	"""
 
-	random_minute = random.randrange(1,59)
+	random_minute = str(random.randrange(1,59))
 	post_schedule = list() #tuples: date,time
 
 	# find when do we have to start the event publication and
 	# when it ends
 	
-	try:
-		date_start = datetime.datetime.strptime(start_date, '%Y-%m-%dT%H:%M:00')
-	except ValueError:
-		date_start = datetime.datetime.strptime(start_date, '%Y-%m-%d')
-	'''
-	try:
-		date_end   = datetime.datetime.strptime(end_date, '%Y-%m-%dT%H:%M:00')
-	except ValueError:
-		date_end = datetime.datetime.strptime(end_date, '%Y-%m-%d')
-	'''
+	date_start = start_date
 
 	#use the start date as the finish date. We don't want courses and the like 
 	#(that span multiple days) into the calendar
-	date_end = date_start
+	date_end   = date_start
+	date_start = start_date - datetime.timedelta(days=DAYS_BEFORE)
 
-	date_start = date_start - datetime.timedelta(days=DAYS_BEFORE)
-
-	random_minute = str(random_minute)
 	if len(random_minute) == 1 and not random_minute.startswith("0"):
 		random_minute = "0" + random_minute
 	
 	for hour in HOUR_SCHEDULE:
 		tmp_start = date_start.strftime('%Y-%m-%d') + "T" + hour + ":" + random_minute + ":00"
-		tmp_end = date_end.strftime('%Y-%m-%d') + "T23:59:00-0300"
+		tmp_end   = date_end.strftime('%Y-%m-%d') + "T23:59:00-0300"
 
 		post_schedule.append((tmp_start,tmp_end))
 
