@@ -33,7 +33,6 @@ rio-grande@2015-11-15-obra-soly-loqueando-locura-amor-muerte.md
 rio-grande@2015-11-15-prueba-atletica-dia-infanteria-marina.md
 rio-grande@2015-11-19-curso-logistica-avanzada.md
 rio-grande@2015-11-28-curso-logistica-avanzada.md
-rio-grande@2015-11-29-vuelta-paso-garibaldi-septima-edicion.md
 ushuaia@2015-11-14-espectaculo-pedro-aznar.md
 ushuaia@2015-11-14-ushuaia-emprende-produce-vende.md
 ushuaia@2015-11-15-acto-dia-mundial-recuerdo-victimas-accidentes-transito.md
@@ -43,3 +42,16 @@ tolhuin@2015-11-14-automovilismo-pista.md
 tolhuin@2015-11-14-gran-feria-social.md
 tolhuin@2015-11-16-curso-uso-mantenimiento-forestal.md
 rio-grande@2015-11-06-muestra-secretos-beagle.md
+rio-grande@2015-11-19-campeonato-provincial-b-clubes-futsal-femenino.md
+rio-grande@2015-11-19-lanzamiento-14-edicion-fiesta-provincial-robalo.md
+rio-grande@2015-11-20-noveno-campeonato-patagonico-torball.md
+rio-grande@2015-11-21-la-beriso.md
+rio-grande@2015-11-21-noveno-campeonato-patagonico-torball.md
+rio-grande@2015-11-19-provincial-a-colegiales-ohiggins.md
+rio-grande@2015-11-24-xxv-raid-nautico-internacional-tierra-del-fuego.md
+rio-grande@2015-11-29-torneo-solidario-club-talleres.md
+rio-grande@2015-11-29-vuelta-paso-garibaldi-septima-edicion.md
+rio-grande@2015-12-05-14-edicion-fiesta-provincial-robalo.md
+ushuaia@2015-11-20-charla-como-tratamos-nuestros-pacientes-diabeticos.md
+ushuaia@2015-11-20-primer-torneo-waterpolo.md
+ushuaia@2015-11-21-primer-torneo-waterpolo.md
