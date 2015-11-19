@@ -5,7 +5,7 @@ date: 2015-11-21 08:30
 no-time-start: 
 date-end: 2015-11-21
 no-time-end: true
-location: cdm
+location: centrodeportivo
 category: rio-grande
 tags: [deportes,torball]
 source: http://www.surenio.com.ar/catorce-equipos-para-el-9o-patagonico-de-torball/

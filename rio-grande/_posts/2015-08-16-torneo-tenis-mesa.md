@@ -5,7 +5,7 @@ date: 2015-08-16 19:00
 no-time-start: 
 date-end: 2015-08-16
 no-time-end: true
-location: cdm
+location: centrodeportivo
 tags: [deportes, tenis-de-mesa]
 source: http://www.surenio.com.ar/desde-las-1900-en-el-cdm/
 people: [atemefu]
