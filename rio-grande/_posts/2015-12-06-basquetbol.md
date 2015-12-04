@@ -5,7 +5,7 @@ date: 2015-12-06 14:30
 no-time-start: 
 date-end: 2015-12-06 22:00
 no-time-end: 
-location: cdm
+location: centrodeportivo
 category: rio-grande
 tags: [deportes, basket]
 source: http://www.surenio.com.ar/las-divisiones-menores-encontraron-finalmente-un-espacio/
