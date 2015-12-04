@@ -1,19 +1,17 @@
 ---
 title: Preguntas frecuentes
 permalink: /preguntas-frecuentes/
-date: 2015-07-24
+date: 2015-12-04
 ---
 
 
 {% comment %}use markdown=1 to parse markdown syntax inside html block {% endcomment %}
-
 <div id="tabla-contenido" markdown="1">
 
 Contenido en esta página:
 
 1. TOC (to make it use ordered list)
 {:toc}
-
 </div>
 
 
@@ -37,7 +35,7 @@ Si me ayudas con tu [colaboración]({{ site.data.wiki.colaboracion }}), si. Esa 
 
 Cualquier actividad (artística, deportiva, turistica), pago o gratuita, que cumpla con los siguientes "requisitos":
 
-1. Que se realicen todos los años (nada de "clínicas"/"talleres" de un día para el otro)
+1. Que se realicen todos los años (nada de "clínicas"/"talleres" de un día para el otro, eso es para la parte de agenda)
 2. Que se realicen por lo menos 6 meses (por poner un número) de los 12 meses del año, con la excepción de las actividades invernales.
 3. Abierto a quién quiera. Nada de "tenés que hablar con el rey de turno para que te haga una evaluación y, en base a eso, ver si podes entrar o no" (exagerado el ejemplo, pero se entiende la idea)
 
@@ -55,20 +53,19 @@ Es para tener una referencia sobre los datos y que, si "es muy viejo", que los u
 Ingresé y/o edité datos de actividades pero no se actualizaron. ¿Cuándo se van a ver en el sitio?  {#actualizaciones-en-el-sitio}
 -------------------------------------------------------------------------------------------------
 
-En cuanto pueda. Básicamete el traspaso de datos es manual. El orden de más laborioso a menos es:
+En cuanto pueda. Básicamente el traspaso de datos es manual. El orden de más laborioso a menos es:
 
-1. Issue en GitHub
+1. *Issue*{:lang="en"} en GitHub
 2. Mediante el formulario
-3. Fork y pull request del repositorio
+3. *Fork*{:lang="en"} y *pull request*{:lang="en"} del repositorio
 
 
 
 Quiero darte ideas o tengo mas dudas, ¿dónde puedo contactarte?  {#como-contactarme}
 -----------------------------------------------------------------
 
-Abrí un [issue]({{ site.github.issues_url }}){:rel="external"}.
+Podés ir a la sección de [contacto]({{site.data.wiki.contacto}}) y llenar el formulario o abrir un [*issue*{:lang="en"}]({{ site.github.issues_url }}){:rel="external"}.
 
-Si no tenes cuenta en GitHub podes buscarle la vuelta al [formulario de entrada de actividades]({{ site.social.form_colaboracion }}){:rel="external"}.
 
 
 ¿Por qué le pones un ^ (acento circunflejo) a ciertas letras?  {#por-que-acento-circunflejo}
@@ -76,7 +73,7 @@ Si no tenes cuenta en GitHub podes buscarle la vuelta al [formulario de entrada 
 
 Para marcar las vocales largas en las palabras japonesas.
 
-No le puedo poner macrón (rayita sobre caracter), y lo aceptable sería poner el acento circunflejo (según "La Gran Fuente de Información" (Wikipedia))
+No le puedo poner macrón (rayita sobre caracter, en realidad es mucho lío ponerlo), y lo aceptable sería poner el acento circunflejo (según "La Gran Fuente de Información" (Wikipedia))
 
 
 

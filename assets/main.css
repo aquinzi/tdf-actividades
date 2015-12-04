@@ -1053,6 +1053,38 @@ h2 + .headerlink-popup, h3 + .headerlink-popup, h4 + .headerlink-popup{
 	}
 }
 
+#site-footer a { color:inherit; white-space:nowrap }
+
+#site-footer .author {
+	color: inherit;
+	text-align: center;
+	font-size: 1.5em;
+	background-color: #6B2121;
+	width: 66px;
+	margin: 2em auto;
+	padding: 0.2em;
+	transform: rotate(-17deg);
+	position: relative;
+	height: 66px;
+}
+
+#site-footer .author a {
+	color: inherit;
+	display: inline-block;
+	background-color: #6934AB;
+	border-bottom: 0px none;
+	transform: rotate(33deg);
+	padding: 0.8em 0.5em;
+	position: absolute;
+	width: 64px;
+	height: 56px;
+	left: 2px;
+}
+
+#site-footer .author a:hover {
+	background-color: #4C277A;
+	transform: rotate(18deg);
+}
 
 
 #site-footer ul {
@@ -1066,7 +1098,6 @@ h2 + .headerlink-popup, h3 + .headerlink-popup, h4 + .headerlink-popup{
 	content: '';
 }
 
-#site-footer ul a { color:inherit; white-space:nowrap }
 #site-footer ul a:hover { color:#DEDEDE; }
 
 @media (min-width: 300px) {
