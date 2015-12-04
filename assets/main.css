@@ -399,6 +399,15 @@ footer#site-footer .social a:before{padding-right: 0.3em;}
   {margin-right: 0.4em; width: 16px; display: inline-block; }
 
 
+
+/*   icon: compress */
+.h-event .extra .short-url::before
+{ content: "\f066"; }
+
+
+
+
+
 .h-card a.u-url:before
 , .h-card .ultima-actualizacion:before
 , .h-card dt:after /*activity*/

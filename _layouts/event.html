@@ -10,8 +10,6 @@ date: %A = full weekday.
 date: %R = 24-hour time HH:MM
 {% endcomment%}
 
-
-
 {% assign start_date_iso = page.date | date: "%F" %} 
 {% assign end_date_iso   = page.date-end  | date: "%F" %}
 
@@ -21,9 +19,7 @@ date: %R = 24-hour time HH:MM
 
 {% assign this_city = page.categories | first %}
 
-
 <article class="h-event">
-
 <header> 
 
 	<h1 class="p-name">{{ page.title }}</h1>
@@ -69,8 +65,8 @@ date: %R = 24-hour time HH:MM
 	{% capture gcal_link %}{% include gcal-url.html subject=page.title date_start=page.date date_end=page.date-end location=tmp %}{% endcapture %}
 	<li><a href="{{ gcal_link | strip_newlines }}" title="Añadir a gcal">Google Calendar</a></li>
 	{%endif%}
-	<li><a href='whatsapp://send?text={{ page.title }}. Info: {{ page.url | prepend: site.baseurl }}' class="u-url">Enviar por Whatsapp</a></li>
-	<li><a href="{{ page.url | prepend: site.baseurl }}" class="u-url">Link del evento</a></li>
+	<li><a href='whatsapp://send?text={{ page.title | replace:"'", "" | replace:'"',''}}. Info: {{ page.url | prepend: site.url }}' class="u-url">Enviar por Whatsapp</a></li>
+	<li><a href="{{ page.url | prepend: site.url }}" class="u-url">Link del evento</a></li>
 </ul>
 
 <div class="p-description">
@@ -79,6 +75,11 @@ date: %R = 24-hour time HH:MM
 
 <footer>
 	<dl class="extra">
+		{% if page.short-url %}
+		<dt class="short-url">Enlace corto</dt>
+			<dd><a href="{{ page.short-url }}" rel="external">{{ page.short-url | replace:"http://","" }}</a></dd>
+		{% endif %}
+
 		{% if page.tags.size > 0 %}
 		<dt class="tags">Etiquetas</dt>
 			<dd><ul>{% for tag in page.tags %}
