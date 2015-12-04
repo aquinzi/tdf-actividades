@@ -22,6 +22,7 @@ so they can be posted using IFTTT (so dirty!)
 # TODO: use the metadata in file to check if it's old or not. Reason: events that span multiple days (expositions) and were added later.
 # TODO: support to create shorturls
 # PRobably we should read config file so we dont hardcode stuff
+# TODO: find a better way to handle untimed events and inserting into calendar
 # TODO: find a way to fix updated events. 
 # 		- Search the event in calendar, edit
 # 		- delete the line in processed posts and just add the new one
@@ -418,7 +419,7 @@ def process_post(path, city, meta=False):
 	print(" done.")
 
 	print("    Creating post schedule... ", end="")
-	post_schedule = create_post_schedule(meta['start']['timestamp'], meta['end']['timestamp'])
+	post_schedule = create_post_schedule(meta['start']['date'], meta['end']['date'])
 	print(" done.")
 
 	# create google calendar event
@@ -528,7 +529,11 @@ def get_post_metadata(path, city):
 		metadata['start']['timestamp'] = "T".join(datetime_pieces)
 		metadata['start']['timestamp'] = datetime.datetime.strptime(metadata['start']['timestamp'], '%Y-%m-%dT%H:%M:00')
 	else:
-		metadata['start']['timestamp'] = metadata['start']['date']
+		metadata['start']['date'] = str(metadata['start']['date'])
+		metadata['start']['timestamp'] = datetime.datetime.strptime(metadata['start']['date'], '%Y-%m-%d')
+		metadata['start']['time'] = ""
+
+
 
 	if metadata['end'] and " " in str(metadata['end']['date']): 
 		datetime_pieces = metadata['end']['date'].split(" ")
@@ -599,8 +604,8 @@ def create_post_schedule(start_date, end_date):
 	"""Finds the schedule for posting the event
 	
 	Args:
-	    start_date (datetime): when the event starts
-	    end_date (datetime): when the event ends
+	    start_date (str): when the event starts (YYYY-MM-DD)
+	    end_date (str): when the event ends (YYYY-MM-DD)
 	
 	Returns:
 	    LIST: list of dates - times
@@ -609,22 +614,19 @@ def create_post_schedule(start_date, end_date):
 	random_minute = str(random.randrange(1,59))
 	post_schedule = list() #tuples: date,time
 
-	# find when do we have to start the event publication and
-	# when it ends
-	
-	date_start = start_date
-
 	#use the start date as the finish date. We don't want courses and the like 
 	#(that span multiple days) into the calendar
-	date_end   = date_start
-	date_start = start_date - datetime.timedelta(days=DAYS_BEFORE)
+	try:
+		date_start = datetime.datetime.strptime(start_date, '%Y-%m-%d') - datetime.timedelta(days=DAYS_BEFORE)
+	except TypeError: 
+		date_start = start_date - datetime.timedelta(days=DAYS_BEFORE)
 
 	if len(random_minute) == 1 and not random_minute.startswith("0"):
 		random_minute = "0" + random_minute
 	
 	for hour in HOUR_SCHEDULE:
 		tmp_start = date_start.strftime('%Y-%m-%d') + "T" + hour + ":" + random_minute + ":00-03:00"
-		#tmp_end   = date_end.strftime('%Y-%m-%d') + "T23:59:00-0300"
+
 		# as we use recurrence, must use the endtime of the first instance! 
 		#    read: https://developers.google.com/google-apps/calendar/v3/reference/events/insert
 		tmp_duration = int(random_minute) + 5
