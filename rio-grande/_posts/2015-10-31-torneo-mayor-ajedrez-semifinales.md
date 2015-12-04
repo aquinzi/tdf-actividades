@@ -8,7 +8,7 @@ no-time-end: true
 location: Club Ajedrez Río Grande
 tags: [deportes, ajedrez]
 source: http://www.airelibre.com.ar/2015/10/24/ajedrez-comenzo-el-torneo-mayor-de-rio-grande-con-17-jugadores-y-un-sistema-distinto-comenzo-el-torneo-mas-importante-del-ano-a-nivel-local/
-people: [CARG,FeFuA]
+people: [carg,club-ajedrez-rg,fefua]
 category: rio-grande
 ---
 

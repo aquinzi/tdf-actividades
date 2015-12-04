@@ -9,7 +9,7 @@ location: Museo Marítimo
 category: ushuaia
 tags: [deportes, ajedrez]
 source: http://www.surenio.com.ar/26952-2/
-people: [carg, cadu]
+people: [carg,club-ajedrez-rg,cadu]
 ---
 
 Se jugará desde las 10:00 (inscripción gratuita) el Torneo Aniversario del Museo Marítimo (Sub 8/12/16), última fecha del Grand Prix "Ajedrez y Cultura en el ex Presidio".

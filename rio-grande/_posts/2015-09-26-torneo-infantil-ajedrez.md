@@ -9,7 +9,7 @@ category: rio-grande
 location: Escuela N2
 tags: [deportes, ajedrez]
 source:
-people: [club-ajedrez-rg]
+people: [club-ajedrez-rg,carg]
 ---
 
 Organizado por el Club de Ajredrez de Río Grande. Las inscripciones son desde las 13:30 horas en la Escuela N2, libres y gratuitas. Las categorías de este torneo son sub-10, sub-14 y sub-20.

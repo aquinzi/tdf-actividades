@@ -9,7 +9,7 @@ location: panadería La Fueguina de San Martín y Estrada
 category: rio-grande
 tags: [deportes, ajedrez]
 source: http://www.surenio.com.ar/26952-2/
-people: [carg]
+people: [carg,club-ajedrez-rg]
 ---
 
 Tercera edición del torneo "Homenaje a Nelfo Clementino", con el cual el Club de Ajedrez de Río Grande (CARG) cerrará la temporada competitiva.
