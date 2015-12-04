@@ -80,6 +80,11 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
+@media only screen and (max-width: 400px) {
+  body {font-size: 12px;}
+}
+
+
 a {
   color: #1671c2;
   text-decoration: none;
@@ -835,6 +840,10 @@ h2 + .headerlink-popup, h3 + .headerlink-popup, h4 + .headerlink-popup{
 	padding: 0;
 }
 
+@media (max-width: 500px)  {
+	.breadcrumbs {font-size: 1.0em; }
+}
+
 .breadcrumbs li { display: inline; }
 
 .breadcrumbs li:after, .breadcrumbs li:first-child:before {
@@ -907,6 +916,11 @@ h2 + .headerlink-popup, h3 + .headerlink-popup, h4 + .headerlink-popup{
 	margin: 3em 0;
 }
 
+@media (max-width: 400px) {
+	#tabla-contenido{
+		padding: 0em;
+	}
+}
 
 #tabla-contenido dl.toc-headings {margin-top: 2em; }
 #tabla-contenido .toc-headings dt {
@@ -914,7 +928,11 @@ h2 + .headerlink-popup, h3 + .headerlink-popup, h4 + .headerlink-popup{
 	font-size: 1.3em;
 }
 
-#tabla-contenido .toc-headings dd {margin: 0px 2em;}
+#tabla-contenido .toc-headings dd {margin: 0px 0em;}
+
+@media (min-width: 450px) {
+	#tabla-contenido .toc-headings dd {margin: 0px 2em;}
+}
 
 #tabla-contenido .toc-headings ol { list-style-type: none; }
 
@@ -1023,14 +1041,19 @@ h2 + .headerlink-popup, h3 + .headerlink-popup, h4 + .headerlink-popup{
 	color:#FAFAFA;
 	background-color: #0F70C3;
 	/*background-color:#424242; */
+
+	padding: 6px;
+	margin-top: 0em;  	
 }
 
-@media (min-width: 300px) {
+@media (min-width: 450px) {
 	#site-footer{ 
 		padding: 40px;
 		margin-top: 3em;  
 	}
 }
+
+
 
 #site-footer ul {
 	list-style: none;
@@ -1185,6 +1208,13 @@ div[class^="index-info-"]:before, .index-info-social:after{
 	line-height: 71px;
 }
 
+@media (max-width: 400px)  {
+	div[class^="index-info-"]:before, .index-info-social:after{
+		font-size: 5em;
+	}
+}
+
+
 div.index-info-que-es:before       { content: "\f128"; color: #CF24A3; } /*question mark*/
 div.index-info-fast:before         { content: "\f135"; color: #CF4747; } /*rocket */
 div.index-info-fresco:before       { content: "\f06c"; color: #30C030; } /* leaf */
@@ -1225,6 +1255,13 @@ div.index-info-que-es {
 	font-size: 1.3em;
 	line-height: 1.6em; 
 }
+
+
+@media (max-width: 400px)  {
+	div.index-info-que-es {font-size: 1.0em; margin-top: -2em}
+	.index-info-que-es q {font-size: 1.2em;}
+}
+
 
 
 @media (min-width: 610px)  {
@@ -1399,6 +1436,9 @@ article.card-entidad .p-name {
 	margin-bottom: 0px;
 }
 
+
+
+
 .listado-entidades .card-entidad .p-name{font-size: 1.3em;}
 
 .card-entidad .logo{ 
@@ -1425,20 +1465,10 @@ article.card-entidad .p-name {
 }
 
 
-
-
 @media (max-width: 800px) {
   .card-entidad .p-name {font-size: 1.8em;}
 
 }
-
-@media (max-width: 600px) {
-  .card-entidad .logo { display: none }
-
-  .card-entidad header {padding-left: 20px; }
-
-}
-
 
 .listado-entidades li.card-entidad div.info{
 	margin-left: 110px;
@@ -1447,6 +1477,12 @@ article.card-entidad .p-name {
 	padding-bottom: 10px;
 }
 
+@media (max-width: 600px) {
+  .card-entidad header {padding-left: 10px; }
+  .card-entidad .logo { display: none }
+	article.card-entidad .p-name {margin-top: 16px; line-height: 22px; }
+  .listado-entidades li.card-entidad div.info {margin-left: 10px}
+}
 
 
 article.card-entidad dl {border-left: 4px solid #FD9730; }
@@ -1497,14 +1533,15 @@ article.card-entidad dl {border-left: 4px solid #FD9730; }
 .listado-entidades li.card-entidad dd { margin-top: 5px; }
 
 /* "hack" to make it inline */
-article.card-entidad dd {
-	margin-left: 138px;
-	margin-top: -36px;
-	margin-bottom: 0.6em;
-	padding-left: 0.8em;
-	line-height: 21px;
+@media screen and (min-width: 500px) {
+	article.card-entidad dd {
+		margin-left: 138px;
+		margin-top: -36px;
+		margin-bottom: 0.6em;
+		padding-left: 0.8em;
+		line-height: 21px;
+	}
 }
-
 @media screen and (max-width: 700px) {
 	.card-entidad dt {
 		display: inline-block;
@@ -2106,9 +2143,17 @@ vertical-align: middle;
 	color: #fff;
 	background-color: #F09136;
 }
+
+@media screen and (max-width: 600px) {
+	.h-event header{
+		margin: 0px -1em 0em;
+		padding: 1em;
+	}
+}
+
 .h-event .p-name {
 	margin: 0px;
-	padding: 0.5em 0.5em 0.2em 0px;
+	padding: 0.5em 0.5em 0.5em 0px;
 	
 	color: #fff;
 }
@@ -2118,7 +2163,7 @@ vertical-align: middle;
 }
 
 @media screen and (max-width: 600px) {
-	.h-event .p-name {font-size: 1.5em;}
+	.h-event .p-name {font-size: 1.5em; line-height: 22px}
 }
 
 /*   iconos */
@@ -2151,6 +2196,11 @@ vertical-align: middle;
 	border-bottom-color: #FFFFFF;
 	color: #FFFFFF;
 }
+
+@media screen and (max-width: 600px) {
+	.h-event .details .p-location {display: block; margin: 0;}
+}
+
 
 .h-event .details.span-dias .dt-end { margin-left: 0.5em; }
 .h-event .details .city {
@@ -2188,10 +2238,24 @@ vertical-align: middle;
 	color: #FFFFFF;
 	border-radius: 1em 0.2em;
 	box-shadow: 0px 1px 0.2em rgba(0, 0, 0, 0.35);
-
 }
 
 .h-event .event-subscribe li a:hover { background-color: #0D71C2;}
+
+@media screen and (max-width: 600px) {
+		
+	/* only show icon */
+	.h-event .event-subscribe li a[href^="whatsapp://"]{
+		overflow: hidden;
+		display: block;
+		width: 38px;
+		height: 39px;
+		top: 14px;
+		line-height: 21px;
+	}
+	.h-event .event-subscribe li a[href^="whatsapp://"]::before{font-size: 1.6em;}
+}
+
 
 .h-event footer{
 	padding-top: 1em;
@@ -2200,6 +2264,11 @@ vertical-align: middle;
 	color: #7A7A7A;
 	border-top: 1px solid #DDDADA;
 }
+
+@media screen and (max-width: 400px) {
+	.h-event footer{ margin-left: -11px;}
+}
+
 
 .h-event .extra ul { margin: 0; padding: 0;}
 
@@ -2256,8 +2325,8 @@ vertical-align: middle;
   , .h-event .extra .ultima-modificacion
   {overflow: hidden; width: 16px; height: 25px}
 
-  .h-event .extra .tags + dd { margin-left: -8px; }
-  .h-event .extra .source + dd { padding-left: 18px; }
+  .h-event .extra .tags + dd { margin-left: 0px; }
+  .h-event .extra .source + dd { padding-left: 0px; }
 }
 
 
