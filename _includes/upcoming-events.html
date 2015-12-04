@@ -9,7 +9,7 @@
 		<div class="city"> 
 			<h5><a href="{{site.data.wiki.[city.name]}}"> {{ site.data.prettify[city.name] }}</a></h5>
 
-			{% include print-upcoming-events.html mode="upcoming" posts=city.items max_items=max_items %}
+			{% include print-upcoming-events.html mode="upcoming" posts=city.items max_items=max_items month_abbr=true%}
 		</div> 
 
 	{% endfor %}

@@ -12,6 +12,9 @@
 {% assign hide_de = false %}
 {% if include.hide_de %}{% assign hide_de = include.hide_de %}{% endif %}
 
+{% assign month_abbr = false %}
+{% if include.month_abbr %}{% assign month_abbr = include.month_abbr %}{% endif %}
+
 {% assign weekday = page_date | date: "%A" %}
 {% assign day     = page_date | date: "%d" %}
 {% assign month   = page_date | date: "%-m" %}
@@ -22,6 +25,9 @@
 	{% capture print_de %}<span class="visuallyhidden">de</span>{% endcapture %}
 {% endif %}
 
+{% assign print_mes = site.data.meses.[month].nombre %}
+{% if month_abbr %}{% assign print_mes = site.data.meses.[month].abr %}{% endif %}
+
 {% unless hide_weekday %}<span class="date-weekday">{{ site.data.dias.[weekday].nombre }}</span> {% endunless %}
-<span class="date-day">{{ day }}</span> {{ print_de }} <span class="date-month">{{ site.data.meses.[month].nombre }}</span>
+<span class="date-day">{{ day }}</span> {{ print_de }} <span class="date-month">{{ print_mes }}</span>
 {% unless hide_year %} <span class="date-year">{{ print_de }} {{ year }}</span>{% endunless %}

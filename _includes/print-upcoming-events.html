@@ -3,6 +3,7 @@
 {% assign site_built_sevendays = site.time | date:"%s" | plus: 604800  %}
 {% assign site_built_tendays   = site.time | date:"%s" | plus: 864000  %}
 {% assign site_built_twoweeks  = site.time | date:"%s" | plus: 1209600  %}
+{% assign cant_max_items   = 10 %}
 
 {% assign post_list = include.posts %}
 {% assign mode      = include.mode %}
@@ -22,12 +23,11 @@
 {% if post_list and mode %}
 	{% assign there_are_events = false %}
 	{% assign processed_items  = 0 %}
-	{% assign cant_max_items   = 10 %}
 	{% if include.max_items %}{% assign cant_max_items = include.max_items %}{% endif %}
 
 	<ul{% if mode == "index" %} class="day-events"{%endif%}>	
 	{% for post in post_list  %}
-		{% if processed_items > cant_max_items %}{% break %}
+		{% if processed_items >= cant_max_items %}{% break %}
 		{%endif%}
 
 		{% assign current_date_epoch = post.date | date:"%s" | plus: 0 %}
@@ -53,7 +53,7 @@
 			{% capture human_date %}{% include human-date.html hide_year=true hide_de=true%}{%endcapture%}
 		{% endif %}
 		{% if mode == "upcoming" %} 
-			{% capture human_date %}{% include human-date.html date=post.date hide_de=true hide_year=true hide_weekday=true %}{%endcapture%}
+			{% capture human_date %}{% include human-date.html date=post.date hide_de=true hide_year=true hide_weekday=true month_abbr=include.month_abbr%}{%endcapture%}
 		{% endif %}
 		{% capture location %}{% include get-place.html place=post.location city=this_city %}{%endcapture%}
 		{% capture post_url %}{{ post.url | prepend: site.baseurl }}{%endcapture%}
