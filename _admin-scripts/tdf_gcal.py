@@ -345,7 +345,7 @@ def scheduleEvent(list_schedule, event_data):
 			place = ", en " + event_data['location']
 
 		if event_data['tags']:
-			tags = " #" + event_data['tags'].replace(",", "#")
+			tags = " #" + event_data['tags'].replace(",", " #")
 
 		event['description'] = gcal_description.format(
 			city=city, tags=tags, title=event['summary']
