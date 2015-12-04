@@ -35,7 +35,7 @@ layout: default
 			{% endfor%}
 
 			<p class="categoria">Categoría: <a href="{{category_link}}" class="p-category">{{page.categoria | replace:"-", " "}}</a> 
-			{% if cat_alternativo %} (también {{cat_alternativo | join: ', '}}) {% endif %}
+			{% if cat_alternativo != "" %} (también {{cat_alternativo | join: ', '}}) {% endif %}
 			</p>
 		</div>
 	</header>
