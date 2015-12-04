@@ -10,7 +10,7 @@ category: rio-grande
 tags: [deportes, aikido]
 source: 
 people: [sakanashi-dojo]
-short-url: goo.gl/vu3usD
+short-url: http://goo.gl/vu3usD
 ---
 
 Dictado por Leonardo Sakanashi Sensei (5° dan aikikai).
