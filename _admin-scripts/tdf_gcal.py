@@ -102,7 +102,7 @@ PROCESSED_POSTS_FILE_LINE = "{ciudad}@{filename}"
 PLACES_FILE = "lugares.yml"
 
 HOUR_SCHEDULE = ('09', '13', '17', '21') #minutes are random
-DAYS_BEFORE = 3 #How many days before do we start posting the event?
+DAYS_BEFORE = 7 #How many days before do we start posting the event?
 
 GOOGLE_AUTH = "client_secrets.json"
 USER_CREDENTIALS = 'gcal-tdf-credentials.json'
@@ -262,6 +262,8 @@ def scheduleEvent(list_schedule, event_data):
 	# so dirty
 	gcal_description = "#{city}{tags} {title} ({human_date}{place})"
 
+	end_date_iso = event_data['end']['timestamp'].isoformat()
+
 	def _fecha_humana(date_time, abbr=False):
 		""" translate to human dates (spanish, quick and dirty)
 		
@@ -328,12 +330,13 @@ def scheduleEvent(list_schedule, event_data):
 		event['start'] = {'dateTime': date_time[0], 'timeZone': timezone}
 	
 		event['end'] = {'dateTime': date_time[1], 'timeZone': timezone}
-		human_datetime_end = _fecha_humana(event_data['start']['timestamp']) #the real date
+		human_datetime_end = _fecha_humana(event_data['start']['timestamp'], abbr=True) #the real date
 		#if all day: {'date': eEnd}
 		
-		print ("        schedule from {} to daily-until {} ".format(
-				date_time[0].replace("T", " ").replace(":00","")
-				,date_time[1].replace("T", " ").replace(":00","").replace("-0300", "")
+		print ("        schedule from {} to {} until {}".format(
+				date_time[0].replace("T", " ").replace(":00-03:00","")
+				,date_time[1].replace("T", " ").replace(":00-03:00","")
+				, end_date_iso.split("T")[0]
 				)
 			)
 		
@@ -351,8 +354,11 @@ def scheduleEvent(list_schedule, event_data):
 		
 		#use recurrence so we dont have to create daily events within same time
 		#event['recurrence'] = ['RRULE:FREQ=DAILY;UNTIL=20151007T193000-03:00']
-		tmp_recurrence = date_time[1].replace("-","").replace(":","").replace("0300","-03:00")
-		event['recurrence'] = 'RRULE:FREQ=DAILY;UNTIL=' + tmp_recurrence
+		tmp_date = end_date_iso + "Z" #doesnt seem to like timezone.
+		tmp_recurrence = tmp_date.replace("-","").replace(":","")
+		tmp_recurrence = 'RRULE:FREQ=DAILY;UNTIL=' + tmp_recurrence
+
+		event['recurrence'] = [tmp_recurrence]
 
 		#newEvent = cal_service.events().insert(calendarId=CALENDAR_ID, body=event)
 		executeCall(cal_service.events().insert(calendarId=CALENDAR_ID, body=event)) #or newEvent.execute() 
@@ -617,8 +623,15 @@ def create_post_schedule(start_date, end_date):
 		random_minute = "0" + random_minute
 	
 	for hour in HOUR_SCHEDULE:
-		tmp_start = date_start.strftime('%Y-%m-%d') + "T" + hour + ":" + random_minute + ":00"
-		tmp_end   = date_end.strftime('%Y-%m-%d') + "T23:59:00-0300"
+		tmp_start = date_start.strftime('%Y-%m-%d') + "T" + hour + ":" + random_minute + ":00-03:00"
+		#tmp_end   = date_end.strftime('%Y-%m-%d') + "T23:59:00-0300"
+		# as we use recurrence, must use the endtime of the first instance! 
+		#    read: https://developers.google.com/google-apps/calendar/v3/reference/events/insert
+		tmp_duration = int(random_minute) + 5
+		if tmp_duration > 59: 
+			tmp_duration = 59
+		
+		tmp_end = date_start.strftime('%Y-%m-%d') + "T" + hour + ":" + str(tmp_duration) + ":00-03:00"
 
 		post_schedule.append((tmp_start,tmp_end))
 
