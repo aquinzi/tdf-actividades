@@ -2256,6 +2256,16 @@ vertical-align: middle;
 	.h-event .event-subscribe li a[href^="whatsapp://"]::before{font-size: 1.6em;}
 }
 
+@media screen and (max-width: 400px) {
+		
+	/* only show icon */
+	.h-event .event-subscribe li a[href^="whatsapp://"]{
+		width: 34px;
+		height: 32px;
+		top: 12px;
+	}
+}
+
 
 .h-event footer{
 	padding-top: 1em;
