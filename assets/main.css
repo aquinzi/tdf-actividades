@@ -2333,7 +2333,8 @@ vertical-align: middle;
 
 .h-event .extra dd:after{content: ""; display: block;}
 
-.h-event .extra .tags { margin-left: 0.5em;}
+/* we must apply a margin for the first dt, reason unknown*/
+.h-event .extra dt:first-of-type { margin-left: 0.5em;}
 
 .h-event .extra .tags + dd ul { list-style-type: none; display: inline-block;}
 .h-event .extra .tags + dd li { display: inline;}
