@@ -2413,6 +2413,8 @@ vertical-align: middle;
 	border-radius: 0.3em;
 	background-color: #A4A4A4;
 
+	overflow: hidden; /*so it displays properly*/
+
 }
 
 @media screen and (min-width: 100px) {
