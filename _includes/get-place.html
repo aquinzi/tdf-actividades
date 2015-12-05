@@ -4,8 +4,9 @@
 {% assign link = false %}
 {% if include.link %}{% assign link = include.link %}{% endif %}
 {% assign city = include.city %}
+
 {% if place != "" %}	{% assign place_id = place %}
-	{% if city == "rio-grande" %}
+	{% if city == "rio-grande" or city == "Río Grande" or city.name == "rio-grande"%}
 		{% if site.data.riogrande.lugares[place_id] %}
 			{% assign place_info = site.data.riogrande.lugares[place_id] %}
 			{% if link %}<a href="{{site.data.wiki.rg-lugares}}#{{place_id}}" class="p-location h-card">{{place_info.nombre}}</a>

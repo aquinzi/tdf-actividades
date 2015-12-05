@@ -14,7 +14,7 @@
 {%endcomment%}
 
 {% unless post_list %}
-	{% assign post_list = site.posts | sort:"date" %}
+	{% assign post_list = site.posts | sort:"date" | reverse %}
 {% endunless %}
 {% unless mode %}
 	{% assign mode = "index" %}
@@ -27,7 +27,7 @@
 
 	<ul{% if mode == "index" %} class="day-events"{%endif%}>	
 	{% for post in post_list  %}
-		{% if processed_items >= cant_max_items %}{% break %}
+		{% if mode != "index" and processed_items >= cant_max_items %}{% break %}
 		{%endif%}
 
 		{% assign current_date_epoch = post.date | date:"%s" | plus: 0 %}
@@ -40,8 +40,13 @@
 
 		{% assign processed_items = processed_items | plus: 1 %}
 
-		{% assign this_city = post.category %}
-		{% assign this_city_slug = this_city | replace:'-','' %}
+		{% unless include.city %}
+			{% assign this_city = post.categories | first %}
+			{% assign this_city = this_city.name %}
+		{% else %}
+			{% assign this_city = include.city %}
+		{% endunless  %}
+		{% assign this_city_slug = this_city | replace:'-','' | downcase %}
 
 		{% assign start_date_iso = post.date | date: "%F" %} 
 		{% assign start_time     = post.date | date: "%R" %} 
@@ -61,12 +66,11 @@
 		<li{% if mode == "index" %} class="event" data-ciudad="{{ this_city_slug }}"{%endif%}>
 			{% if mode == "upcoming" %}
 				<span class="event"><a href="{{ post_url }}">{{post.title}}</a></span>
-
 				<time datetime='{{start_date_iso}}' class="date">{{human_date}} </time>
 				{% if start_time != "00:00" and post.no-time-start == false %}
 				<span class="visuallyhidden">a las </span>
 				<span class="time">{{start_time}} hs.</span>, 
-				{% endif %}<span class="location">{{location}}</span>
+				{% endif %}<span class="location">{{location}}, {{this_city}}</span>
 			{% endif %}
 			{% if mode == "index" %}
 				<time class="datetime" datetime="{{ start_date_iso }}">
