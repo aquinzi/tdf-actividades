@@ -42,7 +42,6 @@
 
 		{% unless include.city %}
 			{% assign this_city = post.categories | first %}
-			{% assign this_city = this_city.name %}
 		{% else %}
 			{% assign this_city = include.city %}
 		{% endunless  %}
@@ -70,7 +69,7 @@
 				{% if start_time != "00:00" and post.no-time-start == false %}
 				<span class="visuallyhidden">a las </span>
 				<span class="time">{{start_time}} hs.</span>, 
-				{% endif %}<span class="location">{{location}}, {{this_city}}</span>
+				{% endif %}<span class="location">{{location}}</span>
 			{% endif %}
 			{% if mode == "index" %}
 				<time class="datetime" datetime="{{ start_date_iso }}">
