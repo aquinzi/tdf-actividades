@@ -250,9 +250,7 @@ def scheduleEvent(list_schedule, event_data):
 	cal_service = useService('calendar')
 	timezone = 'America/Argentina/Ushuaia'
 
-	'''mockup of tweet
-	#RioGrande #{tag} {titulo lindo} ({dia} de {mes-abbr}, {horas} hs; {lugar}). 
-
+	'''
 	ifttt ingredients
 	Title 								 	The event's title.
 	Description 							The event's description.
@@ -261,7 +259,7 @@ def scheduleEvent(list_schedule, event_data):
 	Ends 									ej: August 23, 2011 at 11:00PM
 	'''
 	# so dirty
-	gcal_description = "#{city}{tags} {title} ({human_date}{place})"
+	gcal_description = "#{city}{tags} {title} {shortURL}({human_date}{place})"
 
 	end_date_iso = event_data['end']['timestamp'].isoformat()
 
@@ -318,6 +316,7 @@ def scheduleEvent(list_schedule, event_data):
 		tags  = ""
 		city  = ""
 		place = ""
+		shortURL = ""
 
 		if event_data['city'] == "rio-grande":
 			city = "RioGrande"
@@ -348,9 +347,13 @@ def scheduleEvent(list_schedule, event_data):
 		if event_data['tags']:
 			tags = " #" + event_data['tags'].replace(",", " #")
 
+		if event_data['short-url']:
+			shortURL = event_data['short-url'] + " "
+
 		event['description'] = gcal_description.format(
 			city=city, tags=tags, title=event['summary']
 			, human_date=human_datetime_end, place=place
+			, shortURL=shortURL
 			)
 		
 		#use recurrence so we dont have to create daily events within same time
@@ -444,7 +447,7 @@ def get_post_metadata(path, city):
 	# date is date-start, but keep it like this (less coding conditionals)
 	metadata = {
 		'title':'', 'date':'','date-end':'','city': city
-		,'tags':'','shortURL':'', 'location':'',
+		,'tags':'','short-url':'', 'location':'',
 
 
 		'start' : {'date': '', 'time':'', 'timestamp':''},
