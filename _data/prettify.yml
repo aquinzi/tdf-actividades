@@ -1,4 +1,7 @@
-rio-grande: Río Grande
+rio-grande: "Río Grande"
 ushuaia: Ushuaia
 tolhuin: Tolhuin
-surenio.com.ar: El Sureño
+surenio.com.ar: &idsurenio "El Sureño"
+surenio: *idsurenio
+facebook.com: &idfacebook "Facebook"
+facebook: *idfacebook
