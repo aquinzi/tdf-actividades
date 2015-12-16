@@ -89,13 +89,14 @@ date: %R = 24-hour time HH:MM
 
     {% if (page.source | strip) != '' %}	
 		{% capture source_domain %}{% include get-domain.html url=page.source %}{% endcapture %}
+		{% assign source_domain = source_domain | strip_newlines | strip %}
 
-  		{% if site.data.prettify[source_domain] %}
-  			{% assign source_domain = site.data.prettify[source_domain] %}
+  		{% if site.data.prettify.[source_domain] %}
+  			{% assign source_domain = site.data.prettify.[source_domain] %}
   		{% endif %}
   		
         <dt class="source">Fuente</dt> 
-        	<dd><a href="{{page.source}}">{{source_domain}}</a></dd>
+        	<dd><a href="{{page.source}}"  rel="external">{{source_domain}}</a></dd>
     {% endif %}
 
     <dt class="ultima-modificacion">Modificado por última vez</dt> 

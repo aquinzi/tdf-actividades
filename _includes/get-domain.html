@@ -8,7 +8,5 @@
 
 {% if url != "" %}
 {% assign url = url | remove_first: "www." | replace:'/','=' | split:"==" | last | split: "=" | first %}
-	{% unless no_dot %} {{ url }}
-	{% else %} {{ url | split:'.com' | first }}
-	{% endunless %}
+{% unless no_dot %}{{ url }}{% else %}{{ url | split:'.com' | first }}{% endunless %}
 {% endif %}
