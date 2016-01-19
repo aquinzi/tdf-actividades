@@ -1,5 +1,5 @@
 ---
-nombre: Automóbil Club Río Grande (A.C.R.G)
+nombre: Asociación de Pilotos Turismo y Rally de Tierra del Fuego (A.PI.TU.R.)
 categoria: automovilismo
 ultima-actualizacion: 2016-01-19
 direccion: 
@@ -12,7 +12,7 @@ nota: |
 url: [""]
 telefono: []
 email: 
-permalink: /rio-grande/entidades/acrg/
+permalink: /rio-grande/entidades/apitur/
 ---
 
-Presidente: Silvio Oyarzo
+Presidente Cristian "Fuvi" Barrientos.

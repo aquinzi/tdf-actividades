@@ -1,7 +1,7 @@
 ---
-nombre: Turismo Carretera (ACTCF)
+nombre: Asociación de Corredores de Turismo Carretera Fueguino (A.C.T.C.F)
 categoria: automovilismo
-ultima-actualizacion: 2015-07-26
+ultima-actualizacion: 2016-01-19
 direccion: 
   lugar: 
 horario: 
@@ -14,4 +14,3 @@ telefono: []
 email: 
 permalink: /rio-grande/entidades/actcf/
 ---
-

@@ -1,7 +1,7 @@
 ---
 nombre: Asociación Fueguina de Karting (AFK)
 categoria: karting
-ultima-actualizacion: 2015-07-26
+ultima-actualizacion: 2016-01-19
 direccion: 
   lugar: 
 horario: 
@@ -15,3 +15,4 @@ email:
 permalink: /rio-grande/entidades/karting-afk/
 ---
 
+titular Alejandro Blanchard

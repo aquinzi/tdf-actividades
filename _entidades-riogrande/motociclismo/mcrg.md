@@ -1,7 +1,7 @@
 ---
-nombre: Moto Club Río Grande
+nombre: Moto Club Río Grande (M.C.R.G.)
 categoria: motociclismo
-ultima-actualizacion: 2015-07-26
+ultima-actualizacion: 2016-01-19
 direccion: 
   lugar: 
 horario: 
@@ -12,6 +12,7 @@ nota: |
 url: [""]
 telefono: []
 email: 
-permalink: /rio-grande/entidades/moto-club-rio-grande/
+permalink: /rio-grande/entidades/mcrg/
 ---
 
+Encabezado por Federico Velázquez.
