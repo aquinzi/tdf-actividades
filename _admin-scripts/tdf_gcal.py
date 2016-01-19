@@ -340,7 +340,7 @@ def scheduleEvent(list_schedule, event_data):
 				)
 			)
 		
-		if event_data['location']:
+		if not event_data['location'] is "":
 			event['location'] = event_data['location']
 			place = ", en " + event_data['location']
 
