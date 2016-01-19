@@ -672,15 +672,15 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/tdf",
-		"/C/xampp/htdocs/tdf/_entidades-riogrande",
-		"/C/xampp/htdocs/tdf/assets",
-		"/C/xampp/htdocs/tdf/rio-grande",
-		"/C/xampp/htdocs/tdf/rio-grande/actividades",
-		"/C/xampp/htdocs/tdf/rio-grande/lugares"
+		"/C/Users/Ariela/Desktop/tdf-actividades",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2015-12-21-festejos-dia-mas-largo.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2015-12-21-muestra-retratos-blanco-negro.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2015-12-30-13-corrida-cierre-ano.md",
 		"/C/Users/Ariela/Documents/My Dropbox/to wiki/convertir-repo-SVN-a-Git.md",
 		"/C/Users/Ariela/Desktop/app_reuniones/cpanel/login.php",
 		"/C/Users/Ariela/Desktop/app_reuniones/cpanel/entrar.php",
@@ -805,10 +805,7 @@
 		"/C/Users/Ariela/Desktop/process-music/DEZERT/DEZERT - Hen (10.01.2015).html",
 		"/I/Musica/グリーヴァ/info.txt",
 		"/C/Users/Ariela/Desktop/process-music/Grieva - Ayatsuri ningen _ Fake _ Zetsubou no asa (29.04.2015).html",
-		"/I/Musica/えんそく/info.txt",
-		"/C/Users/Ariela/Desktop/process-music/Ensoku - Ensoku no daiyogen.html",
-		"/I/Musica/VANIRU/info.txt",
-		"/I/Musica/VANIRU/!lyrics/High FANTASY.txt"
+		"/I/Musica/えんそく/info.txt"
 	],
 	"find":
 	{
@@ -826,6 +823,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			",",
 			"$imagen_fondo",
 			"group[0]",
 			"(page.title | lower)",
@@ -952,15 +950,15 @@
 			"Compatibilidad con WordPress ",
 			"Ver los detalles de la versión .",
 			"login()",
-			"HOURS_TIMEZONE",
-			"COMMANDS_ACCEPTED"
+			"HOURS_TIMEZONE"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"\\n",
 			"group_name",
 			"page.title | lower",
 			"page.",
@@ -1087,8 +1085,7 @@
 			"\\n",
 			"",
 			"$1\\n",
-			"http",
-			"\\\""
+			"http"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1225,7 +1222,7 @@
 		"cols":
 		[
 			0.0,
-			0.928238659997,
+			0.81601676618,
 			1.0
 		],
 		"rows":
@@ -1461,7 +1458,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 50.0,
+	"side_bar_width": 273.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
