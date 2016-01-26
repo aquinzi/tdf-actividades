@@ -1,20 +1,22 @@
 ---
 layout: event 
 title: Global Game Jam
-date: 2016-01-29
-no-time-start: true
-date-end: 2016-01-31
-no-time-end: true
-location: 
+date: 2016-01-29 17:00
+no-time-start: 
+date-end: 2016-01-31 17:00
+no-time-end: 
+location: Buffalo Contenidos (Perito Moreno 561)
 category: rio-grande
-tags: []
-source: http://www.surenio.com.ar/tres-jornadas-intensivas-para-la-creacion-de-videojuegos/
+tags: [arte]
+source: http://globalgamejam.org/2016/jam-sites/ggj-r%C3%ADo-grande
 people: []
 ---
 
-“Global Game Jam” se realiza simultáneamente en todo el mundo, donde miles de personas dedican un fin de semana a crear un videojuego que dan a conocer a la comunidad, así como también, tiene como objetivo, mejorar sus propios conocimientos y técnicas en tres intensas jornadas.
+Entrada gratuita, abierto las 48 horas, puede participar cualquiera siendo mayor de 16 años. Las comidas se proveen en el sitio (siii!), tienen seguridad. Para registrarse hay que llenar un [formulario](http://goo.gl/forms/Zt1Bv5F3eK).
 
-se trata de: 
-> una maratón intensiva de creación de videojuegos y juegos de mesa gratuita, son 48 horas ininterrumpidas de prototipado y armado de un juego que después será subido a internet y compartido con millones de personas
 
-Cabe mencionar que las jornadas son libres y gratuitas para todo el público que tenga interés en programación, dibujo y animación 2d y 3d, compositores de música y guionistas; si bien, no es necesario previo conocimiento, los que participen deben tener un gran interés para aprender esta experiencia mundial.
+## Sobre Global Game Jam
+
+“Global Game Jam” se realiza simultáneamente en todo el mundo, donde miles de personas dedican un fin de semana a crear un juego (videojuego, de mesa o cartas) que dan a conocer a la comunidad, mejorando sus propios conocimientos y técnicas en tres intensas jornadas.
+
+Las jornadas son libres y gratuitas para todo el público que tenga interés en programación, dibujo y animación 2d y 3d, compositores de música y guionistas; si bien, no es necesario previo conocimiento, los que participen deben tener un gran interés para aprender esta experiencia mundial.
