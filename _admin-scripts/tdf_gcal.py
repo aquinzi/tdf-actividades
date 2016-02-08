@@ -19,6 +19,7 @@ so they can be posted using IFTTT (so dirty!)
 #GCAL:
 #   probably we could need it. event['id'] (same as event['iCalUID'], this has @google.com)
 
+# TODO: save processed events to the txt file once the city is done. (avoid possible losts when script breaks)
 # TODO: use the metadata in file to check if it's old or not. Reason: events that span multiple days (expositions) and were added later.
 # TODO: support to create shorturls
 # PRobably we should read config file so we dont hardcode stuff
@@ -342,7 +343,8 @@ def scheduleEvent(list_schedule, event_data):
 		
 		if not event_data['location'] is "":
 			event['location'] = event_data['location']
-			place = ", en " + event_data['location']
+			if event['location']:
+				place = ", en " + event_data['location']
 
 		if event_data['tags']:
 			tags = " #" + event_data['tags'].replace(",", " #")
