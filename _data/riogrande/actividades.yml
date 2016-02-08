@@ -21,6 +21,7 @@ deporte:
   - nombre: atletismo
   - nombre: automovilismo
   - nombre: badminton
+  - nombre: bachata
   - nombre: basket
     alternativo: [básquetbol,basquet,basketball]
   - nombre: bochas
@@ -32,6 +33,8 @@ deporte:
   - nombre: danzas árabes
   - nombre: escalada deportiva
   - nombre: fisicoculturismo
+  - nombre: fitness
+  - nombre: flamenco
   - nombre: folklore
   - nombre: futsal
   - nombre: fútbol
@@ -60,6 +63,7 @@ deporte:
   - nombre: karting
   - nombre: kendô
     alternativo: [kendo]
+  - nombre: kickboxing
   - nombre: kung fu
   - nombre: levantamiento olímpico
   - nombre: lucha
@@ -68,8 +72,8 @@ deporte:
   - nombre: paddle
     alternativo: [padle,padel]
   - nombre: paintball
-  - nombre: pa kua
-    alternativo: [pakua,Pa Kua Chang,baguazhang,Bāguàzhǎng,Bāguà,bagua]
+  - nombre: pakua
+    alternativo: [pa kua,Pa Kua Chang,baguazhang,Bāguàzhǎng,Bāguà,bagua]
   - nombre: patín artístico
   - nombre: pesca deportiva
   - nombre: polo
@@ -78,6 +82,7 @@ deporte:
   - nombre: powerlifting
   - nombre: roller derby
   - nombre: rugby
+  - nombre: salsa
   - nombre: salto hípico
   - nombre: sanshou
     alternativo: [sanda,boxeo chino]
@@ -90,3 +95,4 @@ deporte:
   - nombre: voley
     alternativo: [volley,volleyball,voleibol]
   - nombre: yoga
+  - nombre: zumba

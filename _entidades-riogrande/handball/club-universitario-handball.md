@@ -9,7 +9,7 @@ horario:
 precio: 
 nota: | 
   
-url: [""]
+url: ["https://twitter.com/universitariohb"]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/club-universitario-handball/
