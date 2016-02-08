@@ -142,3 +142,4 @@ rio-grande@2016-02-14-prueba-doble-flamenco.md
 rio-grande@2016-02-21-mini-ciclo-turismo-25km.md
 rio-grande@2016-02-28-mini-ciclo-turismo-25km.md
 rio-grande@2016-05-29-corrida-dia-provincia.md
+rio-grande@2016-02-13-lanzamiento-oficial-clases-rock-roll.md
