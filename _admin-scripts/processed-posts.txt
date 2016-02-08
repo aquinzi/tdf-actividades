@@ -115,3 +115,26 @@ rio-grande@2016-11-13-corrida-infanteria-marina.md
 ushuaia@2016-01-21-ciclo-cine-musical-berlin-calling.md
 ushuaia@2016-01-28-ciclo-cine-musical-eden.md
 ushuaia@2016-01-29-el-tango-sus-matices.md
+rio-grande@2016-02-12-tardes-peli-septimo-enanito.md
+rio-grande@2016-02-12-torneo-pool-chicos.md
+rio-grande@2016-02-13-torneo-pool-adultos.md
+rio-grande@2016-02-19-tardes-peli-frozen.md
+rio-grande@2016-02-26-tardes-peli-rio-2.md
+rio-grande@2016-02-27-motociclismo-super-especial.md
+rio-grande@2016-06-10-expo-tattoo.md
+rio-grande@2016-10-01-super-motoencuentro.md
+ushuaia@2016-02-08-ciclo-carnavales.md
+ushuaia@2016-02-09-casting-campana-barletta.md
+ushuaia@2016-02-10-carnaval-baile-adultos-mayores.md
+ushuaia@2016-02-10-the-beatles-help.md
+ushuaia@2016-02-12-pulperia-fin-mundo.md
+ushuaia@2016-02-13-milonga-carnaval.md
+ushuaia@2016-02-17-the-beatles-yellow-submarine.md
+ushuaia@2016-02-19-pulperia-fin-mundo.md
+ushuaia@2016-02-20-milonga-carnaval.md
+ushuaia@2016-02-24-the-beatles-magical-mistery-tour.md
+ushuaia@2016-03-05-karting.md
+ushuaia@2016-03-19-karting.md
+tolhuin@2016-02-13-gran-feria-social.md
+tolhuin@2016-03-12-automovilismo-carlos romero.md
+tolhuin@2016-03-26-vuelta-tierra-fuego.md
