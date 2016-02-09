@@ -13,17 +13,19 @@ gem "jekyll", versions["jekyll"]
 gem "jekyll-coffeescript", versions["jekyll-coffeescript"]
 gem "jekyll-sass-converter", versions["jekyll-sass-converter"]
 gem "kramdown", versions["kramdown"]
-gem "maruku", versions["maruku"]
+#gem "maruku", versions["maruku"]
 #gem "rdiscount", versions["rdiscount"] #we cant install it in windows
-gem "redcarpet", versions["redcarpet"]
-gem "RedCloth", versions["RedCloth"]
+#gem "redcarpet", versions["redcarpet"] #no support in GH pages
+#gem "pygments.rb", versions["pygments.rb"]
+gem "rouge", versions["rouge"] #for code highlighting
+#gem "RedCloth", versions["RedCloth"] #tetxtile, no support in GH pages
 gem "liquid", versions["liquid"]
-gem "pygments.rb", versions["pygments.rb"]
 gem "jemoji", versions["jemoji"]
 gem "jekyll-mentions", versions["jekyll-mentions"]
 gem "jekyll-redirect-from", versions["jekyll-redirect-from"]
 gem "jekyll-sitemap", versions["jekyll-sitemap"]
 gem "jekyll-feed", versions["jekyll-feed"]
+gem "jekyll-seo-tag", versions["jekyll-seo-tag"]
 #gem "ruby", versions["ruby"] #avoid problems in windows
 gem "github-pages", versions["github-pages"]
 gem "html-pipeline", versions["html-pipeline"]
