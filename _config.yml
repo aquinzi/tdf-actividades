@@ -105,7 +105,7 @@ gems:
 
 # Conversion
 #markdown:    kramdown
-highlighter: pygments 
+highlighter: rouge 
 #lsi:         false # related posts; can't overwrite in GitHub Pages 
 #excerpt_separator: "\n\n"
 
