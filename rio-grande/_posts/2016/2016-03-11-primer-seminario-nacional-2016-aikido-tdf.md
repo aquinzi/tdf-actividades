@@ -9,7 +9,7 @@ location: clubsanmartin
 category: rio-grande
 tags: [deporte,aikido]
 source: 
-people: []
+people: [sakanashi-dojo]
 short-url: http://goo.gl/rbK6Tx
 ---
 
