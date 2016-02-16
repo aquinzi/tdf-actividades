@@ -8,10 +8,9 @@ horario:
   - {dia: "lunes a viernes", hora: "19:00-21:00", nota: "" }
 precio: gratis
 nota: | 
-  instructor Pedro Gómez.
+  Entrenador Pedro Gómez.
 url: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/academia-municipal-boxeo/
 ---
-
