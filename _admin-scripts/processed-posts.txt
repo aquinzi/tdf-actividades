@@ -143,3 +143,8 @@ rio-grande@2016-02-21-mini-ciclo-turismo-25km.md
 rio-grande@2016-02-28-mini-ciclo-turismo-25km.md
 rio-grande@2016-05-29-corrida-dia-provincia.md
 rio-grande@2016-02-13-lanzamiento-oficial-clases-rock-roll.md
+rio-grande@2016-02-20-noche-variete.md
+rio-grande@2016-02-26-eleccion-reina-provincial-carnaval.md
+rio-grande@2016-02-28-desfile-carnaval.md
+rio-grande@2016-03-11-primer-seminario-nacional-2016-aikido-tdf.md
+ushuaia@2016-03-15-caminata-mentoreo.md
