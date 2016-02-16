@@ -90,7 +90,7 @@ layout: default
 		{% if (page.url[0]| strip ) != "" %}
 		<dt class="web">Sitios</dt>
 			<dd ><ul>
-				{% for web in lugar.url %}
+				{% for web in page.url %}
 					{% capture domain %}{% include get-domain.html url=web no_dot=true%}{% endcapture %}
 					{% capture handle %}{% include get-social-handle.html url=web %}{% endcapture %}
 				<li>
