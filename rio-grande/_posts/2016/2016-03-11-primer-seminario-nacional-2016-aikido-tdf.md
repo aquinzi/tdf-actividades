@@ -1,13 +1,13 @@
 ---
 layout: event 
-title: 1° seminario nacional 2016 \"Aikido en Tierra del Fuego\"
+title: "1° seminario nacional 2016 \"Aikido en Tierra del Fuego\""
 date: 2016-03-11 19:00
 no-time-start: 
 date-end: 2016-03-12 18:00
 no-time-end: 
 location: clubsanmartin
 category: rio-grande
-tags: [deporte,aikido]
+tags: [deportes,aikido]
 source: 
 people: [sakanashi-dojo]
 short-url: http://goo.gl/rbK6Tx
