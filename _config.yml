@@ -91,7 +91,7 @@ gems:
 #   - jemoji # emoji
 #   - jekyll-mentions # support for @mentions (github users)
 #   - jekyll-feed 
-#   - jekyll-redirect-from # in posts/pages use: redirect_from: "/foo"
+   - jekyll-redirect-from # in posts/pages use: redirect_from: "/foo"
 
 # jekyll-redirect-from: 
 #     allow an author to specify multiple URLs for a page, such that the alternative URLs redirect to the new Jekyll URL. 
