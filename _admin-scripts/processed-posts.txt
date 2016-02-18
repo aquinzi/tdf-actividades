@@ -148,3 +148,7 @@ rio-grande@2016-02-26-eleccion-reina-provincial-carnaval.md
 rio-grande@2016-02-28-desfile-carnaval.md
 rio-grande@2016-03-11-primer-seminario-nacional-2016-aikido-tdf.md
 ushuaia@2016-03-15-caminata-mentoreo.md
+rio-grande@2016-02-18-inscripciones-curso-chino-mandarin-nivel-1.md
+rio-grande@2016-02-21-6to-campeonato-provincial-10-kilometros.md
+ushuaia@2016-02-20-feria-fin-mundo.md
+ushuaia@2016-02-22-gala-cierre-semana-antartida.md
