@@ -1,7 +1,7 @@
 ---
 nombre: Okawakai
 categoria: iaidô
-ultima-actualizacion: 2015-10-10
+ultima-actualizacion: 2016-02-18
 direccion: 
   lugar: [clubsanmartin]
 horario: 
@@ -12,6 +12,8 @@ nota: |
 url: [""]
 telefono: []
 email: 
-permalink: /rio-grande/entidades/okawakai-iaido/
+permalink: /rio-grande/entidades/iaido-okawakai/
+redirect_from:
+  - /rio-grande/entidades/okawakai-iaido/
 ---
 

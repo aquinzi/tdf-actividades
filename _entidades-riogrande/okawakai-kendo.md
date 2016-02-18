@@ -1,18 +1,20 @@
 ---
 nombre: Okawakai
 categoria: kendô
-ultima-actualizacion: 2015-10-10
+ultima-actualizacion: 2016-02-18
 direccion: 
   lugar: [clubsanmartin]
 horario: 
-  - {dia: "jueves", hora: "21:00-22:30", nota: "adelante" }
-  - {dia: "sábado", hora: "17:30-19:00", nota: "en el gimnasio" }
-precio: gratis
+  - {dia: "martes", hora: "21:00-22:30", nota: "" }
+  - {dia: "miércoles", hora: "21:00-22:30", nota: "" }
+precio: pago
 nota: | 
 
 url: [""]
 telefono: []
 email: 
-permalink: /rio-grande/entidades/okawakai-kendo/
+permalink: /rio-grande/entidades/kendo-okawakai/
+redirect_from:
+  - /rio-grande/entidades/okawakai-kendo/
 ---
 
