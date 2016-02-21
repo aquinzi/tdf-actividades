@@ -1,14 +1,14 @@
 ---
 nombre: Okawakai
 categoria: iaidô
-ultima-actualizacion: 2016-02-18
+ultima-actualizacion: 2016-02-21
 direccion: 
   lugar: [clubsanmartin]
 horario: 
   - {dia: "martes", hora: "18:30-20:00", nota: "en gimnasio, arriba (dôjô de aikido)" }
 precio: gratis
 nota: | 
-
+  Clases suspendidas hasta nuevo aviso
 url: [""]
 telefono: []
 email: 
