@@ -1,7 +1,7 @@
 ---
 nombre: Okawakai
 categoria: kendô
-ultima-actualizacion: 2016-02-18
+ultima-actualizacion: 2016-02-21
 direccion: 
   lugar: [clubsanmartin]
 horario: 
@@ -9,7 +9,7 @@ horario:
   - {dia: "miércoles", hora: "21:00-22:30", nota: "" }
 precio: pago
 nota: | 
-
+  Clases suspendidas hasta nuevo aviso
 url: [""]
 telefono: []
 email: 
