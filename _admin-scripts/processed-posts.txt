@@ -161,3 +161,10 @@ rio-grande@2016-12-18-campeonato-super-especial-ultima-fecha.md
 ushuaia@2016-03-02-concurso-cuentos-mujer-mujeres.md
 ushuaia@2016-03-04-noche-museos-espacios-culturales.md
 ushuaia@2016-03-09-charla-como-prepararnos-para-nueva internet.md
+rio-grande@2016-03-13-competencia-ciclismo-luis-alamo.md
+rio-grande@2016-04-17-karting-tercera-fecha.md
+rio-grande@2016-05-15-karting-cuarta-fecha.md
+rio-grande@2016-10-02-karting-quinta-fecha.md
+rio-grande@2016-11-20-karting-octava-fecha.md
+ushuaia@2016-10-23-Karting-sexta-fecha.md
+ushuaia@2016-11-06-karting-septima-fecha.md

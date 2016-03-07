@@ -1,13 +1,14 @@
 ---
 layout: event 
-title: Karting, segunda fecha
-date: 2016-03-19
+title: Karting, séptima fecha
+date: 2016-11-06
 no-time-start: true
-date-end: 2016-03-20
+date-end: 2016-11-06
 no-time-end: true
 location: 
 category: ushuaia
 tags: [deportes,karting]
-source: http://www.rgdeportivo.com.ar/?p=299
+source: http://www.surenio.com.ar/35312-2/
 people: []
 ---
+

@@ -664,16 +664,19 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_data/riogrande",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/ajedrez",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03/2016-03-13-competencia-ciclismo-luis-alamo.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/11/2016-11-20-karting-octava-fecha.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-19-karting.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03/2016-03-12-exposicion-rural.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-02-concurso-cuentos-mujer-mujeres.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-04-noche-museos-espacios-culturales.md",
@@ -798,10 +801,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-04-24-duatlon-dia-trabajo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-04-10-medio-maraton-rio-grande.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-03-06-cross-cabo-domingo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-21-campeonato-provincial.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-07-atletismo-aafm-control-2.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-03-20-aniversario-aradav.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/automovilismo/apitur.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-21-campeonato-provincial.md"
 	],
 	"find":
 	{
@@ -1366,7 +1366,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 171.0,
+	"side_bar_width": 183.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
