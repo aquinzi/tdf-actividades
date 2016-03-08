@@ -7,7 +7,7 @@ date-end: 2016-03-05
 no-time-end: true
 location: Club de Ajedrez de Río Grande
 category: rio-grande
-tags: [derpotes,ajedrez]
+tags: [deportes,ajedrez]
 source: http://www.airelibre.com.ar/2016/02/29/comenzo-el-apertura-de-ajedrez/
 people: [club-ajedrez-rg]
 ---
