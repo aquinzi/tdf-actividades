@@ -225,3 +225,4 @@ ushuaia@2016-06-04-campeonato-apertura-voleibol-varones-aep-oshovia-universitari
 ushuaia@2016-06-04-campeonato-apertura-voleibol-varones-campolter-pinguino-b.md
 ushuaia@2016-06-05-campeonato-apertura-voleibol-mujeres-caef-campolter.md
 ushuaia@2016-06-19-campeonato-apertura-voleibol-varones-aep-oshovia-pinguino-a.md
+rio-grande@2016-04-16-curso-gratuito-autocad.md

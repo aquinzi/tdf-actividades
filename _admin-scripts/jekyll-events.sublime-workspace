@@ -664,16 +664,18 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_data/riogrande",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-16-curso-gratuito-autocad.md",
+		"/I/wiki/help/android/android_downloadapk.md",
+		"/I/Musica/_m-tags/Alice Cooper/{2001-03-27} The Definitive Alice Cooper.tags-bak",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03/2016-03-13-competencia-ciclismo-luis-alamo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/11/2016-11-20-karting-octava-fecha.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-19-karting.md",
@@ -788,7 +790,6 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-02-19-pulperia-fin-mundo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-02-20-milonga-carnaval.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts/2016/2016-02-13-gran-feria-social.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-01-29-global-game-jam.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-01-23-festival-a-cielo-abierto.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-01-23-taller-canto-experimientacion.md",
@@ -798,10 +799,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-06-12-campeonato-fiestas-patrias.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-05-29-Corrida-dia-provincia.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-05-01-corrida-dia-trabajo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-04-24-duatlon-dia-trabajo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-04-10-medio-maraton-rio-grande.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-03-06-cross-cabo-domingo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-21-campeonato-provincial.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-04-24-duatlon-dia-trabajo.md"
 	],
 	"find":
 	{
@@ -1130,7 +1128,7 @@
 		"cols":
 		[
 			0.0,
-			0.931224209078,
+			0.930555555556,
 			1.0
 		],
 		"rows":
@@ -1366,7 +1364,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 183.0,
+	"side_bar_width": 191.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
