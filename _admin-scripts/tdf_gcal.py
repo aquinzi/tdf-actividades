@@ -843,7 +843,14 @@ if __name__ == '__main__':
 				file_path = os.path.join(root,archivo)
 				#filename is YYYY-MM-DD-slug.md
 				file_date = "-".join(archivo.split("-")[0:3])
+
+				if file_date.split("-")[0] == "2015":
+					# Sorry, we dont want the old ones
+					continue		
+							
 				file_line_processed = PROCESSED_POSTS_FILE_LINE.format(ciudad=ciudad,filename=archivo)
+
+
 
 				file_date = datetime.datetime.strptime(file_date, '%Y-%m-%d')
 
