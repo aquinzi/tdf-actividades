@@ -23,7 +23,6 @@ so they can be posted using IFTTT (so dirty!)
 # TODO: use the metadata in file to check if it's old or not. Reason: events that span multiple days (expositions) and were added later.
 # TODO: support to create shorturls
 # PRobably we should read config file so we dont hardcode stuff
-# TODO: find a better way to handle untimed events and inserting into calendar
 # TODO: find a way to fix updated events. 
 # 		- Search the event in calendar, edit
 # 		- delete the line in processed posts and just add the new one
@@ -130,6 +129,52 @@ parser.add_argument("--edit",   help="Edit an event")
 
 #args = vars(parser.parse_args()) #to dict
 args = parser.parse_args()
+
+def get_processed_file():
+	"""Get the processed file, returning it as a list.
+
+	Returns:
+	    list
+	"""	
+
+	if os.path.exists(PROCESSED_POSTS_FILE):
+		with open(PROCESSED_POSTS_FILE,'r',encoding="utf-8") as tmp:
+			#readlines() includes de new-line char. we want things easy ;)
+			return tmp.read().splitlines()
+
+	return False
+
+def clean_processed_file():
+	"""Filters processed file, deleting old entries. """	
+
+	today = datetime.datetime.today()
+
+	processed_posts = get_processed_file()
+
+	if not processed_posts:
+		print (" there was an error with the processed file. Does it exist?")
+		return False
+
+	cleaned_posts = list()
+
+	for row in processed_posts:
+		tmp_line = row.split("@")[1]
+		tmp_line = tmp_line[0:10]
+		tmp_date = datetime.datetime.strptime(tmp_line, '%Y-%m-%d')
+
+		if tmp_date >= today:
+			cleaned_posts.append(row) 
+
+	if len(cleaned_posts) > 0:
+		with open(PROCESSED_POSTS_FILE,'w',encoding="utf-8") as tmp:
+			tmp.write("\n".join(cleaned_posts))
+
+		print(" Processed file cleaned!")
+	else:
+		print(" Everything is ok. Processed file not modified. ")
+
+
+
 
 if args.clean:
 	clean_processed_file()
@@ -331,7 +376,12 @@ def scheduleEvent(list_schedule, event_data):
 		event['start'] = {'dateTime': date_time[0], 'timeZone': timezone}
 	
 		event['end'] = {'dateTime': date_time[1], 'timeZone': timezone}
-		human_datetime_end = _fecha_humana(event_data['start']['timestamp'], abbr=True) #the real date
+		#human_datetime_end = _fecha_humana(event_data['start']['timestamp'], abbr=True) #the real date
+		human_datetime_end = event_data['start']['timestamp'].strftime('%d/%m, %H:%M hs')
+
+		# if not time set, remove the 00:00 added when creating the timestamp
+		if not event_data['start']['time']:
+			human_datetime_end = human_datetime_end.replace("00:00 hs","")
 		#if all day: {'date': eEnd}
 		
 		print ("        schedule from {} to {} until {}".format(
@@ -346,14 +396,35 @@ def scheduleEvent(list_schedule, event_data):
 			if event['location']:
 				place = ", en " + event_data['location']
 
+		final_summary = event['summary']
+		tags = ""
 		if event_data['tags']:
-			tags = " #" + event_data['tags'].replace(",", " #")
+			#tags = " #" + event_data['tags'].replace(",", " #")
+
+			all_tags = event_data['tags'].split(",")
+			reminding_tags = list()
+
+			#shouldn't be doing this but it's quicker now than using regex
+			final_summary = " " + final_summary + " " 
+
+			#use part of the title to include tags (saving space)
+			tmp_tag = ""
+			for tag in all_tags:
+				tmp_tag = " " + tag + " "
+				if tmp_tag in final_summary:
+					final_summary = final_summary.replace(tmp_tag, " #" + tag + " ")
+				else:
+					reminding_tags.append(tag)
+
+			final_summary = strip(final_summary)
+			tags = " #".join(reminding_tags)
+
 
 		if event_data['short-url']:
 			shortURL = event_data['short-url'] + " "
 
 		event['description'] = gcal_description.format(
-			city=city, tags=tags, title=event['summary']
+			city=city, tags=tags, title=final_summary
 			, human_date=human_datetime_end, place=place
 			, shortURL=shortURL
 			)
@@ -672,47 +743,10 @@ def update_processed_file(list_files):
     	tmp.write("\n" + "\n".join(list_files))
 
 
-def clean_processed_file():
-	"""Filters processed file, deleting old entries. """	
-
-	today = datetime.date.today()
-
-	processed_posts = get_processed_file()
-
-	if not processed_posts:
-		print (" there was an error with the processed file. Does it exist?")
-		return False
-
-	cleaned_posts = list()
-
-	for row in processed_posts:
-		tmp_date = datetime.datetime.strptime(row.split(";")[0], '%Y-%m-%d')
-
-		if tmp_date >= today:
-			cleaned_posts.append(row) 
-
-	if len(cleaned_posts) > 0:
-		with open(PROCESSED_POSTS_FILE,'w',encoding="utf-8") as tmp:
-			tmp.write("\n".join(cleaned_posts))
-
-		print(" Processed file cleaned!")
-	else:
-		print(" Everything is ok. Processed file not modified. ")
 
 
-def get_processed_file():
-	"""Get the processed file, returning it as a list.
 
-	Returns:
-	    list
-	"""	
 
-	if os.path.exists(PROCESSED_POSTS_FILE):
-		with open(PROCESSED_POSTS_FILE,'r',encoding="utf-8") as tmp:
-			#readlines() includes de new-line char. we want things easy ;)
-			return tmp.read().splitlines()
-
-	return False
 
 
 def searchEvent(query_text):
@@ -817,7 +851,6 @@ if __name__ == '__main__':
 		tmp = ""
 
 	# ge today's date (only)
-	#today_date = datetime.date.today() 
 	today_date = datetime.datetime.today()
 		# I don't know what i'm doing but it works
 	today_date = today_date.isoformat(sep=' ').split()[0]
