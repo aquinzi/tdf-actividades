@@ -1,13 +1,13 @@
 ---
 layout: event 
-title: FlISoL Río Grande
+title: FLISoL Río Grande
 date: 2016-04-23 14:00
 no-time-start: 
 date-end: 2016-04-23
 no-time-end: true
 location: untdf
 category: rio-grande
-tags: [computacion]
+tags: [computacion,tecnologia]
 source: 
 people: []
 short-url: http://goo.gl/EgwKtM
