@@ -5,7 +5,7 @@ date: 2015-12-17 19:00
 no-time-start: 
 date-end: 2015-12-17 21:00
 no-time-end: 
-location: SUM barrio Reconquista (Yahalve 688, esq. Yourka)
+location: sumreconquista
 category: rio-grande
 tags: [deportes,boxeo]
 source: http://www.surenio.com.ar/27558-2/

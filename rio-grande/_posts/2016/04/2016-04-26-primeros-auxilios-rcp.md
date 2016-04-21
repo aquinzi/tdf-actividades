@@ -5,7 +5,7 @@ date: 2016-04-26 14:00
 no-time-start: 
 date-end: 2016-04-27 17:00
 no-time-end: 
-location: SUM Roconquista CePLA (Yourka y Yahalve)
+location: sumreconquista
 category: rio-grande
 tags: [cursos]
 source: 
