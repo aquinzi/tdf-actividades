@@ -5,3 +5,6 @@ surenio.com.ar: &idsurenio "El Sureño"
 surenio: *idsurenio
 facebook.com: &idfacebook "Facebook"
 facebook: *idfacebook
+fuegocultura.com.ar: &idfuegocultura "Fuego Cultura"
+fuegocultura: *idfuegocultura
+riogrande.gob.ar: "Gobierno de Río Grande"

@@ -416,7 +416,7 @@ def scheduleEvent(list_schedule, event_data):
 				else:
 					reminding_tags.append(tag)
 
-			final_summary = strip(final_summary)
+			final_summary = final_summary.strip()
 			tags = " #".join(reminding_tags)
 
 
