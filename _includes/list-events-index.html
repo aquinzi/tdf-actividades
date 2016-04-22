@@ -1,5 +1,5 @@
 {% if include.posts %}{% assign post_list = include.posts | sort:'date' %}
-{% else %}{% assign post_list = site.posts %}
+{% else %}{% assign post_list = site.posts | sort:'date' %}
 {% endif %}
 
 {% if include.city %}

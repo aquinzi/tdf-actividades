@@ -33,7 +33,7 @@ layout: default
 {% endif %}
 
 <h2>Agenda para estos días</h2>
-{% assign post_list = site.categories[page.category] %}
+{% assign post_list = site.categories[page.category]  | sort:'date' %}
 {% include list-events-index.html posts=post_list%}
 
 <p>Se pueden ver mas en el <a href="{{site.data.wiki.[page.category]}}agenda/">archivo</a></p>
