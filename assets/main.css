@@ -1069,18 +1069,20 @@ h2 + .headerlink-popup, h3 + .headerlink-popup, h4 + .headerlink-popup{
 #site-footer a { color:inherit; white-space:nowrap }
 
 #site-footer .author {
+	/*
 	color: inherit;
 	text-align: center;
 	font-size: 1.5em;
 	background-color: #6B2121;
 	width: 66px;
-	margin: 2em auto;
 	padding: 0.2em;
 	transform: rotate(-17deg);
-	position: relative;
 	height: 66px;
+	*/
+	margin: 2em auto;
+	position: relative;
 }
-
+/*
 #site-footer .author a {
 	color: inherit;
 	display: inline-block;
@@ -1098,7 +1100,7 @@ h2 + .headerlink-popup, h3 + .headerlink-popup, h4 + .headerlink-popup{
 	background-color: #4C277A;
 	transform: rotate(18deg);
 }
-
+*/
 
 #site-footer ul {
 	list-style: none;
