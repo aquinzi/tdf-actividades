@@ -180,8 +180,7 @@ defaults:
       breadcrumb_limit: 3
       city: ushuaia
       breadcrumbs: ["Ushuaia","Entidades"]
-		
-		
+
 collections:
   entidades-riogrande:
     output: true 
