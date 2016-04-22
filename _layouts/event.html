@@ -66,6 +66,7 @@ date: %R = 24-hour time HH:MM
 	<li><a href="{{ gcal_link | strip_newlines }}" title="Añadir a gcal">Google Calendar</a></li>
 	{%endif%}
 	<li><a href='whatsapp://send?text={{ page.title | replace:"'", "" | replace:'"',''}}. Info: {{ page.url | prepend: site.url }}' class="u-url">Enviar por Whatsapp</a></li>
+	<li><a href='https://telegram.me/share/url?url={{ page.url | prepend: site.url}}' class="u-url">Enviar por Telegram</a></li>
 	<li><a href="{{ page.url | prepend: site.url }}" class="u-url">Link del evento</a></li>
 </ul>
 

@@ -442,6 +442,10 @@ footer#site-footer .social a:before{padding-right: 0.3em;}
 .h-event .event-subscribe li a[href^="whatsapp://"]:before
 { content:"\f232"; }
 
+/*  icon: telegram (fake. fontawesome doesn't have it) */
+.h-event .event-subscribe li a[href^="https://telegram.me/"]:before
+{ content:"\f1d8"; }
+
 
 /*************
 ==main classes
