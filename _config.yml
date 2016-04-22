@@ -170,7 +170,7 @@ defaults:
       layout: entity
       breadcrumb_limit: 3
       city: rio-grande
-		breadcrumbs: ["Río Grande","Entidades"]
+      breadcrumbs: ["Río Grande","Entidades"]
 
 collections:
   entidades-riogrande:
