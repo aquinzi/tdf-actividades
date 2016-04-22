@@ -305,7 +305,7 @@ def scheduleEvent(list_schedule, event_data):
 	Ends 									ej: August 23, 2011 at 11:00PM
 	'''
 	# so dirty
-	gcal_description = "#{city}{tags} {title} {shortURL}({human_date}{place})"
+	gcal_description = "#{city} {tags} {title} {shortURL}({human_date}{place})"
 
 	end_date_iso = event_data['end']['timestamp'].isoformat()
 
@@ -404,13 +404,17 @@ def scheduleEvent(list_schedule, event_data):
 			all_tags = event_data['tags'].split(",")
 			reminding_tags = list()
 
-			#shouldn't be doing this but it's quicker now than using regex
+			# shouldn't be doing this but it's quicker now than using regex
 			final_summary = " " + final_summary + " " 
+			# and also shouldn't be doing this but we don't want to deal with accented letters
+			# and the tag stuff...
+			final_summary = final_summary.replace("ó","o").replace("í","i")
 
 			#use part of the title to include tags (saving space)
 			tmp_tag = ""
 			for tag in all_tags:
 				tmp_tag = " " + tag + " "
+				
 				if tmp_tag in final_summary:
 					final_summary = final_summary.replace(tmp_tag, " #" + tag + " ")
 				else:
@@ -418,6 +422,7 @@ def scheduleEvent(list_schedule, event_data):
 
 			final_summary = final_summary.strip()
 			tags = " #".join(reminding_tags)
+			tags = "#" + tags
 
 
 		if event_data['short-url']:
