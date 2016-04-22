@@ -106,7 +106,7 @@ date: %R = 24-hour time HH:MM
 		<dd> el <time datetime="{{date_modified}}">{% include human-date.html  date=date_modified %}
 		 
 		{% assign hour_modified = date_modified | date:"%R" %}
-		{% if hour_modified != "" %}, a las {{hour_modified}}{% endif %}
+		{% if hour_modified != "" and hour_modified != "00:00"%}, a las {{hour_modified}}{% endif %}
 		</time>
     </dd>
 
