@@ -4,34 +4,90 @@ title: Actividades en Ushuaia
 modified: 2016-04-21
 ---
 
-Listado simple de actividades que se pueden realizar en Ushuaia. Proximamente se pondrá como se debe, a no desesperar.
+{% assign activities = site.data.ushuaia.actividades %}
+
+<div id="tabla-contenido">
+<p>Actividades encontradas en esta página, separada por categorías y por orden alfabético.</p>
 
 
-<h4>Aikido</h4> 
-<ul>
-	<li> Aonikenk Dojo. Lugar: Polideportivo Municipal Augusto Laserre. Sábado: de 18:00 a 20:00 hs. E-mail: martinmora66(arroba)hotmail(punto)com. Sensei Martín Mora; instructores suplentes: Fukushidoin: Alberto González, Juan M. Vergara, Nelson Martínez, Claudio Flores, Benito Garrido Torres, Gustavo Palacios y Eduardo Vargas.</li>
-	<li>Aikikai Ushuaia Dojo. Creado en 2008 por Gustavo Luayza junto a Gustavo Valdés (alumno del sensei Kurata, presidente de la Federación Aikikai Argentina). Lugar: gimnasio municipal del barrio La Cantera. Días: lunes, miércoles y viernes, de 22:00 a 23:00.</li>
-	<li>Mujou Dojo. Lugar: SUM de la Cantera (Soldado Luna 600/650). Días: lunes, miércoles y viernes, de 23:00 a 00:00; sábados de 17:00 a 19:00.</li>
-</ul>
 
-<h4>Ajedrez</h4> 
-<ul>
-	<li> Club Ushuaia Jaque Mate. Sitio web: <a href="http://www.jaquemateushuaia.com.ar/">Jaque Mate Ushuaia</a> </li>
-	<li> Círculo de Ajedrez de Ushuaia (CadU), ubicado en Las Gaviotas y Del Michay (Barrio Andino).  </li>
-</ul>
+{% assign letter = "" %}
+<dl class="toc-headings">
+{% for group in activities %}
+	<dt>{{ group[0] }}</dt>
+	<dd><ol class="list-multicolumn">
+		
+	{% for actividad in group[1] %}
+		{% assign current_letter = actividad.nombre | truncate: 1, '' | lower %}
+		
+		{% if current_letter != letter %}
+			{% assign letter = current_letter %}
+			{% unless forloop.first %}</li></ol>{%endunless%}
+			<li> <span class="letter">{{letter}}</span><span class="visuallyhidden">:</span>
+			<ol class="inline-items">
+		{% endif %}
+		<li><a href="#{% include slugify-word.html word=actividad.nombre %}">{{actividad.nombre}}</a></li>
+		
+	{% endfor %}
+
+	</ol></dd>
+{% endfor %}
+</dl>
+
+</div>
 
 
-<h4>Karate</h4> 
-<ul>
-	<li> Asociación Ushuaiense Karate Do Shotokan. Fundada el 4 de abril de 1990. Lugar: Polideportivo municipal, Salón B. Sitio web: <a href="https://www.facebook.com/Asociación-Ushuaiense-Karate-Do-Shotokan-573525719457851/">Facebook: Asociacion Ushuaiense Karate Do Shotokan</a> </li>
-</ul>
+{% for group in activities %}
+{%assign group_name = group[0] %}
+<h2 id="{% include slugify-word.html word=group_name %}">{{group_name}}</h2> 
 
-<h4>Tiro</h4>
-<ul>
-	<li>Tiro Federal 2 de Abril Ushuaia</li>
-</ul>
+	{% for actividad in group[1] %}
+		<h3 id="{% include slugify-word.html word=actividad.nombre %}">{{actividad.nombre}}{% if actividad.alternativo %}/{{actividad.alternativo|join:"/"}}{% endif %}</h3>
 
-<h4>Boxeo</h4>
-<ul>
-	<li>Escuela Guantes del Fin del Mundo (profesor Oscar Benítez)</li>
-</ul>
+		{% assign searchme =  actividad.nombre | downcase | replace: " ","-" %}
+		{% assign entities = site.entidades-ushuaia | where: "categoria",searchme %}
+
+		<ul class="listado-entidades">
+		{% for entity in entities %}
+			<li class="card-entidad {{ entity.precio }}">
+				<div class="logo">
+					{% if entity.img %} <img src="{{ entity.img }}" width="80" height="80"> {%endif%}
+				</div>
+
+				<div class="info">
+					<p class="p-name"><a href="{{entity.permalink }}">{{entity.nombre }}</a></p>
+					<dl>
+						<dt class="direccion visuallyhidden">Direccion</dt>
+						
+					{% if entity.direccion.lugar %}
+						<dd class="p-street-address">
+							{% for location in entity.direccion.lugar %}
+								{% include get-place.html place=location city="ushuaia" %}	
+							{% unless forloop.last %},{%endunless%}
+							{%endfor%}
+
+								</dd>
+					{% else %} 
+						<dd class="p-street-address">sin datos</dd>
+					{% endif %}
+						
+						<dt class="precio visuallyhidden">Precio</dt>
+					{% if entity.precio %}
+						<dd class="costo">{{ entity.precio }}</dd>
+					{% else %} 
+						<dd class="costo">sin datos</dd>
+					{% endif %}
+					</dl>
+
+				</div>
+
+			</li>
+		{% else %}
+			<li> En la ciudad se hace {{actividad.nombre}} pero no hay nada listado. Si conoces de alguna, no dudes en <a href="{{ site.data.wiki.colaboracion }}">colaborar</a>. </li>
+		{% endfor %}
+		</ul>
+
+		{% unless forloop.last %}<a class="btn-backtotop" href="#"><span>volver arriba</span></a>{%endunless%}
+
+	{% endfor %}
+{% endfor %}

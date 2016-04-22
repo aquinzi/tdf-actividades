@@ -171,12 +171,26 @@ defaults:
       breadcrumb_limit: 3
       city: rio-grande
       breadcrumbs: ["Río Grande","Entidades"]
-
+  - 
+    scope:
+      path: ""
+      type: entidades-ushuaia
+    values:
+      layout: entity
+      breadcrumb_limit: 3
+      city: ushuaia
+      breadcrumbs: ["Ushuaia","Entidades"]
+		
+		
 collections:
   entidades-riogrande:
     output: true 
     permalink: /rio-grande/entidades/:path/
-
+  entidades-ushuaia:
+    output: true 
+    permalink: /ushuaia/entidades/:path/
+	 
+	 
 # Markdown Processors (include only kramdown)
 
 #kramdown:
