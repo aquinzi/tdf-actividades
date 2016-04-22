@@ -1,6 +1,6 @@
 ---
 nombre: Tiro Federal 2 de Abril
-img: "http://tf2a.ar.tripod.com/TF2A_logoparaweb.jpg"
+img:
 categoria: tiro
 ultima-actualizacion: 2016-04-22
 direccion: 
