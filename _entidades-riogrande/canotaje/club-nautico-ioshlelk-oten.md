@@ -1,7 +1,8 @@
 ---
 nombre: Club Náutico "Ioshlelk Oten"
+img: "https://scontent-sea1-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/18964_255642378433_6237413_n.jpg?oh=dae2fd9b470ee180bd855e493da3a356&oe=577552DB"
 categoria: canotaje
-ultima-actualizacion: 2015-07-26
+ultima-actualizacion: 2016-04-22
 direccion: 
   lugar: [Dr. Manuel Montilla 1047]
   geo: {lat: -53.7986717, lon: -67.6817017}

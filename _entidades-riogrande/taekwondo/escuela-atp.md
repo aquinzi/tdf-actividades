@@ -1,7 +1,8 @@
 ---
 nombre: Escuela ATP
+img: "https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/11896112_1028750903826201_3001825419242416239_n.jpg?oh=cc95c76cf6d7824331e8aef336d2f687&oe=5773CBD3&__gda__=1470335619_8caff577c851ee3b0b42d7dfe7164734"
 categoria: taekwondo
-ultima-actualizacion: 2016-02-08
+ultima-actualizacion: 2016-04-22
 direccion: 
   lugar: [Gimnasio de la Escuela N° 21 (Prefectura naval e Isla de los Estados)]
 horario: 
