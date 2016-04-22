@@ -2,11 +2,12 @@ Documentación
 =================
 
  - FEED: hay feeds por ciudad
- - BREADCRUMBS: Los breadcrumbs se crean automáticamente por la url, hay una opción en config (``breadcrumb_limit``) para limitar la cantidad a poner (limita la profundidad)
+ - BREADCRUMBS: Los breadcrumbs se crean automáticamente por la url, hay una opción en config (``breadcrumb_limit``) para limitar la cantidad a poner (limita la profundidad). Solo en una parte (entidades rio grande) que se ponen manualmente (problemas con parsing y quick-fix)
  - TOC: jekyll usa kramdown por default, que genera TOC automaticamente. A su vez, jekyll tiene por defecto la opcion auto_ids para generar automaticamente los ID de los headers. Para usar el TOC: en la pagina.md poner ``* TOC(linebreak){:toc}`` [tip](http://www.seanbuscay.com/blog/jekyll-toc-markdown/)
  - "wiki links" (basicamente para facil linkeo de entidades, el resto es estatico simple). Se usa un wiki.yml que contiene los links; manualmente se tiene que poner el site.baseurl en el archivo yml. Para linkear: ``[titulo](site.data.wiki.[key])``. Se pueden usar los [repeated nodes](https://en.wikipedia.org/wiki/YAML#Repeated_nodes). (Ideas: [Jekyll Talk: Better way to manage links to articles](https://talk.jekyllrb.com/t/better-way-to-manage-links-to-articles/1199/6) y [Jekyll Issues: Add a tag to link to a post/page with it's title shown](https://github.com/jekyll/jekyll/issues/3182#issuecomment-70561683))
  - Se creó el ``slugify-word.html`` por que el filtro "raw" de liquid no funciona en gh-pages (y supongo que hace lio con los acentos)
  - Código del sitemap de: [davidensinger](http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/)
+ - hay varias cosas que no tienen template o no estan actualizados (perdon!)
 
 
 Notas miscelaneas
