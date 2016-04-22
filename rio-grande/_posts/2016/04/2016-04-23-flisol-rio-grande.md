@@ -21,8 +21,8 @@ La jornada propone charlas y talleres gratuitos, además de la instalación de s
 Cronograma:
 
 - 14:00 hs: Presentación
-- 14:30 a 17:00: Espacio Taller: Programación básica en software libre (Scratch, Pilas Engine, Python. Integrantes: Noelia Silba, Leandro Martinez, Gustavo Troncoso, Marcos Farina y Daniel Troncoso)
-- 14:30 a 17:00 hs: Espacio Taller: Experiencia con software libre en la escuela primaria. Integrantes: Patricia Rosa Vera con dos alumnas: Valentina Cataldo y Fátima Galera.
+- 14:00 a 14:30: Espacio Taller: Programación básica en software libre (Scratch, Pilas Engine, Python. Integrantes: Noelia Silba, Leandro Martinez, Gustavo Troncoso, Marcos Farina y Daniel Troncoso)
+- 14:30 a 15:00 hs: Espacio Taller: Experiencia con software libre en la escuela primaria. Integrantes: Patricia Rosa Vera con dos alumnas: Valentina Cataldo y Fátima Galera.
 - 15:00 hs: Charla Javier Castrillo – Polycom
 - 16:00 hs: INTERVALO
 - 16:30 hs: VPT/Mapping –Victor Villagran
