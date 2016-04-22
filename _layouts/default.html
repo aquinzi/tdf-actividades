@@ -145,25 +145,49 @@
 	<li class="visuallyhidden">
 		<a href="/">{{ site.name }}</a>
 	</li>
-	{% for crumb in url_parts limit:num_parts %}
-		{% if crumb == "" %}{% continue %}{% endif %}
-
-		{% assign pretty_crumb = (crumb | replace:'-',' ') %}
-		{% if site.data.prettify[crumb] %}
-			{% assign pretty_crumb = site.data.prettify[crumb]  %}
-		{% endif %}
+	{% if page.breadcrumbs %}
+		{% for crumb in page.breadcrumbs %}
+			<li{% if forloop.last %} class="current"{%endif%}>
+			
+			{% comment %} super hardcoded {% endcomment %}
+			{% if (crumb | lower ) == "río grande" %}
+				{% capture crumb_url %} {{ site.url }}/rio-grande/ {% endcapture %}
+			{% endif%}
+			{% if (crumb | lower ) == "entidades" %}
+				{% if (previous_crumb | lower ) == "río grande" %}
+					{% capture crumb_url %} {{ site.url }}/rio-grande/entidades/ {% endcapture %}
+				{% endif%}
+			{% endif%}
+			
+				<a href="{{crumb_url}}">{{ crumb }}</a>
+			</li>
+			
+			{% assign previous_crumb = crumb  %}
+		{% endfor %}
 	
-		{% capture previous %}{{ previous }}/{{ crumb }}{% endcapture %}
+	{% else %}
+		{% for crumb in url_parts limit:num_parts %}
+			{% if crumb == "" %}{% continue %}{% endif %}
 
-		{% comment %} add final slash to last item {% endcomment %}
-		{% if forloop.last %}  
-			{% capture previous %}{{ previous }}/{% endcapture %}
-		{% endif %}
+			{% assign pretty_crumb = (crumb | replace:'-',' ') %}
+			{% if site.data.prettify[crumb] %}
+				{% assign pretty_crumb = site.data.prettify[crumb]  %}
+			{% endif %}
+		
+			{% capture previous %}{{ previous }}/{{ crumb }}{% endcapture %}
 
-		<li{% if forloop.last %} class="current"{%endif%}>
-			<a href="{{previous}}">{{ pretty_crumb }}</a>
-		</li>
-	{% endfor %}
+			{% comment %} add final slash to last item {% endcomment %}
+			{% if forloop.last %}  
+				{% capture previous %}{{ previous }}/{% endcapture %}
+			{% endif %}
+
+			<li{% if forloop.last %} class="current"{%endif%}>
+				<a href="{{previous}}">{{ pretty_crumb }}</a>
+			</li>
+		{% endfor %}
+	{% endif %}
+	
+	
 </ol>
 
 {{ content }}
