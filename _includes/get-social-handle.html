@@ -2,8 +2,6 @@
 {% if url != "" %}
 	{% if url contains "facebook.com" or url contains "twitter.com"%}
 		{% assign url = url | replace:'/','=' | split:"==" | last | split: "="  %}
-		{% unless url[1] == "pages" %}{{ url[1] }}
-		{% else %}{{ url[2] }}
-		{% endunless %}
+		{% unless url[1] == "pages" %}{{ url[1] }}{% else %}{{ url[2] }}{% endunless %}
 	{% endif %}
 {% endif %}
