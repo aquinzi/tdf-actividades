@@ -188,8 +188,7 @@ collections:
   entidades-ushuaia:
     output: true 
     permalink: /ushuaia/entidades/:path/
-	 
-	 
+
 # Markdown Processors (include only kramdown)
 
 #kramdown:
