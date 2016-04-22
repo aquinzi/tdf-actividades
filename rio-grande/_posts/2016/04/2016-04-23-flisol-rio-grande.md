@@ -11,6 +11,7 @@ tags: [computacion,tecnologia]
 source: http://www.riograndeplus.com.ar/informacion-general/tecnologia/la-untdf-sera-sede-del-festival-latinoamericano-de-instalacion-de-software-libre-flisol/
 people: []
 short-url: http://goo.gl/EgwKtM
+modified: 2016-04-21
 ---
 
 FLISoL es el evento de difusión de Software Libre más grande en Latinoamérica y está dirigido a todo tipo de público: estudiantes, académicos, empresarios, trabajadores, funcionarios públicos, entusiastas y aun personas que no poseen conocimiento informático. Su principal objetivo es promover el uso de software libre, dando a conocer su filosofía, alcances, avances y desarrollo en toda su gama de expresiones: artística, académica, empresarial y social.
