@@ -112,7 +112,17 @@ layout: default
 		<dt class="telefono">Teléfono</dt>
 			<dd>
 				{% for telefono in page.telefono %}
-				<a class="p-tel" itemprop="telephone" href="tel:+54-9-02964-{{ telefono }}">{{ telefono }}</a>{% unless forloop.last %},{% endunless %}
+					{% if (telefono | split: "-").size > 0 %}
+						<a class="p-tel" itemprop="telephone" href="tel:+54-9-{{ telefono }}">{{ telefono }}</a>{% unless forloop.last %},{% endunless %}
+					{% else %}
+						{% if page.city == "rio-grande" %}
+							{% assign areacode = site.data.caracteristicas-telefono.riogrande %}
+						{% else %}	
+							{% assign areacode = site.data.caracteristicas-telefono.[page.city] %}
+						{% endif %}	
+						
+						<a class="p-tel" itemprop="telephone" href="tel:+54-9-{{areacode}}-{{ telefono }}">(areacode) {{ telefono }}</a>{% unless forloop.last %},{% endunless %}
+					
 				{% endfor %}
 			</dd>
 		{% endif %}

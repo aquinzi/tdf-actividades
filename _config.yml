@@ -39,12 +39,12 @@ feed:
   ushuaia: "/feed-ushuaia.xml"
   tolhuin: "/feed-tolhuin.xml"
 
-
+ 
 # some data that we don't know where to put it (yet), and not in usage
 adultos_mayores:
   edad: más de 60 años
   newcom: voley modificado o adaptado
-
+  
 
 # Jekyll Configuration options. 
 # ------------------------------
