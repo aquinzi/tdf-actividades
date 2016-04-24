@@ -12,7 +12,7 @@ nota: |
 
 url: ["http://www.jaquemateushuaia.com.ar/"]
 email: clubushuaiajaquemate@gmail.com
-telefono: [02901-15601212,15498673,02901-15520657]
+telefono: [15601212,15498673,15520657]
 permalink: /ushuaia/entidades/club-ushuaia-jaque-mate/
 ---
 
