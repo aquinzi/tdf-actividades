@@ -16,7 +16,7 @@ nota: |
   Inscripciones: en dôjô o llamando al 15479229
   Nombre alternativo: Dojo Cantera
 url: ["https://www.facebook.com/Karate-Polideportivo-Cantera-922354627798966/"]
-telefono: [02964-15479229]
+telefono: [15479229]
 email: 
 permalink: /rio-grande/entidades/dojo-cantera/
 ---

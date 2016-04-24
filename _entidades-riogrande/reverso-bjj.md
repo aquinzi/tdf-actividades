@@ -12,7 +12,7 @@ precio:
 nota: | 
   Jiu-jitsu brasilero.  
 url: ["https://www.facebook.com/Reversobjj"]
-telefono: [2964-459819/2964-61486]
+telefono: [459819,61486]
 email: 
 permalink: /rio-grande/entidades/reverso-bjj/
 ---

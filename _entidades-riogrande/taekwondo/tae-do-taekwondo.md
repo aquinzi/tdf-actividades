@@ -12,7 +12,7 @@ nota: |
   Afiliada a Asociación de taekwondo chacra IV.
   Director: Sabon Nahuel De Oro, 2° Dan CAT
 url: ["https://www.facebook.com/tkd.nahuel"]
-telefono: [2964-1558843]
+telefono: [1558843]
 email: tkd_nahuel@hotmail.com
 permalink: /rio-grande/entidades/tae-do-taekwondo/
 ---

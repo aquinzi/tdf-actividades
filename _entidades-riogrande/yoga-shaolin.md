@@ -12,7 +12,7 @@ nota: |
   Todas las edades
   $300 por mes (obtenido de perfil de facebook)
 url: ["https://www.facebook.com/Escuela-Shaolin-Kung-Fu-Tierra-Del-Fuego-320853778100693/"]
-telefono: [02964-15592892]
+telefono: [15592892]
 email: 
 permalink: /rio-grande/entidades/yoga-shaolin/
 ---
