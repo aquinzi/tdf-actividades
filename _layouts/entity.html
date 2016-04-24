@@ -112,7 +112,8 @@ layout: default
 		<dt class="telefono">Teléfono</dt>
 			<dd>
 				{% for telefono in page.telefono %}
-					{% if (telefono | split: "-").size > 1 %}
+					{% assign tmp_areacode = telefono | split: "-" %}
+					{% if tmp_areacode.size > 0 %}
 						<a class="p-tel" itemprop="telephone" href="tel:+54-9-{{ telefono }}">{{ telefono }}</a>{% unless forloop.last %},{% endunless %}
 					{% else %}
 						{% if page.city == "rio-grande" %}
