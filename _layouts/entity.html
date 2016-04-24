@@ -122,6 +122,7 @@ layout: default
 						{% endif %}	
 						
 						<a class="p-tel" itemprop="telephone" href="tel:+54-9-{{areacode}}-{{ telefono }}">({{ areacode }}) {{ telefono }}</a>{% unless forloop.last %},{% endunless %}
+					{% endif %}	
 					
 				{% endfor %}
 			</dd>
