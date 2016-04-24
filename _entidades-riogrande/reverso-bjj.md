@@ -12,8 +12,12 @@ precio:
 nota: | 
   Jiu-jitsu brasilero.  
 url: ["https://www.facebook.com/Reversobjj"]
-telefono: [459819,61486]
+telefono: [15459819,15614886]
 email: 
 permalink: /rio-grande/entidades/reverso-bjj/
 ---
 
+Los teléfonos corresponden a:
+
+- 15459819: Instructor Dario
+- 15614886: Instructor Ariel 
