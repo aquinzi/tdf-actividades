@@ -182,6 +182,15 @@ defaults:
       breadcrumbs: ["Ushuaia","Entidades"]
   - 
     scope:
+      path: ""
+      type: entidades-tolhuin
+    values:
+      layout: entity
+      breadcrumb_limit: 3
+      city: tolhuin
+      breadcrumbs: ["Tolhuin","Entidades"]
+  - 
+    scope:
       path: "rio-grande/actividades"
       type: "pages"
     values:
@@ -189,7 +198,24 @@ defaults:
       breadcrumb_limit: 3
       city: rio-grande
       breadcrumbs: ["Río Grande","Actividades"]
-
+  - 
+    scope:
+      path: "ushuaia/actividades"
+      type: "pages"
+    values:
+      layout: activity
+      breadcrumb_limit: 3
+      city: ushuaia
+      breadcrumbs: ["Ushuaia","Actividades"]
+  - 
+    scope:
+      path: "tolhuin/actividades"
+      type: "pages"
+    values:
+      layout: activity
+      breadcrumb_limit: 3
+      city: tolhuin
+      breadcrumbs: ["Tolhuin","Actividades"]
 collections:
   entidades-riogrande:
     output: true 
@@ -197,6 +223,9 @@ collections:
   entidades-ushuaia:
     output: true 
     permalink: /ushuaia/entidades/:path/
+  entidades-tolhuin:
+    output: true 
+    permalink: /tolhuin/entidades/:path/
 
 # Markdown Processors (include only kramdown)
 
