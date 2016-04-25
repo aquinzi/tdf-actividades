@@ -43,40 +43,9 @@ Acordarse de NO usar espacios despues de las keys, sino se parsean como hashed (
 Listado de actividades
 -----------------------------------------
 
-Están en yaml, asi se puede agrupar mas facilmente y no tener que andar haciendo varios loops para conseguir los tipos (deporte, arte...).
+Están en yaml. Se tiene una "base de datos central" bajo ``_data/actividades.yml`` que contiene datos básicos (nombre, id, nombres alternativos, pequeña descripción). Antes se tenia el listado por ciudad, pero se transfirió a esta nueva forma para no tener duplicidad de datos.
 
-
-Antes se usaba CSV. La explicación: 
-
-Las actividades por ciudad están en ``_data/[ciudad]/actividades.csv``. Esto es porque requieren un par de datos extra, además de que se puede listar sin tener entidades.
-
-Se podrian haber hecho tambien en json/yaml, con la particularidad que ya estan agrupados. Se eligió csv porque:
-
-- es mas legible asi (una linea-un dato; sin tantas keys, con especificarlo arriba ya alcanza).
-- se puede editar facilmente: ya sea en un txt editor, editor simple de csv o un programa de hojas de calculos, porque son pocos datos.
-- no pude hacer un sorting de las keys (grupos) en json (jekyll).
-
-Por si se cambia de parecer, el json que se estaba usando era:
-
-```json
-{
-  "arte": [{ "nombre": "", "nombre_alt": "" }], 
-  "deporte": [{ "nombre": "", "nombre_alt": "" }], 
-  "afición": [{ "nombre": "", "nombre_alt": "" }]
-}
-```
-	
-y se traian los datos con:
-
-```liquid
-{% for group in site.data.riogrande.actividades | sort:"group[0]" %}
-    <p><strong>{{group[0]}}</strong><br>
-    {% for item in group[1] | sort:"nombre" %}
-        {{item.nombre}}<br>
-    {% endfor %}
-    </p>
-{% endfor %}
-```
+Las actividades se "activan" por ciudad (para decir que "esa actividad se hace en la ciudad") creando archivos markdown que contienen el título (no se puede sobreescribir con el layout a no ser que se haga muchas maniobras que no da), y se guarda bajo ``ciudad/actividades/actividad-id.md``. Se elegió esta forma porque basicamente se tiene que crear si o si el archivo y si se pone un key de "ciudad" en la "bd central" había duplicidad.
 
 
 

@@ -7,9 +7,11 @@ layout: default
 
 <h1>{{ activity.nombre | capitalize }}</h1>
 
+<h2>Descripción</h2>
+
 {{ activity.descripcion | markdownify }}
 
-<hr>
+<h2>¿Dónde se hace?</h2>
 
 {% assign entities = "" %}
 {% if page.city == "rio-grande" %}{% assign entities = site.entidades-riogrande %}{% endif %}

@@ -1,10 +1,16 @@
-# Please keep this list alphabetized and categorized. 
+# Favor de mantener esta lista por orden alfabético y categorizado.
+#
+# Explicaciones:
+# id: se comparte con el nombre de archivo. Sin espacios (usar guiones), sin preposiciones ni conectores.
+# nombre: el nombre de la actividad, en minúscula.
+# tipo: deporte, arte, afición.
+# alternativo: nombres alternativos comunes, romatizaciones, etc.
+# descripcion: pequeña descripcion de la actividad.
 
 - id: avistamiento-aves
   nombre: avistamiento de aves
-  tipo: aficion
+  tipo: afición
   alternativo: [observación de aves, birding, birdwatching]
-  provincias: [rio-grande, ushuaia]
   descripcion: | 
     lalala parrafo 1
 
@@ -13,7 +19,6 @@
   nombre: aikido
   tipo: deporte
   alternativo: [aikidô]
-  provincias: [rio-grande, ushuaia, tolhuin]
   descripcion: | 
     lalala parrafo 1
 
@@ -22,7 +27,6 @@
 - id: tiro
   nombre: tiro
   tipo: deporte
-  provincias: [ushuaia]
   descripcion: | 
     lalala parrafo 1
 
