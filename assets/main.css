@@ -451,6 +451,16 @@ footer#site-footer .social a:before{padding-right: 0.3em;}
 ==main classes
 **************/
 
+
+.center {
+	text-align: middle;
+}
+
+img.center {
+	margin: 0px auto;
+	display: block;
+}
+
 .visuallyhidden {
 	position: absolute;
 	overflow: hidden;

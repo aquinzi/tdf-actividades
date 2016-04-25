@@ -1,14 +1,16 @@
 ---
 layout: default
-title: "404: Página no encontrada"
+title: Página no encontrada (error 404)
 permalink: 404.html
+breadcrumbs: ["Página no encontrada"]
 sitemap:
     exclude: 'yes'
 ---
 
 <div class="page">
   <h1 class="page-title">Página no encontrada</h1>
-  <p class="lead">Lo siento, algo ocurrió y no se puede mostrar la página. Seguramente algo con la dirección mal escrita. <a href="/">Volvete al inicio</a> para tratar de encontrarlo nuevamente.</p>
-
-  <img src="/assets/imgs/deadbeaver.jpg" alt="Página no encontrada">
+  <p class="lead">Lo siento, algo ocurrió y no se puede mostrar la página. Seguramente algo con la dirección mal escrita o un documento no existente. <a href="/">Volvete al inicio</a> para tratar de encontrarlo nuevamente o volvé para atrás...</p>
+  <p class="lead">Ojo! puede ser que un link se creó mal. Nuestra culpa, lo sentimos. Por favor <a href="{{site.data.wiki.contacto}}">decinos</a> cual fue la dirección así lo arreglamos</p>
+  
+  <img src="/assets/imgs/deadbeaver.jpg" alt="Página no encontrada" class="center">
 </div>
