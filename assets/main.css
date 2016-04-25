@@ -453,7 +453,7 @@ footer#site-footer .social a:before{padding-right: 0.3em;}
 
 
 .center {
-	text-align: middle;
+	text-align: center;
 }
 
 img.center {
@@ -700,6 +700,16 @@ h2 + .headerlink-popup, h3 + .headerlink-popup, h4 + .headerlink-popup{
 
 /* end Para el popup - link */
 
+/*  style figure + figcaption */
+figure img {
+	border: 1px solid #c0c0c0;
+	background-color: #e7e7e7;
+	padding: 0.4em;
+}
+
+figcaption {
+	font-size: small;
+}
 
 
 /*************
