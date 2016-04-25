@@ -1423,13 +1423,17 @@ article.h-card {
 	.h-card dt.web + dd a.u-url:after{content: ""; }
 }
 
+
 @media screen and (min-width: 700px) {
 	.h-card dt.web + dd a.u-url:after {
-		content: " (" attr(data-social-handle) ")";
+		/*content: " (" attr(data-social-handle) ")";*/
+		content: attr(data-social-handle);
 	}
+	/*
 	.h-card dt.web + dd a.u-url[href*="twitter.com"]:after {
 		content: " (@" attr(data-social-handle) ")";
 	}
+	*/
 }
 
 

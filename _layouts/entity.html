@@ -95,9 +95,10 @@ layout: default
 					{% capture handle %}{% include get-social-handle.html url=web %}{% endcapture %}
 				<li>
 					<a href="{{ web }}" class="u-url" 
-					{% if handle != "" %}data-social-handle="{{handle}}" {%endif%}
-					itemprop="url">{{ domain }}
-					</a>
+					{% if web contains "facebook" or web contains "twitter" %}
+						{% if web contains "facebook"%}data-social-handle="({{handle}})"{% endif %}
+						{% if web contains "twitter"%}data-social-handle="(@{{handle}})"{% endif %}
+					{% endif %} itemprop="url">{{ domain }}	</a>
 				</li>
 				{% endfor %}
 			</ul></dd>
