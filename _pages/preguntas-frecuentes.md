@@ -20,7 +20,14 @@ Contenido en esta página:
 ¿Por qué?  {#por-que}
 -----------------------
 
-Me decidí a hacer este proyecto de "directorio" por la falta de algún sitio web que lo haga, asi como también el déficit de personas que hagan un perfil en una red social (u algún otro sitio gratuito) para promover lo que hacen (vamos, ¡estamos en <del>2015</del> 2016!).
+Nos decidimos a hacer este proyecto de "directorio" por la falta de algún sitio web que lo haga, asi como también el déficit de personas que hagan un perfil en una red social (u algún otro sitio gratuito) para promover lo que hacen (vamos, ¡estamos en <del>2015</del> 2016!).
+
+Además nos hace sentir rellenitos de amor por dentro cuando personas que hacen las cosas a pulmón (¡como nosotros!) nos dan las gracias (carita sonriente).
+
+<figure class="center">
+	<img src="/assets/imgs/gotdf-da-gracias.gif">
+	<figcaption>Las personas de Go Tierra del Fuego nos dan las gracias mostrando su perfil en el sitio. <a href="https://www.facebook.com/1618271935124608/photos/a.1618706818414453.1073741828.1618271935124608/1716500448635089/?type=3&permPage=1">Ver publicación</a> (en Facebook)</figcaption>
+</figure>
 
 
 
@@ -94,3 +101,26 @@ No quería tomarme el tiempo de usar una base de datos, diseñarla, escribir los
 
 Además, el programa que uso para generar el sitio lee este tipo de formato (<i lang="en">YAML</i>). Algún día lo haré como se debe, con una linda base de datos.
 
+
+¿Qué tecnologías usas para el sitio?  {#tecnologias-usadas}
+-----------------------------------------------
+
+Front end:
+
+- HTML, CSS, Javascript
+- formatos varios de imágenes
+- font awesome
+
+Back end:
+
+- Jekyll
+- YAML
+- Python, wxWidgets
+- Texto plano (alias ``txt``)
+- git 
+- sudor
+- lágrimas
+- golpes sobre el escritorio y revoleteo de cosas por pelear con Jekyll
+- golpes sobre el escritorio por pelear con Ruby
+- té, café con leche, agua (para reponer el sudor y las lágrimas)
+- frutas (hay que comer bien)
