@@ -185,7 +185,7 @@ defaults:
       path: "rio-grande/actividades"
       type: "pages"
     values:
-      layout: actividad
+      layout: activity
       breadcrumb_limit: 3
       city: rio-grande
       breadcrumbs: ["Río Grande","Actividades"]

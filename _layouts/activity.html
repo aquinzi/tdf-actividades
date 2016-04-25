@@ -3,31 +3,19 @@ layout: default
 ---
 
 {% assign activity_id = page.path | split:"/" | last | split: "." | first %}
-{% assign activity_name =  site.data.actividades.[activity_id].nombre %}
+{% assign activity =  site.data.actividades | where: "id", activity_id | first %}
 
+<h1>{{ activity.nombre | capitalize }}</h1>
 
-<h1>{{ activity_name | capitalize }}</h1>
-
-<pre>
-{{ site.data.actividades.[activity_id] }}
-</pre>
+{{ activity.descripcion | markdownify }}
 
 <hr>
 
-{{site.data.actividades.[activity_id].descripcion | markdownify }}
-
-<hr>
-
-
-{% if site.data.actividades.[activity_id].provincias contains page.city %}
-	si, la actividad se hace en la ciudad
-{% else %}
-	no se hace 
-{% endif %}
-
-<hr>
-
-{% assign entities = site.entidades-riogrande | where: "categoria",activity_id %}
+{% assign entities = "" %}
+{% if page.city == "rio-grande" %}{% assign entities = site.entidades-riogrande %}{% endif %}
+{% if page.city == "ushuaia" %}{% assign entities = site.entidades-ushuaia %}{% endif %}
+{% if page.city == "tolhuin" %}{% assign entities = site.entidades-tolhuin %}{% endif %}
+{% assign entities = entities | where: "categoria",activity_id %}
 
 <ul class="listado-entidades">
 {% for entity in entities %}
@@ -65,6 +53,7 @@ layout: default
 
 	</li>
 {% else %}
-	<li> En la ciudad se hace {{activity_name }} pero no hay nada listado. Si conoces de alguna, no dudes en <a href="{{ site.data.wiki.colaboracion }}">colaborar</a>. </li>
+	<li> En la ciudad se hace {{activity.nombre }} pero no hay nada listado. Si conoces de alguna, no dudes en <a href="{{ site.data.wiki.colaboracion }}">colaborar</a>. </li>
 {% endfor %}
 </ul>
+
