@@ -1,0 +1,97 @@
+{% assign url_actividades = "" %}
+{% if include.city == "rio-grande" %}{% assign url_actividades = site.data.wiki.rg-actividades %}{% endif %}
+{% if include.city == "ushuaia" %}{% assign url_actividades = site.data.wiki.ush-actividades %}{% endif %}
+{% if include.city == "tolhuin" %}{% assign url_actividades = site.data.wiki.tol-actividades %}{% endif %}
+
+{% assign actividades_city = site.pages | where: "layout", "activity" | where: "city", include.city %}
+{% assign actividades_city_ids = actividades_city | map: "name" | split:".md" | join:";" %}
+
+<div id="tabla-contenido">
+<p>Actividades encontradas en esta página, separada por categorías y por orden alfabético.</p>
+
+{% assign actividades = site.data.actividades | group_by: "tipo" | sort: "name" %}
+
+{% comment %}
+	we have 2 options to list the alternative names:
+	1. under the main name. not really usefull (not a proper "index")
+	2. list under proper letter. That's what we do here. More complex than necessary but it's what we've got 
+{% endcomment %}
+
+{% assign alplhabetize = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,ñ,o,p,q,r,s,t,u,v,w,x,y,z" | split: "," %}
+{% assign tmp_list = ","|split:"," %}
+
+
+
+{% for actividad in actividades %}
+<dl class="toc-headings">
+	<dt>{{ actividad.name | capitalize }}</dt>
+	{% assign letter = "" %}
+	<dd><ol class="list-multicolumn">
+	{% assign tmp_list = ","|split:"," %}
+	{% for item in actividad.items | sort: "nombre" %}
+		{% capture tmp_item_id %}{{ item.id }};{% endcapture %}
+		{% if actividades_city_ids contains tmp_item_id %}
+			{% capture tmp_list_item %}{{ item.nombre }}|{{ item.id }}{% endcapture %}
+			{% assign tmp_list = tmp_list | push: tmp_list_item %}
+			{% for g in item.alternativo %}
+				{% capture tmp_list_item %}{{ g }}|{{ item.id }}{% endcapture %}
+				{% assign tmp_list = tmp_list | push: tmp_list_item %}
+			{% endfor %}
+		{% endif  %}
+	{% endfor %}
+	
+	{% assign tmp_list = tmp_list | sort %}
+	{% for item in tmp_list %}
+		{% assign tmp_name = item | split: "|" | first %}
+		{% assign tmp_id = item | split: "|" | last %}
+	
+			{% assign current_letter = tmp_name | truncate: 1, '' | lower %}
+			{% if current_letter != letter %}
+				{% assign letter = current_letter %}
+				{% unless forloop.first %}</li></ol>{%endunless%}
+				<li> <span class="letter">{{ letter }}</span><span class="visuallyhidden">:</span>
+				<ol class="inline-items">
+			{% endif %}
+			{% comment %} url_actividades already has trailing slash {% endcomment %}
+			<li><a href="{{ url_actividades }}{{ tmp_id }}/">{{ tmp_name }}</a></li>
+	{% endfor %}
+	
+	</ol></dd>
+{% endfor %}
+</dl>
+
+
+
+
+
+
+
+
+
+
+<!--
+{% for actividad in actividades %}
+<dl class="toc-headings">
+	<dt>{{ actividad.name | capitalize }}</dt>
+	{% assign letter = "" %}
+	<dd><ol class="list-multicolumn">
+	{% for item in actividad.items | sort: "nombre" %}
+		{% capture tmp_item_id %}{{ item.id }};{% endcapture %}
+		{% if actividades_city_ids contains tmp_item_id %}
+			{% assign current_letter = item.nombre | truncate: 1, '' | lower %}
+			{% if current_letter != letter %}
+				{% assign letter = current_letter %}
+				{% unless forloop.first %}</li></ol>{%endunless%}
+				<li> <span class="letter">{{ letter }}</span><span class="visuallyhidden">:</span>
+				<ol class="inline-items">
+			{% endif %}
+			{% comment %} url_actividades already has trailing slash {% endcomment %}
+			<li><a href="{{ url_actividades }}{{ item.id }}/">{{ item.nombre }}</a></li>
+		{% endif %}
+	{% endfor %}
+	</ol></dd>
+{% endfor %}
+</dl>
+-->
+
+</div>

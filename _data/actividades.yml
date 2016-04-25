@@ -17,10 +17,6 @@
   nombre: aikido
   tipo: deporte
   alternativo: [aikidô]
-  descripcion: | 
-    lalala parrafo 1
-
-    lalala parrafo 2
 
 - id: ajedrez
   nombre: ajedrez
@@ -40,10 +36,6 @@
   nombre: avistamiento de aves
   tipo: afición
   alternativo: [observación de aves, birding, birdwatching]
-  descripcion: | 
-    lalala parrafo 1
-
-    lalala parrafo 2. probando un [link](http://example.com/)
 
 - id: badminton
   nombre: badminton
@@ -244,7 +236,7 @@
 - id: pakua
   nombre: pakua
   tipo: deporte
-  alternativo: [pa kua,Pa Kua Chang,baguazhang,Bāguàzhǎng,Bāguà,bagua]
+  alternativo: [pa kua,pa kua chang,baguazhang,bāguàzhǎng,bāguà,bagua]
 
 - id: palestra
   nombre: palestra
@@ -324,10 +316,6 @@
 - id: tiro
   nombre: tiro
   tipo: deporte
-  descripcion: | 
-    lalala parrafo 1
-
-    lalala parrafo 2
 
 - id: voley
   nombre: voley

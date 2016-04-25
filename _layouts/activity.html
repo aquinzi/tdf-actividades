@@ -7,9 +7,15 @@ layout: default
 
 <h1>{{ activity.nombre | capitalize }}</h1>
 
+{% if activity.alternativo.size > 0 %}
+También conocido como: {{ activity.alternativo | join:", " }}
+{% endif %}
+
+{% if activity.descripcion %}
 <h2>¿Qué es?</h2>
 
 {{ activity.descripcion | markdownify }}
+{% endif %}
 
 <h2>¿Dónde se hace?</h2>
 
