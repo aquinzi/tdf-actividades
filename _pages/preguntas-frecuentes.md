@@ -2,6 +2,7 @@
 title: Preguntas frecuentes
 permalink: /preguntas-frecuentes/
 date: 2015-12-04
+modified: 2016-04-25
 ---
 
 
@@ -19,7 +20,7 @@ Contenido en esta página:
 ¿Por qué?  {#por-que}
 -----------------------
 
-Me decidí a hacer este proyecto de "directorio" por la falta de algún sitio web que lo haga, asi como también el déficit de personas que hagan un perfil en una red social (u algún otro sitio gratuito) para promover lo que hacen (vamos, ¡estamos en 2015!).
+Me decidí a hacer este proyecto de "directorio" por la falta de algún sitio web que lo haga, asi como también el déficit de personas que hagan un perfil en una red social (u algún otro sitio gratuito) para promover lo que hacen (vamos, ¡estamos en <del>2015</del> 2016!).
 
 
 
