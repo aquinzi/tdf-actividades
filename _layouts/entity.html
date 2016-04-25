@@ -12,30 +12,17 @@ layout: default
 		<div>
 			<h1 class="p-name" itemprop="name">{{ page.nombre }}</h1>
 			{% assign category_link = "" %}
-			{% if page.city == "rio-grande" %}
-				{% capture category_link %} {{site.data.wiki.rg-actividades}}#{{page.categoria}}{% endcapture %}
-			{% endif %}
-			{% if page.city == "ushuaia" %}{% endif %}
-			{% if page.city == "tolhuin" %}{% endif %}
-
-			{% assign cat_alternativo = "" %}
-			{% assign tmp = page.city | replace: "-",""%}
-
-			{% for type in site.data.[tmp].actividades %}
-				{% for item in type[1] %}
-					{%if item.nombre == page.categoria %}
-						{% if item.alternativo and item.alternativo.size > 0 %}
-							{% assign cat_alternativo = item.alternativo %}
-						{%endif%}
-						{% break %}
-					{%endif%}
-
-				{% endfor%}
-				{%if cat_alternativo != "" %}{% break %}{%endif%}
-			{% endfor%}
-
-			<p class="categoria">Categoría: <a href="{{category_link}}" class="p-category">{{page.categoria | replace:"-", " "}}</a> 
-			{% if cat_alternativo != "" %} (también {{cat_alternativo | join: ', '}}) {% endif %}
+			{% if page.city == "rio-grande" %}{% assign category_link = site.data.wiki.rg-actividades %}{% endif %}
+			{% if page.city == "ushuaia" %}{% assign category_link = site.data.wiki.ush-actividades %}{% endif %}
+			{% if page.city == "tolhuin" %}{% assign category_link = site.data.wiki.tol-actividades %}{% endif %}
+			
+			{% comment %} url in wiki already has trailing slash {% endcomment %}
+			{% capture category_link %}{{ category_link }}{{ page.categoria }}/{% endcapture %}
+			
+			{% assign category_info =  site.data.actividades | where: "id", page.categoria | first %}
+			
+			<p class="categoria">Actividad: <a href="{{ category_link }}" class="p-category">{{ category_info.nombre }}</a> 
+			{% if category_info.alternativo.size > 0 %} (también {{ category_info.alternativo | join: ', '}}) {% endif %}
 			</p>
 		</div>
 	</header>
