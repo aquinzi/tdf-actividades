@@ -180,6 +180,15 @@ defaults:
       breadcrumb_limit: 3
       city: ushuaia
       breadcrumbs: ["Ushuaia","Entidades"]
+  - 
+    scope:
+      path: "rio-grande/actividades"
+      type: "pages"
+    values:
+      layout: actividad
+      breadcrumb_limit: 3
+      city: rio-grande
+      breadcrumbs: ["Río Grande","Actividades"]
 
 collections:
   entidades-riogrande:

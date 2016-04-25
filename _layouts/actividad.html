@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+{% assign activity_id = page.path | split:"/" | last | split: "." | first %}
+{% assign activity_name =  site.data.actividades.[activity_id].nombre %}
+
+
+<h1>{{ activity_name | capitalize }}</h1>
+
+<pre>
+{{ site.data.actividades.[activity_id] }}
+</pre>
+
+<hr>
+
+{{site.data.actividades.[activity_id].descripcion | markdownify }}
+
+<hr>
+
+
+{% if site.data.actividades.[activity_id].provincias contains page.city %}
+	si, la actividad se hace en la ciudad
+{% else %}
+	no se hace 
+{% endif %}
+
+<hr>
+
+{% assign entities = site.entidades-riogrande | where: "categoria",activity_id %}
+
+<ul class="listado-entidades">
+{% for entity in entities %}
+	<li class="card-entidad {{ entity.precio }}">
+		<div class="logo">
+			{% if entity.img %} <img src="{{ entity.img }}" width="80" height="80"> {%endif%}
+		</div>
+
+		<div class="info">
+			<p class="p-name"><a href="{{entity.permalink }}">{{entity.nombre }}</a></p>
+			<dl>
+				<dt class="direccion visuallyhidden">Direccion</dt>
+				
+			{% if entity.direccion.lugar %}
+				<dd class="p-street-address">
+					{% for location in entity.direccion.lugar %}
+						{% include get-place.html place=location city="rio-grande" %}	
+					{% unless forloop.last %},{%endunless%}
+					{%endfor%}
+
+						</dd>
+			{% else %} 
+				<dd class="p-street-address">sin datos</dd>
+			{% endif %}
+				
+				<dt class="precio visuallyhidden">Precio</dt>
+			{% if entity.precio %}
+				<dd class="costo">{{ entity.precio }}</dd>
+			{% else %} 
+				<dd class="costo">sin datos</dd>
+			{% endif %}
+			</dl>
+
+		</div>
+
+	</li>
+{% else %}
+	<li> En la ciudad se hace {{activity_name }} pero no hay nada listado. Si conoces de alguna, no dudes en <a href="{{ site.data.wiki.colaboracion }}">colaborar</a>. </li>
+{% endfor %}
+</ul>

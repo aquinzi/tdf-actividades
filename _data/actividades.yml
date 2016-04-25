@@ -1,0 +1,30 @@
+# Please keep this list alphabetized and categorized. 
+
+avistamiento-aves:
+  nombre: avistamiento de aves
+  tipo: aficion
+  alternativo: [observación de aves,birding,birdwatching]
+  provincias: [rio-grande, ushuaia]
+  descripcion: | 
+    lalala parrafo 1
+
+    lalala parrafo 2
+
+aikido:
+  nombre: aikido
+  tipo: deporte
+  alternativo: [aikidô]
+  provincias: [rio-grande, ushuaia, tolhuin]
+  descripcion: | 
+    lalala parrafo 1
+
+    lalala parrafo 2
+
+tiro:
+  nombre: tiro
+  tipo: deporte
+  provincias: [ushuaia]
+  descripcion: | 
+    lalala parrafo 1
+
+    lalala parrafo 2
