@@ -1,20 +1,18 @@
 # Favor de mantener esta lista por orden alfabético y categorizado.
 #
 # Explicaciones:
-# id: se comparte con el nombre de archivo. Sin espacios (usar guiones), sin preposiciones ni conectores.
-# nombre: el nombre de la actividad, en minúscula.
-# tipo: deporte, arte, afición.
+# id: (obligatorio) se comparte con el nombre de archivo. Sin espacios (usar guiones), sin preposiciones ni conectores, sin acentos
+# nombre: (obligatorio) el nombre de la actividad, en minúscula.
+# tipo: (obligatorio) elegir uno: deporte, arte, afición.
 # alternativo: nombres alternativos comunes, romatizaciones, etc.
-# descripcion: pequeña descripcion de la actividad.
+# descripcion: pequeña descripcion de la actividad. Es multilinea.
 
-- id: avistamiento-aves
-  nombre: avistamiento de aves
-  tipo: afición
-  alternativo: [observación de aves, birding, birdwatching]
+- id: adultos-mayores
+  nombre: adultos mayores
+  tipo: deporte
   descripcion: | 
-    lalala parrafo 1
+    Varias actividades para adultos mayores
 
-    lalala parrafo 2. probando un [link](http://example.com/)
 - id: aikido
   nombre: aikido
   tipo: deporte
@@ -24,6 +22,305 @@
 
     lalala parrafo 2
 
+- id: ajedrez
+  nombre: ajedrez
+  tipo: deporte
+  descripcion: | 
+    Ajedrez y otros "juegos de mesa", como Go
+
+- id: atletismo
+  nombre: atletismo
+  tipo: deporte
+
+- id: automovilismo
+  nombre: automovilismo
+  tipo: deporte
+  
+- id: avistamiento-aves
+  nombre: avistamiento de aves
+  tipo: afición
+  alternativo: [observación de aves, birding, birdwatching]
+  descripcion: | 
+    lalala parrafo 1
+
+    lalala parrafo 2. probando un [link](http://example.com/)
+
+- id: badminton
+  nombre: badminton
+  tipo: deporte
+
+- id: bachata
+  nombre: bachata
+  tipo: deporte
+
+- id: basket
+  nombre: basket
+  tipo: deporte
+  alternativo: [básquetbol,basquet,basketball]
+
+- id: bochas
+  nombre: bochas
+  tipo: deporte
+
+- id: boxeo
+  nombre: boxeo
+  tipo: deporte
+
+- id: canotaje
+  nombre: canotaje
+  tipo: deporte
+
+- id: canto-coro
+  nombre: "canto, coro"
+  tipo: arte
+
+- id: ceramica
+  nombre: cerámica
+  tipo: arte
+
+- id: ciclismo
+  nombre: ciclismo
+  tipo: deporte
+
+- id: cuatriciclo
+  nombre: cuatriciclo
+  tipo: deporte
+
+- id: danza-clasica
+  nombre: danza clásica
+  tipo: deporte
+
+- id: danzas-arabes
+  nombre: danzas árabes
+  tipo: deporte
+
+- id: dibujo
+  nombre: dibujo
+  tipo: arte
+
+- id: escalada-deportiva
+  nombre: escalada deportiva
+  tipo: deporte
+
+- id: fisicoculturismo
+  nombre: fisicoculturismo
+  tipo: deporte
+
+- id: fitness
+  nombre: fitness
+  tipo: deporte
+
+- id: flamenco
+  nombre: flamenco
+  tipo: deporte
+
+- id: folklore
+  nombre: folklore
+  tipo: deporte
+
+- id: fotografia
+  nombre: fotografía
+  tipo: arte
+
+- id: futsal
+  nombre: futsal
+  tipo: deporte
+
+- id: futbol
+  nombre: fútbol
+  tipo: deporte
+  alternativo: [football]
+
+- id: gimnasia-adultos
+  nombre: gimnasia adultos
+  tipo: deporte
+
+- id: gimnasia-artistica
+  nombre: gimnasia artística
+  tipo: deporte
+
+- id: gimnasia-deportiva
+  nombre: gimnasia deportiva
+  tipo: deporte
+
+- id: gimnasia-ritmica
+  nombre: gimnasia rítmica
+  tipo: deporte
+
+- id: golf
+  nombre: golf
+  tipo: deporte
+
+- id: handball
+  nombre: handball
+  tipo: deporte
+  alternativo: [balonmano]
+
+- id: hip-hop
+  nombre: hip-hop
+  tipo: deporte
+
+- id: hockey-pista
+  nombre: hockey pista
+  tipo: deporte
+  alternativo: [field hockey,hockey sobre césped]
+
+- id: hockey-roller
+  nombre: hockey roller
+  tipo: deporte
+  alternativo: [hockey sobre patines,roller hockey]
+
+- id: hockey-hielo
+  nombre: hockey sobre hielo
+  tipo: deporte
+  alternativo: [ice hockey]
+  
+- id: iaido
+  nombre: iaido
+  tipo: deporte
+  alternativo: [iaidô]
+
+- id: judo
+  nombre: judo
+  tipo: deporte
+  alternativo: [jûdô,yudo]
+
+- id: jiu-jitsu
+  nombre: jiu-jitsu
+  tipo: deporte
+  alternativo: [jûjutsu,jiu-jitsu brasileño,bjj]
+
+- id: karate
+  nombre: karate do
+  tipo: deporte
+  alternativo: [karate]
+
+- id: karting
+  nombre: karting
+  tipo: deporte
+
+- id: kendo
+  nombre: kendo
+  tipo: deporte
+  alternativo: [kendô]
+
+- id: kickboxing
+  nombre: kickboxing
+  tipo: deporte
+
+- id: kung-fu
+  nombre: kung fu
+  tipo: deporte
+
+- id: levantamiento-olimpico
+  nombre: levantamiento olímpico
+  tipo: deporte
+  
+- id: lucha
+  nombre: lucha
+  tipo: deporte
+
+- id: motociclismo
+  nombre: motociclismo
+  tipo: deporte
+
+- id: musica
+  nombre: música
+  tipo: arte
+
+- id: natacion
+  nombre: natación
+  tipo: deporte
+
+- id: paddle
+  nombre: paddle
+  tipo: deporte
+  alternativo: [padle,padel]
+
+- id: paintball
+  nombre: paintball
+  tipo: deporte
+
+- id: pakua
+  nombre: pakua
+  tipo: deporte
+  alternativo: [pa kua,Pa Kua Chang,baguazhang,Bāguàzhǎng,Bāguà,bagua]
+
+- id: palestra
+  nombre: palestra
+  tipo: deporte
+
+- id: patin-artistico
+  nombre: patín artístico
+  tipo: deporte
+
+- id: pesca-deportiva
+  nombre: pesca deportiva
+  tipo: deporte
+
+- id: pintura
+  nombre: pintura
+  tipo: arte
+
+- id: polo
+  nombre: polo
+  tipo: deporte
+
+- id: pool
+  nombre: pool
+  tipo: deporte
+  alternativo: [billar]
+
+- id: powerlifting
+  nombre: powerlifting
+  tipo: deporte
+
+- id: roller-derby
+  nombre: roller derby
+  tipo: deporte
+
+- id: rugby
+  nombre: rugby
+  tipo: deporte
+
+- id: salsa
+  nombre: salsa
+  tipo: deporte
+
+- id: salto-hipico
+  nombre: salto hípico
+  tipo: deporte
+
+- id: sanshou
+  nombre: sanshou
+  tipo: deporte
+  alternativo: [sanda,boxeo chino]
+
+- id: taekwondo
+  nombre: taekwondo
+  tipo: deporte
+
+- id: tai-chi-chuan
+  nombre: tai chi chuan
+  tipo: deporte
+
+- id: tango
+  nombre: tango
+  tipo: deporte
+
+- id: teatro
+  nombre: teatro
+  tipo: arte
+  alternativo: [actuación]
+
+- id: tenis
+  nombre: tenis
+  tipo: deporte
+
+- id: tenis-mesa
+  nombre: tenis de mesa
+  tipo: deporte
+  
 - id: tiro
   nombre: tiro
   tipo: deporte
@@ -31,3 +328,16 @@
     lalala parrafo 1
 
     lalala parrafo 2
+
+- id: voley
+  nombre: voley
+  tipo: deporte
+  alternativo: [volley,volleyball,voleibol]
+
+- id: yoga
+  nombre: yoga
+  tipo: deporte
+
+- id: zumba
+  nombre: zumba
+  tipo: deporte
