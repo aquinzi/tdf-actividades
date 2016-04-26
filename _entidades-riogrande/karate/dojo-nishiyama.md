@@ -1,5 +1,5 @@
 ---
-nombre: Dôjô Nishiyama
+nombre: Dojo Nishiyama
 categoria: karate
 ultima-actualizacion: 2015-10-25
 direccion: 
@@ -9,7 +9,7 @@ horario:
 precio: 
 nota: | 
   Karate Do Tradicional. 
-  Nombre alternativo: Dojo Nishiyama.
+  Nombre alternativo: Dôjô Nishiyama.
 url: []
 telefono: [15587477]
 email: 

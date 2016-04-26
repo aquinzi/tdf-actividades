@@ -1,6 +1,6 @@
 ---
 nombre: Okawakai
-categoria: kendô
+categoria: kendo
 ultima-actualizacion: 2016-02-21
 direccion: 
   lugar: [clubsanmartin]
