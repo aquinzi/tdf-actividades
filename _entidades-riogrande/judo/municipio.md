@@ -1,6 +1,6 @@
 ---
 nombre: Municipio
-Categoria: judo
+categoria: judo
 ultima-actualizacion: 2015-07-23
 direccion: 
   lugar: [centrodeportivo]
