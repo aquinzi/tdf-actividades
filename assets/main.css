@@ -1356,7 +1356,8 @@ div.index-info-que-es {
   div.index-info-fresco { margin-left: 2em; }
 
   div.index-info-feeds { margin-left: 4em; }
-  div.index-info-feeds, div.index-info-colaboracion { width: 38%; }
+  /*div.index-info-feeds, div.index-info-colaboracion { width: 38%; }*/
+  div.index-info-colaboracion { width: 70%; }
 }
 
 @media (min-width: 810px) {
@@ -1368,7 +1369,13 @@ div.index-info-que-es {
 	div.index-info-fresco { margin-left: 9%; }
 
 	div.index-info-feeds { margin-left: 15%; }
-	div.index-info-feeds, div.index-info-colaboracion { width: 30%; }
+	/*div.index-info-feeds, div.index-info-colaboracion { width: 30%; }*/
+	 div.index-info-colaboracion {
+		width: 40%;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	 }
 }
 
 
