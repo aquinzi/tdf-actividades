@@ -9,7 +9,7 @@ horario:
 precio: gratis
 nota: | 
   Entrenador Pedro Gómez.
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/academia-municipal-boxeo/

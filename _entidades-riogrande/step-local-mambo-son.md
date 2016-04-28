@@ -9,7 +9,7 @@ horario:
 precio: pago
 nota: | 
   Dictado por Edit
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/step-local-mambo-son/

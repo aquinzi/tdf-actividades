@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
   Instructor Sergio Lusetti
-url: ["https://www.facebook.com/Reversobjj"]
+website: ["https://www.facebook.com/Reversobjj"]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/reverso-kickboxing/

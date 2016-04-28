@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
   Dictado por Fátima Rivero. 
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/taller-zumba/

@@ -15,7 +15,7 @@ nota: |
   Instructor: Javier Cayre
   Inscripciones: en dôjô o llamando al 15479229
   Nombre alternativo: Dôjô Cantera
-url: ["https://www.facebook.com/Karate-Polideportivo-Cantera-922354627798966/"]
+website: ["https://www.facebook.com/Karate-Polideportivo-Cantera-922354627798966/"]
 telefono: [15479229]
 email: 
 permalink: /rio-grande/entidades/dojo-cantera/

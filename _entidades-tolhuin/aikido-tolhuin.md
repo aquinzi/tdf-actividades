@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
 
-url: ["https://www.facebook.com/profile.php?id=100009818492687"]
+website: ["https://www.facebook.com/profile.php?id=100009818492687"]
 email: martinmora66@hotmail.com
 telefono: []
 permalink: /tolhuin/entidades/aikido-tolhuin/

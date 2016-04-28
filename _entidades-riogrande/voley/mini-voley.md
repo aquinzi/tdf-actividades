@@ -9,7 +9,7 @@ horario:
 precio: gratis
 nota: | 
   Iniciación deportiva
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/mini-voley/

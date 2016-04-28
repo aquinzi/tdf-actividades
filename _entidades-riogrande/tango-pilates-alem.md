@@ -9,7 +9,7 @@ horario:
 precio: gratis
 nota: | 
   a cargo la profesora Natalia Couto
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/tango-pilates-alem/

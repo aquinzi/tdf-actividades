@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
 
-url: [""]
+website: [""]
 email: 
 telefono: []
 permalink: /ushuaia/entidades/aikikai-ushuaia-dojo/

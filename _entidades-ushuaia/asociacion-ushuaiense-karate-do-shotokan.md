@@ -10,7 +10,7 @@ horario:
 precio: pago
 nota: | 
 
-url: ["https://www.facebook.com/Asociación-Ushuaiense-Karate-Do-Shotokan-573525719457851/"]
+website: ["https://www.facebook.com/Asociación-Ushuaiense-Karate-Do-Shotokan-573525719457851/"]
 email: 
 telefono: []
 permalink: /ushuaia/entidades/asociacion-ushuaiense-karate-do-shotokan/

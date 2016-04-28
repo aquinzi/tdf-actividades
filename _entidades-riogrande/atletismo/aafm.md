@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
   Ushuaia y Río Grande
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/aafm/

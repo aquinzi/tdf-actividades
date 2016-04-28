@@ -10,7 +10,7 @@ horario:
 precio: pago
 nota: | 
 
-url: ["http://www.jaquemateushuaia.com.ar/"]
+website: ["http://www.jaquemateushuaia.com.ar/"]
 email: clubushuaiajaquemate@gmail.com
 telefono: [15601212,15498673,15520657]
 permalink: /ushuaia/entidades/club-ushuaia-jaque-mate/

@@ -9,7 +9,7 @@ horario:
 precio: 
 nota: | 
   Dictado por Lola Acosta
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/flamenco-mambo-son/

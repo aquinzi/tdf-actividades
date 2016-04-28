@@ -10,7 +10,7 @@ horario:
 precio: pago
 nota: | 
   Clases suspendidas hasta nuevo aviso
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/kendo-okawakai/

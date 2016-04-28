@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
     Abreviado CadU
-url: [""]
+website: [""]
 email: 
 telefono: []
 permalink: /ushuaia/entidades/circulo-ajedrez-ushuaia/

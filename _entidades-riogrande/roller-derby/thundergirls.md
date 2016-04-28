@@ -12,7 +12,7 @@ precio: gratis
 nota: | 
   Ser mayor de 18 años. Para mujeres y hombres.
   No es necesario saber patinar, enseñan.
-url: ["https://www.facebook.com/ThunderGirlsRD"]
+website: ["https://www.facebook.com/ThunderGirlsRD"]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/thundergirls/

@@ -11,7 +11,7 @@ horario:
 precio: 
 nota: | 
   
-url: ["https://www.facebook.com/sanshouRG"]
+website: ["https://www.facebook.com/sanshouRG"]
 telefono: []
 email: huohumaxi@outlook.com.ar
 permalink: /rio-grande/entidades/escuela-sanshou-rio-grande/

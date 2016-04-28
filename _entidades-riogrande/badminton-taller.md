@@ -9,7 +9,7 @@ horario:
 precio: 
 nota: | 
   por ahora solo talleres, próximo a ser una escuela de iniciación
-url: [""]
+website: [""]
 telefono: []
 email: 
 email: 

@@ -9,7 +9,7 @@ horario:
 precio: pago
 nota: | 
   
-url: ["https://www.facebook.com/Escuela-Fueguina-del-Clown-293187380837768/", "https://www.facebook.com/elcalcetinroto.companiateatral"]
+website: ["https://www.facebook.com/Escuela-Fueguina-del-Clown-293187380837768/", "https://www.facebook.com/elcalcetinroto.companiateatral"]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/escuela-fueguina-clown/

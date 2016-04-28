@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
   Escuela de escalada
-url: ["https://sites.google.com/site/elmurorgd/"]
+website: ["https://sites.google.com/site/elmurorgd/"]
 telefono: [15452968]
 email: elmurorgd@gmail.com
 permalink: /rio-grande/entidades/el-muro-rgd/

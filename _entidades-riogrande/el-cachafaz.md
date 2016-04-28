@@ -9,7 +9,7 @@ horario:
 precio: gratis
 nota: | 
   a cargo del profesor Luis Argamonte
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/el-cachafaz/

@@ -11,7 +11,7 @@ horario:
 precio: 
 nota: | 
   También conocido como CARG
-url: ["http://clubdeajedrezderiogrande.blogspot.com.ar/", "https://www.facebook.com/pages/CLUB-DE-AJEDREZ-DE-RIO-GRANDE/203932726310191"]
+website: ["http://clubdeajedrezderiogrande.blogspot.com.ar/", "https://www.facebook.com/pages/CLUB-DE-AJEDREZ-DE-RIO-GRANDE/203932726310191"]
 email: ajedrezrg@hotmail.com
 telefono: [15495460,15529761]
 permalink: /rio-grande/entidades/club-ajedrez-rio-grande/

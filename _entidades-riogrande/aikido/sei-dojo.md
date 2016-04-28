@@ -12,7 +12,7 @@ precio:
 nota: | 
   Nombre altenativo: Sei Dôjô, Escuela de cadetes-policía de Tierra del Fuego
   Adherido al Centro de Difusión del Aikido en Argentina.
-url: ["https://www.facebook.com/Cda-Sakanashi-Dojo-Rio-Grande-TDF-1533868230184894/"]
+website: ["https://www.facebook.com/Cda-Sakanashi-Dojo-Rio-Grande-TDF-1533868230184894/"]
 telefono: ["15612967"]
 email: ninotdf@hotmail.com
 permalink: /rio-grande/entidades/sei-dojo/

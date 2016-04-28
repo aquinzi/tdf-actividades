@@ -9,7 +9,7 @@ horario:
 precio: pago
 nota: | 
   Dictado por Natalia Couto
-url: ["https://www.facebook.com/zumba.tierradelfuego/"]
+website: ["https://www.facebook.com/zumba.tierradelfuego/"]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/zumba-nati-mambo-son/

@@ -11,7 +11,7 @@ horario:
 precio: 
 nota: | 
   
-url: ["https://www.facebook.com/club.nautico.ioshlelk.oten/", "http://nautico-rg.blogspot.com.ar/"]
+website: ["https://www.facebook.com/club.nautico.ioshlelk.oten/", "http://nautico-rg.blogspot.com.ar/"]
 telefono: [420536]
 email: nauticorg@yahoo.com.ar/nauticorg@speedy.com.ar
 permalink: /rio-grande/entidades/club-nautico-ioshlelk-oten/

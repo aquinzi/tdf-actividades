@@ -11,7 +11,7 @@ horario:
 precio: 
 nota: | 
 
-url: ["https://www.facebook.com/Go-Tierra-del-Fuego-1618271935124608/"]
+website: ["https://www.facebook.com/Go-Tierra-del-Fuego-1618271935124608/"]
 email: claudioleturia@gmail.com
 telefono: [15606730]
 permalink: /rio-grande/entidades/go-tierra-fuego/

@@ -9,7 +9,7 @@ horario:
 precio: pago
 nota: | 
   
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/tai-chi-chuan-wu-tang/

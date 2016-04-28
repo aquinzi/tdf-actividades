@@ -17,7 +17,7 @@ precio: pago
 nota: | 
   Nombre altenativo: Sakanashi Dôjô
   Adherido al Centro de Difusión del Aikido en Argentina.
-url: ["https://www.facebook.com/Cda-Sakanashi-Dojo-Rio-Grande-TDF-1533868230184894/"]
+website: ["https://www.facebook.com/Cda-Sakanashi-Dojo-Rio-Grande-TDF-1533868230184894/"]
 telefono: []
 email: martinmora66@hotmail.com
 permalink: /rio-grande/entidades/sakanashi-dojo/

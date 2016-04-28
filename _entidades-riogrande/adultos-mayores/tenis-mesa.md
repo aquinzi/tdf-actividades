@@ -9,7 +9,7 @@ horario:
 precio: gratis
 nota: | 
   
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/tenis-mesa-adultos-mayores/

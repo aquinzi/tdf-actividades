@@ -9,7 +9,7 @@ horario:
 precio: gratis
 nota: | 
   Municipio
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/escuela-boxeo-municipio/

@@ -11,7 +11,7 @@ horario:
 precio: gratis
 nota: | 
 
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/palestra-skate-park/

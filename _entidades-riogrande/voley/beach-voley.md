@@ -10,7 +10,7 @@ precio:
 nota: | 
   Adaptado al clima de la isla. 
   Secretaría de deportes
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/beach-voley/

@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
   presidida por Ivonne Naveas; secretario Luis Velázquez
-url: ["https://www.facebook.com/Pedaleando-el-karukinka-206008543082302/"]
+website: ["https://www.facebook.com/Pedaleando-el-karukinka-206008543082302/"]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/pedaleando-el-karukinka/

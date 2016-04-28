@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
   
-url: ["https://www.facebook.com/PaKua-Austral-892348220845350/"]
+website: ["https://www.facebook.com/PaKua-Austral-892348220845350/"]
 telefono: [15612814]
 email: 
 permalink: /rio-grande/entidades/pakua-austral/

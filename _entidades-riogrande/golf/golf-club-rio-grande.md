@@ -10,7 +10,7 @@ horario:
 precio: pago
 nota: | 
   
-url: [""]
+website: [""]
 telefono: [15523039]
 email: gcrg@golfclubrg.com
 permalink: /rio-grande/entidades/golf-club-rio-grande/

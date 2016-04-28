@@ -9,7 +9,7 @@ horario:
 precio: 
 nota: | 
   Rural bike
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/team-los-lentos/

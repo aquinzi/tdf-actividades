@@ -7,7 +7,7 @@ direccion:
 horario: 
   - {dia: "", hora: "", nota: "" }
 precio: gratis
-url: [""]
+website: [""]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/bochas/

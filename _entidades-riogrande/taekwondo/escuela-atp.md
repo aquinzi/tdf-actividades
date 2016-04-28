@@ -11,7 +11,7 @@ horario:
 precio: 
 nota: | 
   Afiliada a Asociación de taekwondo chacra IV
-url: ["https://www.facebook.com/Escuela-Atp-Taekwondo-Oficial-Olimpico-1028749453826346/"]
+website: ["https://www.facebook.com/Escuela-Atp-Taekwondo-Oficial-Olimpico-1028749453826346/"]
 telefono: [526719]
 email: julioacruz1976@yahoo.com.ar
 permalink: /rio-grande/entidades/escuela-atp-taekwondo/

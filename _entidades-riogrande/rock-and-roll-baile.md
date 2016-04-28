@@ -11,7 +11,7 @@ precio: pago
 nota: | 
   Instructores: Karina Carazo y Ariel Gaston Velazquez.
   Produce: Mambo Son Estudio.
-url: [""]
+website: [""]
 telefono: [403869]
 email: 
 permalink: /rio-grande/entidades/rock-and-roll-baile/

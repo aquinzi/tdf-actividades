@@ -17,7 +17,7 @@ nota: |
   Estilo shôtôkan (shotokan). 
   Municipio.
   Nombre alternativo: Dôjô Gichin Funakoshi
-url: ["https://www.facebook.com/Karate-Do-Shotokan-RG-1650531365190460/"]
+website: ["https://www.facebook.com/Karate-Do-Shotokan-RG-1650531365190460/"]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/dojo-gichin-funakoshi/
