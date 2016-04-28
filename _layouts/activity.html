@@ -13,7 +13,6 @@ También conocido como: {{ activity.alternativo | join:", " }}
 
 {% if activity.descripcion %}
 <h2>¿Qué es?</h2>
-
 {{ activity.descripcion | markdownify }}
 {% endif %}
 
@@ -61,7 +60,10 @@ También conocido como: {{ activity.alternativo | join:", " }}
 
 	</li>
 {% else %}
-	<li> En la ciudad se hace {{activity.nombre }} pero no hay nada listado. Si conoces de alguna, no dudes en <a href="{{ site.data.wiki.colaboracion }}">colaborar</a>. </li>
+	<li> En la ciudad se hace <mark>{{ activity.nombre }}</mark> pero no hay nada listado. Si conoces de alguna, no dudes en <a href="{{ site.data.wiki.colaboracion }} rel="external"">colaborar</a>. </li>
 {% endfor %}
 </ul>
 
+<h2>Comentarios</h2>
+
+{% include comment-form.html add_activity=true %}

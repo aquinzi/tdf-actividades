@@ -113,8 +113,11 @@ date: %R = 24-hour time HH:MM
 	</dl>   
 </footer>
 
-</article>
+<hr/>
 
+
+<p>¿Querés agregar un evento? podes hacerlo <a href="{{ site.social.gform.add_evento }}" rel="external">llenando el formulario</a></p>
+</article>
 
 
  <!--json-ld (google lo prefiere a microdata): https://developers.google.com/structured-data/rich-snippets/events?hl=en&rd=1 -->
@@ -122,7 +125,7 @@ date: %R = 24-hour time HH:MM
  {
    "@context": "http://schema.org",
    "@type": "Event",
-   "name": '{{ page.title }}',
+   "name": "{{ page.title }}",
    "startDate": "{{start_date_iso}}",
    "endDate": "{{end_date_iso}}", //optional
    "location": {
@@ -130,12 +133,12 @@ date: %R = 24-hour time HH:MM
      "name" : "{{place_name | strip_html | strip_newlines | replace:"	",""}}",
      "address": {
        "@type": "PostalAddress",
-       "streetAddress": ""
+       "streetAddress": "",
        "postalCode": "9420",
        "addressLocality": "{{ site.data.prettify.[this_city] }}"
      }
    },
-   "description": "{{ content | strip_html | truncate: 100}}",
+   "description": "{{ content | strip_html | truncate: 100}}"
  }
  </script>
 

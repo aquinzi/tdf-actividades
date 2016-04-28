@@ -28,8 +28,11 @@ social:
   facebook:
     url: http://facebook.com/quehacerentdf/
     handle: Qué hacer en TdF
-  form_colaboracion: https://docs.google.com/forms/d/1OQ8bvzPfGqR5Q6dpBTUGd1y-7FIXtd9Op5eOm2o-TYk/viewform #put it here for now
-  form_contacto: https://docs.google.com/forms/d/1r_YkIk9w58ZofjwwPvzHd4SKZBhxkHj4T_O7OGjrOo8/viewform
+  gform:
+    comentario: "https://docs.google.com/forms/d/1RvOC-Hlt66rAwJ0DIV7b_dT0yTSnyQSxGExWIkQMnfE/viewform?entry.1877906304&entry&entry.1927043906=example.com"
+    contacto: "https://docs.google.com/forms/d/1r_YkIk9w58ZofjwwPvzHd4SKZBhxkHj4T_O7OGjrOo8/viewform"
+    add_actividad: "https://docs.google.com/forms/d/1OQ8bvzPfGqR5Q6dpBTUGd1y-7FIXtd9Op5eOm2o-TYk/viewform"
+    add_evento: "https://docs.google.com/forms/d/14VX04g5Rxr_z_p-17mld-Kb3axuOXRdvArIF4J6ASVs/viewform"
 
 email:
   contacto: tdf.actividades+contacto@gmail.com

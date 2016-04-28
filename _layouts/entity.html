@@ -72,12 +72,12 @@ layout: default
 		{% endif %}
 	</dl>
 
-	{% if  (page.url[0]| strip ) != "" or (page.email| strip ) != "" or  (page.telefono[0] | replace:" ","" | strip ) != "" %}
+	{% if  (page.website[0]| strip ) != "" or (page.email| strip ) != "" or  (page.telefono[0] | replace:" ","" | strip ) != "" %}
 	<dl class="contacto">
-		{% if (page.url[0]| strip ) != "" %}
+		{% if page.website[0] %}
 		<dt class="web">Sitios</dt>
 			<dd ><ul>
-				{% for web in page.url %}
+				{% for web in page.website %}
 					{% capture domain %}{% include get-domain.html url=web no_dot=true%}{% endcapture %}
 					{% capture handle %}{% include get-social-handle.html url=web %}{% endcapture %}
 				<li>
@@ -134,12 +134,12 @@ layout: default
 
 {% comment %}
 page.path: /repo/_entidades-riogrande/futsal-afa.md 
-page.url:  /rio-grande/entidades/futsal-afa/ 
+page.website:  /rio-grande/entidades/futsal-afa/ 
 {% endcomment %}
 
 {% assign page_filename = page.path | split:"/" | last | split: "." | first %}
 
-<h3>Algunos eventos en los que fue participe</h3>
+<h2>Algunos eventos en los que fue participe</h2>
 
 <!-- we cant filter with "where" because we can have many "people" (like tags) -->
 <ul class="entidad-eventos-aparece">
@@ -148,13 +148,14 @@ page.url:  /rio-grande/entidades/futsal-afa/
 	{% if post.people and post.people contains page_filename %}
 		{% assign found = true %}
 		{% assign this_city = post.categories[0] %}
-		
 	<li>
 		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <span class="post-details">(<a href="{{site.data.wiki.[this_city|replace:"-",""]}}">{{ site.data.prettify.[this_city] }}</a>, {% include human-date.html hide_weekday=true %})</li></span>
 	</li>
 	{% endif %}
 {% endfor %}
-{% unless found %}<li> No se encuentra en ningún evento (o no se asignó correctamente) </li>{% endunless %}
+{% unless found %}<li> No se encuentra en ningún evento (o no se asignó correctamente)</li>{% endunless %}
 </ul>
 
+<h2>Comentarios</h2>
 
+{% include comment-form.html %}

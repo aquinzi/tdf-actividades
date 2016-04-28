@@ -1,0 +1,8 @@
+{% if include.add_activity %}
+<p> Si queres agregar una entidad (grupo, profesor), no dudes en <a href="{{ site.social.gform.add_actividad }}" rel="external">llenar el formulario</a>.</p>
+{% endif %}
+
+{% assign tmp = site.social.gform.comentario | replace: 'example.com', page.url %}
+<p>También podes dejar un comentario llenando el <a href="{{ tmp }}" rel="external">formulario correspondiente</a> o a continuación (es lo mismo):</p>
+
+<iframe src="{{ tmp }}&embedded=true" width="760" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
