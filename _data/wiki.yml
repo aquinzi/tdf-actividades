@@ -4,18 +4,22 @@ contacto: /contacto/
 faq: /preguntas-frecuentes/
 changelog: /historial-cambios/
 rg-index: &idrg /rio-grande/
-riogrande: *idrg #probando los repeated nodes
-rio-grande: *idrg #probando los repeated nodes
-rg-lugares: /rio-grande/lugares/
-rg-actividades: /rio-grande/actividades/
+riogrande: *idrg 
+rio-grande: *idrg 
+rg-lugares: &idrglugares /rio-grande/lugares/
+riogrande-lugares: *idrglugares
+rg-actividades: &idrgactividades /rio-grande/actividades/
+riogrande-actividades: *idrgactividades
 ush-index: &idush /ushuaia/
 ushuaia: *idush
+ush-actividades: &idushactividades /ushuaia/actividades/
+ushuaia-actividades: *idushactividades
 #ush-lugares: /ushuaia/lugares/
-ush-actividades: /ushuaia/actividades/
 tol-index: &idtol /tolhuin/
 tolhuin: *idtol
+tol-actividades: &idtolactividades /tolhuin/actividades/
+tolhuin-actividades: *idtolactividades
 #tol-lugares: /tolhuin/lugares/
-tol-actividades: /tolhuin/actividades/
 
 # acceso rapido a entidades
 rg-clubajedrez: /rio-grande/entidades/club-ajedrez-rio-grande/
