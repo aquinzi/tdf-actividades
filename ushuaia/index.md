@@ -1,5 +1,5 @@
 ---
-title: Ushuaia
+title: ¿Qué hacer en Ushuaia?
 category: ushuaia
 layout: city
 has_activities: true
