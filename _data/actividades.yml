@@ -94,6 +94,10 @@
   nombre: escalada deportiva
   tipo: deporte
 
+- id: esgrima
+  nombre: esgrima
+  tipo: deporte
+
 - id: fisicoculturismo
   nombre: fisicoculturismo
   tipo: deporte
