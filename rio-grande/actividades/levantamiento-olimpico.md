@@ -1,4 +1,4 @@
 ---
-title: Levantamiento olímpico en Río Grande
+activity_id: levantamiento-olimpico
 ---
 

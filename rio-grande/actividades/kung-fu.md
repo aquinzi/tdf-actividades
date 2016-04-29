@@ -1,4 +1,4 @@
 ---
-title: Kung fu en Río Grande
+activity_id: kung-fu
 ---
 

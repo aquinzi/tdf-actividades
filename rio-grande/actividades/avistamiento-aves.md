@@ -1,4 +1,4 @@
 ---
-title: Avistamiento de aves en Río Grande
+activity_id: avistamiento-aves
 ---
 

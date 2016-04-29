@@ -1,4 +1,4 @@
 ---
-title: Flamenco en Río Grande
+activity_id: flamenco
 ---
 

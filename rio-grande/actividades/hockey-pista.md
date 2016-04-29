@@ -1,4 +1,4 @@
 ---
-title: Hockey pista en Río Grande
+activity_id: hockey-pista
 ---
 

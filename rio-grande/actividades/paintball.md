@@ -1,4 +1,4 @@
 ---
-title: Paintball en Río Grande
+activity_id: paintball
 ---
 

@@ -1,3 +1,3 @@
 ---
-title: Cerámica en Río Grande
+activity_id: ceramica
 ---

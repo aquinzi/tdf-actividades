@@ -1,4 +1,4 @@
 ---
-title: Boxeo en Río Grande
+activity_id: boxeo
 ---
 

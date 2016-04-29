@@ -1,4 +1,4 @@
 ---
-title: Tai chi chuan en Río Grande
+activity_id: tai-chi-chuan
 ---
 

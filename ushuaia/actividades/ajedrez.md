@@ -1,4 +1,4 @@
 ---
-title: Ajedrez en Ushuaia
+activity_id: ajedrez
 ---
 

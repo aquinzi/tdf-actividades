@@ -1,4 +1,4 @@
 ---
-title: Fútbol en Río Grande
+activity_id: futbol
 ---
 

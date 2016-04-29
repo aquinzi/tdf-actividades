@@ -1,4 +1,4 @@
 ---
-title: Aikido en Ushuaia
+activity_id: aikido
 ---
 

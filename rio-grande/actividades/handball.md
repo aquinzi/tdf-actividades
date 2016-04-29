@@ -1,4 +1,4 @@
 ---
-title: Handball en Río Grande
+activity_id: handball
 ---
 

@@ -1,4 +1,4 @@
 ---
-title: Palestra en Río Grande
+activity_id: palestra
 ---
 

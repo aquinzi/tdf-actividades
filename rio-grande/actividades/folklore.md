@@ -1,4 +1,4 @@
 ---
-title: Folklore en Río Grande
+activity_id: folklore
 ---
 

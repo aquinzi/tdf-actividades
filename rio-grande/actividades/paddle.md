@@ -1,4 +1,4 @@
 ---
-title: Paddle en Río Grande
+activity_id: paddle
 ---
 

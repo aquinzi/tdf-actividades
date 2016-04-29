@@ -1,4 +1,4 @@
 ---
-title: Aikido en Tolhuin
+activity_id: aikido
 ---
 

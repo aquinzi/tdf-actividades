@@ -1,4 +1,4 @@
 ---
-title: Bachata en Río Grande
+activity_id: bachata
 ---
 

@@ -1,4 +1,4 @@
 ---
-title: Tenis en Río Grande
+activity_id: tenis
 ---
 

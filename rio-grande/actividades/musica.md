@@ -1,4 +1,4 @@
 ---
-title: Música en Río Grande
+activity_id: musica
 ---
 

@@ -1,4 +1,4 @@
 ---
-title: Gimnasia adultos en Río Grande
+activity_id: gimnasia-adultos
 ---
 

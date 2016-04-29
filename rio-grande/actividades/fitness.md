@@ -1,4 +1,4 @@
 ---
-title: Fitness en Río Grande
+activity_id: fitness
 ---
 

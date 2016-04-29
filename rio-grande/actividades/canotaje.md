@@ -1,4 +1,4 @@
 ---
-title: Canotaje en Río Grande
+activity_id: canotaje
 ---
 

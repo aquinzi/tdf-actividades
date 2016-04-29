@@ -1,4 +1,4 @@
 ---
-title: Patín artístico en Río Grande
+activity_id: patin-artistico
 ---
 

@@ -1,4 +1,4 @@
 ---
-title: Gimnasia rítmica en Río Grande
+activity_id: gimnasia-ritmica
 ---
 

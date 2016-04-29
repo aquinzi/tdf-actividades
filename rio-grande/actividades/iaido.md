@@ -1,4 +1,4 @@
 ---
-title: Iaido en Río Grande
+activity_id: iaido
 ---
 

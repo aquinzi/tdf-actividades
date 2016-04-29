@@ -1,4 +1,4 @@
 ---
-title: Danza clásica en Río Grande
+activity_id: danza-clasica
 ---
 

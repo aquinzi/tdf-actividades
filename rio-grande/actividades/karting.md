@@ -1,4 +1,4 @@
 ---
-title: Karting en Río Grande
+activity_id: karting
 ---
 

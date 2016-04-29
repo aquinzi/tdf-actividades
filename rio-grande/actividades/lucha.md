@@ -1,4 +1,4 @@
 ---
-title: Lucha en Río Grande
+activity_id: lucha
 ---
 

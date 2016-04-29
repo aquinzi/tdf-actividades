@@ -1,4 +1,4 @@
 ---
-title: Tenis de mesa en Río Grande
+activity_id: tenis-mesa
 ---
 

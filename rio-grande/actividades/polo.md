@@ -1,4 +1,4 @@
 ---
-title: Polo en Río Grande
+activity_id: polo
 ---
 

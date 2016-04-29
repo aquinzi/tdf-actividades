@@ -1,4 +1,4 @@
 ---
-title: Gimnasia artística en Río Grande
+activity_id: gimnasia-artistica
 ---
 

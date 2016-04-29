@@ -1,4 +1,4 @@
 ---
-title: Aikido en Río Grande
+activity_id: aikido
 ---
 

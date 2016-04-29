@@ -1,9 +1,13 @@
 ---
 layout: default
+title: ¿Dónde se hace !actividad! en !ciudad!? #replacements in layout default
+this_layout: activity #needit for title replacement
 ---
 
+{% comment %} now we use the front matter variable
 {% assign activity_id = page.path | split:"/" | last | split: "." | first %}
-{% assign activity =  site.data.actividades | where: "id", activity_id | first %}
+{% endcomment %}
+{% assign activity =  site.data.actividades | where: "id", page.activity_id | first %}
 
 <h1>{{ activity.nombre | capitalize }}</h1>
 
@@ -22,7 +26,7 @@ También conocido como: {{ activity.alternativo | join:", " }}
 {% if page.city == "rio-grande" %}{% assign entities = site.entidades-riogrande %}{% endif %}
 {% if page.city == "ushuaia" %}{% assign entities = site.entidades-ushuaia %}{% endif %}
 {% if page.city == "tolhuin" %}{% assign entities = site.entidades-tolhuin %}{% endif %}
-{% assign entities = entities | where: "categoria",activity_id %}
+{% assign entities = entities | where: "categoria",page.activity_id %}
 
 <ul class="listado-entidades">
 {% for entity in entities %}

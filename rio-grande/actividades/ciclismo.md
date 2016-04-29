@@ -1,4 +1,4 @@
 ---
-title: Ciclismo en Río Grande
+activity_id: ciclismo
 ---
 

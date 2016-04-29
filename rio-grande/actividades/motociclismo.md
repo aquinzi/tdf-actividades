@@ -1,4 +1,4 @@
 ---
-title: Motociclismo en Río Grande
+activity_id: motociclismo
 ---
 

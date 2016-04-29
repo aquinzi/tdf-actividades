@@ -1,4 +1,4 @@
 ---
-title: Gimnasia deportiva en Río Grande
+activity_id: gimnasia-deportiva
 ---
 

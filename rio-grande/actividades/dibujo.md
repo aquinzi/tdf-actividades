@@ -1,4 +1,4 @@
 ---
-title: Dibujo en Río Grande
+activity_id: dibujo
 ---
 

@@ -1,4 +1,4 @@
 ---
-title: Boxeo en Ushuaia
+activity_id: boxeo
 ---
 

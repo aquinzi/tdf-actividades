@@ -1,4 +1,4 @@
 ---
-title: Hip-hop en Río Grande
+activity_id: hip-hop
 ---
 

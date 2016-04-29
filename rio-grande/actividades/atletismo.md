@@ -1,4 +1,4 @@
 ---
-title: Atletismo en Río Grande
+activity_id: atletismo
 ---
 

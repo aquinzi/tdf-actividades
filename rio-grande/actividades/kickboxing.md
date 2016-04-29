@@ -1,4 +1,4 @@
 ---
-title: Kendo en Río Grande
+activity_id: kickboxing
 ---
 

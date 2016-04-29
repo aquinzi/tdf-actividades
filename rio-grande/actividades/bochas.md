@@ -1,4 +1,4 @@
 ---
-title: Bochas en Río Grande
+activity_id: bochas
 ---
 

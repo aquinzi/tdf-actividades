@@ -1,4 +1,4 @@
 ---
-title: Karate en Ushuaia
+activity_id: karate
 ---
 

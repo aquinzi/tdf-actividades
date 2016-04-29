@@ -1,4 +1,4 @@
 ---
-title: Badminton en Río Grande
+activity_id: badminton
 ---
 

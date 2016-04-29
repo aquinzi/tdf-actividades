@@ -1,4 +1,4 @@
 ---
-title: Pakua en Río Grande
+activity_id: pakua
 ---
 

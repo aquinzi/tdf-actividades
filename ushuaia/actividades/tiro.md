@@ -1,4 +1,4 @@
 ---
-title: Tiro en Ushuaia
+activity_id: tiro
 ---
 

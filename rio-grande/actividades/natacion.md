@@ -1,4 +1,4 @@
 ---
-title: Natación en Río Grande
+activity_id: natacion
 ---
 

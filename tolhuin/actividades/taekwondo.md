@@ -1,4 +1,4 @@
 ---
-title: Taekwondo en Tolhuin
+activity_id: taekwondo
 ---
 

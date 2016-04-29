@@ -1,3 +1,3 @@
 ---
-title: Canto/coro en Río Grande
+activity_id: canto-coro
 ---

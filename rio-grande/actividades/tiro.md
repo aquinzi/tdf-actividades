@@ -1,4 +1,4 @@
 ---
-title: Tiro en Río Grande
+activity_id: tiro
 ---
 

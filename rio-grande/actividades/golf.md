@@ -1,4 +1,4 @@
 ---
-title: Golf en Río Grande
+activity_id: golf
 ---
 

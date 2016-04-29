@@ -1,4 +1,4 @@
 ---
-title: Jiu-jitsu en Río Grande
+activity_id: jiu-jitsu
 ---
 

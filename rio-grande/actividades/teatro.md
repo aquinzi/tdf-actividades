@@ -1,4 +1,4 @@
 ---
-title: Teatro en Río Grande
+activity_id: teatro
 ---
 

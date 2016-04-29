@@ -1,4 +1,4 @@
 ---
-title: Taekwondo en Río Grande
+activity_id: taekwondo
 ---
 

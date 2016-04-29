@@ -1,4 +1,4 @@
 ---
-title: Salto hípico en Río Grande
+activity_id: salto-hipico
 ---
 

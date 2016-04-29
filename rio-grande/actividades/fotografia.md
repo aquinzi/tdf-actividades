@@ -1,4 +1,4 @@
 ---
-title: Fotografía en Río Grande
+activity_id: fotografia
 ---
 

@@ -1,4 +1,4 @@
 ---
-title: Rugby en Río Grande
+activity_id: rugby
 ---
 

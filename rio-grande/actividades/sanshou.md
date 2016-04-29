@@ -1,4 +1,4 @@
 ---
-title: Sanshou en Río Grande
+activity_id: sanshou
 ---
 

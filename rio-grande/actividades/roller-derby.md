@@ -1,4 +1,4 @@
 ---
-title: Roller derby en Río Grande
+activity_id: roller-derby
 ---
 

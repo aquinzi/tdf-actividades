@@ -1,4 +1,4 @@
 ---
-title: Karate en Río Grande
+activity_id: karate
 ---
 

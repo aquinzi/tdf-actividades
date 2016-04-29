@@ -1,4 +1,4 @@
 ---
-title: Ajedrez en Río Grande
+activity_id: ajedrez
 ---
 

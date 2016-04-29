@@ -1,4 +1,4 @@
 ---
-title: Pintura en Río Grande
+activity_id: pintura
 ---
 

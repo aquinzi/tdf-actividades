@@ -1,4 +1,4 @@
 ---
-title: Escalada deportiva en Río Grande
+activity_id: escalada-deportiva
 ---
 

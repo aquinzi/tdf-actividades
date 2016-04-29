@@ -1,4 +1,4 @@
 ---
-title: Yoga en Río Grande
+activity_id: yoga
 ---
 

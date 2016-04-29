@@ -1,4 +1,4 @@
 ---
-title: Pool en Río Grande
+activity_id: pool
 ---
 

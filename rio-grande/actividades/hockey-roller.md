@@ -1,4 +1,4 @@
 ---
-title: Hockey roller en Río Grande
+activity_id: hockey-roller
 ---
 

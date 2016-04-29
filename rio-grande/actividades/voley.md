@@ -1,4 +1,4 @@
 ---
-title: Voley en Río Grande
+activity_id: voley
 ---
 

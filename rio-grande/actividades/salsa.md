@@ -1,4 +1,4 @@
 ---
-title: Salsa en Río Grande
+activity_id: salsa
 ---
 

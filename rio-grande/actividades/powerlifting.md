@@ -1,4 +1,4 @@
 ---
-title: Powerlifting en Río Grande
+activity_id: powerlifting
 ---
 
