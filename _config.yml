@@ -167,6 +167,27 @@ defaults:
       show_history: false
   - 
     scope:
+      path: "rio-grande"
+      type: "pages"
+    values:
+      city: rio-grande
+      breadcrumbs: ["Río Grande"]
+  - 
+    scope:
+      path: "ushuaia"
+      type: "pages"
+    values:
+      city: ushuaia
+      breadcrumbs: ["Ushuaia"]
+  - 
+    scope:
+      path: "tolhuin"
+      type: "pages"
+    values:
+      city: tolhuin
+      breadcrumbs: ["Tolhuin"]
+  - 
+    scope:
       path: ""
       type: entidades-riogrande
     values:

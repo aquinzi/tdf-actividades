@@ -27,7 +27,7 @@ layout: default
 	{% endif %}
 
 	<p class="mensaje-aviso"> 
-		La ciudad de {{ page.title }} cuenta con {% if text_activities != "" %}{{ text_activities }}{% endif %}{% if page.has_activities and page.has_places  %} y {% endif %}{% if text_places != "" %}{{ text_places }}{% endif %}.
+		La ciudad de {{ site.data.prettify[page.city] }} cuenta con {% if text_activities != "" %}{{ text_activities }}{% endif %}{% if page.has_activities and page.has_places  %} y {% endif %}{% if text_places != "" %}{{ text_places }}{% endif %}.
 	</p>
 
 {% endif %}
