@@ -254,6 +254,16 @@ pre code {
   white-space: pre-wrap;
 }
 
+mark {
+	background-color: #ffd800;
+	padding: 0.1em 0.3em;
+	font-size: 1.1em;
+	/* make it fun! */
+	transform: rotate(-4deg);
+	display: inline-block;
+}
+
+
 /*************
 ==icons (global)
 only defines icons. styling in their own section (unless some padding/margin).
