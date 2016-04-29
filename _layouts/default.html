@@ -60,16 +60,12 @@
 	<meta property="og:locale" content="es_AR" />
 	<meta property="og:url" content="{{ page.url }}"/>
 	<meta property="og:site_name" content="{{ site.name }}"/>	
-		{% comment %}
-		If you have a fan page on Facebook and you want to get more data in Facebook Insights, then you have to use this tag. It tells Facebook you are the site owner, and it connects your Facebook fan page to your website.-->
-		<meta property="fb:admins" content="{{id}}"/>	
-
-		<meta property="twitter:account_id" content="{{id}}" />
-		<meta property="fb:page_id" content="{{id}}" />
-		{% endcomment %}
+	<meta property="fb:admins" content="100003654501305" />
+	<meta property="fb:page_id" content="993149824038979" />
 	{% comment %}summary = small thumbnail. to use a big one: summary_large_image{% endcomment %}
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:url" content="{{ page.url }}">
+
 	
 	<meta property="og:description" content="{{ page_description }}" />
 	<meta name="twitter:description" content="{{ page_description }}">
@@ -104,10 +100,11 @@
 	<!-- end social stuff -->
 
 	<link rel="stylesheet" href="/assets/main.css" type="text/css" media="screen">
-
+	{% comment %}
 	<link rel="alternate" type="application/rss+xml" title="Feed para {{ site.name }}-Río Grande" href="{{ site.feed.riogrande }}">
 	<link rel="alternate" type="application/rss+xml" title="Feed para {{ site.name }}-Ushuaia" href="{{ site.feed.ushuaia }}">
 	<link rel="alternate" type="application/rss+xml" title="Feed para {{ site.name }}-Tolhuin" href="{{ site.feed.tolhuin }}">
+	{% endcomment %}
 
 	<meta name="google-site-verification" content="OVqA7Ots5rjomNNEbJ_aUoamxDzgySu6ryZ9UfaUuuE" />
 	<link rel="canonical" href="{{ page.url | prepend:site.url}}" />
@@ -152,22 +149,22 @@
 	</li>
 	{% if page.breadcrumbs %}
 		{% for crumb in page.breadcrumbs %}
+			{% assign current_crumb = (crumb | downcase ) %}
+			{% assign crumb_url = "" %}
+
 			<li{% if forloop.last %} class="current"{%endif%}>
-			
-			{% comment %} super hardcoded {% endcomment %}
-			{% if (crumb | lower ) == "río grande" %}
-				{% capture crumb_url %} {{ site.url }}/rio-grande/ {% endcapture %}
-			{% endif%}
-			{% if (crumb | lower ) == "entidades" %}
-				{% if (previous_crumb | lower ) == "río grande" %}
-					{% capture crumb_url %} {{ site.url }}/rio-grande/actividades/ {% endcapture %}
-				{% endif%}
+			{% if current_crumb == "río grande" or current_crumb == "ushuaia" or current_crumb == "tolhuin" %}
+				{% assign current_crumb = current_crumb | replace:"í","i" | replace:" ","" %}
+				{% assign crumb_url = site.data.wiki[current_crumb] %}
+			{% else %}
+				{% capture tmp %}{{ previous_crumb }}-{{ current_crumb }}{% endcapture %}
+				{% assign crumb_url = site.data.wiki[tmp] %}
 			{% endif%}
 			
-				<a href="{{crumb_url}}">{{ crumb }}</a>
+				<a href="{{ crumb_url }}">{{ crumb }}</a>
 			</li>
 			
-			{% assign previous_crumb = crumb  %}
+			{% assign previous_crumb = current_crumb %}
 		{% endfor %}
 	
 	{% else %}
