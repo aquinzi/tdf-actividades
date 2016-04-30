@@ -68,14 +68,16 @@ layout: default
 		<p class="details">
 	{% endif %}
 	<time datetime="{{ start_date_iso_xml }}" class="dt-start" itemprop="startDate" content="{{ start_date_iso_xml }}">
-		<span class="dia">({{ site.data.dias.[(page.date | date: "%a")].nombre }}) {% include human-date.html hide_weekday=true date=page.date %}</span>
+		{% assign tmp = page.date | date: "%a" %}
+		<span class="dia">({{ site.data.dias.[tmp].nombre }}) {% include human-date.html hide_weekday=true date=page.date %}</span>
 		{% unless page.no-time-start %}<span class="visuallyhidden">, a las </span><span class="hora">{{ start_time }}</span>{% endunless %}
 		{% if page.date-end %}
 			{% if (end_date_iso) == (start_date_iso) %}
 				{% unless page.no-time-end %}</time> -<span class="visuallyhidden"> hasta las </span><time datetime="{{ end_date_iso_xml }}" class="dt-end">{{ end_time }}{% endunless %}
 	      {% else %}
 	      	</time> al <time datetime="{{end_date_iso_xml}}" class="dt-end" itemprop="endDate" content="end_date_iso_xml">
-					<span class="dia">{% include human-date.html hide_weekday=true date=page.date-end %} ({{ site.data.dias.[(page.date-end | date: "%a")].nombre }})</span>
+					{% assign tmp = page.date-end | date: "%a" %}
+					<span class="dia">{% include human-date.html hide_weekday=true date=page.date-end %} ({{ site.data.dias.[tmp].nombre }})</span>
 			    {% unless page.no-time-start %}<span class="visuallyhidden">, a las </span><span class="hora">{{ end_time }}</span>{% endunless %}
 			{% endif %}
 		{% endif %}     
@@ -84,6 +86,7 @@ layout: default
 			<span itemprop="name">{{ place_name }}</span>
 			<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 				<a class="city" href="{{ site.data.wiki.[this_city] }}" itemprop="addressLocality">{{ this_city_pretty }}</a>
+				<meta itemprop="postalCode" content="{{ site.data.datos-ciudades[this_city].codigo-postal }}">
 				<meta itemprop="addressRegion" content="Tierra del Fuego">
 				<meta itemprop="addressCountry" content="Argentina">
 			</span>
@@ -161,11 +164,13 @@ json-ld (google lo prefiere a microdata):
 		"address": {
 			"@type": "PostalAddress",
 			"streetAddress": "",
-			"postalCode": "9420",
-			"addressLocality": "{{ this_city_pretty }}"
+			"postalCode": "{{ site.data.datos-ciudades[this_city].codigo-postal }}",
+			"addressLocality": "{{ this_city_pretty }}",
+			"addressRegion": "Tierra del Fuego",
+			"addressCountry": "Argentina"
 		}
    },
-	"description": "{{ content | strip_html | truncate: 100}}"
+	"description": "{{ content | strip_html | truncate: 100 }}"
 }
 </script>
 

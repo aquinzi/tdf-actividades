@@ -102,11 +102,7 @@ layout: default
 				{% for telefono in page.telefono %}
 					{% assign tmp_areacode = telefono | split: "-" %}
 					{% if tmp_areacode.size == 1 %}
-						{% if page.city == "rio-grande" %}
-							{% assign areacode = site.data.caracteristicas-telefono.riogrande %}
-						{% else %}	
-							{% assign areacode = site.data.caracteristicas-telefono.[page.city] %}
-						{% endif %}	
+						{% assign areacode = site.data.datos-ciudades[page.city].caracteristica-telefono %}
 						<a class="p-tel" itemprop="telephone" href="tel:+54-9-{{ areacode }}-{{ telefono }}">({{ areacode }}) {{ telefono }}</a>{% unless forloop.last %},{% endunless %}
 					{% else %}
 						{% capture tmp_telefono %} ( {{ telefono | replace: "-",") " }} {% endcapture %}
