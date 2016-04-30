@@ -145,7 +145,7 @@ page.website:  /rio-grande/entidades/futsal-afa/
 		{% assign found = true %}
 		{% assign this_city = post.categories[0] %}
 	<li>
-		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <span class="post-details">(<a href="{{site.data.wiki.[this_city|replace:"-",""]}}">{{ site.data.prettify.[this_city] }}</a>, {% include human-date.html hide_weekday=true %})</li></span>
+		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <span class="post-details">(<a href="{{site.data.wiki.[this_city|replace:"-",""]}}">{{ site.data.prettify.[this_city] }}</a>, {% include human-date.html hide_weekday=true %})</span>
 	</li>
 	{% endif %}
 {% endfor %}
