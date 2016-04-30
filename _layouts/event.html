@@ -3,11 +3,11 @@ layout: default
 ---
 
 {% comment%} 
-date_to_xmlschema = ISO8601 YYYY-MM-DDTHH:MM[TIMEZONE]
-date: %F = date in ISO 8601 (yyyy-mm-dd) 
-date: %a = Abbreviated weekday
-date: %A = full weekday
-date: %R = HH:MM (24-hour)
+	date_to_xmlschema = ISO8601 YYYY-MM-DDTHH:MM[TIMEZONE]
+	date: %F = date in ISO 8601 (yyyy-mm-dd) 
+	date: %a = Abbreviated weekday
+	date: %A = full weekday
+	date: %R = HH:MM (24-hour)
 {% endcomment%}
 
 {% assign start_date_iso = page.date | date: "%F" %} 
@@ -27,28 +27,36 @@ date: %R = HH:MM (24-hour)
 {% capture place_name %}{% include get-place.html place=page.location city=this_city link=true %}{% endcapture %}
 
 {% assign event_permalink = page.url | prepend: site.url %}
-<article class="h-event">
+
+<article class="h-event" itemscope itemtype="http://schema.org/Event">
 <header> 
-	<h1 class="p-name">{{ page.title }}</h1>
+	<h1 class="p-name" itemprop="name">{{ page.title }}</h1>
 	{% if (end_date_iso) > (start_date_iso) %}
 		<p class="details span-dias">
 		{% else %}
 		<p class="details">
 	{% endif %}
-	<time datetime="{{ start_date_iso_xml }}" class="dt-start">
+	<time datetime="{{ start_date_iso_xml }}" class="dt-start" itemprop="startDate" content="{{ start_date_iso_xml }}">
 		<span class="dia">({{ site.data.dias.[(page.date | date: "%a")].nombre }}) {% include human-date.html hide_weekday=true date=page.date %}</span>
 		{% unless page.no-time-start %}<span class="visuallyhidden">, a las </span><span class="hora">{{ start_time }}</span>{% endunless %}
 		{% if page.date-end %}
 			{% if (end_date_iso) == (start_date_iso) %}
 				{% unless page.no-time-end %}</time> -<span class="visuallyhidden"> hasta las </span><time datetime="{{ end_date_iso_xml }}" class="dt-end">{{ end_time }}{% endunless %}
 	      {% else %}
-	      	</time> al <time datetime="{{end_date_iso_xml}}" class="dt-end">
+	      	</time> al <time datetime="{{end_date_iso_xml}}" class="dt-end" itemprop="endDate" content="end_date_iso_xml">
 					<span class="dia">{% include human-date.html hide_weekday=true date=page.date-end %} ({{ site.data.dias.[(page.date-end | date: "%a")].nombre }})</span>
 			    {% unless page.no-time-start %}<span class="visuallyhidden">, a las </span><span class="hora">{{ end_time }}</span>{% endunless %}
 			{% endif %}
 		{% endif %}     
 		</time>
-		{{ place_name }} <a class="city" href="{{ site.data.wiki.[this_city] }}">{{ this_city_pretty }}</a>
+		<span itemprop="location" itemscope itemtype="http://schema.org/Place">
+			<span itemprop="name">{{ place_name }}</span>
+			<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<a class="city" href="{{ site.data.wiki.[this_city] }}" itemprop="addressLocality">{{ this_city_pretty }}</a>
+				<meta itemprop="addressRegion" content="Tierra del Fuego">
+				<meta itemprop="addressCountry" content="Argentina">
+			</span>
+		</span>
 	</p>
 </header>
 
@@ -60,10 +68,10 @@ date: %R = HH:MM (24-hour)
 	{%endif%}
 	<li><a href='whatsapp://send?text={{ page.title | replace:"'", "" | replace:'"',''}}. Info: {{ event_permalink }}' class="u-url">Enviar por Whatsapp</a></li>
 	<li><a href='https://telegram.me/share/url?url={{ event_permalink }}' class="u-url">Enviar por Telegram</a></li>
-	<li><a href="{{ event_permalink }}" class="u-url">Link del evento</a></li>
+	<li><a href="{{ event_permalink }}" class="u-url" itemprop="url">Link del evento</a></li>
 </ul>
 
-<div class="p-description">
+<div class="p-description" itemprop="description">
 {{ content }}
 </div>
 
@@ -86,7 +94,7 @@ date: %R = HH:MM (24-hour)
   			{% assign source_domain = site.data.prettify.[source_domain] %}
   		{% endif %}
 		<dt class="source">Fuente</dt> 
-			<dd><a href="{{ page.source }}"  rel="external">{{ source_domain }}</a></dd>
+			<dd><a href="{{ page.source }}" rel="external">{{ source_domain }}</a></dd>
     {% endif %}
     	{% assign date_modified = page.date %}
     	{% if page.modified %}{% assign date_modified = page.modified %}{% endif %}
@@ -108,26 +116,26 @@ date: %R = HH:MM (24-hour)
 json-ld (google lo prefiere a microdata): 
 	https://developers.google.com/structured-data/rich-snippets/events?hl=en&rd=1
 {% endcomment %}
- <script type="application/ld+json">
- {
-   "@context": "http://schema.org",
-   "@type": "Event",
-   "name": "{{ page.title }}",
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Event",
+	"name": "{{ page.title }}",
 	"url": "{{ event_permalink }}",
-   "startDate": "{{ start_date_iso_xml }}",
-   "endDate": "{{ end_date_iso_xml }}", //optional
-   "location": {
-     "@type": "Place",
-     "name" : "{{ place_name | strip_html | strip_newlines | replace:"	",""}}",
-     "address": {
-       "@type": "PostalAddress",
-       "streetAddress": "",
-       "postalCode": "9420",
-       "addressLocality": "{{ this_city_pretty }}"
-     }
+	"startDate": "{{ start_date_iso_xml }}",
+	"endDate": "{{ end_date_iso_xml }}", 
+	"location": {
+		"@type": "Place",
+		"name" : "{{ place_name | strip_html | strip_newlines | replace:"	","" }}",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "",
+			"postalCode": "9420",
+			"addressLocality": "{{ this_city_pretty }}"
+		}
    },
-   "description": "{{ content | strip_html | truncate: 100}}"
- }
- </script>
+	"description": "{{ content | strip_html | truncate: 100}}"
+}
+</script>
 
 {% include upcoming-events.html %}
