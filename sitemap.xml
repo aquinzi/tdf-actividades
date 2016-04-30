@@ -3,27 +3,20 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   {% for page in site.pages %}
     {% unless page.sitemap.exclude == "yes" %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
-      {% if page.sitemap.modified %}
-        <lastmod>{{ page.sitemap.modified | date: "%Y-%m-%d %R" | date_to_xmlschema}}</lastmod>
-      {% elsif page.date %}
-        <lastmod>{{ page.date | date: "%Y-%m-%d %R" | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+			<xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ page.url }}"/>
+      {% if page.sitemap.modified %}<lastmod>{{ page.sitemap.modified | date: "%Y-%m-%d %R" | date_to_xmlschema}}</lastmod>
+      {% elsif page.date %}<lastmod>{{ page.date | date: "%Y-%m-%d %R" | date_to_xmlschema }}</lastmod>
+      {% else %}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       {% endif %}
-      {% if page.sitemap.changefreq %}
-        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>monthly</changefreq>
+      {% if page.sitemap.changefreq %}<changefreq>{{ page.sitemap.changefreq }}</changefreq>
+      {% else %}<changefreq>monthly</changefreq>
       {% endif %}
-      {% if page.sitemap.priority %}
-        <priority>{{ page.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.8</priority>
+      {% if page.sitemap.priority %}<priority>{{ page.sitemap.priority }}</priority>
+      {% else %}<priority>0.8</priority>
       {% endif %}
     </url>
     {% endunless %}
@@ -33,52 +26,37 @@ layout: null
     {% for doc in collection[1].docs %}
     <url>
       <loc>{{ site.url }}{{ doc.permalink | remove: "index.html" }}</loc>
-      {% if doc.ultima-actualizacion %}
-        <lastmod>{{ doc.ultima-actualizacion | date: "%Y-%m-%d %R" | date_to_xmlschema}}</lastmod>
-      {% elsif doc.date %}
-        <lastmod>{{ doc.date | date: "%Y-%m-%d %R" | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+		<xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ page.permalink }}"/>
+      {% if doc.ultima-actualizacion %}<lastmod>{{ doc.ultima-actualizacion | date: "%Y-%m-%d %R" | date_to_xmlschema}}</lastmod>
+      {% elsif doc.date %}<lastmod>{{ doc.date | date: "%Y-%m-%d %R" | date_to_xmlschema }}</lastmod>
+      {% else %}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       {% endif %}
-      {% if doc.sitemap.changefreq %}
-        <changefreq>{{ doc.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>monthly</changefreq>
+      {% if doc.sitemap.changefreq %}<changefreq>{{ doc.sitemap.changefreq }}</changefreq>
+      {% else %}<changefreq>monthly</changefreq>
       {% endif %}
-      {% if doc.sitemap.priority %}
-        <priority>{{ doc.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.8</priority>
+      {% if doc.sitemap.priority %}<priority>{{ doc.sitemap.priority }}</priority>
+      {% else %}<priority>0.8</priority>
       {% endif %}
     </url>
-
  	 {% endfor %}
   {% endfor %}
-
 
   {% for post in site.posts %}
     {% unless post.published == false %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
-      {% if post.sitemap.modified %}
-        <lastmod>{{ post.sitemap.modified | date: "%Y-%m-%d %R" | date_to_xmlschema }}</lastmod>
-      {% elsif post.date %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+		<xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ post.url }}"/>
+      {% if post.sitemap.modified %}<lastmod>{{ post.sitemap.modified | date: "%Y-%m-%d %R" | date_to_xmlschema }}</lastmod>
+      {% elsif post.date %}<lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% else %}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
       {% endif %}
-      {% if post.sitemap.changefreq %}
-        <changefreq>{{ post.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>monthly</changefreq>
+      {% if post.sitemap.changefreq %}<changefreq>{{ post.sitemap.changefreq }}</changefreq>
+      {% else %}<changefreq>weekly</changefreq>
       {% endif %}
-      {% if post.sitemap.priority %}
-        <priority>{{ post.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.5</priority>
+      {% if post.sitemap.priority %}<priority>{{ post.sitemap.priority }}</priority>
+      {% else %}<priority>0.5</priority>
       {% endif %}
     </url>
     {% endunless %}
   {% endfor %}
-
 </urlset>
