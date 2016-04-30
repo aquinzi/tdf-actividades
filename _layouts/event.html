@@ -28,7 +28,38 @@ layout: default
 
 {% assign event_permalink = page.url | prepend: site.url %}
 
-<article class="h-event" itemscope itemtype="http://schema.org/Event">
+{% comment %} select the appropiate event type. From less specific to more specific {% endcomment %}
+{% assign event_type = "Event" %}
+{% for tag in page.tags %}
+	{% case (tag | downcase) %}
+		{% when 'comedia' %}
+			{% assign event_type = "ComedyEvent" %}	
+		{% when 'feria' or 'muestra' %}
+			{% assign event_type = "ExhibitionEvent" %}		
+		{% when 'deportes' %}
+			{% assign event_type = "SportsEvent" %}	
+		{% when 'arte' %}
+			{% assign event_type = "VisualArtsEvent" %}	
+		{% when 'concurso' or 'premios' %}
+			{% assign event_type = "SocialEvent" %}	
+		{% when 'festejos' %}
+			{% assign event_type = "Festival" %}			
+		{% when 'baile' or 'danza %}
+			{% assign event_type = "DanceEvent" %}
+		{% when 'musica' or 'canto' %}
+			{% assign event_type = "MusicEvent" %}
+		{% when 'charla' or 'cursos' or 'idiomas' or 'salud' %}
+			{% assign event_type = "EducationEvent" %}
+		{% when 'teatro' or 'cine' %}
+			{% assign event_type = "TheaterEvent" %}	
+		{% when 'comida' %}
+			{% assign event_type = "FoodEvent" %}				
+		{% else %}
+			{% assign event_type = "Event" %}			
+	{% endcase %}
+{% endfor %}
+
+<article class="h-event" itemscope itemtype="http://schema.org/{{ event_type }}">
 <header> 
 	<h1 class="p-name" itemprop="name">{{ page.title }}</h1>
 	{% if (end_date_iso) > (start_date_iso) %}
@@ -119,7 +150,7 @@ json-ld (google lo prefiere a microdata):
 <script type="application/ld+json">
 {
 	"@context": "http://schema.org",
-	"@type": "Event",
+	"@type": "{{ event_type }}",
 	"name": "{{ page.title }}",
 	"url": "{{ event_permalink }}",
 	"startDate": "{{ start_date_iso_xml }}",
