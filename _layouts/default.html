@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 {% assign page_url = page.url | prepend:site.url %}
-<head>
+<head itemscope itemtype="http://schema.org/WebSite">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -15,7 +15,9 @@
 		{% assign tmp_activity = site.data.actividades | where: "id", page.activity_id | first %}
 		{% assign page_title = page.title | replace:"!ciudad!", tmp_city | replace:"!actividad!", tmp_activity.nombre %}
 	{% endif %}
-	<title>{{ page_title }}</title>
+	<title itemprop='name'>{{ page_title }}</title>
+	<link rel="alternate" hreflang="es" href="{{ page_url }}">
+	<link rel="canonical" href="{{ page_url }}" itemprop="url"/>
 
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -47,7 +49,7 @@
 	<meta name="theme-color" content="#fd9730">
 	<!-- end favicons big mess. Wow, it used to be only one before; remember that?-->
 	
-	<link rel="alternate" hreflang="es" href="{{ page_url }}">
+	
 
 	<meta name="author" content="{{ site.name }}" />
 	{% if page.excerpt %} {% assign page_description = page.excerpt | strip_html %}
@@ -109,7 +111,7 @@
 	{% endcomment %}
 
 	<meta name="google-site-verification" content="OVqA7Ots5rjomNNEbJ_aUoamxDzgySu6ryZ9UfaUuuE" />
-	<link rel="canonical" href="{{ page_url }}" />
+	
 </head>
 
 <body>
@@ -145,16 +147,21 @@
 {% else %} {% assign num_parts = url_parts | size %}
 {% endif %}
 
-<ol class="breadcrumbs">
-	<li class="visuallyhidden">
-		<a href="/">{{ site.name }}</a>
+<ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+	<li class="visuallyhidden" itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem">
+		<a href="/" itemprop="item"><span itemprop="name">{{ site.name }}</span></a>
+		<meta itemprop="position" content="1" />
 	</li>
+	{% assign bread_counter = 1 %}
 	{% if page.breadcrumbs %}
 		{% for crumb in page.breadcrumbs %}
+			{% increase bread_counter %}
 			{% assign current_crumb = (crumb | downcase ) %}
 			{% assign crumb_url = "" %}
 
-			<li{% if forloop.last %} class="current"{%endif%}>
+			<li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem"{% if forloop.last %} class="current"{%endif%}>
 			{% if current_crumb == "río grande" or current_crumb == "ushuaia" or current_crumb == "tolhuin" %}
 				{% assign current_crumb = current_crumb | replace:"í","i" | replace:" ","" %}
 				{% assign crumb_url = site.data.wiki[current_crumb] %}
@@ -163,7 +170,8 @@
 				{% assign crumb_url = site.data.wiki[tmp] %}
 			{% endif%}
 			
-				<a href="{{ crumb_url }}">{{ crumb }}</a>
+				<a href="{{ crumb_url }}" itemprop="item"><span itemprop="name">{{ crumb }}</span></a>
+				<meta itemprop="position" content="{{ bread_counter }}" />
 			</li>
 			
 			{% assign previous_crumb = current_crumb %}
@@ -189,9 +197,7 @@
 				<a href="{{previous}}">{{ pretty_crumb }}</a>
 			</li>
 		{% endfor %}
-	{% endif %}
-	
-	
+	{% endif %}	
 </ol>
 
 {{ content }}
@@ -332,6 +338,16 @@ jQuery(document).ready(function ($) {
 }); //end document.ready
 
 $('body').append('<div class="popup-overlay"></div>');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "WebSite",
+  "name" : "{{ page_title }}",
+  "alternateName" : "{{ site.name }}",
+  "url" : "{{ page_url }}"
+}
 </script>
 
 </html>
