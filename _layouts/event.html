@@ -53,9 +53,7 @@ layout: default
 		{% when 'teatro' or 'cine' %}
 			{% assign event_type = "TheaterEvent" %}	
 		{% when 'comida' %}
-			{% assign event_type = "FoodEvent" %}				
-		{% else %}
-			{% assign event_type = "Event" %}			
+			{% assign event_type = "FoodEvent" %}		
 	{% endcase %}
 {% endfor %}
 
