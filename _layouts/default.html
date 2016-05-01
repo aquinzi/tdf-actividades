@@ -156,7 +156,7 @@
 	{% assign bread_counter = 1 %}
 	{% if page.breadcrumbs %}
 		{% for crumb in page.breadcrumbs %}
-			{% increase bread_counter %}
+			{% assign bread_counter = bread_counter | plus:1 %}
 			{% assign current_crumb = (crumb | downcase ) %}
 			{% assign crumb_url = "" %}
 
