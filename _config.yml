@@ -149,7 +149,6 @@ defaults:
       path: "" # an empty string here means all files in the project
       type: pages
     values:
-      #category: "agenda"
       layout: page
   -
     scope:
@@ -195,6 +194,8 @@ defaults:
       breadcrumb_limit: 3
       city: rio-grande
       breadcrumbs: ["Río Grande","Entidades"]
+      show_source: true
+      show_history: true
   - 
     scope:
       path: ""
@@ -204,6 +205,8 @@ defaults:
       breadcrumb_limit: 3
       city: ushuaia
       breadcrumbs: ["Ushuaia","Entidades"]
+      show_source: true
+      show_history: true
   - 
     scope:
       path: ""
@@ -213,6 +216,8 @@ defaults:
       breadcrumb_limit: 3
       city: tolhuin
       breadcrumbs: ["Tolhuin","Entidades"]
+      show_source: true
+      show_history: true
   - 
     scope:
       path: "rio-grande/actividades"
@@ -240,6 +245,18 @@ defaults:
       breadcrumb_limit: 3
       city: tolhuin
       breadcrumbs: ["Tolhuin","Actividades"]
+  - 
+    scope:
+      path: ""
+      type: lugares-riogrande
+    values:
+      layout: place
+      breadcrumb_limit: 3
+      city: rio-grande
+      breadcrumbs: ["Río Grande","Lugares"]
+      show_source: true
+      show_history: true
+
 collections:
   entidades-riogrande:
     output: true 
@@ -250,6 +267,10 @@ collections:
   entidades-tolhuin:
     output: true 
     permalink: /tolhuin/entidades/:path/
+  lugares-riogrande:
+    output: true 
+    permalink: /rio-grande/lugares/:path/
+
 
 # Markdown Processors (include only kramdown)
 
