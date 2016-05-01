@@ -1,6 +1,6 @@
 ---
 nombre: Taller de Introducción a la Trompeta
-categoria: música
+categoria: musica
 ultima-actualizacion: 2016-02-08
 direccion: 
   lugar: [alem]
