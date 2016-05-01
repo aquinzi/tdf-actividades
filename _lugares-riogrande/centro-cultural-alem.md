@@ -1,6 +1,6 @@
 ---
 id: alem
-nombre: Centro Cultural Leandro N. Alem
+nombre: "Centro Cultural Leandro N. Alem"
 direccion: Juan Bautista Alberdi esq. Belgrano
 geo: {lat: -53.7878542, lon: -67.7050023}
 gstreetview: "https://www.google.com/maps/@-53.7878542,-67.7050023,3a,75y,314.21h,78.57t/data=!3m6!1e1!3m4!1sk3Dmfa4fEklmjaGPHCb7fg!2e0!7i13312!8i6656!6m1!1e1"
@@ -13,6 +13,6 @@ email: cultura.alem@riogrande.gob.ar
 url: []
 telefono: [422897]
 nota: |
- 
+  
 marker-symbol: theatre
 ---
