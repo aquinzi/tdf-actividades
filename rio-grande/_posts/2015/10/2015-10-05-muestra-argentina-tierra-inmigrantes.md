@@ -5,7 +5,7 @@ date: 2015-10-05 09:00
 no-time-start: 
 date-end: 2015-10-06 19:00
 no-time-end: 
-location: museomunicial
+location: museomunicipal
 tags: [muestra]
 source: http://www.surenio.com.ar/muestra-itinerante-argentina-tierra-de-inmigrantes/
 people: []
