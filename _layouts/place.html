@@ -1,6 +1,6 @@
 ---
 layout: default
-title: !lugar!, !ciudad! #replacements in layout default
+#title: "!lugar!, !ciudad!" #replacements in layout default
 this_layout: place #needed for title replacement
 ---
 
@@ -104,39 +104,32 @@ this_layout: place #needed for title replacement
 
 <h2>Actividades que se hacen</h2>
 
-{% comment %}
-1. get all entities from city
-2. filter the location (it's a list, we cant use "where")
-3. push to array in format tmp[activity] = list(entity|entity_url)
-4. sort array (to alphetize activities)
-5. print as: activity (entity, entity). linking everything
-{% endcomment %}
-
 {% assign entities = "" %}
 {% if page.city == "rio-grande" %}{% assign entities = site.entidades-riogrande %}{% endif %}
 {% if page.city == "ushuaia" %}{% assign entities = site.entidades-ushuaia %}{% endif %}
 {% if page.city == "tolhuin" %}{% assign entities = site.entidades-tolhuin %}{% endif %}
-{% assign entities = entities | where: "categoria",page.activity_id %}
+{% assign entities = entities | group_by: "categoria" %}
 
 
-
-{% assign activities = " " | split:" " %}
-{% assign heading = false %}
+{% assign print_entities = " " | split: " " %}
 <ul>
-{% for entity in entities | group_by: "categoria" | sort: "name" %}
-	{% assign heading = false %}
-	{% for item in entity.items | sort: "nombre" %}
-		{% if item.direccion contains page.id %}		
-			{% if heading == false %}
-			{% assign heading = true %}
-			<li>{{ entity.name }}: {% endif %}
-			<a href="{{ entity.permalink | prepend: site.url }}">{{ entity.nombre }}</a>
-			{% unless forloop.last %}, {%endunless%}
+{% for entity in entities | sort: "name" %}
+	{% assign print_entities = " " | split: " " %}
+
+	{% for item in entity.items %}
+		{% if item.direccion.lugar contains page.id %}
+			{% capture tmp %}<a href="{{ item.permalink | prepend: site.url }}">{{ item.nombre }}</a>{% endcapture %}
+			{% assign print_entities = print_entities | push: tmp %}
 		{% endif %}
 	{% endfor %}
-	{% if heading == true %}</li>{% endif %}
+	
+	{% if print_entities.size > 0 %}
+		{% assign tmp = site.data.actividades | where: "id", entity.name | first %}
+		<li>{{ tmp.nombre }}: {{ print_entities | join:", " }}</i>
+	{% endif %}
+	
 {% endfor %}
-<ul>
+</ul>
 
 
 
