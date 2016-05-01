@@ -54,7 +54,7 @@ layout: default
 			<dd class="costo">{{ page.precio }}</dd>
 			{% endunless %}
 
-		{% if page.horario[0].dia != ""%}
+		{% if page.horario[0].dia != "" %}
 		<dt class="horarios">Horarios</dt>
 			<dd><ul>
 			{% for horario in page.horario %}
@@ -72,11 +72,11 @@ layout: default
 		{% endif %}
 	</dl>
 
-	{% if  (page.website[0]| strip ) != "" or (page.email| strip ) != "" or  (page.telefono[0] | replace:" ","" | strip ) != "" %}
+	{% if page.website.size > 0 or page.email or page.telefono.size > 0 %}
 	<dl class="contacto">
-		{% if page.website[0] %}
+		{% if page.website.size > 0 %}
 		<dt class="web">Sitios</dt>
-			<dd ><ul>
+			<dd><ul>
 				{% for web in page.website %}
 					{% capture domain %}{% include get-domain.html url=web no_dot=true%}{% endcapture %}
 					{% capture handle %}{% include get-social-handle.html url=web %}{% endcapture %}
@@ -91,12 +91,12 @@ layout: default
 			</ul></dd>
 		{% endif %}
 
-		{% if (page.email| strip ) != "" %}
+		{% if page.email %}
 		<dt class="email">email</dt>
 			<dd><span itemprop="email">{% include print-email.html email=page.email %}</span></dd>
 		{% endif %}
 
-		{% if (page.telefono[0] | replace:" ","" | strip ) != "" %}
+		{% if page.telefono.size > 0 %}
 		<dt class="telefono">Teléfono</dt>
 			<dd>
 				{% for telefono in page.telefono %}
