@@ -8,11 +8,11 @@ imagen: "http://maps.googleapis.com/maps/api/streetview?size=800x400&location=-5
 categoria: arte
 ultima-actualizacion: 2015-10-25
 horario: 
-  - {dia: "", hora: "", nota: "" }
+- {dia: "", hora: "", nota: "" }
 email: cultura.alem@riogrande.gob.ar
-url: []
+website: []
 telefono: [422897]
 nota: |
   
-marker-symbol: theatre
+marker-symbol: theater
 ---
