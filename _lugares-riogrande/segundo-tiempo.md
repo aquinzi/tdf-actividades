@@ -8,7 +8,7 @@ imagen: "http://maps.googleapis.com/maps/api/streetview?size=800x400&location=-5
 categoria: deportes
 ultima-actualizacion: 2015-07-24
 horario: 
-- {dia: "", hora: "", nota: "" }
+  - {dia: "", hora: "", nota: "" }
 email: 
 website: []
 telefono: [15522282]

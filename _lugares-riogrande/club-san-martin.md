@@ -1,6 +1,6 @@
 ---
 id: clubsanmartin
-nombre: 'Club General San Martín'
+nombre: Club General San Martín
 direccion: Bernardo O'Higgins 46
 geo: {lat: -53.7916648, lon: -67.6934956}
 gstreetview: "https://www.google.com/maps/@-53.7916648,-67.6934956,3a,75y,219.04h,75.2t/data=!3m6!1e1!3m4!1stmnVz3aeqK-0T3wKJgJAqQ!2e0!7i13312!8i6656"
@@ -8,7 +8,7 @@ imagen: "http://maps.googleapis.com/maps/api/streetview?size=800x400&location=-5
 categoria: 
 ultima-actualizacion: 2015-07-16
 horario: 
-- {dia: "", hora: "", nota: "" }
+  - {dia: "", hora: "", nota: "" }
 email: 
 website: []
 telefono: [421427]

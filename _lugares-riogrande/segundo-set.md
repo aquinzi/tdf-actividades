@@ -8,7 +8,7 @@ imagen: "http://maps.googleapis.com/maps/api/streetview?size=800x400&location=-5
 categoria: deportes
 ultima-actualizacion: 2015-07-21
 horario: 
-- {dia: "", hora: "", nota: "" }
+  - {dia: "", hora: "", nota: "" }
 email: 
 website: ["http://www.facebook.com/pages/2do-Set/"]
 telefono: [424290]

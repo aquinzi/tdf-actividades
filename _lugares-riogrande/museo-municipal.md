@@ -8,11 +8,11 @@ imagen: "http://maps.googleapis.com/maps/api/streetview?size=800x400&location=-5
 categoria: museo
 ultima-actualizacion: 2015-10-25
 horario: 
-- {dia: "", hora: "", nota: "" }
+  - {dia: "", hora: "", nota: "" }
 email: 
 website: []
 telefono: []
 nota: |
- 
+  
 marker-symbol: museum
 ---

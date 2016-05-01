@@ -8,8 +8,8 @@ imagen: "http://maps.googleapis.com/maps/api/streetview?size=800x400&location=-5
 categoria: arte
 ultima-actualizacion: 2015-10-25
 horario: 
-- {dia: "lunes-viernes", hora: "09:00-19:00", nota: "" }
-- {dia: "sábados y feriados", hora: "13:00-19:00", nota: "" }
+  - {dia: "lunes a viernes", hora: "09:00-19:00", nota: "" }
+  - {dia: "sábados y feriados", hora: "13:00-19:00", nota: "" }
 email: museofueguinodearte@gmail.com
 website: []
 telefono: [425823]

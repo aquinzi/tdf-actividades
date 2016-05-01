@@ -8,7 +8,7 @@ imagen: "http://maps.googleapis.com/maps/api/streetview?size=800x400&location=-5
 categoria: 
 ultima-actualizacion: 2016-02-08
 horario: 
-- {dia: "", hora: "", nota: "" }
+  - {dia: "", hora: "", nota: "" }
 email: 
 website: []
 telefono: []
