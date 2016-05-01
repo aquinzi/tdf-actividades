@@ -11,7 +11,7 @@ horario:
 precio: 
 nota: | 
 
-website: [""]
+website: []
 email: 
 telefono: []
 permalink: /ushuaia/entidades/mujou-dojo/

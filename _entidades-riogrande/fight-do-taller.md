@@ -11,7 +11,7 @@ precio:
 nota: | 
   Dictado por Elizabeth González. 
   Totalmente libre y gratuito; desde niños hasta personas mayores, de ambos sexos.
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/taller-fight-do/

@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
 
-website: [""]
+website: []
 email: martinmora66@hotmail.com
 telefono: []
 permalink: /ushuaia/entidades/aonikenk-dojo/

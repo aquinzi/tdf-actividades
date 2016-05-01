@@ -9,7 +9,7 @@ horario:
 precio: gratis
 nota: | 
   Clases suspendidas hasta nuevo aviso
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/iaido-okawakai/

@@ -9,7 +9,7 @@ horario:
 precio: pago
 nota: | 
   Dictado por Maxi o Maximiliano Ratto?
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/salsa-mambo-son/

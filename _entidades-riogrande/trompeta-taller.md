@@ -11,7 +11,7 @@ nota: |
   Profesor: Juan Manuel Almirón.
   Para niños desde 9 años, adolescentes, adultos.
   Requisito: llevar el instrumento.
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/trompeta-taller/

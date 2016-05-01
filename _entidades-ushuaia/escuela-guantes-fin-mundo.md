@@ -10,7 +10,7 @@ horario:
 precio: pago
 nota: | 
     profesor Oscar Benítez
-website: [""]
+website: []
 email: 
 telefono: []
 permalink: /ushuaia/entidades/escuela-guantes-fin-mundo/

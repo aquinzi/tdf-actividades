@@ -1,6 +1,6 @@
 ---
 nombre: Club Ushuaia Jaque Mate
-img: "http://www.jaquemateushuaia.com.ar/wp-content/uploads/2014/10/logo-color.jpg"
+imagen: "http://www.jaquemateushuaia.com.ar/wp-content/uploads/2014/10/logo-color.jpg"
 categoria: ajedrez
 ultima-actualizacion: 2016-04-22
 direccion: 

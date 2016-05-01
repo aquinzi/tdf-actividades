@@ -10,7 +10,7 @@ horario:
 precio: pago
 nota: | 
   Boxeo recreativo; para hombres, mujeres y niños, de cualquier edad.
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/boxing-club-vicente-stanic/

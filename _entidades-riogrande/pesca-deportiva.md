@@ -9,7 +9,7 @@ horario:
 precio: pago
 nota: | 
   Ver <a href='http://recursoshidricos.tierradelfuego.gov.ar/?page_id=431'>http://recursoshidricos.tierradelfuego.gov.ar/?page_id=431</a>
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/pesca-deportiva/

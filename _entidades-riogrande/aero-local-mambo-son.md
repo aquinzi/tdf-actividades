@@ -9,7 +9,7 @@ horario:
 precio: 
 nota: | 
   Dictado por Edit
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/aero-local-mambo-son/

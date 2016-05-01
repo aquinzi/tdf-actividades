@@ -9,7 +9,7 @@ horario:
 precio: pago
 nota: | 
   Dictado por Lola Acosta
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/stilleto-mambo-son/
