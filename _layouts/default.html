@@ -135,19 +135,6 @@
 </header>
 
 <div id="content">
-{% comment %} 
-	breadcrumbs ideas from http://stackoverflow.com/questions/9612235/what-are-some-good-ways-to-implement-breadcrumbs-on-a-jekyll-site
-{% endcomment %}
-
-{% comment %} "Hack" to remove last slash in URL {% endcomment %}
-{% capture previous %}{{site.url}}/#{% endcapture %}
-{% assign previous = previous | remove: '/#' %} 
-
-{% assign url_parts = page.url | remove: "/index.html" | remove: site.url | split:"/"  %}
-
-{% if page.breadcrumb_limit %} {% assign num_parts = page.breadcrumb_limit %}
-{% else %} {% assign num_parts = url_parts | size %}
-{% endif %}
 
 <ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
 	<li class="visuallyhidden" itemprop="itemListElement" itemscope
@@ -168,9 +155,13 @@
 				{% assign current_crumb = current_crumb | replace:"í","i" | replace:" ","" %}
 				{% assign crumb_url = site.data.wiki[current_crumb] %}
 			{% else %}
+				{% if current_crumb == "entidades" %}
+					{% comment %} we don't list entities per se, we move them to actividades{% endcomment %} 
+					{% assign current_crumb = "actividades" %}
+				{% endif %}
 				{% capture tmp %}{{ previous_crumb }}-{{ current_crumb }}{% endcapture %}
 				{% assign crumb_url = site.data.wiki[tmp] %}
-			{% endif%}
+			{% endif %}
 			
 				<a href="{{ crumb_url }}" itemprop="item"><span itemprop="name">{{ crumb }}</span></a>
 				<meta itemprop="position" content="{{ bread_counter }}" />
@@ -180,6 +171,21 @@
 		{% endfor %}
 	
 	{% else %}
+	
+		{% comment %} 
+			breadcrumbs ideas from http://stackoverflow.com/questions/9612235/what-are-some-good-ways-to-implement-breadcrumbs-on-a-jekyll-site
+		{% endcomment %}
+
+		{% comment %} "Hack" to remove last slash in URL {% endcomment %}
+		{% capture previous %}{{site.url}}/#{% endcapture %}
+		{% assign previous = previous | remove: '/#' %} 
+
+		{% assign url_parts = page.url | remove: "/index.html" | remove: site.url | split:"/"  %}
+
+		{% if page.breadcrumb_limit %} {% assign num_parts = page.breadcrumb_limit %}
+		{% else %} {% assign num_parts = url_parts | size %}
+		{% endif %}
+	
 		{% for crumb in url_parts limit:num_parts %}
 			{% if crumb == "" %}{% continue %}{% endif %}
 
