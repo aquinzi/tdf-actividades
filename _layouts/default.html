@@ -15,6 +15,8 @@
 		{% assign tmp_activity = site.data.actividades | where: "id", page.activity_id | first %}
 		{% assign page_title = page.title | replace:"!ciudad!", tmp_city | replace:"!actividad!", tmp_activity.nombre %}
 	{% endif %}
+	
+	{% assign page_title = page_title | strip_html %}
 	<title itemprop='name'>{{ page_title }}</title>
 	<link rel="alternate" hreflang="es" href="{{ page_url }}">
 	<link rel="canonical" href="{{ page_url }}" itemprop="url"/>
