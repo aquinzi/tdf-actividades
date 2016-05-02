@@ -23,6 +23,7 @@
  * ==latestchanges
  * ==index boxes
  * ==entidades (details and listing)
+ * ==personas
  * ==lugares (listado/details)
  * ==agenda archivo 
  * ==event details
@@ -1390,10 +1391,11 @@ div.index-info-que-es {
 
 
 /*************
-==hcard for entidades (details) and lugares (details)
+==hcard for entidades (details) and lugares (details), personas
 **************/
 
-article.h-card {
+article.h-card,
+div.h-card {
 	position: relative;
 	background-color: #3F3F3F;
 	color: #CCCCCC;
@@ -1491,7 +1493,7 @@ article.h-card {
 .listado-entidades li { position: relative; }
 
 
-article.card-entidad {padding: 0em; }
+article.card-entidad, div.card-entidad {padding: 0em; }
 
 .listado-entidades li.card-entidad{
 	position: relative;
@@ -1525,7 +1527,8 @@ article.card-entidad {padding: 0em; }
 	display: inline-block;
 }
 
-article.card-entidad .p-name {
+article.card-entidad .p-name,
+div.card-entidad .p-name {
 	display: inline-block;
 	margin-top: 36px;
 	margin-bottom: 0px;
@@ -1558,10 +1561,7 @@ article.card-entidad .p-name {
 
 	margin: 0;
 }
-.listado-entidades.listado-personas .card-entidad .logo {
-	width: 130px;
-	height: 130px;
-	}
+
 
 @media (max-width: 800px) {
   .card-entidad .p-name {font-size: 1.8em;}
@@ -1583,12 +1583,14 @@ article.card-entidad .p-name {
 @media (max-width: 600px) {
   .card-entidad header {padding-left: 10px; }
   .card-entidad .logo { display: none }
-	article.card-entidad .p-name {margin-top: 16px; line-height: 22px; }
+	article.card-entidad .p-name,
+	div.card-entidad .p-name {margin-top: 16px; line-height: 22px; }
   .listado-entidades li.card-entidad div.info {margin-left: 10px}
 }
 
 
-article.card-entidad dl {border-left: 4px solid #FD9730; }
+article.card-entidad dl,
+div.card-entidad dl {border-left: 4px solid #FD9730; }
 
 .card-entidad dl.contacto {margin-top: -12px; }
 
@@ -1598,11 +1600,13 @@ article.card-entidad dl {border-left: 4px solid #FD9730; }
 }
 
 @media (min-width: 710px) {
-	article.card-entidad dl { margin-left: 1.5em; }
+	article.card-entidad dl,
+	div.card-entidad dl { margin-left: 1.5em; }
 }
 
 @media (min-width: 1200px) {
-	article.card-entidad dl {float: left; max-width: 850px; min-width: 500px;}
+	article.card-entidad dl,
+	div.card-entidad dl {float: left; max-width: 850px; min-width: 500px;}
 	.card-entidad dl.contacto { margin-top: 0px; width: 53%;}
 }
 
@@ -1637,7 +1641,8 @@ article.card-entidad dl {border-left: 4px solid #FD9730; }
 
 /* "hack" to make it inline */
 @media screen and (min-width: 500px) {
-	article.card-entidad dd {
+	article.card-entidad dd,
+	div.card-entidad dd {
 		margin-left: 138px;
 		margin-top: -36px;
 		margin-bottom: 0.6em;
@@ -1688,6 +1693,87 @@ article.card-entidad dl {border-left: 4px solid #FD9730; }
 	color: #6C6C6C;
 	margin-left: 0.4em;
 }
+
+
+
+/*************
+==personas (details and listing)
+**************/
+/*   "inherit" from card-entidad */
+
+.listado-entidades.listado-personas .card-entidad .logo {
+	width: 130px;
+	height: 130px;
+	}
+	
+.card-entidad.card-persona .logo{ 
+	width: 300px;
+	height: 300px;
+	border-radius: 1em;
+}
+
+.card-entidad.card-persona header {
+	height: 320px;
+}
+
+.card-entidad.card-persona dt {
+	width: 190px;
+}
+
+.card-entidad.card-persona dl.basic-info {
+	padding-top: 0.5em;
+}
+
+@media (min-width: 1200px) {
+	.card-entidad.card-persona dl.basic-info {
+		float: none; 
+		max-width: inherit; 
+		min-width: 0;
+	}
+}
+	
+.card-entidad.card-persona dl.basic-info dt {
+	background-color: transparent;
+	font-weight: bold;
+	text-align: left;
+	padding: 0;
+}
+	
+.h-card.card-persona dl.basic-info dd {
+	background: transparent;
+	line-height: inherit;
+}
+
+@media screen and (min-width: 500px) {
+	.card-entidad.card-persona dl.basic-info dd {
+		margin-left: 18px;
+		margin-top: 0;
+	}
+	
+	.card-entidad.card-persona .actividad-content dd {
+		margin-left: 202px;
+	}
+}
+
+
+@media (min-width: 710px) {
+	.card-entidad.card-persona header dl { margin-left: 0; }
+}
+
+
+@media (min-width: 1200px) {
+	.card-entidad.card-persona dl.informacion {
+		float: none; 
+		max-width: inherit;
+		min-width: 0;
+		}
+}
+
+
+@media (min-width: 710px) {
+	.card-entidad.card-persona dl.informacion { margin-right: 1.5em; }
+}
+
 
 
 /*************
