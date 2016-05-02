@@ -4,12 +4,18 @@ layout: default
 
 {% comment %}or http://schema.org/SportsTeam{%endcomment%}
 
+{% assign page_filename = page.path | split:"/" | last | split: "." | first %}
 <article>
 	<div class="card-entidad card-persona h-card" itemscope itemtype="http://schema.org/Person">
 		<header>
 			<div class="logo">
 			{% if page.imagen %}
+				{% assign tmp = page.imagen | downcase %}
+				{% if tmp == "si" %}
+				<img src="{{ site.baseurl }}/assets/personas/{{ page_filename }}.jpg" alt="logo" class="u-logo u-photo" width="300" itemprop="image">
+				{% else %}
 				<img src="{{ page.imagen }}" alt="logo" class="u-logo u-photo" width="300" itemprop="image">
+				{% endif %}
 			{% endif %}
 			</div>
 			<div>
@@ -115,12 +121,14 @@ layout: default
 	{% for web in page.links-externos %}
 		{% capture domain %}{% include get-domain.html url=web.url no_dot=true %}{% endcapture %}
 		{% capture handle %}{% include get-social-handle.html url=web.url %}{% endcapture %}
-		<li><a href="{{ web.url }}" class="u-url" 
+		<li>
+		{% if web.title == "" %}{{ page.nombre }} en {% endif %}
+		<a href="{{ web.url }}" class="u-url" 
 			{% if web.url contains "facebook" or web.url contains "twitter" %}
 				{% if web contains "facebook"%}data-social-handle="({{handle}})"{% endif %}
 				{% if web contains "twitter"%}data-social-handle="(@{{handle}})"{% endif %}
 			{% endif %}	itemprop="url">
-			{% if web.title != "" %}{{ web.title }}{% else %}{{ domain }}{% endif %}
+			{% if web.title != "" %}{{ web.title }}{% else %}{{ site.data.prettify[domain] }}{% endif %}
 			</a></li>
 			{% if web.title contains "oficial" %}{% assign oficial_page = web.url %}{% endif %}
 	{% endfor %}
@@ -149,7 +157,7 @@ layout: default
 }
 </script>
 
-{% assign page_filename = page.path | split:"/" | last | split: "." | first %}
+
 {% assign found = false %}
 <h2>Algunos eventos en los que fue participe</h2>
 

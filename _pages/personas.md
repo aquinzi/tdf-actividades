@@ -15,7 +15,16 @@ Noble listado. Pronto se expandirá y se podrá buscar o filtrar.
 {% for person in site.personas %}
 	<li class="card-entidad">
 		<div class="logo">
-			{% if person.imagen %}<img src="{{ person.imagen }}" width="140">{%endif%}
+		
+			{% if person.imagen %}
+				{% assign tmp = person.imagen | downcase %}
+				{% if tmp == "si" %}
+					{% assign page_filename = person.path | split:"/" | last | split: "." | first %}
+				<img src="{{ site.baseurl }}/assets/personas/{{ page_filename }}.jpg" alt="logo" class="u-logo u-photo" width="300" itemprop="image">
+				{% else %}
+				<img src="{{ person.imagen }}" alt="logo" class="u-logo u-photo" width="140" itemprop="image">
+				{% endif %}
+			{% endif %}
 		</div>
 
 		<div class="info">
