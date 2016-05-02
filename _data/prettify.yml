@@ -9,3 +9,7 @@ facebook: *idfacebook
 fuegocultura.com.ar: &idfuegocultura "Fuego Cultura"
 fuegocultura: *idfuegocultura
 riogrande.gob.ar: "Gobierno de Río Grande"
+metal-archives.com: "Encyclopaedia Metallum: The Metal Archives"
+soundcloud.com: "SoundCloud"
+last.fm: "Last.fm"
+spirit-of-metal.com: "Spirit of Metal"
