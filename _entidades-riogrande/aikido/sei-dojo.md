@@ -4,7 +4,7 @@ imagen: "https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash2/v/t1.0-9/1966675
 categoria: aikido
 ultima-actualizacion: 2016-04-22
 direccion: 
-  lugar: [Cabo Primero Gomez, esquina Raúl Chiflet]
+  lugar: [Cabo Primero Gomez esquina Raúl Chiflet]
 horario: 
   - {dia: "lunes, miércoles y viernes", hora: "21:00-22:00", nota: "adultos" }
   - {dia: "lunes y miércoles", hora: "19:30-21:00", nota: "niños y adolescentes" }

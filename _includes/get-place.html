@@ -6,19 +6,22 @@
 {% if location != "" %}
 	{% assign city_places     = "" %}
 	{% assign city_places_url = "" %}
+	{% assign found = false %}
 	{% if city == "rio-grande" %}
 		{% assign city_places = site.lugares-riogrande %}
 	{% endif %}
-	
 	{% if city_places %}
 		{% for place in city_places %}
 			{% if place.id == location %}
+				{% assign found = true %}
 				{% if link %}<a href="{{ site.baseurl }}{{ place.url }}" class="p-location h-card">{{ place.nombre }}</a>
 					{% else %}<span class="p-location">{{ place.nombre }}</span>
 				{% endif %}
 			{% endif %}
-		{% else %}<span class="p-location">{{ location }}</span>
 		{% endfor %}
+		{% if found == false %}
+		<span class="p-location">{{ location }}</span>
+		{% endif %}
 	{% else %}<span class="p-location">{{ location }}</span>
 	{% endif %}
 {% endif %}
