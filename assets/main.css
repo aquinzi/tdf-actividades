@@ -23,6 +23,7 @@
  * ==latestchanges
  * ==index boxes
  * ==entidades (details and listing)
+ * ==personas 
  * ==lugares (listado/details)
  * ==agenda archivo 
  * ==event details
@@ -1393,14 +1394,15 @@ div.index-info-que-es {
 ==hcard for entidades (details) and lugares (details)
 **************/
 
-article.h-card {
+.h-card {
 	position: relative;
 	background-color: #3F3F3F;
 	color: #CCCCCC;
 	padding: 0.5em;
 	box-shadow: 0px 3px 0.5em rgba(0, 0, 0, 0.4);
 	border-radius: 0.5em;
-	overflow: hidden;	
+	overflow: hidden;
+	margin-bottom: 3em;	
 }
 
 .h-card a {
@@ -1491,7 +1493,7 @@ article.h-card {
 .listado-entidades li { position: relative; }
 
 
-article.card-entidad {padding: 0em; }
+.card-entidad {padding: 0em; }
 
 .listado-entidades li.card-entidad{
 	position: relative;
@@ -1521,14 +1523,11 @@ article.card-entidad {padding: 0em; }
 	display: inline-block;
 }
 
-article.card-entidad .p-name {
+.card-entidad .p-name {
 	display: inline-block;
 	margin-top: 36px;
 	margin-bottom: 0px;
 }
-
-
-
 
 .listado-entidades .card-entidad .p-name{font-size: 1.3em;}
 
@@ -1555,6 +1554,12 @@ article.card-entidad .p-name {
 	margin: 0;
 }
 
+.listado-entidades.listado-personas .card-entidad .logo {
+	width: 120px;
+	height: 120px;
+}
+
+
 
 @media (max-width: 800px) {
   .card-entidad .p-name {font-size: 1.8em;}
@@ -1567,16 +1572,19 @@ article.card-entidad .p-name {
 	padding-top: 0px;
 	padding-bottom: 10px;
 }
+.listado-entidades.listado-personas li.card-entidad div.info{
+	margin-left: 144px;
+}
 
 @media (max-width: 600px) {
   .card-entidad header {padding-left: 10px; }
   .card-entidad .logo { display: none }
-	article.card-entidad .p-name {margin-top: 16px; line-height: 22px; }
+	.card-entidad .p-name {margin-top: 16px; line-height: 22px; }
   .listado-entidades li.card-entidad div.info {margin-left: 10px}
 }
 
 
-article.card-entidad dl {border-left: 4px solid #FD9730; }
+div.card-entidad dl, article.card-entidad dl {border-left: 4px solid #FD9730; }
 
 .card-entidad dl.contacto {margin-top: -12px; }
 
@@ -1586,11 +1594,11 @@ article.card-entidad dl {border-left: 4px solid #FD9730; }
 }
 
 @media (min-width: 710px) {
-	article.card-entidad dl { margin-left: 1.5em; }
+	.card-entidad dl { margin-left: 1.5em; }
 }
 
 @media (min-width: 1200px) {
-	article.card-entidad dl {float: left; max-width: 850px; min-width: 500px;}
+	.card-entidad dl {float: left; max-width: 850px; min-width: 500px;}
 	.card-entidad dl.contacto { margin-top: 0px; width: 53%;}
 }
 
@@ -1625,12 +1633,15 @@ article.card-entidad dl {border-left: 4px solid #FD9730; }
 
 /* "hack" to make it inline */
 @media screen and (min-width: 500px) {
-	article.card-entidad dd {
+	.card-entidad dd {
 		margin-left: 138px;
 		margin-top: -36px;
 		margin-bottom: 0.6em;
 		padding-left: 0.8em;
 		line-height: 21px;
+	}
+	.card-persona dl.informacion dd {
+		margin-left: 202px;
 	}
 }
 @media screen and (max-width: 700px) {
@@ -1669,6 +1680,10 @@ article.card-entidad dl {border-left: 4px solid #FD9730; }
 	margin-left: 0.5em;
 }
 
+.listado-entidades.listado-personas li.card-entidad .p-street-address:after { 
+	content:"";
+}
+
 
 .entidad-eventos-aparece li {font-size: 1.15em;}
 .entidad-eventos-aparece li .post-details {
@@ -1676,6 +1691,56 @@ article.card-entidad dl {border-left: 4px solid #FD9730; }
 	color: #6C6C6C;
 	margin-left: 0.4em;
 }
+
+
+/*************
+==personas (details and listing)
+**************/
+/*    cascade from card-entidad */
+
+.card-persona header{
+height: 270px;
+}
+
+.card-persona .logo {
+	width: 300px;
+	height: 250px;
+	border-radius: 1em;
+}
+
+.card-persona dt {
+	width: 190px;
+}
+.card-persona dl.basic-info{
+	float: none ;
+	margin-left: 0 ;
+	max-width: none;
+	min-width: 0;
+	border-left: 0px;
+	padding-top: 10px;
+}
+.card-persona dl.basic-info dt, .card-persona dl.basic-info dd{
+	background-color: transparent;
+}
+.card-persona dl.basic-info dt{
+	font-weight: bold;
+	margin-left: 0 ;
+	text-align: left;
+	padding: 0;
+}
+
+.card-persona dl.basic-info dd{
+	margin-left: 16px;
+	margin-top: auto;
+	line-height: 0px;
+}
+
+.card-persona dl.informacion {
+	max-width: none;
+	float: none;
+	margin: 0px 1.5em;
+}
+
 
 
 /*************

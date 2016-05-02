@@ -1,0 +1,178 @@
+---
+layout: default
+---
+
+{% comment %}or http://schema.org/SportsTeam{%endcomment%}
+
+<article>
+	<div class="card-entidad card-persona h-card" itemscope itemtype="http://schema.org/Person">
+		<header>
+			<div class="logo">
+			{% if page.imagen %}
+				<img src="{{ page.imagen }}" alt="logo" class="u-logo u-photo" width="300" itemprop="image">
+			{% endif %}
+			</div>
+			<div>
+				<h1 class="p-name" itemprop="name">{{ page.nombre }}</h1>
+				<dl class="basic-info">
+					<dt>Estado</dt>
+						<dd>{{ page.estado }}</dd>
+					<dt>Ocupación</dt>
+						<dd itemprop="jobTitle" class="p-job-title">{{ page.ocupacion }}</dd>
+					{% if page.nacimiento.lugar != "" %}
+					<dt>Origen</dt>
+						<dd itemprop="birthPlace">
+						{% assign tmp = site.data.prettify[page.nacimiento.lugar] %}
+						{% if tmp %}{{ tmp }}{% else %}{{ page.nacimiento.lugar }}{% endif %}
+						</dd>	
+					{% endif %}
+				</dl>
+			</div>
+		</header>
+		
+		<div class="actividad-content">
+			<dl class="informacion">
+				{% if page.residencia %}
+				<dt class="direccion">Residencia</dt>
+					<dd class="p-street-address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						{% comment %}string is an array also. Find a better way to check this
+						{% assign pieces = page.residencia | split:", " %}
+						{% if pieces.size > 0 %}
+							{% if pieces[0] != "" %}<span class="p-locality" itemprop="addressLocality">
+							{% assign tmp = site.data.prettify[pieces[0]] %}
+							{% if tmp != ""%}{{ tmp }}{% else %}{{ pieces[0] }}{% endif %}
+							</span>{% endif %}
+							{% if pieces[1] %}, <span class="p-region" itemprop="addressRegion">{{ pieces[1] }}</span>{% endif %}
+							{% if pieces[2] %}, <span class="p-country-name" itemprop="addressCountry">{{ pieces[2] }}</span>{% endif %}
+						{% else %}
+							{% assign tmp = site.data.prettify[page.residencia] %}
+							<span class="p-locality" itemprop="addressLocality">{% if tmp != "" %}{{ tmp }}{% else %}{{ page.residencia }}{% endif %}
+							</span>
+						{% endif %}
+						{% endcomment %}
+						{% assign tmp = site.data.prettify[page.residencia] %}
+							<span class="p-locality" itemprop="addressLocality">{% if tmp != "" %}{{ tmp }}{% else %}{{ page.residencia }}{% endif %}
+							</span>
+					</dd>
+				{% endif %}
+				
+				{% if page.periodo-actividad.size > 0 %}
+				<dt class="horarios">Período de actividad</dt>
+					<dd>{{ page.periodo-actividad | join:", " }}</dd>	
+				{% endif %}
+			
+				{% if page.nacimiento.fecha %}
+				<dt>Fecha de nacimiento</dt>
+					<dd itemprop="birthDate" class="dt-bday">{{ page.nacimiento.fecha }}</dd>
+				{% endif %}
+			
+				{% if page.contacto.email.size > 0 %}
+				<dt class="email">email</dt>
+					<dd>
+					{% for email in page.contacto.email %}
+						<span itemprop="email">{% include print-email.html email=page.email %}</span>
+						{% unless forloop.last %}, {% endunless %}
+					{% endfor %}
+					</dd>
+				{% endif %}
+			
+				{% if page.contacto.telefono.size > 0 %}
+				<dt class="telefono">Teléfono(s)</dt>
+					<dd>
+					{% for telefono in page.contacto.telefono %}
+						{% assign tmp_areacode = telefono | split: "-" %}
+						{% assign tmp_telefono_full_code    = "" %}
+						{% assign tmp_telefono_full_display = "" %}
+						
+						{% if tmp_areacode.size <= 1 %}
+							{% if page.residencia == "rio-grande" or page.residencia == "ushuaia" or page.residencia == "tolhuin"  %}
+								{% assign areacode = site.data.datos-ciudades[page.city].caracteristica-telefono %}	
+								{% capture tmp_telefono_full_code %}{{ areacode }}-{{ telefono }}{% endcapture %}
+								{% capture tmp_telefono_full_display %}({{ areacode }}) {{ telefono }}{% endcapture %}
+							{% else %}
+								{% capture tmp_telefono_full_code %}{{ telefono }}{% endcapture %}
+								{% capture tmp_telefono_full_display %}({{ telefono }}{% endcapture %}
+							{% endif %}
+						{% else %}
+							{% assign tmp_telefono_full_code = telefono %}
+							{% capture tmp_telefono_full_display %} ( {{ telefono | replace: "-",") " }} {% endcapture %}
+						{% endif %}
+						<a class="p-tel" itemprop="telephone" href="tel:+54-9-{{ tmp_telefono_full_code }}">{{ tmp_telefono_full_display }}</a>{% unless forloop.last %},{% endunless %}
+					{% endfor %}
+					</dd>
+				{% endif %}
+			</dl>
+		</div> <!-- end actividad-content -->
+
+	</div>  <!-- end card -->
+
+	{{ page.content }}
+
+	{% assign oficial_page = "" %}
+	{% if page.links-externos.size > 0 %}
+	<h2>Sitios externos</h2>
+	<ul>
+	{% for web in page.links-externos %}
+		{% capture domain %}{% include get-domain.html url=web.url no_dot=true %}{% endcapture %}
+		{% capture handle %}{% include get-social-handle.html url=web.url %}{% endcapture %}
+		<li><a href="{{ web.url }}" class="u-url" 
+			{% if web.url contains "facebook" or web.url contains "twitter" %}
+				{% if web contains "facebook"%}data-social-handle="({{handle}})"{% endif %}
+				{% if web contains "twitter"%}data-social-handle="(@{{handle}})"{% endif %}
+			{% endif %}	itemprop="url">
+			{% if web.title != "" %}{{ web.title }}{% else %}{{ domain }}{% endif %}
+			</a></li>
+			{% if web.title contains "oficial" %}{% assign oficial_page = web.url %}{% endif %}
+	{% endfor %}
+	</ul>
+	{% endif %}
+
+</article>
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Person",
+	{% if page.imagen %}"image": "{{ page.imagen }}",{% endif %}
+	"jobTitle": "{{ page.ocupacion }}",
+	{% if page.residencia %}
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": "{{ page.residencia }}"
+	},
+	{% endif %}
+	{% if page.contacto.email.size > 0 %}"email": "{{ page.contacto.email |join:","}}",{% endif %}
+	{% if page.nacimiento.lugar %}"birthPlace": "{{ page.nacimiento.lugar }}"{% endif %}
+	{% if page.nacimiento.fecha %}"birthDate": "{{ page.nacimiento.fecha }}"{% endif %}
+	{% if oficial_page != "" %}"url": "{{ oficial_page }}",{% endif %}
+	"name": "{{ page.nombre }}"
+}
+</script>
+
+{% assign page_filename = page.path | split:"/" | last | split: "." | first %}
+{% assign found = false %}
+<h2>Algunos eventos en los que fue participe</h2>
+
+<!-- we cant filter with "where" because we can have many "people" (like tags) -->
+<ul class="entidad-eventos-aparece">
+{% for post in site.posts %}
+	{% if post.people contains page_filename %}
+		{% assign found = true %}{% assign this_city = post.categories[0] %}
+	<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <span class="post-details">(<a href="{{site.data.wiki.[this_city|replace:'-','']}}">{{ site.data.prettify.[this_city] }}</a>, {% include human-date.html hide_weekday=true %})</span></li>
+	{% endif %}
+{% endfor %}
+{% unless found %}<li>No se encuentra en ningún evento (o no se asignó correctamente)</li>{% endunless %}
+</ul>
+
+
+<h2>Comentarios</h2>
+
+{% include comment-form.html %}
+
+
+<div style="margin-top:3em">
+	<p><small><span class="ultima-actualizacion p-note">Última actualización: <time datetime="{{ page.ultima-actualizacion }}">{% include human-date.html hide_weekday=false date=page.ultima-actualizacion%}</time></span>
+	¿Información errónea? ayuda <a href="{{ site.github.repository_url }}/blob/{{ site.github.branch }}/{{ page.path }}">corregiendo la información</a>
+	<br>
+	{% include links-source-history.html %}</p></small>
+</div>

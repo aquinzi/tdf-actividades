@@ -256,6 +256,16 @@ defaults:
       breadcrumbs: ["Río Grande","Lugares"]
       show_source: true
       show_history: true
+  - 
+    scope:
+      path: ""
+      type: personas
+    values:
+      layout: person
+      breadcrumb_limit: 3
+      breadcrumbs: ["Personas"]
+      show_source: true
+      show_history: true
 
 collections:
   entidades-riogrande:
@@ -270,6 +280,9 @@ collections:
   lugares-riogrande:
     output: true 
     permalink: /rio-grande/lugares/:path/
+  personas:
+    output: true 
+    permalink: /personas/:path/
 
 
 # Markdown Processors (include only kramdown)
