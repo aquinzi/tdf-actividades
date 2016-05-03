@@ -580,18 +580,17 @@ def get_post_metadata(path, city):
 				else:
 					break
 
-			tmp_line = line.strip().split(":", 1)
+			tmp_line = line.strip().split(": ", 1)
 
 			for key in keys:
 				if line.startswith(key + ":"):
 					if not key == "tags":
-						metadata[key] = tmp_line[1]	
+						if metadata[key]:
+							metadata[key] = tmp_line[1]	
 						if key == "date":
 							metadata["start"]['date'] = tmp_line[1]	
 						elif key == "date-end":
 							metadata["end"]['date'] = tmp_line[1]	
-						else:
-							metadata[key] = tmp_line[1]	
 					else:
 						if tmp_line[1] != "[]":
 							metadata['tags'] = tmp_line[1].replace("[", "").replace("]","")
