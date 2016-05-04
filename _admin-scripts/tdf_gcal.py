@@ -99,8 +99,8 @@ ROOT_DIR = os.path.dirname(os.getcwd())
 PROCESSED_POSTS_FILE = "processed-posts.txt" #date,city,filename
 PROCESSED_POSTS_FILE_LINE = "{ciudad}@{filename}"
 
-# how the places file is called. We assume is in _data/[city]/
-PLACES_FILE = "lugares.yml"
+# how the places folder is called. rio-grande is called riogrande
+PLACES_FOLDER = "_lugares-{ciudad}"
 
 HOUR_SCHEDULE = ('09', '13', '17', '21') #minutes are random
 DAYS_BEFORE = 7 #How many days before do we start posting the event?
@@ -111,6 +111,12 @@ USER_CREDENTIALS = 'gcal-tdf-credentials.json'
 # -------------------
 # end configuration
 # -------------------
+
+PLACES_NAMES = dict()
+for city in CITIES:
+	PLACES_NAMES[city] = dict()
+	PLACES_NAMES[city] = get_places_id(city)
+
 
 
 
@@ -640,44 +646,70 @@ def get_post_metadata(path, city):
 	return metadata
 
 
+def get_places_id(city):
+	'''Get all the places ID with their proper name 
+	:param:city  str
+	:returns: dict    where key = place ID, value = place name
+	'''
+
+	city = city.replace("-", "")
+
+	current_city_places_folder = PLACES_FOLDER.replace("{ciudad}", city)
+	current_city_places_folder = os.path.join(ROOT_DIR, current_city_places_folder)
+
+	if not os.path.exists(current_city_places_folder):
+		return False
+
+	places = dict()
+
+	for root,subdir,files in os.walk(current_city_places_folder):
+		for archivo in files:
+			if archivo.startswith("_") or not archivo.endswith(".md"):
+				continue
+
+			#open and get the ID key.
+			file_path = os.path.join(root,archivo)
+			
+			with open(file_path, encoding="utf-8") as tmp:
+				places_file = tmp.read()
+
+			tmp = ""
+			if YAML:
+				yaml_doc = yaml.load(places_file.split("---")[1])
+				places[yaml_doc['id']] = yaml_doc['nombre']
+			else:
+				places_file = places_file.split("---")
+				places_file = places_file.splitlines()
+
+				tmp_name = ""
+				tmp_id   = ""
+
+				for i,line in enumerate(places_file):
+					if line.startswith("id:"):
+						tmp_id = line.split("id: ")[1]
+					if line.startswith("nombre:"):
+						tmp_name = line.split("nombre: ")[1]
+
+					if tmp_id and tmp_name:
+						places[tmp_id] = tmp_name
+
+				if not tmp_name:
+					places[tmp_id] = tmp_id
+
+	return places
+
+
 def find_place_id(city,place):
 
 	city = city.replace("-", "")
 
-	path = os.path.join(ROOT_DIR,"_data",city,PLACES_FILE)
-
-	if not os.path.exists(path):
+	if not PLACES_NAMES[city]:
 		return place
 
-	places_file = ""
-	with open(path, encoding="utf-8") as tmp:
-		if YAML:
-			places_file = tmp.read()
-		else:
-			places_file = tmp.readlines()
-
-	if YAML:
-		yaml_doc = yaml.load(places_file)
-
-		for place_id in yaml_doc:
-			if place_id == place:
-				return yaml_doc[place_id]['nombre']
+	if place in PLACES_NAMES[city]:
+		return PLACES_NAMES[city][place]
 	else:
-		name = ""
-		found = False
-		for line in yaml_doc:
-		    
-			if line == place + ":":
-				found = True
-
-			if " nombre: " in line and found == True:
-				name = line.replace("nombre:", "").strip().replace("'","")
-				break
-
-		if found:
-			return name
-
-	return place 
+		return place
 
 
 def create_post_schedule(start_date, end_date):

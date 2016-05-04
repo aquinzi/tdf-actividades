@@ -519,14 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -672,16 +664,17 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_data/riogrande",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/ajedrez",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/actividades"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05/2016-05-07-desafio-producir-arte.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05/2016-05-09-taller-desarrollo-comportamiento-emprendedor.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/05/2016-05-03-tu-voz-suena-fin-mundo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_data/changelog.yml",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_data/riogrande/lugares.yml",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/palestra-skate-park.md",
@@ -695,7 +688,6 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-26-primeros-auxilios-rcp.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-23-flisol-rio-grande.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/04/2016-04-23-flisol-ushuaia.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
 		"/C/Users/Ariela/Documents/My Dropbox/manga comics mini evento.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/processed-posts.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
@@ -806,10 +798,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-06-10-expo-tattoo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-13-torneo-pool-adultos.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-12-torneo-pool-chicos.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts/2016/2016-03-26-vuelta-tierra-fuego.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-03-19-karting.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts/2016/2016-03-12-automovilismo-carlos romero.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-03-05-karting.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts/2016/2016-03-26-vuelta-tierra-fuego.md"
 	],
 	"find":
 	{
@@ -827,6 +816,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"get_post_me",
 			"gimnasio",
 			"centro de",
 			"su",
@@ -953,8 +943,7 @@
 			"_SearchForCalEvents",
 			"def ",
 			"useService('url').url().insert(body={'longUrl': url}))",
-			"_RetryWithBackoff",
-			"__API_CLIENT_SECRET__"
+			"_RetryWithBackoff"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1100,95 +1089,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
-							],
-							"syntax": "Packages/YAML/YAML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		},
 		{
@@ -1225,7 +1127,7 @@
 		"cols":
 		[
 			0.0,
-			0.930555555556,
+			0.885583524027,
 			1.0
 		],
 		"rows":
@@ -1453,7 +1355,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -1461,7 +1363,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 214.0,
+	"side_bar_width": 241.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
