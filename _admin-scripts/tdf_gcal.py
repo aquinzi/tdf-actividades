@@ -112,14 +112,6 @@ USER_CREDENTIALS = 'gcal-tdf-credentials.json'
 # end configuration
 # -------------------
 
-PLACES_NAMES = dict()
-for city in CITIES:
-	PLACES_NAMES[city] = dict()
-	PLACES_NAMES[city] = get_places_id(city)
-
-
-
-
 FILES_FOR_PROCESSED_LIST = list() #so we write everything once
 
 PROCESSED_POSTS_FILE = os.path.join(os.getcwd(),PROCESSED_POSTS_FILE)
@@ -135,6 +127,11 @@ parser.add_argument("--edit",   help="Edit an event")
 
 #args = vars(parser.parse_args()) #to dict
 args = parser.parse_args()
+
+
+# --------------
+# functions
+# --------------
 
 def get_processed_file():
 	"""Get the processed file, returning it as a list.
@@ -703,7 +700,7 @@ def find_place_id(city,place):
 
 	city = city.replace("-", "")
 
-	if not PLACES_NAMES[city]:
+	if not city in PLACES_NAMES:
 		return place
 
 	if place in PLACES_NAMES[city]:
@@ -866,16 +863,20 @@ def edit_event():
 
 
 
+# --------------
+# start program!
+# --------------
 
 
-
-
+PLACES_NAMES = dict()
+for city in CITIES:
+	PLACES_NAMES[city] = dict()
+	PLACES_NAMES[city] = get_places_id(city)
 
 
 processed_posts = list()
 
 
-# start
 if __name__ == '__main__':
 
 	print (" initiating ... " + PROCESSED_POSTS_FILE)
