@@ -664,14 +664,17 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_data",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/mpm_prefork.conf",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_data/wiki.yml",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-11-seminario-balistica-pericial-forense.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05/2016-05-07-desafio-producir-arte.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05/2016-05-09-taller-desarrollo-comportamiento-emprendedor.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/05/2016-05-03-tu-voz-suena-fin-mundo.md",
@@ -795,10 +798,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-02-03-campus-futsal.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-01-28-espectaculos-callejeros.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-10-01-super-motoencuentro.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-06-10-expo-tattoo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-13-torneo-pool-adultos.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-12-torneo-pool-chicos.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts/2016/2016-03-26-vuelta-tierra-fuego.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-06-10-expo-tattoo.md"
 	],
 	"find":
 	{
@@ -816,6 +816,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"get_places_id",
 			"get_post_me",
 			"gimnasio",
 			"centro de",
@@ -942,8 +943,7 @@
 			"current_dir",
 			"_SearchForCalEvents",
 			"def ",
-			"useService('url').url().insert(body={'longUrl': url}))",
-			"_RetryWithBackoff"
+			"useService('url').url().insert(body={'longUrl': url}))"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1127,7 +1127,7 @@
 		"cols":
 		[
 			0.0,
-			0.885583524027,
+			0.870023616179,
 			1.0
 		],
 		"rows":
@@ -1355,7 +1355,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1363,7 +1363,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 241.0,
+	"side_bar_width": 167.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

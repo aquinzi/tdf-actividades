@@ -1,15 +1,14 @@
 ---
 nombre: Okawakai
 categoria: kendo
-ultima-actualizacion: 2016-02-21
+ultima-actualizacion: 2016-05-16
 direccion: 
-  lugar: [clubsanmartin]
+  lugar: [sumchacra4]
 horario: 
-  - {dia: "martes", hora: "21:00-22:30", nota: "" }
-  - {dia: "miércoles", hora: "21:00-22:30", nota: "" }
+  - {dia: "Lunes y miércoles", hora: "20:30-22:00", nota: "" }
 precio: pago
 nota: | 
-  Clases suspendidas hasta nuevo aviso
+
 website: []
 telefono: []
 email: 
