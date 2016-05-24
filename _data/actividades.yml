@@ -11,12 +11,18 @@
   nombre: adultos mayores
   tipo: deporte
   descripcion: | 
-    Varias actividades para adultos mayores
+    Varias actividades para adultos mayores.
 
 - id: aikido
   nombre: aikido
   tipo: deporte
-  alternativo: [aikidô]
+  alternativo: [aikidô, aikidō]
+  descripcion: | 
+    Nombre original <span lang="jp">合気道</span>. Es un arte marcial moderno japonés (<span lang="jp">現代武道</span>, gendai budô); busca la neutralización del contrario en situaciones de conflicto, derrotándolo sin dañarlo, en lugar de destruirlo o humillarlo.
+
+    El aikido en general se niega a ser un deporte competitivo y rechaza todo tipo de concursos que incluyan las divisiones por pesos, las clasificaciones por número de victorias y la recompensa a campeones.
+
+    Ver más información en <a href="https://es.wikipedia.org/wiki/Aikid%C5%8D">Wikipedia</a>.
 
 - id: ajedrez
   nombre: ajedrez
@@ -174,22 +180,22 @@
 - id: iaido
   nombre: iaido
   tipo: deporte
-  alternativo: [iaidô]
+  alternativo: [iaidô,iaidō]
 
 - id: judo
   nombre: judo
   tipo: deporte
-  alternativo: [jûdô,yudo]
+  alternativo: [jûdô,yudo,jūdō]
 
 - id: jiu-jitsu
   nombre: jiu-jitsu
   tipo: deporte
-  alternativo: [jûjutsu,jiu-jitsu brasileño,bjj]
+  alternativo: [jûjutsu,jūjutsu,jiu-jitsu brasileño,bjj]
 
 - id: karate
   nombre: karate do
   tipo: deporte
-  alternativo: [karate]
+  alternativo: [karate, karate dō]
 
 - id: karting
   nombre: karting
@@ -198,7 +204,7 @@
 - id: kendo
   nombre: kendo
   tipo: deporte
-  alternativo: [kendô]
+  alternativo: [kendô,kendō]
 
 - id: kickboxing
   nombre: kickboxing
