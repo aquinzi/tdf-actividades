@@ -675,7 +675,7 @@ def get_places_id(city):
 				yaml_doc = yaml.load(places_file.split("---")[1])
 				places[yaml_doc['id']] = yaml_doc['nombre']
 			else:
-				places_file = places_file.split("---")
+				places_file = places_file.split("---")[1]
 				places_file = places_file.splitlines()
 
 				tmp_name = ""
