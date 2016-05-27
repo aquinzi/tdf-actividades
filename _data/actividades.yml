@@ -20,65 +20,95 @@
   descripcion: | 
     Nombre original <span lang="jp">合気道</span>. Es un arte marcial moderno japonés (<span lang="jp">現代武道</span>, gendai budô); busca la neutralización del contrario en situaciones de conflicto, derrotándolo sin dañarlo, en lugar de destruirlo o humillarlo.
 
-    El aikido en general se niega a ser un deporte competitivo y rechaza todo tipo de concursos que incluyan las divisiones por pesos, las clasificaciones por número de victorias y la recompensa a campeones.
-
-    Ver más información en <a href="https://es.wikipedia.org/wiki/Aikid%C5%8D">Wikipedia</a>.
+    El aikido en general se niega a ser un deporte competitivo y rechaza todo tipo de concursos que incluyan las divisiones por pesos, las clasificaciones por número de victorias y la recompensa a campeones. (Ver más información en <a href="https://es.wikipedia.org/wiki/Aikid%C5%8D">Wikipedia</a>.)
 
 - id: ajedrez
   nombre: ajedrez
   tipo: deporte
   descripcion: | 
-    Ajedrez y otros "juegos de mesa", como Go
+    Ajedrez y otros "juegos de mesa" o "de tablero", como Go.
+	 
+	 El ajedrez es un juego de estrategia, de origen europeo, entre dos personas; cada una de las cuales dispone de 16 piezas que se colocan sobre un tablero dividido en 64 cuadrados (blancos y negros). El objetivo es «derrocar» al rey del oponente. Está considerado como un deporte. (Ver más información en <a href="https://es.wikipedia.org/wiki/Ajedrez">Wikipedia</a>.)
+	 
+	 El go (Nombre original en chino simplificado: <span lang="ch">围棋</span>, chino tradicional: <span lang="ch">圍棋</span>, japonés: <span lang="jp">囲碁</span>, coreano: <span lang="kr">바둑</span>) es un juego de estrategia para dos jugadores; se colocan las piedras (blancas y negras) de a una alternadamente en un tablero de 19×19 intersecciones (9x9 o 13x13 para principiantes). El objetivo es rodear con tus piedras un área mayor en el tablero que el oponente. (Ver más información en <a href="https://es.wikipedia.org/wiki/Go">Wikipedia</a>.)
 
 - id: atletismo
   nombre: atletismo
   tipo: deporte
+  descripcion: | 
+    El atletismo abarca numerosas disciplinas agrupadas en carreras, saltos, lanzamientos, pruebas combinadas y marcha; se trata de superar el rendimiento de los adversarios en velocidad o en resistencia llamado también fondo, en distancia o en mayor altura.
+	 
+	 Se pueden encontrar carreras de velocidad, medio fondo, fondo, saltos de vallas y obstáculos, relevos, marcha, salto en longitud, salto triple, salto de altura, salto con pértiga, lanzamiento de peso, lanzamiento de disco, lanzamiento de martillo, lanzamiento de jabalina, pentatlón, heptatlón y decatlón. (Ver más información en <a href="https://es.wikipedia.org/wiki/Atletismo">Wikipedia</a>.)
 
 - id: automovilismo
   nombre: automovilismo
   tipo: deporte
-  
+  descripcion: | 
+    Es un deporte practicado con autos. En la mayoría de las modalidades, se deben completar un recorrido en el menor tiempo posible, o bien recorrer un circuito la mayor cantidad de veces en un tiempo fijo. Existen otras disciplinas que tienen objetivos distintos, por ejemplo el drifting, donde los pilotos deben realizar derrapes espectaculares. (Ver más información en <a href="https://es.wikipedia.org/wiki/Automovilismo">Wikipedia</a>.)
+
 - id: avistamiento-aves
   nombre: avistamiento de aves
   tipo: afición
   alternativo: [observación de aves, birding, birdwatching]
+  descripcion: | 
+    Actividad centrada en la observación y el estudio de las aves silvestres; se basa en el arte de reconocer las distintas especies por su plumaje o canto. Muchos se limitan a crear listas que muestran la cantidad de aves que concurren a un área particular, otros de todas las especies que vieron en su vida. Unos se contentan simplemente con disfrutar y enriquecer más los paseos en un entorno natural, mientras que otros se fascinan en la parte científica que conlleva el estudio de las aves. (Ver más información en <a href="https://es.wikipedia.org/wiki/Observación_de_aves">Wikipedia</a>.)
 
 - id: badminton
-  nombre: badminton
+  nombre: bádminton
   tipo: deporte
+  descripcion: | 
+    Deporte de raqueta de origen asiático, en el que se enfrentan dos jugadores o dos parejas situadas en las mitades opuestas de una pista rectangular dividida por una red. A diferencia de otros deportes de raqueta, no se juega con pelota, sino con un volante o gallito. Desde 1992 es deporte olímpico. (Ver más información en <a href="https://es.wikipedia.org/wiki/Bádminton">Wikipedia</a>.)
 
 - id: bachata
   nombre: bachata
   tipo: deporte
+  descripcion: | 
+    Género musical bailable originario de la República Dominicana. El movimiento básico del baile es una serie de pasos simples que produce un movimiento de adelante para atrás, o de costado a costado. (Ver más información en <a href="https://es.wikipedia.org/wiki/Bachata">Wikipedia</a>.)
 
 - id: basket
   nombre: basket
   tipo: deporte
-  alternativo: [básquetbol,basquet,basketball]
+  alternativo: [básquetbol,basquet,basketball,baloncesto]
+  descripcion: | 
+    Deporte de equipo, de origen estadounidense, en el que dos conjuntos de cinco jugadores cada uno, intentan anotar puntos introduciendo una pelota en un aro colocado a 3.05 metros del suelo del que cuelga una red. Desde 1936 es deporte olímpico. (Ver más información en <a href="https://es.wikipedia.org/wiki/Baloncesto">Wikipedia</a>.)
 
 - id: bochas
   nombre: bochas
   tipo: deporte
+  descripcion: | 
+    Deporte de la familia de los juegos de pelota, vinculado estrechamente con los bolos y la petanca, y con un ancestro común en los juegos practicados en el imperio romano. La forma en que se practica actualmente se desarrolló en Italia (donde es llamado <span lang="it">bocce</span>); se juega en equipos y se realizan diferentes torneos en categorías que van desde las pre-infantiles hasta los veteranos. (Ver más información en <a href="https://es.wikipedia.org/wiki/Baloncesto">Wikipedia</a>.)
 
 - id: boxeo
   nombre: boxeo
   tipo: deporte
+  alternativo: [boxing,boxeo inglés,boxeo irlandés,pugilismo]
+  descripcion: | 
+    Deporte de combate, de origen inglés, en el que dos contrincantes luchan utilizando únicamente sus puños con guantes, golpeando a su adversario de la cintura hacia arriba, dentro de un cuadrilátero, en breves secuencias de lucha denominadas asaltos o rounds. Es deporte olímpico desde 1904. (Ver más información en <a href="https://es.wikipedia.org/wiki/Boxeo">Wikipedia</a>.)
 
 - id: canotaje
   nombre: canotaje
   tipo: deporte
+  alternativo: [piragüismo pico,canoaje,canoa kayak]
+  descripcion: | 
+    Deporte acuático, de origen inglés, que se práctica sobre una embarcación ligera, propulsada por una, dos o cuatro personas con una pala. Las principales embarcaciones utilizadas son el kayak, propulsado por una pala de dos hojas, y la canoa, propulsada por una pala de una sola hoja. Es deporte olímpico desde 1936. (Ver más información en <a href="https://es.wikipedia.org/wiki/Piragüismo">Wikipedia</a>.)
 
 - id: canto-coro
   nombre: "canto, coro"
   tipo: arte
+  descripcion: | 
+    Hay diferentes técnicas de canto que se aplican según el estilo musical en que se canta. En ópera se aplica la técnica del canto lírico, mientras que en el canto popular la pauta es lograr un sonido semejante al de la voz hablada. Las técnicas que se pueden aprender por clases o tan solo practicando, pueden ampliar el registro vocal hasta aprender a controlar el volumen, la vibración, la respiración, posiciones corporales y otros aspectos que pueden influir en la emisión de la voz. (Ver más información en <a href="https://es.wikipedia.org/wiki/Canto">Wikipedia</a>.)
 
 - id: ceramica
   nombre: cerámica
   tipo: arte
+  descripcion: | 
+    Es el arte de fabricar vasijas 2 y otros objetos de arcilla u otro material cerámico por acción del calor.  El resultado es una diversa variedad de piezas u objetos de terracota, de loza y del conjunto de porcelanas. (Ver más información en <a href="https://es.wikipedia.org/wiki/Ciclismo">Wikipedia</a>.)
 
 - id: ciclismo
   nombre: ciclismo
   tipo: deporte
+  descripcion: | 
+    Deporte en el que se utiliza una bicicleta para recorrer circuitos al aire libre, en pista cubierta, o que engloba diferentes especialidades. incluye ciclismo en ruta, ciclismo en pista, ciclismo de montaña, ciclocrós o bicicross, trial, ciclismo en sala, ciclismo bmx, cicloturismo, ciclismo urbano. Deporte olímpico desde 1896. (Ver más información en <a href="https://es.wikipedia.org/wiki/Ciclismo">Wikipedia</a>.)
 
 - id: cuatriciclo
   nombre: cuatriciclo
