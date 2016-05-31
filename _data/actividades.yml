@@ -117,26 +117,42 @@
 - id: danza-clasica
   nombre: danza clásica
   tipo: deporte
+  alternativo: [ballet,danza académica]
+  descripcion: | 
+    Es una forma de danza cuyos movimientos se basan en el control total y absoluto del cuerpo, el cual se debe enseñar desde temprana edad. Participan invariablemente las manos, brazos, tronco, cabeza, pies, rodillas, todo el cuerpo en una conjunción simultánea de dinámica muscular y mental que debe expresarse en total armonía de movimientos. (Ver más información en <a href="https://es.wikipedia.org/wiki/Ballet">Wikipedia</a>.)
 
 - id: danzas-arabes
   nombre: danzas árabes
   tipo: deporte
+  alternativo: [danza del vientre]
+  descripcion: | 
+    Nombre original en árabe: <span lang="ar">رقص شرقي</span> (raks sharki). Es una danza que combina elementos tradicionales de Oriente Medio junto con otros del Norte de África. Incluye movimientos del folclore egipcio, danza clásica y contemporánea, con grandes desplazamientos, vueltas y movimientos de todas las partes del cuerpo, pero sobre todo de la cadera. (Ver más información en <a href="https://es.wikipedia.org/wiki/Danza_del_vientre">Wikipedia</a>.)
 
 - id: dibujo
   nombre: dibujo
   tipo: arte
+  descripcion: | 
+    Es una forma de expresión gráfica, plasma imágenes sobre un espacio plano. Es considerado parte de la bella arte conocida como pintura. Es una de las modalidades de las artes visuales. Se considera al dibujo como el lenguaje gráfico universal. (Ver más información en <a href="https://es.wikipedia.org/wiki/Dibujo">Wikipedia</a>.)
 
 - id: escalada-deportiva
   nombre: escalada deportiva
   tipo: deporte
-
+  descripcion: | 
+    Actividad que consiste en realizar ascensos sobre paredes de fuerte pendiente, valiéndose de la fuerza física y mental propia. Utiliza anclajes previamente fijados a la pared mediante sistemas mecánicos o químicos colocados estratégicamente a lo largo de la vía, lo que permite ampliar las posibilidades de escalada a las placas de roca compacta carentes de aristas o fisuras. La escalada deportiva se caracteriza por reducir notablemente el riesgo del escalador, a cambio de aumentar el nivel de dificultad (el grado de la vía). (Ver más información en <a href="https://es.wikipedia.org/wiki/Escalada">Wikipedia</a>.)
+	 
 - id: esgrima
   nombre: esgrima
+  alternativo: [esgrima deportiva]
   tipo: deporte
+  descripcion: | 
+    Deporte de combate, nacido en Europa, en el que se enfrentan dos contrincantes debidamente protegidos que deben intentar tocarse con un arma blanca (sable, espada o florete). Es deporte olímpico desde 1896. (Ver más información en <a href="https://es.wikipedia.org/wiki/Esgrima">Wikipedia</a>.)
 
 - id: fisicoculturismo
   nombre: fisicoculturismo
   tipo: deporte
+  alternativo: [físiculturismo,culturismo]
+  descripcion: | 
+    Actividad basada en ejercicios físicos intensos, consistentes, mediante diversos tipos de ejercicios de fuerza/hipertrofia, y cuyo fin suele ser la obtención de una musculatura fuerte y definida, así como mantener la mayor definición y simetría posible de la misma. (Ver más información en <a href="https://es.wikipedia.org/wiki/Culturismo">Wikipedia</a>.)
 
 - id: fitness
   nombre: fitness
@@ -145,7 +161,9 @@
 - id: flamenco
   nombre: flamenco
   tipo: deporte
-
+  descripcion: | 
+    Estilo de música y danza propio de Andalucía, Extremadura y Murcia (España). Su realización es similar a un ejercicio físico moderado. (Ver más información en <a href="https://es.wikipedia.org/wiki/Flamenco">Wikipedia</a>.)
+  
 - id: folklore
   nombre: folklore
   tipo: deporte
@@ -153,15 +171,22 @@
 - id: fotografia
   nombre: fotografía
   tipo: arte
+  descripcion: | 
+    Es el arte y la técnica de obtener imágenes duraderas debido a la acción de la luz. Es el proceso de proyectar imágenes y capturarlas, bien por medio del fijado en un medio sensible a la luz o por la conversión en señales electrónicas. (Ver más información en <a href="https://es.wikipedia.org/wiki/Fotografía">Wikipedia</a>.)
 
 - id: futsal
   nombre: futsal
   tipo: deporte
-
+  alternativo: [fútbol sala,fútbol de salón, fútsal, microfútbol]
+  descripcion: | 
+    Deporte colectivo de pelota practicado entre dos equipos de 5 jugadores cada uno, dentro de una cancha de suelo duro. Surgió inspirado en otros deportes como el fútbol, que es la base del juego; el waterpolo, voleibol, handball y basket; tomando de estos no solo parte de las reglas, sino también algunas tácticas de juego. (Ver más información en <a href="https://es.wikipedia.org/wiki/Fútbol_sala">Wikipedia</a>.)
+  
 - id: futbol
   nombre: fútbol
   tipo: deporte
-  alternativo: [football]
+  alternativo: [football, futbol,balompié]
+  descripcion: | 
+    Deporte de equipo jugado entre dos conjuntos de once jugadores cada uno. El terreno de juego es rectangular de césped, con un arco a cada lado del campo. Se juega mediante una pelota que se debe desplazar a través del campo con cualquier parte del cuerpo que no sean los brazos o las manos (mayoritariamente con los pies ). El objetivo es introducirla dentro del arco contrario, acción que se denomina marcar un gol. Es de origen inglés y es deporte olímpico desde 1900. (Ver más información en <a href="https://es.wikipedia.org/wiki/Fútbol">Wikipedia</a>.)
 
 - id: gimnasia-adultos
   nombre: gimnasia adultos
@@ -169,19 +194,22 @@
 
 - id: gimnasia-artistica
   nombre: gimnasia artística
+  alternativo: [gimnasia deportiva]
   tipo: deporte
-
-- id: gimnasia-deportiva
-  nombre: gimnasia deportiva
-  tipo: deporte
+  descripcion: | 
+    Especialidad gimnástica que se practica con diversos aparatos o sin ellos sobre una superficie de medidas reglamentarias. Los aparatos empleados en categoría femenina son barras asimétricas, barra de equilibrio, suelo y salto de potro, mientras que en la categoría masculina son anillas, barra fija, caballo con arcos, barras paralelas, salto de potro y suelo. Es olímpico desde 1896 . (Ver más información en <a href="https://es.wikipedia.org/wiki/Gimnasia_artística">Wikipedia</a>.)
 
 - id: gimnasia-ritmica
   nombre: gimnasia rítmica
   tipo: deporte
+  descripcion: | 
+    Disciplina deportiva que combina elementos de ballet, gimnasia y danza, así como el uso de diversos aparatos como la cuerda, el aro, la pelota, las mazas y la cinta. Es olímpico desde 1984. (Ver más información en <a href="https://es.wikipedia.org/wiki/Gimnasia_rítmica">Wikipedia</a>.)
 
 - id: golf
   nombre: golf
   tipo: deporte
+  descripcion: | 
+    Deporte de precisión cuyo objetivo es introducir una bola en los hoyos que están distribuidos en el campo con el menor número de golpes, utilizando para cada tipo de golpe uno de entre un conjunto de palos ligeramente diferentes entre sí. Es deporte olímpico. (Ver más información en <a href="https://es.wikipedia.org/wiki/Golf">Wikipedia</a>.)
 
 - id: handball
   nombre: handball
