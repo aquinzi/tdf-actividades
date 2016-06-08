@@ -700,13 +700,13 @@ def find_place_id(city,place):
 
 	city = city.replace("-", "")
 
-	if not city in PLACES_NAMES:
+	if not PLACES_NAMES[city] or not city in PLACES_NAMES:
 		return place
 
 	if place in PLACES_NAMES[city]:
 		return PLACES_NAMES[city][place]
-	else:
-		return place
+	
+	return place
 
 
 def create_post_schedule(start_date, end_date):
