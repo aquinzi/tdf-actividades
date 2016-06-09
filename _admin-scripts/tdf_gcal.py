@@ -55,6 +55,7 @@ import json
 import argparse 
 import random #for the minutes
 import datetime
+import re
 
 import time
 # required Libs (for Google connect)
@@ -125,7 +126,7 @@ parser.add_argument("--client", help="path of the client_secret.json")
 parser.add_argument("--user",   help="path of the user secret_key.json")
 parser.add_argument("--clean",  help="Cleans the processed file list")
 parser.add_argument("--edit",   help="Edit an event")
-parser.add_argument("--site-update", "-su",   help="Add manually, starts from today and spans " + DAYS_SPANS_MANUAL_UPDATE + " days. Mostly for site updates.")
+parser.add_argument("--site-update", "-su",   help="Add manually, starts from today and spans " + str(DAYS_SPANS_MANUAL_UPDATE) + " days. Mostly for site updates.")
 
 #args = vars(parser.parse_args()) #to dict
 args = parser.parse_args()
@@ -196,11 +197,11 @@ if not os.path.exists(GOOGLE_AUTH):
 	print (" sorry, I need the app credentials.")
 	exit()
 
+
 if args.edit:
 	#edit_event()
 	print ("not yet implemented. Sorry")
 	exit()
-
 
 
 
@@ -689,6 +690,7 @@ def get_places_id(city):
 		return False
 
 	places = dict()
+	HTMLTAG_RE = re.compile(r'<[^>]+>') #  to remove HTML from name
 
 	for root,subdir,files in os.walk(current_city_places_folder):
 		for archivo in files:
@@ -704,7 +706,7 @@ def get_places_id(city):
 			tmp = ""
 			if YAML:
 				yaml_doc = yaml.load(places_file.split("---")[1])
-				places[yaml_doc['id']] = yaml_doc['nombre']
+				places[yaml_doc['id']] = HTMLTAG_RE.sub("", yaml_doc['nombre'])
 			else:
 				places_file = places_file.split("---")[1]
 				places_file = places_file.splitlines()
@@ -719,7 +721,7 @@ def get_places_id(city):
 						tmp_name = line.split("nombre: ")[1]
 
 					if tmp_id and tmp_name:
-						places[tmp_id] = tmp_name
+						places[tmp_id] = HTMLTAG_RE.sub("", tmp_name)
 
 				if not tmp_name:
 					places[tmp_id] = tmp_id
@@ -729,9 +731,9 @@ def get_places_id(city):
 
 def find_place_id(city,place):
 
-	city = city.replace("-", "")
+	#city = city.replace("-", "")
 
-	if not PLACES_NAMES[city] or not city in PLACES_NAMES:
+	if PLACES_NAMES[city] is False or not city in PLACES_NAMES:
 		return place
 
 	if place in PLACES_NAMES[city]:
@@ -899,7 +901,6 @@ for city in CITIES:
 	PLACES_NAMES[city] = dict()
 	PLACES_NAMES[city] = get_places_id(city)
 
-
 processed_posts = list()
 
 
@@ -921,7 +922,7 @@ if __name__ == '__main__':
 
 
 	if args.site_update:
-		print ("Doing manual adition to gCal. Remember that this event starts from today and spans "+DAYS_SPANS_MANUAL_UPDATE+" days. ")
+		print ("Doing manual adition to gCal. Remember that this event starts from today and spans "+str(DAYS_SPANS_MANUAL_UPDATE)+" days. ")
 		while not answer:
 			answer = input(" description: ")
 
