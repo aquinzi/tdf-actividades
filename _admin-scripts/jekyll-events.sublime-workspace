@@ -664,20 +664,24 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_data",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05"
+		"/C/Users/Ariela/Desktop/tdf-actividades/tags",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/actividades"
 	],
 	"file_history":
 	[
-		"/C/Users/Ariela/Desktop/mpm_prefork.conf",
+		"/C/xampp/htdocs/dokuwiki/lib/plugins/basic html/plugin.info.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/processed-posts.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/06/2016-06-11-festival-cancion-malvinas-argentinas.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_data/wiki.yml",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-11-seminario-balistica-pericial-forense.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05/2016-05-07-desafio-producir-arte.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05/2016-05-09-taller-desarrollo-comportamiento-emprendedor.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/05/2016-05-03-tu-voz-suena-fin-mundo.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/06/2016-06-17-fiesta-noche-larga.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-14-capacitacion-electricistas-matriculados.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-11-casting-actores-largometraje.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/09/2016-09-17-quinta-peña-bicentenario.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-11-desafio-producir.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-13-plan-5-dias-dejar-fumar.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/08/2016-08-13-world-latin-dance-cup.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_data/changelog.yml",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_data/riogrande/lugares.yml",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/palestra-skate-park.md",
@@ -692,8 +696,6 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-23-flisol-rio-grande.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/04/2016-04-23-flisol-ushuaia.md",
 		"/C/Users/Ariela/Documents/My Dropbox/manga comics mini evento.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/processed-posts.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-22-primer-circuito-patagonico-natacion.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/04/2016-04-30-dia-internacional-danza.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05/2016-05-08-premios-ciudad-rio-grande.md",
@@ -795,10 +797,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/pesca-deportiva.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/pool/taller-pool.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-04-ciclo-cine-infantil.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-02-03-campus-futsal.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-01-28-espectaculos-callejeros.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-10-01-super-motoencuentro.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-06-10-expo-tattoo.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-02-03-campus-futsal.md"
 	],
 	"find":
 	{
@@ -816,8 +815,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"get_places_id",
-			"get_post_me",
+			"CITIES",
+			"PLACES_NAMES",
 			"gimnasio",
 			"centro de",
 			"su",
@@ -1127,7 +1126,7 @@
 		"cols":
 		[
 			0.0,
-			0.870023616179,
+			0.930555555556,
 			1.0
 		],
 		"rows":
@@ -1363,7 +1362,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 167.0,
+	"side_bar_width": 50.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
