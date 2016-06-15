@@ -11,7 +11,7 @@ tags: [festejos]
 source: http://www.fuegocultura.com.ar/todo-listo-para-la-fiesta-de-la-noche-mas-larga-en-ushuaia/
 people: []
 short-url: http://goo.gl/4k0uvm
-modified: 
+modified: 2016-06-15
 ---
 
 Entretenimientos, shows y actividades para que toda la comunidad. Todas las actividades tienen entrada libre y gratuita.
@@ -24,7 +24,7 @@ Son actividades culturales y turísticas que se planean al momento. Pueden reali
 
 Viernes 17 de junio:
 
-- 19:00. Caminata “Marcha de las luces”. Bahía Encerrada.
+- 19:00. Caminata "Marcha de las luces". Bahía Encerrada.
 - 21:00. Elección de embajador y embajadora de Ushuaia. Centro Cultural Esther Fadul.
 
 Sábado 18 de junio:
@@ -39,8 +39,33 @@ Sábado 18 de junio:
  
 Domingo 19 de junio:
 
-- Desde las 18:00: Mar de Fueguitos en Bahía Encerrada. Un deseo para el OTRO
+- Desde las 18:00: Mar de Fueguitos en Bahía Encerrada.
 - 19:00 a 05:00: Peña de Artistas Locales (Gimnasio del AEP)
+
+Los artistas que estaran el día domingo:
+
+- 18.30hs: Karina Valdez
+- 19hs: Leiva y Alma Pueblo
+- 19.25hs: Folclore en Zapatillas (Ballet)
+- 19.45hs: Dúo Yopen
+- 20.10hs: Trío Yanassus
+- 20.35hs: Archipiélago Del Sur (Ballet)
+- 21:00hs: Sur Andino
+- 21.25hs: Cristian Miran
+- 21.50hs: Nuevo Amanecer
+- 22.15hs: Rebelión Malambo
+- 22.50hs: Lautaro Mariscal, Yamina Leiva
+- 23.15hs: Wena Vida
+- 23.40hs: Pitu Monsalvo
+- 00hs: Banda Municipal Himno Nacional por el Día De La Bandera
+- 00.15hs: Ballet Ushuaia
+- 00.35hs: Patricio Apaza
+- 01hs: Facundo Armas
+- 01.25hs: Ballet Cruz Del Sur
+- 01.50hs: Franco Andrada
+- 02.20hs: Tierra Gaucha (Ballet)
+- 02.45hs: Cacho Espinillo
+
 
 Lunes 20 de junio (feriado):
 

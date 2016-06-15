@@ -88,3 +88,14 @@ rio-grande@2016-08-13-world-latin-dance-cup.md
 rio-grande@2016-09-17-quinta-peña-bicentenario.md
 ushuaia@2016-06-11-festival-cancion-malvinas-argentinas.md
 ushuaia@2016-06-17-fiesta-noche-larga.md
+rio-grande@2016-06-16-concurso-fotografico-miradas-hoy-rio-grande-ayer.md
+rio-grande@2016-06-17-torneo-aniversario-copa-malvinas-argentinas-hockey-pista.md
+rio-grande@2016-06-18-campeonato-argentino-powerlifting.md
+rio-grande@2016-06-18-guanaca-feria-itinerante.md
+rio-grande@2016-07-02-encuentro-ajedrez-infantil.md
+rio-grande@2016-08-13-encuentro-ajedrez-infantil.md
+rio-grande@2016-09-10-encuentro-ajedrez-infantil.md
+rio-grande@2016-10-15-encuentro-ajedrez-infantil.md
+rio-grande@2016-11-12-encuentro-ajedrez-infantil.md
+rio-grande@2016-12-17-arkham-assemble-4.md
+ushuaia@2016-06-18-curso-armado-calibracion-impresoras-3d.md
