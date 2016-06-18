@@ -10,7 +10,7 @@ category: rio-grande
 tags: [eventos,baile,musica]
 source: https://www.riogrande.gob.ar/notable-acompanamiento-publico-artistas-se-iniciaron-las-penas-del-bicentenario/
 people: []
-short-url: http://goo.gl/jBEwcK
+short-url: 
 modified: 
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: event 
-title: La Guanaca, feria itinerante
+title: "La Guanaca, feria itinerante"
 date: 2016-06-18 16:00
 no-time-start: 
 date-end: 2016-06-18 20:00
