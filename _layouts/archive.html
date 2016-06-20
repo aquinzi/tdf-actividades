@@ -58,66 +58,60 @@ layout: default
    {% endif %}
 
 	<li>
-
-		{% assign spans_days = false %}
-
-		{% capture date_end %}{{page.date-end | date: '%F'}}{% endcapture %}
-		{% capture date_start %}{{page.date | date: '%F'}}{% endcapture %}
-
-		{% capture date_end %}{{date_end | date: '%s'}}{% endcapture %}
-		{% capture date_start %}{{date_start | date: '%s'}}{% endcapture %}
-
-		{% if date_end > date_start %}
-			{% assign spans_days = true %}
-		{% endif %}
-
-
-	{% if spans_days == true %}
-		<div class="date date-span">
-	{% else %}
-		<div class="date date-single">
-	{% endif %}
-
-		{% assign start_date_iso = page.date | date: "%F" %} 
-		{% assign end_date_iso   = page.date-end  | date: "%F" %}
-
-		{% comment%} can't use contains in datestamp. Not bullet proof. {% endcomment%} 
-		{% if (page.date | date: "%R") != "00:00" %}{% assign start_date_iso = page.date | date_to_xmlschema %}{% endif %}
-		{% if (page.date-end | date: "%R") != "00:00" %}{% assign end_date_iso = page.date | date_to_xmlschema %}{% endif %}
-
-		<time class="date-start" datetime="{{start_date_iso}}">
-			{% assign tmp = page.date | date: "%-m" %}
-			<span class="date-month visuallyhidden">{{ site.data.meses.[tmp].nombre }}</span>
-			<span class="date-day">{{page.date | date: "%d"}}</span> 
-			<span class="date-time">{{page.date | date: "%R"}}</span>
-		</time>
-		<span class="visuallyhidden">-</span>
-		<time class="date-finish" datetime="{{end_date_iso}}">
-			{% if spans_days  %}
-			{% assign tmp = page.date | date: "%-m" %}
-			<span class="date-month visuallyhidden">{{ site.data.meses.[tmp].nombre }}</span>
-			<span class="date-day">{{page.date-end | date: "%d"}}</span> </time>
-			{% endif %}
-			{% unless page.no-time-end %}
-				
-				{% assign tmp = page.date-end | date: "%R" %}
-
-				{% if tmp != "" %}
-				<span class="date-time">{{tmp}}</span></time>
-				{% endif %}
-			{% endunless %}
-		</div>
-
-		<p class="event-info">
+		<span class="event-title">
 			<a href="{{ page.url | prepend: site.baseurl }}" class="name">{{page.title}}</a>
-			{%comment%}<br>
-			lugar: <span class="place-location">{{page.location}}</span>
-			<br>
-			etiquetas: <span class="tags">{{page.tags | join:","}}</span>
-			{%endcomment%}
-		</p>
+		</span>
 
+		<span class="event-details">
 
+			{% assign spans_days = false %}
+
+			{% capture date_end %}{{page.date-end | date: '%F'}}{% endcapture %}
+			{% capture date_start %}{{page.date | date: '%F'}}{% endcapture %}
+
+			{% capture date_end %}{{date_end | date: '%s'}}{% endcapture %}
+			{% capture date_start %}{{date_start | date: '%s'}}{% endcapture %}
+
+			{% if date_end > date_start %}
+				{% assign spans_days = true %}
+			{% endif %}
+
+			{% assign start_date_iso = page.date | date: "%F" %} 
+			{% assign end_date_iso   = page.date-end  | date: "%F" %}
+
+			{% comment%} can't use contains in datestamp. Not bullet proof. {% endcomment%} 
+			{% if (page.date | date: "%R") != "00:00" %}{% assign start_date_iso = page.date | date_to_xmlschema %}{% endif %}
+			{% if (page.date-end | date: "%R") != "00:00" %}{% assign end_date_iso = page.date | date_to_xmlschema %}{% endif %}
+
+			<span class="event-date">
+
+				<time class="date-start" datetime="{{start_date_iso}}">
+					{% assign tmp = page.date | date: "%-m" %}
+					<span class="date-day">{{page.date | date: "%d"}}</span>/<span class="date-month">{{ page.date | date: "%-m" }}</span>
+					{% unless page.no-time-start %}
+					 <span class="date-time">{{page.date | date: "%R"}}</span> hs.
+					{% endunless %}
+				</time>
+
+				{% unless page.no-time-end and spans_days == false %}
+				<span>-</span>
+				{% endunless %}
+
+				<time class="date-finish" datetime="{{end_date_iso}}">
+					{% if spans_days %}			
+					<span class="date-day">{{page.date-end | date: "%d"}}</span>/<span class="date-month">{{ page.date-end | date: "%-m" }}</span>
+					{% endif %}
+					{% unless page.no-time-end %}
+						{% assign tmp = page.date-end | date: "%R" %}
+						{% if tmp != "" %}
+						 <span class="date-time">{{tmp}}</span> hs.
+						{% endif %}
+					{% endunless %}
+				</time>
+			</span>
+
+			{% if page.tags %}<span class="tags"><span class="visuallyhidden"> etiquetas:</span> {% for tag in page.tags %}{% include print-tag.html tag=tag link=true%}{% endfor %}</span>{% endif %}
+		</span>
 	</li>
   
 	{% if forloop.last %}</ul>{% endif %}
