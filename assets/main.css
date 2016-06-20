@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6{
 
 h4, h5, h6{color: #000;}
 
-h1 {font-size: 44px; line-height: 48px; }
+h1 {font-size: 44px; line-height: 44px; }
 h2 {font-size: 34px; line-height: 40px; }
 h3 {font-size: 24px; line-height: 32px; }
 h4 {font-size: 20px; line-height: 28px; }
@@ -2570,6 +2570,7 @@ vertical-align: middle;
 		position: absolute;
 		top: 8em;
 		left: 0px;
+		font-size: 0.8em;
 	}
 }
 
