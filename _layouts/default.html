@@ -10,10 +10,13 @@
 	{% if page_title == "Inicio" %} {% assign page_title = site.name %}
 	{% else %} {% capture page_title %}{{ page_title }} - {{ site.name }}{% endcapture %}
 	{% endif %}
-	{% if page.this_layout == "activity" %}
+
+	{% if page.this_layout == "activity" or layout.this_layout  == "activity" %}
 		{% assign tmp_city = site.data.prettify[page.city] %}
 		{% assign tmp_activity = site.data.actividades | where: "id", page.activity_id | first %}
-		{% assign page_title = page.title | replace:"!ciudad!", tmp_city | replace:"!actividad!", tmp_activity.nombre %}
+		{% if layout.title %}{% assign page_title = layout.title | replace:"!ciudad!", tmp_city | replace:"!actividad!", tmp_activity.nombre %}
+		{% else %}{% assign page_title = page.layout.title | replace:"!ciudad!", tmp_city | replace:"!actividad!", tmp_activity.nombre %}
+		{% endif %}
 	{% endif %}
 	
 	{% assign page_title = page_title | strip_html %}
