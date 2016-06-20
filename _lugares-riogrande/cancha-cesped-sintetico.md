@@ -1,5 +1,5 @@
 ---
-id: canchacespedsintetico
+uid: canchacespedsintetico
 nombre: Cancha de césped sintético
 direccion: José Ingenieros 300
 geo: {lat: -53.794524, lon: -67.69131}

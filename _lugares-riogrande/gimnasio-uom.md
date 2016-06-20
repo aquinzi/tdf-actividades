@@ -1,5 +1,5 @@
 ---
-id: gimnasiouom
+uid: gimnasiouom
 nombre: 'Club Social y Deportivo Metalúrgico UOM (Gimnasio)'
 direccion: Córdoba 750 (esquina Alvear)
 geo: {lat: -53.7702775, lon: -67.7096335}

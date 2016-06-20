@@ -1,5 +1,5 @@
 ---
-id: gimnasiomargensur
+uid: gimnasiomargensur
 nombre: Gimnasio Margen Sur
 direccion: Wonska 490 (esquina Tolhuin)
 geo: {lat: -53.804346, lon: -67.667176}

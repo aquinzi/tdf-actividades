@@ -1,5 +1,5 @@
 ---
-id: paseoartesanos
+uid: paseoartesanos
 nombre: 'Paseo de los artesanos "Canto del Viento"'
 direccion: Fagneano 650
 geo: {lat: -53.7867404, lon: -67.6980579}

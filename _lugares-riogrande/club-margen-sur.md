@@ -1,5 +1,5 @@
 ---
-id: clubmargensur
+uid: clubmargensur
 nombre:  Club Deportivo y Social Margen Sur
 direccion: Yehuin 232
 geo: {lat: -53.8019268, lon: -67.6652996}

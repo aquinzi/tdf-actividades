@@ -1,5 +1,5 @@
 ---
-id: segundoset
+uid: segundoset
 nombre: '<abbr title="segundo">2do</abbr> Set'
 direccion: Amadeo Sabatini 57
 geo: {lat: -53.785282, lon: -67.726979}

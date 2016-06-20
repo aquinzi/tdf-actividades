@@ -1,5 +1,5 @@
 ---
-id: margalot
+uid: margalot
 nombre: 'Polideportivo "Carlos Margalot"'
 direccion: Prefectura Naval 690, esquina Aeroposta
 geo: {lat: -53.767416, lon: -67.723903}

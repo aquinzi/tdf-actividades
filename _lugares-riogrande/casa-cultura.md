@@ -1,5 +1,5 @@
 ---
-id: casadelacultura
+uid: casadelacultura
 nombre: Casa de la Cultura
 direccion: Elcano 179
 geo: {lat: -53.789578, lon: -67.6925037}

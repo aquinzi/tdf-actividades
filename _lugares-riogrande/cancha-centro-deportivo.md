@@ -1,5 +1,5 @@
 ---
-id: canchacentrodeportivo
+uid: canchacentrodeportivo
 nombre: Cancha del Centro Deportivo
 direccion: Obligado 698
 geo: {lat: -53.788172, lon: -67.707942}

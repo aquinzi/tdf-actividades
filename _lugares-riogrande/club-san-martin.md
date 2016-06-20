@@ -1,5 +1,5 @@
 ---
-id: clubsanmartin
+uid: clubsanmartin
 nombre: Club General San Martín
 direccion: Bernardo O'Higgins 46
 geo: {lat: -53.7916648, lon: -67.6934956}

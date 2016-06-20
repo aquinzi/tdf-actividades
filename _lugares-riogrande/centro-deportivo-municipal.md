@@ -1,5 +1,5 @@
 ---
-id: centrodeportivo
+uid: centrodeportivo
 nombre: 'Centro Deportivo Municipal "Reverendo Padre José Forgacs"'
 direccion: Avenida Juan Bautista Alberdi y Belgrano
 geo: {lat: -53.788087, lon: -67.705338}

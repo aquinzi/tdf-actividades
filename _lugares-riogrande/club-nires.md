@@ -1,5 +1,5 @@
 ---
-id: losñires
+uid: losñires
 nombre: 'Club Los Ñires'
 direccion: Perito Moreno 144 (entre 9 de julio y Libertad)
 geo: {lat: -53.790107, lon: -67.696548}

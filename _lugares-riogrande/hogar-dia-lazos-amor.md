@@ -1,5 +1,5 @@
 ---
-id: hogardedialazosamor
+uid: hogardedialazosamor
 nombre: 'Hogar de Día "Lazos de Amor"'
 direccion: Muñoz 927
 geo: {lat: -53.798193, lon: -67.685576}

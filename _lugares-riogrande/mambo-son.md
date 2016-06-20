@@ -1,5 +1,5 @@
 ---
-id: mamboson
+uid: mamboson
 nombre: Mambo Son Estudio
 direccion: Viedma 766, Planta alta
 geo: {lat: -53.7696633, lon: -67.7164788}

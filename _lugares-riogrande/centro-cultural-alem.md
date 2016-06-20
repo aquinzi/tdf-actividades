@@ -1,5 +1,5 @@
 ---
-id: alem
+uid: alem
 nombre: "Centro Cultural Leandro N. Alem"
 direccion: Juan Bautista Alberdi esq. Belgrano
 geo: {lat: -53.7878542, lon: -67.7050023}

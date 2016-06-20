@@ -1,5 +1,5 @@
 ---
-id: sumchacra4
+uid: sumchacra4
 nombre: SUM Chacra 4
 direccion: Cabo Primero Gómez esq. Dr. Raul Chifflet
 geo: {lat: -53.7744652, lon: -67.73148}

@@ -1,5 +1,5 @@
 ---
-id: muriel
+uid: muriel
 nombre: 'Gimnasio "Jorge Muriel"'
 direccion: San Martín 2819
 geo: {lat: -53.77072, lon: -67.731759}

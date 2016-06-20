@@ -1,5 +1,5 @@
 ---
-id: museofueguinodearte
+uid: museofueguinodearte
 nombre: 'Museo Fueguino de Arte'
 direccion: Belgrano 319 (en el Centro Cultural Yaganes)
 geo: {lat: -53.7828144, lon: -67.6972588}

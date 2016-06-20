@@ -1,5 +1,5 @@
 ---
-id: gimnasioclubsanmartin
+uid: gimnasioclubsanmartin
 nombre: 'Polideportivo Eduardo Rogolini (Club San Martín)'
 direccion: O'Higgins 46
 geo: {lat: -53.7915235, lon: -67.6937717}

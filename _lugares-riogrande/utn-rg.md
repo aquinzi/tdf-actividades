@@ -1,5 +1,5 @@
 ---
-id: utnrg
+uid: utnrg
 nombre: UTN Facultad Regional Río Grande
 direccion: Islas Malvinas 1650
 geo: {lat: -53.7867746, lon: -67.7250361}

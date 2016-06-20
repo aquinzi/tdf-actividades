@@ -1,5 +1,5 @@
 ---
-id: untdf
+uid: untdf
 nombre: UNTDF Sede Río Grande
 direccion: Thorne 302
 geo: {lat: -53.7802782, lon: -67.7013441}

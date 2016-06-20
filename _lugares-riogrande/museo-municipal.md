@@ -1,5 +1,5 @@
 ---
-id: museomunicipal
+uid: museomunicipal
 nombre: 'Museo Municipal "Virginia Choquintel"'
 direccion: Juan Bautista Alberdi 555
 geo: {lat: -53.7881149, lon: -67.7034758}

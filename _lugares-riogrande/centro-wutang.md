@@ -1,5 +1,5 @@
 ---
-id: centrowutang
+uid: centrowutang
 nombre: Centro de Cultura Oriental Wu Tang
 direccion: Avenida San Martín 123
 geo: {lat: -53.789367, lon: -67.695087}

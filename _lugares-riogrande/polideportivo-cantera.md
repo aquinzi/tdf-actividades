@@ -1,5 +1,5 @@
 ---
-id: cantera
+uid: cantera
 nombre: Polideportivo Cantera
 direccion: F. Echelaine 893
 geo: {lat: -53.787348, lon: -67.746219}

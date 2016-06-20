@@ -1,5 +1,5 @@
 {% comment %} Print place, optionally link to it. {% endcomment %}
-{% assign location = include.place %}
+{% assign location = include.place | strip %}
 {% assign city  = include.city %}
 {% assign link  = false %}
 {% if include.link %}{% assign link = include.link %}{% endif %}
@@ -10,7 +10,7 @@
 	{% if city == "rio-grande" or city == "riogrande" %} {% assign city_places = site.lugares-riogrande %} {% endif %}
 	{% if city_places %}
 		{% for place in city_places %}
-			{% if place.id == location %}
+			{% if place.uid == location %}
 				{% assign found = true %}
 				{% if link %}<a href="{{ site.baseurl }}{{ place.url }}" class="p-location h-card">{{ place.nombre }}</a>
 					{% else %}<span class="p-location">{{ place.nombre }}</span>

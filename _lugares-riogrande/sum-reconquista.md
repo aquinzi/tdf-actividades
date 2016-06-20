@@ -1,5 +1,5 @@
 ---
-id: sumreconquista
+uid: sumreconquista
 nombre: SUM Reconquista CePLA
 direccion: Yahalve 688, esq. Yourka
 geo: {lat: -53.8012975, lon: -67.6608365}

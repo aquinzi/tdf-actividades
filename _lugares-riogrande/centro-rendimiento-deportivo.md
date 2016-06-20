@@ -1,5 +1,5 @@
 ---
-id: centrorendimiento
+uid: centrorendimiento
 nombre: Centro de Rendimiento Deportivo
 direccion: Piedrabuena 971
 geo: {lat: -53.787426, lon: -67.706848}

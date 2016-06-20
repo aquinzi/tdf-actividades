@@ -1,5 +1,5 @@
 ---
-id: natatoriomunicipal
+uid: natatoriomunicipal
 nombre: 'Natatorio Municipal "Eva Perón"'
 direccion: Piedrabuena 923 (esquina Juan Bautista Alberdi; otra entrada por Alberdi)
 geo: {lat: -53.787254, lon: -67.705162}

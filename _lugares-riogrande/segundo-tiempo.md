@@ -1,5 +1,5 @@
 ---
-id: segundotiempo
+uid: segundotiempo
 nombre: '<abbr title="segundo">2do</abbr> Tiempo'
 direccion: Luis Piedrabuena 1171
 geo: {lat: -53.789031, lon: -67.709177}

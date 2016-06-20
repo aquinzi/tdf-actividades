@@ -1,5 +1,5 @@
 ---
-id: yaganes
+uid: yaganes
 nombre: Centro Cultural Yaganes
 direccion: Belgrano 319
 geo: {lat: -53.7828144, lon: -67.6972588}

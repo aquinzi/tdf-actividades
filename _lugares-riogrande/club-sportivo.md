@@ -1,5 +1,5 @@
 ---
-id: clubsportivo
+uid: clubsportivo
 nombre: Club Sportivo Río Grande
 direccion: Avenida Belgrano 1130
 geo: {lat: -53.789555, lon: -67.707498}
