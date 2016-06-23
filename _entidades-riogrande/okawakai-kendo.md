@@ -1,19 +1,19 @@
 ---
 nombre: Okawakai
 categoria: kendo
-ultima-actualizacion: 2016-05-16
+ultima-actualizacion: 2016-06-23
 direccion: 
   lugar: [sumchacra4]
 horario: 
-  - {dia: "Lunes y miércoles", hora: "20:30-22:00", nota: "" }
+  - {dia: "lunes y miércoles", hora: "20:30-22:00", nota: "" }
 precio: pago
 nota: | 
-
+  Nombre alternativo: Ôkawakai
 website: []
 telefono: []
 email: 
-permalink: /rio-grande/entidades/kendo-okawakai/
+permalink: /rio-grande/entidades/okawakai-kendo/
 redirect_from:
-  - /rio-grande/entidades/okawakai-kendo/
+  - /rio-grande/entidades/kendo-okawakai/
 ---
 

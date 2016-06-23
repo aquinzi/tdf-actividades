@@ -4,16 +4,20 @@
 		"selected_items":
 		[
 			[
+				"border-le",
+				"border-left-color"
+			],
+			[
+				"tmp",
+				"tmp_list"
+			],
+			[
 				"luga",
 				"lugar"
 			],
 			[
 				"inter",
 				"internacional"
-			],
-			[
-				"tmp",
-				"tmp_line	statement"
 			],
 			[
 				"str",
@@ -510,10 +514,6 @@
 			[
 				"trans",
 				"transparent"
-			],
-			[
-				"inline",
-				"inline-block"
 			]
 		]
 	},
@@ -664,20 +664,43 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_includes",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/06"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts"
 	],
 	"file_history":
 	[
-		"/C/Users/Ariela/Desktop/tdf-actividades/index.html",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_includes/get-place.html",
+		"/I/Musica/Aliene Ma'riage/!lyrics/撲『しもべ』.txt",
+		"/I/Musica/LuLu/!lyrics/喪失ドラッグ.txt",
+		"/I/Musica/Aliene Ma'riage/!lyrics/BLACK JACK AGE.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/assets/main.css",
+		"/C/Users/Ariela/Documents/My Dropbox/ppi/tareas/musica-clean2016.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/archive.html",
+		"/I/Musica/LuLu/!lyrics/精神鎮痛剤.txt",
+		"/I/Musica/LuLu/!lyrics/おもひで総回診.txt",
+		"/I/Musica/LuLu/!lyrics/溺愛クランケ.txt",
+		"/I/Musica/LuLu/!lyrics/禁断症状.txt",
+		"/I/Musica/LuLu/!lyrics/エンドロール.txt",
+		"/I/Musica/LuLu/!lyrics/Dr.ステルベン.txt",
+		"/I/Musica/LuLu/!lyrics/医師道.txt",
+		"/I/Musica/LuLu/!lyrics/301病室.txt",
+		"/I/Musica/LuLu/!lyrics/遺書.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
+		"/I/Musica/LuLu/!lyrics/症例：官能アレルギー.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_includes/index-activities-list.html",
+		"/I/Musica/LuLu/!lyrics/ホルマリン水槽.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/activity.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/default.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_config.yml",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/tag.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/place.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/page.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/event.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/entity.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/city.html",
+		"/I/Musica/LIGHTNING/info.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_includes/get-place.html",
+		"/I/Musica/MUCC/info.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_lugares-riogrande/cancha-cesped-sintetico.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/index.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_lugares-riogrande/sum-chacra-4.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-16-concurso-fotografico-miradas-hoy-rio-grande-ayer.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-18-guanaca-feria-itinerante.md",
@@ -693,7 +716,6 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/processed-posts.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/06/2016-06-11-festival-cancion-malvinas-argentinas.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-14-capacitacion-electricistas-matriculados.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-11-casting-actores-largometraje.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/09/2016-09-17-quinta-peña-bicentenario.md",
@@ -749,7 +771,6 @@
 		"/C/Users/Ariela/Desktop/moodo.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/okawakai-kendo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/okawakai-iaido.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_config.yml",
 		"/C/Users/Ariela/Documents/My Dropbox/sport shorts designs.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/02/2016-02-18-inscripciones-curso-chino-mandarin-nivel-1.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/02/2016-02-21-6to-campeonato-provincial-10-kilometros.md",
@@ -758,7 +779,6 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/02/2016-02-20-feria-fin-mundo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/02/2016-02-22-gala-cierre-semana-antartida.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/aikido/sei-dojo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/page.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/actividades/index.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/aikido/sakanashi-dojo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-03-11-primer-seminario-nacional-2016-aikido-tdf.md",
@@ -775,34 +795,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-28-desfile-carnaval.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_data/riogrande/actividades.yml",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/rock-and-roll-baile.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-13-lanzamiento-oficial-clases-rock-roll.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/bachata-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/step-local-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/stilleto-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/tap-out-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/estilo-femenino-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/zumba/zumba-nati-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/salsa-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/pakua/pakua-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/pakua/pakua-austral.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/aero-local-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/flamenco-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/documentacion.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/README.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/zumba/zumba-nati-alem.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/zumba/zumba-nati-dynamics-gym.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/taekwondo/escuela-municipal-taekwondo-wtf.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/taekwondo/escuela-atp.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/taekwondo/tae-do-taekwondo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/taekwondo/municipio.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/taekwondo/asociacion-taekwondo-olimpico-tdf.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/handball/club-universitario-handball.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/yoga-shaolin.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/hockey-roller/fenix-rh.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/trompeta-taller.md",
-		"/C/Users/Ariela/Documents/My Dropbox/pakua.url",
-		"/C/Users/Ariela/Documents/My Dropbox/sanshou.url",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/karate/dojo-cantera.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-13-lanzamiento-oficial-clases-rock-roll.md"
 	],
 	"find":
 	{
@@ -820,6 +813,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"==event",
+			"\\n",
+			"\\r",
+			"orloop.",
 			"CITIES",
 			"PLACES_NAMES",
 			"gimnasio",
@@ -943,18 +940,16 @@
 			"3>",
 			"radom_minute",
 			"CIUDADES",
-			"CURRENT_DIR",
-			"current_dir",
-			"_SearchForCalEvents",
-			"def ",
-			"useService('url').url().insert(body={'longUrl': url}))"
+			"CURRENT_DIR"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"\\r\\n",
+			"\\n\\r",
 			"\"",
 			"",
 			"\"",
@@ -1080,9 +1075,7 @@
 			"$1",
 			"",
 			"$1",
-			"",
-			"\\n",
-			"SRC_FOLDER"
+			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1131,7 +1124,7 @@
 		"cols":
 		[
 			0.0,
-			0.739442384648,
+			0.9176276771,
 			1.0
 		],
 		"rows":
@@ -1149,7 +1142,7 @@
 	"project": "jekyll-events.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1367,7 +1360,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 259.0,
+	"side_bar_width": 139.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
