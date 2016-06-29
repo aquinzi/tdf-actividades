@@ -117,7 +117,7 @@ this_layout: place #needed for title replacement
 	{% assign print_entities = " " | split: " " %}
 
 	{% for item in entity.items %}
-		{% if item.direccion.lugar contains page.id %}
+		{% if item.direccion.lugar contains page.uid %}
 			{% capture tmp %}<a href="{{ item.permalink | prepend: site.baseurl }}">{{ item.nombre }}</a>{% endcapture %}
 			{% assign print_entities = print_entities | push: tmp %}
 		{% endif %}
