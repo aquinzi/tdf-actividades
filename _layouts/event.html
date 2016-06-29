@@ -128,14 +128,16 @@ layout: default
 		<dt class="source">Fuente</dt> 
 			<dd><a href="{{ page.source }}" rel="external">{{ source_domain }}</a></dd>
     {% endif %}
-    	{% assign date_modified = page.date %}
+    	{% assign date_modified = "" %}
     	{% if page.modified %}{% assign date_modified = page.modified %}{% endif %}
 		{% assign hour_modified = date_modified | date:"%R" %}
 		{% if hour_modified != "" and hour_modified != "00:00" %}{% capture hour_modified %}, a las {{ hour_modified }}{% endcapture %}
 		{% else %}{% assign hour_modified = "" %}
 		{% endif %}	 
+		{% if date_modified %}
 		<dt class="ultima-modificacion">Modificado por última vez</dt> 
 			<dd> el <time datetime="{{ date_modified }}">{% include human-date.html date=date_modified %}{{ hour_modified }}</time></dd>
+		{% endif %}	 
 	</dl>  
 </footer>
 
@@ -152,7 +154,7 @@ json-ld (google lo prefiere a microdata):
 {
 	"@context": "http://schema.org",
 	"@type": "{{ event_type }}",
-	"name": "{{ page.title }}",
+	"name": "{{ page.title | replace:'"',"'"}}",
 	"url": "{{ event_permalink }}",
 	"startDate": "{{ start_date_iso_xml }}",
 	"endDate": "{{ end_date_iso_xml }}", 
