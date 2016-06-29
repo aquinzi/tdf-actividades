@@ -39,7 +39,6 @@ layout: default
 				<span itemprop="streetAddress">
 				{% for location in page.direccion.lugar %}
 					{% include get-place.html place=location city=page.city link=true%}
-
 				</span>
 			<p style="display:none"><span class="p-locality">{{site.data.prettify.[page.city]}}</span>, <span class="p-region">Tierra del Fuego</span>, <span class="p-country-name">Argentina</span></p> 
 				{% unless forloop.last %},{%endunless%}
@@ -128,6 +127,30 @@ layout: default
 	</footer>
 </article>
 
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Organization",
+	"name": "{{ page.nombre }}",
+	"url": "{{ page.url | prepend: site.url }}",
+	{% if page.direccion.lugar %}
+	"location": {
+		"@type": "Place",
+		"name" : "{{ page.direccion.lugar[0] | strip_html | strip_newlines | replace:"	","" }}",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "",
+			"postalCode": "{{ site.data.datos-ciudades[page.city].codigo-postal }}",
+			"addressLocality": "{{ site.data.prettify.[page.city] }}",
+			"addressRegion": "Tierra del Fuego",
+			"addressCountry": "Argentina"
+		}
+   },
+	{% endif %}
+	"description": "{{ category_info.nombre }}{% if category_info.alternativo.size > 0 %}, {{ category_info.alternativo | join: ', '}}{% endif %}"
+}
+</script>
+
 {% comment %}
 page.path: /repo/_entidades-riogrande/futsal-afa.md 
 page.website:  /rio-grande/entidades/futsal-afa/ 
@@ -155,3 +178,4 @@ page.website:  /rio-grande/entidades/futsal-afa/
 <h2>Comentarios</h2>
 
 {% include comment-form.html %}
+

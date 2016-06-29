@@ -102,6 +102,29 @@ this_layout: place #needed for title replacement
 </article>
 
 
+<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "Place",
+   "geo": {
+     "@type": "GeoCoordinates",
+     "latitude": "{{ page.geo.lat }}",
+     "longitude": "{{ page.geo.lon }}"
+   },
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "{{ page.direccion }}",
+		"postalCode": "{{ site.data.datos-ciudades[this_city].codigo-postal }}",
+		"addressLocality": "{{ this_city_pretty }}",
+		"addressRegion": "Tierra del Fuego",
+		"addressCountry": "Argentina"
+	},
+	"hasMap": "http://www.openstreetmap.org/?mlat={{ page.geo.lat }}&mlon={{ page.geo.lon }}#map=17/{{ page.geo.lat }}/{{ page.geo.lon }}",
+	"image": "{{ page.imagen }}",
+   "name": "{{ page.nombre | replace:'"','\"'}}"
+}
+</script>
+
 <h2>Actividades que se hacen</h2>
 
 {% assign entities = "" %}
