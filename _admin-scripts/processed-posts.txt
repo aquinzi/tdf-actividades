@@ -99,3 +99,9 @@ rio-grande@2016-10-15-encuentro-ajedrez-infantil.md
 rio-grande@2016-11-12-encuentro-ajedrez-infantil.md
 rio-grande@2016-12-17-arkham-assemble-4.md
 ushuaia@2016-06-18-curso-armado-calibracion-impresoras-3d.md
+rio-grande@2016-07-03-vuelta-cabo-domingo.md
+rio-grande@2016-07-07-concierto-derockados.md
+rio-grande@2016-07-10-concierto-soledad-pastorutti.md
+rio-grande@2016-07-15-yayo-todo-que.md
+ushuaia@2016-07-05-seminario-contar-imagenes.md
+ushuaia@2016-07-14-yayo-todo-que.md

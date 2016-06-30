@@ -664,10 +664,14 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts"
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/place.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/event.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/entity.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/default.html",
 		"/I/Musica/Aliene Ma'riage/!lyrics/撲『しもべ』.txt",
 		"/I/Musica/LuLu/!lyrics/喪失ドラッグ.txt",
 		"/I/Musica/Aliene Ma'riage/!lyrics/BLACK JACK AGE.txt",
@@ -688,13 +692,9 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/_includes/index-activities-list.html",
 		"/I/Musica/LuLu/!lyrics/ホルマリン水槽.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/activity.html",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/default.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_config.yml",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/tag.html",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/place.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/page.html",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/event.html",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/entity.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/city.html",
 		"/I/Musica/LIGHTNING/info.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_includes/get-place.html",
@@ -1124,7 +1124,7 @@
 		"cols":
 		[
 			0.0,
-			0.9176276771,
+			0.804714974001,
 			1.0
 		],
 		"rows":
@@ -1360,7 +1360,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 139.0,
+	"side_bar_width": 71.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
