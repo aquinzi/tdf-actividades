@@ -706,7 +706,7 @@ def get_places_id(city):
 			tmp = ""
 			if YAML:
 				yaml_doc = yaml.load(places_file.split("---")[1])
-				places[yaml_doc['id']] = HTMLTAG_RE.sub("", yaml_doc['nombre'])
+				places[yaml_doc['uid']] = HTMLTAG_RE.sub("", yaml_doc['nombre'])
 			else:
 				places_file = places_file.split("---")[1]
 				places_file = places_file.splitlines()
@@ -715,7 +715,7 @@ def get_places_id(city):
 				tmp_id   = ""
 
 				for i,line in enumerate(places_file):
-					if line.startswith("id:"):
+					if line.startswith("uid:"):
 						tmp_id = line.split("id: ")[1]
 					if line.startswith("nombre:"):
 						tmp_name = line.split("nombre: ")[1]
