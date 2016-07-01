@@ -8,6 +8,7 @@
 	{% assign city_places_url = "" %}
 	{% assign found = false %}
 	{% if city == "rio-grande" or city == "riogrande" %} {% assign city_places = site.lugares-riogrande %} {% endif %}
+	{% if city == "ushuaia" %} {% assign city_places = site.lugares-ushuaia %} {% endif %}
 	{% if city_places %}
 		{% for place in city_places %}
 			{% if place.uid == location %}

@@ -5,11 +5,11 @@ date: 2016-07-15 19:00
 no-time-start: 
 date-end: 2016-07-16 18:00
 no-time-end: 
-location: Polideportivo municipal 'Augusto Lasserre'
+location: polilaserre
 category: ushuaia
-tags: [aikido]
+tags: [deportes,aikido]
 source: 
-people: [aonikenk-dojo,sakanashi-dojo]
+people: [mujou-dojo]
 modified: 2016-06-30
 short-url: http://goo.gl/C071LW
 ---
