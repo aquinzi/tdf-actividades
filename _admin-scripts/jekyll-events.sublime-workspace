@@ -663,11 +663,28 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts"
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/aikido",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07",
+		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-15-segundo-seminario-nacional-2016-aikido-tdf.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-15-yayo-todo-que.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-14-yayo-todo-que.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-10-concierto-soledad-pastorutti.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-16-tercera-peña-bicentenario.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-07-concierto-derockados.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-03-vuelta-cabo-domingo.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-05-seminario-contar-imagenes.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/place.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/event.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/entity.html",
@@ -687,7 +704,6 @@
 		"/I/Musica/LuLu/!lyrics/医師道.txt",
 		"/I/Musica/LuLu/!lyrics/301病室.txt",
 		"/I/Musica/LuLu/!lyrics/遺書.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
 		"/I/Musica/LuLu/!lyrics/症例：官能アレルギー.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_includes/index-activities-list.html",
 		"/I/Musica/LuLu/!lyrics/ホルマリン水槽.txt",
@@ -715,7 +731,6 @@
 		"/C/xampp/htdocs/dokuwiki/lib/plugins/basic html/plugin.info.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/processed-posts.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/06/2016-06-11-festival-cancion-malvinas-argentinas.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-14-capacitacion-electricistas-matriculados.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-11-casting-actores-largometraje.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/09/2016-09-17-quinta-peña-bicentenario.md",
@@ -787,15 +802,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2015/2015-12-11-seminario-nacional-aikido.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/tango-pilates-alem.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/el-cachafaz.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/boxeo/boxing-club-vicente-stanic.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/boxeo/escuela-boxeo-municipio.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-20-noche-variete.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-03-15-caminata-mentoreo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-26-eleccion-reina-provincial-carnaval.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-28-desfile-carnaval.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_data/riogrande/actividades.yml",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/rock-and-roll-baile.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-13-lanzamiento-oficial-clases-rock-roll.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/boxeo/boxing-club-vicente-stanic.md"
 	],
 	"find":
 	{
@@ -1124,7 +1131,7 @@
 		"cols":
 		[
 			0.0,
-			0.804714974001,
+			0.918032786885,
 			1.0
 		],
 		"rows":
@@ -1360,7 +1367,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 71.0,
+	"side_bar_width": 112.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

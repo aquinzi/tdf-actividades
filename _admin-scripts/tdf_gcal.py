@@ -104,7 +104,7 @@ PROCESSED_POSTS_FILE_LINE = "{ciudad}@{filename}"
 PLACES_FOLDER = "_lugares-{ciudad}"
 
 HOUR_SCHEDULE = ('09', '13', '17', '21') #minutes are random
-DAYS_BEFORE = 7 #How many days before do we start posting the event?
+DAYS_BEFORE = 11 #How many days before do we start posting the event?
 DAYS_SPANS_MANUAL_UPDATE = 3 # mostly for site update
 
 GOOGLE_AUTH = "client_secrets.json"
@@ -856,7 +856,7 @@ def searchEvent(query_text):
 
 	return event_list[answer - 1][1]
 
-
+# Not yet implemented
 def edit_event():
 
 	query_text = ""
