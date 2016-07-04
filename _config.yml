@@ -257,6 +257,17 @@ defaults:
       breadcrumbs: ["Río Grande","Lugares"]
       show_source: true
       show_history: true
+  - 
+    scope:
+      path: ""
+      type: lugares-ushuaia
+    values:
+      layout: place
+      breadcrumb_limit: 3
+      city: ushuaia
+      breadcrumbs: ["Ushuaia","Lugares"]
+      show_source: true
+      show_history: true
 
 collections:
   entidades-riogrande:
@@ -271,7 +282,9 @@ collections:
   lugares-riogrande:
     output: true 
     permalink: /rio-grande/lugares/:path/
-
+  lugares-ushuaia:
+    output: true 
+    permalink: /ushuaia/lugares/:path/
 
 # Markdown Processors (include only kramdown)
 
