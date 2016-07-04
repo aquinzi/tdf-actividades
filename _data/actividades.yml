@@ -186,7 +186,7 @@
   tipo: deporte
   alternativo: [football, futbol,balompié]
   descripcion: | 
-    Deporte de equipo jugado entre dos conjuntos de once jugadores cada uno. El terreno de juego es rectangular de césped, con un arco a cada lado del campo. Se juega mediante una pelota que se debe desplazar a través del campo con cualquier parte del cuerpo que no sean los brazos o las manos (mayoritariamente con los pies ). El objetivo es introducirla dentro del arco contrario, acción que se denomina marcar un gol. Es de origen inglés y es deporte olímpico desde 1900. (Ver más información en <a href="https://es.wikipedia.org/wiki/Fútbol">Wikipedia</a>.)
+    Deporte de equipo jugado entre dos conjuntos de once jugadores cada uno. El terreno de juego es rectangular de césped, con un arco a cada lado del campo. Se juega mediante una pelota que se debe desplazar a través del campo con cualquier parte del cuerpo que no sean los brazos o las manos (mayoritariamente con los pies). El objetivo es introducirla dentro del arco contrario. Es de origen inglés y es deporte olímpico desde 1900. (Ver más información en <a href="https://es.wikipedia.org/wiki/Fútbol">Wikipedia</a>.)
 
 - id: gimnasia-adultos
   nombre: gimnasia adultos
@@ -214,63 +214,92 @@
 - id: handball
   nombre: handball
   tipo: deporte
-  alternativo: [balonmano]
+  alternativo: [hándbol, balonmano]
+  descripcion: | 
+    Deporte de pelota en el que se enfrentan dos equipos de siete jugadores (seis jugadores y un arquero). Se juega en un campo rectangular, con un arco a cada lado. El objetivo del juego es desplazar la pelota a través del campo, valiéndose fundamentalmente de las manos, para intentar introducirla dentro de la meta contraria. Es deporte olímpico desde 1972. (Ver más información en <a href="https://es.wikipedia.org/wiki/Balonmano">Wikipedia</a>.)
 
 - id: hip-hop
-  nombre: hip-hop
+  nombre: hip hop
   tipo: deporte
+  alternativo: [breaking, breakdance]
+  descripcion: |
+    Danza urbana que forma parte de la cultura afroamericana surgido como respuesta corporal de los beats que marcaba la música del Hip Hop. Los movimientos requieren mucha flexibilidad a la vez que un gran manejo, control de tu cuerpo y fuerza en abdominales y tríceps. (Ver más información en <a href="https://es.wikipedia.org/wiki/Breakdance">Wikipedia</a>.)
 
 - id: hockey-pista
   nombre: hockey pista
   tipo: deporte
   alternativo: [field hockey,hockey sobre césped]
+  descripcion: |
+    Deporte en el que dos equipos rivales de once jugadores compiten para meter una pelota en el arco del equipo contrario anotando así un gol con la ayuda de un palo que permite controlar la pelota. El objetivo consiste en marcar más goles que el equipo contrario al finalizar el tiempo de juego reglamentario. Es deporte olímpico desde 1908. (Ver más información en <a href="https://es.wikipedia.org/wiki/Hockey_sobre_césped">Wikipedia</a>.)
 
 - id: hockey-roller
   nombre: hockey roller
   tipo: deporte
-  alternativo: [hockey sobre patines,roller hockey]
+  alternativo: [hockey sobre patines, roller hockey, hockey línea]
+  descripcion: |
+    Deporte en el que dos equipos rivales de seis jugadores compiten para meter un disco en el arco del equipo contrario anotando así un gol con la ayuda de un palo que permite controlar la pelota; desplazandose por patines de cuatro ruedas (hockey sobre patín) o patines en línea (hockey sobre rollers). El objetivo consiste en marcar más goles que el equipo contrario al finalizar el tiempo de juego reglamentario. Es deporte olímpico desde 1908. (Ver más información en <a href="https://es.wikipedia.org/wiki/Hockey_sobre_patines_en_línea">Wikipedia</a>.)
 
 - id: hockey-hielo
   nombre: hockey sobre hielo
   tipo: deporte
   alternativo: [ice hockey]
-  
+  descripcion: |
+    Deporte sobre hielo en el que dos equipos rivales de seis jugadores compiten para meter un disco en el arco del equipo contrario anotando así un gol con la ayuda de un palo que permite controlar la pelota; desplazandose por patines de hielo. El objetivo consiste en marcar más goles que el equipo contrario al finalizar el tiempo de juego reglamentario. Es deporte olímpico desde 1920. (Ver más información en <a href="https://es.wikipedia.org/wiki/Hockey_sobre_hielo">Wikipedia</a>.)
+
 - id: iaido
   nombre: iaido
   tipo: deporte
   alternativo: [iaidô,iaidō]
+  descripcion: |
+    Nombre original <span lang="jp">居合道</span>. Arte marcial japonés relacionado con el desenvainado y el envainado de la katana; era practicado por los samuráis. Estas técnicas surgen principalmente para poder atacar o defenderse a la vez que se desenvainaba, comenzando por tanto el enfrentamiento con el arma aún en la saya (vaina) y desenvainando con la velocidad apropiada para atacar o contraatacar al oponente sin darle tiempo a reaccionar. La principal idea del iaidō es ser capaz de reaccionar correctamente ante cualquier situación inesperada. (Ver más información en <a href="https://es.wikipedia.org/wiki/Iaidō">Wikipedia</a>.)
 
 - id: judo
   nombre: judo
   tipo: deporte
   alternativo: [jûdô,yudo,jūdō]
+  descripcion: |
+    Nombre original <span lang="jp">柔道</span>. Arte marcial y deporte de combate de origen japonés. En su forma deportiva se ha especializado en los lanzamientos, con algunas pocas sumisiones, luxaciones y estrangulaciones. No obstante, en su práctica integral no ha dejado de lado la enseñanza de los golpes, los desarmes, varias luxaciones articulares, el uso de los puntos de presión y los métodos de reanimación. Es deporte olímpico desde 1964. (Ver más información en <a href="https://es.wikipedia.org/wiki/Judo">Wikipedia</a>.)
 
 - id: jiu-jitsu
   nombre: jiu-jitsu
   tipo: deporte
   alternativo: [jûjutsu,jūjutsu,jiu-jitsu brasileño,bjj]
+  descripcion: |
+    Jiu-jitsu: Nombre original <span lang="jp">柔術</span>. arte marcial japonés clásico. que abarca una variedad amplia de sistemas de combate modernos basados en la defensa "sin armas" de uno o más agresores tanto armados como desarmados. Las técnicas básicas incluyen principalmente luxaciones articulares, y además golpes, patadas, rodillazos, esquivas, empujones, proyecciones, derribos, y estrangulamientos. Estas técnicas se originan en métodos de batalla de los bushi, para hacer frente a otros guerreros samurai con armadura. (Ver más información en <a href="https://es.wikipedia.org/wiki/Jiu-jitsu">Wikipedia</a>.)
+
+    Jiu-jitsu brasileño: arte marcial, deporte de combate y sistema de defensa personal brasileño. Está enfocado principalmente en la lucha cuerpo a cuerpo en el suelo. Sus técnicas incluyen lanzamientos, derribos, luxaciones articulares, estrangulaciones, sumisiones y algunos golpes. Este arte promueve el concepto de que un individuo pequeño y ligero puede defenderse exitosamente de un oponente más grande y fuerte mediante el uso eficaz de la técnica, llevando el enfrentamiento al suelo y aplicando sumisiones para someterle. Su sistema de entrenamiento está casi enteramente basado en la competición. (Ver más información en <a href="https://es.wikipedia.org/wiki/Jiu-jitsu_brasileño">Wikipedia</a>.)
 
 - id: karate
   nombre: karate do
   tipo: deporte
-  alternativo: [karate, karate dō]
+  alternativo: [karate, karate dō, karate dô, kárate]
+  descripcion: |
+    Nombre original <span lang="jp">空手道</span>. Arte marcial tradicional de las islas Ryūkyū (actualmente a Japón). Se caracteriza fundamentalmente por el empleo de golpes de puño, patadas y el giro de la cadera. No restringe su repertorio solo a estos, ya que incluye varios golpes a mano abierta, algunos derribos, y luxaciones articulares, y unos pocos lanzamientos; además de golpes a puntos vulnerables, y a puntos nerviosos, en su currículo. En el karate do se unifican la fuerza, la rapidez, la respiración, el equilibrio, la tensión y la relajación al aplicar un correcto giro de cadera y una conexión o sinergia muy precisa de músculos y articulaciones, trasladando un gran parte del peso corporal y del centro de gravedad al impacto. Generalmente se busca derrotar al adversario mediante un (o unos) impacto contundente, preciso y definitivo, buscando ser lo más eficaz posible. (Ver más información en <a href="https://es.wikipedia.org/wiki/Karate">Wikipedia</a>.)
 
 - id: karting
   nombre: karting
   tipo: deporte
+  descripcion: |
+    Disciplina del automovilismo que se practica con karts sobre circuitos, que tienen entre 600 y 1.700 metros de longitud, y con un ancho de entre 8 y 15 metros. Dadas sus características, el kart es la modalidad por excelencia de formación de pilotos: suele ser el primer automóvil en el que debutan los aspirantes a pilotos de competición, a edades tan tempranas como los ocho años. (Ver más información en <a href="https://es.wikipedia.org/wiki/Karting">Wikipedia</a>.)
 
 - id: kendo
   nombre: kendo
   tipo: deporte
   alternativo: [kendô,kendō]
+  descripcion: |
+    Nombre original <span lang="jp">剣道</span>. Arte marcial japonés moderno formativo que destaca por el uso y manejo del sable de bambu (shinai) y la armadura (bōgu). El kendo es considerado el heredero directo de varias de las escuelas de esgrima japonesa clásica; en estas escuelas se entrenaban los samurai en el arte clásico de la esgrima con sable (kenjutsu). (Ver más información en <a href="https://es.wikipedia.org/wiki/Kendō">Wikipedia</a>.)
 
 - id: kickboxing
-  nombre: kickboxing
+  nombre: kick boxing
   tipo: deporte
+  descripcion: |
+    Nombre original <span lang="jp">キックボクシング</span>. Es un deporte de combate japonés en el cual se mezclan las técnicas del boxeo con las de algunas artes marciales como el karate y el muay thai. (Ver más información en <a href="https://es.wikipedia.org/wiki/Kick_boxing">Wikipedia</a>.)
 
 - id: kung-fu
   nombre: kung fu
   tipo: deporte
+  descripcion: |
+    Nombre original <span lang="zh_HANS">功夫</span>. Arte marcial chino (tradicional) de lucha basada en unos principios filosóficos de origen extremoriental (budismo y taoísmo fundamentalmente). (Ver más información en <a href="https://es.wikipedia.org/wiki/Kung-fu">Wikipedia</a>.)
 
 - id: levantamiento-olimpico
   nombre: levantamiento olímpico
