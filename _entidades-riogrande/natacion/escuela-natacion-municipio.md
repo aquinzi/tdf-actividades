@@ -9,7 +9,7 @@ horario:
 precio: gratis
 nota: | 
   Municipio
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/escuela-natacion-municipio/

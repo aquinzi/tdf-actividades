@@ -55,6 +55,7 @@ import json
 import argparse 
 import random #for the minutes
 import datetime
+import re
 
 import time
 # required Libs (for Google connect)
@@ -99,11 +100,12 @@ ROOT_DIR = os.path.dirname(os.getcwd())
 PROCESSED_POSTS_FILE = "processed-posts.txt" #date,city,filename
 PROCESSED_POSTS_FILE_LINE = "{ciudad}@{filename}"
 
-# how the places file is called. We assume is in _data/[city]/
-PLACES_FILE = "lugares.yml"
+# how the places folder is called. rio-grande is called riogrande
+PLACES_FOLDER = "_lugares-{ciudad}"
 
 HOUR_SCHEDULE = ('09', '13', '17', '21') #minutes are random
-DAYS_BEFORE = 7 #How many days before do we start posting the event?
+DAYS_BEFORE = 11 #How many days before do we start posting the event?
+DAYS_SPANS_MANUAL_UPDATE = 3 # mostly for site update
 
 GOOGLE_AUTH = "client_secrets.json"
 USER_CREDENTIALS = 'gcal-tdf-credentials.json'
@@ -111,8 +113,6 @@ USER_CREDENTIALS = 'gcal-tdf-credentials.json'
 # -------------------
 # end configuration
 # -------------------
-
-
 
 FILES_FOR_PROCESSED_LIST = list() #so we write everything once
 
@@ -126,9 +126,15 @@ parser.add_argument("--client", help="path of the client_secret.json")
 parser.add_argument("--user",   help="path of the user secret_key.json")
 parser.add_argument("--clean",  help="Cleans the processed file list")
 parser.add_argument("--edit",   help="Edit an event")
+parser.add_argument("--site-update", "-su",   help="Add manually, starts from today and spans " + str(DAYS_SPANS_MANUAL_UPDATE) + " days. Mostly for site updates.")
 
 #args = vars(parser.parse_args()) #to dict
 args = parser.parse_args()
+
+
+# --------------
+# functions
+# --------------
 
 def get_processed_file():
 	"""Get the processed file, returning it as a list.
@@ -191,10 +197,12 @@ if not os.path.exists(GOOGLE_AUTH):
 	print (" sorry, I need the app credentials.")
 	exit()
 
+
 if args.edit:
 	#edit_event()
 	print ("not yet implemented. Sorry")
 	exit()
+
 
 
 
@@ -291,159 +299,186 @@ def listEvents():
 		request = service.events().list_next(request, response)
 
 
-def scheduleEvent(list_schedule, event_data):
+def scheduleEvent(list_schedule, event_data, isevent=True):
+	'''
+	Inserts the event into google calendar.
+
+	:param:list_schedule  list   list of dates
+	:param:event_data     dict   event data
+	:param:isevent        bool   is it event or a manual update? default true (event)
+	'''
 
 	cal_service = useService('calendar')
-	timezone = 'America/Argentina/Ushuaia'
+	timezone    = 'America/Argentina/Ushuaia'
 
-	'''
-	ifttt ingredients
-	Title 								 	The event's title.
-	Description 							The event's description.
-	Where 									The location where the event takes place.
-	Starts 									ej August 23, 2011 at 10:00PM
-	Ends 									ej: August 23, 2011 at 11:00PM
-	'''
-	# so dirty
-	gcal_description = "#{city} {tags} {title} {shortURL}({human_date}{place})"
-
-	end_date_iso = event_data['end']['timestamp'].isoformat()
-
-	def _fecha_humana(date_time, abbr=False):
-		""" translate to human dates (spanish, quick and dirty)
-		
-		Args:
-		    date_time (datetime object)
-		    abbr (boolean) abreviate month names? default False
-		
-		Returns:
-		    str
-		"""
-		
-		tmp = date_time.strftime('%d de //%m//, %H:%M hs')
-		tmp_month_number = tmp.split("//")[1].split("//")[0]
-
-		month = ""
-		if tmp_month_number == "01":
-			month = "en." if abbr else "enero"
-		if tmp_month_number == "02":
-			month = "febr." if abbr else "febrero"
-		if tmp_month_number == "03":
-			month = "mzo." if abbr else "marzo"
-		if tmp_month_number == "04":
-			month = "abr." if abbr else "abril"
-		if tmp_month_number == "05":
-			month = "my." if abbr else "mayo"
-		if tmp_month_number == "06":
-			month = "jun." if abbr else "junio"
-		if tmp_month_number == "07":
-			month = "jul." if abbr else "julio"
-		if tmp_month_number == "08":
-			month = "agt." if abbr else "agosto"
-		if tmp_month_number == "09":
-			month = "sept." if abbr else "septiembre"
-		if tmp_month_number == "10":
-			month = "oct." if abbr else "octubre"
-		if tmp_month_number == "11":
-			month = "nov." if abbr else "noviembre"
-		if tmp_month_number == "12":
-			month = "dic." if abbr else "diciembre"
-
-		tmp = tmp.replace("//" + tmp_month_number + "//", month)
-
-		return tmp
-
-	
-	#cycle list
-	for date_time in list_schedule:
-
-		human_datetime_start = ""
+	if not isevent:
 		event = {}
-		tags  = ""
-		city  = ""
-		place = ""
-		shortURL = ""
+		event['summary'] = "Actualizacion sitio: changelog: " + event_data['start']
+		event['start']   = {'dateTime': event_data['start'], 'timeZone': timezone}
+		event['end']     = {'dateTime': event_data['end'], 'timeZone': timezone}
+		end_date_iso     = event_data['end'].isoformat()
 
-		if event_data['city'] == "rio-grande":
-			city = "RioGrande"
-		else:
-			city = event_data['city'].title()
+		event['description'] = event_data['description']
 
-		#event['reminders'] = dict()
-		#event['reminders']['useDefault'] = False #remove reminder, this is for myself
-		event['summary'] = event_data['title']
-
-		event['start'] = {'dateTime': date_time[0], 'timeZone': timezone}
-	
-		event['end'] = {'dateTime': date_time[1], 'timeZone': timezone}
-		#human_datetime_end = _fecha_humana(event_data['start']['timestamp'], abbr=True) #the real date
-		human_datetime_end = event_data['start']['timestamp'].strftime('%d/%m, %H:%M hs')
-
-		# if not time set, remove the 00:00 added when creating the timestamp
-		if not event_data['start']['time']:
-			human_datetime_end = human_datetime_end.replace("00:00 hs","")
-		#if all day: {'date': eEnd}
-		
-		print ("        schedule from {} to {} until {}".format(
-				date_time[0].replace("T", " ").replace(":00-03:00","")
-				,date_time[1].replace("T", " ").replace(":00-03:00","")
-				, end_date_iso.split("T")[0]
-				)
-			)
-		
-		if not event_data['location'] is "":
-			event['location'] = event_data['location']
-			if event['location']:
-				place = ", en " + event_data['location']
-
-		final_summary = event['summary']
-		tags = ""
-		if event_data['tags']:
-			#tags = " #" + event_data['tags'].replace(",", " #")
-
-			all_tags = event_data['tags'].split(",")
-			reminding_tags = list()
-
-			# shouldn't be doing this but it's quicker now than using regex
-			final_summary = " " + final_summary + " " 
-			# and also shouldn't be doing this but we don't want to deal with accented letters
-			# and the tag stuff...
-			final_summary = final_summary.replace("ó","o").replace("í","i")
-
-			#use part of the title to include tags (saving space)
-			tmp_tag = ""
-			for tag in all_tags:
-				tmp_tag = " " + tag + " "
-				
-				if tmp_tag in final_summary:
-					final_summary = final_summary.replace(tmp_tag, " #" + tag + " ")
-				else:
-					reminding_tags.append(tag)
-
-			final_summary = final_summary.strip()
-			tags = " #".join(reminding_tags)
-			tags = "#" + tags
-
-
-		if event_data['short-url']:
-			shortURL = event_data['short-url'] + " "
-
-		event['description'] = gcal_description.format(
-			city=city, tags=tags, title=final_summary
-			, human_date=human_datetime_end, place=place
-			, shortURL=shortURL
-			)
-		
 		#use recurrence so we dont have to create daily events within same time
-		#event['recurrence'] = ['RRULE:FREQ=DAILY;UNTIL=20151007T193000-03:00']
 		tmp_date = end_date_iso + "Z" #doesnt seem to like timezone.
 		tmp_recurrence = tmp_date.replace("-","").replace(":","")
 		tmp_recurrence = 'RRULE:FREQ=DAILY;UNTIL=' + tmp_recurrence
 
 		event['recurrence'] = [tmp_recurrence]
 
-		#newEvent = cal_service.events().insert(calendarId=CALENDAR_ID, body=event)
-		executeCall(cal_service.events().insert(calendarId=CALENDAR_ID, body=event)) #or newEvent.execute() 
+		executeCall(cal_service.events().insert(calendarId=CALENDAR_ID, body=event))
+
+		print(" Manual update added")
+
+	else:
+		'''
+		ifttt ingredients
+		Title 								 	The event's title.
+		Description 							The event's description.
+		Where 									The location where the event takes place.
+		Starts 									ej August 23, 2011 at 10:00PM
+		Ends 									ej: August 23, 2011 at 11:00PM
+		'''
+		# so dirty
+		gcal_description = "#{city} {tags} {title} {shortURL}({human_date}{place})"
+
+		end_date_iso = event_data['end']['timestamp'].isoformat()
+
+		def _fecha_humana(date_time, abbr=False):
+			""" translate to human dates (spanish, quick and dirty)
+			
+			Args:
+			    date_time (datetime object)
+			    abbr (boolean) abreviate month names? default False
+			
+			Returns:
+			    str
+			"""
+			
+			tmp = date_time.strftime('%d de //%m//, %H:%M hs')
+			tmp_month_number = tmp.split("//")[1].split("//")[0]
+
+			month = ""
+			if tmp_month_number == "01":
+				month = "en." if abbr else "enero"
+			if tmp_month_number == "02":
+				month = "febr." if abbr else "febrero"
+			if tmp_month_number == "03":
+				month = "mzo." if abbr else "marzo"
+			if tmp_month_number == "04":
+				month = "abr." if abbr else "abril"
+			if tmp_month_number == "05":
+				month = "my." if abbr else "mayo"
+			if tmp_month_number == "06":
+				month = "jun." if abbr else "junio"
+			if tmp_month_number == "07":
+				month = "jul." if abbr else "julio"
+			if tmp_month_number == "08":
+				month = "agt." if abbr else "agosto"
+			if tmp_month_number == "09":
+				month = "sept." if abbr else "septiembre"
+			if tmp_month_number == "10":
+				month = "oct." if abbr else "octubre"
+			if tmp_month_number == "11":
+				month = "nov." if abbr else "noviembre"
+			if tmp_month_number == "12":
+				month = "dic." if abbr else "diciembre"
+
+			tmp = tmp.replace("//" + tmp_month_number + "//", month)
+
+			return tmp
+
+		#cycle list
+		for date_time in list_schedule:
+
+			human_datetime_start = ""
+			event = {}
+			tags  = ""
+			city  = ""
+			place = ""
+			shortURL = ""
+
+			if event_data['city'] == "rio-grande":
+				city = "RioGrande"
+			else:
+				city = event_data['city'].title()
+
+			#event['reminders'] = dict()
+			#event['reminders']['useDefault'] = False #remove reminder, this is for myself
+			event['summary'] = event_data['title']
+
+			event['start'] = {'dateTime': date_time[0], 'timeZone': timezone}
+		
+			event['end'] = {'dateTime': date_time[1], 'timeZone': timezone}
+			#human_datetime_end = _fecha_humana(event_data['start']['timestamp'], abbr=True) #the real date
+			human_datetime_end = event_data['start']['timestamp'].strftime('%d/%m, %H:%M hs')
+
+			# if not time set, remove the 00:00 added when creating the timestamp
+			if not event_data['start']['time']:
+				human_datetime_end = human_datetime_end.replace("00:00 hs","")
+			#if all day: {'date': eEnd}
+			
+			print ("        schedule from {} to {} until {}".format(
+					date_time[0].replace("T", " ").replace(":00-03:00","")
+					,date_time[1].replace("T", " ").replace(":00-03:00","")
+					, end_date_iso.split("T")[0]
+					)
+				)
+			
+			if not event_data['location'] is "":
+				event['location'] = event_data['location']
+				if event['location']:
+					place = ", en " + event_data['location']
+
+			final_summary = event['summary']
+			tags = ""
+			if event_data['tags']:
+				#tags = " #" + event_data['tags'].replace(",", " #")
+
+				all_tags = event_data['tags'].split(",")
+				reminding_tags = list()
+
+				# shouldn't be doing this but it's quicker now than using regex
+				final_summary = " " + final_summary + " " 
+				# and also shouldn't be doing this but we don't want to deal with accented letters
+				# and the tag stuff...
+				final_summary = final_summary.replace("ó","o").replace("í","i")
+
+				#use part of the title to include tags (saving space)
+				tmp_tag = ""
+				for tag in all_tags:
+					tmp_tag = " " + tag + " "
+					
+					if tmp_tag in final_summary:
+						final_summary = final_summary.replace(tmp_tag, " #" + tag + " ")
+					else:
+						reminding_tags.append(tag)
+
+				final_summary = final_summary.strip()
+				tags = " #".join(reminding_tags)
+				tags = "#" + tags
+
+
+			if event_data['short-url']:
+				shortURL = event_data['short-url'] + " "
+
+			event['description'] = gcal_description.format(
+				city=city, tags=tags, title=final_summary
+				, human_date=human_datetime_end, place=place
+				, shortURL=shortURL
+				)
+			
+			#use recurrence so we dont have to create daily events within same time
+			#event['recurrence'] = ['RRULE:FREQ=DAILY;UNTIL=20151007T193000-03:00']
+			tmp_date = end_date_iso + "Z" #doesnt seem to like timezone.
+			tmp_recurrence = tmp_date.replace("-","").replace(":","")
+			tmp_recurrence = 'RRULE:FREQ=DAILY;UNTIL=' + tmp_recurrence
+
+			event['recurrence'] = [tmp_recurrence]
+
+			#newEvent = cal_service.events().insert(calendarId=CALENDAR_ID, body=event)
+			executeCall(cal_service.events().insert(calendarId=CALENDAR_ID, body=event)) #or newEvent.execute() 
 	
 
 def shortenURL(url):
@@ -580,18 +615,17 @@ def get_post_metadata(path, city):
 				else:
 					break
 
-			tmp_line = line.strip().split(":", 1)
+			tmp_line = line.strip().split(": ", 1)
 
 			for key in keys:
 				if line.startswith(key + ":"):
 					if not key == "tags":
-						metadata[key] = tmp_line[1]	
+						if metadata[key]:
+							metadata[key] = tmp_line[1]	
 						if key == "date":
 							metadata["start"]['date'] = tmp_line[1]	
 						elif key == "date-end":
 							metadata["end"]['date'] = tmp_line[1]	
-						else:
-							metadata[key] = tmp_line[1]	
 					else:
 						if tmp_line[1] != "[]":
 							metadata['tags'] = tmp_line[1].replace("[", "").replace("]","")
@@ -641,44 +675,71 @@ def get_post_metadata(path, city):
 	return metadata
 
 
-def find_place_id(city,place):
+def get_places_id(city):
+	'''Get all the places ID with their proper name 
+	:param:city  str
+	:returns: dict    where key = place ID, value = place name
+	'''
 
 	city = city.replace("-", "")
 
-	path = os.path.join(ROOT_DIR,"_data",city,PLACES_FILE)
+	current_city_places_folder = PLACES_FOLDER.replace("{ciudad}", city)
+	current_city_places_folder = os.path.join(ROOT_DIR, current_city_places_folder)
 
-	if not os.path.exists(path):
+	if not os.path.exists(current_city_places_folder):
+		return False
+
+	places = dict()
+	HTMLTAG_RE = re.compile(r'<[^>]+>') #  to remove HTML from name
+
+	for root,subdir,files in os.walk(current_city_places_folder):
+		for archivo in files:
+			if archivo.startswith("_") or not archivo.endswith(".md"):
+				continue
+
+			#open and get the ID key.
+			file_path = os.path.join(root,archivo)
+			
+			with open(file_path, encoding="utf-8") as tmp:
+				places_file = tmp.read()
+
+			tmp = ""
+			if YAML:
+				yaml_doc = yaml.load(places_file.split("---")[1])
+				places[yaml_doc['uid']] = HTMLTAG_RE.sub("", yaml_doc['nombre'])
+			else:
+				places_file = places_file.split("---")[1]
+				places_file = places_file.splitlines()
+
+				tmp_name = ""
+				tmp_id   = ""
+
+				for i,line in enumerate(places_file):
+					if line.startswith("uid:"):
+						tmp_id = line.split("id: ")[1]
+					if line.startswith("nombre:"):
+						tmp_name = line.split("nombre: ")[1]
+
+					if tmp_id and tmp_name:
+						places[tmp_id] = HTMLTAG_RE.sub("", tmp_name)
+
+				if not tmp_name:
+					places[tmp_id] = tmp_id
+
+	return places
+
+
+def find_place_id(city,place):
+
+	#city = city.replace("-", "")
+
+	if PLACES_NAMES[city] is False or not city in PLACES_NAMES:
 		return place
 
-	places_file = ""
-	with open(path, encoding="utf-8") as tmp:
-		if YAML:
-			places_file = tmp.read()
-		else:
-			places_file = tmp.readlines()
-
-	if YAML:
-		yaml_doc = yaml.load(places_file)
-
-		for place_id in yaml_doc:
-			if place_id == place:
-				return yaml_doc[place_id]['nombre']
-	else:
-		name = ""
-		found = False
-		for line in yaml_doc:
-		    
-			if line == place + ":":
-				found = True
-
-			if " nombre: " in line and found == True:
-				name = line.replace("nombre:", "").strip().replace("'","")
-				break
-
-		if found:
-			return name
-
-	return place 
+	if place in PLACES_NAMES[city]:
+		return PLACES_NAMES[city][place]
+	
+	return place
 
 
 def create_post_schedule(start_date, end_date):
@@ -748,12 +809,7 @@ def update_processed_file(list_files):
     	tmp.write("\n" + "\n".join(list_files))
 
 
-
-
-
-
-
-
+# Not yet implemented
 def searchEvent(query_text):
 
 	event_list = []
@@ -800,7 +856,7 @@ def searchEvent(query_text):
 
 	return event_list[answer - 1][1]
 
-
+# Not yet implemented
 def edit_event():
 
 	query_text = ""
@@ -835,16 +891,19 @@ def edit_event():
 
 
 
+# --------------
+# start program!
+# --------------
 
 
-
-
-
+PLACES_NAMES = dict()
+for city in CITIES:
+	PLACES_NAMES[city] = dict()
+	PLACES_NAMES[city] = get_places_id(city)
 
 processed_posts = list()
 
 
-# start
 if __name__ == '__main__':
 
 	print (" initiating ... " + PROCESSED_POSTS_FILE)
@@ -856,10 +915,26 @@ if __name__ == '__main__':
 		tmp = ""
 
 	# ge today's date (only)
-	today_date = datetime.datetime.today()
+	timestamp_now = datetime.datetime.today()
 		# I don't know what i'm doing but it works
-	today_date = today_date.isoformat(sep=' ').split()[0]
+	today_date = timestamp_now.isoformat(sep=' ').split()[0]
 	today_date = datetime.datetime.strptime(today_date, '%Y-%m-%d')
+
+
+	if args.site_update:
+		print ("Doing manual adition to gCal. Remember that this event starts from today and spans "+str(DAYS_SPANS_MANUAL_UPDATE)+" days. ")
+		while not answer:
+			answer = input(" description: ")
+
+		site_update = {}
+		site_update['description'] = answer
+		site_update['start'] = timestamp_now
+		site_update['end'] = timestamp_now + datetime.timedelta(days=DAYS_SPANS_MANUAL_UPDATE)
+
+		scheduleEvent([], site_update, isevent=False)
+
+		exit()
+
 
 
 	for ciudad in CITIES:

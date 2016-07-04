@@ -11,10 +11,10 @@ versions = JSON.parse(open("https://pages.github.com/versions.json").read)
 
 gem "jekyll", versions["jekyll"], group: :jekyll_plugins
 gem "jekyll-sass-converter", versions["jekyll-sass-converter"], group: :jekyll_plugins
-gem "jekyll-textile-converter", versions["jekyll-textile-converter"], group: :jekyll_plugins
+#gem "jekyll-textile-converter", versions["jekyll-textile-converter"], group: :jekyll_plugins
 gem "kramdown", versions["kramdown"], group: :jekyll_plugins
-gem "redcarpet", versions["redcarpet"], group: :jekyll_plugins
-gem "RedCloth", versions["RedCloth"], group: :jekyll_plugins
+#gem "redcarpet", versions["redcarpet"], group: :jekyll_plugins
+#gem "RedCloth", versions["RedCloth"], group: :jekyll_plugins
 gem "liquid", versions["liquid"], group: :jekyll_plugins
 gem "rouge", versions["rouge"], group: :jekyll_plugins
 #gem "github-pages-health-check", versions["github-pages-health-check"], group: :jekyll_plugins

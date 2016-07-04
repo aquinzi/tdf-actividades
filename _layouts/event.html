@@ -3,74 +3,107 @@ layout: default
 ---
 
 {% comment%} 
-date_to_xmlschema = ISO8601 YYYY-MM-DDTHH:MM[TIMEZONE]
-date: F = Returns the date in ISO 8601 format (yyyy-mm-dd).  
-date: %a = Abbreviated weekday. 
-date: %A = full weekday. 
-date: %R = 24-hour time HH:MM
+	date_to_xmlschema = ISO8601 YYYY-MM-DDTHH:MM[TIMEZONE]
+	date: %F = date in ISO 8601 (yyyy-mm-dd) 
+	date: %a = Abbreviated weekday
+	date: %A = full weekday
+	date: %R = HH:MM (24-hour)
 {% endcomment%}
 
 {% assign start_date_iso = page.date | date: "%F" %} 
 {% assign end_date_iso   = page.date-end  | date: "%F" %}
+{% assign start_date_iso_xml = start_date_iso %} 
+{% assign end_date_iso_xml   = end_date_iso %}
+
+{% assign start_time = page.date | date:"%R" %}
+{% assign end_time = page.date-end | date:"%R" %}
 
 {% comment%} can't use contains in datestamp. Not bullet proof. {% endcomment%} 
-{% if (page.date | date: "%R") != "00:00" %}{% assign start_date_iso = page.date | date_to_xmlschema %}{% endif %}
-{% if (page.date-end | date: "%R") != "00:00" %}{% assign end_date_iso = page.date | date_to_xmlschema %}{% endif %}
+{% if start_time != "00:00" %}{% assign start_date_iso_xml = page.date | date_to_xmlschema %}{% endif %}
+{% if end_time   != "00:00" %}{% assign end_date_iso       = page.date | date_to_xmlschema %}{% endif %}
 
 {% assign this_city = page.categories | first %}
+{% assign this_city_pretty = site.data.prettify.[this_city] %}
+{% capture place_name %}{% include get-place.html place=page.location city=this_city link=true %}{% endcapture %}
 
-<article class="h-event">
+{% assign event_permalink = page.url | prepend: site.url %}
+
+{% comment %} select the appropiate event type. From less specific to more specific {% endcomment %}
+{% assign event_type = "Event" %}
+{% for tag in page.tags %}
+	{% case (tag | downcase) %}
+		{% when 'comedia' %}
+			{% assign event_type = "ComedyEvent" %}	
+		{% when 'feria' or 'muestra' %}
+			{% assign event_type = "ExhibitionEvent" %}		
+		{% when 'deportes' %}
+			{% assign event_type = "SportsEvent" %}	
+		{% when 'arte' %}
+			{% assign event_type = "VisualArtsEvent" %}	
+		{% when 'concurso' or 'premios' %}
+			{% assign event_type = "SocialEvent" %}	
+		{% when 'festejos' %}
+			{% assign event_type = "Festival" %}			
+		{% when 'baile' or 'danza %}
+			{% assign event_type = "DanceEvent" %}
+		{% when 'musica' or 'canto' %}
+			{% assign event_type = "MusicEvent" %}
+		{% when 'charla' or 'cursos' or 'idiomas' or 'salud' %}
+			{% assign event_type = "EducationEvent" %}
+		{% when 'teatro' or 'cine' %}
+			{% assign event_type = "TheaterEvent" %}	
+		{% when 'comida' %}
+			{% assign event_type = "FoodEvent" %}		
+	{% endcase %}
+{% endfor %}
+
+<article class="h-event" itemscope itemtype="http://schema.org/{{ event_type }}">
 <header> 
-
-	<h1 class="p-name">{{ page.title }}</h1>
-
-	{% if (page.date-end | date:"%F") > (page.date | date:"%F") %}
-	<p class="details span-dias">
-	{% else %}
-	<p class="details">
+	<h1 class="p-name" itemprop="name">{{ page.title }}</h1>
+	{% if (end_date_iso) > (start_date_iso) %}
+		<p class="details span-dias">
+		{% else %}
+		<p class="details">
 	{% endif %}
-
-		<time datetime="{{start_date_iso}}" class="dt-start">
-
-	      {% assign tmp =  page.date | date: "%a" %}
-
-	      <span class="dia">({{ site.data.dias.[tmp].nombre }}) {% include human-date.html hide_weekday=true date=page.date %}</span>
-	      {% unless page.no-time-start %}<span class="visuallyhidden">, a las </span><span class="hora">{{ page.date | date:"%R" }}</span>{% endunless %}
-	      {% if page.date-end %}
-	      	{% if (page.date-end | date:"%F") == (page.date | date:"%F") %}
-	      		{% unless page.no-time-end %}</time> -<span class="visuallyhidden"> hasta las </span><time datetime="{{end_date_iso}}" class="dt-end">{{page.date-end | date:"%R"}}{% endunless %}
-	      	{% else %}
-	      		</time> al 
-			    <time datetime="{{end_date_iso}}" class="dt-end">
-			    <span class="dia">{% include human-date.html hide_weekday=true date=page.date-end %} ({{ site.data.dias.[(page.date-end | date: "%a")].nombre }})</span>
-			    {% unless page.no-time-start %}<span class="visuallyhidden">, a las </span><span class="hora">{{ page.date-end | date:"%R" }}</span>{% endunless %}
-			    
-	      	{% endif %}
-	      {% endif %}     
-	    </time>
-
-	    {% capture place_name %}{% include get-place.html place=page.location city=this_city link=true %}{% endcapture %}
-
-	    {{place_name}}
-	    
-	    <a class="city" href="{{site.data.wiki.[this_city]}}">{{ site.data.prettify.[this_city] }}</a>
-
+	<time datetime="{{ start_date_iso_xml }}" class="dt-start" itemprop="startDate" content="{{ start_date_iso_xml }}">
+		{% assign tmp = page.date | date: "%a" %}
+		<span class="dia">({{ site.data.dias.[tmp].nombre }}) {% include human-date.html hide_weekday=true date=page.date %}</span>
+		{% unless page.no-time-start %}<span class="visuallyhidden">, a las </span><span class="hora">{{ start_time }}</span>{% endunless %}
+		{% if page.date-end %}
+			{% if (end_date_iso) == (start_date_iso) %}
+				{% unless page.no-time-end %}</time> -<span class="visuallyhidden"> hasta las </span><time datetime="{{ end_date_iso_xml }}" class="dt-end">{{ end_time }}{% endunless %}
+	      {% else %}
+	      	</time> al <time datetime="{{end_date_iso_xml}}" class="dt-end" itemprop="endDate" content="end_date_iso_xml">
+					{% assign tmp = page.date-end | date: "%a" %}
+					<span class="dia">{% include human-date.html hide_weekday=true date=page.date-end %} ({{ site.data.dias.[tmp].nombre }})</span>
+			    {% unless page.no-time-start %}<span class="visuallyhidden">, a las </span><span class="hora">{{ end_time }}</span>{% endunless %}
+			{% endif %}
+		{% endif %}     
+		</time>
+		<span itemprop="location" itemscope itemtype="http://schema.org/Place">
+			<span itemprop="name">{{ place_name }}</span>
+			<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<a class="city" href="{{ site.data.wiki.[this_city] }}" itemprop="addressLocality">{{ this_city_pretty }}</a>
+				<meta itemprop="postalCode" content="{{ site.data.datos-ciudades[this_city].codigo-postal }}">
+				<meta itemprop="addressRegion" content="Tierra del Fuego">
+				<meta itemprop="addressCountry" content="Argentina">
+			</span>
+		</span>
 	</p>
-
 </header>
 
 <ul class="event-subscribe">
 	{% if page.date >= site.time %}
-	{% capture tmp %}{{page.location}}, {{ site.data.prettify.[this_city] }}{% endcapture %}
+	{% capture tmp %}{{ page.location }}, {{ this_city_pretty }}{% endcapture %}
 	{% capture gcal_link %}{% include gcal-url.html subject=page.title date_start=page.date date_end=page.date-end location=tmp %}{% endcapture %}
 	<li><a href="{{ gcal_link | strip_newlines }}" title="Añadir a gcal">Google Calendar</a></li>
 	{%endif%}
-	<li><a href='whatsapp://send?text={{ page.title | replace:"'", "" | replace:'"',''}}. Info: {{ page.url | prepend: site.url }}' class="u-url">Enviar por Whatsapp</a></li>
-	<li><a href='https://telegram.me/share/url?url={{ page.url | prepend: site.url}}' class="u-url">Enviar por Telegram</a></li>
-	<li><a href="{{ page.url | prepend: site.url }}" class="u-url">Link del evento</a></li>
+	<li><a href='whatsapp://send?text={{ page.title | replace:"'", "" | replace:'"',''}}. Info: {{ event_permalink }}' class="u-url">Enviar por Whatsapp</a></li>
+	<li><a href='https://telegram.me/share/url?url={{ event_permalink }}' class="u-url">Enviar por Telegram</a></li>
+	<li><a href="{{ event_permalink }}" class="u-url" itemprop="url">Link del evento</a></li>
 </ul>
 
-<div class="p-description">
+<div class="p-description" itemprop="description">
 {{ content }}
 </div>
 
@@ -80,66 +113,65 @@ date: %R = 24-hour time HH:MM
 		<dt class="short-url">Enlace corto</dt>
 			<dd><a href="{{ page.short-url }}" rel="external">{{ page.short-url | replace:"http://","" }}</a></dd>
 		{% endif %}
-
 		{% if page.tags.size > 0 %}
 		<dt class="tags">Etiquetas</dt>
 			<dd><ul>{% for tag in page.tags %}
 				<li>{% include print-tag.html tag=tag link=true%}</li>
 			{% endfor %}</ul></dd>
 	   {% endif %}
-
     {% if (page.source | strip) != '' %}	
 		{% capture source_domain %}{% include get-domain.html url=page.source %}{% endcapture %}
 		{% assign source_domain = source_domain | strip_newlines | strip %}
-
   		{% if site.data.prettify.[source_domain] %}
   			{% assign source_domain = site.data.prettify.[source_domain] %}
   		{% endif %}
-  		
-        <dt class="source">Fuente</dt> 
-        	<dd><a href="{{page.source}}"  rel="external">{{source_domain}}</a></dd>
+		<dt class="source">Fuente</dt> 
+			<dd><a href="{{ page.source }}" rel="external">{{ source_domain }}</a></dd>
     {% endif %}
-
-    <dt class="ultima-modificacion">Modificado por última vez</dt> 
-    	{% assign date_modified = page.date %}
+    	{% assign date_modified = "" %}
     	{% if page.modified %}{% assign date_modified = page.modified %}{% endif %}
-		<dd> el <time datetime="{{date_modified}}">{% include human-date.html  date=date_modified %}
-		 
 		{% assign hour_modified = date_modified | date:"%R" %}
-		{% if hour_modified != "" and hour_modified != "00:00"%}, a las {{hour_modified}}{% endif %}
-		</time>
-    </dd>
-
-	</dl>   
+		{% if hour_modified != "" and hour_modified != "00:00" %}{% capture hour_modified %}, a las {{ hour_modified }}{% endcapture %}
+		{% else %}{% assign hour_modified = "" %}
+		{% endif %}	 
+		{% if date_modified %}
+		<dt class="ultima-modificacion">Modificado por última vez</dt> 
+			<dd> el <time datetime="{{ date_modified }}">{% include human-date.html date=date_modified %}{{ hour_modified }}</time></dd>
+		{% endif %}	 
+	</dl>  
 </footer>
 
 <hr/>
 
-
 <p>¿Querés agregar un evento? podes hacerlo <a href="{{ site.social.gform.add_evento }}" rel="external">llenando el formulario</a></p>
 </article>
 
-
- <!--json-ld (google lo prefiere a microdata): https://developers.google.com/structured-data/rich-snippets/events?hl=en&rd=1 -->
- <script type="application/ld+json">
- {
-   "@context": "http://schema.org",
-   "@type": "Event",
-   "name": "{{ page.title }}",
-   "startDate": "{{start_date_iso}}",
-   "endDate": "{{end_date_iso}}", //optional
-   "location": {
-     "@type": "Place",
-     "name" : "{{place_name | strip_html | strip_newlines | replace:"	",""}}",
-     "address": {
-       "@type": "PostalAddress",
-       "streetAddress": "",
-       "postalCode": "9420",
-       "addressLocality": "{{ site.data.prettify.[this_city] }}"
-     }
+{% comment %}
+json-ld (google lo prefiere a microdata): 
+	https://developers.google.com/structured-data/rich-snippets/events?hl=en&rd=1
+{% endcomment %}
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "{{ event_type }}",
+	"name": "{{ page.title | replace:'"',"'"}}",
+	"url": "{{ event_permalink }}",
+	"startDate": "{{ start_date_iso_xml }}",
+	"endDate": "{{ end_date_iso_xml }}", 
+	"location": {
+		"@type": "Place",
+		"name" : "{{ place_name | strip_html | strip_newlines | replace:"	","" }}",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "",
+			"postalCode": "{{ site.data.datos-ciudades[this_city].codigo-postal }}",
+			"addressLocality": "{{ this_city_pretty }}",
+			"addressRegion": "Tierra del Fuego",
+			"addressCountry": "Argentina"
+		}
    },
-   "description": "{{ content | strip_html | truncate: 100}}"
- }
- </script>
+	"description": "{{ content | strip_html | truncate: 100 }}"
+}
+</script>
 
 {% include upcoming-events.html %}

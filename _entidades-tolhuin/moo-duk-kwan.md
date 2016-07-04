@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
   Director: Sabon Nim Gaston Vera, 4° dan WTF CAT. Afiliada a Asociación de taekwondo chacra IV (Río Grande)
-website: [""]
+website: []
 email: 
 telefono: []
 permalink: /tolhuin/entidades/moo-duk-kwan/

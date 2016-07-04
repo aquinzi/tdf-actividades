@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="es-419">
-
-<head>
+<html lang="es">
+{% assign page_url = page.url | prepend:site.url %}
+<head itemscope itemtype="http://schema.org/WebSite">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -10,14 +10,21 @@
 	{% if page_title == "Inicio" %} {% assign page_title = site.name %}
 	{% else %} {% capture page_title %}{{ page_title }} - {{ site.name }}{% endcapture %}
 	{% endif %}
-	{% if page.this_layout == "activity" %}
+
+	{% if page.this_layout == "activity" or layout.this_layout  == "activity" %}
 		{% assign tmp_city = site.data.prettify[page.city] %}
 		{% assign tmp_activity = site.data.actividades | where: "id", page.activity_id | first %}
-		{% assign page_title = page.title | replace:"!ciudad!", tmp_city | replace:"!actividad!", tmp_activity.nombre %}
+		{% if layout.title %}{% assign page_title = layout.title | replace:"!ciudad!", tmp_city | replace:"!actividad!", tmp_activity.nombre %}
+		{% else %}{% assign page_title = page.layout.title | replace:"!ciudad!", tmp_city | replace:"!actividad!", tmp_activity.nombre %}
+		{% endif %}
 	{% endif %}
-	<title>{{ page_title }}</title>
+	
+	{% assign page_title = page_title | strip_html %}
+	<title itemprop='name'>{{ page_title }}</title>
+	<link rel="alternate" hreflang="es" href="{{ page_url }}">
+	<link rel="canonical" href="{{ page_url }}" itemprop="url"/>
 
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 	<!-- other favicons -->
 	<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
@@ -46,6 +53,8 @@
 	<meta name="application-name" content="{{ site.name }}">
 	<meta name="theme-color" content="#fd9730">
 	<!-- end favicons big mess. Wow, it used to be only one before; remember that?-->
+	
+	
 
 	<meta name="author" content="{{ site.name }}" />
 	{% if page.excerpt %} {% assign page_description = page.excerpt | strip_html %}
@@ -54,17 +63,17 @@
 	<meta name="description" content="{{ page_description }}" />
 
 	<!-- social stuff -->
-	<meta property="og:title" content="{{ page_title }}" />
-	<meta property="twitter:title" content="{{ page_title }}" />
+	<meta property="og:title" content='{{ page_title }}' />
+	<meta property="twitter:title" content='{{ page_title }}' />
 
 	<meta property="og:locale" content="es_AR" />
-	<meta property="og:url" content="{{ page.url }}"/>
+	<meta property="og:url" content="{{ page_url }}"/>
 	<meta property="og:site_name" content="{{ site.name }}"/>	
 	<meta property="fb:admins" content="100003654501305" />
 	<meta property="fb:page_id" content="993149824038979" />
 	{% comment %}summary = small thumbnail. to use a big one: summary_large_image{% endcomment %}
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:url" content="{{ page.url }}">
+	<meta name="twitter:url" content="{{ page_url }}">
 
 	
 	<meta property="og:description" content="{{ page_description }}" />
@@ -107,7 +116,7 @@
 	{% endcomment %}
 
 	<meta name="google-site-verification" content="OVqA7Ots5rjomNNEbJ_aUoamxDzgySu6ryZ9UfaUuuE" />
-	<link rel="canonical" href="{{ page.url | prepend:site.url}}" />
+	
 </head>
 
 <body>
@@ -129,45 +138,57 @@
 </header>
 
 <div id="content">
-{% comment %} 
-	breadcrumbs ideas from http://stackoverflow.com/questions/9612235/what-are-some-good-ways-to-implement-breadcrumbs-on-a-jekyll-site
-{% endcomment %}
 
-{% comment %} "Hack" to remove last slash in URL {% endcomment %}
-{% capture previous %}{{site.url}}/#{% endcapture %}
-{% assign previous = previous | remove: '/#' %} 
-
-{% assign url_parts = page.url | remove: "/index.html" | remove: site.url | split:"/"  %}
-
-{% if page.breadcrumb_limit %} {% assign num_parts = page.breadcrumb_limit %}
-{% else %} {% assign num_parts = url_parts | size %}
-{% endif %}
-
-<ol class="breadcrumbs">
-	<li class="visuallyhidden">
-		<a href="/">{{ site.name }}</a>
+<ol class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+	<li class="visuallyhidden" itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem">
+		<a href="/" itemprop="item"><span itemprop="name">{{ site.name }}</span></a>
+		<meta itemprop="position" content="1" />
 	</li>
+	{% assign bread_counter = 1 %}
 	{% if page.breadcrumbs %}
 		{% for crumb in page.breadcrumbs %}
+			{% assign bread_counter = bread_counter | plus:1 %}
 			{% assign current_crumb = (crumb | downcase ) %}
 			{% assign crumb_url = "" %}
 
-			<li{% if forloop.last %} class="current"{%endif%}>
+			<li itemprop="itemListElement" itemscope
+      itemtype="http://schema.org/ListItem"{% if forloop.last %} class="current"{%endif%}>
 			{% if current_crumb == "río grande" or current_crumb == "ushuaia" or current_crumb == "tolhuin" %}
 				{% assign current_crumb = current_crumb | replace:"í","i" | replace:" ","" %}
 				{% assign crumb_url = site.data.wiki[current_crumb] %}
 			{% else %}
+				{% if current_crumb == "entidades" %}
+					{% comment %} we don't list entities per se, we move them to actividades{% endcomment %} 
+					{% assign current_crumb = "actividades" %}
+				{% endif %}
 				{% capture tmp %}{{ previous_crumb }}-{{ current_crumb }}{% endcapture %}
 				{% assign crumb_url = site.data.wiki[tmp] %}
-			{% endif%}
+			{% endif %}
 			
-				<a href="{{ crumb_url }}">{{ crumb }}</a>
+				<a href="{{ crumb_url }}" itemprop="item"><span itemprop="name">{{ crumb }}</span></a>
+				<meta itemprop="position" content="{{ bread_counter }}" />
 			</li>
 			
 			{% assign previous_crumb = current_crumb %}
 		{% endfor %}
 	
 	{% else %}
+	
+		{% comment %} 
+			breadcrumbs ideas from http://stackoverflow.com/questions/9612235/what-are-some-good-ways-to-implement-breadcrumbs-on-a-jekyll-site
+		{% endcomment %}
+
+		{% comment %} "Hack" to remove last slash in URL {% endcomment %}
+		{% capture previous %}{{site.url}}/#{% endcapture %}
+		{% assign previous = previous | remove: '/#' %} 
+
+		{% assign url_parts = page.url | remove: "/index.html" | remove: site.url | split:"/"  %}
+
+		{% if page.breadcrumb_limit %} {% assign num_parts = page.breadcrumb_limit %}
+		{% else %} {% assign num_parts = url_parts | size %}
+		{% endif %}
+	
 		{% for crumb in url_parts limit:num_parts %}
 			{% if crumb == "" %}{% continue %}{% endif %}
 
@@ -187,9 +208,7 @@
 				<a href="{{previous}}">{{ pretty_crumb }}</a>
 			</li>
 		{% endfor %}
-	{% endif %}
-	
-	
+	{% endif %}	
 </ol>
 
 {{ content }}
@@ -330,6 +349,16 @@ jQuery(document).ready(function ($) {
 }); //end document.ready
 
 $('body').append('<div class="popup-overlay"></div>');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "WebSite",
+  "name" : "{{ page_title }}",
+  "alternateName" : "{{ site.name }}",
+  "url" : "{{ page_url }}"
+}
 </script>
 
 </html>

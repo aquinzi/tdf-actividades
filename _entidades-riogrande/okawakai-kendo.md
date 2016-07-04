@@ -1,20 +1,19 @@
 ---
 nombre: Okawakai
 categoria: kendo
-ultima-actualizacion: 2016-02-21
+ultima-actualizacion: 2016-06-23
 direccion: 
-  lugar: [clubsanmartin]
+  lugar: [sumchacra4]
 horario: 
-  - {dia: "martes", hora: "21:00-22:30", nota: "" }
-  - {dia: "miércoles", hora: "21:00-22:30", nota: "" }
+  - {dia: "lunes y miércoles", hora: "20:30-22:00", nota: "" }
 precio: pago
 nota: | 
-  Clases suspendidas hasta nuevo aviso
-website: [""]
+  Nombre alternativo: Ôkawakai
+website: []
 telefono: []
 email: 
-permalink: /rio-grande/entidades/kendo-okawakai/
+permalink: /rio-grande/entidades/okawakai-kendo/
 redirect_from:
-  - /rio-grande/entidades/okawakai-kendo/
+  - /rio-grande/entidades/kendo-okawakai/
 ---
 

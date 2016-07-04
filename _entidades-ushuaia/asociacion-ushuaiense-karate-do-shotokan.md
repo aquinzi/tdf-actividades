@@ -1,6 +1,6 @@
 ---
 nombre: Asociación Ushuaiense Karate Do Shotokan
-img: "https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/1503838_573722166104873_9193700885753514518_n.jpg?oh=24615b2985bfd27f2732d611da8b6d4e&oe=57ABDBE3&__gda__=1471121322_ca681a975189688d528ca5b6ad2bbd62"
+imagen: "https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/1503838_573722166104873_9193700885753514518_n.jpg?oh=24615b2985bfd27f2732d611da8b6d4e&oe=57ABDBE3&__gda__=1471121322_ca681a975189688d528ca5b6ad2bbd62"
 categoria: karate
 ultima-actualizacion: 2016-04-22
 direccion: 

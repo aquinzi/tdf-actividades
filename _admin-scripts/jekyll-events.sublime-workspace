@@ -4,16 +4,20 @@
 		"selected_items":
 		[
 			[
+				"border-le",
+				"border-left-color"
+			],
+			[
+				"tmp",
+				"tmp_list"
+			],
+			[
 				"luga",
 				"lugar"
 			],
 			[
 				"inter",
 				"internacional"
-			],
-			[
-				"tmp",
-				"tmp_line	statement"
 			],
 			[
 				"str",
@@ -510,23 +514,11 @@
 			[
 				"trans",
 				"transparent"
-			],
-			[
-				"inline",
-				"inline-block"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"contents": "",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -671,17 +663,80 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_data/riogrande",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/ajedrez",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/aikido",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07",
+		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/actividades"
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-15-segundo-seminario-nacional-2016-aikido-tdf.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-15-yayo-todo-que.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-14-yayo-todo-que.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-10-concierto-soledad-pastorutti.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-16-tercera-peña-bicentenario.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-07-concierto-derockados.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-03-vuelta-cabo-domingo.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-05-seminario-contar-imagenes.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/place.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/event.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/entity.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/default.html",
+		"/I/Musica/Aliene Ma'riage/!lyrics/撲『しもべ』.txt",
+		"/I/Musica/LuLu/!lyrics/喪失ドラッグ.txt",
+		"/I/Musica/Aliene Ma'riage/!lyrics/BLACK JACK AGE.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/assets/main.css",
+		"/C/Users/Ariela/Documents/My Dropbox/ppi/tareas/musica-clean2016.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/archive.html",
+		"/I/Musica/LuLu/!lyrics/精神鎮痛剤.txt",
+		"/I/Musica/LuLu/!lyrics/おもひで総回診.txt",
+		"/I/Musica/LuLu/!lyrics/溺愛クランケ.txt",
+		"/I/Musica/LuLu/!lyrics/禁断症状.txt",
+		"/I/Musica/LuLu/!lyrics/エンドロール.txt",
+		"/I/Musica/LuLu/!lyrics/Dr.ステルベン.txt",
+		"/I/Musica/LuLu/!lyrics/医師道.txt",
+		"/I/Musica/LuLu/!lyrics/301病室.txt",
+		"/I/Musica/LuLu/!lyrics/遺書.txt",
+		"/I/Musica/LuLu/!lyrics/症例：官能アレルギー.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_includes/index-activities-list.html",
+		"/I/Musica/LuLu/!lyrics/ホルマリン水槽.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/activity.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_config.yml",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/tag.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/page.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/city.html",
+		"/I/Musica/LIGHTNING/info.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_includes/get-place.html",
+		"/I/Musica/MUCC/info.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_lugares-riogrande/cancha-cesped-sintetico.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/index.html",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_lugares-riogrande/sum-chacra-4.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-16-concurso-fotografico-miradas-hoy-rio-grande-ayer.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-18-guanaca-feria-itinerante.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/12/2016-12-17-arkham-assemble-4.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-18-campeonato-argentino-powerlifting.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/11/2016-11-12-encuentro-ajedrez-infantil.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-02-encuentro-ajedrez-infantil.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-17-torneo-aniversario-copa-malvinas-argentinas-hockey-pista.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/06/2016-06-17-fiesta-noche-larga.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/06/2016-06-18-curso-armado-calibracion-impresoras-3d.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/_event_tpl.md",
+		"/C/xampp/htdocs/dokuwiki/lib/plugins/basic html/plugin.info.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/processed-posts.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/06/2016-06-11-festival-cancion-malvinas-argentinas.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-14-capacitacion-electricistas-matriculados.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-11-casting-actores-largometraje.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/09/2016-09-17-quinta-peña-bicentenario.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-11-desafio-producir.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-13-plan-5-dias-dejar-fumar.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/08/2016-08-13-world-latin-dance-cup.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_data/changelog.yml",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_data/riogrande/lugares.yml",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/palestra-skate-park.md",
@@ -695,10 +750,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-26-primeros-auxilios-rcp.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-23-flisol-rio-grande.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/04/2016-04-23-flisol-ushuaia.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
 		"/C/Users/Ariela/Documents/My Dropbox/manga comics mini evento.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/processed-posts.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-22-primer-circuito-patagonico-natacion.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/04/2016-04-30-dia-internacional-danza.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05/2016-05-08-premios-ciudad-rio-grande.md",
@@ -734,7 +786,6 @@
 		"/C/Users/Ariela/Desktop/moodo.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/okawakai-kendo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/okawakai-iaido.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_config.yml",
 		"/C/Users/Ariela/Documents/My Dropbox/sport shorts designs.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/02/2016-02-18-inscripciones-curso-chino-mandarin-nivel-1.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/02/2016-02-21-6to-campeonato-provincial-10-kilometros.md",
@@ -743,73 +794,15 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/02/2016-02-20-feria-fin-mundo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/02/2016-02-22-gala-cierre-semana-antartida.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/aikido/sei-dojo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/page.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/actividades/index.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/aikido/sakanashi-dojo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-03-11-primer-seminario-nacional-2016-aikido-tdf.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/entity.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/kung-fu/escuela-shaolin-tdf.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/.gitignore",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2015/2015-12-11-seminario-nacional-aikido.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/tango-pilates-alem.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/el-cachafaz.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/boxeo/boxing-club-vicente-stanic.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/boxeo/escuela-boxeo-municipio.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-20-noche-variete.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-03-15-caminata-mentoreo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-26-eleccion-reina-provincial-carnaval.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-28-desfile-carnaval.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_data/riogrande/actividades.yml",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/rock-and-roll-baile.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-13-lanzamiento-oficial-clases-rock-roll.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/bachata-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/step-local-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/stilleto-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/tap-out-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/estilo-femenino-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/zumba/zumba-nati-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/salsa-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/pakua/pakua-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/pakua/pakua-austral.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/aero-local-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/flamenco-mambo-son.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/documentacion.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/README.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/zumba/zumba-nati-alem.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/zumba/zumba-nati-dynamics-gym.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/taekwondo/escuela-municipal-taekwondo-wtf.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/taekwondo/escuela-atp.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/taekwondo/tae-do-taekwondo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/taekwondo/municipio.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/taekwondo/asociacion-taekwondo-olimpico-tdf.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/handball/club-universitario-handball.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/yoga-shaolin.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/hockey-roller/fenix-rh.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/trompeta-taller.md",
-		"/C/Users/Ariela/Documents/My Dropbox/pakua.url",
-		"/C/Users/Ariela/Documents/My Dropbox/sanshou.url",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/karate/dojo-cantera.md",
-		"/C/Users/Ariela/Documents/My Dropbox/karate cantera.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/roller-derby/thundergirls.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/reverso-kickboxing.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/reverso-bjj.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/ciclismo/pedaleando-el-karukinka.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-28-mini-ciclo-turismo-25km.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-14-prueba-doble-flamenco.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/zumba-taller.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/pesca-deportiva.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/pool/taller-pool.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-04-ciclo-cine-infantil.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-02-03-campus-futsal.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-01-28-espectaculos-callejeros.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-10-01-super-motoencuentro.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-06-10-expo-tattoo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-13-torneo-pool-adultos.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-02-12-torneo-pool-chicos.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts/2016/2016-03-26-vuelta-tierra-fuego.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-03-19-karting.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts/2016/2016-03-12-automovilismo-carlos romero.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/2016-03-05-karting.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/boxeo/boxing-club-vicente-stanic.md"
 	],
 	"find":
 	{
@@ -827,6 +820,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"==event",
+			"\\n",
+			"\\r",
+			"orloop.",
+			"CITIES",
+			"PLACES_NAMES",
 			"gimnasio",
 			"centro de",
 			"su",
@@ -948,20 +947,16 @@
 			"3>",
 			"radom_minute",
 			"CIUDADES",
-			"CURRENT_DIR",
-			"current_dir",
-			"_SearchForCalEvents",
-			"def ",
-			"useService('url').url().insert(body={'longUrl': url}))",
-			"_RetryWithBackoff",
-			"__API_CLIENT_SECRET__"
+			"CURRENT_DIR"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"\\r\\n",
+			"\\n\\r",
 			"\"",
 			"",
 			"\"",
@@ -1087,9 +1082,7 @@
 			"$1",
 			"",
 			"$1",
-			"",
-			"\\n",
-			"SRC_FOLDER"
+			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1100,95 +1093,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content"
-							],
-							"syntax": "Packages/YAML/YAML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		},
 		{
@@ -1225,7 +1131,7 @@
 		"cols":
 		[
 			0.0,
-			0.930555555556,
+			0.918032786885,
 			1.0
 		],
 		"rows":
@@ -1243,7 +1149,7 @@
 	"project": "jekyll-events.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1461,7 +1367,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 214.0,
+	"side_bar_width": 112.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

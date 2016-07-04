@@ -1,19 +1,26 @@
 {% comment %} Print place, optionally link to it. {% endcomment %}
-
-{% assign place = include.place %}
-{% assign link = false %}
+{% assign location = include.place | strip %}
+{% assign city  = include.city %}
+{% assign link  = false %}
 {% if include.link %}{% assign link = include.link %}{% endif %}
-{% assign city = include.city %}
-
-{% if place != "" %}	{% assign place_id = place %}
-	{% if city == "rio-grande" or city == "Río Grande" or city.name == "rio-grande"%}
-		{% if site.data.riogrande.lugares[place_id] %}
-			{% assign place_info = site.data.riogrande.lugares[place_id] %}
-			{% if link %}<a href="{{site.data.wiki.rg-lugares}}#{{place_id}}" class="p-location h-card">{{place_info.nombre}}</a>
-			{% else %}<span class="p-location">{{ place_info.nombre }}</span>
+{% if location != "" %}
+	{% assign city_places     = "" %}
+	{% assign city_places_url = "" %}
+	{% assign found = false %}
+	{% if city == "rio-grande" or city == "riogrande" %} {% assign city_places = site.lugares-riogrande %} {% endif %}
+	{% if city == "ushuaia" %} {% assign city_places = site.lugares-ushuaia %} {% endif %}
+	{% if city_places %}
+		{% for place in city_places %}
+			{% if place.uid == location %}
+				{% assign found = true %}
+				{% if link %}<a href="{{ site.baseurl }}{{ place.url }}" class="p-location h-card">{{ place.nombre }}</a>
+					{% else %}<span class="p-location">{{ place.nombre }}</span>
+				{% endif %}
 			{% endif %}
-		{% else %}<span class="p-location">{{ place }}</span>
+		{% endfor %}
+		{% if found == false %}
+		<span class="p-location">{{ location }}</span>
 		{% endif %}
-	{% else %}<span class="p-location">{{ place }}</span>
+	{% else %}<span class="p-location">{{ location }}</span>
 	{% endif %}
 {% endif %}

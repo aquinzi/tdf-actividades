@@ -10,7 +10,7 @@ horario:
 precio: 
 nota: | 
   Dictado por Lucas Villarroel (campeón nacional de pool 2013)
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/taller-pool/

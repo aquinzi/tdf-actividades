@@ -9,7 +9,7 @@ horario:
 precio: 
 nota: | 
   
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/rio-grande-rugby-jockey-club/

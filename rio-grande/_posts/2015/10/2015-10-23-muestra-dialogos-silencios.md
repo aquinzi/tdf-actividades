@@ -5,7 +5,7 @@ date: 2015-10-23 09:00
 no-time-start: 
 date-end: 2015-11-28 19:00
 no-time-end: 
-location: mfa
+location: museofueguinodearte
 tags: [arte]
 source: http://www.fuegocultura.com.ar/inaugurara-la-muestra-de-dialogos-y-silencios-en-el-museo-fueguino-de-arte/
 people: []

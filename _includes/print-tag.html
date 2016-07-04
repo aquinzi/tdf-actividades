@@ -7,12 +7,10 @@
 	{% capture tag_slugged %}{% include slugify-word.html word=tag%}{%endcapture%}
 	{% capture tag_url %}tags/{{tag_slugged}}/index.html{%endcapture%}
 	{% assign results = site.html_pages | where: 'path', tag_url  %}
-
 	{% assign tag_pretty = tag | replace:"-", " " %}
-
 	{% unless link %}{{ tag_pretty }}
 	{% else %}
-		{% if results.size == 1 %}<a href="{{ site.baseurl }}/tags/{{tag_slugged}}/" class="p-category"> {{ tag_pretty}} </a>
+		{% if results.size == 1 %}<a href="{{ site.baseurl }}/tags/{{tag_slugged}}/" class="p-category">{{ tag_pretty}}</a>
 		{% else %}{{ tag_pretty }}
 		{% endif %}
 	{% endunless %}

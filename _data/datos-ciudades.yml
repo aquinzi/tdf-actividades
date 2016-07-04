@@ -1,0 +1,12 @@
+# datos variados de las ciudades
+
+rio-grande: 
+  caracteristica-telefono: 02964
+  codigo-postal: v9420
+ushuaia: 
+  caracteristica-telefono: 02901
+  codigo-postal: v9410
+tolhuin: 
+  caracteristica-telefono: 02901 #comparte con Ushuaia
+  codigo-postal: v9412
+  

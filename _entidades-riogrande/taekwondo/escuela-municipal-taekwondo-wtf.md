@@ -10,7 +10,7 @@ precio: gratis
 nota: | 
   Director: Sabon César Bravo 3° dan CAT
   Afiliada a Asociación de taekwondo chacra IV
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/escuela-municipal-taekwondo-wtf/

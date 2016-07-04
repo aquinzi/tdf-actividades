@@ -3,121 +3,55 @@ layout: default
 title: "¿Qué hacer en Río Grande?: Lugares"
 ---
 
-{% assign lugares = site.data.riogrande.lugares | sort %}
+{% assign lugares = site.lugares-riogrande | sort: "nombre" %}
+{% assign url_lugares = site.data.wiki.rg-actividades %}
 
-{% comment %} We've got the ids and titles, lets create the TOC "manually" (we cant create headings and the TOC (markdown) automatically). {% endcomment %}
+<h1>Lugares en Río Grande</h1>
 
+<h2>Orden alfabético</h2>
 <div id="tabla-contenido">
-Contenido:
 <ol>
 {% for lugar in lugares %}
-	<li><a href="{{ page.url }}#{{ lugar[0] }} ">{{ lugar[1].nombre }}</a></li>
+	<li><a href="{{ lugar.url }} ">{{ lugar.nombre }}</a></li>
 {% endfor %}
 </ol>
 </div>
 
-
-{% for place in lugares %}
-	{% assign lugar = place[1] %}
-
-<article class="h-card card-lugar" itemscope itemtype="http://schema.org/Place">
-
-	<h2 class="p-name" id="{{ place[0] }}" itemprop="name">{{ lugar.nombre }}</h2>
-
-	{% if lugar.imagen != "" %}
-	<div class="photo">
-    	<img class="u-photo" alt="" src="{{ lugar.imagen }}" height="440" width="440" itemprop="photo">
-		<a class="ver-img" href="{{ lugar.imagen }}">Ver foto</a>
-		{% else %}
-	<div class="photo no-photo">
-	{% endif %}
-
-	</div>
-
-	<div class="info"><dl>
-		<dt class="direccion"><span>Dirección</span></dt>
-			<dd>
-				{% unless lugar.direccion %} <p>Dirección no encontrada</p> {% else %}
-				<p style="display:inline" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span class="p-street-address" itemprop="streetAddress">{{ lugar.direccion }}</span></p>
-			  	
-				<ul class="ver-mapa" aria-label="Ver en mapa">
-					<li><a href="http://www.openstreetmap.org/?mlat={{ lugar.geo.lat }}&mlon={{ lugar.geo.lon }}#map=17/{{ lugar.geo.lat }}/{{ lugar.geo.lon }}" rel="external" class="osm">Mapa</a>
-					<li><a href="{{ lugar.gstreetview }}" rel="external" itemprop="hasMap" class="gstreetview">Google Street View</a>
-					<li  itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates"><a href="geo:{{ lugar.geo.lat }},{{ lugar.geo.lon }};u=35" rel="external">Programa asociado</a>
-						<data class="p-latitude" value="{{ lugar.geo.lat }}">
-						<data class="p-longitude" value="{{ lugar.geo.lon }}">
-				  		<meta itemprop="latitude" content="{{ lugar.geo.lat }}" />
-	    				<meta itemprop="longitude" content="{{ lugar.geo.lon }}" />
-	    			</li>
-				</ul>
-				{% endunless %}
-			</dd>
-
-			{% if lugar.horario[0].dia != "" %}
-			<dt class="horarios"><span>Horarios</span></dt>
-				<dd itemprop="openingHoursSpecification" itemscope itemtype="http://schema.org/OpeningHoursSpecification">
-		    	{% for horario in lugar.horario %}
-				<span itemprop="dayOfWeek" content="{{ horario.dia }}"> {{ horario.dia }}</span>
-
-				{% if horario.hora != "" %}
-					{% assign horas = horario.hora | split:"-" %}
-				<span itemprop="opens" content="{{ horas[0] }}">{{ horas[0] }}</span> a <span itemprop="closes" content="{{ horas[1] }}">{{ horas[1] }}</span>
-      			{% endif %}
-      			
-				{% if horario.nota != "" %}. <strong>Nota:</strong> {{ horario.nota }} {% endif %}
-      			
-      			{% endfor %}
-      			</dd>
-			{% endif %}
-
-			{% if (lugar.telefono[0] | replace:" ","" | strip ) != "" or (lugar.email | strip ) != "" %}
-			<dt class="contacto"><span>contacto</span></dt>
-				<dd>
-				{% if (lugar.telefono[0] | replace:" ","" | strip ) != "" %}
-					<p class="telefono"><span class="label">Teléfono</span>
-					{% for telefono in lugar.telefono %}
-					<a class="p-tel" itemprop="telephone" href="tel:+54-9-02964-{{ telefono }}">{{ telefono }}</a>{% unless forloop.last %},{% endunless %}
-					{% endfor %}
-					</p>
-				{% endif %}
-				{% if (lugar.email | strip ) != "" %}
-					<p class="email">
-						<span class="label">Email</span> <span itemprop="email">{% include print-email.html email= lugar.email %}</span>
-					</p>
-				{% endif %}
-	      		</dd>
-			{% endif %}
-
-      		{% if (lugar.url[0]| strip ) != "" %}
-			<dt class="web"><span>Sitios</span></dt>
-				<dd><ul>
-				{% for web in lugar.url %}
-					{% capture domain %}{% include get-domain.html url=web no_dot=true%}{% endcapture %}
-					{% capture handle %}{% include get-social-handle.html url=web %}{% endcapture %}
-				<li>
-					<a href="{{ web }}" class="u-url" 
-					{% if handle != "" %}data-social-handle="{{handle}}" {%endif%}
-					itemprop="url">{{ domain }}
-					</a>
-				</li>
-				{% endfor %}
-			  </ul></dd>
-			{% endif %}
-
-			{% if lugar.nota != "" %}
-		    <dt class="nota p-note"><span>Nota</span></dt><dd>{{ lugar.nota }}</dd>
-			{% endif %}
-		</dl>
-	</div>
-
-	<footer>
-		<p>
-			<span class="ultima-actualizacion p-note">Última actualización: <time datetime="{{ lugar.ultima-actualizacion }}">{% include human-date.html hide_weekday=true date=lugar.ultima-actualizacion%}		</time></span>
-		¿Información errónea? ayuda <a href="{{ site.github.repository_url }}/blob/{{ site.github.branch }}/{{ page.path }}">corregiendo la información</a>
-		</p>
-	</footer>
-</article>
-
-
-
+<h2>Por categoría</h2>
+<div id="tabla-contenido">
+{% assign lugares = lugares | group_by: "categoria" | sort: "name" %}
+{% assign no_category = " " | split: " " %}
+<dl>
+{% for lugar in lugares %}
+	{% if lugar.name != "" %}
+	<dt>{{ lugar.name | capitalize }}</dt>
+	
+	<dd>
+		<ol>
+			{% for item in lugar.items | sort: "nombre" %}
+				<li><a href="{{ item.url }} ">{{ item.nombre }}</a></li>
+			{% endfor %}
+		</ol>
+	</dd>
+	{% else %}	
+		{% for item in lugar.items | sort: "nombre" %}
+			{% capture tmp %}<a href="{{ item.url }} ">{{ item.nombre }}</a>{% endcapture%}
+			{% assign no_category = no_category | push: tmp %}
+		{% endfor %}
+	{% endif %}	
 {% endfor %}
+
+{% if no_category.size > 0 %}
+	<dt>Sin categoría</dt>
+	<dd>
+		<ol>
+	{% for item in no_category %}
+		<li>{{ item }}</li>
+	{% endfor %}
+		</ol>
+	</dd>
+{% endif %}
+
+</dl>
+</div>
+

@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6{
 
 h4, h5, h6{color: #000;}
 
-h1 {font-size: 44px; line-height: 48px; }
+h1 {font-size: 44px; line-height: 44px; }
 h2 {font-size: 34px; line-height: 40px; }
 h3 {font-size: 24px; line-height: 32px; }
 h4 {font-size: 20px; line-height: 28px; }
@@ -291,6 +291,7 @@ this is to have order and save repetition
 , .upcomming-events .location:before
 , footer#site-footer .social a:before
 , .headerlink:before
+, .archivo-agenda .tags:before
 {
 	font-family: "FontAwesome"; 
 	speak: none; /* Not to be trusted*/
@@ -388,6 +389,7 @@ footer#site-footer .social a:before{padding-right: 0.3em;}
 /*   icon: tags */
 .h-event .extra .tags:before
 , .h-events-index .tags:before
+, .archivo-agenda .tags:before
 { content: "\f02c"; }
 
 /*   icon: two paper blocks */
@@ -2075,130 +2077,75 @@ vertical-align: middle;
 
 
 
-.archivo-agenda { list-style-type: none; padding-left: 0}
+
 .archivo-agenda li {
-	position: relative;
-	margin: 1em 0px;
-}
-
-.archivo-agenda time{
-	position: relative;
-	padding-left: 4em;
-}
-
-.archivo-agenda .event-info {
-	display: inline-block;
-	margin-left: 0em;
-	margin-top: 0em;
-	
-	width: 100%;
-	
-	background-color: #4A4A4A;
-	color: #9B9B9B;
-	
-	box-shadow: 0px 0px 0.2em #C5C5C5;
-}
-
-.archivo-agenda .name {
-	display: inline-block;
-	margin-right: 0.5em;
-	padding: 0.5em;
-	height: auto;
-
-	font-size: 1.6em;
-	color: #333333;
-
-	border: 1px solid #E69500;
-	background-color: #FFA500;
-}
-.archivo-agenda .name:hover {
-	color: #000000;
-	background-color: #EC9901;
+	margin: 0.3em 0;
 }
 
 
-.archivo-agenda .date-day {
-	display: inline-block;
-	position: absolute;
-	padding: 0.6em 0.7em;
-	
-	
-	background-color: #FFA500;
-	border-radius: 2em;
-	color: #FFF;
+
+.archivo-agenda a.name{
+display: inline-block;
+color: #382201;
+border: 0;
 }
 
-.archivo-agenda .date-time{
-	display: inline-block;
+.archivo-agenda a.name:hover {color: white; }
 
-	font-size: 0.95em;
-}
-
-
-@media screen and (max-width: 899px) {
-	.archivo-agenda .date-day{
-		left: 0;
-		top: -10px;
-	}
-	.archivo-agenda .date-time{margin-left: -14px; }
-	.date-single .date-finish .date-time {margin-left: -3.5em;}
-	.date-single .date-finish .date-time:before{ content: "-"; margin-right: 0.5em;}
-
-
-	.archivo-agenda .name { display: block; margin-right: 0; margin-bottom: 0.3em; margin-left: -0.2em;}
-	.archivo-agenda .event-info {padding-bottom: 0.4em; padding-left: 0.2em;}
+.event-title {
+    position: relative;
+    display: inline-block;
+    padding: 0.6em 4em 0.6em 0.7em;
+    background-color: #ff9225;
 }
 
 
-@media screen and (min-width: 900px) {
+.archivo-agenda .event-details {
+    background-color: #1c82dc;
+    display: inline-block;
+    color: white;
+    position: relative;
+    padding: 0.6em 3em 0.6em 0.7em;
+    left: -5px;
+}
 
-	.archivo-agenda { padding-left: 3em}
 
-	.archivo-agenda .event-info {
-		margin-left: 9.0em;
-		min-width: 710px;
-		width: auto;
+/* nice arrow */
+.event-details::before {
+    content: "";
+    border-style: solid;
+    border-width: 20px 38px 19px 0px;
+    border-color: transparent #1c82dc transparent transparent;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -38px;
+}
 
-	}
+.agenda .tags::before {color: #e6e6e6;}
 
-	.archivo-agenda .date-day {left: -10px; }
+.archivo-agenda .tags {
+    font-size: 0.8em;
+    margin-left: 1em;
+}
 
-	.archivo-agenda .date-time{position: absolute; top: -0.1em; }
+.archivo-agenda .tags a {color: white; }
 
-	.archivo-agenda .date-finish .date-time {top: 1.2em; padding-left: 1em;}
 
-	.archivo-agenda .date-finish .date-time{
-		position: absolute;
-		display: inline-block;
-		top: 20px;
-		left: 12px;
-	}
 
-	.archivo-agenda .date{
-		display: inline-block;
-		height: 20px;
-		width: 145px;
-		position: absolute;
-		top: -0.1em;
+.event-title:hover {
+    background-color: #e9780c;
+    color: white;
+}
 
-		border-bottom: 1px solid #FFA500;
-	}
+.event-title:hover a {color: white; }
 
-	   .archivo-agenda .date-span .date-start .date-day
-	, .archivo-agenda .date-span .date-start .date-time
-	{top: 0em; }
+.event-title:hover + .event-details {
+    background-color: #1571c3;
+}
 
-	.archivo-agenda .date-span .date-finish {
-		padding-left: 5.1em;
-		top: 1.1em;
-
-		border-bottom: 1px solid #FFA500;
-	}
-	.archivo-agenda .date-span .date-finish .date-day{
-		top: 5px;
-		left: -30px;
-		padding: 0.4em 0.5em;
-	}	
+.event-title:hover + .event-details::before {
+	border-right-color: #1571c3;
 }
 
 
@@ -2570,6 +2517,7 @@ vertical-align: middle;
 		position: absolute;
 		top: 8em;
 		left: 0px;
+		font-size: 0.8em;
 	}
 }
 

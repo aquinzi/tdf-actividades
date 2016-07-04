@@ -9,7 +9,7 @@ horario:
 precio: 
 nota: | 
   por ahora solo talleres, próximo a ser una escuela de iniciación
-website: [""]
+website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/canotaje-taller/
