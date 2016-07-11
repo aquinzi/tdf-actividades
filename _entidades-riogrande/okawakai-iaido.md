@@ -1,13 +1,14 @@
 ---
 nombre: Okawakai
 categoria: iaido
-ultima-actualizacion: 2016-06-23
+ultima-actualizacion: 2016-07-10
 direccion: 
   lugar: [sumchacra4]
 horario: 
-  - {dia: "miércoles", hora: "20:30", nota: "Semana por medio compartido con kendo" }
+  - {dia: "miércoles", hora: "20:30-22:00", nota: "Semana por medio compartido con kendo" }
 precio: pago
 nota: | 
+  Estilo: ittô ryû
   El horario es hasta encontrar uno definitivo.
   Nombre alternativo: Ôkawakai
 website: []
