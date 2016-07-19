@@ -528,9 +528,13 @@
 	"command_palette":
 	{
 		"height": 375.0,
-		"last_filter": "",
+		"last_filter": "cop",
 		"selected_items":
 		[
+			[
+				"cop",
+				"File: Copy Name"
+			],
 			[
 				"",
 				"Bookmarks: Toggle"
@@ -554,10 +558,6 @@
 			[
 				"insta",
 				"Package Control: Install Package"
-			],
-			[
-				"cop",
-				"File: Copy Name"
 			],
 			[
 				"copy",
@@ -663,18 +663,27 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/aikido",
+		"/C/Users/Ariela/Desktop/tdf-actividades",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07",
-		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-22-obra-titeres-habia-una-vez-dos-pies-segunda-funcion.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-22-obra-titeres-habia-una-vez-dos-pies-tercera-funcion.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-21-obra-titeres-habia-una-vez-dos-pies-primera-funcion.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-23-obra-titeres-habia-una-vez-dos-pies-cuarta-funcion.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-22-concierto-lengatomica.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-07-concierto-derockados.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/Deportivos, en el CEPLA de la Margen Sur, en el Skate P.mmd",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/10/2016-10-08-maraton-solidaria-210-km.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/10/2016-10-07-presentacion-flaco pailos.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/08/2016-08-13-presentacion-cantores-alba.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/08/2016-08-12-gran-premio-hermandad-43-edicion.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-15-segundo-seminario-nacional-2016-aikido-tdf.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
@@ -682,7 +691,6 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-14-yayo-todo-que.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-10-concierto-soledad-pastorutti.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-16-tercera-peña-bicentenario.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-07-concierto-derockados.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-03-vuelta-cabo-domingo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-05-seminario-contar-imagenes.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/place.html",
@@ -792,17 +800,7 @@
 		"/C/Users/Ariela/Documents/My Dropbox/chino mandarín utn.txt",
 		"/C/Users/Ariela/Documents/My Dropbox/facundo armas.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/02/2016-02-20-feria-fin-mundo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/02/2016-02-22-gala-cierre-semana-antartida.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/aikido/sei-dojo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/actividades/index.html",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/aikido/sakanashi-dojo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/2016-03-11-primer-seminario-nacional-2016-aikido-tdf.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/kung-fu/escuela-shaolin-tdf.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/.gitignore",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2015/2015-12-11-seminario-nacional-aikido.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/tango-pilates-alem.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/el-cachafaz.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/boxeo/boxing-club-vicente-stanic.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/02/2016-02-22-gala-cierre-semana-antartida.md"
 	],
 	"find":
 	{
@@ -1131,7 +1129,7 @@
 		"cols":
 		[
 			0.0,
-			0.918032786885,
+			0.623714234026,
 			1.0
 		],
 		"rows":
@@ -1359,7 +1357,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -1367,7 +1365,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 112.0,
+	"side_bar_width": 206.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
