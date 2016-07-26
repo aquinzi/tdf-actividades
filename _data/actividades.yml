@@ -24,6 +24,11 @@
   descripcion: | 
     Ajedrez y otros "juegos de mesa", como Go
 
+- id: arqueria
+  nombre: arquería
+  tipo: deporte
+  alternativo: [arco, tiro con arco]
+
 - id: atletismo
   nombre: atletismo
   tipo: deporte
