@@ -9,7 +9,7 @@ horario:
 precio: pago
 nota: | 
   Nombre alternativo: Ôkawakai
-  Comunicarse después de las 17:00 hs
+  Comunicarse después de las 17:00 hs (Diego Sienra)
 website: []
 telefono: ["011-1559138598"]
 email: 
