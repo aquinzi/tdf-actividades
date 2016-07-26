@@ -27,7 +27,7 @@
 - id: arqueria
   nombre: arquería
   tipo: deporte
-  alternativo: [arco, tiro con arco]
+  alternativo: [arco deportivo, tiro con arco]
 
 - id: atletismo
   nombre: atletismo
