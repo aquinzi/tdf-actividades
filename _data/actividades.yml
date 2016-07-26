@@ -292,6 +292,10 @@
   tipo: deporte
   alternativo: [sanda,boxeo chino]
 
+- id: sipalki
+  nombre: sipalki
+  tipo: deporte
+
 - id: taekwondo
   nombre: taekwondo
   tipo: deporte
