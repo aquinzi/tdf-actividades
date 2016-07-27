@@ -6,15 +6,15 @@ baseurl: "" # the subpath of your site, e.g. /blog/ # if it's not in root of dom
 url: &site_url "http://tdf.aquinzi.com" # the base hostname & protocol for your site
 
 github:
-    repository_nwo: eikiu/tdf-actividades
+    repository_nwo: aquinzi/tdf-actividades
     url: *site_url #should be using above config, but keep it until we clean everything
-    repository_url: https://github.com/eikiu/tdf-actividades
+    repository_url: https://github.com/aquinzi/tdf-actividades
     # below not in usage
     repository_name: tdf-actividades
-    owner_name: eikiu 
-    issues_url: https://github.com/eikiu/tdf-actividades/issues
-    wiki_url:   https://github.com/eikiu/tdf-actividades/wiki
-    clone_url:  https://github.com/eikiu/tdf-actividades.git 
+    owner_name: aquinzi
+    issues_url: https://github.com/aquinzi/tdf-actividades/issues
+    wiki_url:   https://github.com/aquinzi/tdf-actividades/wiki
+    clone_url:  https://github.com/aquinzi/tdf-actividades.git 
 
     # custom github data
     branch: gh-pages
