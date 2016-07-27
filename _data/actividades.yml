@@ -30,7 +30,7 @@
    
    El ajedrez es un juego de estrategia, de origen europeo, entre dos personas; cada una de las cuales dispone de 16 piezas que se colocan sobre un tablero dividido en 64 cuadrados (blancos y negros). El objetivo es «derrocar» al rey del oponente. Está considerado como un deporte. (Ver más información en <a href="https://es.wikipedia.org/wiki/Ajedrez">Wikipedia</a>.)
    
-   El go (Nombre original en chino simplificado: <span lang="ch">围棋</span>, chino tradicional: <span lang="ch">圍棋</span>, japonés: <span lang="jp">囲碁</span>, coreano: <span lang="kr">바둑</span>) es un juego de estrategia para dos jugadores; se colocan las piedras (blancas y negras) de a una alternadamente en un tablero de 19×19 intersecciones (9x9 o 13x13 para principiantes). El objetivo es rodear con tus piedras un área mayor en el tablero que el oponente. (Ver más información en <a href="https://es.wikipedia.org/wiki/Go">Wikipedia</a>.)
+   El go (Nombre original en chino simplificado: <span lang="zh">围棋</span>, chino tradicional: <span lang="zh">圍棋</span>, japonés: <span lang="jp">囲碁</span>, coreano: <span lang="kr">바둑</span>) es un juego de estrategia para dos jugadores; se colocan las piedras (blancas y negras) de a una alternadamente en un tablero de 19×19 intersecciones (9x9 o 13x13 para principiantes). El objetivo es rodear con tus piedras un área mayor en el tablero que el oponente. (Ver más información en <a href="https://es.wikipedia.org/wiki/Go">Wikipedia</a>.)
 
 - id: arqueria
   nombre: arquería
@@ -311,40 +311,62 @@
 - id: levantamiento-olimpico
   nombre: levantamiento olímpico
   tipo: deporte
+  alternativo: [hlterofilia, levantamiento de pesas]
+  descripcion: |
+    Consiste en el levantamiento de la mayor cantidad de peso posible en una barra en cuyos extremos se fijan varios discos, los cuales determinan el peso final que se levanta. Olímpico desde 1920. (Ver más información en <a href="https://es.wikipedia.org/wiki/Halterofilia">Wikipedia</a>.)
   
 - id: lucha
   nombre: lucha
   tipo: deporte
+  descripcion: |
+    La lucha es un deporte en el cual cada participante intenta derrotar a su rival sin el uso de golpes. El objetivo consiste en ganar el combate haciendo caer al adversario al suelo y manteniendo sus dos hombros fijos sobre el tapiz o ganando a los puntos. Hay, sin embargo, reglas particulares que varían de un estilo a otro. Las tres variedades principales que existen: lucha libre profesional, la lucha libre olímpica y la lucha grecorromana. (Ver más información en <a href="https://es.wikipedia.org/wiki/Lucha_(deporte)">Wikipedia</a>.)
 
 - id: motociclismo
   nombre: motociclismo
   tipo: deporte
+  descripcion: |
+    El motociclismo es el uso deportivo de la moto en varias modalidades. El objetivo de una carrera de velocidad consiste en recorrer cierta distancia (o ir de un sitio hacia otro), en el menor tiempo posible; o recorrer la mayor distancia en un tiempo predefinido; o recorrer una distancia en un tiempo preestablecido sin sobrepasar ese tiempo, modo en el que gana el corredor que se acerca más al tiempo predefinido. (Ver más información en <a href="https://es.wikipedia.org/wiki/Motociclismo">Wikipedia</a>.)
 
 - id: musica
   nombre: música
   tipo: arte
+  descripcion: |
+    Es el arte de organizar sensible y lógicamente una combinación coherente de sonidos y silencios utilizando los principios fundamentales de la melodía, la armonía y el ritmo, mediante la intervención de complejos procesos psico-anímicos.  (Ver más información en <a href="https://es.wikipedia.org/wiki/Música">Wikipedia</a>.)
 
 - id: natacion
   nombre: natación
   tipo: deporte
+  descripcion: |
+    Deporte que consiste en el desplazamiento de una persona en el agua, sin que esta toque el suelo. Olímpico desde 1896. (Ver más información en <a href="https://es.wikipedia.org/wiki/Natación_(deporte)">Wikipedia</a>.)
 
 - id: paddle
   nombre: paddle
   tipo: deporte
-  alternativo: [padle,padel]
+  alternativo: [padle,padel,pádel]
+  descripcion: |
+    Deporte de paleta, de origen mexicano; se juega en parejas y consta de tres materiales para su desarrollo: la pelota, la paleta y el campo de juego. El objetivo es ser el mejor de tres sets. (Ver más información en <a href="https://es.wikipedia.org/wiki/Pádel">Wikipedia</a>.)
 
 - id: paintball
   nombre: paintball
   tipo: deporte
+  descripcion: |
+    En español "bola de pintura"; Es juego de estrategia complejo en el cual los jugadores alcanzados por bolas de pintura son eliminados del mismo a veces en forma transitoria, a veces en forma definitiva dependiendo de la modalidad. 
+
+    Normalmente en una partida de <i lang="en">paintball</i> se enfrentan dos equipos con el fin de eliminar a todos los jugadores del bando rival o completar un objetivo (como capturar una bandera o eliminar a un jugador concreto); pueden jugarse bajo techo o al aire libre y adoptar diferentes formas, las más populares son el <i lang="en">woodsball</i>, el " Milsim" y el torneo o <i lang="en">speedball</i>.  (Ver más información en <a href="https://es.wikipedia.org/wiki/Paintball">Wikipedia</a>.)
 
 - id: pakua
   nombre: pakua
   tipo: deporte
   alternativo: [pa kua,pa kua chang,baguazhang,bāguàzhǎng,bāguà,bagua]
+  descripcion: |
+    Nombre original <span lang="zh">八卦掌</i> (Baguazhang). es una de las artes marciales internas de China y se basa en el símbolo taoísta del bagua. Una de sus características distintivas, es el entrenamiento que realizan sus practicantes rodeando un círculo imaginario, utilizando como armas tanto las manos como los pies. (Ver más información en <a href="https://es.wikipedia.org/wiki/Pa_kua_chang">Wikipedia</a>.)
 
 - id: palestra
   nombre: palestra
   tipo: deporte
+  alternativo: [búlder,escalada en bloque]
+  descripcion: |
+    Escalada segura en una pared de madera con estribos escalonados para poder ascender. Tiene una colchoneta para asegurar las caídas y evitar golpes.
 
 - id: patin-artistico
   nombre: patín artístico
