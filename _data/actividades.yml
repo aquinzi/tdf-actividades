@@ -37,7 +37,7 @@
   tipo: deporte
   alternativo: [arco deportivo, tiro con arco]
   descripcion: | 
-     El tiro con arco es un deporte que consiste en disparar una flecha a una diana. Olímpico desde 1900. (Ver más información en <a href="https://es.wikipedia.org/wiki/Tiro_con_arco">Wikipedia</a>.)
+    El tiro con arco es un deporte que consiste en disparar una flecha a una diana. Olímpico desde 1900. (Ver más información en <a href="https://es.wikipedia.org/wiki/Tiro_con_arco">Wikipedia</a>.)
 
 - id: atletismo
   nombre: atletismo
@@ -45,7 +45,7 @@
   descripcion: | 
     El atletismo abarca numerosas disciplinas agrupadas en carreras, saltos, lanzamientos, pruebas combinadas y marcha; se trata de superar el rendimiento de los adversarios en velocidad o en resistencia llamado también fondo, en distancia o en mayor altura.
 	 
-	 Se pueden encontrar carreras de velocidad, medio fondo, fondo, saltos de vallas y obstáculos, relevos, marcha, salto en longitud, salto triple, salto de altura, salto con pértiga, lanzamiento de peso, lanzamiento de disco, lanzamiento de martillo, lanzamiento de jabalina, pentatlón, heptatlón y decatlón. (Ver más información en <a href="https://es.wikipedia.org/wiki/Atletismo">Wikipedia</a>.)
+    Se pueden encontrar carreras de velocidad, medio fondo, fondo, saltos de vallas y obstáculos, relevos, marcha, salto en longitud, salto triple, salto de altura, salto con pértiga, lanzamiento de peso, lanzamiento de disco, lanzamiento de martillo, lanzamiento de jabalina, pentatlón, heptatlón y decatlón. (Ver más información en <a href="https://es.wikipedia.org/wiki/Atletismo">Wikipedia</a>.)
 
 - id: automovilismo
   nombre: automovilismo
@@ -371,91 +371,146 @@
 - id: patin-artistico
   nombre: patín artístico
   tipo: deporte
+  alternativo: [patinaje artístico sobre ruedas]
+  descripcion: |
+    Disciplina deportiva de deslizamiento donde los deportistas compiten sobre patines, combinando elementos técnicos con facetas artísticas. Asimismo, requiere una buena preparación física y una gran capacidad de concentración. Se puede competir en varias categorías: patinaje libre, figuras, danza, patinaje sincronizado, show e <i lang="en">in-line</i>. (Ver más información en <a href="https://es.wikipedia.org/wiki/Patinaje_artístico_sobre_ruedas">Wikipedia</a>.)
 
 - id: pesca-deportiva
   nombre: pesca deportiva
   tipo: deporte
+  descripcion: |
+    Actividad que se realiza a nivel personal o en equipo de personas por ocio o competencia. Cuando se realiza en forma deportiva es gestionada por diferentes federaciones de pesca regionales y nacionales, que reglan el uso de artes y aparejos, delimitando el cupo de capturas y su tamaño según especies, e incluso gestionan el uso y actividad de los diferentes hábitats. También organizan concursos, campeonatos y actividades a todos los niveles, que pueden desarrollarse desde la orilla o en embarcación. (Ver más información en <a href="https://es.wikipedia.org/wiki/Pesca_deportiva">Wikipedia</a>.)
 
 - id: pintura
   nombre: pintura
   tipo: arte
+  descripcion: |
+    Es el arte de la representación gráfica utilizando pigmentos mezclados con otras sustancias aglutinantes orgánicas o sintéticas. En este arte se emplean técnicas de pintura, conocimientos de teoría del color y de composición pictórica, y el dibujo. La práctica del arte de pintar, consiste en aplicar, en una superficie determinada, una técnica determinada, para obtener una composición de formas, colores, texturas, dibujos, etc. dando lugar a una obra de arte según algunos principios estéticos. (Ver más información en <a href="https://es.wikipedia.org/wiki/Pintura">Wikipedia</a>.)
 
 - id: polo
   nombre: polo
   tipo: deporte
+  descripcion: |
+    Deporte de equipos, en el que dos conjuntos con cuatro jinetes cada uno, montados a caballo, intentan llevar una pequeña pelota de madera o plástico hacia la portería del rival, formada por dos postes de mimbre, por medio de un taco o mazo. El objetivo consiste en marcar la mayor cantidad de goles. (Ver más información en <a href="https://es.wikipedia.org/wiki/Polo_(deporte)">Wikipedia</a>.)
 
 - id: pool
   nombre: pool
   tipo: deporte
   alternativo: [billar]
+  descripcion: |
+    Deporte de precisión que se practica impulsando con un taco un número variable de bolas, en una mesa con tablero forrada de paño, rodeada de bandas de material elástico y con troneras o sin ellas. (Ver más información en <a href="https://es.wikipedia.org/wiki/Billar">Wikipedia</a>.)
 
 - id: powerlifting
   nombre: powerlifting
   tipo: deporte
+  alternativo: [levantamiento de potencia]
+  descripcion: |
+    Deporte de fuerza que consiste en tres eventos: la sentadilla, el press de banca y el peso muerto. Los movimientos del levantamiento de potencia realizan una menor trayectoria que la halterofilia; se usa más la fuerza máxima. (Ver más información en <a href="https://es.wikipedia.org/wiki/Levantamiento_de_potencia">Wikipedia</a>.)
 
 - id: roller-derby
   nombre: roller derby
   tipo: deporte
+  descripcion: |
+    Deporte de contacto de origen estadounidense, principalmente femenino, que se juega sobre patines tradicionales alrededor de una pista ovalada. Consiste en un partido de dos tiempos de 30 minutos cada uno, donde dos equipos compiten entre sí con el objetivo de anotar más puntos que el equipo contrario. El equipo con más puntos al final del partido es el ganador. (Ver más información en <a href="https://es.wikipedia.org/wiki/Roller_derby">Wikipedia</a>.)
 
 - id: rugby
   nombre: rugby
   tipo: deporte
+  descripcion: |
+    Deporte de contacto de origen inglés de equipos de 15 jugadores cada equipo (aunque hay una variación para un juego de siete) en un campo rectangular de césped. En cada uno de los extremos del campo hay un sector para hacer la anotación; también se encuentran instalados dos postes separados entre sí  y unidos por un travesaño (forma de H). La pelota es de forma ovalada, construida con gajos de cuero o material sintético parecido. (Ver más información en <a href="https://es.wikipedia.org/wiki/Rugby">Wikipedia</a>.)
 
 - id: salsa
   nombre: salsa
   tipo: deporte
+  descripcion: |
+    Baile con ritmos afrocaribeños fusionados con jazz y otros estilos. (Ver más información en <a href="https://es.wikipedia.org/wiki/Salsa_(baile)">Wikipedia</a>.)
 
 - id: salto-hipico
   nombre: salto hípico
   tipo: deporte
+  alternativo: [salto ecuestre]
+  descripcion: |
+    Disciplina dentro de la equitación que consiste en un acontecimiento sincronizado juzgado en la capacidad del caballo y del jinete de saltar sobre una serie de obstáculos, en un orden dado. (Ver más información en <a href="https://es.wikipedia.org/wiki/Salto_ecuestre">Wikipedia</a>.)
 
 - id: sanshou
   nombre: sanshou
   tipo: deporte
   alternativo: [sanda,boxeo chino]
+  descripcion: |
+    Nombre original: <span lang="zh">散打</span> (Sanda) o <span lang="zh">散手</span> (San shou), literalmente significan "combate libre".
+
+    Es la modalidad deportiva y competitiva del wushu/kung fu en la categoría de "Combate", formado por técnicas de golpes (de puño y pierna) y de proyección. Todas esta variedad de técnicas de agarre y proyección lo diferencian del Kickboxing y otras modalidades de combate. Los competidores pueden obtener la victoria por KO o por puntos (que obtienen por acertar un golpe al cuerpo o la cabeza), derribar al oponente, o expulsándolo fuera del área de competición. (Ver más información en <a href="https://es.wikipedia.org/wiki/San_Da">Wikipedia</a>.)
 
 - id: sipalki
   nombre: sipalki
   tipo: deporte
+  alternativo: [sipalkido, sibpalki]
+  descripcion: |
+    Nombre original <span lang="ko">십팔기</span>, se traduciría como "18 técnicas". Es un arte marcial de origen mongol-coreano practicado desde 1759. Cuenta entre las 18 técnicas enseñadas la de manos vacías (que incluye lucha contra uno, contra varios y técnicas de defensa personal), y 17 técnicas de armas, entre las que podemos mencionar el sable, palos cortos, palo largo, palo articulado, cuchillo, látigo, escudo, soga, lanza, entre otras. (Ver más información en <a href="https://es.wikipedia.org/wiki/Sibpalki">Wikipedia</a>.)
 
 - id: taekwondo
   nombre: taekwondo
   tipo: deporte
+  descripcion: |
+   Nombre original <span lang="ko">태권도</span>. Arte marcial que se destaca por la variedad y espectacularidad de sus técnicas de patadas y, actualmente, es uno de los deportes de combate más conocidos y popular. El taekwondo se basa fundamentalmente en la forma de realización de los golpes con el pie, y el trabajo de pasos, y en los golpes con el puño, varios de los golpes a mano abierta, los bloqueos y las posiciones. Es deporte olímpico de combate desde 1988. (Ver más información en <a href="https://es.wikipedia.org/wiki/Taekwondo">Wikipedia</a>.)
 
 - id: tai-chi-chuan
   nombre: tai chi chuan
   tipo: deporte
+  alternativo: [tai chi]
+  descripcion: |
+    Nombre original <span lang="zh">太極拳</span>. Es un arte marcial desarrollado en el Imperio de China. Originalmente, el tai chi es un arte marcial interno para la lucha cuerpo a cuerpo, ya sea armada o desarmada. En tiempos más recientes se lo considera cada vez más como una práctica físico-espiritual para mejorar la calidad de vida tanto física como mental. Por una parte sería muy provechosa para la salud, mientras que por otra constituye una técnica de meditación (meditación en movimiento). Frente a estos puntos de vista, su aspecto de arte marcial va perdiendo importancia hasta a veces desaparecer totalmente. (Ver más información en <a href="https://es.wikipedia.org/wiki/Taichí">Wikipedia</a>.)
 
 - id: tango
   nombre: tango
   tipo: deporte
+  descripcion: |
+    El baile tanguero está construido sobre cuatro componentes básicos: el abrazo estrecho, la caminata, el corte y la quebrada, entendidos estos dos últimos términos clásicos como el eje de la improvisación y las figuras coreográficas que adornan la danza ("firulete"). Pero por sobre todas las cosas el tango debe ser bailado como un lenguaje corporal a través del cual se transmiten emociones personales a la pareja. Se dice que el tango se baila «escuchando el cuerpo del otro». En el tango la pareja debe realizar figuras, pausas y movimientos improvisados, diferentes para cada uno de ellos, sin soltarse. Es el abrazo lo que hace complicado combinar en una sola coreografía las improvisaciones de ambos. (Ver más información en <a href="https://es.wikipedia.org/wiki/Tango">Wikipedia</a>.)
 
 - id: teatro
   nombre: teatro
   tipo: arte
   alternativo: [actuación]
+  descripcion: |
+   El teatro es la rama de las Artes escénicas relacionada con la actuación, que representa historias actuadas frente a los espectadores o frente a una cámara usando una combinación de discurso, gestos, escenografía, música, sonido y espectáculo. (Ver más información en <a href="https://es.wikipedia.org/wiki/Teatro">Wikipedia</a>.)
+
+   La actuación es el trabajo realizado por un actor o actriz al representar a un personaje en una obra teatral, cinematográfica o de otro tipo. (Ver más información en <a href="https://es.wikipedia.org/wiki/Actuación">Wikipedia</a>.)
 
 - id: tenis
   nombre: tenis
   tipo: deporte
+  descripcion: |
+    Deporte de raqueta que se practica sobre una pista de tenis rectangular (compuesta por distintas superficies las cuales pueden ser cemento, tierra, o césped), delimitada por líneas y dividida por una red. Se disputa entre dos jugadores (individuales) o entre dos parejas (dobles). El objetivo del juego es lanzar una pelota golpeándola con la raqueta de modo que bote dentro del campo del rival procurando que este no pueda devolverla. Es olímpico desde 1896. (Ver más información en <a href="https://es.wikipedia.org/wiki/Tenis">Wikipedia</a>.)
 
 - id: tenis-mesa
   nombre: tenis de mesa
   tipo: deporte
+  descripcion: |
+    Deporte de raqueta con gomas que se disputa entre dos jugadores o dos parejas (dobles) sobre una mesa. Es un deporte olímpico desde 1988. (Ver más información en <a href="https://es.wikipedia.org/wiki/Tenis_de_mesa">Wikipedia</a>.)
   
-- id: tiro
-  nombre: tiro
+- id: tiro-deportivo
+  nombre: tiro deportivo
   tipo: deporte
+  descripcion: |
+    Deporte que implica poner a prueba precisión y concentración en el manejo de un arma de fuego o de aire comprimido. (Ver más información en <a href="https://es.wikipedia.org/wiki/Tiro_deportivo">Wikipedia</a>.)
 
 - id: voley
   nombre: voley
   tipo: deporte
   alternativo: [volley,volleyball,voleibol]
+  descripcion: |
+    Deporte donde dos equipos se enfrentan sobre un terreno de juego liso separados por una red central, tratando de pasar la pelota por encima de la red hacia el suelo del campo contrario. La pelota debe ser tocada o impulsado con golpes limpios. Cada equipo dispone de un máximo de tres toques para devolver la pelota al campo contrario. Habitualmente el balón se golpea con manos y brazos, pero también vale utilizar cualquier otra parte del cuerpo. Olímpico desde 1964. (Ver más información en <a href="https://es.wikipedia.org/wiki/Voleibol">Wikipedia</a>.)
 
 - id: yoga
   nombre: yoga
   tipo: deporte
+  descripcion: |
+    Actividad que postula un conjunto de técnicas para el desarrollo de capacidades físicas y energéticas, de habilidades psíquicas y de la conciencia espiritual. El hatha yoga es uno de los métodos de yoga más difundido en todo el mundo, es conocido por su práctica de ásanas (posturas corporales), que aportan a los músculos firmeza y elasticidad. (Ver más información en <a href="https://es.wikipedia.org/wiki/Hatha_yoga">Wikipedia</a>.)
 
 - id: zumba
   nombre: zumba
   tipo: deporte
+  descripcion: |
+    Disciplina fitness creada a mediados de los años 90 por el colombiano Alberto "Beto" Pérez, enfocada por una parte a mantener un cuerpo saludable y por otra a desarrollar, fortalecer y dar flexibilidad al cuerpo mediante movimientos de baile combinados con una serie de rutinas aeróbicas.
+
+    Zumba utiliza dentro de sus rutinas los principales ritmos latinoamericanos, como lo son la salsa, el merengue, la cumbia, el reggaetón y el samba. (Ver más información en <a href="https://es.wikipedia.org/wiki/Zumba">Wikipedia</a>.)
