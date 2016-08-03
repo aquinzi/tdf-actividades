@@ -28,9 +28,9 @@
   descripcion: | 
     Ajedrez y otros "juegos de mesa" o "de tablero", como Go.
    
-   El ajedrez es un juego de estrategia, de origen europeo, entre dos personas; cada una de las cuales dispone de 16 piezas que se colocan sobre un tablero dividido en 64 cuadrados (blancos y negros). El objetivo es «derrocar» al rey del oponente. Está considerado como un deporte. (Ver más información en <a href="https://es.wikipedia.org/wiki/Ajedrez">Wikipedia</a>.)
+    El ajedrez es un juego de estrategia, de origen europeo, entre dos personas; cada una de las cuales dispone de 16 piezas que se colocan sobre un tablero dividido en 64 cuadrados (blancos y negros). El objetivo es «derrocar» al rey del oponente. Está considerado como un deporte. (Ver más información en <a href="https://es.wikipedia.org/wiki/Ajedrez">Wikipedia</a>.)
    
-   El go (Nombre original en chino simplificado: <span lang="zh">围棋</span>, chino tradicional: <span lang="zh">圍棋</span>, japonés: <span lang="jp">囲碁</span>, coreano: <span lang="kr">바둑</span>) es un juego de estrategia para dos jugadores; se colocan las piedras (blancas y negras) de a una alternadamente en un tablero de 19×19 intersecciones (9x9 o 13x13 para principiantes). El objetivo es rodear con tus piedras un área mayor en el tablero que el oponente. (Ver más información en <a href="https://es.wikipedia.org/wiki/Go">Wikipedia</a>.)
+    El go (Nombre original en chino simplificado: <span lang="zh">围棋</span>, chino tradicional: <span lang="zh">圍棋</span>, japonés: <span lang="jp">囲碁</span>, coreano: <span lang="kr">바둑</span>) es un juego de estrategia para dos jugadores; se colocan las piedras (blancas y negras) de a una alternadamente en un tablero de 19×19 intersecciones (9x9 o 13x13 para principiantes). El objetivo es rodear con tus piedras un área mayor en el tablero que el oponente. (Ver más información en <a href="https://es.wikipedia.org/wiki/Go">Wikipedia</a>.)
 
 - id: arqueria
   nombre: arquería
