@@ -44,7 +44,7 @@
   tipo: deporte
   descripcion: | 
     El atletismo abarca numerosas disciplinas agrupadas en carreras, saltos, lanzamientos, pruebas combinadas y marcha; se trata de superar el rendimiento de los adversarios en velocidad o en resistencia llamado también fondo, en distancia o en mayor altura.
-	 
+    
     Se pueden encontrar carreras de velocidad, medio fondo, fondo, saltos de vallas y obstáculos, relevos, marcha, salto en longitud, salto triple, salto de altura, salto con pértiga, lanzamiento de peso, lanzamiento de disco, lanzamiento de martillo, lanzamiento de jabalina, pentatlón, heptatlón y decatlón. (Ver más información en <a href="https://es.wikipedia.org/wiki/Atletismo">Wikipedia</a>.)
 
 - id: automovilismo
@@ -146,7 +146,7 @@
   tipo: deporte
   descripcion: | 
     Actividad que consiste en realizar ascensos sobre paredes de fuerte pendiente, valiéndose de la fuerza física y mental propia. Utiliza anclajes previamente fijados a la pared mediante sistemas mecánicos o químicos colocados estratégicamente a lo largo de la vía, lo que permite ampliar las posibilidades de escalada a las placas de roca compacta carentes de aristas o fisuras. La escalada deportiva se caracteriza por reducir notablemente el riesgo del escalador, a cambio de aumentar el nivel de dificultad (el grado de la vía). (Ver más información en <a href="https://es.wikipedia.org/wiki/Escalada">Wikipedia</a>.)
-	 
+
 - id: esgrima
   nombre: esgrima
   alternativo: [esgrima deportiva]
