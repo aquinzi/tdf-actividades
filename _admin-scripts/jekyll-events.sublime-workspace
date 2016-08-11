@@ -664,15 +664,41 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07"
+		"/C/Users/Ariela/Desktop/tdf-actividades/_data",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/actividades",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/actividades"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/_data/actividades.yml",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_data/changelog.yml",
+		"/I/Musica/ストロベリーソングオーケストラ/!lyrics/狂れた埋葬虫、電波、赤マント!.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/okawakai-iaido.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/okawakai-kendo.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/agrupacion-fueguina-tiro-arco.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/actividades/arqueria.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/sipalki-escuela-yamana.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/trompeta-taller.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/palestra-skate-park.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/escuela-yamana.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/aikido/aikikai-ushuaia-dojo.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/actividades/sipalki.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/actividades/aikido.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/actividades/aikido.md",
+		"/I/Musica/グリーヴァ/!lyrics/退廃的狂葬.txt",
+		"/I/Musica/グリーヴァ/!lyrics/最後ノ晩餐.txt",
+		"/I/Musica/グリーヴァ/!lyrics/Bondage.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/karate/shoto-yuku.md",
+		"/I/Musica/グリーヴァ/!lyrics/僕ノ自殺理論.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/karate/karate-do-goju-ryu.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/karate/ushuaia-dojo-kaupen.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/karate/shorin-ryu-kodokan-tdf.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/karate/shorinryu-kodokan.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/karate/shito-ryu-hayashi-ha-tdf.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/entity.html",
+		"/I/Musica/グリーヴァ/!lyrics/相剋ノ[baiser].txt",
+		"/I/Musica/グリーヴァ/!lyrics/Diary.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-22-obra-titeres-habia-una-vez-dos-pies-segunda-funcion.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-22-obra-titeres-habia-una-vez-dos-pies-tercera-funcion.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-21-obra-titeres-habia-una-vez-dos-pies-primera-funcion.md",
@@ -695,7 +721,6 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-05-seminario-contar-imagenes.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/place.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/event.html",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/entity.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/default.html",
 		"/I/Musica/Aliene Ma'riage/!lyrics/撲『しもべ』.txt",
 		"/I/Musica/LuLu/!lyrics/喪失ドラッグ.txt",
@@ -745,9 +770,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-11-desafio-producir.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-13-plan-5-dias-dejar-fumar.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/08/2016-08-13-world-latin-dance-cup.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_data/changelog.yml",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_data/riogrande/lugares.yml",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/palestra-skate-park.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/ajedrez/club-ajedrez-rg.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/actividades/index.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/gimnasia-deportiva-municipio.md",
@@ -775,32 +798,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-19-karting.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03/2016-03-12-exposicion-rural.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-02-concurso-cuentos-mujer-mujeres.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-04-noche-museos-espacios-culturales.md",
-		"/C/Users/Ariela/Documents/My Dropbox/selknam2.htm",
-		"/C/Users/Ariela/Documents/My Dropbox/selknam1.htm",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-09-charla-como-prepararnos-para-nueva internet.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03/2016-03-05-segunda-ronda-torneo-apertura-ajedrez.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03/2016-03-05-fiesta popular-musica-tropical.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03/2016-03-24-vuelta-tierra-fuego.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/12/2016-12-18-campeonato-super-especial-ultima-fecha.md",
-		"/I/Musica/MALISEND/info.txt",
-		"/I/Musica/Jin-Machine/info.txt",
-		"/I/Musica/AvelCain/info.txt",
-		"/I/Musica/ゴシップ/info.txt",
-		"/I/Musica/DEZERT/info.txt",
-		"/I/Musica/マルコ/info.txt",
-		"/I/Musica/DADAROMA/info.txt",
-		"/I/Musica/THE BLACK SWAN/info.txt",
-		"/C/Users/Ariela/Desktop/moodo.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/okawakai-kendo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/okawakai-iaido.md",
-		"/C/Users/Ariela/Documents/My Dropbox/sport shorts designs.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/02/2016-02-18-inscripciones-curso-chino-mandarin-nivel-1.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/02/2016-02-21-6to-campeonato-provincial-10-kilometros.md",
-		"/C/Users/Ariela/Documents/My Dropbox/chino mandarín utn.txt",
-		"/C/Users/Ariela/Documents/My Dropbox/facundo armas.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/02/2016-02-20-feria-fin-mundo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/02/2016-02-22-gala-cierre-semana-antartida.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-04-noche-museos-espacios-culturales.md"
 	],
 	"find":
 	{
@@ -818,6 +816,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"DAYS_SPANS_MANUAL_UPDATE",
+			"telef",
 			"==event",
 			"\\n",
 			"\\r",
@@ -943,9 +943,7 @@
 			"</li>",
 			"#tabla-contenido",
 			"3>",
-			"radom_minute",
-			"CIUDADES",
-			"CURRENT_DIR"
+			"radom_minute"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1129,7 +1127,7 @@
 		"cols":
 		[
 			0.0,
-			0.623714234026,
+			0.594318963609,
 			1.0
 		],
 		"rows":
@@ -1365,7 +1363,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 206.0,
+	"side_bar_width": 238.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
