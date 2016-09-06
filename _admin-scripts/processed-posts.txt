@@ -116,3 +116,15 @@ rio-grande@2016-08-13-presentacion-cantores-alba.md
 rio-grande@2016-10-07-presentacion-flaco pailos.md
 rio-grande@2016-10-08-maraton-solidaria-210-km.md
 ushuaia@2016-10-29-aikido-fin-mundo.md
+rio-grande@2016-09-10-desafio-producir.md
+rio-grande@2016-09-10-los-gardelitos.md
+rio-grande@2016-09-25-desfile-primavera.md
+rio-grande@2016-11-06-corro-por-malvinas.md
+rio-grande@2016-11-15-beriso.md
+ushuaia@2016-09-07-cine-surrealista-mulholland-drive.md
+ushuaia@2016-09-09-fiesta-colectividades.md
+ushuaia@2016-09-14-cine-surrealista-under-skin.md
+ushuaia@2016-09-21-cine-surrealista-borgman.md
+ushuaia@2016-09-28-cine-surrealista-lobster.md
+tolhuin@2016-09-14-curso-manipulacion-alimentos.md
+tolhuin@2016-09-17-tolhuin-rock-metalurgico.md
