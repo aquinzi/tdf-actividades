@@ -40,9 +40,22 @@ layout: default
 				{% for location in page.direccion.lugar %}
 					{% include get-place.html place=location city=page.city link=true%}
 				</span>
-			<p style="display:none"><span class="p-locality">{{site.data.prettify.[page.city]}}</span>, <span class="p-region">Tierra del Fuego</span>, <span class="p-country-name">Argentina</span></p> 
+				<p style="display:none"><span class="p-locality">{{site.data.prettify.[page.city]}}</span>, <span class="p-region">Tierra del Fuego</span>, <span class="p-country-name">Argentina</span></p> 
 				{% unless forloop.last %},{%endunless%}
 				{%endfor%}
+			{% if page.direccion.geo %}
+					<ul class="ver-mapa" aria-label="Ver en mapa">
+					<li><a href="http://www.openstreetmap.org/?mlat={{ page.direccion.geo.lat }}&mlon={{ page.direccion.geo.lon }}#map=17/{{ page.geo.lat }}/{{ page.geo.lon }}" rel="external" class="osm">Mapa</a>
+					{% if page.direccion.bing %}
+					<li><a href="{{ page.direccion.bing }}" rel="external" itemprop="hasMap" class="gstreetview">Vista aerea</a>
+					{% endif %}
+
+					<li  itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates"><a href="geo:{{ page.direccion.geo.lat }},{{ page.direccion.geo.lon }};u=35" rel="external">Programa asociado</a>
+						<data class="p-latitude" value="{{ page.geo.lat }}"> <data class="p-longitude" value="{{ page.geo.lon }}">
+				  		<meta itemprop="latitude" content="{{ page.geo.lat }}" /> <meta itemprop="longitude" content="{{ page.geo.lon }}" />
+	    			</li>
+				</ul>
+			{% endif %}
 		</dd>
 		{% endunless %}
 	
