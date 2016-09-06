@@ -938,7 +938,7 @@ if __name__ == '__main__':
 
 
 	for ciudad in CITIES:
-		print (" \n scanning: " + ciudad)
+		print (" \n ::: SCANNING " + ciudad + " :::")
 		current_folder = os.path.join(ROOT_DIR, ciudad, POST_FOLDER)
 
 		for root,subdir,files in os.walk(current_folder):
@@ -950,8 +950,7 @@ if __name__ == '__main__':
 
 				#filename = os.path.basename(path) #get filename from path
 
-				# prevent new line so we can print on same line later
-				print ("\n Processing: " + archivo, end="") 
+
 
 				file_path = os.path.join(root,archivo)
 				#filename is YYYY-MM-DD-slug.md
@@ -959,23 +958,24 @@ if __name__ == '__main__':
 
 				if file_date.split("-")[0] == "2015":
 					# Sorry, we dont want the old ones
-					continue		
-							
+					#print ("\n Skiping (old): " + archivo, end="") 
+					continue
+
 				file_line_processed = PROCESSED_POSTS_FILE_LINE.format(ciudad=ciudad,filename=archivo)
-
-
 
 				file_date = datetime.datetime.strptime(file_date, '%Y-%m-%d')
 
-
 				if file_date < today_date:
-					print (" ... old. skip", end="")
+					print (" Skiping (old): " + archivo)
 					continue
 			
 				if file_line_processed in processed_posts:
-					print (" ... already proccesed. skip", end="")
+					print (" Skiping (already proccesed): " + archivo)
 					continue
 
+				# prevent new line so we can print on same line later
+				print (" Processing: " + archivo, end="") 
+				
 				print() #print so we can use newlines for next messages
 
 				print ("    building: " + file_line_processed)
