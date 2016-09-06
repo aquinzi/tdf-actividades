@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"kil",
+				"kilómetros"
+			],
+			[
 				"border-le",
 				"border-left-color"
 			],
@@ -510,10 +514,6 @@
 			[
 				"text",
 				"text-decoration"
-			],
-			[
-				"trans",
-				"transparent"
 			]
 		]
 	},
@@ -664,15 +664,32 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_data",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/actividades"
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-tolhuin"
 	],
 	"file_history":
 	[
-		"/C/Users/Ariela/Desktop/tdf-actividades/_data/actividades.yml",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_data/changelog.yml",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-tolhuin/aikido-tolhuin.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/karate/dojo-cantera.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/processed-posts.txt",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/09/2016-09-28-cine-surrealista-lobster.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/09/2016-09-21-cine-surrealista-borgman.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/09/2016-09-14-cine-surrealista-under-skin.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/09/2016-09-07-cine-surrealista-mulholland-drive.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts/2016/09/2016-09-14-curso-manipulacion-alimentos.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/09/2016-09-10-desafio-producir.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/09/2016-09-05-antes-hoy-ushuaia.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/09/2016-09-05-memoria-olvido-guerra-civil-espanola.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/09/2016-09-25-desfile-primavera.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/tolhuin/_posts/2016/09/2016-09-17-tolhuin-rock-metalurgico.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/09/2016-09-09-fiesta-colectividades.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/11/2016-11-06-corro-por-malvinas.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/11/2016-11-15-beriso.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/09/2016-09-10-los-gardelitos.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_data/actividades.yml",
 		"/I/Musica/ストロベリーソングオーケストラ/!lyrics/狂れた埋葬虫、電波、赤マント!.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/okawakai-iaido.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/okawakai-kendo.md",
@@ -711,8 +728,6 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/08/2016-08-13-presentacion-cantores-alba.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/08/2016-08-12-gran-premio-hermandad-43-edicion.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-15-segundo-seminario-nacional-2016-aikido-tdf.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/tdf_gcal.py",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/_event_tpl.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-15-yayo-todo-que.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-14-yayo-todo-que.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-10-concierto-soledad-pastorutti.md",
@@ -762,7 +777,6 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/06/2016-06-18-curso-armado-calibracion-impresoras-3d.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/_event_tpl.md",
 		"/C/xampp/htdocs/dokuwiki/lib/plugins/basic html/plugin.info.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_admin-scripts/processed-posts.txt",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/06/2016-06-11-festival-cancion-malvinas-argentinas.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-14-capacitacion-electricistas-matriculados.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/06/2016-06-11-casting-actores-largometraje.md",
@@ -782,27 +796,11 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-23-flisol-rio-grande.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/04/2016-04-23-flisol-ushuaia.md",
 		"/C/Users/Ariela/Documents/My Dropbox/manga comics mini evento.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-22-primer-circuito-patagonico-natacion.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/04/2016-04-30-dia-internacional-danza.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05/2016-05-08-premios-ciudad-rio-grande.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_data/prettify.yml",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-21-29-aniversario-casa-cultura.txt",
-		"/I/Musica/SEX-ANDROID/info.txt",
-		"/I/Musica/MEJIBRAY/info.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-16-25-edicion-desafio-producir.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-16-curso-gratuito-autocad.md",
-		"/I/wiki/help/android/android_downloadapk.md",
-		"/I/Musica/_m-tags/Alice Cooper/{2001-03-27} The Definitive Alice Cooper.tags-bak",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03/2016-03-13-competencia-ciclismo-luis-alamo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/11/2016-11-20-karting-octava-fecha.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-19-karting.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03/2016-03-12-exposicion-rural.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-02-concurso-cuentos-mujer-mujeres.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/03/2016-03-04-noche-museos-espacios-culturales.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-22-primer-circuito-patagonico-natacion.md"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 32.5
 	},
 	"find_in_files":
 	{
@@ -1127,7 +1125,7 @@
 		"cols":
 		[
 			0.0,
-			0.594318963609,
+			0.603977244215,
 			1.0
 		],
 		"rows":
@@ -1363,7 +1361,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 238.0,
+	"side_bar_width": 232.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

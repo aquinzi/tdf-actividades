@@ -13,10 +13,10 @@ precio: gratis
 nota: | 
   Nombre alternativo: Aikidô Tolhuin.
   Sensei Martín Mora (4to. Dan), e instructores suplentes: Fukushidoin: Benito GARRIDO TORRES (1° Dan), Eduardo VARGAS (1° Dan)
-website: ["https://www.facebook.com/profile.php?id=100009818492687"]
+  Se puede ver el lugar con vista aerea desde [Bing Maps](https://www.bing.com/mapspreview?osid=bb342996-89b5-4565-a955-0e8745905c01&cp=-54.5087~-67.196576&lvl=16&style=h&v=2&sV=2&form=S00027)
+website: ["https://www.facebook.com/people/Aikido-Tolhuin/100009818492687"]
 email: martinmora66@hotmail.com
 telefono: []
 permalink: /tolhuin/entidades/aikido-tolhuin/
 ---
 
-Se puede ver el lugar con vista aerea desde [Bing Maps](https://www.bing.com/mapspreview?osid=bb342996-89b5-4565-a955-0e8745905c01&cp=-54.5087~-67.196576&lvl=16&style=h&v=2&sV=2&form=S00027)
