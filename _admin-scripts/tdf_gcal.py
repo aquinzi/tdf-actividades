@@ -922,6 +922,7 @@ if __name__ == '__main__':
 
 
 	if args.site_update:
+		answer = ""
 		print ("Doing manual adition to gCal. Remember that this event starts from today and spans "+str(DAYS_SPANS_MANUAL_UPDATE)+" days. ")
 		while not answer:
 			answer = input(" description: ")
