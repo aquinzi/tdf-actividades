@@ -1,11 +1,11 @@
 ---
 nombre: Okawakai
 categoria: kendo
-ultima-actualizacion: 2016-07-26
+ultima-actualizacion: 2016-09-14
 direccion: 
   lugar: [sumchacra4]
 horario: 
-  - {dia: "lunes y miércoles", hora: "20:30-22:00", nota: "" }
+  - {dia: "martes y jueves", hora: "19:30-21:00", nota: "" }
 precio: pago
 nota: | 
   Nombre alternativo: Ôkawakai
