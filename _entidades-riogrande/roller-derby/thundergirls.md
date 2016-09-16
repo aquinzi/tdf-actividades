@@ -1,6 +1,5 @@
 ---
 nombre: ThunderGirls Roller Derby RG
-imagen: "https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xft1/v/t1.0-9/11935079_1670069383206781_2982494529528717842_n.jpg?oh=d95987ede86d75320699f9b27f01b8ba&oe=57BC9542&__gda__=1471627811_323f6acc02f269c0fad01b27a1372250"
 categoria: roller-derby
 ultima-actualizacion: 2016-04-22
 direccion: 
