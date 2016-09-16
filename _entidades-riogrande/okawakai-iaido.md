@@ -6,7 +6,7 @@ direccion:
   lugar: [sumchacra4]
 horario: 
   - {dia: "jueves", hora: "19:30-21:00", nota: "Semana por medio compartido con kendo" }
-precio: pago
+precio: gratis
 nota: | 
   Estilo: seitei
   Nombre alternativo: Ôkawakai
