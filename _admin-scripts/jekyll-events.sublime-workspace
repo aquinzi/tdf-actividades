@@ -29,15 +29,15 @@
 			],
 			[
 				"remin",
-				"reminding_tags	statement"
+				"reminding_tags\tstatement"
 			],
 			[
 				"fin",
-				"final_summary	statement"
+				"final_summary\tstatement"
 			],
 			[
 				"all",
-				"all_tags	statement"
+				"all_tags\tstatement"
 			],
 			[
 				"prem",
@@ -137,7 +137,7 @@
 			],
 			[
 				"tr",
-				"try	Try/Except"
+				"try\tTry/Except"
 			],
 			[
 				"date",
@@ -265,7 +265,7 @@
 			],
 			[
 				"try",
-				"try	Try/Except"
+				"try\tTry/Except"
 			],
 			[
 				"cal",
@@ -381,7 +381,7 @@
 			],
 			[
 				"hea",
-				"header	Tag"
+				"header\tTag"
 			],
 			[
 				"bor",
@@ -664,11 +664,15 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-tolhuin"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
+		"/C/Users/Ariela/Desktop/tdf-actividades/tags"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/10/2016-10-22-final-liga-municipal-deportes-extremos.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/10/2016-10-06-curso-gratuito-iniciacion-observacion-aves.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/10/2016-10-08-arte-solidario-2016.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_data/changelog.yml",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-tolhuin/aikido-tolhuin.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/karate/dojo-cantera.md",
@@ -793,10 +797,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2015/12/2015-12-17-cierre-academia-municipal-boxeo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05/2016-05-28-mini-evento-arkham.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-26-primeros-auxilios-rcp.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-23-flisol-rio-grande.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/04/2016-04-23-flisol-ushuaia.md",
-		"/C/Users/Ariela/Documents/My Dropbox/manga comics mini evento.txt",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-22-primer-circuito-patagonico-natacion.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-23-flisol-rio-grande.md"
 	],
 	"find":
 	{
@@ -1125,7 +1126,7 @@
 		"cols":
 		[
 			0.0,
-			0.603977244215,
+			0.791822548082,
 			1.0
 		],
 		"rows":
@@ -1353,7 +1354,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
