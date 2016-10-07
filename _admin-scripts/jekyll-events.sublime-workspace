@@ -664,12 +664,20 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/karate",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03",
 		"/C/Users/Ariela/Desktop/tdf-actividades/tags"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/karate/shotokan-palomar.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/12/2016-12-16-primer-seminario-kendo-tierra-fuego.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/10/2016-10-14-segundo-seminario-nacional-aikido-tierra-fuego.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/place.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/10/2016-10-22-final-liga-municipal-deportes-extremos.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/10/2016-10-06-curso-gratuito-iniciacion-observacion-aves.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/10/2016-10-08-arte-solidario-2016.md",
@@ -738,7 +746,6 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-16-tercera-peña-bicentenario.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/07/2016-07-03-vuelta-cabo-domingo.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/_posts/2016/07/2016-07-05-seminario-contar-imagenes.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/place.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/event.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_layouts/default.html",
 		"/I/Musica/Aliene Ma'riage/!lyrics/撲『しもべ』.txt",
@@ -794,10 +801,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/gimnasia-deportiva-municipio.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/karate/dojo-gichin-funakoshi.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/boxeo/academia-municipal-boxeo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2015/12/2015-12-17-cierre-academia-municipal-boxeo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/05/2016-05-28-mini-evento-arkham.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-26-primeros-auxilios-rcp.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/04/2016-04-23-flisol-rio-grande.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2015/12/2015-12-17-cierre-academia-municipal-boxeo.md"
 	],
 	"find":
 	{
@@ -1126,7 +1130,7 @@
 		"cols":
 		[
 			0.0,
-			0.791822548082,
+			0.886906347852,
 			1.0
 		],
 		"rows":
@@ -1362,7 +1366,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 232.0,
+	"side_bar_width": 302.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

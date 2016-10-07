@@ -1,8 +1,8 @@
 ---
-nombre: Shoto Yuku
+nombre: Shotokan El palomar
 imagen: ""
 categoria: karate
-ultima-actualizacion: 2016-07-26
+ultima-actualizacion: 2016-10-07
 direccion: 
   lugar: [""]
 horario: 
@@ -11,9 +11,11 @@ precio:
 nota: | 
   Nombre alternativo: Shôtô Yuku
   Estilo Shôtôkan.
-  Sensei Jorge Ledesma
+  Sensei Jorge Ledesma y Franco Gergo
 website: [""]
 email: [""]
 telefono: [""]
-permalink: /ushuaia/entidades/shoto-yuku/
+permalink: /ushuaia/entidades/shotokan-palomar/
+redirect_from:
+  - /ushuaia/entidades/shoto-yuku/
 ---
