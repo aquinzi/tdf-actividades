@@ -160,7 +160,7 @@ this_layout: place #needed for title replacement
 
 <h2>Eventos que transcurrieron</h2>
 
-{% assign filtered_posts = site.posts | where:"location", page.id %}
+{% assign filtered_posts = site.posts | where:"location", page.uid %}
 <ul class="entidad-eventos-aparece">
 {% for post in filtered_posts %}
 	{% comment %}just in case, check city{% endcomment %}
