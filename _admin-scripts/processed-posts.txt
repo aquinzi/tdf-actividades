@@ -134,3 +134,5 @@ rio-grande@2016-10-08-arte-solidario-2016.md
 rio-grande@2016-10-22-final-liga-municipal-deportes-extremos.md
 rio-grande@2016-10-14-segundo-seminario-nacional-aikido-tierra-fuego.md
 rio-grande@2016-12-16-primer-seminario-kendo-tierra-fuego.md
+rio-grande@2016-11-12-me-rio-grande-festival.md
+rio-grande@2016-11-20-corro-por-malvinas.md

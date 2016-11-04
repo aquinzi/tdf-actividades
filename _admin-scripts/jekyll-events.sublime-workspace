@@ -664,16 +664,16 @@
 	"expanded_folders":
 	[
 		"/C/Users/Ariela/Desktop/tdf-actividades",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/karate",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/03",
-		"/C/Users/Ariela/Desktop/tdf-actividades/tags"
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/11"
 	],
 	"file_history":
 	[
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/11/2016-11-20-corro-por-malvinas.md",
+		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/11/2016-11-12-me-rio-grande-festival.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-ushuaia/karate/shotokan-palomar.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/12/2016-12-16-primer-seminario-kendo-tierra-fuego.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2016/10/2016-10-14-segundo-seminario-nacional-aikido-tierra-fuego.md",
@@ -799,9 +799,7 @@
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/ajedrez/club-ajedrez-rg.md",
 		"/C/Users/Ariela/Desktop/tdf-actividades/ushuaia/actividades/index.html",
 		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/gimnasia-deportiva-municipio.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/karate/dojo-gichin-funakoshi.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/boxeo/academia-municipal-boxeo.md",
-		"/C/Users/Ariela/Desktop/tdf-actividades/rio-grande/_posts/2015/12/2015-12-17-cierre-academia-municipal-boxeo.md"
+		"/C/Users/Ariela/Desktop/tdf-actividades/_entidades-riogrande/karate/dojo-gichin-funakoshi.md"
 	],
 	"find":
 	{
@@ -1366,7 +1364,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 302.0,
+	"side_bar_width": 185.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
