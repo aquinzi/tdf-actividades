@@ -3,7 +3,7 @@ layout: event
 title: "Tercer seminario nacional 2016 \"Aikido en Tierra del Fuego\""
 date: 2016-11-26 19:00
 no-time-start: 
-date-end: 2016-11-27 14:00
+date-end: 2016-11-27 16:00
 no-time-end: 
 location: clubsanmartin
 category: rio-grande
@@ -21,6 +21,6 @@ Organizado por Asociación Civil Aikido Tierra del Fuego, entrada libre y gratui
 Cronograma:
 
 - Sábado 26: 19:00 a 21:00 hs.
-- Domingo 27: 10:00 a 12:00 y 14:00 a 18:00 hs.
+- Domingo 27: 10:00 a 12:00 y 14:00 a 16:00 hs.
 
 Horarios de finalización aproximados.
