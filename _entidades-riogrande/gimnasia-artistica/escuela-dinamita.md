@@ -7,7 +7,7 @@ direccion:
   geo: {lat: -53.7894113, lon: -67.7106063}
 horario: 
   - {dia: "lunes a viernes", hora: "18:00-21:00", nota: "" }
-precio: Pago
+precio: pago
 nota: | 
   De 3 a 12 años
 website: ["http://www.escueladinamita.com.ar/", "https://www.facebook.com/escuelademovimientodinamita"]

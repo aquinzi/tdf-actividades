@@ -117,7 +117,7 @@ layout: default
 						{% assign areacode = site.data.datos-ciudades[page.city].caracteristica-telefono %}
 						<a class="p-tel" itemprop="telephone" href="tel:+54-9-{{ areacode }}-{{ telefono }}">({{ areacode }}) {{ telefono }}</a>{% unless forloop.last %},{% endunless %}
 					{% else %}
-						{% capture tmp_telefono %} ( {{ telefono | replace: "-",") " }} {% endcapture %}
+						{% capture tmp_telefono %} ({{ telefono | replace: "-",") " }} {% endcapture %}
 						<a class="p-tel" itemprop="telephone" href="tel:+54-9-{{ telefono }}">{{ tmp_telefono }}</a>{% unless forloop.last %},{% endunless %}
 						
 					{% endif %}	
