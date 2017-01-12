@@ -137,3 +137,4 @@ rio-grande@2016-12-16-primer-seminario-kendo-tierra-fuego.md
 rio-grande@2016-11-12-me-rio-grande-festival.md
 rio-grande@2016-11-20-corro-por-malvinas.md
 rio-grande@2016-11-26-tercer-seminario-nacional-aikido-tierra-fuego.md
+rio-grande@2017-01-20-global-game-jam.md
