@@ -242,9 +242,9 @@
 - id: hockey-roller
   nombre: hockey roller
   tipo: deporte
-  alternativo: [hockey sobre patines, roller hockey, hockey línea]
+  alternativo: [hockey sobre patines, roller hockey, hockey línea, inline hockey]
   descripcion: |
-    Deporte en el que dos equipos rivales de seis jugadores compiten para meter un disco en el arco del equipo contrario anotando así un gol con la ayuda de un palo que permite controlar la pelota; desplazandose por patines de cuatro ruedas (hockey sobre patín) o patines en línea (hockey sobre rollers). El objetivo consiste en marcar más goles que el equipo contrario al finalizar el tiempo de juego reglamentario. Es deporte olímpico desde 1908. (Ver más información en <a href="https://es.wikipedia.org/wiki/Hockey_sobre_patines_en_línea">Wikipedia</a>.)
+    Deporte en el que dos equipos rivales de cinco jugadores (incluído el arquero) compiten para meter un disco en el arco del equipo contrario anotando así un gol con la ayuda de un palo que permite controlar el <i lang="en">puck</i>; desplazandose por patines de cuatro ruedas (hockey sobre patín) o patines en línea (hockey sobre rollers). El objetivo consiste en marcar más goles que el equipo contrario al finalizar el tiempo de juego reglamentario. (Ver más información en <a href="https://es.wikipedia.org/wiki/Hockey_sobre_patines_en_línea">Wikipedia</a>.)
 
 - id: hockey-hielo
   nombre: hockey sobre hielo
