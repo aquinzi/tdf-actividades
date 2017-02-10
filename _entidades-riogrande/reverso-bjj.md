@@ -1,7 +1,7 @@
 ---
 nombre: Reverso Brazilian Jiu Jitsu
 imagen: logo-reverso-bjj.jpg
-categoria: jûjutsu
+categoria: jiu-jitsu
 ultima-actualizacion: 2016-04-22
 direccion: 
   lugar: [12 de octubre N°452 (barrio profesional)]
