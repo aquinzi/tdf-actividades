@@ -19,6 +19,8 @@ github:
     # custom github data
     branch: gh-pages
 
+repository: aquinzi/tdf-actividades #bug in jekyll
+
 google_analytics: UA-65450271-1
 
 social:
