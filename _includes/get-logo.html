@@ -1,0 +1,3 @@
+{% if (include.logo | slice: 0,4) != "http" %}<img src="/imgs/entidades/{{ include.logo }}" alt="logo" class="u-logo" width="{{ include.width }}" height="{{ include.width }}" itemprop="image">
+{% else %}<img src="{{ include.logo }}" alt="logo" class="u-logo" width="{{ include.width }}" height="{{ include.width }}" itemprop="image">
+{% endif %}

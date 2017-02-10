@@ -4,10 +4,13 @@ layout: default
 
 {% comment %}should be http://schema.org/Organization (organization such as a school, NGO, corporation, club, etc.) but we need the "opening hours"{%endcomment%}
 
+
 <article class="card-entidad h-card" itemscope itemtype="http://schema.org/LocalBusiness">
 	<header>
 		<div class="logo">
-			{% if page.imagen %} <img src="{{ page.imagen }}" alt="logo" class="u-logo" width="125" height="125" itemprop="image">{% endif %}
+			{% if page.imagen %} 
+				{% include get-logo.html logo=page.imagen width=125 %}
+			{% endif %}
 		</div>
 		<div>
 			<h1 class="p-name" itemprop="name">{{ page.nombre }}</h1>
