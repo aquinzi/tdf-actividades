@@ -1,6 +1,6 @@
 ---
 nombre: Go Tierra del Fuego
-imagen: "https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xft1/v/t1.0-9/13006629_1715586288726505_2047790089933547811_n.jpg?oh=bb20e0ca72a8a7171ad055891b1ef6b2&oe=5775E19B&__gda__=1470347258_6eb2c6fbc82e069e58e83596f2a53b7b"
+imagen: go-tierra-fuego.jpg
 categoria: ajedrez
 ultima-actualizacion: 2016-04-22
 direccion: 

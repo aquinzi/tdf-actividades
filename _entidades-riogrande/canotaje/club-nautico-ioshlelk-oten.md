@@ -1,6 +1,6 @@
 ---
 nombre: Club Náutico "Ioshlelk Oten"
-imagen: "https://scontent-sea1-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/18964_255642378433_6237413_n.jpg?oh=dae2fd9b470ee180bd855e493da3a356&oe=577552DB"
+imagen: logo-club-nautico-ioshlelk-oten.jpg
 categoria: canotaje
 ultima-actualizacion: 2016-04-22
 direccion: 

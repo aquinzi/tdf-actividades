@@ -1,6 +1,6 @@
 ---
 nombre: Asociación Civil de Ciclismo Pedaleando el Karukinka
-imagen: "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/s960x960/12640284_214242828925540_7960682056909978407_o.jpg"
+imagen: logo-karukinka.jpg
 categoria: ciclismo
 ultima-actualizacion: 2016-04-22
 direccion: 

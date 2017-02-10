@@ -1,6 +1,6 @@
 ---
 nombre: Dojo Cantera
-imagen: "https://scontent-sea1-1.xx.fbcdn.net/hphotos-xtf1/t31.0-8/s960x960/11878994_1010534942314267_7063574992862480948_o.jpg"
+imagen: logo-dojo-cantera.jpg
 categoria: karate
 ultima-actualizacion: 2016-09-06
 direccion: 

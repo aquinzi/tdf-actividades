@@ -1,6 +1,6 @@
 ---
 nombre: Club de Ajedrez de Río Grande
-imagen: "https://fbcdn-photos-d-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-0/s526x395/253073_203933139643483_1465721_n.jpg?oh=995141e59c41976a243d5ade64a1d1a9&oe=57AD64B0&__gda__=1471333085_0da16de07fc1b5aded7e2fc5a561ff8e"
+imagen: logo-club-ajedrez-rg.jpg
 categoria: ajedrez
 ultima-actualizacion: 2016-04-21
 direccion: 

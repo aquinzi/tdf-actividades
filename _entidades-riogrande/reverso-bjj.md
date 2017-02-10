@@ -1,6 +1,6 @@
 ---
 nombre: Reverso Brazilian Jiu Jitsu
-imagen: "https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xlp1/v/t1.0-9/12743934_1733531846893971_7556028317915840254_n.jpg?oh=8b4ac4635986a7b7b2efb8c39848d675&oe=5772867E&__gda__=1470529643_5106978af8f13584633635322f9b2e7e"
+imagen: logo-reverso-bjj.jpg
 categoria: jûjutsu
 ultima-actualizacion: 2016-04-22
 direccion: 
