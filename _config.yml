@@ -288,29 +288,3 @@ collections:
     output: true 
     permalink: /ushuaia/lugares/:path/
 
-# Markdown Processors (include only kramdown)
-
-#kramdown:
-#  auto_ids:       true
-#  footnote_nr:    1
-#  entity_output:  as_char
-#  toc_levels:     1..6
-#  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-#  enable_coderay: false
-#
-#  coderay:
-#    coderay_wrap:              div
-#    coderay_line_numbers:      inline
-#    coderay_line_number_start: 1
-#    coderay_tab_width:         4
-#    coderay_bold_every:        10
-#    coderay_css:               style
-#  input: GFM #not default # turn on recognition of Github Flavored Markdown 
-
-# Github Flavored Markdown (https://help.github.com/articles/github-flavored-markdown/)
-#    - ignores underscores when in-between words
-#    - autolinks URLs
-#    - strikethrough ( ~~deleteed~~ )
-#    - fenced code blocks with ```
-#    - syntax highlighting: ```lang
-#    - tables
