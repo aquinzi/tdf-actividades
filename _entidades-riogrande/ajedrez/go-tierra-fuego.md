@@ -10,7 +10,7 @@ horario:
   - {dia: "sábados", hora: "12:30-14:00", nota: "en el EMEI"}
 precio: 
 nota: | 
-	A cargo de Claudio Leturia y Ernesto Cepeda.
+   A cargo de Claudio Leturia y Ernesto Cepeda.
 website: ["https://www.facebook.com/Go-Tierra-del-Fuego-1618271935124608/"]
 email: claudioleturia@gmail.com
 telefono: [15606730]
