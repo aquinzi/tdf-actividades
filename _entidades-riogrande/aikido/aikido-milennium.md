@@ -9,7 +9,7 @@ horario:
   - {dia: "martes y jueves", hora: "20:00-21:30"}
 precio: pago
 nota: | 
-  Clases por Nahuel Palacios (1 *kyû*)
+  Clases por Nahuel Palacios (1 kyû)
 website: []
 telefono: []
 email: 
