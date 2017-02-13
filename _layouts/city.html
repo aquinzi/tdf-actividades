@@ -26,8 +26,17 @@ layout: default
 		{% capture text_places %}un directorio de los <a href="{{ url_places }}">lugares</a> donde se realizan{% endcapture %}
 	{% endif %}
 
+	{% if page.has_buses %}
+		{% if page.category == "rio-grande" %} {% assign url_buses = site.data.wiki.rg-colectivos %} {% endif %}
+		{% if page.category == "ushuaia" %} {% assign url_buses = site.data.wiki.ush-lugares %} {% endif %}
+		{% if page.category == "tolhuin" %} {% assign url_buses = site.data.wiki.tol-lugares %} {% endif %}
+
+		{% capture text_buses %}un listado de los <a href="{{ url_buses }}">colectivos</a> con sus recorridos{% endcapture %}
+	{% endif %}
+
+
 	<p class="mensaje-aviso"> 
-		La ciudad de {{ site.data.prettify[page.city] }} cuenta con {% if text_activities != "" %}{{ text_activities }}{% endif %}{% if page.has_activities and page.has_places  %} y {% endif %}{% if text_places != "" %}{{ text_places }}{% endif %}.
+		La ciudad de {{ site.data.prettify[page.city] }} cuenta con {% if text_activities != "" %}{{ text_activities }}{% endif %}{% if page.has_activities and page.has_places  %} y {% endif %}{% if text_places != "" %}{{ text_places }}{% endif %}. {% if text_buses != "" %}También con {{ text_buses }}.{% endif %}
 	</p>
 
 {% endif %}
