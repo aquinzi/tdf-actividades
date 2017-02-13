@@ -45,7 +45,7 @@ feed:
   tolhuin: "/feed-tolhuin.xml"
 
 maps:
-  buses-rg: "/public/rio-grande-colectivos-2016" #must complete in laytout
+  buses-rg: "/public/colectivos/rio-grande-colectivos-2016" #must complete in laytout
 
 
 
