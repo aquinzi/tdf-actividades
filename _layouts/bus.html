@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<article>
+
+	<h2 class="p-name" itemprop="name">{{ page.nombre }}</h2>
+
+
+	<dl>
+		<dt>Áreas</dt>
+			<dd>{{ page.areas | array_to_sentence_string | replace:" and ", ","}} 			</dd>
+
+		<dt>Recorrido (mapa)</dt>
+			<dd>
+				<script src="https://embed.github.com/view/geojson/{{ site.github.repository_nwo }}/gh-pages{{ site.maps.buses-rg }}-{{ page.uid }}.geojson"></script>
+				<noscript>
+				  <p>No te preocupes, era un lindo mapa con el recorrido.</p>
+				</noscript>
+			</dd>
+
+		<dt>Recorrido (listado)</dt>
+			<dd class="recorrido">
+				<ul>
+					{% for item in page.recorrido %}
+						<li>
+							<span class="calles">{{ item.calle }}</span> 
+							{% if item.punto %}
+							{% assign point = item.punto | split: ", " %}
+							<a href="http://www.openstreetmap.org/?mlat={{ point[0] }}&mlon={{ point[1] }}#map=17/{{ point[0] }}/{{ point[1] }}">(ver punto)</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</dd>
+
+		<dt>Descarga</dt>
+			<dd>
+				<ul>
+					<li><a href="{{ site.maps.buses-rg }}-2016-{{ page.uid }}.kml">KML</a></li>
+					<li><a href="{{ site.maps.buses-rg }}-2016-google.kml">KMZ</a> (todos los recorridos con las paradas)</li>
+				</ul>
+			</dd>
+	</dl>
+
+	
+	<footer>
+		<p>
+			<span class="ultima-actualizacion p-note">Última actualización: <time datetime="{{ page.ultima-actualizacion }}">{% include human-date.html hide_weekday=true date=page.ultima-actualizacion%}</time></span>
+		¿Información errónea? ayuda <a href="{{ site.github.repository_url }}/blob/{{ site.github.branch }}/{{ page.path }}">corregiendo la información</a>
+		</p>
+	</footer>
+
+</article>
+
+
+<h2>Comentarios</h2>
+
+{% include comment-form.html %}

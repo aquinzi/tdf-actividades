@@ -1,0 +1,30 @@
+---
+layout: default
+title: "¿Qué hacer en Río Grande?: Colectivos"
+---
+
+{% assign colectivos = site.colectivos-riogrande | sort: "nombre" %}
+
+<h1>Colectivos en Río Grande</h1>
+
+<table>
+	<tr>
+		<th>Línea</th>
+		<th>Áreas que recorre</th>
+	</tr>
+
+{% for colectivo in colectivos %}
+	<tr>
+		<td><a href="{{ colectivo.url }} ">{{ colectivo.nombre }}</a></td>
+		<td> {{ colectivo.areas | join:", " }} </td>
+	</tr>
+{% endfor %}
+</table>
+
+<script src="https://embed.github.com/view/geojson/{{ site.github.repository_nwo }}/gh-pages{{ site.maps.buses-rg }}.geojson"></script>
+<noscript>
+  <p>No te preocupes, era un lindo mapa con los recorridos y las paradas.</p>
+</noscript>
+
+
+<p><a href="{{ site.maps.buses-rg }}-google.kml">Descargar</a> todos los recorridos con las paradas (formato KMZ).</p>

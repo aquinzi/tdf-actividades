@@ -1,0 +1,60 @@
+---
+uid: linea-c
+nombre: Línea C
+ultima-actualizacion: 2017-02-13
+areas: ["Austral", "Centro", "Mutual", "Chacra II", "AGP", "Hospital"]
+recorrido: 
+  - {"calle": "Yourka y Yaghan", "punto":"-53.80326, -67.66181"}
+  - {"calle": "Yourka a Hoiken", "punto":"-53.80450, -67.66264"}
+  - {"calle": "Hoiken a Koyuska", "punto":"-53.80531, -67.65874"}
+  - {"calle": "Koyuska a Yahalave", "punto":"-53.80196, -67.65686"}
+  - {"calle": "Yahalave a Uani", "punto":"-53.80075, -67.66382"}
+  - {"calle": "Uani a Tolhuin", "punto":"-53.80489, -67.66599"}
+  - {"calle": "Tolhuin a Rafaela Ishton", "punto":"-53.80410, -67.67028"}
+  - {"calle": "Rafaela Ishton a El Alambrador", "punto":"-53.80614, -67.67198"}
+  - {"calle": "El Alambrador a Carlos Alfredo Pacheco-Puente General Mosconi", "punto":"-53.80822, -67.68490"}
+  - {"calle": "Carlos Alfredo Pacheco-Puente General Mosconi a Enrique Arteche", "punto":"-53.79952, -67.68872"}
+  - {"calle": "Enrique Arteche a Bernardo O'Higgins", "punto":"-53.79668, -67.68466"}
+  - {"calle": "Bernardo O'Higgins a Carlos Alfredo Pacheco", "punto":"-53.79461, -67.68882"}
+  - {"calle": "Carlos Alfredo Pacheco a José Beauvoir", "punto":"-53.79316, -67.68865"}
+  - {"calle": "José Beauvoir a Sebastian Elcano", "punto":"-53.79146, -67.69112"}
+  - {"calle": "Sebastian Elcano a Avenida San Martín", "punto":"-53.79016, -67.69311"}
+  - {"calle": "Avenida San Martín y Avenida Manuel Belgrano", "punto":"-53.78582, -67.70162"}
+  - {"calle": "Avenida Manuel Belgrano y Florentino Ameghino", "punto":"-53.78256, -67.69690"}
+  - {"calle": "Florentino Ameghino y Avenida Manuel Belgrano", "punto":"-53.78241, -67.69713"}
+  - {"calle": "Avenida Manuel Belgrano y Avenida San Martín", "punto":"-53.78569, -67.70193"}
+  - {"calle": "Avenida San Martín y Santa Fe", "punto":"-53.77971, -67.71364"}
+  - {"calle": "Santa Fe a Viedma", "punto":"-53.77478, -67.70655"}
+  - {"calle": "Viedma a Carlos Pellegrini", "punto":"-53.76908, -67.71769"}
+  - {"calle": "Carlos Pellegrini a Luro Cambaceres", "punto":"-53.76977, -67.71874"}
+  - {"calle": "Luro Cambaceres a Gobernador Anadón", "punto":"-53.76941, -67.72204"}
+  - {"calle": "Gobernador Anadón a Provincias Unidas", "punto":"-53.76540, -67.72075"}
+  - {"calle": "Provincias Unidas a Gabriela Mistral", "punto":"-53.76452, -67.72895"}
+  - {"calle": "Gabriela Mistral a Victoria Ocampo", "punto":"-53.76390, -67.73041"}
+  - {"calle": "Victoria Ocampo a Hermana Rosa Masobrio", "punto":"-53.76110, -67.72630"}
+  - {"calle": "Hermana Rosa Masobrio a Santa Rosa", "punto":"-53.76172, -67.72489"}
+  - {"calle": "Santa Rosa a Lapataia", "punto":"-53.76548, -67.71562"}
+  - {"calle": "Lapataia a Ushuaia", "punto":"-53.76827, -67.71652"}
+  - {"calle": "Ushuaia a Entre Ríos", "punto":"-53.77255, -67.70814"}
+  - {"calle": "Entre Ríos a Posadas", "punto":"-53.77498, -67.71165"}
+  - {"calle": "Posadas a Santa Fe", "punto":"-53.77638, -67.70890"}
+  - {"calle": "Santa Fe a Avenida San Martín", "punto":"53.77989, -67.71389"}
+  - {"calle": "Avenida San Martín a José Manuel Estrada", "punto":"-53.78442, -67.70495"}
+  - {"calle": "José Manuel Estrada a Juan Mackinlay", "punto":"-53.78179, -67.70109"}
+  - {"calle": "Juan Mackinlay a Luis Piedrabuena", "punto":"-53.78249, -67.69976"}
+  - {"calle": "Luis Piedrabuena a Avenida San Martín", "punto":"-53.78511, -67.70357"}
+  - {"calle": "Avenida San Martín a José Beauvoir", "punto":"-53.79033, -67.69328"}
+  - {"calle": "José Beauvoir a Carlos Alfredo Pacheco", "punto":"-53.79318, -67.68873"}
+  - {"calle": "Carlos Alfredo Pacheco a Bernardo O'Higgins", "punto":"-53.79461, -67.68882"}
+  - {"calle": "Bernardo O'Higgins a Carlos Herrera", "punto":"-53.79641, -67.68547"}
+  - {"calle": "Carlos Herrera a Juan Carlos Mora", "punto":"-53.79769, -67.68731"}
+  - {"calle": "Juan Carlos Mora a Carlos Alfredo Pacheco", "punto":"-53.79757, -67.68919"}
+  - {"calle": "Carlos Alfredo Pacheco-Puente General Mosconi a El Alambrador", "punto":"-53.80822, -67.68490"}
+  - {"calle": "El Alambrador a Rafaela Ishton", "punto":"-53.80621, -67.67093"}
+  - {"calle": "Rafaela Ishton a Tolhuin", "punto":"-53.80410, -67.67028"}
+  - {"calle": "Tolhuin a Kekauh", "punto":"-53.80501, -67.66541"}
+  - {"calle": "Kekauh a Chawr", "punto":"-53.79984, -67.66266"}
+  - {"calle": "Chawr a Yewarsi", "punto":"-53.80078, -67.65719"}
+  - {"calle": "Yewarsi a Yaghan", "punto":"-53.80379, -67.65865"}
+  - {"calle": "Yaghan a Yourka", "punto":"-53.80326, -67.66181"}
+---

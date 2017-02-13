@@ -20,6 +20,9 @@ tolhuin: *idtol
 tol-actividades: &idtolactividades /tolhuin/actividades/
 tolhuin-actividades: *idtolactividades
 #tol-lugares: /tolhuin/lugares/
+rg-colectivos: &idrgcolectivos /rio-grande/colectivos/
+riogrande-colectivos: *idrgcolectivos
+
 
 # acceso rapido a entidades
 rg-clubajedrez: /rio-grande/entidades/club-ajedrez-rio-grande/

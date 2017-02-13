@@ -269,8 +269,17 @@
 
 </body>
 
-{% include analytics.html %}
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "WebSite",
+  "name" : "{{ page_title }}",
+  "alternateName" : "{{ site.name }}",
+  "url" : "{{ page_url }}"
+}
+</script>
 
+{% include analytics.html %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
@@ -337,20 +346,9 @@ jQuery(document).ready(function ($) {
            $('.share-popup').removeClass('transitioning');
        }, 200);
    }
-
 }); //end document.ready
 
 $('body').append('<div class="popup-overlay"></div>');
-</script>
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "WebSite",
-  "name" : "{{ page_title }}",
-  "alternateName" : "{{ site.name }}",
-  "url" : "{{ page_url }}"
-}
 </script>
 
 </html>

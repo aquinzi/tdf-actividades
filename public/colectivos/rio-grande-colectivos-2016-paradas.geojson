@@ -1,0 +1,740 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nC: Gobernador Anadón y Arturo Illia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.721626,
+          -53.768551,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nC: Avenida San Martín  (entre Pasaje Remolcador Fournier y Don Bosco, BIM5)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.70929813385011,
+          -53.78189084891924
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Avenida San Martín (entre Bernardino Rivadavia y José Fagneano, Instituto María Auxiliadora)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.699835,
+          -53.787076000000006,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Avenida San Martín y Tomás Espora"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.69795775413515,
+          -53.788014115155335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Avenida San Martín y Comodoro Luis Py (bancos)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.695115,
+          -53.789497,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: José Manuel Estrada y Leonardo Rosales"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.70352602005006,
+          -53.78352634289362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Avenida San Martín (entre José Manuel Estrada y Luis Piedrabuena)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.703869,
+          -53.784579,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Avenida San Martín (entre Bernardino Rivadavia y José Fagneano)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.69957780838014,
+          -53.78677812408336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nC: Ushuaia y Perú"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.7142655849457,
+          -53.769508472132976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "description": "Línea C\nLínea D\nC: Santa Rosa y Prefectura Naval",
+        "_storage_options": {
+          "color": "Navy"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.72250500000001,
+          -53.762054,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "description": "Línea C\nC: Santa Rosa y Gobernador Anadón",
+        "_storage_options": {
+          "color": "Navy"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.72022,
+          -53.763287,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "description": "Línea D\nC: Prefectura Naval (casi Provincias Unidas)",
+        "_storage_options": {
+          "color": "Navy"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.72346,
+          -53.76486,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nC: Avenida San Martín  y Almirante Guillermo Brown (BIM5)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71128296852113,
+          -53.78091459345246
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Avenida San Martín y Comodoro Luis Py"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.694106,
+          -53.789586,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. Garita",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Avenida Manuel Belgrano (entre Leonardo Rosales y San Martín)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.701418,
+          -53.785295,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parada",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea B\nC: Prefectura Naval Argentina (entre Islas de Los Estados y Avenida San Martín)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.725807,
+          -53.772614,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea B\nC: Prefectura Naval Argentina (Islas de Los Estados y  Federico Ibarra)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.725134,
+          -53.771522,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nC: Avenida San Martín y 25 de Mayo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.70792484283449,
+          -53.78295582897974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nC: Avenida San Martín  y Pasaje Remolcador Fournier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71009206771852,
+          -53.78182111713911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nC: Avenida San Martín y José Finocchio (Hipertehuelche)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71261334419252,
+          -53.78055324638429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea B\nC: Avenida San Martín y Roberto Wilson (La Anónima, Cono de Sombras)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.7169853,
+          -53.77808710000001,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Luis Piedrabuena y Leonardo Rosales"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.7020561695099,
+          -53.78393203695747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "name": "P.",
+        "description": "Línea C\nC: Viedma y Buenos Aires"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.707656621933,
+          -53.774080169220525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Florentino Ameghino y Avenida Manuel Belgrano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.69732475280763,
+          -53.78239798565238
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nC: Ushuaia y Carlos Pellegrini (o Lapataia)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71648645401002,
+          -53.76841778567869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: José Manuel Estrada y Juan Mackilnay"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.70116567611696,
+          -53.78192888438682
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nC: Ushuaia y Santa Cruz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.709706,
+          -53.77178200000001,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nC: Ushuaia y Entre Ríos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.708233,
+          -53.772547,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nC: Viedma y Lima"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.7139437198639,
+          -53.770852767613285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Avenida Manuel Belgrano (entre Leonardo Rosales y Avenida San Martín, Escuela 2)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.701284,
+          -53.785552,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nC: VIedma y Santa Cruz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.710435,
+          -53.772723,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nC: Viedma y Venezuela"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.7166795730591,
+          -53.769508472132976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nC: Luro Cambaceres y Cabo de Hornos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71932959556581,
+          -53.76958456547934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nC: Gobernador Anadón (Entre Eva Perón y José Sobral)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.721036,
+          -53.766649,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Avenida San Martín  y 25 de Mayo (BIM5)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.70729184150697,
+          -53.78286074257326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea D\nLínea B\nC: Provincias Unidas y María Auxiliadora"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.723954,
+          -53.765,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nC: Provincias Unidas y Patagonia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.727966,
+          -53.76453,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nC: Lapataia y Eva Perón"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.7162289619446,
+          -53.766876825706234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Avenida Manuel Belgrano y Juan Mackilnay)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.69816160202028,
+          -53.78300654164175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea B\nC: Avenida San Martín (La Anónima)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.7164328,
+          -53.7785182,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P.",
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "description": "Línea C\nLínea B\nLínea A\nC: Juan Mackinlay (entre José Manuel Estrada y Luis Piedrabuena)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.700415,
+          -53.782246,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Navy"
+        },
+        "name": "P.",
+        "description": "Línea C\nC: Posadas y Buenos Aires"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71058559417726,
+          -53.77562086479691
+        ]
+      }
+    }
+  ]
+}
