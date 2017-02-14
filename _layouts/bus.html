@@ -35,10 +35,21 @@ layout: default
 			</dd>
 
 		<dt>Descarga</dt>
+			{% assign this_kml = "" %}
+			{% case page.uid %}
+				{% when 'linea-a' %}
+					{% assign this_kml = site.maps.buses-rg-linea-a.kml %}
+				{% when 'linea-b' %}
+					{% assign this_kml = site.maps.buses-rg-linea-b.kml %}
+				{% when 'linea-c' %}
+					{% assign this_kml = site.maps.buses-rg-linea-c.kml %}
+				{% when 'linea-d' %}
+					{% assign this_kml = site.maps.buses-rg-linea-d.kml %}
+			{% endcase %}
 			<dd>
 				<ul>
-					<li><a href="{{ site.maps.buses-rg }}-2016-{{ page.uid }}.kml">KML</a></li>
-					<li><a href="{{ site.maps.buses-rg }}-2016-google.kml">KMZ</a> (todos los recorridos con las paradas)</li>
+					<li><a href="{{ this_kml }}">KML</a></li>
+					<li><a href="{{ site.maps.buses-rg-all.kmz }}">KMZ</a> (todos los recorridos con las paradas)</li>
 				</ul>
 			</dd>
 	</dl>

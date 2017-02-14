@@ -45,7 +45,16 @@ feed:
   tolhuin: "/feed-tolhuin.xml"
 
 maps:
-  buses-rg: "/public/colectivos/rio-grande-colectivos-2016" #must complete in laytout
+  buses-rg-all-kmz: 
+    kmz: "https://drive.google.com/open?id=0B_xdMoFx-YMeRnUyM1E0MkNuTUE"
+  buses-rg-linea-a:
+    kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeRVQ3WDJxV19HLUE"
+  buses-rg-linea-b:
+    kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeLVVoV2FUYnkyQVU"
+  buses-rg-linea-c:
+    kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeZWE5VXhVUHFzYUk"
+  buses-rg-linea-d:
+    kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeeVRMeExfRWJlR3M"
 
 
 
