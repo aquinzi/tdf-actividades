@@ -13,7 +13,19 @@ layout: default
 
 		<dt>Recorrido (mapa)</dt>
 			<dd>
-				<script src="https://embed.github.com/view/geojson/{{ site.github.repository_nwo }}/gh-pages{{ site.maps.buses-rg }}-{{ page.uid }}.geojson"></script>
+
+				{% assign this_geojson = "" %}
+				{% case page.uid %}
+					{% when 'linea-a' %}
+						{% assign this_geojson = site.maps.buses-rg-linea-a.geojson %}
+					{% when 'linea-b' %}
+						{% assign this_geojson = site.maps.buses-rg-linea-b.geojson %}
+					{% when 'linea-c' %}
+						{% assign this_geojson = site.maps.buses-rg-linea-c.geojson %}
+					{% when 'linea-d' %}
+						{% assign this_geojson = site.maps.buses-rg-linea-d.geojson %}
+				{% endcase %}
+				<script src="https://embed.github.com/view/geojson/{{ site.github.repository_nwo }}/gh-pages/{{this_geojson }}"></script>
 				<noscript>
 				  <p>No te preocupes, era un lindo mapa con el recorrido.</p>
 				</noscript>
