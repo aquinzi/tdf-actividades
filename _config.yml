@@ -45,8 +45,9 @@ feed:
   tolhuin: "/feed-tolhuin.xml"
 
 maps:
-  buses-rg-all-kmz: 
+  buses-rg-all: 
     kmz: "https://drive.google.com/open?id=0B_xdMoFx-YMeRnUyM1E0MkNuTUE"
+    geojson: "/public/colectivos/rio-grande-colectivos-2016.geojson"
   buses-rg-linea-a:
     kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeRVQ3WDJxV19HLUE"
   buses-rg-linea-b:
@@ -55,6 +56,7 @@ maps:
     kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeZWE5VXhVUHFzYUk"
   buses-rg-linea-d:
     kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeeVRMeExfRWJlR3M"
+
 
 
 
