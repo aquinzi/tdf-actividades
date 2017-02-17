@@ -1766,6 +1766,11 @@ article.card-entidad dl {border-left: 4px solid #00982E; }
  .card-lugar .ver-mapa li{display: inline-block;}
 }
 
+.card-lugar .colectivos {margin-top: 1.6em;}
+.card-lugar .colectivos p, .card-lugar .colectivos ul {display: inline-block; margin:0}
+.card-lugar .colectivos li {text-transform: uppercase; margin-left: 0.5em;}
+.card-lugar .colectivos li a {padding: 0 0.3em}
+
 .card-lugar .ver-img {display: none; }
 
 .card-lugar div.photo img {

@@ -33,6 +33,23 @@ this_layout: place #needed for title replacement
 	    				<meta itemprop="longitude" content="{{ page.geo.lon }}" />
 	    			</li>
 				</ul>
+
+				{% if page.colectivos %}
+				<div  class="colectivos">
+				<p>Colectivos que te dejan cerca:</p>
+				<ul">
+					{% for linea in page.colectivos %}
+						<li>
+							{% if page.city == "rio-grande" %}
+								<a href="{{ site.data.wiki.rg-colectivos }}linea-{{ linea }}/">{{ linea }}</a>
+							{% else %}
+								{{ linea }}
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+				</div>
 				{% endunless %}
 			</dd>
 
@@ -114,8 +131,8 @@ this_layout: place #needed for title replacement
 	"address": {
 		"@type": "PostalAddress",
 		"streetAddress": "{{ page.direccion }}",
-		"postalCode": "{{ site.data.datos-ciudades[this_city].codigo-postal }}",
-		"addressLocality": "{{ this_city_pretty }}",
+		"postalCode": "{{ site.data.datos-ciudades[page.city].codigo-postal }}",
+		"addressLocality": "{{ site.data.prettify.[page.city] }}",
 		"addressRegion": "Tierra del Fuego",
 		"addressCountry": "Argentina"
 	},
