@@ -25,7 +25,9 @@ layout: default
 					{% when 'linea-d' %}
 						{% assign this_geojson = site.maps.buses-rg-linea-d.geojson %}
 				{% endcase %}
-				<script src="https://embed.github.com/view/geojson/{{ site.github.repository_nwo }}/gh-pages/{{this_geojson }}"></script>
+
+				<div id="map" class="map-rg map-bus-stops"></div>
+				
 				<noscript>
 				  <p>No te preocupes, era un lindo mapa con el recorrido.</p>
 				</noscript>

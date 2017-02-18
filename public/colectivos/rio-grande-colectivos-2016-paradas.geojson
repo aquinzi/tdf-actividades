@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -22,7 +22,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -39,7 +39,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -57,7 +57,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -74,7 +74,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -92,7 +92,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -109,7 +109,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -127,7 +127,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -144,7 +144,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -161,7 +161,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "description": "Línea C\nLínea D\nC: Santa Rosa y Prefectura Naval",
         "_storage_options": {
           "color": "Navy"
@@ -179,7 +179,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "description": "Línea C\nC: Santa Rosa y Gobernador Anadón",
         "_storage_options": {
           "color": "Navy"
@@ -197,7 +197,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "description": "Línea D\nC: Prefectura Naval (casi Provincias Unidas)",
         "_storage_options": {
           "color": "Navy"
@@ -215,7 +215,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -232,7 +232,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -250,7 +250,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. Garita",
+        "name": "P. Garita", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -268,7 +268,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Parada",
+        "name": "Parada", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -286,7 +286,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -304,7 +304,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -321,7 +321,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -338,7 +338,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -355,7 +355,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -373,7 +373,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -393,7 +393,7 @@
         "_storage_options": {
           "color": "Navy"
         },
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "description": "Línea C\nC: Viedma y Buenos Aires"
       },
       "geometry": {
@@ -407,7 +407,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -424,7 +424,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -441,7 +441,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -458,7 +458,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -476,7 +476,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -494,7 +494,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -511,7 +511,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -529,7 +529,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -547,7 +547,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -564,7 +564,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -581,7 +581,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -599,7 +599,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -616,7 +616,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -634,7 +634,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -652,7 +652,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -669,7 +669,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -686,7 +686,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -704,7 +704,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "_storage_options": {
           "color": "Navy"
         },
@@ -725,7 +725,7 @@
         "_storage_options": {
           "color": "Navy"
         },
-        "name": "P.",
+        "name": "P.", "marker-symbol": "bus", "marker-color": "#0078fd",
         "description": "Línea C\nC: Posadas y Buenos Aires"
       },
       "geometry": {

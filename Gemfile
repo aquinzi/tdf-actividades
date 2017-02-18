@@ -22,7 +22,7 @@ gem "jemoji", versions["jemoji"], group: :jekyll_plugins
 gem "jekyll-mentions", versions["jekyll-mentions"], group: :jekyll_plugins
 gem "jekyll-redirect-from", versions["jekyll-redirect-from"], group: :jekyll_plugins
 gem "jekyll-sitemap", versions["jekyll-sitemap"], group: :jekyll_plugins
-gem "jekyll-feed", versions["jekyll-feed"], group: :jekyll_plugins
+#gem "jekyll-feed", versions["jekyll-feed"], group: :jekyll_plugins
 gem "jekyll-gist", versions["jekyll-gist"], group: :jekyll_plugins
 gem "jekyll-paginate", versions["jekyll-paginate"], group: :jekyll_plugins
 gem "jekyll-coffeescript", versions["jekyll-coffeescript"], group: :jekyll_plugins

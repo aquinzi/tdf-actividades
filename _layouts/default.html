@@ -109,6 +109,8 @@
 
 	<meta name="google-site-verification" content="OVqA7Ots5rjomNNEbJ_aUoamxDzgySu6ryZ9UfaUuuE" />
 	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+
 </head>
 
 <body>
@@ -282,7 +284,8 @@
 
 {% include analytics.html %}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <script>
 // add permalink link 
@@ -351,5 +354,11 @@ jQuery(document).ready(function ($) {
 
 $('body').append('<div class="popup-overlay"></div>');
 </script>
+
+
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<script src="/assets/map-buses.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){initMap('{{ page.uid }}');});</script>
 
 </html>
