@@ -51,15 +51,19 @@ maps:
   buses-rg-linea-a:
     geojson: "/public/colectivos/rio-grande-colectivos-2016-linea-a.geojson"
     kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeRVQ3WDJxV19HLUE"
+    gpx: "https://drive.google.com/open?id=0B_xdMoFx-YMeenp3M3VrcVM3RzQ"
   buses-rg-linea-b:
     geojson: "/public/colectivos/rio-grande-colectivos-2016-linea-b.geojson"
     kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeLVVoV2FUYnkyQVU"
+    gpx: "https://drive.google.com/open?id=0B_xdMoFx-YMea0pYcWZZYW5NOE0"
   buses-rg-linea-c:
     geojson: "/public/colectivos/rio-grande-colectivos-2016-linea-c.geojson"
     kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeZWE5VXhVUHFzYUk"
+    gpx: "https://drive.google.com/open?id=0B_xdMoFx-YMeTno3RDJNMExzMkU"
   buses-rg-linea-d:
     geojson: "/public/colectivos/rio-grande-colectivos-2016-linea-d.geojson"
     kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeeVRMeExfRWJlR3M"
+    gpx: "https://drive.google.com/open?id=0B_xdMoFx-YMeaERxaTQ1Z2FKRWM"
 
 
 

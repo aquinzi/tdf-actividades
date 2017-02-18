@@ -13,21 +13,7 @@ layout: default
 
 		<dt>Recorrido (mapa)</dt>
 			<dd>
-
-				{% assign this_geojson = "" %}
-				{% case page.uid %}
-					{% when 'linea-a' %}
-						{% assign this_geojson = site.maps.buses-rg-linea-a.geojson %}
-					{% when 'linea-b' %}
-						{% assign this_geojson = site.maps.buses-rg-linea-b.geojson %}
-					{% when 'linea-c' %}
-						{% assign this_geojson = site.maps.buses-rg-linea-c.geojson %}
-					{% when 'linea-d' %}
-						{% assign this_geojson = site.maps.buses-rg-linea-d.geojson %}
-				{% endcase %}
-
-				<div id="map" class="map-rg map-bus-stops"></div>
-				
+				<div id="map" class="map-rg map-bus-stops"></div>			
 				<noscript>
 				  <p>No te preocupes, era un lindo mapa con el recorrido.</p>
 				</noscript>
@@ -50,19 +36,25 @@ layout: default
 
 		<dt>Descarga</dt>
 			{% assign this_kml = "" %}
+			{% assign this_gpx = "" %}
 			{% case page.uid %}
 				{% when 'linea-a' %}
 					{% assign this_kml = site.maps.buses-rg-linea-a.kml %}
+					{% assign this_gpx = site.maps.buses-rg-linea-a.gpx %}
 				{% when 'linea-b' %}
 					{% assign this_kml = site.maps.buses-rg-linea-b.kml %}
+					{% assign this_gpx = site.maps.buses-rg-linea-b.gpx %}
 				{% when 'linea-c' %}
 					{% assign this_kml = site.maps.buses-rg-linea-c.kml %}
+					{% assign this_gpx = site.maps.buses-rg-linea-c.gpx %}
 				{% when 'linea-d' %}
 					{% assign this_kml = site.maps.buses-rg-linea-d.kml %}
+					{% assign this_gpx = site.maps.buses-rg-linea-d.gpx %}
 			{% endcase %}
 			<dd>
 				<ul>
 					<li><a href="{{ this_kml }}">KML</a></li>
+					<li><a href="{{ this_gpx }}">GPX</a></li>
 					<li><a href="{{ site.maps.buses-rg-all.kmz }}">KMZ</a> (todos los recorridos con las paradas)</li>
 				</ul>
 			</dd>
