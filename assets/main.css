@@ -173,9 +173,9 @@ h1, h2, h3, h4, h5, h6{
 
 h4, h5, h6{color: #000;}
 
-h1 {font-size: 44px; line-height: 44px; }
-h2 {font-size: 34px; line-height: 40px; }
-h3 {font-size: 24px; line-height: 32px; }
+h1 {font-size: 3.7em; line-height: 1em; }
+h2 {font-size: 2.8em; line-height: 1.2em; }
+h3 {font-size: 2em; line-height: 1.3em; }
 h4 {font-size: 20px; line-height: 28px; }
 h5 {font-size: 16px; line-height: 24px; }
 h6 {font-size: 12px; line-height: 20px; }
@@ -264,6 +264,10 @@ mark {
 	/* make it fun! */
 	transform: rotate(-4deg);
 	display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+  figure {margin: 0;}
 }
 
 
@@ -721,6 +725,12 @@ figure img {
 	background-color: #e7e7e7;
 	padding: 0.4em;
 }
+@media only screen and (max-width: 600px) {
+	figure img {
+		width: 100%;
+	}
+}
+
 
 figcaption {
 	font-size: small;
@@ -1251,6 +1261,10 @@ footer .btn-backtotop{
 	.changelog dd { margin-top: 0; }
 }
 
+@media screen and (max-width: 600px) {
+	.changelog dd {margin-left: 0; } 
+}
+
 .changelog ul, .changelog.latest { list-style-type: none; }
 
 .changelog li { line-height: 1.6em; }
@@ -1349,7 +1363,10 @@ div[class^="index-info-"]{
 	margin: 3em 4%;
 }
 
-div.index-info-feeds, div.index-info-fresco { margin-left: 0.3em; }
+
+@media (min-width: 700px)  {
+	div.index-info-feeds, div.index-info-fresco { margin-left: 0.3em; }
+}
 
 div.index-info-que-es {
 	display: block; 
@@ -1362,7 +1379,7 @@ div.index-info-que-es {
 
 @media (max-width: 400px)  {
 	div.index-info-que-es {font-size: 1.0em; margin-top: -2em}
-	.index-info-que-es q {font-size: 1.2em;}
+	.index-info-que-es q {font-size: 1.2em; line-height: 1.6em;}
 }
 
 
@@ -2105,6 +2122,9 @@ vertical-align: middle;
 .archivo-agenda li {
 	margin: 0.3em 0;
 }
+	@media screen and (max-width: 600px) {
+		margin: 1em 0;
+	}
 
 .archivo-agenda a.name{
 	display: inline-block;
@@ -2146,6 +2166,15 @@ vertical-align: middle;
     position: absolute;
     top: 0;
     left: -38px;
+}
+@media screen and (max-width: 600px) {
+	.event-details::before {
+		display: none;
+	}
+	.archivo-agenda .event-details {
+		left: 0;
+	}
+	
 }
 
 
