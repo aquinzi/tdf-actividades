@@ -13,7 +13,7 @@ nota: |
 website: []
 telefono: ["011-1559138598"]
 email: 
-permalink: /rio-grande/entidades/okawakai-kendo/
+permalink: /rio-grande/entidades/rio-grande-kendo-dojo/
 redirect_from:
   - /rio-grande/entidades/kendo-okawakai/
   - /rio-grande/entidades/okawakai-kendo/
