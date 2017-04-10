@@ -9,7 +9,7 @@ location: centrodeportivo
 category: rio-grande
 tags: [deporte,kendo]
 source: 
-people: [okawakai-kendo]
+people: [rio-grande-kendo-dojo]
 short-url: https://goo.gl/szzP6L
 modified: 2016-11-29
 ---
