@@ -2,7 +2,7 @@
 nombre: Dojo Gichin Funakoshi
 imagen: logo-dojo-gichin-funakoshi.jpg
 categoria: karate
-ultima-actualizacion: 2016-04-22
+ultima-actualizacion: 2017-04-10
 direccion: 
   lugar: [centrodeportivo, margalot]
 horario: 
