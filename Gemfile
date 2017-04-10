@@ -34,3 +34,6 @@ gem "html-pipeline", versions["html-pipeline"], group: :jekyll_plugins
 gem "sass", versions["sass"], group: :jekyll_plugins
 gem "safe_yaml", versions["safe_yaml"], group: :jekyll_plugins
 gem 'wdm', '>= 0.1.0' if Gem.win_platform? #ruby kindly asked for it
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
