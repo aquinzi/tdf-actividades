@@ -3,7 +3,7 @@ nombre: Okawakai
 categoria: iaido
 ultima-actualizacion: 2017-04-10
 direccion: 
-  lugar: [sumchacra4]
+  lugar: [sumarabelgrano]
 horario: 
 precio: gratis
 nota: | 

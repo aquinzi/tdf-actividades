@@ -3,7 +3,7 @@ nombre: Río Grande Kendo Dojo
 categoria: kendo
 ultima-actualizacion: 2017-04-10
 direccion: 
-  lugar: [sumchacra4]
+  lugar: [sumarabelgrano]
 horario: 
   - {dia: "jueves y viernes", hora: "17:30-19:00", nota: "" }
 precio: pago
