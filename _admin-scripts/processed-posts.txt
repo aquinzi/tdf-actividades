@@ -138,3 +138,6 @@ rio-grande@2016-11-12-me-rio-grande-festival.md
 rio-grande@2016-11-20-corro-por-malvinas.md
 rio-grande@2016-11-26-tercer-seminario-nacional-aikido-tierra-fuego.md
 rio-grande@2017-01-20-global-game-jam.md
+rio-grande@2017-04-22-flisol.md
+rio-grande@2017-05-06-desafio-producir-29-edicion.md
+rio-grande@2017-05-05-primer-seminario-nacional-aikido.md
