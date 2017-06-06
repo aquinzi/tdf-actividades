@@ -71,3 +71,13 @@ También conocido como: {{ activity.alternativo | join:", " }}
 <h2>Comentarios</h2>
 
 {% include comment-form.html add_activity=true %}
+
+
+{% if page.comments %}
+<section class="comentarios-pagina">
+	{% for comment in page.comments %}
+		{% include site-comment.html %}
+	{% endfor %}
+</section>
+
+{% endif %}

@@ -1,0 +1,27 @@
+<article itemprop="comment" itemscope="" itemtype="http://schema.org/UserComments">
+	<p>{{ comment.text }}</p>
+	<footer>
+		<p>
+			<span itemprop="creator" class="author" itemscope="" itemtype="http://schema.org/Person">
+     			<span itemprop="name">{{ comment.author }}</span>
+     		</span> 
+     		<time itemprop="commentTime" datetime="{{ comment.date | date_to_xmlschema }}">{% include human-date.html hide_weekday=true date=comment.date %}</time>
+    	</p>
+   </footer>
+
+	{% if comment.answer %}
+
+		<article itemprop="comment" itemscope="" itemtype="http://schema.org/UserComments" class="answer">
+
+			<p>{{ comment.answer }}</p>
+			<footer>
+				<p>
+					<span itemprop="creator" class="author" itemscope="" itemtype="http://schema.org/Person">
+						<span itemprop="name">{{ site.name }}</span>
+					</span>
+				</p>
+			</footer>
+		</article>
+	{% endif %}
+
+</article>

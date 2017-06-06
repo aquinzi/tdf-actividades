@@ -13,6 +13,18 @@ website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/newcom/
+comments:
+  - id: 1
+    date: 2016-10-29 23:20:21
+    author: Julio
+    text: |
+      Juegan NEWCOM en Ushuaia?
+  - id: 2
+    date: 2016-10-29 23:21:20
+    author: Julio
+    text: |
+      Donde Juegan NEWCOM en Ushuaia?
+
 ---
 
 No pudimos encontrar dónde se hace exactamente ni los horarios, pero tenemos algunas ideas de dónde se podría realizar:

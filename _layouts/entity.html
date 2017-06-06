@@ -200,3 +200,11 @@ page.website:  /rio-grande/entidades/futsal-afa/
 
 {% include comment-form.html %}
 
+{% if page.comments %}
+<section class="comentarios-pagina">
+	{% for comment in page.comments %}
+		{% include site-comment.html %}
+	{% endfor %}
+</section>
+
+{% endif %}
