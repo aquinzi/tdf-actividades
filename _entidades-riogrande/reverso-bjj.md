@@ -2,12 +2,11 @@
 nombre: Reverso Brazilian Jiu Jitsu
 imagen: logo-reverso-bjj.jpg
 categoria: jiu-jitsu
-ultima-actualizacion: 2016-04-22
+ultima-actualizacion: 2017-06-06
 direccion: 
-  lugar: [12 de octubre N°452 (barrio profesional)]
+  lugar: [Viedma 766 (Planta alta)]
 horario: 
-  - {dia: "lunes, miércoles, viernes y sábados", hora: "09:00-11:00", nota: "" }
-  - {dia: "lunes, miércoles, viernes y sábados", hora: "21:00-23:00", nota: "" }
+  - {dia: "", hora: "", nota: "" }
 precio: 
 nota: | 
   Jiu-jitsu brasilero.  

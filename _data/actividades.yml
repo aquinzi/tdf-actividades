@@ -327,6 +327,12 @@
   descripcion: |
     El motociclismo es el uso deportivo de la moto en varias modalidades. El objetivo de una carrera de velocidad consiste en recorrer cierta distancia (o ir de un sitio hacia otro), en el menor tiempo posible; o recorrer la mayor distancia en un tiempo predefinido; o recorrer una distancia en un tiempo preestablecido sin sobrepasar ese tiempo, modo en el que gana el corredor que se acerca más al tiempo predefinido. (Ver más información en <a href="https://es.wikipedia.org/wiki/Motociclismo">Wikipedia</a>.)
 
+- id: muay-thai
+  nombre: muay thai
+  tipo: deporte
+  descripcion: |
+    Nombre original <span lang="th">มวยไทย</span>, también se lo conoce como "Boxeo tailandés" y tradicionalmente como el "arte de las ocho extremidades". Arte marcial y deporte de contacto tailandés, el cual se desarrolla de pie por medio de golpes con técnicas combinadas de piernas, brazos, pies, rodillas, y codos, además de algunos barridos, sujeciones (para golpear) y lanzamientos. Es considerado el deporte de lucha en pie más eficaz. Es una de las disciplinas más utilizadas en MMA (Mixed Martial Arts). Actualmente suele ser considerado como un deporte extremo, lo cual favorece la realización de apuestas, y por lo tanto un deporte que se considera ilegal en varios países. (Ver más información en <a href="https://es.wikipedia.org/wiki/Muay_thai">Wikipedia</a>.)
+
 - id: musica
   nombre: música
   tipo: arte
