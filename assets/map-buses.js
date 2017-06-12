@@ -22,7 +22,7 @@ function initMap(linea){
   });
 
   // load GeoJSON from an external file
-  $.getJSON("/public/colectivos/rio-grande-colectivos-2016-paradas.geojson",function(data){
+  $.getJSON("/public/colectivos/rio-grande-colectivos-paradas.geojson",function(data){
 
 	 var busStopIcon_blue = L.icon({
 	   iconUrl: '/assets/imgs/bus-stop-blue.png',
