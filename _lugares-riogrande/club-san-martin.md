@@ -7,11 +7,11 @@ gstreetview: "https://www.google.com/maps/@-53.7916648,-67.6934956,3a,75y,219.04
 imagen: "http://maps.googleapis.com/maps/api/streetview?size=800x400&location=-53.7916648,-67.6934956&heading=200&fov=80&pitch=-15"
 categoria: 
 colectivos: ["a","b","c"]
-ultima-actualizacion: 2017-02-16
+ultima-actualizacion: 2017-06-12
 horario: 
   - {dia: "", hora: "", nota: "" }
 email: 
-website: []
+website: ["https://www.facebook.com/clubdeportivoyculturalsanmartin/?"]
 telefono: [421427]
 nota: |
  
