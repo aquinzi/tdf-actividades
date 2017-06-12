@@ -8,6 +8,7 @@ direccion:
 horario: 
   - {dia: "martes y jueves", hora: "16:00-17:30"}
 precio: pago
+inactive: true
 nota: | 
   Ya no se realiza más.
   Clases por Nahuel Palacios (1 kyû).

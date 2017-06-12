@@ -8,6 +8,7 @@ horario:
   - {dia: "viernes", hora: "21:00-22:00", nota: "en Einsten 821"}
   - {dia: "domingo", hora: "22:00-23:00", nota: "en Combate de Montevideo 864"}
 precio: gratis
+inactive: true
 nota: | 
   Ser mayor de 18 años. Para mujeres y hombres.
   No es necesario saber patinar, enseñan.

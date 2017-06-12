@@ -7,6 +7,7 @@ direccion:
 horario: 
   - {dia: "", hora: "", nota: "" }
 precio: gratis
+inactive: true
 nota: | 
   Ya no se da más.
 website: []

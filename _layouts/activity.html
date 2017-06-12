@@ -28,8 +28,19 @@ También conocido como: {{ activity.alternativo | join:", " }}
 {% if page.city == "tolhuin" %}{% assign entities = site.entidades-tolhuin %}{% endif %}
 {% assign entities = entities | where: "categoria",page.activity_id %}
 
+
+{# comment #} this is because we filter in the loop, as we tried where_exp on github and it didn't work {# endcomment #}
+{% assign found_something = false %} 
+
 <ul class="listado-entidades">
 {% for entity in entities %}
+
+	{% if entity.inactive == true %}
+		{% continue %}
+	{% endif %}
+
+	{% assign found_something = true %} 
+
 	<li class="card-entidad {{ entity.precio }}">
 		<div class="logo">
 			{% if entity.imagen %}{% include get-logo.html logo=entity.imagen width=80 %}{%endif%}
@@ -45,7 +56,7 @@ También conocido como: {{ activity.alternativo | join:", " }}
 					{% for location in entity.direccion.lugar %}
 						{% include get-place.html place=location city=page.city %}	
 					{% unless forloop.last %},{%endunless%}
-					{%endfor%}
+					{% endfor %}
 
 						</dd>
 			{% else %} 
@@ -66,6 +77,9 @@ También conocido como: {{ activity.alternativo | join:", " }}
 {% else %}
 	<li> En la ciudad se hace <mark>{{ activity.nombre }}</mark> pero no hay nada listado. Si conoces de alguna, no dudes en <a href="{{ site.data.wiki.colaboracion }} rel="external"">colaborar</a>. </li>
 {% endfor %}
+{% if found_something == false %}
+	<li> En la ciudad se hace <mark>{{ activity.nombre }}</mark> pero no hay nada listado. Si conoces de alguna, no dudes en <a href="{{ site.data.wiki.colaboracion }} rel="external"">colaborar</a>. </li>
+{% endif %}
 </ul>
 
 <h2>Comentarios</h2>
