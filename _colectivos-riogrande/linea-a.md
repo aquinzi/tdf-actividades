@@ -68,4 +68,14 @@ recorrido:
   - {"calle": "Tolhuin a Mevi", "punto":"-53.80796, -67.65461"}
   - {"calle": "Mevi a Yaghan", "punto":"-53.80530, -67.65251"}
   - {"calle": "Yaghan a Yourka", "punto":"-53.8032, -67.6618"}
+comments:
+  - id: 1
+    date: 2017-06-08 23:35:32
+    author: Guille
+    text: |
+      Tendrían que tener un listado de las paradas según el recorrido y diciendo el sentido, si es hacia el centro o hacia el barrio.
+
+      A su vez si numeran las paradas sería más fácil usar la app ¿cuando llega?
+    reply: |
+        ¡Buenas ideas Guille! Vamos a intentar aplicarlas.
 ---
