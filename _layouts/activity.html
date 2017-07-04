@@ -29,7 +29,7 @@ También conocido como: {{ activity.alternativo | join:", " }}
 {% assign entities = entities | where: "categoria",page.activity_id %}
 
 
-{# comment #} this is because we filter in the loop, as we tried where_exp on github and it didn't work {# endcomment #}
+{% comment %} this is because we filter in the loop, as we tried where_exp on github and it didn't work {% endcomment %}
 {% assign found_something = false %} 
 
 <ul class="listado-entidades">

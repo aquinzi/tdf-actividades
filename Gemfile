@@ -26,12 +26,12 @@ gem "jekyll-sitemap", versions["jekyll-sitemap"], group: :jekyll_plugins
 gem "jekyll-gist", versions["jekyll-gist"], group: :jekyll_plugins
 gem "jekyll-paginate", versions["jekyll-paginate"], group: :jekyll_plugins
 gem "jekyll-coffeescript", versions["jekyll-coffeescript"], group: :jekyll_plugins
-gem "jekyll-seo-tag", versions["jekyll-seo-tag"], group: :jekyll_plugins
+#gem "jekyll-seo-tag", versions["jekyll-seo-tag"], group: :jekyll_plugins
 gem "jekyll-github-metadata", versions["jekyll-github-metadata"], group: :jekyll_plugins
 gem "listen", versions["listen"], group: :jekyll_plugins
 #gem "github-pages", versions["github-pages"], group: :jekyll_plugins
-gem "html-pipeline", versions["html-pipeline"], group: :jekyll_plugins
-gem "sass", versions["sass"], group: :jekyll_plugins
+#gem "html-pipeline", versions["html-pipeline"], group: :jekyll_plugins
+#gem "sass", versions["sass"], group: :jekyll_plugins
 gem "safe_yaml", versions["safe_yaml"], group: :jekyll_plugins
 gem 'wdm', '>= 0.1.0' if Gem.win_platform? #ruby kindly asked for it
 
