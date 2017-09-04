@@ -2,13 +2,13 @@
 nombre: Aikido Tolhuin
 imagen: logo-sakanashi-dojo.jpg
 categoria: aikido
-ultima-actualizacion: 2017-06-06
+ultima-actualizacion: 2017-09-04
 direccion: 
   lugar: [SUM Colegio Provincial Ramón Alberto Trejo Noel (Santiago Rupatini 379)]
   geo: {lat: -54.508949, lon: -67.193206}
   bing: https://www.bing.com/mapspreview?osid=bb342996-89b5-4565-a955-0e8745905c01&cp=-54.5087~-67.196576&lvl=16&style=h&v=2&sV=2&form=S00027
 horario: 
-  - {dia: "lunes, miércoles, viernes", hora: "22:00-23:00", nota: ""}
+  - {dia: "lunes, miércoles, viernes", hora: "21:30-22:30", nota: ""}
 precio: gratis
 nota: | 
   Nombre alternativo: Aikidô Tolhuin.
