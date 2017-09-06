@@ -6,7 +6,6 @@ Listado y agenda de actividades que se puede hacer en la provincia.
 El sitio se puede ver en [tdf.aquinzi.com](http://tdf.aquinzi.com/).
 
 
-
 Versiones
 ----------
 
