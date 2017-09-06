@@ -23,7 +23,7 @@ layout: null
   {% endfor %}
 
   {% for collection in site.collections %}
-    {% for doc in collection[1].docs %}
+    {% for doc in collection.docs %}
     <url>
       <loc>{{ site.url }}{{ doc.permalink | remove: "index.html" }}</loc>
 		<xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ page.permalink }}"/>
