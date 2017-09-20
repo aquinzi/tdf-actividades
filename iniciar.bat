@@ -13,6 +13,6 @@ set /p INPUT=": "
 If /I "%INPUT%"=="l" ( 
 	bundle exec jekyll serve --watch --incremental
 )
-If /I "%INPUT%"=="b" ( 
-	bundle exec jekyll build
+ELSE ( 
+	bundle exec jekyll build --incremental
 )
