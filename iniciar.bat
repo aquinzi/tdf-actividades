@@ -5,5 +5,14 @@ echo Iniciando Jekyll...
 ECHO.
 
 chcp 65001
-REM --safe because GitHub Pages runs it like that (no plugins, ignore symbolic links)
-bundle exec jekyll serve --safe --watch --incremental
+
+ECHO local(l) or build(b)?
+set /p INPUT=": "
+
+:: The /I switch makes the comparisons case-insensitive
+If /I "%INPUT%"=="l" ( 
+	bundle exec jekyll serve --watch --incremental
+)
+If /I "%INPUT%"=="b" ( 
+	bundle exec jekyll build
+)
