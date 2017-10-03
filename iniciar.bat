@@ -12,7 +12,6 @@ set /p INPUT=": "
 :: The /I switch makes the comparisons case-insensitive
 If /I "%INPUT%"=="l" ( 
 	bundle exec jekyll serve --watch --incremental
-)
-ELSE ( 
+) ELSE ( 
 	bundle exec jekyll build --incremental
 )
