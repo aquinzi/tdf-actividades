@@ -174,4 +174,17 @@ json-ld (google lo prefiere a microdata):
 }
 </script>
 
-{% include upcoming-events.html %}
+{% if start_date_iso >= site.time | date: "%F" %}
+	{% include upcoming-events.html %}
+	{% else %}
+		{% comment %}
+			FIX: hard-coded: shouldn't be like this....
+				Until we got the dynamic thing going on, send the user to front page
+		{% endcomment %}
+		<aside class="upcomming-events">
+			<h4>Próximamente</h4>
+			<div class="city"> 
+				<h5><a href="/">Ver en página principal</a></h5>
+			</div> 
+		</aside>
+{% endif %}
