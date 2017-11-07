@@ -7,7 +7,7 @@ direccion:
   lugar: [cantera]
 horario: 
   - {dia: "lunes, miércoles", hora: "16:00-17:30", nota: "adultos y mayores de 15 años" }
-  - {dia: "lunes, miércoles", hora: "18:00-19:00", nota: "de 5 a 7 años" }
+  - {dia: "miércoles, viernes", hora: "18:45-19:45", nota: "de 5 a 7 años" }
   - {dia: "martes, jueves", hora: "09:00-10:30", nota: "mayores de 18 años" }
   - {dia: "martes, jueves", hora: "18:00-20:00", nota: "de 8 a 14 años" }
   - {dia: "sábado", hora: "16:30-19:30", nota: "clase general. Adultos y mayores de 8 años" }
