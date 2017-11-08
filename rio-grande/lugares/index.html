@@ -29,13 +29,13 @@ title: "¿Qué hacer en Río Grande?: Lugares"
 	<dd>
 		<ol>
 			{% for item in lugar.items | sort: "nombre" %}
-				<li><a href="{{ item.url }} ">{{ item.nombre }}</a></li>
+				<li><a href="{{ item.url }}">{{ item.nombre }}</a></li>
 			{% endfor %}
 		</ol>
 	</dd>
 	{% else %}	
 		{% for item in lugar.items | sort: "nombre" %}
-			{% capture tmp %}<a href="{{ item.url }} ">{{ item.nombre }}</a>{% endcapture%}
+			{% capture tmp %}<a href="{{ item.url }}">{{ item.nombre }}</a>{% endcapture%}
 			{% assign no_category = no_category | push: tmp %}
 		{% endfor %}
 	{% endif %}	
