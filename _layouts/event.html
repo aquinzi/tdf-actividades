@@ -174,7 +174,7 @@ json-ld (google lo prefiere a microdata):
 }
 </script>
 
-{% if start_date_iso >= site.time | date: "%F" %}
+{% if (page.date | date: "%F") >= (site.time | date: "%F") %}
 	{% include upcoming-events.html %}
 	{% else %}
 		{% comment %}
