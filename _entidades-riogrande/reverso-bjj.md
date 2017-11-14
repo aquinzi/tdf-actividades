@@ -4,7 +4,7 @@ imagen: logo-reverso-bjj.jpg
 categoria: jiu-jitsu
 ultima-actualizacion: 2017-06-06
 direccion: 
-  lugar: [Viedma 766 (Planta alta)]
+  lugar: [reversobjj]
 horario: 
   - {dia: "", hora: "", nota: "" }
 precio: 

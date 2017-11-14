@@ -22,6 +22,7 @@
  * ==content (basics)
  * ==page info (last update)
  * ==footer
+ * ==message boxes
  *
  *    Specific sections:
  * ==changelog
@@ -300,6 +301,7 @@ this is to have order and save repetition
 , footer#site-footer .social a:before
 , .headerlink:before
 , .archivo-agenda .tags:before
+, .notice.warning p:before
 {
 	font-family: "FontAwesome"; 
 	speak: none; /* Not to be trusted*/
@@ -345,7 +347,6 @@ a[rel^="external"]:after, .h-event .p-description a[href^="http"]:after
 { content:"\f099"; }
 
 footer#site-footer .social a:before{padding-right: 0.3em;}
-
 
 
 /*   icon: lapiz */
@@ -409,8 +410,6 @@ footer#site-footer .social a:before{padding-right: 0.3em;}
 , .h-event .event-subscribe li:last-child a:before
 { content: "\f1e0"; }
 
-
-
 /*   icon: plus */
 .h-event .event-subscribe li a:before  { content: "\f067"; }
 
@@ -418,14 +417,9 @@ footer#site-footer .social a:before{padding-right: 0.3em;}
 , .listado-entidades li.card-entidad .costo:before
   {margin-right: 0.4em; width: 16px; display: inline-block; }
 
-
-
 /*   icon: compress */
 .h-event .extra .short-url::before
 { content: "\f066"; }
-
-
-
 
 
 .h-card a.u-url:before
@@ -465,6 +459,21 @@ footer#site-footer .social a:before{padding-right: 0.3em;}
 /*  icon: telegram (fake. fontawesome doesn't have it) */
 .h-event .event-subscribe li a[href^="https://telegram.me/"]:before
 { content:"\f1d8"; }
+
+
+.notice.warning p:before {
+	content: "\f071";
+	font-size: 2em;
+	line-height: 0.8em;
+	vertical-align: bottom;
+	margin-right: 0.4em;
+	color: #ed9e0d;
+}
+
+
+
+
+
 
 
 /*************
@@ -1104,10 +1113,6 @@ figcaption {
 }
 
 
-
-
-
-
 /*************
 ==footer
 **************/
@@ -1133,42 +1138,13 @@ figcaption {
 #site-footer a { color:inherit; white-space:nowrap }
 
 #site-footer .author {
-	/*
-	color: inherit;
-	font-size: 1.5em;
-	background-color: #6B2121;
-	width: 66px;
-	padding: 0.2em;
-	transform: rotate(-17deg);
-	height: 66px;
-	*/
 	text-align: center;
 	margin: 2em auto;
 	position: relative;
 }
 #site-footer .author a {
 	border-bottom: 0px none;
-/*
-	color: inherit;
-	display: inline-block;
-	background-color: #6934AB;
-	transform: rotate(33deg);
-	padding: 0.8em 0.5em;
-	position: absolute;
-	width: 64px;
-	height: 56px;
-	left: 2px;
-	*/
 }
-/*
-#site-footer .author a:hover {
-	background-color: #4C277A;
-	transform: rotate(18deg);
-}
-*/
-
-
-
 
 #site-footer ul {
 	list-style: none;
@@ -1247,6 +1223,23 @@ footer .btn-backtotop{
 		position: absolute;
 		top: -50px;
 	}  
+}
+
+/**
+ * ==message boxes
+ */
+
+.notice {
+	padding: 0.2em 1em;
+	margin-bottom: 1em;
+	border-radius: 0.4em;
+	color: #444;
+	border: 2px solid;
+}
+
+.notice.warning {
+	background-color: #ffe6b7;
+	border-color: orange;
 }
 
 

@@ -10,7 +10,6 @@ horario:
 precio: pago
 inactive: true
 nota: | 
-  Ya no se realiza más.
   Clases por Nahuel Palacios (1 kyû).
 website: []
 telefono: []

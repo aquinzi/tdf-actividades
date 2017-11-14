@@ -4,6 +4,11 @@ layout: default
 
 {% comment %}should be http://schema.org/Organization (organization such as a school, NGO, corporation, club, etc.) but we need the "opening hours"{%endcomment%}
 
+{% if page.inactive %}
+	<div class="notice warning">
+		<p>La entidad parece que ya dejó de existir. Se deja la ficha para archivo.</p>
+	</div>
+{% endif %}
 
 <article class="card-entidad h-card" itemscope itemtype="http://schema.org/LocalBusiness">
 	<header>

@@ -7,6 +7,7 @@ direccion:
 horario: 
   - {dia: "martes y jueves", hora: "18:00-20:00", nota: "" }
 precio: pago
+inactive: true
 nota: | 
   
 website: ["https://www.facebook.com/Escuela-Fueguina-del-Clown-293187380837768/", "https://www.facebook.com/elcalcetinroto.companiateatral"]

@@ -7,6 +7,7 @@ direccion:
 horario: 
   - {dia: "lunes", hora: "20:00-21:00", nota: "" }
 precio: 
+inactive: true
 nota: | 
   Dictado por Edit
 website: []

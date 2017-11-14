@@ -7,6 +7,7 @@ direccion:
 horario: 
   - {dia: "martes y jueves", hora: "21:00-22:00", nota: "Nivel Básico Inicial" }
 precio: pago
+inactive: true
 nota: | 
   Dictado por Maxi o Maximiliano Ratto?
 website: []

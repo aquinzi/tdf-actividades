@@ -8,6 +8,7 @@ horario:
   - {dia: "martes y jueves", hora: "18:00-19:00", nota: "" }
   - {dia: "martes y jueves", hora: "19:00-20:00", nota: "" }
 precio: 
+inactive: true
 nota: | 
   
 website: []

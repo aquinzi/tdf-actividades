@@ -57,6 +57,22 @@ layout: default
 	{% endcase %}
 {% endfor %}
 
+
+{% capture date_compare_page %}{{page.date | date: '%s'}}{% endcapture %}
+{% capture date_compare_site %}{{site.time | date: '%s'}}{% endcapture %}
+
+{% if date_compare_page < date_compare_site %}
+	{% comment %}
+		Until we got the dynamic thing going on, send the user to front page
+	{% endcomment %}
+	<div class="notice warning">
+		<p>
+			El evento expiró. Para ver los próximos, dirigirse <a href="{{ site.url }}/{{ this_city }}/">al índice</a>
+		</p>
+	</div>
+{% endif %}
+
+
 <article class="h-event" itemscope itemtype="http://schema.org/{{ event_type }}">
 <header> 
 	<h1 class="p-name" itemprop="name">{{ page.title }}</h1>
@@ -174,17 +190,6 @@ json-ld (google lo prefiere a microdata):
 }
 </script>
 
-{% if (page.date | date: "%F") >= (site.time | date: "%F") %}
+{% if date_compare_page >= date_compare_site %}
 	{% include upcoming-events.html %}
-	{% else %}
-		{% comment %}
-			FIX: hard-coded: shouldn't be like this....
-				Until we got the dynamic thing going on, send the user to front page
-		{% endcomment %}
-		<aside class="upcomming-events">
-			<h4>Próximamente</h4>
-			<div class="city"> 
-				<h5><a href="/">Ver en página principal</a></h5>
-			</div> 
-		</aside>
 {% endif %}

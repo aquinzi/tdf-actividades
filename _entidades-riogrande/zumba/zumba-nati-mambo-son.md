@@ -7,6 +7,7 @@ direccion:
 horario: 
   - {dia: "lunes, miércoles, viernes", hora: "19:00-20:00", nota: "" }
 precio: pago
+inactive: true
 nota: | 
   Dictado por Natalia Couto
 website: ["https://www.facebook.com/zumba.tierradelfuego/"]

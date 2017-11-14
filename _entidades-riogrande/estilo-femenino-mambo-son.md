@@ -7,6 +7,7 @@ direccion:
 horario: 
   - {dia: "miércoles", hora: "18:00-19:00", nota: "" }
 precio: pago
+inactive: true
 nota: | 
   Dictado por Lola Acosta
 website: []

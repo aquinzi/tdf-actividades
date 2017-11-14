@@ -7,7 +7,8 @@ gstreetview: "https://www.google.com.ar/maps/@-53.7696633,-67.7164788,3a,75y,41.
 imagen: "http://maps.googleapis.com/maps/api/streetview?size=800x400&location=-53.7696633,-67.7164788&heading=50&fov=80&pitch=-5"
 categoria: deportes
 colectivos: ["c"]
-ultima-actualizacion: 2017-02-16
+inactive: true
+ultima-actualizacion: 2017-11-14
 horario: 
   - {dia: "lunes a viernes", hora: "18:00-23:00", nota: "" }
 email: 

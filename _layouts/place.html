@@ -4,6 +4,12 @@ layout: default
 this_layout: place #needed for title replacement
 ---
 
+{% if page.inactive %}
+	<div class="notice warning">
+		<p>El lugar parece que ya dejó de existir. Se deja la ficha para archivo.</p>
+	</div>
+{% endif %}
+
 <article class="h-card card-lugar" itemscope itemtype="http://schema.org/Place">
 
 	<h2 class="p-name" itemprop="name">{{ page.nombre }}</h2>

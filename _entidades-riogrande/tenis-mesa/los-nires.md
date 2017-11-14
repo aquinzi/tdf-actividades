@@ -9,7 +9,7 @@ horario:
 precio: gratis
 inactive: true
 nota: | 
-  Ya no se da más.
+  
 website: []
 telefono: []
 email: 
