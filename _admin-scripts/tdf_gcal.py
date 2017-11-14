@@ -67,11 +67,8 @@ try:
 	from apiclient.errors import HttpError
 	import httplib2
 except ImportError as e:
-    print (" Need Google API libs. Install with: pip3 install --upgrade google-api-python-client")
-    exit()
-
-
-
+	 print (" Need Google API libs. Install with: pip3 install --upgrade google-api-python-client")
+	 exit()
 
 
 #optional libs
@@ -109,6 +106,7 @@ DAYS_SPANS_MANUAL_UPDATE = 3 # mostly for site update
 
 GOOGLE_AUTH = "client_secrets.json"
 USER_CREDENTIALS = 'gcal-tdf-credentials.json'
+APPLICATION_NAME = 'tdf-eventos-gcalcli' 
 
 # -------------------
 # end configuration
@@ -119,6 +117,8 @@ FILES_FOR_PROCESSED_LIST = list() #so we write everything once
 PROCESSED_POSTS_FILE = os.path.join(os.getcwd(),PROCESSED_POSTS_FILE)
 GOOGLE_AUTH      = os.path.join(os.getcwd(), GOOGLE_AUTH)
 USER_CREDENTIALS = os.path.join(os.getcwd(), USER_CREDENTIALS)
+
+
 
 # be nice and allow to include the secret/keys as paramenters
 parser = argparse.ArgumentParser()
@@ -140,7 +140,7 @@ def get_processed_file():
 	"""Get the processed file, returning it as a list.
 
 	Returns:
-	    list
+		 list
 	"""	
 
 	if os.path.exists(PROCESSED_POSTS_FILE):
@@ -205,12 +205,11 @@ if args.edit:
 
 
 
-
 def googleAuth():
 	"""Authenticate Google API call
 	
 	Returns:
-	    http object (authorized)
+		 http object (authorized)
 	"""
 
 	# Storage object holds the credentials (for a single user)
@@ -220,19 +219,20 @@ def googleAuth():
 	# Get the credentials 
 	credentials = storage.get()
 
-	if credentials is None or credentials.invalid:
+	if not credentials or credentials.invalid:
 		'''
 		flow = OAuth2WebServerFlow(client_id=API_CLIENT_ID,
 		client_secret=API_CLIENT_SECRET, 
 		scope=['https://www.googleapis.com/auth/calendar',
-             'https://www.googleapis.com/auth/urlshortener']
+				 'https://www.googleapis.com/auth/urlshortener']
 		)
 		'''
 		flow = client.flow_from_clientsecrets(
-	    GOOGLE_AUTH,
-	    scope=['https://www.googleapis.com/auth/calendar',
-             'https://www.googleapis.com/auth/urlshortener'],
-	   )
+		 GOOGLE_AUTH,
+		 scope=['https://www.googleapis.com/auth/calendar',
+				 'https://www.googleapis.com/auth/urlshortener'],
+		)
+		flow.user_agent = APPLICATION_NAME
 	
 		# new credentials need to be obtained. 
 		# oauth2client.tools.run() opens an authorization server page 
@@ -240,7 +240,10 @@ def googleAuth():
 		# The new credentials are also stored in the Storage object,
 		# which updates the credentials file.
 		flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-		credentials = tools.run_flow(flow, storage, flags)
+		if flags:
+			credentials = tools.run_flow(flow, storage, flags)
+		print (" storing credentials to " + USER_CREDENTIALS)
+
 
 
 	# authorize credentials
@@ -253,10 +256,10 @@ def useService(service_type):
 	""" "Shortcut" to the service/API call 
 	
 	Args:
-	    service_type (str): which service? calendar or url (urlshortener)
+		 service_type (str): which service? calendar or url (urlshortener)
 	
 	Returns:
-	    build object kind of thing (google)
+		 build object kind of thing (google)
 	"""
 
 	service = ("", "")
@@ -349,11 +352,11 @@ def scheduleEvent(list_schedule, event_data, isevent=True):
 			""" translate to human dates (spanish, quick and dirty)
 			
 			Args:
-			    date_time (datetime object)
-			    abbr (boolean) abreviate month names? default False
+				 date_time (datetime object)
+				 abbr (boolean) abreviate month names? default False
 			
 			Returns:
-			    str
+				 str
 			"""
 			
 			tmp = date_time.strftime('%d de //%m//, %H:%M hs')
@@ -485,10 +488,10 @@ def shortenURL(url):
 	""" Shortens the URL
 	
 	Args:
-	    url (str)
+		 url (str)
 	
 	Returns:
-	    str: shortened URL
+		 str: shortened URL
 	"""
 	short = executeCall(
 		useService('url').url().insert(body={'longUrl': url})
@@ -501,10 +504,10 @@ def executeCall(method):
 	""" Executes the API method.
 	
 	Args:
-	    method (google-obhect)
+		 method (google-obhect)
 	
 	Returns:
-	    unknown: method executed or none if failed
+		 unknown: method executed or none if failed
 	"""
 	try:
 		return method.execute()
@@ -524,9 +527,9 @@ def process_post(path, city, meta=False):
 	"""Process the post
 	
 	Args:
-	    path (str)
-	    city (str)
-	    meta (dict) if we got the metadata before 
+		 path (str)
+		 city (str)
+		 meta (dict) if we got the metadata before 
 	"""
 
 	print("    Getting metadata... ", end="")
@@ -549,11 +552,11 @@ def get_post_metadata(path, city):
 	"""Get metadata from post
 	
 	Args:
-	    path (str)
-	    city (str)
+		 path (str)
+		 city (str)
 	
 	Returns:
-	    dictionary
+		 dictionary
 	"""
 
 	the_post = ""
@@ -746,11 +749,11 @@ def create_post_schedule(start_date, end_date):
 	"""Finds the schedule for posting the event
 	
 	Args:
-	    start_date (str): when the event starts (YYYY-MM-DD)
-	    end_date (str): when the event ends (YYYY-MM-DD)
+		 start_date (str): when the event starts (YYYY-MM-DD)
+		 end_date (str): when the event ends (YYYY-MM-DD)
 	
 	Returns:
-	    LIST: list of dates - times
+		 LIST: list of dates - times
 	"""
 
 	random_minute = str(random.randrange(1,59))
@@ -788,7 +791,7 @@ def create_post_schedule(start_date, end_date):
 
 	for i in range(days_between):
 		for hour in HOUR_SCHEDULE:
-		    tmp = date_start + datetime.timedelta(days=i)
+			 tmp = date_start + datetime.timedelta(days=i)
 
 			post_schedule.append(
 				(tmp.strftime('%Y-%m-%d')), 
@@ -798,15 +801,15 @@ def create_post_schedule(start_date, end_date):
 	'''
 
 def update_processed_file(list_files):
-    """Updates the processed posts file.
-    
-    Args:
-        list_files (list): list of paths/strings
-    """
+	"""Updates the processed posts file.
+	 
+	 Args:
+		  list_files (list): list of paths/strings
+	"""
 
 	#just dirtify it
-    with open(PROCESSED_POSTS_FILE,'a',encoding="utf-8") as tmp:
-    	tmp.write("\n" + "\n".join(list_files))
+	with open(PROCESSED_POSTS_FILE,'a',encoding="utf-8") as tmp:
+		tmp.write("\n" + "\n".join(list_files))
 
 
 # Not yet implemented
@@ -815,11 +818,11 @@ def searchEvent(query_text):
 	event_list = []
 
 	work = useService('calendar').events(
-    	).list(calendarId=CALENDAR_ID,
-             #timeMin=start.isoformat() if start else None,
-             #timeMax=end.isoformat() if end else None,
-             q=query_text,
-             singleEvents=True)
+		).list(calendarId=CALENDAR_ID,
+				 #timeMin=start.isoformat() if start else None,
+				 #timeMax=end.isoformat() if end else None,
+				 q=query_text,
+				 singleEvents=True)
 	events = executeCall(work)
 
 	if not events['items']:
@@ -957,7 +960,7 @@ if __name__ == '__main__':
 				#filename is YYYY-MM-DD-slug.md
 				file_date = "-".join(archivo.split("-")[0:3])
 
-				if file_date.split("-")[0] == "2015":
+				if file_date.split("-")[0] in ("2015", "2016"):
 					# Sorry, we dont want the old ones
 					#print ("\n Skiping (old): " + archivo, end="") 
 					continue
