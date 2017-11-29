@@ -20,6 +20,7 @@ so they can be posted using IFTTT (so dirty!)
 #   probably we could need it. event['id'] (same as event['iCalUID'], this has @google.com)
 
 # TODO: save processed events to the txt file once the city is done. (avoid possible losts when script breaks)
+# FIX: Sometimes it doesnt parse properly (example as of 2017-11-29: Primera Ecomaratón Playas Limpias)
 # TODO: use the metadata in file to check if it's old or not. Reason: events that span multiple days (expositions) and were added later.
 # TODO: support to create shorturls
 # PRobably we should read config file so we dont hardcode stuff
@@ -36,12 +37,8 @@ so they can be posted using IFTTT (so dirty!)
 #                updates event
 # use named tuples
 '''>>> from collections import namedtuple
->>>
->>>
 >>> Point = namedtuple('Point', ['x','y'])
 >>> p = Point(x=11,y=22)
->>> p
-Point(x=11, y=22)
 >>> p = p._replace(x=80)
 >>> p
 Point(x=80, y=22)
@@ -76,6 +73,7 @@ try:
 	import yaml
 except ImportError:
 	YAML = False
+	print (" next time install pyyaml")
 else:
 	# You rock!
 	YAML = True
@@ -85,7 +83,6 @@ else:
 # --------------
 
 CALENDAR_ID = "primary" #IFTTT uses the primary calendar
-
 POST_FOLDER = '_posts'
 
 # where the posts reside
@@ -118,18 +115,36 @@ PROCESSED_POSTS_FILE = os.path.join(os.getcwd(),PROCESSED_POSTS_FILE)
 GOOGLE_AUTH      = os.path.join(os.getcwd(), GOOGLE_AUTH)
 USER_CREDENTIALS = os.path.join(os.getcwd(), USER_CREDENTIALS)
 
-
-
 # be nice and allow to include the secret/keys as paramenters
 parser = argparse.ArgumentParser()
 parser.add_argument("--client", help="path of the client_secret.json")
 parser.add_argument("--user",   help="path of the user secret_key.json")
-parser.add_argument("--clean",  help="Cleans the processed file list")
+parser.add_argument("--clean",  help="Cleans the processed file list", action="store_true")
 parser.add_argument("--edit",   help="Edit an event")
 parser.add_argument("--site-update", "-su",   help="Add manually, starts from today and spans " + str(DAYS_SPANS_MANUAL_UPDATE) + " days. Mostly for site updates.")
 
 #args = vars(parser.parse_args()) #to dict
 args = parser.parse_args()
+
+if args.clean:
+	clean_processed_file()
+	exit()
+
+if args.client or args.user:
+	if args.client:
+		GOOGLE_AUTH = args.client
+	if args.user:
+		USER_CREDENTIALS = args.user
+
+if not os.path.exists(GOOGLE_AUTH):
+	print (" sorry, I need the app credentials.")
+	exit()
+
+if args.edit:
+	#edit_event()
+	print ("not yet implemented. Sorry")
+	exit()
+
 
 
 # --------------
@@ -149,6 +164,7 @@ def get_processed_file():
 			return tmp.read().splitlines()
 
 	return False
+
 
 def clean_processed_file():
 	"""Filters processed file, deleting old entries. """	
@@ -178,31 +194,6 @@ def clean_processed_file():
 		print(" Processed file cleaned!")
 	else:
 		print(" Everything is ok. Processed file not modified. ")
-
-
-
-
-if args.clean:
-	clean_processed_file()
-	exit()
-
-
-if args.client or args.user:
-	if args.client:
-		GOOGLE_AUTH = args.client
-	if args.user:
-		USER_CREDENTIALS = args.user
-
-if not os.path.exists(GOOGLE_AUTH):
-	print (" sorry, I need the app credentials.")
-	exit()
-
-
-if args.edit:
-	#edit_event()
-	print ("not yet implemented. Sorry")
-	exit()
-
 
 
 def googleAuth():
@@ -453,8 +444,10 @@ def scheduleEvent(list_schedule, event_data, isevent=True):
 				for tag in all_tags:
 					tmp_tag = " " + tag + " "
 					
-					if tmp_tag in final_summary:
-						final_summary = final_summary.replace(tmp_tag, " #" + tag + " ")
+					if tmp_tag.lower() in final_summary.lower():
+						pattern = re.compile( re.escape(tmp_tag), re.IGNORECASE )
+						final_summary = pattern.sub(" #" + tag, final_summary)
+
 					else:
 						reminding_tags.append(tag)
 
@@ -565,13 +558,12 @@ def get_post_metadata(path, city):
 		'title':'', 'date':'','date-end':'','city': city
 		,'tags':'','short-url':'', 'location':'',
 
-
 		'start' : {'date': '', 'time':'', 'timestamp':''},
 		'end' : {'date': '', 'time':'', 'timestamp':''}
+
 		#date = only date, in str: yyyy-mm-dd 
 		#time = only time, in str: hh:mm
 		#timestamp = datetime, the object
-
 	}
 
 	keys = list(metadata.keys()) #so we can remove stuff, like city key
@@ -671,7 +663,7 @@ def get_post_metadata(path, city):
 		metadata['end']['time'] = metadata['end']['timestamp'].strftime('%H:%M:00')
 
 
-	#remove temporaly keys 
+	#remove temporary keys 
 	del metadata['date']
 	del metadata['date-end']
 
@@ -800,6 +792,7 @@ def create_post_schedule(start_date, end_date):
 
 	'''
 
+
 def update_processed_file(list_files):
 	"""Updates the processed posts file.
 	 
@@ -893,13 +886,12 @@ def edit_event():
 		what_to_update = input(": ")
 
 
-
 # --------------
 # start program!
 # --------------
 
-
 PLACES_NAMES = dict()
+
 for city in CITIES:
 	PLACES_NAMES[city] = dict()
 	PLACES_NAMES[city] = get_places_id(city)
@@ -910,7 +902,6 @@ processed_posts = list()
 if __name__ == '__main__':
 
 	print (" initiating ... " + PROCESSED_POSTS_FILE)
-
 
 	tmp = get_processed_file()
 	if tmp:
@@ -940,7 +931,6 @@ if __name__ == '__main__':
 		exit()
 
 
-
 	for ciudad in CITIES:
 		print (" \n ::: SCANNING " + ciudad + " :::")
 		current_folder = os.path.join(ROOT_DIR, ciudad, POST_FOLDER)
@@ -953,8 +943,6 @@ if __name__ == '__main__':
 					continue
 
 				#filename = os.path.basename(path) #get filename from path
-
-
 
 				file_path = os.path.join(root,archivo)
 				#filename is YYYY-MM-DD-slug.md
@@ -992,12 +980,10 @@ if __name__ == '__main__':
 		print ("\n\n -------------------------------")
 
 	print (" updating proccesed file list...")
+
 	if len(FILES_FOR_PROCESSED_LIST) > 0:
 		update_processed_file(FILES_FOR_PROCESSED_LIST)
 
-
 	print ( "\n finished! ")
 
-
 #listEvents()
-
