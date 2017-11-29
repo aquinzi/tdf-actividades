@@ -1,15 +1,14 @@
 {% comment %} Print place, optionally link to it. {% endcomment %}
 {% assign location = include.place | strip %}
-{% assign city  = include.city %}
 {% assign link  = false %}
 {% if include.link %}{% assign link = include.link %}{% endif %}
 {% if location != "" %}
 	{% assign city_places     = "" %}
 	{% assign city_places_url = "" %}
 	{% assign found = false %}
-	{% if city == "rio-grande" or city == "riogrande" %} {% assign city_places = site.lugares-riogrande %} {% endif %}
-	{% if city == "ushuaia" %} {% assign city_places = site.lugares-ushuaia %} {% endif %}
-	{% if city_places %}
+	{% if include.city == "rio-grande" or include.city == "riogrande" %} {% assign city_places = site.lugares-riogrande %}{% endif %}
+	{% if include.city == "ushuaia" %} {% assign city_places = site.lugares-ushuaia %} {% endif %}
+	{% if city_places != "" %}
 		{% for place in city_places %}
 			{% if place.uid == location %}
 				{% assign found = true %}
