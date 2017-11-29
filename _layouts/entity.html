@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% comment %}should be http://schema.org/Organization (organization such as a school, NGO, corporation, club, etc.) but we need the "opening hours"{%endcomment%}
+{% comment %}should be http://schema.org/Organization (organization such as a school, NGO, corporation, club, etc.) but we need the "opening hours"{% endcomment %}
 
 {% if page.inactive %}
 	<div class="notice warning">
@@ -30,7 +30,7 @@ layout: default
 			{% assign category_info =  site.data.actividades | where: "id", page.categoria | first %}
 			
 			<p class="categoria">Actividad: <a href="{{ category_link }}" class="p-category">{{ category_info.nombre }}</a> 
-			{% if category_info.alternativo.size > 0 %} (también {{ category_info.alternativo | join: ', '}}) {% endif %}
+			{% if category_info.alternativo.size > 0 %} (también {{ category_info.alternativo | join: ', ' }}) {% endif %}
 			</p>
 		</div>
 	</header>
@@ -46,11 +46,11 @@ layout: default
 			<dd class="p-street-address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 				<span itemprop="streetAddress">
 				{% for location in page.direccion.lugar %}
-					{% include get-place.html place=location city=page.city link=true%}
+					{% include get-place.html place=location city=page.city link=true %}
 				</span>
-				<p style="display:none"><span class="p-locality">{{site.data.prettify.[page.city]}}</span>, <span class="p-region">Tierra del Fuego</span>, <span class="p-country-name">Argentina</span></p> 
-				{% unless forloop.last %},{%endunless%}
-				{%endfor%}
+				<p style="display:none"><span class="p-locality">{{ site.data.prettify[page.city] }}</span>, <span class="p-region">Tierra del Fuego</span>, <span class="p-country-name">Argentina</span></p> 
+				{% unless forloop.last %},{% endunless %}
+				{% endfor %}
 			{% if page.direccion.geo %}
 					<ul class="ver-mapa" aria-label="Ver en mapa">
 					<li><a href="http://www.openstreetmap.org/?mlat={{ page.direccion.geo.lat }}&mlon={{ page.direccion.geo.lon }}#map=17/{{ page.geo.lat }}/{{ page.geo.lon }}" rel="external" class="osm">Mapa</a>
@@ -79,16 +79,16 @@ layout: default
 			<dd><ul>
 			{% for horario in page.horario %}
 				<li> 
-					<span itemprop="openingHours" content="{{horario.dia}} {{horario.hora}}">{{horario.dia}}. {{horario.hora}}. </span> 
+					<span itemprop="openingHours" content="{{ horario.dia }} {{ horario.hora }}">{{ horario.dia }}. {{ horario.hora }}. </span> 
 					{% if horario.nota != "" %}. <strong>Nota:</strong> {{ horario.nota }} {% endif %}
 				</li>
 			{% endfor %}
 			</ul></dd>
 		{% endif %}
 
-		{% if page.nota != ""%}
+		{% if page.nota != "" %}
 		<dt class="nota p-note">Nota</dt>
-			<dd>{{page.nota | newline_to_br }}</dd>	
+			<dd>{{ page.nota | newline_to_br }}</dd>	
 		{% endif %}
 	</dl>
 
@@ -98,13 +98,13 @@ layout: default
 		<dt class="web">Sitios</dt>
 			<dd><ul>
 				{% for web in page.website %}
-					{% capture domain %}{% include get-domain.html url=web no_dot=true%}{% endcapture %}
+					{% capture domain %}{% include get-domain.html url=web no_dot=true %}{% endcapture %}
 					{% capture handle %}{% include get-social-handle.html url=web %}{% endcapture %}
 				<li>
 					<a href="{{ web }}" class="u-url" 
 					{% if web contains "facebook" or web contains "twitter" %}
-						{% if web contains "facebook"%}data-social-handle="({{handle}})"{% endif %}
-						{% if web contains "twitter"%}data-social-handle="(@{{handle}})"{% endif %}
+						{% if web contains "facebook" %}data-social-handle="({{ handle }})"{% endif %}
+						{% if web contains "twitter" %}data-social-handle="(@{{ handle }})"{% endif %}
 					{% endif %} itemprop="url">{{ domain }}	</a>
 				</li>
 				{% endfor %}
@@ -141,7 +141,7 @@ layout: default
 
 	<footer>
 		<p>
-			<span class="ultima-actualizacion p-note">Última actualización: <time datetime="{{ page.ultima-actualizacion }}">{% include human-date.html hide_weekday=false date=page.ultima-actualizacion%}	</time></span>
+			<span class="ultima-actualizacion p-note">Última actualización: <time datetime="{{ page.ultima-actualizacion }}">{% include human-date.html hide_weekday=false date=page.ultima-actualizacion %}	</time></span>
 		¿Información errónea? ayuda <a href="{{ site.github.repository_url }}/blob/{{ site.github.branch }}/{{ page.path }}">corregiendo la información</a>
 		</p>
 		<p> {% include links-source-history.html %} </p>
@@ -162,13 +162,13 @@ layout: default
 			"@type": "PostalAddress",
 			"streetAddress": "",
 			"postalCode": "{{ site.data.datos-ciudades[page.city].codigo-postal }}",
-			"addressLocality": "{{ site.data.prettify.[page.city] }}",
+			"addressLocality": "{{ site.data.prettify[page.city] }}",
 			"addressRegion": "Tierra del Fuego",
 			"addressCountry": "Argentina"
 		}
    },
 	{% endif %}
-	"description": "{{ category_info.nombre }}{% if category_info.alternativo.size > 0 %}, {{ category_info.alternativo | join: ', '}}{% endif %}"
+	"description": "{{ category_info.nombre }}{% if category_info.alternativo.size > 0 %}, {{ category_info.alternativo | join: ', ' }}{% endif %}"
 }
 </script>
 
@@ -194,7 +194,7 @@ page.website:  /rio-grande/entidades/futsal-afa/
 		{% assign found = true %}
 		{% assign this_city = post.categories[0] %}
 	<li>
-		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <span class="post-details">(<a href="{{site.data.wiki.[this_city|replace:"-",""]}}">{{ site.data.prettify.[this_city] }}</a>, {% include human-date.html hide_weekday=true %})</span>
+		<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <span class="post-details">(<a href="{{ site.data.wiki[this_city] | replace:"-","" }}">{{ site.data.prettify[this_city] }}</a>, {% include human-date.html hide_weekday=true %})</span>
 	</li>
 	{% endif %}
 {% endfor %}

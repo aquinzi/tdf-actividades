@@ -23,7 +23,7 @@ layout: default
 {% if end_time   != "00:00" %}{% assign end_date_iso       = page.date | date_to_xmlschema %}{% endif %}
 
 {% assign this_city = page.categories | first %}
-{% assign this_city_pretty = site.data.prettify.[this_city] %}
+{% assign this_city_pretty = site.data.prettify[this_city] %}
 {% capture place_name %}{% include get-place.html place=page.location city=this_city link=true %}{% endcapture %}
 
 {% assign event_permalink = page.url | prepend: site.url %}
@@ -76,22 +76,22 @@ layout: default
 <article class="h-event" itemscope itemtype="http://schema.org/{{ event_type }}">
 <header> 
 	<h1 class="p-name" itemprop="name">{{ page.title }}</h1>
-	{% if (end_date_iso) > (start_date_iso) %}
+	{% if end_date_iso > start_date_iso %}
 		<p class="details span-dias">
 		{% else %}
 		<p class="details">
 	{% endif %}
 	<time datetime="{{ start_date_iso_xml }}" class="dt-start" itemprop="startDate" content="{{ start_date_iso_xml }}">
 		{% assign tmp = page.date | date: "%a" %}
-		<span class="dia">({{ site.data.dias.[tmp].nombre }}) {% include human-date.html hide_weekday=true date=page.date %}</span>
+		<span class="dia">({{ site.data.dias[tmp].nombre }}) {% include human-date.html hide_weekday=true date=page.date %}</span>
 		{% unless page.no-time-start %}<span class="visuallyhidden">, a las </span><span class="hora">{{ start_time }}</span>{% endunless %}
 		{% if page.date-end %}
-			{% if (end_date_iso) == (start_date_iso) %}
+			{% if end_date_iso == start_date_iso %}
 				{% unless page.no-time-end %}</time> -<span class="visuallyhidden"> hasta las </span><time datetime="{{ end_date_iso_xml }}" class="dt-end">{{ end_time }}{% endunless %}
 	      {% else %}
 	      	</time> al <time datetime="{{end_date_iso_xml}}" class="dt-end" itemprop="endDate" content="end_date_iso_xml">
 					{% assign tmp = page.date-end | date: "%a" %}
-					<span class="dia">{% include human-date.html hide_weekday=true date=page.date-end %} ({{ site.data.dias.[tmp].nombre }})</span>
+					<span class="dia">{% include human-date.html hide_weekday=true date=page.date-end %} ({{ site.data.dias[tmp].nombre }})</span>
 			    {% unless page.no-time-start %}<span class="visuallyhidden">, a las </span><span class="hora">{{ end_time }}</span>{% endunless %}
 			{% endif %}
 		{% endif %}     
@@ -99,7 +99,7 @@ layout: default
 		<span itemprop="location" itemscope itemtype="http://schema.org/Place">
 			<span itemprop="name">{{ place_name }}</span>
 			<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-				<a class="city" href="{{ site.data.wiki.[this_city] }}" itemprop="addressLocality">{{ this_city_pretty }}</a>
+				<a class="city" href="{{ site.data.wiki[this_city] }}" itemprop="addressLocality">{{ this_city_pretty }}</a>
 				<meta itemprop="postalCode" content="{{ site.data.datos-ciudades[this_city].codigo-postal }}">
 				<meta itemprop="addressRegion" content="Tierra del Fuego">
 				<meta itemprop="addressCountry" content="Argentina">
@@ -135,11 +135,12 @@ layout: default
 				<li>{% include print-tag.html tag=tag link=true%}</li>
 			{% endfor %}</ul></dd>
 	   {% endif %}
-    {% if (page.source | strip) != '' %}	
+	 {% assign tmp = page.source | strip %}  
+    {% if tmp != '' %}	
 		{% capture source_domain %}{% include get-domain.html url=page.source %}{% endcapture %}
 		{% assign source_domain = source_domain | strip_newlines | strip %}
-  		{% if site.data.prettify.[source_domain] %}
-  			{% assign source_domain = site.data.prettify.[source_domain] %}
+  		{% if site.data.prettify[source_domain] %}
+  			{% assign source_domain = site.data.prettify[source_domain] %}
   		{% endif %}
 		<dt class="source">Fuente</dt> 
 			<dd><a href="{{ page.source }}" rel="external">{{ source_domain }}</a></dd>

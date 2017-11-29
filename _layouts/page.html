@@ -15,7 +15,8 @@ layout: default
             {% assign last_modified = page.date %}
             {% if page.modified %} {% assign last_modified = page.modified %} {% endif %}
         {% else %}
-            {% if (page.title | lower) contains "historial de cambios" %}
+        		{% assign tmp = page.title | lower %}
+            {% if tmp contains "historial de cambios" %}
                 {%comment%}get the latest date from the changelog list {%endcomment%}
                 {% assign last_modified = site.data.changelog | first | first %}
             {% endif %}

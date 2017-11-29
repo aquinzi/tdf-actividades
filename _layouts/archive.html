@@ -22,7 +22,7 @@ layout: default
    {% endif %}
 
 	{% if current_month != month %}
-		{% assign mes = site.data.meses.[current_month].nombre %}
+		{% assign mes = site.data.meses[current_month].nombre %}
 		<li><a href="#mes-{{mes}}">{{ mes }}</a></li>	
   		{% assign month = current_month %}
    {% endif %}
@@ -51,7 +51,7 @@ layout: default
 		{% unless new_year %}</ul>{% endunless %}
 		
 
-		{% assign mes = site.data.meses.[current_month].nombre %}
+		{% assign mes = site.data.meses[current_month].nombre %}
 		<h3 id="mes-{{mes}}">{{ mes }}</h3>	
 		<ul class="archivo-agenda">
   		{% assign month = current_month %}
@@ -80,8 +80,12 @@ layout: default
 			{% assign end_date_iso   = page.date-end  | date: "%F" %}
 
 			{% comment%} can't use contains in datestamp. Not bullet proof. {% endcomment%} 
-			{% if (page.date | date: "%R") != "00:00" %}{% assign start_date_iso = page.date | date_to_xmlschema %}{% endif %}
-			{% if (page.date-end | date: "%R") != "00:00" %}{% assign end_date_iso = page.date | date_to_xmlschema %}{% endif %}
+
+			{% assign page_date_r = page.date | date: "%R" %}
+			{% assign page_date_end_r = page.date-end | date: "%R" %}
+			
+			{% if page_date_r != "00:00" %}{% assign start_date_iso = page.date | date_to_xmlschema %}{% endif %}
+			{% if page_date_end_r != "00:00" %}{% assign end_date_iso = page.date | date_to_xmlschema %}{% endif %}
 
 			<span class="event-date">
 
@@ -89,7 +93,7 @@ layout: default
 					{% assign tmp = page.date | date: "%-m" %}
 					<span class="date-day">{{page.date | date: "%d"}}</span>/<span class="date-month">{{ page.date | date: "%-m" }}</span>
 					{% unless page.no-time-start %}
-					 <span class="date-time">{{page.date | date: "%R"}}</span> hs.
+					 <span class="date-time">{{page_date_r}}</span> hs.
 					{% endunless %}
 				</time>
 
@@ -102,8 +106,7 @@ layout: default
 					<span class="date-day">{{page.date-end | date: "%d"}}</span>/<span class="date-month">{{ page.date-end | date: "%-m" }}</span>
 					{% endif %}
 					{% unless page.no-time-end %}
-						{% assign tmp = page.date-end | date: "%R" %}
-						{% if tmp != "" %}
+						{% if page_date_end_r != "" %}
 						 <span class="date-time">{{tmp}}</span> hs.
 						{% endif %}
 					{% endunless %}

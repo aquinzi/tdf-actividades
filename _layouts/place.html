@@ -76,17 +76,19 @@ this_layout: place #needed for title replacement
       			</dd>
 			{% endif %}
 
-			{% if (page.telefono[0] | replace:" ","" | strip ) != "" or (page.email | strip ) != "" %}
+			{% assign phone_first = page.telefono[0] | replace:" ","" | strip %}
+			{% assign email_first = page.email | strip %}
+			{% if phone_first != "" or email_first != "" %}
 			<dt class="contacto"><span>contacto</span></dt>
 				<dd>
-				{% if (page.telefono[0] | replace:" ","" | strip ) != "" %}
+				{% if phone_first != "" %}
 					<p class="telefono"><span class="label">Teléfono</span>
 					{% for telefono in page.telefono %}
 					<a class="p-tel" itemprop="telephone" href="tel:+54-9-02964-{{ telefono }}">{{ telefono }}</a>{% unless forloop.last %},{% endunless %}
 					{% endfor %}
 					</p>
 				{% endif %}
-				{% if (page.email | strip ) != "" %}
+				{% if email_first != "" %}
 					<p class="email">
 						<span class="label">Email</span> <span itemprop="email">{% include print-email.html email= page.email %}</span>
 					</p>
@@ -94,7 +96,7 @@ this_layout: place #needed for title replacement
 	      		</dd>
 			{% endif %}
 
-      		{% if (page.website[0]| strip ) != "" %}
+      		{% if page.website[0] | strip != "" %}
 			<dt class="web"><span>Sitios</span></dt>
 				<dd><ul>
 				{% for web in page.website %}
@@ -138,7 +140,7 @@ this_layout: place #needed for title replacement
 		"@type": "PostalAddress",
 		"streetAddress": "{{ page.direccion }}",
 		"postalCode": "{{ site.data.datos-ciudades[page.city].codigo-postal }}",
-		"addressLocality": "{{ site.data.prettify.[page.city] }}",
+		"addressLocality": "{{ site.data.prettify[page.city] }}",
 		"addressRegion": "Tierra del Fuego",
 		"addressCountry": "Argentina"
 	},
@@ -187,7 +189,7 @@ this_layout: place #needed for title replacement
 <ul class="entidad-eventos-aparece">
 {% for post in filtered_posts %}
 	{% comment %}just in case, check city{% endcomment %}
-	{% if (post.categories | first) == page.city %}
+	{% if post.categories | first == page.city %}
 		<li>
 			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <span class="post-details">({% include human-date.html hide_weekday=true %})</span>
 		</li>
