@@ -8,7 +8,7 @@
     {% for post in post_list limit:20 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.categories | array_to_sentence_string }} - {{ post.content | xml_escape }}</description>
+        <description>{{ post.categories | array_to_sentence_string }} - {{ post.content }}</description>
         <pubDate>{% if post.event-start %}{{ post.event-start | date: date_formatting }}{% else %}{{ post.date | date: date_formatting }}{% endif %}</pubDate>
         <link>{{ site.url }}{{ post.url }}</link>
         <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
