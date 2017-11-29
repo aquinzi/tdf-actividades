@@ -9,10 +9,10 @@ source 'https://rubygems.org'
 #get versions specific to github
 #versions = JSON.parse(open("https://pages.github.com/versions.json").read)
 
-gem "jekyll", "3.5.2", group: :jekyll_plugins
+gem "jekyll", "3.6.2", group: :jekyll_plugins
 gem "jekyll-sass-converter", "1.5.0", group: :jekyll_plugins
 #gem "jekyll-textile-converter", versions["jekyll-textile-converter"], group: :jekyll_plugins
-gem "kramdown", "1.13.2", group: :jekyll_plugins
+gem "kramdown", "1.14", group: :jekyll_plugins
 #gem "redcarpet", versions["redcarpet"], group: :jekyll_plugins
 #gem "RedCloth", versions["RedCloth"], group: :jekyll_plugins
 gem "liquid", "4.0.0", group: :jekyll_plugins
