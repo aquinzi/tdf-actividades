@@ -143,7 +143,7 @@
 	{% if page.breadcrumbs %}
 		{% for crumb in page.breadcrumbs %}
 			{% assign bread_counter = bread_counter | plus:1 %}
-			{% assign current_crumb = (crumb | downcase ) %}
+			{% assign current_crumb = crumb | downcase  %}
 			{% assign crumb_url = "" %}
 
 			<li itemprop="itemListElement" itemscope
@@ -186,7 +186,7 @@
 		{% for crumb in url_parts limit:num_parts %}
 			{% if crumb == "" %}{% continue %}{% endif %}
 
-			{% assign pretty_crumb = (crumb | replace:'-',' ') %}
+			{% assign pretty_crumb = crumb | replace:'-',' ' %}
 			{% if site.data.prettify[crumb] %}
 				{% assign pretty_crumb = site.data.prettify[crumb]  %}
 			{% endif %}
@@ -204,6 +204,21 @@
 		{% endfor %}
 	{% endif %}	
 </ol>
+
+{% if site.ads.top %}
+<aside class="banner-other" style="{% if site.ads.top.img.width %}max-width: {{ site.ads.top.img.width }}px;{% endif %}margin: 5em auto 4em;{% if site.ads.top.img.height %}max-height: {{ site.ads.top.img.height }}px;{% endif %}">
+	{% if site.ads.top.link_url %}
+	<a href="{{ site.ads.top.link_url }}" style="border-bottom: none; display: block;">
+	{% endif %}
+	{% if site.ads.top.img.url %}
+		<img src="{{ site.ads.top.img.url }}" alt="{% if site.ads.top.img.alt %}{{ site.ads.top.img.alt }}{% else %}Banner publicitario{% endif %}" style="width: 100%;height: 100%;">
+	{% endif %}
+	{% if site.ads.top.link_url %}
+	</a>
+	{% endif %}
+</aside>
+{% endif %}
+
 
 {{ content }}
 
