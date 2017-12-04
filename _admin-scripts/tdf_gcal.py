@@ -20,7 +20,7 @@ so they can be posted using IFTTT (so dirty!)
 #   probably we could need it. event['id'] (same as event['iCalUID'], this has @google.com)
 
 # TODO: save processed events to the txt file once the city is done. (avoid possible losts when script breaks)
-# FIX: Sometimes it doesnt parse properly (example as of 2017-11-29: Primera Ecomaratón Playas Limpias)
+# FIX: Sometimes it doesnt parse properly (example as of 2017-11-29: Primera Ecomaratón Playas Limpias, Kendo - Seminario Tierra del Fuego)
 # TODO: use the metadata in file to check if it's old or not. Reason: events that span multiple days (expositions) and were added later.
 # TODO: support to create shorturls
 # PRobably we should read config file so we dont hardcode stuff
@@ -71,12 +71,13 @@ except ImportError as e:
 #optional libs
 try:
 	import yaml
-except ImportError:
-	YAML = False
-	print (" next time install pyyaml")
-else:
-	# You rock!
 	YAML = True
+except ImportError:
+	#YAML = False
+	#print (" next time install pyyaml")
+	print (" Install : pip3 install pyyaml")
+	exit()
+
 
 # --------------
 # configuration
