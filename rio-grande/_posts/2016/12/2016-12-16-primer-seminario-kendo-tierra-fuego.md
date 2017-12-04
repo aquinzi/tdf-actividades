@@ -7,7 +7,7 @@ date-end: 2016-12-18 21:00
 no-time-end: 
 location: centrodeportivo
 category: rio-grande
-tags: [deporte,kendo]
+tags: [deportes,kendo]
 source: 
 people: [rio-grande-kendo-dojo]
 short-url: https://goo.gl/szzP6L
