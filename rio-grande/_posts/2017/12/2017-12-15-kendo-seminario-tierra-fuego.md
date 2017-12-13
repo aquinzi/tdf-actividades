@@ -5,7 +5,7 @@ date: 2017-12-15 19:00
 no-time-start: 
 date-end: 2017-12-17 12:00
 no-time-end: 
-location: centrodeportivo
+location: margalot
 category: rio-grande
 tags: [deportes, kendo]
 source: 
