@@ -51,3 +51,9 @@ rio-grande@2017-11-18-todos-contra-abuso-infantil-bicicleteada.md
 rio-grande@2017-11-19-vii-patagonico-ajedrez-infantil.md
 rio-grande@2017-12-02-primera-ecomaraton-playas-limpias.md
 rio-grande@2017-12-15-kendo-seminario-tierra-fuego.md
+rio-grande@2018-01-08-fernando-molinari-actividades-presentacion-libro.md
+rio-grande@2018-01-08-presentacion-global-game-jam.md
+rio-grande@2018-01-26-global-game-jam.md
+ushuaia@2018-01-11-cine-terror-ringu.md
+ushuaia@2018-01-12-armand-lein-picabia.md
+ushuaia@2018-01-25-cine-terror-proyecto-blair-witch.md

@@ -65,14 +65,14 @@ maps:
     kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeeVRMeExfRWJlR3M"
     gpx: "https://drive.google.com/open?id=0B_xdMoFx-YMeaERxaTQ1Z2FKRWM"
 
-ads:
-  top: 
-    img:
-      url: /imgs/banners/kendo-seminario.jpg
-      alt: Seminario Kendo
-      width: 400
-      height: 160
-    link_url: /rio-grande/agenda/2017/12/kendo-seminario-tierra-fuego/
+#ads:
+#  top: 
+#    img:
+#      url: /imgs/banners/kendo-seminario.jpg
+#      alt: Seminario Kendo
+#      width: 400
+#      height: 160
+#    link_url: /rio-grande/agenda/2017/12/kendo-seminario-tierra-fuego/
 
 
 
