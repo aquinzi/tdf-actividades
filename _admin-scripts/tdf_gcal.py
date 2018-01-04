@@ -949,7 +949,7 @@ if __name__ == '__main__':
 				#filename is YYYY-MM-DD-slug.md
 				file_date = "-".join(archivo.split("-")[0:3])
 
-				if file_date.split("-")[0] in ("2015", "2016"):
+				if file_date.split("-")[0] in ("2015", "2016", "2017"):
 					# Sorry, we dont want the old ones
 					#print ("\n Skiping (old): " + archivo, end="") 
 					continue
