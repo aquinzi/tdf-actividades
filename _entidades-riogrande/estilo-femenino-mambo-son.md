@@ -1,9 +1,9 @@
 ---
 nombre: Estilo femenino (Mambo Son Estudio)
 categoria: fitness
-ultima-actualizacion: 2016-02-02
+ultima-actualizacion: 2018-02-14
 direccion: 
-  lugar: [mamboson]
+  lugar: []
 horario: 
   - {dia: "miércoles", hora: "18:00-19:00", nota: "" }
 precio: pago
@@ -14,6 +14,5 @@ website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/estilo-femenino-mambo-son/
+inactive: true
 ---
-
-La primer clase sin cargo.

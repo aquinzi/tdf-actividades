@@ -1,7 +1,7 @@
 ---
 nombre: Step Local (Mambo Son Estudio)
 categoria: fitness
-ultima-actualizacion: 2016-02-02
+ultima-actualizacion: 2018-02-14
 direccion: 
   lugar: [mamboson]
 horario: 
@@ -14,6 +14,5 @@ website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/step-local-mambo-son/
+inactive: true
 ---
-
-La primer clase sin cargo.

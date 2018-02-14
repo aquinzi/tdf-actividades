@@ -1,9 +1,9 @@
 ---
 nombre: Salsa (Mambo Son Estudio)
 categoria: salsa
-ultima-actualizacion: 2016-02-02
+ultima-actualizacion: 2018-02-14
 direccion: 
-  lugar: [mamboson]
+  lugar: []
 horario: 
   - {dia: "martes y jueves", hora: "21:00-22:00", nota: "Nivel Básico Inicial" }
 precio: pago
@@ -14,6 +14,5 @@ website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/salsa-mambo-son/
+inactive: true
 ---
-
-La primer clase sin cargo.

@@ -1,9 +1,9 @@
 ---
 nombre: Aero Local (Mambo Son Estudio)
 categoria: fitness
-ultima-actualizacion: 2016-02-08
+ultima-actualizacion: 2018-02-14
 direccion: 
-  lugar: [mamboson]
+  lugar: []
 horario: 
   - {dia: "lunes", hora: "20:00-21:00", nota: "" }
 precio: 
@@ -14,4 +14,5 @@ website: []
 telefono: []
 email: 
 permalink: /rio-grande/entidades/aero-local-mambo-son/
+inactive: true
 ---

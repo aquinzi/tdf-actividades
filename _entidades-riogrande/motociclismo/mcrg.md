@@ -1,18 +1,17 @@
 ---
 nombre: Moto Club Río Grande (M.C.R.G.)
 categoria: motociclismo
-ultima-actualizacion: 2016-01-19
+ultima-actualizacion: 2018-02-14
 direccion: 
   lugar: 
 horario: 
   - {dia: "", hora: "", nota: "" }
 precio: 
 nota: | 
-  
-website: []
+  Presidente: Germán Nuñez
+website: ["http://www.mcrg.com.ar/"]
 telefono: []
 email: 
 permalink: /rio-grande/entidades/mcrg/
 ---
 
-Encabezado por Federico Velázquez.
