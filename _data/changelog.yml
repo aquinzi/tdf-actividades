@@ -1,5 +1,7 @@
 "2018-03-02":
   - "add:(Río Grande) se agregaron mas paradas de colectivos y se les añadió el número identificatorio para poder buscarlas en la app de '¿Cuando llega? CityBus'"
+  - "add:(Río Grande) color asociado a las líneas de colectivos"
+  - "fix:(Río Grande) mapa que muestra todos los recorridos de colectivos junto a las paradas"
 
 "2018-02-14":
   - 'edit:(Río Grande) eliminadas las actividades de "Mambo Son Estudio"'

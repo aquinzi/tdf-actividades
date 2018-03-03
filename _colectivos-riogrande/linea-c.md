@@ -1,7 +1,8 @@
 ---
 uid: linea-c
 nombre: Línea C
-ultima-actualizacion: 2017-02-13
+color: naranja
+ultima-actualizacion: 2018-03-02
 areas: ["Austral", "Centro", "Mutual", "Chacra II", "AGP", "Hospital"]
 recorrido: 
   - {"calle": "Yourka y Yaghan", "punto":"-53.80326, -67.66181"}

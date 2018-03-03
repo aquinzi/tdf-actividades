@@ -1,7 +1,8 @@
 ---
 uid: linea-d
 nombre: Línea D
-ultima-actualizacion: 2017-02-13
+color: marrón
+ultima-actualizacion: 2018-03-02
 areas: ["Misión Salesiana", "Chacra II"]
 recorrido: 
   - {"calle": "Misión Salesiana a Ruta Nacional 3", "punto":"-53.7239117,-67.7978763"}

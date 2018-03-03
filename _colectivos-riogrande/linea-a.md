@@ -1,7 +1,8 @@
 ---
 uid: linea-a
 nombre: Línea A
-ultima-actualizacion: 2017-02-13
+color: celeste
+ultima-actualizacion: 2018-03-02
 areas: ["Austral", "Centro", "Hospital", "Cementerio", "Chacra XIII", "Chacra XI", "Aeropuerto (barrio)"]
 recorrido: 
   - {"calle": "Yourka y Yaghan", "punto":"-53.8032, -67.6618"}

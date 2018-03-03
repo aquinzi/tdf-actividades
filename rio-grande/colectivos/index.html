@@ -12,12 +12,23 @@ uid: colectivos-rg-all
 <table>
 	<tr>
 		<th style="width: 5em;">Línea</th>
+		<th style="width: 5em;">Color</th>
 		<th>Áreas que recorre</th>
 	</tr>
 
 {% for colectivo in colectivos %}
+	{% assign color_html = "" %}
+	{% assign color_font = "inherit" %}
+	{% case colectivo.color %}
+		{% when 'celeste' %}{% assign color_html = "lightblue" %}
+		{% when 'verde' %}  {% assign color_html = "green" %}{% assign color_font = "white" %}
+		{% when 'naranja' %}{% assign color_html = "orange" %}
+		{% when 'marrón' %} {% assign color_html = "brown" %}{% assign color_font = "white" %}
+	{% endcase %}
+			
 	<tr>
 		<td><a href="{{ colectivo.url }}">{{ colectivo.nombre }}</a></td>
+		<td style="background-color:{{color_html}};font-color:{{color_font}}"> {{ colectivo.color }}</td>
 		<td> {{ colectivo.areas | join:", " }} </td>
 	</tr>
 {% endfor %}
@@ -28,9 +39,9 @@ uid: colectivos-rg-all
 	<div id="map" class="map-rg map-bus-stops"></div>	
 	<figcaption>
 		<dl>
-			<dt>Paradas verdes</dt><dd>sin garita</dd>
-			<dt>Paradas azules</dt><dd>con garita</dd>
-			<dt><samp>La parada debe comprobarse</samp></dt><dd>significa que se supone que está ahí (en esa área) pero no sabemos con exactitud.</dd>
+			<dt>Paradas verdes</dt><dd style="margin-top: 0; margin-bottom: 0;">sin garita</dd>
+			<dt>Paradas azules</dt><dd style="margin-top: 0;margin-bottom: 0;">con garita</dd>
+			<dt><samp>La parada debe comprobarse</samp></dt><dd style="margin-top: 0; margin-bottom: 0;">significa que se supone que está ahí (en esa área) pero no sabemos con exactitud.</dd>
 		</dl>
 	</figcaption>
 </figure>

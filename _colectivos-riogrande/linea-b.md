@@ -1,7 +1,8 @@
 ---
 uid: linea-b
 nombre: Línea B
-ultima-actualizacion: 2017-02-13
+color: verde
+ultima-actualizacion: 2018-03-02
 areas: ["Chacra IV", "Chacra II", "Centro", "Perón", "Intevu", "Hospital"]
 recorrido: 
   - {"calle": "Juan Visic y Raúl Chifflet", "punto":"-53.7745, -67.7316"}
