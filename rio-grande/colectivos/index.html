@@ -1,8 +1,10 @@
 ---
 layout: default
 title: "¿Qué hacer en Río Grande?: Colectivos"
+uid: colectivos-rg-all
 ---
 
+<div id="bus-page">
 {% assign colectivos = site.colectivos-riogrande | sort: "nombre" %}
 
 <h1>Colectivos en Río Grande</h1>
@@ -21,9 +23,20 @@ title: "¿Qué hacer en Río Grande?: Colectivos"
 {% endfor %}
 </table>
 
-<script src="https://embed.github.com/view/geojson/{{ site.github.repository_nwo }}/gh-pages/{{ site.maps.buses-rg-all.geojson }}"></script>
+
+<figure style="margin:0">
+	<div id="map" class="map-rg map-bus-stops"></div>	
+	<figcaption>
+		<dl>
+			<dt>Paradas verdes</dt><dd>sin garita</dd>
+			<dt>Paradas azules</dt><dd>con garita</dd>
+			<dt><samp>La parada debe comprobarse</samp></dt><dd>significa que se supone que está ahí (en esa área) pero no sabemos con exactitud.</dd>
+		</dl>
+	</figcaption>
+</figure>
 <noscript>
   <p>No te preocupes, era un lindo mapa con los recorridos y las paradas.</p>
 </noscript>
 
 <p><a href="{{ site.maps.buses-rg-all.kmz }}">Descargar</a> todos los recorridos con las paradas (formato KMZ).</p>
+</div>
