@@ -3,7 +3,11 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        }
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [

@@ -18,12 +18,14 @@ layout: default
 
 	<dl>
 		<dt>Color</dt>
-			<dd><span style="">{{ page.color }}</span></dd>
-	
+			<dd>{{ page.color }}</dd>
 	
 		<dt>Áreas</dt>
-			<dd>{{ page.areas | array_to_sentence_string | replace:" and ", ","}} </dd>
+			<dd>{{ page.areas | join:", " }} </dd>
 
+		<dt>Cantidad unidades</dt>
+			<dd>{{ page.cant_unidades }}</dd>
+			
 		<dt>Recorrido (mapa)</dt>
 			<dd>
 				<figure style="margin:0">
@@ -58,6 +60,15 @@ layout: default
 				{% when 'linea-d' %}
 					{% assign this_kml = site.maps.buses-rg-linea-d.kml %}
 					{% assign this_gpx = site.maps.buses-rg-linea-d.gpx %}
+				{% when 'linea-e' %}
+					{% assign this_kml = site.maps.buses-rg-linea-e.kml %}
+					{% assign this_gpx = site.maps.buses-rg-linea-e.gpx %}					
+				{% when 'linea-f' %}
+					{% assign this_kml = site.maps.buses-rg-linea-f.kml %}
+					{% assign this_gpx = site.maps.buses-rg-linea-f.gpx %}
+				{% when 'linea-g' %}
+					{% assign this_kml = site.maps.buses-rg-linea-g.kml %}
+					{% assign this_gpx = site.maps.buses-rg-linea-g.gpx %}					
 			{% endcase %}
 			<dd>
 				<ul>
@@ -69,17 +80,26 @@ layout: default
 
 		<dt>Recorrido (listado)</dt>
 			<dd class="recorrido">
-				<ul>
-					{% for item in page.recorrido %}
-						<li>
-							<span class="calles">{{ item.calle }}</span> 
-							{% if item.punto %}
-							{% assign point = item.punto | split: ", " %}
-							<a href="http://www.openstreetmap.org/?mlat={{ point[0] }}&mlon={{ point[1] }}#map=17/{{ point[0] }}/{{ point[1] }}">(ver punto)</a>
-							{% endif %}
-						</li>
-					{% endfor %}
-				</ul>
+			
+				<table>
+					<thead>
+						<tr><th>De</th><th>A</th><th>Coordenadas</th></tr>
+					</thead>
+					<tbody>
+						{% for item in page.recorrido %}
+						<tr>
+							<td>{% if item.de %}<span class="calles">{{ item.de }}</span>{% endif %}</td>
+							<td>{% if item.a %}<span class="calles">{{ item.a }}</span>{% endif %}</td>
+							<td>{% if item.punto %}
+								{% assign point = item.punto | split: ", " %}
+								<a href="http://www.openstreetmap.org/?mlat={{ point[0] }}&mlon={{ point[1] }}#map=17/{{ point[0] }}/{{ point[1] }}" title="ver intersección en mapa">mapa</a>
+							{% endif %}</td>
+						</tr>
+						{% endfor %}
+						
+					</tbody>
+				</table>
+			
 			</dd>
 	</dl>
 

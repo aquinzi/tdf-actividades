@@ -3,7 +3,11 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "_storage_options": {
+          "color": "Blue"
+        }
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -201,7 +205,10 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "Intevu"
+        "description": "",
+        "_storage_options": {
+          "color": "Purple"
+        }
       },
       "geometry": {
         "type": "LineString",
@@ -371,7 +378,11 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "_storage_options": {
+          "color": "Red"
+        }
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -568,16 +579,16 @@
             -53.79605033812718
           ],
           [
-            -67.78502225875856,
-            -53.79773597502969
+            -67.78482913970949,
+            -53.79748250012421
           ],
           [
-            -67.78240442276002,
-            -53.79821757312937
+            -67.78251171112062,
+            -53.79797677477087
           ],
           [
-            -67.78073072433473,
-            -53.79852173750076
+            -67.78062343597414,
+            -53.798331635027196
           ],
           [
             -67.7799153327942,
@@ -768,7 +779,11 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "_storage_options": {
+          "color": "DeepSkyBlue"
+        }
+      },
       "geometry": {
         "type": "MultiLineString",
         "coordinates": [
@@ -966,16 +981,16 @@
               -53.79384496649745
             ],
             [
-              -67.78135299682619,
-              -53.792602809588246
+              -67.78138518333436,
+              -53.79264083534555
             ],
             [
-              -67.7804732322693,
-              -53.79291968984588
+              -67.7805268764496,
+              -53.79288800192785
             ],
             [
-              -67.77909994125368,
-              -53.79304644127865
+              -67.7791213989258,
+              -53.79307179151924
             ],
             [
               -67.77822017669679,
@@ -986,12 +1001,16 @@
               -53.793756242223864
             ],
             [
-              -67.77847766876222,
-              -53.79509976112693
+              -67.77817726135255,
+              -53.794700512362226
             ],
             [
-              -67.77847766876222,
-              -53.79560673820816
+              -67.7786707878113,
+              -53.79538493648918
+            ],
+            [
+              -67.777898311615,
+              -53.79560040103246
             ],
             [
               -67.77725458145143,
@@ -1616,7 +1635,11 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "_storage_options": {
+          "color": "OrangeRed"
+        }
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -2101,7 +2124,11 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        }
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [

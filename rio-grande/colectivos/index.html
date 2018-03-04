@@ -9,6 +9,16 @@ uid: colectivos-rg-all
 
 <h1>Colectivos en Río Grande</h1>
 
+
+<div>
+
+<p>Las cabeceras ahora están en un único Centro de Transferencia (Hospital, sobre la Avenida Belgrano).</p> 
+
+<p>Allí, se puede cambiar de línea, usando un mismo boleto (no se cobra segundo boleto).</p>
+
+</div>
+
+
 <table>
 	<tr>
 		<th style="width: 5em;">Línea</th>
@@ -31,7 +41,7 @@ uid: colectivos-rg-all
 			
 	<tr>
 		<td><a href="{{ colectivo.url }}">{{ colectivo.nombre }}</a></td>
-		<td style="background-color:{{color_html}};color:{{color_font}}"> {{ colectivo.color }}</td>
+		<td style="background-color:{{color_html}};color:{{color_font}};text-align: center;"> {{ colectivo.color }}</td>
 		<td> {{ colectivo.areas | join:", " }} </td>
 	</tr>
 {% endfor %}

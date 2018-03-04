@@ -4,7 +4,10 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "Intevu"
+        "description": "",
+        "_storage_options": {
+          "color": "Purple"
+        }
       },
       "geometry": {
         "type": "LineString",

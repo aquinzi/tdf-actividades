@@ -76,9 +76,7 @@ maps:
     geojson: "/public/colectivos/rio-grande-colectivos-2018-linea-g.geojson"
     kml: "https://drive.google.com/open?id=1kisLlhDN_cvUs7eRs_J8iEH66KOY2jEJ"
     gpx: "https://drive.google.com/open?id=1N2Xc2zrUdceWRO-yBmlL-RRmV8OmAdO9"
-	 
-	 
-	 
+
 #ads:
 #  top: 
 #    img:
