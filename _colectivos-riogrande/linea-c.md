@@ -1,61 +1,49 @@
 ---
 uid: linea-c
 nombre: Línea C
-color: naranja
-ultima-actualizacion: 2018-03-02
-areas: ["Austral", "Centro", "Mutual", "Chacra II", "AGP", "Hospital"]
+color: rojo
+ultima-actualizacion: 2018-03-03
+areas: ["Hospital", "Solar de la Laguna", "San Martín (barrio)", "Aeropuerto (barrio)", "Chacra XI", "Los Cisnes", "Vapor Amadeo", "Héroes de Malvinas (chacra XII)"]
+cant_unidades: 3
 recorrido: 
-  - {"calle": "Yourka y Yaghan", "punto":"-53.80326, -67.66181"}
-  - {"calle": "Yourka a Hoiken", "punto":"-53.80450, -67.66264"}
-  - {"calle": "Hoiken a Koyuska", "punto":"-53.80531, -67.65874"}
-  - {"calle": "Koyuska a Yahalave", "punto":"-53.80196, -67.65686"}
-  - {"calle": "Yahalave a Uani", "punto":"-53.80075, -67.66382"}
-  - {"calle": "Uani a Tolhuin", "punto":"-53.80489, -67.66599"}
-  - {"calle": "Tolhuin a Rafaela Ishton", "punto":"-53.80410, -67.67028"}
-  - {"calle": "Rafaela Ishton a El Alambrador", "punto":"-53.80614, -67.67198"}
-  - {"calle": "El Alambrador a Carlos Alfredo Pacheco-Puente General Mosconi", "punto":"-53.80822, -67.68490"}
-  - {"calle": "Carlos Alfredo Pacheco-Puente General Mosconi a Enrique Arteche", "punto":"-53.79952, -67.68872"}
-  - {"calle": "Enrique Arteche a Bernardo O'Higgins", "punto":"-53.79668, -67.68466"}
-  - {"calle": "Bernardo O'Higgins a Carlos Alfredo Pacheco", "punto":"-53.79461, -67.68882"}
-  - {"calle": "Carlos Alfredo Pacheco a José Beauvoir", "punto":"-53.79316, -67.68865"}
-  - {"calle": "José Beauvoir a Sebastian Elcano", "punto":"-53.79146, -67.69112"}
-  - {"calle": "Sebastian Elcano a Avenida San Martín", "punto":"-53.79016, -67.69311"}
-  - {"calle": "Avenida San Martín y Avenida Manuel Belgrano", "punto":"-53.78582, -67.70162"}
-  - {"calle": "Avenida Manuel Belgrano y Florentino Ameghino", "punto":"-53.78256, -67.69690"}
-  - {"calle": "Florentino Ameghino y Avenida Manuel Belgrano", "punto":"-53.78241, -67.69713"}
-  - {"calle": "Avenida Manuel Belgrano y Avenida San Martín", "punto":"-53.78569, -67.70193"}
-  - {"calle": "Avenida San Martín y Santa Fe", "punto":"-53.77971, -67.71364"}
-  - {"calle": "Santa Fe a Viedma", "punto":"-53.77478, -67.70655"}
-  - {"calle": "Viedma a Carlos Pellegrini", "punto":"-53.76908, -67.71769"}
-  - {"calle": "Carlos Pellegrini a Luro Cambaceres", "punto":"-53.76977, -67.71874"}
-  - {"calle": "Luro Cambaceres a Gobernador Anadón", "punto":"-53.76941, -67.72204"}
-  - {"calle": "Gobernador Anadón a Provincias Unidas", "punto":"-53.76540, -67.72075"}
-  - {"calle": "Provincias Unidas a Gabriela Mistral", "punto":"-53.76452, -67.72895"}
-  - {"calle": "Gabriela Mistral a Victoria Ocampo", "punto":"-53.76390, -67.73041"}
-  - {"calle": "Victoria Ocampo a Hermana Rosa Masobrio", "punto":"-53.76110, -67.72630"}
-  - {"calle": "Hermana Rosa Masobrio a Santa Rosa", "punto":"-53.76172, -67.72489"}
-  - {"calle": "Santa Rosa a Lapataia", "punto":"-53.76548, -67.71562"}
-  - {"calle": "Lapataia a Ushuaia", "punto":"-53.76827, -67.71652"}
-  - {"calle": "Ushuaia a Entre Ríos", "punto":"-53.77255, -67.70814"}
-  - {"calle": "Entre Ríos a Posadas", "punto":"-53.77498, -67.71165"}
-  - {"calle": "Posadas a Santa Fe", "punto":"-53.77638, -67.70890"}
-  - {"calle": "Santa Fe a Avenida San Martín", "punto":"53.77989, -67.71389"}
-  - {"calle": "Avenida San Martín a José Manuel Estrada", "punto":"-53.78442, -67.70495"}
-  - {"calle": "José Manuel Estrada a Juan Mackinlay", "punto":"-53.78179, -67.70109"}
-  - {"calle": "Juan Mackinlay a Luis Piedrabuena", "punto":"-53.78249, -67.69976"}
-  - {"calle": "Luis Piedrabuena a Avenida San Martín", "punto":"-53.78511, -67.70357"}
-  - {"calle": "Avenida San Martín a José Beauvoir", "punto":"-53.79033, -67.69328"}
-  - {"calle": "José Beauvoir a Carlos Alfredo Pacheco", "punto":"-53.79318, -67.68873"}
-  - {"calle": "Carlos Alfredo Pacheco a Bernardo O'Higgins", "punto":"-53.79461, -67.68882"}
-  - {"calle": "Bernardo O'Higgins a Carlos Herrera", "punto":"-53.79641, -67.68547"}
-  - {"calle": "Carlos Herrera a Juan Carlos Mora", "punto":"-53.79769, -67.68731"}
-  - {"calle": "Juan Carlos Mora a Carlos Alfredo Pacheco", "punto":"-53.79757, -67.68919"}
-  - {"calle": "Carlos Alfredo Pacheco-Puente General Mosconi a El Alambrador", "punto":"-53.80822, -67.68490"}
-  - {"calle": "El Alambrador a Rafaela Ishton", "punto":"-53.80621, -67.67093"}
-  - {"calle": "Rafaela Ishton a Tolhuin", "punto":"-53.80410, -67.67028"}
-  - {"calle": "Tolhuin a Kekauh", "punto":"-53.80501, -67.66541"}
-  - {"calle": "Kekauh a Chawr", "punto":"-53.79984, -67.66266"}
-  - {"calle": "Chawr a Yewarsi", "punto":"-53.80078, -67.65719"}
-  - {"calle": "Yewarsi a Yaghan", "punto":"-53.80379, -67.65865"}
-  - {"calle": "Yaghan a Yourka", "punto":"-53.80326, -67.66181"}
+- {"de": "Centro de transferencia (Hospital)",   "punto":"-53.7829, -67.6982"}
+- {"de": "Av. Belgrano",   "a": "Av. San Martín", "punto":"-53.7856, -67.7018"}
+- {"de": "Av. San Martín", "a": "Don Bosco", "punto":"-53.7822, -67.7089"}
+- {"de": "Don Bosco", "a": "F. Bilbao", "punto":"-53.7864, -67.7152"}
+- {"de": "F. Bilbao", "a": "Islas Malvinas", "punto":"-53.7838, -67.7204"}
+- {"de": "Islas Malvinas", "a": "R. Koch", "punto":"-53.7902, -67.7300"}
+- {"de": "R. Koch", "a": "Simón Bolívar", "punto":"-53.7897, -67.7316"}
+- {"de": "Simón Bolívar", "a": "Guayaquil", "punto":"-53.7887, -67.7315"}
+- {"de": "Guayaquil", "a": "Vuelta de Obligado", "punto":"-53.7881, -67.7453"}
+- {"de": "Vuelta de Obligado", "a": "Los Calafates", "punto":"-53.7891, -67.7470"}
+- {"de": "Los Calafates", "a": "Lago Chepelmut", "punto":"-53.7882, -67.7488"}
+- {"de": "Lago Chepelmut", "a": "Los Ñires", "punto":"-53.7897, -67.7510"}
+- {"de": "Los Ñires", "a": "Arwenhol", "punto":"-53.7878, -67.7549"}
+- {"de": "Arwenhol", "a": "F. Echalaine", "punto":"-53.7870, -67.7540"}
+- {"de": "F. Echalaine", "a": "Playero Blanco", "punto":"-53.7866, -67.7714"}
+- {"de": "Playero Blanco", "a": "Kaiken", "punto":"-53.7923, -67.7717"}
+- {"de": "Kaiken", "a": "Playero Rojizo", "punto":"-53.7941, -67.7743"}
+- {"de": "Playero Rojizo", "a": "Ext. Cabo Santa Inés", "punto":"-53.7954, -67.7741"}
+- {"de": "Ext. Cabo Santa Inés", "a": "Los Flamencos", "punto":"-53.7982, -67.7805"}
+- {"de": "Los Flamencos", "a": "Vapor Asturiano", "punto":"-53.7974, -67.7848"}
+- {"de": "Vapor Asturiano", "a": "Capitán Banini", "punto":"-53.7938, -67.7823"}
+- {"de": "Capitán Banini", "a": "J. Fernando Speroni", "punto":"-53.7944, -67.7800"}
+- {"de": "J. Fernando Speroni", "a": "B. Los Flamencos", "punto":"-53.7931, -67.7789"}
+- {"de": "B. Los Flamencos", "a": "Ext. Cabo Santa Inés", "punto":"-53.7953, -67.7786"}
+- {"de": "Ext. Cabo Santa Inés", "a": "Playero Rojizo", "punto":"-53.7954, -67.7741"}
+- {"de": "Playero Rojizo", "a": "Kaiken", "punto":"-53.7941, -67.7743"}
+- {"de": "Kaiken", "a": "Punta Popper", "punto":"-53.7890, -67.7669"}
+- {"de": "Punta Popper", "a": "Río Grande", "punto":"-53.7959, -67.7533"}
+- {"de": "Río Grande", "a": "Cabo Santa Inés", "punto":"-53.8017, -67.7619"}
+- {"de": "Cabo Santa Inés", "a": "Mariano Moreno", "punto":"-53.8039, -67.7574"}
+- {"de": "Mariano Moreno", "a": "Punta Popper", "punto":"-53.7980, -67.7492"}
+- {"de": "Punta Popper", "a": "Islas Malvinas", "punto":"-53.8006, -67.7442"}
+- {"de": "Islas Malvinas", "a": "R. Obligado", "punto":"-53.7832, -67.7187"}
+- {"de": "R. Obligado", "a": "25 de mayo", "punto":"-53.7864, -67.7126"}
+- {"de": "25 de mayo", "a": "Av. San Martín", "punto":"-53.7830, -67.7076"}
+- {"de": "Av. San Martín", "a": "Ricardo Rojas",  "punto":"-53.7909, -67.6911"}
+- {"de": "Ricardo Rojas",  "a": "Elcano",         "punto":"-53.7908, -67.6911"}
+- {"de": "Elcano",         "a": "Av. San Martín", "punto":"-53.7901, -67.6931"}
+- {"de": "Av. San Martín", "a": "Av. Belgrano",    "punto":"-53.7858, -67.7016"}
+- {"de": "Av. Belgrano",   "a": "Centro de transferencia", "punto":"-53.7827, -67.6976"}
 ---

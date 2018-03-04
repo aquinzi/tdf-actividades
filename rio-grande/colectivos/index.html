@@ -20,15 +20,18 @@ uid: colectivos-rg-all
 	{% assign color_html = "" %}
 	{% assign color_font = "inherit" %}
 	{% case colectivo.color %}
+		{% when 'azul' %} {% assign color_html = "blue" %}{% assign color_font = "white" %}
+		{% when 'violeta' %} {% assign color_html = "purple" %}{% assign color_font = "white" %}
+		{% when 'rojo' %} {% assign color_html = "red" %}{% assign color_font = "white" %}
 		{% when 'celeste' %}{% assign color_html = "lightblue" %}
-		{% when 'verde' %}  {% assign color_html = "green" %}{% assign color_font = "white" %}
+		{% when 'amarillo' %}{% assign color_html = "yellow" %}
 		{% when 'naranja' %}{% assign color_html = "orange" %}
-		{% when 'marrón' %} {% assign color_html = "brown" %}{% assign color_font = "white" %}
+		{% when 'verde' %}  {% assign color_html = "green" %}{% assign color_font = "white" %}
 	{% endcase %}
 			
 	<tr>
 		<td><a href="{{ colectivo.url }}">{{ colectivo.nombre }}</a></td>
-		<td style="background-color:{{color_html}};font-color:{{color_font}}"> {{ colectivo.color }}</td>
+		<td style="background-color:{{color_html}};color:{{color_font}}"> {{ colectivo.color }}</td>
 		<td> {{ colectivo.areas | join:", " }} </td>
 	</tr>
 {% endfor %}

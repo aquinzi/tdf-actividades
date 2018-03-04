@@ -1,74 +1,32 @@
 ---
 uid: linea-a
 nombre: Línea A
-color: celeste
-ultima-actualizacion: 2018-03-02
-areas: ["Austral", "Centro", "Hospital", "Cementerio", "Chacra XIII", "Chacra XI", "Aeropuerto (barrio)"]
+color: azul
+ultima-actualizacion: 2018-03-03
+areas: ["Hospital", "Mutual", "Chacra II", "C.G.T.", "Chacra IV", "Centro"]
+cant_unidades: 4
 recorrido: 
-  - {"calle": "Yourka y Yaghan", "punto":"-53.8032, -67.6618"}
-  - {"calle": "Yaghan a Keninek", "punto":"-53.8031, -67.6626"}
-  - {"calle": "Keninek a Oroski", "punto":"-53.80211, -67.66213"}
-  - {"calle": "Oroski a Mevi", "punto":"-53.80433, -67.65171"}
-  - {"calle": "Mevi a Tolhuin", "punto":"-53.80796, -67.65461"}
-  - {"calle": "Tolhuin a Karukinka", "punto":"-53.80589, -67.66160"}
-  - {"calle": "Karukinka a Laguna Verde (Los Sauces)", "punto":"-53.81103, -67.66474"}
-  - {"calle": "Laguna Verde (Los Sauces) a Rafaela Ishton", "punto":"-53.80965, -67.67170"}
-  - {"calle": "Rafaela Ishton a Gran Malvina", "punto":"-53.81125, -67.67207"}
-  - {"calle": "Gran Malvina a Teniente M. Valko", "punto":"-53.81225, -67.67549"}
-  - {"calle": "Teniente M. Valko a Monte Kentt", "punto":"-53.81423, -67.67413"}
-  - {"calle": "Monte Kentt a Monte Independencia", "punto":"-53.81582, -67.67524"}
-  - {"calle": "Monte Independencia a Mirko Milosevic", "punto":"-53.81418, -67.68194"}
-  - {"calle": "Mirko Milosevic a Carlos Alfredo Pacheco-Puente General Mosconi", "punto":"-53.80818, -67.68512"}
-  - {"calle": "Carlos Alfredo Pacheco-Puente General Mosconi a José Beauvoir", "punto":"-53.79318, -67.68873"}
-  - {"calle": "José Beauvoir a Elcano", "punto":"-53.79142, -67.69114"}
-  - {"calle": "Elcano a Avenida San Martín", "punto":"-53.79015, -67.69311"}
-  - {"calle": "Avenida San Martín a Avenida Manuel Belgrano", "punto":"-53.78582, -67.70163"}
-  - {"calle": "Avenida Manuel Belgrano a Florentino Ameghino", "punto":"-53.78257, -67.69692"}
-  - {"calle": "Florentino Ameghino a Avenida Manuel Belgrano", "punto":"-53.78241, -67.69712"}
-  - {"calle": "Avenida Manuel Belgrano a Avenida San Martín", "punto":"-53.78569, -67.70192"}
-  - {"calle": "Avenida San Martín a Don Bosco", "punto":"-53.78213, -67.70895"}
-  - {"calle": "Don Bosco a Francisco Bilbao", "punto":"-53.78646, -67.71524"}
-  - {"calle": "Francisco Bilbao a Islas Malvinas", "punto":"-53.78375, -67.72060"}
-  - {"calle": "Islas Malvinas a Ruta Nacional 3", "punto":"-53.78700, -67.72536"}
-  - {"calle": "Ruta Nacional 3 a Punta Popper", "punto":"-53.80051, -67.74442"}
-  - {"calle": "Punta Popper a Mariano Moreno", "punto":"-53.79806, -67.74924"}
-  - {"calle": "Mariano Moreno a Cabo Santa Inés", "punto":"-53.80400, -67.75749"}
-  - {"calle": "Cabo Santa Inés a Paso de los Andes", "punto":"-53.80260, -67.76017"}
-  - {"calle": "Paso de los Andes a Punta Popper", "punto":"-53.79698, -67.75141"}
-  - {"calle": "Punta Popper a Kaiken", "punto":"-53.78896, -67.76687"}
-  - {"calle": "Kaiken a Playero Rojizo", "punto":"-53.79402, -67.77416"}
-  - {"calle": "Playero Rojizo a Cabo Peña"}
-  - {"calle": "Cabo Peña a Calle 218"}
-  - {"calle": "Calle 218 a Playero Rojizo"}
-  - {"calle": "Playero Rojizo a Kaiken", "punto":"-53.79402, -67.77416"}
-  - {"calle": "Kaiken a Playero Blanco", "punto":"-53.79235, -67.77172"}
-  - {"calle": "Playero Blanco a Federico Echelaine", "punto":"-53.78662, -67.77141"}
-  - {"calle": "Federico Echelaine a Arwenhol", "punto":"-53.78707, -67.75397"}
-  - {"calle": "Arwenhol a Los Ñires", "punto":"-53.78781, -67.75498"}
-  - {"calle": "Los Ñires a Lago Chepelmut", "punto":"-53.78974, -67.75108"}
-  - {"calle": "Lago Chepelmut a Federico Echelaine", "punto":"-53.78756, -67.74791"}
-  - {"calle": "Federico Echelaine a Islas Malvinas", "punto":"-53.78768, -67.72527"}
-  - {"calle": "Islas Malvinas a Rafael Obligado", "punto":"-53.78323, -67.71878"}
-  - {"calle": "Rafael Obligado a 25 de Mayo", "punto":"-53.78642, -67.71257"}
-  - {"calle": "25 de Mayo a Avenida San Martín", "punto":"-53.78299, -67.70765"}
-  - {"calle": "Avenida San Martín a José Manuel Estrada", "punto":"-53.78442, -67.70495"}
-  - {"calle": "José Manuel Estrada a Juan Mackinlay", "punto":"-53.78179, -67.70109"}
-  - {"calle": "Juan Mackinlay a Luis Piedrabuena", "punto":"-53.78249, -67.69976"}
-  - {"calle": "Luis Piedrabuena a Avenida San Martín", "punto":"-53.78511, -67.70357"}
-  - {"calle": "Avenida San Martín a José Beauvoir", "punto":"-53.79033, -67.69328"}
-  - {"calle": "José Beauvoir a Carlos Alfredo Pacheco", "punto":"-53.79318, -67.68873"}
-  - {"calle": "Carlos Alfredo Pacheco-Puente General Mosconi a Mirko Milosevic", "punto":"-53.80818, -67.68512"}
-  - {"calle": "Mirko Milosevic a Monte Independencia", "punto":"-53.81418, -67.68194"}
-  - {"calle": "Monte Independencia a Monte Kentt", "punto":"-53.81582, -67.67524"}
-  - {"calle": "Monte Kentt a Teniente M. Valko", "punto":"-53.81423, -67.67413"}
-  - {"calle": "Teniente M. Valko a Gran Malvina", "punto":"-53.81225, -67.67549"}
-  - {"calle": "Gran Malvina a Rafaela Ishton", "punto":"-53.81125, -67.67207"}
-  - {"calle": "Rafaela Ishton a Laguna Verde (Los Sauces)", "punto":"-53.80965, -67.67170"}
-  - {"calle": "Laguna Verde (Los Sauces) a Karukinka", "punto":"-53.81103, -67.66474"}
-  - {"calle": "Karukinka a Tolhuin", "punto":"-53.80589, -67.66160"}
-  - {"calle": "Tolhuin a Mevi", "punto":"-53.80796, -67.65461"}
-  - {"calle": "Mevi a Yaghan", "punto":"-53.80530, -67.65251"}
-  - {"calle": "Yaghan a Yourka", "punto":"-53.8032, -67.6618"}
+- {"de": "Centro de transferencia (Hospital)",   "punto":"-53.7829, -67.6982"}
+- {"de": "Av. Belgrano",   "a": "Av. San Martín", "punto":"-53.7856, -67.7018"}
+- {"de": "Av. San Martín",  "a": "Av. Santa Fe",   "punto":"-53.7796, -67.7136"}
+- {"de": "Av. Santa Fe",    "a": "Viedma",         "punto":"-53.7747, -67.7066"}
+- {"de": "Viedma",         "a": "Pellegrini",    "punto":"-53.7690, -67.7176"}
+- {"de": "C. Pellegrini",  "a": "Luro Cambaceres", "punto":"-53.7697, -67.7187"}
+- {"de": "Luro Cambaceres", "a": "Gob. Anadón",  "punto":"-53.7693, -67.7220"}
+- {"de": "Gob. Anadón",    "a": "Santa Rosa",    "punto":"-53.7631, -67.7200"}
+- {"de": "Santa Rosa",     "a": "Virrey Liniers","punto":"-53.7617, -67.724"}
+- {"de": "Virrey Liniers", "a": "Aerop. Argentina", "punto":"-53.7662, -67.7315"}
+- {"de": "Aerop. Argentina", "a": "Pref. Naval",  "punto":"-53.7671, -67.7240"}
+- {"de": "Pref. Naval",    "a": "Av. San Martín", "punto":"-53.7733, -67.7260"}
+- {"de": "Av. San Martín", "a": "Ramón Cortéz",  "punto":"-53.7688, -67.7356"}
+- {"de": "Ramón Cortéz",   "a": "Juan Visic",    "punto":"-53.7709, -67.7385"}
+- {"de": "Juan Visic",     "a": "Raúl Chifflet", "punto":"-53.7744, -67.7315"}
+- {"de": "Raúl Chifflet",  "a": "Av. San Martín", "punto":"-53.7724, -67.7285"}
+- {"de": "Av. San Martín", "a": "Ricardo Rojas",  "punto":"-53.7909, -67.6911"}
+- {"de": "Ricardo Rojas",  "a": "Elcano",         "punto":"-53.7908, -67.6911"}
+- {"de": "Elcano",         "a": "Av. San Martín", "punto":"-53.7901, -67.6931"}
+- {"de": "Av. San Martín", "a": "Av. Belgrano",    "punto":"-53.7858, -67.7016"}
+- {"de": "Av. Belgrano",   "a": "Centro de transferencia", "punto":"-53.7827, -67.6976"}
 comments:
   - id: 1
     date: 2017-06-08 23:35:32

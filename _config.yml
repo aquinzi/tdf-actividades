@@ -46,25 +46,39 @@ feed:
 
 maps:
   buses-rg-all: 
-    geojson: "/public/colectivos/rio-grande-colectivos-2016.geojson"
-    kmz: "https://drive.google.com/open?id=0B_xdMoFx-YMeRnUyM1E0MkNuTUE"
+    geojson: "/public/colectivos/rio-grande-colectivos-2018-todo.geojson"
+    kmz: "https://drive.google.com/open?id=1BSWia4RJD6T2zzkqpBwgdS6k-UEZ75Nf"
   buses-rg-linea-a:
-    geojson: "/public/colectivos/rio-grande-colectivos-2016-linea-a.geojson"
-    kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeRVQ3WDJxV19HLUE"
-    gpx: "https://drive.google.com/open?id=0B_xdMoFx-YMeenp3M3VrcVM3RzQ"
+    geojson: "/public/colectivos/rio-grande-colectivos-2018-linea-a.geojson"
+    kml: "https://drive.google.com/open?id=13JIfiTUeOOvXaTYFVy3p44_Qd659dGvr"
+    gpx: "https://drive.google.com/open?id=1MtDz-jAWaxqB2Y9HraiOO8o82gbBKZ4_"
   buses-rg-linea-b:
-    geojson: "/public/colectivos/rio-grande-colectivos-2016-linea-b.geojson"
-    kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeLVVoV2FUYnkyQVU"
-    gpx: "https://drive.google.com/open?id=0B_xdMoFx-YMea0pYcWZZYW5NOE0"
+    geojson: "/public/colectivos/rio-grande-colectivos-2018-linea-b.geojson"
+    kml: "https://drive.google.com/open?id=15ryLrqSMjSgQj18Up_nhMPeCAEbhm8ZL"
+    gpx: "https://drive.google.com/open?id=1DoIroxdavQ0QUMN7bXGS_pLp4m7MYJX7"
   buses-rg-linea-c:
-    geojson: "/public/colectivos/rio-grande-colectivos-2016-linea-c.geojson"
-    kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeZWE5VXhVUHFzYUk"
-    gpx: "https://drive.google.com/open?id=0B_xdMoFx-YMeTno3RDJNMExzMkU"
+    geojson: "/public/colectivos/rio-grande-colectivos-2018-linea-c.geojson"
+    kml: "https://drive.google.com/open?id=1SGTVce1_7Xwut_9F7ELP-nlKWH_htDlT"
+    gpx: "https://drive.google.com/open?id=1BiQ-x36umxR6z9RmQB99qUG6m3Ee3xSb"
   buses-rg-linea-d:
-    geojson: "/public/colectivos/rio-grande-colectivos-2016-linea-d.geojson"
-    kml: "https://drive.google.com/open?id=0B_xdMoFx-YMeeVRMeExfRWJlR3M"
-    gpx: "https://drive.google.com/open?id=0B_xdMoFx-YMeaERxaTQ1Z2FKRWM"
-
+    geojson: "/public/colectivos/rio-grande-colectivos-2018-linea-d.geojson"
+    kml: "https://drive.google.com/open?id=1rllGwFRKmjdq9YR186RA74FlQazKsgSa"
+    gpx: "https://drive.google.com/open?id=1YuYPKtjdShKw3XHF-UiBlJlTg53PEkwf"
+  buses-rg-linea-e:
+    geojson: "/public/colectivos/rio-grande-colectivos-2018-linea-e.geojson"
+    kml: "https://drive.google.com/open?id=1Y9JTZH5HMwr7vehFGkDaTP3kwz6UyT8X"
+    gpx: "https://drive.google.com/open?id=14S2HfOh27Ngdfc3NHZd9yiAftUwCtZas"
+  buses-rg-linea-f:
+    geojson: "/public/colectivos/rio-grande-colectivos-2018-linea-f.geojson"
+    kml: "https://drive.google.com/open?id=19jGElwGzPgFlpHW2CgNAdXKoXNCsdg4T"
+    gpx: "https://drive.google.com/open?id=1AOGx2zrEiHYNX471iyVsou1IDRcAhfkC"
+  buses-rg-linea-g:
+    geojson: "/public/colectivos/rio-grande-colectivos-2018-linea-g.geojson"
+    kml: "https://drive.google.com/open?id=1kisLlhDN_cvUs7eRs_J8iEH66KOY2jEJ"
+    gpx: "https://drive.google.com/open?id=1N2Xc2zrUdceWRO-yBmlL-RRmV8OmAdO9"
+	 
+	 
+	 
 #ads:
 #  top: 
 #    img:
