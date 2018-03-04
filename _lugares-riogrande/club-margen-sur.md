@@ -6,8 +6,8 @@ geo: {lat: -53.8019268, lon: -67.6652996}
 gstreetview: ""
 imagen: ""
 categoria: 
-colectivos: ["a","c"]
-ultima-actualizacion: 2017-02-16
+colectivos: ["e","f"]
+ultima-actualizacion: 2018-03-04
 horario: 
   - {dia: "", hora: "", nota: "" }
 email: 

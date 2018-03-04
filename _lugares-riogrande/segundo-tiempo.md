@@ -6,8 +6,8 @@ geo: {lat: -53.789031, lon: -67.709177}
 gstreetview: "https://www.google.com/maps/@-53.789031,-67.709177,3a,75y,140.29h,79.78t/data=!3m6!1e1!3m4!1sVWL3GspVQGQdsx9O1RbeuQ!2e0!7i13312!8i6656"
 imagen: "http://maps.googleapis.com/maps/api/streetview?size=800x400&location=-53.789031,-67.709177&heading=130&fov=50&pitch=-5"
 categoria: deportes
-colectivos: ["a","b","c"]
-ultima-actualizacion: 2017-02-16
+colectivos: ["a", "b", "c", "d", "e", "f", "g"]
+ultima-actualizacion: 2018-03-04
 horario: 
   - {dia: "", hora: "", nota: "" }
 email: 
