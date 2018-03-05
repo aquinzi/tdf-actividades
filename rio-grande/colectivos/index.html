@@ -28,7 +28,7 @@ uid: colectivos-rg-all
 			
 	<tr>
 		<td><a href="{{ colectivo.url }}">{{ colectivo.nombre }}</a></td>
-		<td style="background-color:{{color_html}};font-color:{{color_font}}"> {{ colectivo.color }}</td>
+		<td style="background-color:{{color_html}};color:{{color_font}}"> {{ colectivo.color }}</td>
 		<td> {{ colectivo.areas | join:", " }} </td>
 	</tr>
 {% endfor %}

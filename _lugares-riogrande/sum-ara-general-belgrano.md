@@ -7,14 +7,14 @@ gstreetview: "https://www.google.com.ar/maps/@-53.7743959,-67.731374,3a,51.8y,10
 imagen: "https://maps.googleapis.com/maps/api/streetview?size=800x400&location=-53.7743959,-67.731374&heading=100&fov=60&pitch=0"
 categoria: 
 colectivos: ["b"]
-ultima-actualizacion: 2017-04-17
+ultima-actualizacion: 2018-03-04
 horario: 
   - {dia: "", hora: "", nota: "" }
 email: 
 website: []
 telefono: []
 nota: |
-  
+  También SUM de Chacra 4 (cuatro)
 marker-symbol: building
 redirect_from:
   - /rio-grande/lugares/sum-chacra-4/
