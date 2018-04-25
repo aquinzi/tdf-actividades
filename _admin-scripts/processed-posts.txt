@@ -8,3 +8,9 @@ rio-grande@2018-02-26-clinica-salto-hipico.md
 rio-grande@2018-03-29-vuelta-tierra-fuego.md
 rio-grande@2018-03-29-vueltita-tierra-fuego.md
 rio-grande@2018-03-17-premios-ciudad-rio-grande.md
+rio-grande@2018-04-27-curso-astronomia-observacional.md
+rio-grande@2018-04-27-eruca-sativa-clinica.md
+rio-grande@2018-04-27-eruca-sativa-concierto.md
+rio-grande@2018-04-27-seminario-gratuito-robotica.md
+rio-grande@2018-04-29-corrida-dia-trabajo.md
+ushuaia@2018-04-26-eruca-sativa-clinica.md
