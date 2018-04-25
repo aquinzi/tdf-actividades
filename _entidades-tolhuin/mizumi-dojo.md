@@ -1,8 +1,8 @@
 ---
-nombre: Aikido Tolhuin
+nombre: Mizumi Dojo Aikido Tolhuin
 imagen: logo-sakanashi-dojo.jpg
 categoria: aikido
-ultima-actualizacion: 2017-09-04
+ultima-actualizacion: 2018-04-25
 direccion: 
   lugar: [SUM Colegio Provincial Ramón Alberto Trejo Noel (Santiago Rupatini 379)]
   geo: {lat: -54.508949, lon: -67.193206}
@@ -11,11 +11,13 @@ horario:
   - {dia: "lunes, miércoles, viernes", hora: "21:30-22:30", nota: ""}
 precio: gratis
 nota: | 
-  Nombre alternativo: Aikidô Tolhuin.
+  Nombre alternativo: Mizumi Dôjô Aikido Tolhuin.
   Sensei Martín Mora (4to. Dan), e instructores suplentes: Fukushidoin: Benito GARRIDO TORRES (1° Dan), Eduardo VARGAS (1° Dan)
-website: ["https://www.facebook.com/people/Aikido-Tolhuin/100009818492687"]
+website: ["https://www.facebook.com/people/Mizumi-Dojo-Aikido-Tolhuin/100009818492687"]
 email: 
 telefono: ["(02964) 15624141"]
-permalink: /tolhuin/entidades/aikido-tolhuin/
+permalink: /tolhuin/entidades/mizumi-dojo/
+redirect_from:
+  - /tolhuin/entidades/aikido-tolhuin/
 ---
 
