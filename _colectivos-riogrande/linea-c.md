@@ -1,7 +1,7 @@
 ---
 uid: linea-c
 nombre: Línea C
-color: naranja
+color: verde
 ultima-actualizacion: 2018-03-02
 areas: ["Austral", "Centro", "Mutual", "Chacra II", "AGP", "Hospital"]
 recorrido: 

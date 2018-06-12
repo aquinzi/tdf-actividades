@@ -2683,7 +2683,12 @@ vertical-align: middle;
 
 
 
-#map {height: 400px;}
+#map {
+	
+	height: 80vh;
+	margin: 2em 1em;	
+	
+}
 
 
 

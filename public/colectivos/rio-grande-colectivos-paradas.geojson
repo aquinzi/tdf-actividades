@@ -4,215 +4,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P.",
-        "_storage_options": {
-          "color": "Navy"
-        },
-        "description": "Línea C\nLínea B\nLínea A\nC: José Manuel Estrada y Juan Mackilnay"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.70116567611696,
-          -53.78192888438682
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "ForestGreen"
-        },
-        "name": "P. rg374",
-        "description": "Línea B\nC: Prefectura Naval y Aeroposta Argentina (Margalot)"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.72369623184206,
-          -53.767295363639114
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "ForestGreen"
-        },
-        "name": "P. rg300",
-        "description": "Línea B\nC: Raúl Chifflet y José Romero\nhacia centro"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.73049831390382,
-          -53.773966041372496
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg258",
-        "_storage_options": {
-          "color": "ForestGreen"
-        },
-        "description": "Línea B\nLínea C\nC: San Martín y Finocchio (Hipertehuelche)\nTenes \"asientos\" para esperar ;)"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.71261334419252,
-          -53.78055324638429
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P.",
-        "_storage_options": {
-          "color": "Gold"
-        },
-        "description": "Línea C\nLínea B\nLínea A\nC: Florentino Ameghino y Avenida Manuel Belgrano"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.69732475280763,
-          -53.78239798565238
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "DarkGreen"
-        },
-        "name": "P. rg257 Garita",
-        "description": "Línea C\nC: Posadas y Buenos Aires"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.71058559417726,
-          -53.77562086479691
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg250",
-        "_storage_options": {
-          "color": "DarkGreen"
-        },
-        "description": "Línea C\nC: Lapataia y Eva Perón"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.71620213985445,
-          -53.766876825706234
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg255",
-        "_storage_options": {
-          "color": "DarkGreen"
-        },
-        "description": "Línea C\nC: Entre Ríos y Ushuaia"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.70843982696535,
-          -53.77250771377677
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg372",
-        "_storage_options": {
-          "color": "ForestGreen"
-        },
-        "description": "Línea B\nC: Prefectura Naval y Federico Ibarra"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.72500514984132,
-          -53.771302970156356
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg310 Garita",
-        "_storage_options": {
-          "color": "ForestGreen"
-        },
-        "description": "Línea B\nC: Prefectura Naval Argentina y San Martín\nhacia centro"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.7259922027588,
-          -53.77291351436935
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg370 Garita",
-        "_storage_options": {
-          "color": "ForestGreen"
-        },
-        "description": "Línea B\nC: Avenida San Martín y Fray Justo María de Oro (La Anónima, Cono de Sombras)\nhacia chacra 2"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.71674394607545,
-          -53.77804908910225
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg311",
-        "_storage_options": {
-          "color": "ForestGreen"
-        },
-        "description": "Línea B\nC: San Martín y Fray Justo María de Oro (La Anónima)\nhacia centro"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.71652936935426,
-          -53.778568951764974
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "P.  rg032 Garita",
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
-        "description": "Línea A\nLínea B\nLínea C\nC: San Martín y Luis Py"
+        "description": "Línea A\nLínea B\nLínea C\nC: San Martín y Luis Py (frente Café Lautaro)"
       },
       "geometry": {
         "type": "Point",
@@ -228,15 +24,15 @@
       "properties": {
         "name": "P.  rg034 Garita",
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
         "description": "Línea A\nLínea B\nLínea C\nC: San Martín (entre Rivadavia y Fagnano)\nhacia centro"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.69951343536378,
-          -53.786740093011396
+          -67.69965291023256,
+          -53.78666403076402
         ]
       }
     },
@@ -262,7 +58,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         },
         "name": "P.  rg046 Garita",
         "description": "C: Islas Malvinas y Ruta 3 (UTN/CIERG)\nhacia Chacra 13, 11..."
@@ -270,8 +66,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72521972656251,
-          -53.78671473894426
+          -67.72516608238222,
+          -53.78667670781483
         ]
       }
     },
@@ -280,15 +76,15 @@
       "properties": {
         "name": "P.  rg115 Garita",
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea A\nLínea B\nLínea C\nC: Estrada y Rosales"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.70352602005006,
-          -53.78352634289362
+          -67.7035689353943,
+          -53.78369115658015
         ]
       }
     },
@@ -323,7 +119,7 @@
         "type": "Point",
         "coordinates": [
           -67.7020561695099,
-          -53.78393203695747
+          -53.783862308569404
         ]
       }
     },
@@ -332,7 +128,7 @@
       "properties": {
         "name": "P.  rg118 Garita",
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea A\nLínea B\nLínea C\nC: San Martín (entre Rivadavia y Fagnano, Instituto María Auxiliadora)\nhacia margen sur"
       },
@@ -349,305 +145,15 @@
       "properties": {
         "name": "P.  rg119 Garita",
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea A\nLínea B\nLínea C\nC: San Martín y Espora\nhacia margen sur"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.69795775413515,
-          -53.788014115155335
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Gold"
-        },
-        "name": "P.",
-        "description": "Línea A"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.77680397033693,
-          -53.79471952429434
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Navy"
-        },
-        "name": "P.",
-        "description": "Línea A\nC: Playero Blanco y Águila Mora"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.77140736579896,
-          -53.78946556587279
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. #1009",
-        "_storage_options": {
-          "color": "Navy"
-        },
-        "description": "Línea C\nLínea B\nC: San Martín y 25 de Mayo"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.70792484283449,
-          -53.78295582897974
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Navy"
-        },
-        "name": "P. rg385",
-        "description": "Línea B\nC: Juan Visic y Juan Ibarra"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.73627042770387,
-          -53.772241405005886
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "ForestGreen"
-        },
-        "name": "P. rg308 Garita",
-        "description": "Línea B\nC: Aeroposta Argentina y Prefectura Naval\n"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.7242434024811,
-          -53.767162192931224
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Navy"
-        },
-        "name": "P. rg332",
-        "description": "Línea B\nC: D'Agostini y Brown"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.72878170013429,
-          -53.792729561978575
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Navy"
-        },
-        "description": "Línea B\nC: Belisario Roldán y Av. Belgrano",
-        "name": "P. "
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.71586418151857,
-          -53.79484627028822
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Navy"
-        },
-        "description": "Línea C\nC: Uani y Oroski",
-        "name": "P. #3001"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.66445159912111,
-          -53.80148722450991
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Navy"
-        },
-        "name": "P. #3003 Garita",
-        "description": "Línea C\nC: José Ingenieros y Enrique Arteche"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.6855681,
-          -53.797443
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg254",
-        "_storage_options": {
-          "color": "DarkGreen"
-        },
-        "description": "Línea C\nC: Ushuaia y Santa Cruz"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.709706,
-          -53.77178200000001,
-          0
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg400 Garita",
-        "description": "Línea D\nC: Prefectura Naval y Provincias Unidas",
-        "_storage_options": {
-          "color": "ForestGreen"
-        }
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.72340655326845,
-          -53.764914080801496
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg251",
-        "_storage_options": {
-          "color": "DarkGreen"
-        },
-        "description": "Línea C\nC: Ushuaia y Pellegrini"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.71645426750185,
-          -53.76837973796533
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Navy"
-        },
-        "description": "Línea C\nC: Carlos Herrera y Scalabrini Ortiz/Juan Carlos Mora",
-        "name": "P. rg272"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.68726110458375,
-          -53.79755220587595
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "Navy"
-        },
-        "description": "Línea D\nC: Ruta 3 y Juzgado\nhacia mision\nal frente hay garita",
-        "name": "P. rg406"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.76002407073976,
-          -53.74235336847966
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "_storage_options": {
-          "color": "ForestGreen"
-        },
-        "name": "P. rg411 Garita",
-        "description": "Línea D\nC: Ruta 3 y Barrio Policial\nhacia chacra 2"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.73627042770387,
-          -53.75001769391702
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg248 Garita",
-        "description": "Línea C\nC: Santa Rosa y Anadón",
-        "_storage_options": {
-          "color": "ForestGreen"
-        }
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.72027373313905,
-          -53.763204927711236
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "P. rg252 Garita",
-        "_storage_options": {
-          "color": "DarkGreen"
-        },
-        "description": "Línea C\nC: Ushuaia y Perú"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.71364867687227,
-          -53.76981918576237
+          -67.6980757713318,
+          -53.78803946843722
         ]
       }
     },
@@ -672,17 +178,17 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. rg247 Garita",
-        "description": "Línea C\nC: Santa Rosa y Prefectura Naval",
         "_storage_options": {
           "color": "ForestGreen"
-        }
+        },
+        "name": "P. Garita",
+        "description": "Línea B\nC: Prefectura Naval e Islas de los Estados (gimnasio escuela 21)"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72274672985078,
-          -53.76201260161634
+          -67.72552013397218,
+          -53.77149319513194
         ]
       }
     },
@@ -690,7 +196,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         },
         "name": "P. rg001",
         "description": "Línea A\nC: Yaghan y Yourka\nhacia centro"
@@ -698,8 +204,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66165137290956,
-          -53.803188482963314
+          -67.66194105148317,
+          -53.8031219546
         ]
       }
     },
@@ -707,7 +213,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         },
         "description": "Línea A\nC: Yaghan y Keninek",
         "name": "P. rg002"
@@ -715,8 +221,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66245603561403,
-          -53.802931872980324
+          -67.66242384910585,
+          -53.802969889373195
         ]
       }
     },
@@ -724,7 +230,10 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg003",
-        "description": "Línea A\nC: Keninek y Oroski"
+        "description": "Línea A\nC: Keninek y Oroski\nhacia centro",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -738,13 +247,16 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg004",
-        "description": "Línea A\nC: Oroski y Kekombosh"
+        "description": "Línea A\nC: Oroski y Kekombosh",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.65915155410768,
-          -53.80268476558646
+          -67.65923738479616,
+          -53.80271644610296
         ]
       }
     },
@@ -752,13 +264,16 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg005",
-        "description": "Línea A\nC: Oroski y Kau"
+        "description": "Línea A\nC: Oroski y Kau",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.65651226043703,
-          -53.80316630685394
+          -67.6565980911255,
+          -53.8031979870066
         ]
       }
     },
@@ -766,13 +281,16 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg006",
-        "description": "Línea A\nC: Oroski y Alietati"
+        "description": "Línea A\nC: Oroski y Alietati",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.65417337417604,
-          -53.803717538095
+          -67.65428066253664,
+          -53.80374288188585
         ]
       }
     },
@@ -780,13 +298,16 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg007",
-        "description": "Línea A\nC: Oroski y Mevi"
+        "description": "Línea A\nC: Oroski y Mevi",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.65194177627565,
-          -53.80431944898914
+          -67.65202760696413,
+          -53.804325784847336
         ]
       }
     },
@@ -794,13 +315,16 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg010",
-        "description": "Línea A\nC: Mevi y Yaghan\nhacia centro"
+        "description": "Línea A\nC: Mevi y Yaghan\nhacia centro",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.65229046344759,
-          -53.80520645982013
+          -67.65248894691469,
+          -53.80506707364658
         ]
       }
     },
@@ -808,10 +332,10 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         },
         "name": "P. rg011",
-        "description": "Línea A\nC:  Mevi y Tolhuin"
+        "description": "Línea A\nC:  Mevi y Tolhuin\nhacia centro\n"
       },
       "geometry": {
         "type": "Point",
@@ -825,13 +349,16 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg012",
-        "description": "Línea A\nC: Tolhuin y Kau"
+        "description": "Línea A\nC: Tolhuin y Kau",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.65873312950136,
-          -53.8063785524926
+          -67.65871167182924,
+          -53.80641023021818
         ]
       }
     },
@@ -839,7 +366,10 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg013",
-        "description": "Línea A\nC: Tolhuin y Karukinka"
+        "description": "Línea A\nC: Tolhuin y Karukinka",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -853,13 +383,16 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg014",
-        "description": "Línea A\nC: Karukinka y Nuestra Señora Itatí"
+        "description": "Línea A\nC: Karukinka y Nuestra Señora Itatí\nhacia centro",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66240239143373,
-          -53.806720670662024
+          -67.66228437423707,
+          -53.80668899317103
         ]
       }
     },
@@ -867,13 +400,16 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg015",
-        "description": "Línea A\nC: San Jorge y Tercero B\n(suposición)"
+        "description": "Línea A\nC: San Jorge y Tercero B / Pasaje A y Karukinka",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66273498535158,
-          -53.80729086140699
+          -67.66319632530214,
+          -53.80815880354268
         ]
       }
     },
@@ -881,27 +417,33 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Karukinka y Los Sauces\nhacia centro",
-        "name": "P. rg016"
+        "name": "P. rg016",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66487002372743,
-          -53.810876549908585
+          -67.66483783721925,
+          -53.81078786166618
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea A\nC: Los Sauces y Yourka",
-        "name": "P. rg017"
+        "description": "Línea A\nC: Los Sauces y Yourka\nhacia centro",
+        "name": "P. rg017",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66643643379213,
-          -53.81057881006663
+          -67.66596436500551,
+          -53.81068650344508
         ]
       }
     },
@@ -909,13 +451,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Los Sauces y Rafaela Ishton\nhacia centro",
-        "name": "P. rg018"
+        "name": "P. rg018",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67147898674013,
-          -53.80957788190177
+          -67.67129659652711,
+          -53.8095588767054
         ]
       }
     },
@@ -923,13 +468,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Gran Malvina y Rafaela Ishton\nhacia centro",
-        "name": "P. rg019"
+        "name": "P. rg019",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67266988754274,
-          -53.811383336265486
+          -67.67279863357545,
+          -53.811427679780195
         ]
       }
     },
@@ -939,14 +487,14 @@
         "description": "Línea A\nC: Valko y Ardiles\nhacia centro",
         "name": "P. rg020",
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67536282539369,
-          -53.81269461752599
+          -67.67382860183717,
+          -53.812339878817234
         ]
       }
     },
@@ -956,14 +504,14 @@
         "description": "Línea A\nC: Valko y Falconier\nhacia centro",
         "name": "P. rg021",
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67499804496767,
-          -53.81322038544685
+          -67.67350673675539,
+          -53.812897324011615
         ]
       }
     },
@@ -971,13 +519,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Valko y Albelos\nhacia centro",
-        "name": "P. rg022"
+        "name": "P. rg022",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67449378967287,
-          -53.81398052017799
+          -67.67481565475465,
+          -53.813847497595205
         ]
       }
     },
@@ -987,28 +538,31 @@
         "description": "Línea A\nC: Valko/Monte Kentt y Monte Independencia\nhacia centro",
         "name": "P. rg023",
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67533063888551,
-          -53.81568443877878
+          -67.67698287963869,
+          -53.81523471234555
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea A\nC: Monte Independencia e Isla Principal\n(suposición)",
-        "name": "P. rg024"
+        "description": "Línea A\nC: Monte Independencia e Isla Principal",
+        "name": "P. rg024",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67999768257143,
-          -53.81458228373001
+          -67.67985820770265,
+          -53.814613955256576
         ]
       }
     },
@@ -1016,13 +570,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Monte Independencia y Mirko Milosevic\nhacia centro",
-        "name": "P. rg025"
+        "name": "P. rg025",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68181085586549,
-          -53.81415154859266
+          -67.68123149871828,
+          -53.81424656407703
         ]
       }
     },
@@ -1030,7 +587,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Mirko Milosevic y Barrio UOM\n(suposición)\nhacia centro",
-        "name": "P. rg027"
+        "name": "P. rg027",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1044,13 +604,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Mirko Milosevic y El Alambrador\nhacia centro",
-        "name": "P. rg028"
+        "name": "P. rg028",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68436431884767,
-          -53.80879866178536
+          -67.68442869186403,
+          -53.8086212763203
         ]
       }
     },
@@ -1058,13 +621,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Pacheco y Mora\nhacia centro",
-        "name": "P. rg029"
+        "name": "P. rg029",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68866658210756,
-          -53.79768528017116
+          -67.68864512443544,
+          -53.797742311882715
         ]
       }
     },
@@ -1072,13 +638,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Pacheco y José Ingenieros\nhacia centro",
-        "name": "P. rg030"
+        "name": "P. rg030",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68848419189455,
-          -53.79608836075908
+          -67.68846273422243,
+          -53.796113709161176
         ]
       }
     },
@@ -1086,13 +655,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nLínea C\nC: Beauvoir y Ricardo Rojas\nhacia margen sur",
-        "name": "P. rg031"
+        "name": "P. rg031",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.69095182418825,
-          -53.791664829995355
+          -67.69088745117189,
+          -53.791734545416354
         ]
       }
     },
@@ -1102,7 +674,7 @@
         "description": "Línea A\nLínea B\nLínea C\nC: San Martín y Espora\nhacia centro",
         "name": "P. rg033 Garita",
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         }
       },
       "geometry": {
@@ -1125,15 +697,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.70117640495302,
-          -53.78558329810052
+          -67.70041465759279,
+          -53.7852124831182
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "P. rg036",
+        "name": "P. rg036 Garita",
         "_storage_options": {
           "color": "ForestGreen"
         },
@@ -1142,8 +714,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.69816160202028,
-          -53.78300654164175
+          -67.69800066947938,
+          -53.78281636884316
         ]
       }
     },
@@ -1159,8 +731,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.70143389701845,
-          -53.78524417683451
+          -67.70112276077272,
+          -53.78494625495594
         ]
       }
     },
@@ -1169,7 +741,7 @@
       "properties": {
         "name": "P. rg039",
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
         "description": "Línea A\nLínea B\nLínea C\nC: San Martín  y 25 de mayo (BIM5)\nhacia rotonda américas"
       },
@@ -1184,17 +756,17 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "P. rg040",
+        "name": "P. rg040 Garita",
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         },
         "description": "Línea A\nC: San Martín  y Don Bosco"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.70938396453859,
-          -53.7823726289613
+          -67.7095663547516,
+          -53.78247405563372
         ]
       }
     },
@@ -1202,7 +774,10 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg041",
-        "description": "Línea A\nC: Don Bosco y Alberdi"
+        "description": "Línea A\nC: Don Bosco y Alberdi",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1216,13 +791,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Don Bosco y Bilbao",
-        "name": "P. rg042"
+        "name": "P. rg042",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7151668071747,
-          -53.78622667016562
+          -67.71507024765016,
+          -53.786315410365866
         ]
       }
     },
@@ -1230,13 +808,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Bilbao y Finocchio",
-        "name": "P. rg043"
+        "name": "P. rg043",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.71837472915651,
-          -53.78466734745028
+          -67.71843910217287,
+          -53.78463565329824
         ]
       }
     },
@@ -1244,13 +825,16 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg045",
-        "description": "Línea A\nC: Islas Malvinas y Curupaity"
+        "description": "Línea A\nC: Islas Malvinas y Curupaity",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72168993949892,
-          -53.78430603269772
+          -67.72133588790895,
+          -53.78399542630061
         ]
       }
     },
@@ -1258,13 +842,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Islas Malvinas y Punta Popper",
-        "name": "P. rg047"
+        "name": "P. rg047",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.74506807327272,
-          -53.799953815103116
+          -67.74536848068239,
+          -53.79977639221362
         ]
       }
     },
@@ -1272,13 +859,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Punta Popper y Mariano Moreno",
-        "name": "P. rg048"
+        "name": "P. rg048",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.74875879287721,
-          -53.79798944840317
+          -67.74880170822145,
+          -53.79805281650716
         ]
       }
     },
@@ -1294,8 +884,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.75021791458131,
-          -53.79868649228079
+          -67.75017499923707,
+          -53.79871183911256
         ]
       }
     },
@@ -1303,13 +893,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Mariano Moreno y Hermana María Ruiz",
-        "name": "P. rg050"
+        "name": "P. rg050",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.75277137756349,
-          -53.801309808108286
+          -67.75270700454713,
+          -53.801442870479875
         ]
       }
     },
@@ -1317,13 +910,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Mariano Moreno y Santa María Dominga Mazarello",
-        "name": "P. rg051 Garita"
+        "name": "P. rg051",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.75506734848024,
-          -53.802817823594886
+          -67.75448799133302,
+          -53.802615068365924
         ]
       }
     },
@@ -1349,7 +945,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         },
         "name": "P. rg053",
         "description": "Línea A\nC: Cabo Santa Inés y Río Grande"
@@ -1358,7 +954,7 @@
         "type": "Point",
         "coordinates": [
           -67.76154756546022,
-          -53.80167731267863
+          -53.80177235643984
         ]
       }
     },
@@ -1366,13 +962,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Río Grande y Santa María Dominga Mazarello",
-        "name": "P. rg054"
+        "name": "P. rg054",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.75968074798585,
-          -53.80035935031739
+          -67.7595627307892,
+          -53.80041637839236
         ]
       }
     },
@@ -1380,7 +979,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Río Grande y Hermana María Ruiz\n",
-        "name": "P. rg055"
+        "name": "P. rg055",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1394,13 +996,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Río Grande y Laguna de los Flamencos",
-        "name": "P. rg056"
+        "name": "P. rg056",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.75498151779176,
-          -53.797305066778826
+          -67.75500297546388,
+          -53.79727338217386
         ]
       }
     },
@@ -1408,13 +1013,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Río Grande y Punta Páramo",
-        "name": "P. rg057"
+        "name": "P. rg057",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.75388717651369,
-          -53.79658265183674
+          -67.75395154953004,
+          -53.79653195558406
         ]
       }
     },
@@ -1422,13 +1030,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Punta Popper y Vuelta de Obligado\n",
-        "name": "P. rg058"
+        "name": "P. rg058",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7545738220215,
-          -53.79502371403618
+          -67.75489568710329,
+          -53.794985690439105
         ]
       }
     },
@@ -1436,13 +1047,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Punta Popper y Kaiken",
-        "name": "P. rg059"
+        "name": "P. rg059",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.76631116867067,
-          -53.788926823650435
+          -67.76643991470338,
+          -53.78907893980241
         ]
       }
     },
@@ -1450,13 +1064,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Kaiken y Águila Mora",
-        "name": "P. rg060"
+        "name": "P. rg060",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.76766300201417,
-          -53.78926908421673
+          -67.7675771713257,
+          -53.78924373167795
         ]
       }
     },
@@ -1464,27 +1081,33 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Kaiken y Playero Blanco\nhacia Vapor amadeo",
-        "name": "P. rg061"
+        "name": "P. rg061",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.77197599411012,
-          -53.79229860228872
+          -67.7713966369629,
+          -53.791981717339
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea A\nC: Circunvalación y Los Cisnes\n(suposición)",
-        "name": "P. rg062"
+        "description": "Línea A\nC: Circunvalación y Los Cisnes\na Chacra XI",
+        "name": "P. rg062",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.77794122695924,
-          -53.79541662252084
+          -67.77708292007448,
+          -53.795625749729496
         ]
       }
     },
@@ -1492,13 +1115,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Playero Blanco y Halcón Pelegrino",
-        "name": "P. rg063"
+        "name": "P. rg063",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.77124643325807,
-          -53.788204264396
+          -67.77126789093019,
+          -53.788280323850934
         ]
       }
     },
@@ -1506,7 +1132,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea A\nC: Ruta C y Chorlo Ceniciento",
         "name": "P. rg100 Garita"
@@ -1523,7 +1149,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Ruta C y Golondrina Patagónica",
-        "name": "P. rg101"
+        "name": "P. rg101",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1537,7 +1166,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Ruta C y Kaiken",
-        "name": "P. rg102"
+        "name": "P. rg102",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1559,8 +1191,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.75326490402223,
-          -53.7888000597691
+          -67.7536189556122,
+          -53.78865428083204
         ]
       }
     },
@@ -1568,13 +1200,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Los Ñires y Lago Chapelmut",
-        "name": "P. rg104"
+        "name": "P. rg104",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.75146245956422,
-          -53.78971275116522
+          -67.7514410018921,
+          -53.78970007503182
         ]
       }
     },
@@ -1582,13 +1217,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Lago Chapelmut y Las Lengas",
-        "name": "P. rg105"
+        "name": "P. rg105",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7494239807129,
-          -53.78876836873892
+          -67.74938106536867,
+          -53.78872400125643
         ]
       }
     },
@@ -1596,16 +1234,16 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         },
-        "description": "Línea A\nC: Cabot y Pasaje Ciudad Nueva\n(suposición)",
+        "description": "Línea A\nC: Cabot y Pasaje Ciudad Nueva",
         "name": "P. rg106"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.74534165859224,
-          -53.78815989631693
+          -67.74294376373292,
+          -53.78790002519725
         ]
       }
     },
@@ -1615,28 +1253,31 @@
         "_storage_options": {
           "color": "ForestGreen"
         },
-        "description": "Línea A\nC: Cabot y Uspallata\n(suposición)",
-        "name": "P. rg107 Garita"
+        "description": "Línea A\nC: Cabot y Uspallata",
+        "name": "P. rg107"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.74298667907716,
-          -53.78873984679128
+          -67.74230003356935,
+          -53.789421199127666
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea A\nC: Guayaquil y Gregoria Matorras\n(suposición)",
-        "name": "P. rg108"
+        "description": "Línea A\nC: Uspallata y Gregoria Matorras",
+        "name": "P. rg108",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.73783683776857,
-          -53.78878104515386
+          -67.73863077163698,
+          -53.789459227769214
         ]
       }
     },
@@ -1646,14 +1287,14 @@
         "description": "Línea A\nC: Gregoria Matorras y Echelaine",
         "name": "P. rg109",
         "_storage_options": {
-          "color": "Gold"
+          "color": "Green"
         }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.73786365985872,
-          -53.78772255131242
+          -67.7374291419983,
+          -53.78774790477051
         ]
       }
     },
@@ -1661,13 +1302,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Islas Malvinas y Almafuerte",
-        "name": "P. rg110"
+        "name": "P. rg110",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72426486015321,
-          -53.78707603295439
+          -67.72438287734987,
+          -53.787164771358135
         ]
       }
     },
@@ -1675,13 +1319,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Islas Malvinas y Obligado",
-        "name": "P. rg111"
+        "name": "P. rg111",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.71894335746767,
-          -53.78352634289362
+          -67.7189326286316,
+          -53.783500986884384
         ]
       }
     },
@@ -1689,13 +1336,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Obligado y Padre Forgacs",
-        "name": "P. rg112"
+        "name": "P. rg112",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7156710624695,
-          -53.78502232031753
+          -67.71554231643678,
+          -53.78506035294662
         ]
       }
     },
@@ -1703,13 +1353,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: 25 de mayo y Moyano",
-        "name": "P. rg113"
+        "name": "P. rg113",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.71191596984865,
-          -53.78607454367136
+          -67.71146535873415,
+          -53.785776627688975
         ]
       }
     },
@@ -1717,7 +1370,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: 25 de mayo y San Martín",
-        "name": "P. rg114"
+        "name": "P. rg114",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1732,7 +1388,7 @@
       "properties": {
         "name": "P. rg120 Garita",
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea A\nLínea B\nLínea C\nC: San Martín y Luis Py (área de bancos)"
       },
@@ -1748,8 +1404,11 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea A\nLínea C\nC: Beauvoir y Antártida Argentina",
-        "name": "P. rg121"
+        "description": "Línea A\nLínea C\nC: Beauvoir y Antártida Argentina \nhacia Margen sur",
+        "name": "P. rg121",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1763,13 +1422,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nLínea C\nC: Beauvoir y Rivero",
-        "name": "P. rg122"
+        "name": "P. rg122",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68968582153322,
-          -53.79263449772174
+          -67.68962144851686,
+          -53.7926978739169
         ]
       }
     },
@@ -1777,13 +1439,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Pacheco y José Ingenieros\nhacia margen sur",
-        "name": "P. rg123"
+        "name": "P. rg123",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68929958343507,
-          -53.795429296926805
+          -67.6891601085663,
+          -53.79558772667821
         ]
       }
     },
@@ -1791,7 +1456,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Pacheco y Mora\na margen sur",
-        "name": "P. rg124"
+        "name": "P. rg124",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1805,13 +1473,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Mirko Milosevic y El Alambrador\nhacia margen sur",
-        "name": "P. rg125"
+        "name": "P. rg125",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68502950668336,
-          -53.80869096355681
+          -67.68492221832277,
+          -53.80892536522942
         ]
       }
     },
@@ -1819,7 +1490,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Mirko Milosevic y Barrio UOM\n(suposición)\nhacia margen sur",
-        "name": "P. rg126"
+        "name": "P. rg126",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -1833,13 +1507,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Monte Independencia y Mirko Milosevic\nhacia margen sur",
-        "name": "P. rg127"
+        "name": "P. rg127",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68218636512758,
-          -53.81419588917884
+          -67.68146753311159,
+          -53.81448726900672
         ]
       }
     },
@@ -1847,13 +1524,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Monte Independencia y Giachino",
-        "name": "P. rg128"
+        "name": "P. rg128",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67897844314577,
-          -53.81510802797206
+          -67.67904281616212,
+          -53.81512069642663
         ]
       }
     },
@@ -1863,14 +1543,14 @@
         "description": "Línea A\nC: Monte Independencia y Valko/Monte Kentt\nhacia margen sur",
         "name": "P. rg129",
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67496585845949,
-          -53.815703441197876
+          -67.67552375793458,
+          -53.815931469554855
         ]
       }
     },
@@ -1878,13 +1558,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Valko y Albelos\nhacia margen sur",
-        "name": "P. rg130"
+        "name": "P. rg130",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67410755157472,
-          -53.813904507325226
+          -67.67417192459108,
+          -53.81393617936397
         ]
       }
     },
@@ -1894,14 +1577,14 @@
         "description": "Línea A\nC: Valko y Falconier\nhacia margen sur",
         "name": "P. rg131",
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67444014549257,
-          -53.81340408593675
+          -67.67451524734498,
+          -53.81343575835364
         ]
       }
     },
@@ -1911,14 +1594,14 @@
         "description": "Línea A\nC: Valko y Ardiles\nhacia margen sur",
         "name": "P. rg132",
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67484784126283,
-          -53.812833978340166
+          -67.67489075660707,
+          -53.81284664748211
         ]
       }
     },
@@ -1926,13 +1609,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Gran Malvina y Rafaela Ishton\nhacia margen sur",
-        "name": "P. rg133"
+        "name": "P. rg133",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67254114151002,
-          -53.81167473564625
+          -67.67263770103456,
+          -53.81168107039291
         ]
       }
     },
@@ -1940,27 +1626,33 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Los Sauces y Rafaela Ishton\nhacia margen sur",
-        "name": "P. rg134"
+        "name": "P. rg134",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67142534255983,
-          -53.80982494867039
+          -67.67140388488771,
+          -53.80988829888933
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea A\nC: Los Sauces y Sourka\n(suposición)",
-        "name": "P. rg135"
+        "description": "Línea A\nC: Los Sauces y Sourka",
+        "name": "P. rg135",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66861975193025,
-          -53.81032541279063
+          -67.66614675521852,
+          -53.810863880171155
         ]
       }
     },
@@ -1968,27 +1660,33 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Karukinka y Los Sauces\nhacia margen sur",
-        "name": "P. rg136"
+        "name": "P. rg136",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.6650094985962,
-          -53.81104125614665
+          -67.66443014144899,
+          -53.81091455909789
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea A\nC: San Jorge y Tercero B\nhacia margen sur\n(suposición)",
-        "name": "P. rg137"
+        "description": "Línea A\nC: San Jorge y Tercero B / Pasaje A y Karukinka\nhacia margen sur",
+        "name": "P. rg137",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66247212886812,
-          -53.80751260015792
+          -67.66287446022035,
+          -53.80820315046855
         ]
       }
     },
@@ -1996,13 +1694,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Karukinka y Nuestra Señora Itatí\nhacia margen sur",
-        "name": "P. rg139"
+        "name": "P. rg139",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66211271286012,
-          -53.806917070571956
+          -67.66190886497499,
+          -53.80664464464342
         ]
       }
     },
@@ -2010,13 +1711,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Tolhuin y Karukinka\nhacia margen sur",
-        "name": "P. rg140"
+        "name": "P. rg140",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66149044036867,
-          -53.80596990768692
+          -67.66143679618837,
+          -53.80599841791891
         ]
       }
     },
@@ -2024,7 +1728,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Tolhuin y Kau\nhacia margen sur",
-        "name": "P. rg141"
+        "name": "P. rg141",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2038,13 +1745,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Mevi y Tolhuin\nhacia margen sur",
-        "name": "P. rg142"
+        "name": "P. rg142",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.65475809574129,
-          -53.80797824771735
+          -67.65432357788087,
+          -53.807854709073005
         ]
       }
     },
@@ -2052,13 +1762,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nC: Mevi y Yaghan\nhacia margen sur",
-        "name": "P. rg143"
+        "name": "P. rg143",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.65264451503755,
-          -53.80516527758981
+          -67.65228509902956,
+          -53.80527615273312
         ]
       }
     },
@@ -2066,13 +1779,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea A\nLínea C\nC: Yaghan y Yourka\nhacia margen sur",
-        "name": "P. rg144"
+        "name": "P. rg144",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.6621448993683,
-          -53.803432419392344
+          -67.66137242317201,
+          -53.80321699508671
         ]
       }
     },
@@ -2080,13 +1796,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Yourka y Hoiken",
-        "name": "P. rg200"
+        "name": "P. rg200",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.6625418663025,
-          -53.80463624072587
+          -67.66267061233522,
+          -53.804275097955
         ]
       }
     },
@@ -2094,7 +1813,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea C\nC: Hoiken y Kekombosh",
         "name": "P. rg201 Garita"
@@ -2111,7 +1830,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea C\nC: Hoiken y Koyuska",
         "name": "P. rg202"
@@ -2128,13 +1847,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Koyuska y Oroski",
-        "name": "P. rg204"
+        "name": "P. rg204",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.6572096347809,
-          -53.80303324995138
+          -67.65722036361696,
+          -53.80313462667735
         ]
       }
     },
@@ -2150,8 +1872,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.65745639801027,
-          -53.801721666460665
+          -67.65730619430543,
+          -53.80175334770483
         ]
       }
     },
@@ -2167,7 +1889,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.65943050384523,
+          -67.6595163345337,
           -53.801373171195046
         ]
       }
@@ -2176,7 +1898,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Puyen/Yahalve y Keninek",
-        "name": "P. rg207"
+        "name": "P. rg207",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2190,7 +1915,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea C\nC: Puyen/Yahalve y Uani",
         "name": "P. rg208 Garita"
@@ -2198,8 +1923,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66350746154787,
-          -53.800682508383446
+          -67.6635503768921,
+          -53.80066349915439
         ]
       }
     },
@@ -2207,13 +1932,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Uani y Yaghan",
-        "name": "P. rg209"
+        "name": "P. rg209",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66492366790773,
-          -53.802475673577284
+          -67.66496658325197,
+          -53.80248834584996
         ]
       }
     },
@@ -2221,13 +1949,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Uani y Hoiken",
-        "name": "P. rg210"
+        "name": "P. rg210",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66558885574342,
-          -53.803704866193826
+          -67.66554594039918,
+          -53.803641506630534
         ]
       }
     },
@@ -2235,7 +1966,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Uani y Tolhuin",
-        "name": "P. rg211"
+        "name": "P. rg211",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2249,7 +1983,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "Navy"
+          "color": "Green"
         },
         "description": "Línea C\nC: Tolhuin y Wonska\nhacia centro",
         "name": "P. rg212"
@@ -2266,13 +2000,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Rafaela Ishton y Minkyol",
-        "name": "P. rg213"
+        "name": "P. rg213",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67088890075685,
-          -53.80513676679127
+          -67.67097473144533,
+          -53.80518745264193
         ]
       }
     },
@@ -2280,7 +2017,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: El Alambrador y Portolan\nhacia centro",
-        "name": "P. rg215"
+        "name": "P. rg215",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2293,28 +2033,34 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea C\nC: El Alambrador y La Farmacia\nhacia centro\n(suposición)",
-        "name": "P. rg216"
+        "description": "Línea C\nc: El Alambrador y La Farmacia/Submarino Santa Fe\nhacia centro",
+        "name": "P. rg216",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68043756484987,
-          -53.80616314332402
+          -67.67985820770265,
+          -53.80588437687468
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea C\nC: El Alambrador y Mirko Milosevic\nhacia centro\n(suposición)",
-        "name": "P. rg217"
+        "description": "Línea C\nC: El Alambrador y Mirko Milosevic\nhacia centro",
+        "name": "P. rg217",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68461108207704,
-          -53.80803843307886
+          -67.68440723419191,
+          -53.80800042128165
         ]
       }
     },
@@ -2322,13 +2068,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Tomás y Enrique Arteche",
-        "name": "P. rg218"
+        "name": "P. rg218",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68807649612428,
-          -53.799231445788024
+          -67.68831253051759,
+          -53.79897797992137
         ]
       }
     },
@@ -2336,7 +2085,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
         "description": "Línea C\nC: Enrique Arteche y Mora",
         "name": "P. rg219 Garita"
@@ -2344,8 +2093,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.6862955093384,
-          -53.79796410113476
+          -67.68620967864992,
+          -53.79790073289672
         ]
       }
     },
@@ -2353,13 +2102,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Enrique Arteche y O'Higgins",
-        "name": "P. rg220"
+        "name": "P. rg220",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68468618392946,
-          -53.796538292619
+          -67.68476128578187,
+          -53.7968868280659
         ]
       }
     },
@@ -2367,13 +2119,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: O'Higgins y Estrecho San Carlos",
-        "name": "P. rg221"
+        "name": "P. rg221",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68772244453432,
-          -53.79499836497529
+          -67.68767952919008,
+          -53.79506173759879
         ]
       }
     },
@@ -2381,13 +2136,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: O'Higgins y Pacheco",
-        "name": "P. rg222"
+        "name": "P. rg222",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.6886022090912,
-          -53.794554753929695
+          -67.68855929374696,
+          -53.79459911524539
         ]
       }
     },
@@ -2395,13 +2153,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Beauvoir y Ricardo Rojas\nhacia centro",
-        "name": "P. rg223"
+        "name": "P. rg223",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.69083380699159,
-          -53.791443007430416
+          -67.69081234931947,
+          -53.791481034239155
         ]
       }
     },
@@ -2410,7 +2171,7 @@
       "properties": {
         "name": "P. rg231 Garita",
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea B\nLínea C\nC:  San Martín  (entre Pasaje Fournier y Don Bosco; BIM5; Jardín 1 - Calesita Encantada)\nhacia rotonda américas"
       },
@@ -2427,15 +2188,15 @@
       "properties": {
         "name": "P. rg232 Garita",
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea C\nLínea B\nC: San Martín y Brown (BIM5)\nhacia rotonda américas"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.71128296852113,
-          -53.78091459345246
+          -67.7112400531769,
+          -53.78088923586498
         ]
       }
     },
@@ -2444,15 +2205,15 @@
       "properties": {
         "name": "P. rg233",
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea C\nC: Anadón y Eva Perón"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72103011608125,
-          -53.76654706560836
+          -67.7209496498108,
+          -53.76657243186167
         ]
       }
     },
@@ -2460,7 +2221,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
         "name": "P. rg234",
         "description": "Línea C\nC: Viedma y Buenos Aires"
@@ -2478,9 +2239,9 @@
       "properties": {
         "name": "P. rg235",
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
-        "description": "Línea C\nC: VIedma y Santa Cruz"
+        "description": "Línea C\nC: VIedma y Santa Cruz (frente Nuevo Centro)"
       },
       "geometry": {
         "type": "Point",
@@ -2495,9 +2256,9 @@
       "properties": {
         "name": "P. rg236",
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
-        "description": "Línea C\nC: Viedma y Lima"
+        "description": "Línea C\nC: Viedma y Lima (Plaza Animales)"
       },
       "geometry": {
         "type": "Point",
@@ -2512,15 +2273,15 @@
       "properties": {
         "name": "P. rg237",
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
-        "description": "Línea C\nC: Viedma y Venezuela"
+        "description": "Línea C\nC: Viedma y Venezuela (frente Las Vegas)"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7167171239853,
-          -53.769537007154035
+          -67.71661520004274,
+          -53.769464084283904
         ]
       }
     },
@@ -2529,15 +2290,15 @@
       "properties": {
         "name": "P. rg239",
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
         "description": "Línea C\nC: Luro Cambaceres y Cabo de Hornos (IPV)"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.71913647651674,
-          -53.76967017032914
+          -67.71927595138551,
+          -53.76957822437242
         ]
       }
     },
@@ -2546,7 +2307,7 @@
       "properties": {
         "name": "P. rg240 Garita",
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
         "description": "Línea C\nC: Anadón y Arturo Illia"
       },
@@ -2563,15 +2324,15 @@
       "properties": {
         "name": "P. rg242",
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
-        "description": "Línea B\nLínea C\nC: Provincias Unidas y Prefectura Naval"
+        "description": "Línea B\nLínea C\nLínea D\nC: Provincias Unidas y Prefectura Naval"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7236318588257,
-          -53.76503774595131
+          -67.72366404533388,
+          -53.76501237877078
         ]
       }
     },
@@ -2580,15 +2341,15 @@
       "properties": {
         "name": "P. rg243",
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
         "description": "Línea B\nLínea C\nC: Provincias Unidas y Patagonia"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72801458835603,
-          -53.76455576690064
+          -67.72796630859376,
+          -53.764517715687326
         ]
       }
     },
@@ -2596,13 +2357,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Gabriela Mistral y Victoria Ocampo",
-        "name": "P. rg244"
+        "name": "P. rg244",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7302247285843,
-          -53.76389937863789
+          -67.73004770278932,
+          -53.763921575510054
         ]
       }
     },
@@ -2618,8 +2382,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72776246070863,
-          -53.76218384202043
+          -67.72773027420045,
+          -53.762259948642544
         ]
       }
     },
@@ -2627,13 +2391,50 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Victoria Ocampo y Rosa Masobrio",
-        "name": "P. rg246"
+        "name": "P. rg246",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72614240646364,
-          -53.761245182339536
+          -67.72637844085695,
+          -53.761308605951896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg247 Garita",
+        "description": "Línea C\nC: Santa Rosa y Prefectura Naval",
+        "_storage_options": {
+          "color": "ForestGreen"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.72281646728517,
+          -53.762095050786954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg248 Garita",
+        "description": "Línea C\nC: Santa Rosa y Anadón",
+        "_storage_options": {
+          "color": "Green"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.72027373313905,
+          -53.763204927711236
         ]
       }
     },
@@ -2641,13 +2442,67 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Santa Rosa y Lapataia",
-        "name": "P. rg249"
+        "name": "P. rg249",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           -67.71588563919069,
-          -53.76539922660856
+          -53.765468985675405
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg250",
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea C\nC: Lapataia y Eva Perón"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.7162289619446,
+          -53.76671194598104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg251",
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea C\nC: Ushuaia y Pellegrini (Venezuela)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.716121673584,
+          -53.76861436498179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg252 Garita",
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea C\nC: Ushuaia y Lima (frente esc. Y plaza Animales)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71356821060182,
+          -53.769933324885415
         ]
       }
     },
@@ -2655,16 +2510,51 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
-        "description": "Línea C\nC: Ushuaia y Córdoba",
+        "description": "Línea C\nC: Ushuaia y Córdoba (frente Estudio Gallardo & Asociados)",
         "name": "P. rg253"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7109879255295,
-          -53.77117298259392
+          -67.71110057830812,
+          -53.77120151648356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg254",
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea C\nC: Ushuaia y Santa Cruz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.709706,
+          -53.77178200000001,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg255",
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea C\nC: Entre Ríos y Ushuaia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.70843982696535,
+          -53.77250771377677
         ]
       }
     },
@@ -2672,16 +2562,16 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "DarkGreen"
+          "color": "Green"
         },
-        "name": "P. rg256",
+        "name": "P. rg256 Garita",
         "description": "Línea C\nC: Entre Ríos y Resistencia"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.71023690700532,
-          -53.77387727505394
+          -67.71039247512819,
+          -53.77391531778488
         ]
       }
     },
@@ -2689,9 +2579,43 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
-        "description": "Línea B\nLínea C\nC: San Martín y Pasaje Remolcador Fournier",
+        "name": "P. rg257 Garita",
+        "description": "Línea C\nC: Posadas y Buenos Aires"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71058559417726,
+          -53.77562086479691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg258",
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea B\nLínea C\nC: San Martín y Finocchio (Hipertehuelche)\nTenes \"asientos\" para esperar ;)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71217346191408,
+          -53.78078146594726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea B\nLínea C\nC: San Martín y Pasaje Remolcador Fournier\nhacia Intevu",
         "name": "P. rg259"
       },
       "geometry": {
@@ -2714,8 +2638,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.70738840103151,
-          -53.78324742594933
+          -67.70793020725252,
+          -53.782962168065836
         ]
       }
     },
@@ -2723,7 +2647,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: O'Higgins e Isla Trinidad\nhacia margen sur",
-        "name": "P. rg270"
+        "name": "P. rg270",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2737,7 +2664,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: O'Higgins y Carlos Herrera",
-        "name": "P. rg271"
+        "name": "P. rg271",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2750,27 +2680,50 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea C\nC: Mora y Pacheco\nhacia margen sur",
-        "name": "P. rg273"
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea C\nC: Carlos Herrera y Scalabrini Ortiz/Juan Carlos Mora",
+        "name": "P. rg272"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68859684467317,
-          -53.797549037435196
+          -67.68715381622316,
+          -53.797419131158456
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea C\nC: El Alambrador y Mirko Milosevic\nhacia margen sur\n(suposición)",
-        "name": "P. rg274"
+        "description": "Línea C\nC: Mora y Pacheco\nhacia margen sur",
+        "name": "P. rg273",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.68404245376588,
+          -67.68900990486146,
+          -53.797501510795264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "Línea C\nC: El Alambrador y Mirko Milosevic\nhacia margen sur",
+        "name": "P. rg274",
+        "_storage_options": {
+          "color": "Green"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.68408536911012,
           -53.808165138820684
         ]
       }
@@ -2778,14 +2731,17 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea C\nC: El Alambrador y La Farmacia\nhacia margen sur\n(suposición)",
-        "name": "P. rg275"
+        "description": "Línea C\nc: El Alambrador y La Farmacia/Submarino Santa Fe\nhacia margen sur",
+        "name": "P. rg275",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67994403839113,
-          -53.80625184135101
+          -67.67945051193239,
+          -53.80601108912689
         ]
       }
     },
@@ -2793,13 +2749,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: El Alambrador y Portolan\na margen sur",
-        "name": "P. rg276"
+        "name": "P. rg276",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67372131347658,
-          -53.80623917021579
+          -67.67485857009889,
+          -53.80615047216199
         ]
       }
     },
@@ -2807,13 +2766,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: El Alambrador y Rafaela Ishton",
-        "name": "P. rg277"
+        "name": "P. rg277",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.67073869705202,
-          -53.805732321666504
+          -67.67140388488771,
+          -53.80625184135101
         ]
       }
     },
@@ -2821,55 +2783,67 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Tolhuin y Wonska\nhacia margen sur",
-        "name": "P. rg278"
+        "name": "P. rg278",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           -67.6676917076111,
-          -53.804655248153956
+          -53.80469326298429
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea C\nC: Tolhuin y Kekauh\n",
-        "name": "P. rg279"
+        "description": "Línea C\nC: Tolhuin y Kekauh\n(línea no pasa por aca?)",
+        "name": "P. rg279",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66561031341554,
-          -53.80509875236308
+          -67.66573905944826,
+          -53.80504806640519
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea C\nC: Kekauh y Yaghan",
-        "name": "P. rg280"
+        "description": "Línea C\nC: Kekauh y Yaghan\n(línea no pasa por aca?)",
+        "name": "P. rg280",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66417264938356,
-          -53.803007905731604
+          -67.66412973403932,
+          -53.80298889755671
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea C\nC: Kekauh y Puyen",
-        "name": "P. rg281"
+        "description": "Línea C\nC: Kekauh y Puyen/Yahalave",
+        "name": "P. rg281",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.66314268112184,
-          -53.80106902750544
+          -67.66289591789247,
+          -53.80078389079292
         ]
       }
     },
@@ -2877,7 +2851,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Chawr y Shelk'nam",
-        "name": "P. rg282"
+        "name": "P. rg282",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2891,7 +2868,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Chawr y Howiken",
-        "name": "P. rg283"
+        "name": "P. rg283",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2905,7 +2885,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Chawr y Yewarsi",
-        "name": "P. rg284"
+        "name": "P. rg284",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2919,13 +2902,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Yewarsi y Yaghan",
-        "name": "P. rg285"
+        "name": "P. rg285",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.65880823135377,
-          -53.8036034908466
+          -67.65870094299318,
+          -53.80354013113011
         ]
       }
     },
@@ -2933,7 +2919,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea C\nC: Yaghan y Karukinka",
-        "name": "P. rg286"
+        "name": "P. rg286",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -2949,14 +2938,14 @@
         "_storage_options": {
           "color": "ForestGreen"
         },
-        "description": "Línea B\nC: Juan Visic y Ramón Díaz Chara",
-        "name": "P. rg386 Garita"
+        "name": "P. rg300",
+        "description": "Línea B\nC: Raúl Chifflet y José Romero\nhacia centro"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.73491859436037,
-          -53.77292619557466
+          -67.7306914329529,
+          -53.774080169220525
         ]
       }
     },
@@ -2964,16 +2953,16 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea B\nC: Vukasovic y Ramón Díaz Chara",
-        "name": "P. rg301 Garita"
+        "name": "P. rg301"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7335023880005,
-          -53.77193705005607
+          -67.73281574249269,
+          -53.772228723593706
         ]
       }
     },
@@ -2981,13 +2970,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Vukasovic y Ramón Cortez\nhacia chacra 2",
-        "name": "P. rg302"
+        "name": "P. rg302",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.73699998855592,
-          -53.7700094174617
+          -67.73691415786745,
+          -53.770186966269996
         ]
       }
     },
@@ -2995,13 +2987,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Ramón Cortez y San Martín\nhacia chacra 2",
-        "name": "P. rg304"
+        "name": "P. rg304",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.73500442504884,
-          -53.769273850113436
+          -67.7357339859009,
+          -53.769083615080945
         ]
       }
     },
@@ -3009,7 +3004,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea B\nC: Teniente Bernhardt y Luro Cambaceres\nhacia chacra 2",
         "name": "P. rg305 Garita"
@@ -3018,7 +3013,7 @@
         "type": "Point",
         "coordinates": [
           -67.73189306259157,
-          -53.76843680952244
+          -53.76844949208015
         ]
       }
     },
@@ -3026,13 +3021,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Teniente Bernhardt y Aeroposta Argentina",
-        "name": "P. rg306"
+        "name": "P. rg306",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.73133516311647,
-          -53.76650901619962
+          -67.73131370544435,
+          -53.76649633305571
         ]
       }
     },
@@ -3040,13 +3038,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Aeroposta Argentina y Pioneros Fueguinos\n",
-        "name": "P. rg307"
+        "name": "P. rg307",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72693634033205,
-          -53.76690219176033
+          -67.72687196731569,
+          -53.76691487478163
         ]
       }
     },
@@ -3055,6 +3056,23 @@
       "properties": {
         "_storage_options": {
           "color": "ForestGreen"
+        },
+        "name": "P. rg308 Garita",
+        "description": "Línea B\nC: Aeroposta Argentina y Prefectura Naval\n"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.72438287734987,
+          -53.767193900280944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
         },
         "description": "Línea B\nC: Prefectura Naval y Cambaceres (Polivalente)\nhacia centro",
         "name": "P. rg309 Garita"
@@ -3070,17 +3088,34 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "P. rg310 Garita",
         "_storage_options": {
           "color": "ForestGreen"
         },
-        "name": "P. Garita",
-        "description": "Línea B\nC: Prefectura Naval e Islas de los Estados (gimnasio escuela 21)"
+        "description": "Línea B\nC: Prefectura Naval Argentina y San Martín\nhacia centro"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72552013397218,
-          -53.77149319513194
+          -67.72606730461122,
+          -53.773014963904515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg311",
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea B\nC: San Martín y Fray Justo María de Oro (La Anónima)\nhacia centro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71652936935426,
+          -53.778568951764974
         ]
       }
     },
@@ -3088,13 +3123,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Libertad y Alberdi",
-        "name": "P. rg320"
+        "name": "P. rg320",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.69758224487306,
-          -53.79132892679739
+          -67.69726037979127,
+          -53.79103104812626
         ]
       }
     },
@@ -3102,7 +3140,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea B\nC: Libertad y Obligado",
         "name": "P. rg321"
@@ -3110,8 +3148,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.6999855041504,
-          -53.79296405289092
+          -67.69970655441286,
+          -53.79269153630169
         ]
       }
     },
@@ -3119,7 +3157,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea B\nC: Libertad y Yrigoyen",
         "name": "P. rg322"
@@ -3127,8 +3165,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.70214200019838,
-          -53.79449771788343
+          -67.70193815231325,
+          -53.794212536488665
         ]
       }
     },
@@ -3153,7 +3191,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea B\nC: Perón (norte) y Almafuerte",
         "name": "P. rg324"
@@ -3195,8 +3233,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.71167993545534,
-          -53.79308446663378
+          -67.71155118942262,
+          -53.79316051724064
         ]
       }
     },
@@ -3204,16 +3242,16 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
-        "description": "Línea B\nC: Almafuerte y Estrada",
+        "description": "Línea B\nC: Almafuerte y Estrada\nFrente Plaza Ona y escuela?",
         "name": "P. rg327"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.71483421325685,
-          -53.791436669625604
+          -67.71474838256837,
+          -53.79154441217709
         ]
       }
     },
@@ -3221,13 +3259,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Thorne y Gobernador Paz",
-        "name": "P. rg328"
+        "name": "P. rg328",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.71736621856691,
-          -53.79110710245616
+          -67.71755933761598,
+          -53.79120850801484
         ]
       }
     },
@@ -3235,7 +3276,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Thorne y Roldán",
-        "name": "P. rg329"
+        "name": "P. rg329",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3249,7 +3293,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Schweitzer y 25 de mayo",
-        "name": "P. rg330"
+        "name": "P. rg330",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3263,7 +3310,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Schweitzer y Padre Forgacs",
-        "name": "P. rg331"
+        "name": "P. rg331",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3276,8 +3326,28 @@
     {
       "type": "Feature",
       "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "P. rg332",
+        "description": "Línea B\nC: D'Agostini y Brown"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.72863149642946,
+          -53.792805613228914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "Línea B\nC: D Agostini y Don Bosco",
-        "name": "P. rg334"
+        "name": "P. rg334",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3291,7 +3361,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea B\nC: 25 de mayo y Presidente Ortiz",
         "name": "P. rg336"
@@ -3325,7 +3395,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea B\nC: Estrada y D Agostini",
         "name": "P. rg338 Garita"
@@ -3342,7 +3412,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Estrada y Schweitzer",
-        "name": "P. rg340"
+        "name": "P. rg340",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3356,13 +3429,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Estrada y Roldán",
-        "name": "P. rg341"
+        "name": "P. rg341",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.71820306777956,
-          -53.793718217477725
+          -67.71833181381227,
+          -53.79379426693552
         ]
       }
     },
@@ -3387,13 +3463,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Belgrano y Perón (norte)",
-        "name": "P. rg351"
+        "name": "P. rg351",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           -67.71472692489625,
-          -53.795087086621386
+          -53.795036388560874
         ]
       }
     },
@@ -3401,7 +3480,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Belgrano y Gobernador Paz",
-        "name": "P. rg353"
+        "name": "P. rg353",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3415,13 +3497,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Belgrano y Mosconi",
-        "name": "P. rg355"
+        "name": "P. rg355",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.71105766296388,
-          -53.792539433249445
+          -67.7109718322754,
+          -53.792552108524866
         ]
       }
     },
@@ -3429,7 +3514,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Colón y Rivadavia",
-        "name": "P. rg356"
+        "name": "P. rg356",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3443,7 +3531,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Colón y Espora",
-        "name": "P. rg357"
+        "name": "P. rg357",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3457,7 +3548,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Colón y Libertad\nhacia centro",
-        "name": "P. rg358"
+        "name": "P. rg358",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3471,7 +3565,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea B\nC: Perón (sur) y Pasaje Hugo del Carril",
         "name": "P. rg359 Garita"
@@ -3488,7 +3582,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Perón (sur) y Pasaje 8 de octubre",
-        "name": "P. rg360"
+        "name": "P. rg360",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3502,13 +3599,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Ricardo Rojas y Lola Kieps",
-        "name": "P. rg361"
+        "name": "P. rg361",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.69469618797304,
-          -53.79543563412835
+          -67.6947605609894,
+          -53.7955560407758
         ]
       }
     },
@@ -3516,13 +3616,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Ricardo Rojas y José Ingenieros",
-        "name": "P. rg363"
+        "name": "P. rg363",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.69276499748231,
-          -53.79378159203546
+          -67.6925826072693,
+          -53.79373089239693
         ]
       }
     },
@@ -3530,13 +3633,33 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Ricardo Rojas y Beauvoir",
-        "name": "P. rg364"
+        "name": "P. rg364",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.69122004508974,
-          -53.79165215445182
+          -67.69116640090944,
+          -53.79162046557621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg370 Garita",
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea B\nC: Avenida San Martín y Fray Justo María de Oro (La Anónima, Cono de Sombras)\nhacia chacra 2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.71674394607545,
+          -53.77804908910225
         ]
       }
     },
@@ -3544,7 +3667,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea B\nC: San Martín y Pellegrini\nhacia chacra 2 (frente Axion)",
         "name": "P. rg371"
@@ -3552,8 +3675,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7249836921692,
-          -53.77376314665427
+          -67.72524118423463,
+          -53.773598293973535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg372",
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea B\nC: Prefectura Naval y Federico Ibarra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.72500514984132,
+          -53.771302970156356
         ]
       }
     },
@@ -3561,7 +3701,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea B\nC: Prefectura Naval y Luro Cambaceres (frente Polivalente)\nhacia chacra 4",
         "name": "P. rg373"
@@ -3577,14 +3717,34 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea B\nC: Patagonia y Aeroposta Argentina",
-        "name": "P. rg375"
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "P. rg374",
+        "description": "Línea B\nC: Prefectura Naval y Aeroposta Argentina (Margalot)"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72903919219972,
-          -53.76638218458817
+          -67.72369623184206,
+          -53.76734609522625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "Línea B\nC: Patagonia y Aeroposta Argentina",
+        "name": "P. rg375",
+        "_storage_options": {
+          "color": "Green"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.72871732711793,
+          -53.76638852617783
         ]
       }
     },
@@ -3592,13 +3752,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Patagonia y Luro Cambaceres",
-        "name": "P. rg376"
+        "name": "P. rg376",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72966146469118,
-          -53.76832266633062
+          -67.72937178611757,
+          -53.76837339667641
         ]
       }
     },
@@ -3606,13 +3769,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Luro Cambaceres y Teniente Bernhardt\nhacia chacra 4\nHay garita al frente",
-        "name": "P. rg377"
+        "name": "P. rg377",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.73225784301759,
-          -53.768246570696995
+          -67.73221492767335,
+          -53.768278277227765
         ]
       }
     },
@@ -3620,7 +3786,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Teniente Bernhardt y San Martín\nhacia chacra 4",
-        "name": "P. rg379"
+        "name": "P. rg379",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3634,13 +3803,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Ramón Cortez y Vicente Stanic\nhacia chacra 4",
-        "name": "P. rg380"
+        "name": "P. rg380",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.73624897003175,
-          -53.769083615080945
+          -67.73622751235963,
+          -53.76896947364767
         ]
       }
     },
@@ -3648,13 +3820,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Ramón Cortez y Vukasovic\nhacia chacra 4",
-        "name": "P. rg381"
+        "name": "P. rg381",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.73740768432619,
-          -53.76984455003877
+          -67.73745059967042,
+          -53.76986991429981
         ]
       }
     },
@@ -3662,13 +3837,50 @@
       "type": "Feature",
       "properties": {
         "description": "Línea B\nC: Juan Visic y Luis Garibaldi Honte",
-        "name": "P. rg383"
+        "name": "P. rg383",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           -67.73837327957155,
           -53.77116347129306
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "P. rg385",
+        "description": "Línea B\nC: Juan Visic y Juan Ibarra"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.73627042770387,
+          -53.772241405005886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "ForestGreen"
+        },
+        "description": "Línea B\nC: Juan Visic y Ramón Díaz Chara",
+        "name": "P. rg386 Garita"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.73476839065553,
+          -53.77304032625
         ]
       }
     },
@@ -3684,8 +3896,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.73090600967409,
-          -53.77423233920183
+          -67.73101329803468,
+          -53.774245020008706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "P. rg400",
+        "description": "Línea D\nC: Prefectura Naval y Provincias Unidas",
+        "_storage_options": {
+          "color": "Green"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.72300958633424,
+          -53.76530410042153
         ]
       }
     },
@@ -3693,7 +3922,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea D\nC: Prefectura Naval y Santa Rosa\nhacia mision",
-        "name": "P. rg401"
+        "name": "P. rg401",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3707,7 +3939,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea D\nC: Prefectura Naval y Berta Weber\nhacia mision",
-        "name": "P. rg403"
+        "name": "P. rg403",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3721,13 +3956,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea D\nC: Ruta 3 y San Ramón Nonato\nhacia mision",
-        "name": "P. rg404"
+        "name": "P. rg404",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.73481130599977,
-          -53.75026511159107
+          -67.73421049118043,
+          -53.75037295986478
         ]
       }
     },
@@ -3735,7 +3973,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea D\nC: Ruta 3 y Total\nhacia mision",
-        "name": "P. rg405"
+        "name": "P. rg405",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3748,14 +3989,34 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea D\nC: Ruta 3 y Misión Salesiana",
-        "name": "P. rg408"
+        "_storage_options": {
+          "color": "Green"
+        },
+        "description": "Línea D\nC: Ruta 3 y Juzgado\nhacia mision",
+        "name": "P. rg406"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.79592275619508,
-          -53.7238974204918
+          -67.7608609199524,
+          -53.74209955895576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "Línea D\nC: Ruta 3 y Misión Salesiana",
+        "name": "P. rg408",
+        "_storage_options": {
+          "color": "Green"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.79766082763673,
+          -53.724443345408936
         ]
       }
     },
@@ -3763,7 +4024,7 @@
       "type": "Feature",
       "properties": {
         "_storage_options": {
-          "color": "ForestGreen"
+          "color": "Green"
         },
         "description": "Línea D\nC: Ruta 3 y Juzgado\nhacia chacra 2",
         "name": "P. rg409 Garita"
@@ -3771,8 +4032,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.76032447814943,
-          -53.74261986682994
+          -67.76103258132936,
+          -53.742416820621116
         ]
       }
     },
@@ -3780,7 +4041,10 @@
       "type": "Feature",
       "properties": {
         "description": "Línea D\nC: Ruta 3 y Total\nhacia chacra 2",
-        "name": "P. rg410"
+        "name": "P. rg410",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
@@ -3793,14 +4057,34 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea D\nC: Prefectura Naval y Esteban Martinez Martos",
-        "name": "P. rg412"
+        "_storage_options": {
+          "color": "ForestGreen"
+        },
+        "name": "P. rg411",
+        "description": "Línea D\nC: Ruta 3 y Barrio Policial\nhacia chacra 2"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.72204399108888,
-          -53.76049677647967
+          -67.73448944091798,
+          -53.750614031475465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "Línea D\nC: Prefectura Naval y Esteban Martinez Martos",
+        "name": "P. rg412",
+        "_storage_options": {
+          "color": "Green"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.7221727371216,
+          -53.760509461435866
         ]
       }
     },
@@ -3808,13 +4092,16 @@
       "type": "Feature",
       "properties": {
         "description": "Línea D\nC: Prefectura Naval y Santa Rosa\nhacia chacra 2",
-        "name": "P. rg413"
+        "name": "P. rg413",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7225697040558,
-          -53.76218384202043
+          -67.72270917892457,
+          -53.762310686314
         ]
       }
     },
@@ -3822,13 +4109,118 @@
       "type": "Feature",
       "properties": {
         "description": "Línea D\nC: Pioneros Fueguinos y Aeroposta Argentina",
-        "name": "P. rg415"
+        "name": "P. rg415",
+        "_storage_options": {
+          "color": "Green"
+        }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -67.7265501022339,
-          -53.76663584742795
+          -67.72659301757814,
+          -53.76662316432236
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "P. rg500",
+        "description": "Línea A\nc: María Auxiliadora y Capitán Murua\nhacia centro"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.77956128120424,
+          -53.79686781711621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "P. rg501",
+        "description": "Línea A\nc: Capitán Banini y Juan Speroni"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.78195381164552,
+          -53.798490053815016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "P. rg502",
+        "description": "Línea A\nc: Capitán Banini y Vapor Asturiano"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.78412103652956,
+          -53.79751418457118
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "P. rg503",
+        "description": "Línea A\nc: Vapor Asturiano y Capitán H. Barrientos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.78330564498903,
+          -53.79596161851874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "P. rg504",
+        "description": "Línea A\nc: Vapor Asturiano y Los Flamencos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.78182506561281,
+          -53.794149162582066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "_storage_options": {
+          "color": "Green"
+        },
+        "name": "P. rg505",
+        "description": "Línea A\nc: Los Flamencos y Speroni"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.77933597564699,
+          -53.79451672990746
         ]
       }
     }

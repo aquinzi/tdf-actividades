@@ -7,10 +7,13 @@ layout: default
 	{% assign color_html = "" %}
 	{% case page.color %}
 		{% when 'celeste' %}{% assign color_html = "lightblue" %}
-		{% when 'verde' %}  {% assign color_html = "green" %}
+		{% when 'verde' %}  {% assign color_html = "green" %}{% assign color_font = "white" %}
 		{% when 'naranja' %}{% assign color_html = "orange" %}
-		{% when 'marrón' %} {% assign color_html = "brown" %}
+		{% when 'marrón' %} {% assign color_html = "brown" %}{% assign color_font = "white" %}
+		{% when 'rojo' %} {% assign color_html = "red" %}{% assign color_font = "white" %}
+		{% when 'azul' %} {% assign color_html = "blue" %}{% assign color_font = "white" %}
 	{% endcase %}	
+	
 	<h2 class="p-name" itemprop="name" style="border-left: 6px solid {{ color_html }}; padding-left: 0.2em;">{{ page.nombre }}</h2>
 
 	<dl>

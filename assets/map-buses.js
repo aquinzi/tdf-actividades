@@ -64,9 +64,11 @@ function initMap(linea){
 			}
 			
 			var must_check = "";
+			/*
 			if ( !feature.properties.color || feature.properties.color.indexOf("Navy") !== -1 ){
 				must_check = "<br> <strong>La parada debe comprobarse</strong>";
 			}
+			*/
 			
 			marker.bindPopup(name + has_garita + '<br>' + description_linebreaks + must_check);
 			return marker; 

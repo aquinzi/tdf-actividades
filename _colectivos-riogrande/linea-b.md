@@ -1,7 +1,7 @@
 ---
 uid: linea-b
 nombre: Línea B
-color: verde
+color: azul
 ultima-actualizacion: 2018-03-02
 areas: ["Chacra IV", "Chacra II", "Centro", "Perón", "Intevu", "Hospital"]
 recorrido: 
