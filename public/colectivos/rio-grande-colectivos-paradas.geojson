@@ -49,7 +49,7 @@
         "_storage_options": {
           "color": "ForestGreen"
         },
-        "description": "Línea A\nLínea A Complementaria\nLínea B\nLínea C\nC: San Martín (entre Estrada y Piedrabuena)\nhacia rotonda américas",
+        "description": "Línea A\nLínea A Complementaria\nLínea B\nLínea C\nLínea D\nC: San Martín (entre Estrada y Piedrabuena)\nhacia rotonda américas",
         "_umap_options": {
           "color": "ForestGreen"
         }
@@ -110,7 +110,7 @@
         "_storage_options": {
           "color": "ForestGreen"
         },
-        "description": "Línea A\nLínea B\nLínea C\nC: Ameghino y Estrada",
+        "description": "Línea A\nLínea B\nLínea C\nLínea D\nC: Ameghino y Estrada",
         "_umap_options": {
           "color": "ForestGreen"
         }
@@ -548,26 +548,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea A\nC: Albelos y Monte Kentt\nhacia centro",
-        "name": "P. rg990",
-        "_storage_options": {
-          "color": "Green"
-        },
-        "_umap_options": {
-          "color": "Green"
-        }
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.671683,
-          -53.813182
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "Línea A\nC: Monte Independencia e Isla Principal",
         "name": "P. rg024",
         "_storage_options": {
@@ -752,7 +732,7 @@
         "_storage_options": {
           "color": "ForestGreen"
         },
-        "description": "Línea A\nLínea A Complementaria\nLínea B\nLínea C\nC: Belgrano y Mackilnay; hospital",
+        "description": "Línea A\nLínea A Complementaria\nLínea B\nLínea C\nLínea D\nC: Belgrano y Mackilnay; hospital",
         "_umap_options": {
           "color": "ForestGreen"
         }
@@ -772,7 +752,7 @@
         "_storage_options": {
           "color": "ForestGreen"
         },
-        "description": "Línea A\nLínea A Complementaria\nLínea B\nLínea C\nC: Belgrano (entre Rosales y San Martín; escuela 2)\nhacia rotonda américas",
+        "description": "Línea A\nLínea A Complementaria\nLínea B\nLínea C\nLínea D\nC: Belgrano (entre Rosales y San Martín; escuela 2)\nhacia rotonda américas",
         "_umap_options": {
           "color": "ForestGreen"
         }
@@ -792,7 +772,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea A\nLínea A Complementaria\nLínea B\nLínea C\nC: San Martín  y 25 de mayo (BIM5)\nhacia rotonda américas",
+        "description": "Línea A\nLínea A Complementaria\nLínea B\nLínea C\nLínea D\nC: San Martín  y 25 de mayo (BIM5)\nhacia rotonda américas",
         "_umap_options": {
           "color": "Green"
         }
@@ -2395,7 +2375,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea A Complementaria\nLínea B\nLínea C\nC:  San Martín  (entre Pasaje Fournier y Don Bosco; BIM5; Jardín 1 - Calesita Encantada)\nhacia rotonda américas",
+        "description": "Línea A Complementaria\nLínea B\nLínea C\nLínea D\nC:  San Martín  (entre Pasaje Fournier y Don Bosco; BIM5; Jardín 1 - Calesita Encantada)\nhacia rotonda américas",
         "_umap_options": {
           "color": "Green"
         }
@@ -2415,7 +2395,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea A Complementaria\nLínea C\nLínea B\nC: San Martín y Brown (BIM5)\nhacia rotonda américas",
+        "description": "Línea A Complementaria\nLínea C\nLínea B\nLínea D\nC: San Martín y Brown (BIM5)\nhacia rotonda américas",
         "_umap_options": {
           "color": "Green"
         }
@@ -2692,7 +2672,7 @@
       "type": "Feature",
       "properties": {
         "name": "P. rg248 Garita",
-        "description": "Línea C\nC: Santa Rosa y Anadón",
+        "description": "Línea C\nLínea D\nC: Santa Rosa y Anadón",
         "_storage_options": {
           "color": "Green"
         },
@@ -2711,7 +2691,7 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "Línea C\nC: Santa Rosa y Lapataia",
+        "description": "Línea C\nLínea D\nC: Santa Rosa y Lapataia",
         "name": "P. rg249",
         "_storage_options": {
           "color": "Green"
@@ -2735,7 +2715,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea C\nC: Lapataia y Eva Perón",
+        "description": "Línea C\nLínea D\nC: Lapataia y Eva Perón",
         "_umap_options": {
           "color": "Green"
         }
@@ -2755,7 +2735,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea C\nC: Ushuaia y Pellegrini (Venezuela)",
+        "description": "Línea C\nLínea D\nC: Ushuaia y Pellegrini (Venezuela)",
         "_umap_options": {
           "color": "Green"
         }
@@ -2775,7 +2755,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea C\nC: Ushuaia y Lima (frente esc. Y plaza Animales)",
+        "description": "Línea C\nLínea D\nC: Ushuaia y Lima (frente esc. Y plaza Animales)",
         "_umap_options": {
           "color": "Green"
         }
@@ -2794,7 +2774,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea C\nC: Ushuaia y Córdoba (frente Estudio Gallardo & Asociados)",
+        "description": "Línea C\nLínea D\nC: Ushuaia y Córdoba (frente Estudio Gallardo & Asociados)",
         "name": "P. rg253",
         "_umap_options": {
           "color": "Green"
@@ -2815,7 +2795,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea C\nC: Ushuaia y Santa Cruz",
+        "description": "Línea C\nLínea D\nC: Ushuaia y Santa Cruz",
         "_umap_options": {
           "color": "Green"
         }
@@ -2836,7 +2816,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea C\nC: Entre Ríos y Ushuaia",
+        "description": "Línea C\nLínea D\nC: Entre Ríos y Ushuaia",
         "_umap_options": {
           "color": "Green"
         }
@@ -2856,7 +2836,7 @@
           "color": "Green"
         },
         "name": "P. rg256 Garita",
-        "description": "Línea C\nC: Entre Ríos y Resistencia",
+        "description": "Línea C\nLínea D\nC: Entre Ríos y Resistencia",
         "_umap_options": {
           "color": "Green"
         }
@@ -2876,7 +2856,7 @@
           "color": "Green"
         },
         "name": "P. rg257 Garita",
-        "description": "Línea C\nC: Posadas y Buenos Aires",
+        "description": "Línea C\nLínea D\nC: Posadas y Buenos Aires",
         "_umap_options": {
           "color": "Green"
         }
@@ -4136,7 +4116,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea B\nC: Avenida San Martín y Fray Justo María de Oro (La Anónima, Cono de Sombras)\nhacia chacra 2",
+        "description": "Línea B\nLínea D\nC: Avenida San Martín y Fray Justo María de Oro (La Anónima, Cono de Sombras)\nhacia chacra 2",
         "_umap_options": {
           "color": "Green"
         }
@@ -4155,7 +4135,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea B\nC: San Martín y Pellegrini\nhacia chacra 2 (frente Axion)",
+        "description": "Línea B\nLínea D\nC: San Martín y Pellegrini\nhacia chacra 2 (frente Axion)",
         "name": "P. rg371",
         "_umap_options": {
           "color": "Green"
@@ -4176,7 +4156,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea B\nC: Prefectura Naval y Federico Ibarra",
+        "description": "Línea B\nLínea D\nC: Prefectura Naval y Federico Ibarra",
         "_umap_options": {
           "color": "Green"
         }
@@ -4195,7 +4175,7 @@
         "_storage_options": {
           "color": "Green"
         },
-        "description": "Línea B\nC: Prefectura Naval y Luro Cambaceres (frente Polivalente)\nhacia chacra 4",
+        "description": "Línea B\nLínea D\nC: Prefectura Naval y Luro Cambaceres (frente Polivalente)\nhacia chacra 4, misión",
         "name": "P. rg373",
         "_umap_options": {
           "color": "Green"
@@ -4216,7 +4196,7 @@
           "color": "Green"
         },
         "name": "P. rg374",
-        "description": "Línea B\nC: Prefectura Naval y Aeroposta Argentina (Margalot)",
+        "description": "Línea B\nLínea D\nC: Prefectura Naval y Aeroposta Argentina (Margalot)",
         "_umap_options": {
           "color": "Green"
         }
@@ -4786,6 +4766,26 @@
         "coordinates": [
           -67.779336,
           -53.794517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "Línea A\nC: Albelos y Monte Kentt\nhacia centro",
+        "name": "P. rg990",
+        "_storage_options": {
+          "color": "Green"
+        },
+        "_umap_options": {
+          "color": "Green"
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.671683,
+          -53.813182
         ]
       }
     }
