@@ -7,14 +7,13 @@ function initMap(linea){
       minZoom: 9
 	}).addTo(map);
 
-
 	// load GeoJSON from an external file
 	map_file = "";
 	if ( linea == "colectivos-rg-all" ) {
-		map_file = "/public/colectivos/rio-grande-colectivos-2016-todas-lineas.geojson";
+		map_file = "/public/colectivos/rio-grande-colectivos-actual-todas-lineas.geojson";
 	}
 	else {
-		map_file = "/public/colectivos/rio-grande-colectivos-2016-" + linea + ".geojson";
+		map_file = "/public/colectivos/rio-grande-colectivos-actual-" + linea + ".geojson";
 	}
 
 	$.getJSON(map_file, function(data){

@@ -2,7 +2,7 @@
 uid: linea-b
 nombre: Línea B
 color: azul
-ultima-actualizacion: 2018-03-02
+ultima-actualizacion: 2019-09-10
 areas: ["Chacra IV", "Chacra II", "Centro", "Perón", "Intevu", "Hospital"]
 recorrido: 
   - {"calle": "Juan Visic y Raúl Chifflet", "punto":"-53.7745, -67.7316"}
@@ -14,8 +14,10 @@ recorrido:
   - {"calle": "Aeroposta Argentina y Prefectura Naval Argentina", "punto":"-53.76714, -67.72401"}
   - {"calle": "Prefectura Naval Argentina y Avenida San Martín", "punto":"-53.77367, -67.72610"}
   - {"calle": "Avenida San Martín y Estrada", "punto":"-53.78441, -67.70494"}
-  - {"calle": "Estrada y Juan Mackinlay", "punto":"-53.78179, -67.70110"}
-  - {"calle": "Juan Mackinlay y Luis Piedrabuena", "punto":"-53.78249, -67.69975"}
+  - {"calle": "José Manuel Estrada a Florentino Ameghino"}
+  - {"calle": "Florentino Ameghino a Av. Belgrano"}
+  - {"calle": "Av. Belgrano a Augusto Lasserre"}
+  - {"calle": "Augusto Lasserre a Luis Piedrabuena"}
   - {"calle": "Luis Piedrabuena y San Martín", "punto":"-53.78510, -67.70356"}
   - {"calle": "Avenida San Martín y Avenida Libertad", "punto":"-53.78957, -67.69478"}
   - {"calle": "Avenida Libertad y Juan Domingo Perón", "punto":"-53.79588, -67.70390"}
