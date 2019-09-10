@@ -40,7 +40,7 @@ $.ajax({
  success: function(data){
 	L.geoJson(data, {
 		style: function(feature){
-			return { color: feature.properties._storage_options.color};
+			return { color: feature.properties._umap_options.color};
 		}
 	}).addTo(map);
  }
